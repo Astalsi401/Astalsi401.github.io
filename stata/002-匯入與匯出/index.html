@@ -37,8 +37,51 @@
   <body>
   	<div class="container">
   	  <h2 id="002">002. 匯入與匯出</h2>
+      <p><b>工作目錄</b></p>
+      <p>匯入資料前最好先確認STATA的工作目錄，這樣可以減少需要輸入的路徑的長度。</p>
+      <p>直接指定工作目錄</p>
+      <pre id="stlog-2" class="stlog"><samp>
+        <span class="stinp">. cd "C:\Users\misti\Documents\Stata\unify"</span>
+        <span class="stres">C:\Users\misti\Documents\Stata\unify</span>
+      </samp></pre>
+      <p>確認當前目錄</p>
+      <pre id="stlog-3" class="stlog"><samp>
+        <span class="stinp">. pwd</span>
+        <span class="stres">C:\Users\misti\Documents\Stata\unify</span>
+      </samp></pre>
+      <p>回到上一層目錄</p>
+      <pre id="stlog-4" class="stlog"><samp>
+        <span class="stinp">. cd ..</span>
+        <span class="stres">C:\Users\misti\Documents\Stata</span>
+      </samp></pre>
+      <p>確認目前工作目錄中有哪些檔案及資料夾</p>
+      <pre id="stlog-5" class="stlog"><samp>
+        <span class="stinp">. ls</span>
+        &lt;dir&gt;  11/18/20 13:42  <span class="stres">.                 </span>
+        &lt;dir&gt;  11/18/20 13:42  <span class="stres">..                </span>
+        &lt;dir&gt;   6/10/20 14:20  <span class="stres">data              </span>
+        1929.2k  11/18/20 20:40  <span class="stres">stata-1.html      </span>
+        2.4k  11/17/20 21:32  <span class="stres">stata.html        </span>
+        314.7k  11/14/19 13:03  <span class="stres">stata快捷.png   </span>
+        1908.7k  11/17/20 20:13  <span class="stres">test.html         </span>
+        &lt;dir&gt;   6/09/20 11:40  <span class="stres">thesis            </span>
+        &lt;dir&gt;  11/19/20 19:42  <span class="stres">unify             </span>
+        0.2k   4/19/18 12:41  <span class="stres">中文編碼轉換.do</span>
+        &lt;dir&gt;   6/03/20 12:53  <span class="stres">天下雜誌-選舉</span>
+        &lt;dir&gt;  10/29/20 21:31  <span class="stres">教學文件      </span>
+        &lt;dir&gt;   9/23/20 15:36  <span class="stres">社會一         </span>
+        &lt;dir&gt;  10/29/20 21:31  <span class="stres">社會三         </span>
+        &lt;dir&gt;   9/23/20 15:37  <span class="stres">社會二         </span>
+        &lt;dir&gt;   9/23/20 15:50  <span class="stres">社會四         </span>
+      </samp></pre>
+      <p>回到unify資料夾</p>
+      <pre><samp id="stlog-6" class="stlog">
+        <span class="stinp">. cd unify</span>
+        <span class="stres">C:\Users\misti\Documents\Stata\unify</span>
+      </samp></pre>
       <h3 id="2-1">資料檔匯入</h3>
       <p><b>Txt匯入</b></p>
+      <p>直接從指定的目錄匯入，無須變更工作目錄</p>
       <pre id="stlog-7" class="stlog"><samp>
         <span class="stinp">. insheet using "C:\Users\misti\Documents\Stata\社會一\社會統計\統計1-06\grade.txt", clear</span>
         (1 var, 34 obs)
@@ -73,8 +116,63 @@
               Total |<span class="stres">         34      100.00</span>
         <span class="stinp">. <span class="stcmt">/*路徑、檔案與變項名稱請自行更改*/</span></span>
       </samp></pre>
+      <p><b>Csv匯入</b></p>
+      <pre id="stlog-1-1" class="stlog"><samp>
+        <span class="stinp">. cd data</span>
+        <span class="stres">C:\Users\misti\Documents\Stata\unify\data</span>
+
+        <span class="stinp">. insheet using data1b.csv, c n clear  <span class="stcmt">/*c 導入逗點分隔值檔案*/</span></span>
+        (3 vars, 30 obs)
+
+        <span class="stinp">. sort id <span class="stcmt">/*c 以id排序*/</span></span>
+
+        <span class="stinp">. list in 1/10 <span class="stcmt">/*列出這份資料的前10筆*/</span></span>
+
+             +--------------------+
+             | <span class="stres">id   male   score1 </span>|
+             |--------------------|
+          1. | <span class="stres">31      0       64 </span>|
+          2. | <span class="stres">32      0       70 </span>|
+          3. | <span class="stres">33      0       61 </span>|
+          4. | <span class="stres">34      0       67 </span>|
+          5. | <span class="stres">35      0       84 </span>|
+             |--------------------|
+          6. | <span class="stres">36      0       67 </span>|
+          7. | <span class="stres">37      0       63 </span>|
+          8. | <span class="stres">38      0       80 </span>|
+          9. | <span class="stres">39      0       71 </span>|
+         10. | <span class="stres">40      0       52 </span>|
+             +--------------------+
+      </samp></pre>
+      <p><b>Excel檔匯入（.Xlsx）</b></p>
+      <pre id="stlog-1-2" class="stlog"><samp>
+        <span class="stinp">. import exc data2b.xlsx, first clear</span>
+
+        <span class="stinp">. sort id</span>
+
+        <span class="stinp">. list in 1/10</span>
+
+             +----------------------------+
+             | <span class="stres">id   score2   class   dist </span>|
+             |----------------------------|
+          1. | <span class="stres"> 1       56       3      3 </span>|
+          2. | <span class="stres"> 2       63       2      3 </span>|
+          3. | <span class="stres"> 3       52       3      5 </span>|
+          4. | <span class="stres"> 4       59       1      4 </span>|
+          5. | <span class="stres"> 5       78       2      1 </span>|
+             |----------------------------|
+          6. | <span class="stres"> 6       59       3      5 </span>|
+          7. | <span class="stres"> 7       55       3      5 </span>|
+          8. | <span class="stres"> 8       74       3      5 </span>|
+          9. | <span class="stres"> 9       64       3      4 </span>|
+         10. | <span class="stres">10       43       1      1 </span>|
+             +----------------------------+
+
+        <span class="stinp">. cd ..</span>
+        <span class="stres">C:\Users\misti\Documents\Stata\unify</span>
+      </samp></pre>
       <h3 id="2-2">資料檔匯出</h3>
-      <p><b>Csv匯出</b></p>
+      <p><b>匯出csv</b></p>
       <pre id="stlog-8" class="stlog"><samp>
         <span class="stinp">. clear</span>
         <span class="stinp">. sysuse auto</span>
