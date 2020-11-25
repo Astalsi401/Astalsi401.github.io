@@ -1,32 +1,32 @@
-const express = require(‘express‘);
+const express = require('express');
 const app = express();
-const fs = require(‘fs‘);
-const sd = require(‘silly-datetime‘);
-const readline = require(‘readline‘);
+const fs = require('fs');
+const sd = require('silly-datetime');
+const readline = require('readline');
 
-app.use(express.static(‘./public‘));
+app.use(express.static('./public'));
 
-let oldHtmlContent = fs.readFileSync(‘./index.html‘).toString(); //讀取index.html文檔
+let oldHtmlContent = fs.readFileSync('./index.html').toString(); //讀取index.html文檔
 
-app.get(‘/‘, function(req, res) {
+app.get('/', function(req, res) {
     res.send(oldHtmlContent);
-    fs.writeFileSync(‘records.txt‘, ‘‘); //初始化txt為空白
+    fs.writeFileSync('records.txt', ''); //初始化txt為空白
 });
 
-app.get(‘/comment‘, function(req, res) {
+app.get('/comment', function(req, res) {
 
-    writeRecord(req.query.comment, sd.format(new Date(), ‘YYYY-MM-DD HH:mm‘)); //記錄評論與時間
+    writeRecord(req.query.comment, sd.format(new Date(), 'YYYY-MM-DD HH:mm')); //記錄評論與時間
 
     //加載評論
-    let newHtmlContent = ‘‘;
+    let newHtmlContent = '';
     let r = /\d{4}-\d{2}-\d{2} \d{2}:\d{2}/ //匹配日期
     let floorNumber = 2;
-    let comment = ‘‘;
+    let comment = '';
     //使用readline逐行讀取文件
     const r1 = readline.createInterface({
-        input: fs.createReadStream(‘./records.txt‘)
+        input: fs.createReadStream('./records.txt')
     })
-    r1.on(‘line‘, (line) => {
+    r1.on('line', (line) => {
         if (r.test(line)) {
              //新評論的HTML代碼
             newHtmlContent =
@@ -44,17 +44,17 @@ app.get(‘/comment‘, function(req, res) {
                 </div>
                 <div class="cls"></div>
                 </div>` + newHtmlContent;
-            comment = ‘‘;
+            comment = '';
         } else {
             comment += line;
         }
-    }).on(‘close‘, () => {
-        res.send(oldHtmlContent.replace(‘<div class="comment-list" id="commentList">‘, ‘<div class="comment-list" id="commentList">\n‘ + newHtmlContent));
+    }).on('close', () => {
+        res.send(oldHtmlContent.replace('<div class="comment-list" id="commentList">', '<div class="comment-list" id="commentList">\n' + newHtmlContent));
     })
 })
 
 function writeRecord(comment, datetime) {
-    fs.writeFileSync(‘./records.txt‘, `${comment}\n${datetime}\n`, { flag: ‘a‘ });
+    fs.writeFileSync('./records.txt', `${comment}\n${datetime}\n`, { flag: 'a' });
 }
 
-app.listen(8888, ‘127.0.0.1‘);
+app.listen(8888, 'https://astalsi401.github.io/comment');
