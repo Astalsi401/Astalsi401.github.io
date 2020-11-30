@@ -6,9 +6,9 @@
     <link rel="stylesheet" type="text/css" href="../../style/main.css">
   </head>
   <body>
-    <h2 id="005">005. 整理資料檔</h2>
+    <h2 id="004">004. 整理資料檔</h2>
     <p>大多數剛匯入的資料並不適合直接分析，為了讓資料更符合符合我們的需求，需要對資料進行整理，以下介紹幾個整理資料經常用到的指令。</p>
-    <h3 id="5-1">整理資料常用指令</h3>
+    <h3 id="4-1">整理資料常用指令</h3>
     <p>載入資料</p>
     <pre id="stlog-1" class="stlog"><samp><span class="stinp">. cd "C:/Users/misti/Documents/Stata/unify/data"</span>
 <span class="stres">C:\Users\misti\Documents\Stata\unify\data</span>
@@ -102,7 +102,7 @@ variable name   type    format     label      variable label
 --------------------------+-----------------------------------
                     Total |<span class="stres">      2,134      100.00</span>
 </samp></pre>
-    <h3 id="5-2">定義遺漏值</h3>
+    <h3 id="4-2">定義遺漏值</h3>
     <p>將編號22的「其他」設為遺漏值，可以發現「22. 其他」消失了</p>
 <pre id="stlog-4" class="stlog"><samp><span class="stinp">. preserve</span>
 
@@ -213,7 +213,7 @@ variable name   type    format     label      variable label
 <span class="stinp">. restore</span>
 </samp></pre>
 <p>若codebook中已經標明遺漏值（通常為999），那也可以使用「mvdecode _all, mv(999)」來一次定義資料中所有變項的遺漏值，不過視你的需求而定，某些變項有可能需要個別調整。</p>
-    <h3 id="5-3">重新編碼</h3>
+    <h3 id="4-3">重新編碼</h3>
     <p>將各個選項重新編碼為教育年數，如：選項1.無/不識字=0年</p>
 <p>這裡有兩種不同的方式，各有其用處，會在不同地方派上用場</p>
 <p>第一種方式：recode</p>
@@ -308,11 +308,11 @@ variable name   type    format     label      variable label
 ------------+-----------------------------------
       Total |<span class="stres">      2,130      100.00</span>
 </samp></pre>
-    <h3 id="5-4">EGP Class Scheme</h3>
+    <h3 id="4-4">職業地位計算（EGP Class Scheme）</h3>
     <p><a href="https://www.jstor.org/stable/589632?seq=1">EGP Class Scheme</a>是一種職業地位的分類方法，在STATA中可以利用「<b>iscoegp</b>」這條指令進行分類。</p>
     <p>以iscoegp計算職業地位需要先獲取以下資訊：</p>
     <ol>
-      <li>職業編碼：isco88碼（在本資料中為v34b5）</li>
+      <li>職業編碼：isco88碼（在以下範例資料中為v34b5）</li>
       <li>在哪裡工作？為誰工作？</li>
       <li>工作的公司/機構大約雇有多少員工？</li>
     </ol>
