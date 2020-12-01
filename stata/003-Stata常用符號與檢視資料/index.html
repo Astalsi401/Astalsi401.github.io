@@ -7,7 +7,17 @@
   </head>
   <body>
   	<div class="container">
-  		<h2 id="003">003. 檢視資料</h2>
+  		<h2 id="003">003. Stata常用符號與檢視資料</h2>
+      <h3 id="3-1">Stata常用符號</h3>
+      <p>以下簡單介紹Stata中常用的符號：</p>
+      <ul>
+        <li>等號（==）：以連續兩個等號代表數值的相等。</li>
+        <li>賦值符號（=）：以一個等號為一批資料或某個數值賦予名稱。</li>
+        <li>and（&）：與、和，同時滿足提到條件的含意。</li>
+        <li>or（|）：或，只要滿足其中一個條件。</li>
+      </ul>
+      <h3 id="3-2">檢視資料</h3>
+      <p>輸入資料</p>
       <pre id="stlog-17" class="stlog"><samp>
         <span class="stinp">. clear</span>
         <span class="stinp">. input str9 name iq <span class="stcmt">/*str9: 空出9個字元的長度*/</span></span>
@@ -23,7 +33,11 @@
           8. "Mary"    100
           9. "Kevin"   120
          10. end
+      </samp></pre>
+      <p>檢視資料信息</p>
+      <pre id="stlog-16" class="stlog"><samp>
         <span class="stinp">. su iq, d</span>
+        <span class="stcmt">/*su:summarize的縮寫，大致呈現一份資料的分配狀況，d代表detail，可以看到更詳細的信息。*/</span>
                                      iq
         -------------------------------------------------------------
               Percentiles      Smallest
@@ -39,6 +53,9 @@
         95%    <span class="stres">      130            126       </span>Skewness      <span class="stres">-.6967588</span>
         99%    <span class="stres">      130            130       </span>Kurtosis      <span class="stres"> 2.295479</span>
 
+        </samp></pre>
+        <p>另一種檢視資料的指令</p>
+        <pre id="stlog-15" class="stlog"><samp>
         <span class="stinp">. univar iq</span>
                                                 -------------- Quantiles --------------
         Variable       n     Mean     S.D.      Min      .25      Mdn      .75      Max
@@ -46,6 +63,9 @@
               iq <span class="stres">      9   109.33    19.58    72.00    99.00   120.00   125.00   130.00</span>
         -------------------------------------------------------------------------------
 
+        </samp></pre>
+        <p>單獨叫出資料中的某項資訊，需搭配指令summarize一起使用，可將其命名後作為數值代入計算。</p>
+        <pre id="stlog-14" class="stlog"><samp>
         <span class="stinp">. g dnp = r(N)    <span class="stcmt">/*樣本數*/</span></span>
 
         <span class="stinp">. g dns = r(N)-1  <span class="stcmt">/*自由度*/</span></span>
