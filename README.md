@@ -3,7 +3,7 @@
 
 ## 網站列表
 
-* [Stata使用技巧整理](https://astalsi401.github.io/stata/#stata)
+* [Stata技巧整理](https://astalsi401.github.io/stata/#stata)
 
 ## 資料夾介紹
 
