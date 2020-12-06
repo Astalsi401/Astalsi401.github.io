@@ -25,6 +25,18 @@ pre {
   margin:0 auto;
   width: 800px;
 }
+.button {
+  z-index: 9999; 
+  position: fixed !important; 
+  right: 10px;
+  top: 20px;
+}
+.button_in {
+  position: absolute;
+  width: 260px;
+  right: 0px;
+  top: 0px;
+}
 .stres { color: #324F58; }
 .stinp { font-weight: bold; color: #000000; }
 .stcmd .stcmt { font-style: italic; opacity: 0.5; }
