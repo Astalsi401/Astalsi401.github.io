@@ -34,14 +34,14 @@ pre {
   text-align: center;
 }
 .button_01 {
-  background: rgba(145,145,145,0.3);
+  background: rgba(145,145,145,0.4);
   position: absolute;
   width: 70px;
   right: 0px;
   top: 0px;
 }
 .button_02 {
-  background: rgba(145,145,145,0.3);
+  background: rgba(145,145,145,0.4);
   position: absolute;
   width: 70px;
   right: 0px;
