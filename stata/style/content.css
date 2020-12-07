@@ -1,8 +1,10 @@
 body {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 12pt; line-height: 1.428;
+	font-size: 12pt; 
+	line-height: 1.428;
 	max-width: 800px;
-	margin: 0 auto; padding: 0 15px;
+	margin: 0 auto; 
+	padding: 0 15px;
 }
 a:link {
 	text-decoration: none;
@@ -14,4 +16,10 @@ a:hover{
 a:visited {
 	text-decoration: none;
 	color: #919191;
+}
+.menu {
+	margin: auto;
+	position: relative;
+	max-width: 600px;
+	max-height: 300px;
 }
