@@ -220,7 +220,7 @@ variable name   type    format     label      variable label
     <h3 id="4-3">重新編碼</h3>
     <p>將各個選項重新編碼為教育年數，如：選項1.無/不識字=0年</p>
 <p>這裡有兩種不同的方式，各有其用處，會在不同地方派上用場</p>
-<p>第一種方式：recode</p>
+<p><b>第一種方式：recode</b></p>
 <p>recode是針對單一變項重新編碼，指令較簡短，常常會遇到有些資料需要進行反項編碼才能讓人更容易理解，此時適合使用這種方式。</p>
 <pre id="stlog-7" class="stlog"><samp><span class="stinp">. cap drop edyear  <span class="stcmt">/*如過有edyear這個變項就先拋棄，如過沒有則不做動作。*/</span></span>
 
@@ -255,7 +255,7 @@ variable name   type    format     label      variable label
 ------------+-----------------------------------
       Total |<span class="stres">      2,130      100.00</span>
 </samp></pre>
-<p>第二種方式：replace</p>
+<p><b>第二種方式：replace</b></p>
 <p>replace是一一指定新變項中obs的條件，雖然較繁複，但好處是可以將多個變項中的obs整合進同一個變項中。</p>
 <pre id="stlog-8" class="stlog"><samp><span class="stinp">. cap drop edyear</span>
 
@@ -328,7 +328,7 @@ variable name   type    format     label      variable label
 
 <span class="stinp">. lab var sempnow "自雇"</span>
 </samp></pre>
-<p><<b>工作單位規模</b></p>
+<p><b>工作單位規模</b></p>
 <pre id="stlog-10" class="stlog"><samp><span class="stinp">. cap drop suvpnow</span>
 
 <span class="stinp">. g suvpnow=.</span>

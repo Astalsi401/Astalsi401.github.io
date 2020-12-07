@@ -17,17 +17,17 @@
         <li>在上例中，在同一班中，樣本的觀測值是不同的，由於這是隨機抽取的案例，因此其中的差異可視為隨機的差異，也稱為隨機誤差。在進行分析時，此類誤差的推算稱之為組內變異數。</li>
         <li>在上例中，各般之間的觀測值也不同。這種差異可能是由於抽樣的隨機性所造成，也可能是由於各班的差異（如老師的教學方法、按學業成績分班的結果）。在此，我們將各班的差異視為系統性的誤差。在進行分析時，此類誤差的推算稱之為組間變異數。</li>
         <li>換句話說，組間變異數（組別效應）愈大，而組內變異數（隨機誤差效應）愈小的話，則F值就愈大，意味著虛無假設被排斥的可能性就愈大。</li>
-        <li>當只有兩組時（即J=2），t 分配與Anova的結果是一樣的。即F test比T test更容易拒絕虛無假設，因為t test虛無假設之條件只有兩個，而f test的虛無假設之條件有多個。</li>
+        <li>當只有兩組時，t 分配與Anova的結果是一樣的。即F test比T test更容易拒絕虛無假設，因為t test虛無假設之條件只有兩個，而f test的虛無假設之條件有多個。</li>
       </ol>
       <p>di invFtail(組間df, 組內df, CI)</p>
       <p>di Ftail(組間df, 組內df, F值)</p>
       <p><b>範例1：不同班級的成績是否有影響</b></p>
       <pre id="stlog-24" class="stlog"><samp>
-        <span class="stinp">. clear</span>
+<span class="stinp">. clear</span>
 
-        <span class="stinp">. input class score</span>
+<span class="stinp">. input class score</span>
 
-         class      score
+   class      score
   1. 1 70
   2. 1 75
   3. 1 80
@@ -80,7 +80,7 @@
 
 <span class="stinp">. input type interest</span>
 
-          type   interest
+    type   interest
   1. 1 6
   2. 1 7
   3. 1 8
