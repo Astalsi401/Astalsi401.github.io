@@ -30,19 +30,22 @@ pre {
   z-index: 9999; 
   position: fixed !important; 
   right: 10px;
-  top: 20px;
+  top: 60px;
+  text-align: center;
 }
 .button_01 {
+  background: rgba(145,145,145,0.3);
   position: absolute;
   width: 70px;
   right: 0px;
   top: 0px;
 }
 .button_02 {
+  background: rgba(145,145,145,0.3);
   position: absolute;
   width: 70px;
   right: 0px;
-  top: 20px;
+  top: 21.5px;
 }
 .stres { color: #324F58; }
 .stinp { font-weight: bold; color: #000000; }
