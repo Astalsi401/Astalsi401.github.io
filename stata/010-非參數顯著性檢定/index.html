@@ -93,7 +93,7 @@
     </tr>
 </table>
 
-<p>此處的虛無假設是樣本符合母體中各類別之分佈符合平均分配</p>
+<p>此處的虛無假設是樣本符合母體中各類別之分佈符合平均分配（Pr>0.05）</p>
 <pre id="stlog-31" class="stlog"><samp><span class="stinp">. chitesti 12 14 5 9 10 \ 10 10 10 10 10 </span>
 
 observed frequencies from keyboard; expected frequencies from keyboard
@@ -111,7 +111,9 @@ likelihood-ratio chi2(<span class="stres">4</span>) = <span class="stres">  4.96
   | <span class="stres">      10     10.000       0.000     0.000 </span>|
   +-------------------------------------------+
 </samp></pre>
-<p>範例2：</p>
+
+<p><b>範例2：</b></p>
+<p>輸入資料</p>
 <pre id="stlog-32" class="stlog"><samp><span class="stinp">. clear</span>
 
 <span class="stinp">. input x y freq</span>
@@ -128,9 +130,9 @@ likelihood-ratio chi2(<span class="stres">4</span>) = <span class="stres">  4.96
 
 <span class="stinp">. lab var y "government preference"</span>
 
-<span class="stinp">. lab define xlabel 0 "Liberal" 1 "Conservative", modify</span>
+<span class="stinp">. lab define xlabel 0 "Liberal" 1 "Conservative"</span>
 
-<span class="stinp">. lab define y      0 "Large  " 1 "Small", modify</span>
+<span class="stinp">. lab define y      0 "Large  " 1 "Small"</span>
 
 <span class="stinp">. lab value x xlabel</span>
 
@@ -138,8 +140,11 @@ likelihood-ratio chi2(<span class="stres">4</span>) = <span class="stres">  4.96
 
 <span class="stinp">. expand freq</span>
 (36 observations created)
-
 <span class="stinp">. </span>
+</samp></pre>
+
+<p>自由主義與保守主義對政府的偏好沒有顯著區別（Pr>0.05）。</p>
+<pre id="stlog-32-1" class="stlog"><samp><span class="stinp">. clear</span>
 <span class="stinp">. tab x y, chi exp</span>
 
 +--------------------+
@@ -187,7 +192,9 @@ Conservative |<span class="stres">        10         10 </span>|<span class="str
 
           Pearson chi2(<span class="stres">1</span>) = <span class="stres">  2.6667  </span> Pr = <span class="stres">0.102</span>
 </samp></pre>
-<p>範例3：某校男女生比例相同。現隨機抽取50名學生，其中男生27人，而女生23人。問此一抽樣比例是否符合該校男女生比例？</p>
+<p><b>範例3：</b></p>
+<p>某校男女生比例相同。現隨機抽取50名學生，其中男生27人，而女生23人。問此一抽樣比例是否符合該校男女生比例？</p>
+<p>Pr>0.05，符合</p>
 <pre id="stlog-34" class="stlog"><samp><span class="stinp">. prtesti 50 .54 .46</span>
 
 One-sample test of proportion                      <span class="stres">x</span>: Number of obs = <span class="stres">      50</span>

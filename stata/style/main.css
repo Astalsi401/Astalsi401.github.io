@@ -36,6 +36,15 @@ a:visited {
   text-decoration: none;
   color: rgb(160,160,255);
 }
+table {
+  border: 3px #CCCCCC solid;
+}
+th {
+  background-color: rgb(212,212,212);
+}
+td {
+  background-color: rgb(237,237,237);
+}
 .container {
   padding: 0 3%;
   width: 95%;
