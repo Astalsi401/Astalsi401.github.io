@@ -24,6 +24,7 @@ pre {
   border-radius: 1%;
   padding: 2%; 
   overflow: auto;
+  max-height: 800px;
 }
 a:link {
   text-decoration: none;
