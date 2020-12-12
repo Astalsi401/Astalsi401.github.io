@@ -138,7 +138,7 @@ Patterns of missing values
   | <span class="stres">++.......     7       1 </span>|
   +-------------------------+
 </samp></pre>
-    <li><b>信度檢驗，alpha若超過0.7，則代表各項目之間一致性很高，但此處不高，意味著有超過一個潛在因子。</b></li>>
+    <li><b>信度檢驗，alpha若超過0.7，則代表各項目之間一致性很高，但此處不高，意味著有超過一個潛在因子。</b></li>
 <pre id="stlog-4" class="stlog"><samp><span class="stinp">. alpha e2_1-e2_9, d std item label</span>
 
 Test scale = mean(standardized items)
@@ -1160,8 +1160,8 @@ Factor loadings (pattern matrix) and unique variances
         <li>oblimax</li>
         <li>quartimin</li>
     </ol>
-    <p>在Stata輸入 h rotate可以看到簡單的介紹。</p>
-    <p>開始前或完成後記得鍵入「rotate, clear」，以便清除掉內存的記憶，否則會在前面的資訊上繼續作旋轉，如此則會扭曲其中的關係。</p>
+    <p>在Stata輸入<span class="code">h rotate</span>可以看到簡單的介紹。</p>
+    <p>開始前或完成後記得輸入<span class="code">rotate, clear</span>，以便清除掉內存的記憶，否則會在前面的資訊上繼續作旋轉，如此則會扭曲其中的關係。</p>
 <pre id="stlog-10" class="stlog"><samp><span class="stinp">. rotate, clear</span>
 
 <span class="stinp">. rotate, blank(.4)</span>
@@ -1287,7 +1287,7 @@ Scoring coefficients (method = regression; based on varimax rotated factors)
 <span class="stres">     </span>noluck2 |<span class="stres">   0.1452   1.0000</span>
 
 </samp></pre>
-    <li>將前面用predict所建立的潛在變項做轉換，回復到由0-100的分數</li>
+    <li>將前面用<span class="code">predict</span>所建立的潛在變項做轉換，回復到由0-100的分數</li>
 <pre id="stlog-14" class="stlog"><samp><span class="stinp">. g noluck3=100*normal(noluck)</span>
 (42 missing values generated)
 

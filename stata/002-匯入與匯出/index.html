@@ -186,7 +186,7 @@
       </center>
       <h3 id="2-5">資料檔合併</h3>
 <p>以下將介紹兩種資料合併的方法：</p>
-<p><b>方法一：append</b></p>
+<p><b>方法一：<span class="code">append</span></b></p>
 <p>append是將資料b直接添加在資料a的後方，此時兩份資料必須擁有完全相同的變項才能成功合併。</p>
 <p>首先匯入資料a（data1a）觀察後可發現，這份資料有3個變項（id、male、score1），樣本數（obs）為30。</p>
 <pre id="stlog-11" class="stlog"><samp><span class="stinp">. cd data</span>
@@ -229,8 +229,8 @@ variable name   type    format     label      variable label
 ---------------------------------------------------------------------------------------------------------------
 Sorted by: <span class="stres">id</span>
 </samp></pre>
-<p>現在利用<span class="stinp">append</span>將data1a與data1b合併，然後存檔為data1_all。</p>
-<p>像這樣直接使用<span class="stinp">save 檔名</span>存檔，檔案格式為STATA專用的.dta，存檔位置為當前的工作目錄。</p>
+<p>現在利用<span class="code">append</span>將data1a與data1b合併，然後存檔為data1_all。</p>
+<p>像這樣直接使用<span class="code">save 檔名</span>存檔，檔案格式為STATA專用的.dta，存檔位置為當前的工作目錄。</p>
 <pre id="stlog-13" class="stlog"><samp><span class="stinp">. append using data1a</span>
 (note: variable id was byte, now float to accommodate using data's values)
 (note: variable male was byte, now float to accommodate using data's values)
@@ -258,8 +258,8 @@ variable name   type    format     label      variable label
 ---------------------------------------------------------------------------------------------------------------
 Sorted by: <span class="stres">id</span>
 </samp></pre>
-<p><b>方法二：merge</b></p>
-<p>merge是將資料2中的變項新增到資料1中，不過這種合併依然要求兩份資料至少有一個變項相同，且該變項的性質必須類似身分證號碼，每個樣本都有其自身的編號，這樣才能成功配對。</p>
+<p><b>方法二：<span class="code">merge</span></b></p>
+<p><span class="code">merge</span>是將資料2中的變項新增到資料1中，不過這種合併依然要求兩份資料至少有一個變項相同，且該變項的性質必須類似身分證號碼，每個樣本都有其自身的編號，這樣才能成功配對。</p>
 <p>匯入data2b，觀察後可發現這份資料中同樣有id這個變項，以及另外3個新變項（score2、class、dist）。</p>
 <pre id="stlog-15" class="stlog"><samp><span class="stinp">. use data2b, clear</span>
 

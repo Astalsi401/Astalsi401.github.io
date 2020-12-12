@@ -37,7 +37,7 @@
 <span class="stinp">. lab val case case</span>
         </samp></pre>
         <h3 id="1-2">輸出表格</h3>
-        <p><b>第一種方法:</b> 將加權變項中的數值視為"個案數"，然後增加"n-1"個案數。以此資料為例，第一列為一個個案，但由於freq＝9，因此當執行完"expand freq"後，這資料會增加9-1＝8列的"1 1 9"的個案</p>
+        <p><b>第一種方法:</b> 將加權變項中的數值視為"個案數"，然後增加"n-1"個案數。以此資料為例，第一列為一個個案，但由於freq＝9，因此當執行完<span class="code">expand freq</span>後，這資料會增加9-1＝8列的"1 1 9"的個案</p>
         <pre id="stlog-3" class="stlog"><samp>
 <span class="stinp">. preserve</span>
 <span class="stinp">. expand freq </span>
@@ -97,6 +97,7 @@
  Pearson chi2(<span class="stres">1</span>) = <span class="stres">  2.6667  </span> Pr = <span class="stres">0.102</span>
 </samp></pre>
 <h3 id="1-4">建立亂數(Stata Random Number)</h3>
+<p>各種建立亂數的指令</p>
 <ul>
   <li><b>runiform():</b> generates rectangularly (uniformly) distributed random number over [0,1).</li>
           <li><b>rbeta(a,b):</b> generates beta-distribution beta(a, b) random numbers.</li>

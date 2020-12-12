@@ -19,8 +19,8 @@
         <li>換句話說，組間變異數（組別效應）愈大，而組內變異數（隨機誤差效應）愈小的話，則F值就愈大，意味著虛無假設被排斥的可能性就愈大。</li>
         <li>當只有兩組時，t 分配與Anova的結果是一樣的。即F test比T test更容易拒絕虛無假設，因為t test虛無假設之條件只有兩個，而f test的虛無假設之條件有多個。</li>
       </ol>
-      <p>di invFtail(組間df, 組內df, CI)</p>
-      <p>di Ftail(組間df, 組內df, F值)</p>
+      <p><span class="code">di invFtail(組間df, 組內df, CI)</span></p>
+      <p><span class="code">di Ftail(組間df, 組內df, F值)</span></p>
       <p><b>範例1：不同班級的成績是否有影響</b></p>
       <pre id="stlog-24" class="stlog"><samp>
 <span class="stinp">. clear</span>

@@ -66,7 +66,7 @@ variable name   type    format     label      variable label
 <span class="stres">e2_8           </span> byte    %26.0f     e2a        <span class="stres">因為他(她)不願意工作</span>
 <span class="stres">e2_9           </span> byte    %26.0f     e2a        <span class="stres">因為他(她)家庭背景不好</span>
 </samp></pre>
-<p><b>forvalues</b></p>
+<p><b><span class="code">forvalues</span></b></p>
 <p>適合用於將數字代入，例如：</p>
 <p>利用迴圈反向編碼，並將95到98定義為遺失值</p>
 <pre id="stlog-2" class="stlog"><samp><span class="stinp">. forvalues i = 1/9 {</span>
@@ -83,7 +83,7 @@ variable name   type    format     label      variable label
 (2040 differences between e2_8 and e2r_8)
 (2040 differences between e2_9 and e2r_9)
 </samp></pre>
-<p><b>foreach</b></p>
+<p><b><span class="code">foreach</span></b></p>
 <p>適合用於將文字代入，例如：</p>
 <p>利用迴圈重新命名變項</p>
 <pre id="stlog-3" class="stlog"><samp><span class="stinp">. use "tscs071 v4.dta", clear</span>
