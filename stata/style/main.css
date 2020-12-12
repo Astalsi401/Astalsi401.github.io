@@ -97,4 +97,15 @@ td {
     display: none; 
   }
 }
+.shortcut {
+  font-style: italic;
+  font-size: 10pt;
+  background-color: rgb(243, 243, 243);
+  color: rgb(85, 85, 85);
+}
+.code {
+  font-size: 11pt;
+  background-color: rgb(243, 243, 243);
+  color: rgb(85, 85, 85);
+}
 
