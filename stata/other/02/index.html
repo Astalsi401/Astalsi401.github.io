@@ -11,6 +11,48 @@
 <body>
 	<div class="container">
 		<h2 id="other_stata_02">Html & Stata</h2>
+		<p>在本節終將介紹兩種能將Stata執行結果加上文字說明輸出為html檔的方法。</p>
+		<h3><code>dyndoc</code></h3>
+		<p><code>dyndoc</code>的do檔格式如下：</p>
+		<pre>
+<code>
+將Markdown語法的文字輸入在這裡，ex:
+
+#標題
+
+##標題2
+
+ - A
+
+ - B
+
+ - C
+
+~~~~
+&lt;&lt;dd_do&gt;&gt;
+
+/*將Stata code輸入在這裡, ex:*/
+cd "D:/Documents/Stata/Stata/data"
+use us_birth_rate, clear
+list in 1/8
+cd "D:/Documents/Git/stata/other/02"
+
+&lt;&lt;/dd_do&gt;&gt;
+~~~~
+
+另一段Markdown....
+
+~~~~
+&lt;&lt;dd_do&gt;&gt;
+
+/*另一段Stata code*/
+
+&lt;&lt;/dd_do&gt;&gt;
+~~~~
+</code>
+		</pre>
+		<p>然後利用<code>dyndoc 檔名.do, replace</code>即可將檔案與執行結果輸出為html，輸出檔案如下：</p>
+		<iframe src=""></iframe>
 	</div>
 </body>
 </html>
