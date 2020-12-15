@@ -30,13 +30,11 @@
 
 ~~~~
 &lt;&lt;dd_do&gt;&gt;
-
 /*將Stata code輸入在這裡, ex:*/
 cd "D:/Documents/Stata/Stata/data"
 use us_birth_rate, clear
 list in 1/8
 cd "D:/Documents/Git/stata/other/02"
-
 &lt;&lt;/dd_do&gt;&gt;
 ~~~~
 
@@ -44,15 +42,55 @@ cd "D:/Documents/Git/stata/other/02"
 
 ~~~~
 &lt;&lt;dd_do&gt;&gt;
-
-/*另一段Stata code*/
-
+/*另一段Stata code....*/
 &lt;&lt;/dd_do&gt;&gt;
 ~~~~
 </code>
 		</pre>
 		<p>然後利用<code>dyndoc 檔名.do, replace</code>即可將檔案與執行結果輸出為html，輸出檔案如下：</p>
-		<iframe src="https://astalsi401.github.io/stata/other/02/example.html"></iframe>
+		<iframe class="container" src="https://astalsi401.github.io/stata/other/02/example.html"></iframe>
+		<h3><code>webdoc</code></h3>
+		<p><code>webdoc</code>的do檔案看起來如下：</p>
+		<ul>
+			<li><code>head()</code>代表html中&lt;head&gt;標籤內的資訊</li>
+			<li><code>w(800px)</code>:頁面寬度800px</li>
+			<li><code>t("example2")</code>:html頁面的名稱，不需要跟檔名相同</li>
+			<li><code>st(ocean cbf)</code>:主題為ocean（海藍色），cbf代表Stata輸入指令為粗體字</li>
+		</ul>
+		<pre>
+<code>
+clear
+cd "D:/Documents/Git/stata/other/02"  /*要匯出的do檔所在的工作目錄*/
+webdoc init example2, replace logall /// /*example2: 檔案名*/
+       head(w(800px) t("example2") st(ocean cbf))
+
+/***
+將Html語法的文字輸入在這裡，ex:
+
+&lt;h1&gt;標題&lt;/h1&gt;
+&lt;h2&gt;標題2&lt;/h2&gt;
+&lt;ul&gt;
+	&lt;li&gt;A&lt;/li&gt;
+	&lt;li&gt;B&lt;/li&gt;
+	&lt;li&gt;C&lt;/li&gt;
+&lt;/ul&gt;
+***/
+
+/*將Stata code輸入在這裡, ex:*/
+cd "D:/Documents/Stata/Stata/data"
+use us_birth_rate, clear
+list in 1/8
+cd "D:/Documents/Git/stata/other/02"
+
+/***
+另一段Html....
+***/
+
+/*另一段Stata code....*/  
+</code>
+		</pre>
+		<p>然後利用<code>webdoc do 檔名.do, replace</code>即可輸出，結果如下：</p>
+		<iframe class="container" src="https://astalsi401.github.io/stata/other/02/example2.html"></iframe>
 	</div>
 </body>
 </html>
