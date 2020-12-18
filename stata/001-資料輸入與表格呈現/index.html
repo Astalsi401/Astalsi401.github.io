@@ -12,6 +12,7 @@
     <div class="container">
         <h2 id="001">001. 資料輸入與表格呈現</h2>
         <h3 id="1-1">資料輸入</h3>
+        <p>輸入case、response、freq三個變項。</p>
 <pre id="stlog-1" class="stlog"><samp>
 <span class="stinp">. clear</span>
 <span class="stinp">. input case response freq</span>
@@ -27,12 +28,56 @@
  9. 2 4 34
 10. 2 5 20
 11. end
+.
+</samp></pre>
+<p>利用<code>describe</code>查看變項資訊。</p>
+<pre class="stlog"><samp>
+<span class="stinp">. describe</span>
+
+Contains data
+  obs:<span class="stres">            10                          </span>
+ vars:<span class="stres">             3                          </span>
+ size:<span class="stres">           120                          </span>
+---------------------------------------------------------------------------------------------
+              storage   display    value
+variable name   type    format     label      variable label
+---------------------------------------------------------------------------------------------
+<span class="stres">case           </span> float   %9.0g                 
+<span class="stres">response       </span> float   %9.0g                 
+<span class="stres">freq           </span> float   %9.0g                 
+---------------------------------------------------------------------------------------------
+Sorted by: 
+<span class="stres">     Note: Dataset has changed since last saved.</span>
         </samp></pre>
-        <p>定義名為react的物件，並將1~5加上標籤，將react與response連結。將response命名為"Agr of Onset"</p>
+        <p>定義名為react的value label，並為1~5加上標籤。</p>
+        <p>將react與response連結。</p>
+        <p>將response的variable label命名為"Agr of Onset"</p>
         <pre id="stlog-2" class="stlog"><samp>
 <span class="stinp">. label def react 1 "70-79" 2 "60-69" 3 "50-59" 4 "40-49" 5 "30-39"</span>
 <span class="stinp">. lab val response react</span>
 <span class="stinp">. lab var response "Agr of Onset"</span>
+        </samp></pre>
+        <p>再次利用<code>describe</code>查看變項資訊，可發現response的欄位已發生變化。</p>
+        <pre class="stlog"><samp>
+<span class="stinp">. describe</span>
+
+Contains data
+  obs:<span class="stres">            10                          </span>
+ vars:<span class="stres">             3                          </span>
+ size:<span class="stres">           120                          </span>
+---------------------------------------------------------------------------------------------
+              storage   display    value
+variable name   type    format     label      variable label
+---------------------------------------------------------------------------------------------
+<span class="stres">case           </span> float   %9.0g                 
+<span class="stres">response       </span> float   %9.0g      react      <span class="stres">Agr of Onset</span>
+<span class="stres">freq           </span> float   %9.0g                 
+---------------------------------------------------------------------------------------------
+Sorted by: 
+<span class="stres">     Note: Dataset has changed since last saved.</span>        
+        </samp></pre>
+        <p>對case進行相同的步驟。</p>
+        <pre id="stlog-2-2" class="stlog"><samp>
 <span class="stinp">. lab def case 1 "f" 2 "%", modify</span>
 <span class="stinp">. lab val case case</span>
         </samp></pre>
@@ -43,6 +88,7 @@
 <span class="stinp">. expand freq </span>
 (240 observations created)
 <span class="stinp">. tab response case, freq</span>
+
     Agr of |         case
      Onset |         f          % |     Total
 -----------+----------------------+----------
@@ -57,7 +103,8 @@
         </samp></pre>
         <p><b>第二種方法:</b> 將freq視為加權的變項</p>
 <pre id="stlog-4" class="stlog"><samp>
-<span class="stinp">. ta response case [fw=freq], freq</span>                 
+<span class="stinp">. ta response case [fw=freq], freq</span>
+
     Agr of |         case
      Onset |         f          % |     Total
 -----------+----------------------+----------
@@ -87,6 +134,7 @@
 <span class="stinp">. lab val x x</span>
 <span class="stinp">. lab val y y</span>
 <span class="stinp">. tab y x [fw=freq], chi</span>
+
  government | political orientation
  perference |   liberal  conservat |     Total
  -----------+----------------------+----------

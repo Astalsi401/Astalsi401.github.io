@@ -1160,8 +1160,8 @@ Factor loadings (pattern matrix) and unique variances
         <li>oblimax</li>
         <li>quartimin</li>
     </ol>
-    <p>在Stata輸入<span class="code">h rotate</span>可以看到簡單的介紹。</p>
-    <p>開始前或完成後記得輸入<span class="code">rotate, clear</span>，以便清除掉內存的記憶，否則會在前面的資訊上繼續作旋轉，如此則會扭曲其中的關係。</p>
+    <p>在Stata輸入<code>h rotate</code>可以看到簡單的介紹。</p>
+    <p>開始前或完成後記得輸入<code>rotate, clear</code>，以便清除掉內存的記憶，否則會在前面的資訊上繼續作旋轉，如此則會扭曲其中的關係。</p>
 <pre id="stlog-10" class="stlog"><samp><span class="stinp">. rotate, clear</span>
 
 <span class="stinp">. rotate, blank(.4)</span>
@@ -1287,7 +1287,7 @@ Scoring coefficients (method = regression; based on varimax rotated factors)
 <span class="stres">     </span>noluck2 |<span class="stres">   0.1452   1.0000</span>
 
 </samp></pre>
-    <li>將前面用<span class="code">predict</span>所建立的潛在變項做轉換，回復到由0-100的分數</li>
+    <li>將前面用<code>predict</code>所建立的潛在變項做轉換，回復到由0-100的分數</li>
 <pre id="stlog-14" class="stlog"><samp><span class="stinp">. g noluck3=100*normal(noluck)</span>
 (42 missing values generated)
 

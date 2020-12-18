@@ -16,7 +16,7 @@
 <span class="stinp">. clear</span>
 <span class="stinp">. quietly input str14 state ur </span>
 <span class="stinp">. </span>
-<span class="stinp">. cap drop ur0  <span class="stcmt">/*如果有ur0的話就放棄，沒有則不做動作*/</span></span>
+<span class="stinp">. cap drop ur0  <span class="stcmt">/*如果有ur0的話就拋棄，沒有則不做動作*/</span></span>
 <span class="stinp">. recode ur (2.0/3.9=1 "2.0-3.9") (4.0/5.9=2 "4.0-5.9") <span class="stcmt">/// </span>
                  &gt;           (6.0/7.9=3 "6.0-7.9") (8.0/9.9=4 "8.0-9.9") ,generate(ur0)   <span class="stcmt">/*將ur重新編碼為ur0*/</span></span>
 (34 differences between ur and ur0)

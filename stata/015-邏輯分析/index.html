@@ -69,7 +69,7 @@ Non-college |<span class="stres">        15          6 </span>|<span class="stre
 <h3 id="15-2">計算機率</h3>
 <p>若想要直接計算機率，而非機率的比值，有以下幾種方法：</p>
 <ol type="i">
-	<li>在執行<span class="code">logit</span>分析後輸入<span class="code">predict prob, pr</span></li>
+	<li>在執行<code>logit</code>分析後輸入<code>predict prob, pr</code></li>
 <pre id="stlog-5" class="stlog"><samp><span class="stinp">. logit college atrack</span>
 
 Iteration 0:   log likelihood = <span class="stres"> -20.59173</span>  
@@ -101,7 +101,7 @@ Pr(college) |      Freq.     Percent        Cum.
 ------------+-----------------------------------
       Total |<span class="stres">         32      100.00</span>
 </samp></pre>
-    <li><span class="code">margins</span></li>
+    <li><code>margins</code></li>
     <p>也適用於ordinal logistic</p>
 <pre id="stlog-6" class="stlog"><samp><span class="stinp">. margins, at(atrack=(0 1))</span>
 
@@ -288,10 +288,10 @@ Currently Married  |<span class="stres">   .5140615   .1058075     4.86   0.000 
 ------------------------------------------------------------------------------------
 </samp></pre>
 <p>繪圖</p>
-<p><span class="code">forvalue i=1/4</span>：healthre有四個選項，需要分別計算</p>
-<p><span class="code">age=(20(5)60)</span>：x軸為年齡，從20開始，5歲為一單位，到60歲為止</p>
-<p><span class="code">educ=(6)</span>：這張圖中只包含educ=6的樣本</p>
-<p><span class="code">predict</span>：計算應變項（healthre）</p>
+<p><code>forvalue i=1/4</code>：healthre有四個選項，需要分別計算</p>
+<p><code>age=(20(5)60)</code>：x軸為年齡，從20開始，5歲為一單位，到60歲為止</p>
+<p><code>educ=(6)</code>：這張圖中只包含educ=6的樣本</p>
+<p><code>predict</code>：計算應變項（healthre）</p>
 <pre id="stlog-10" class="stlog"><samp><span class="stinp">. forvalue i=1/4{</span>
   2<span class="stinp">.         margins, at(age=(20(5)60) educ=(6)) atmeans predict(outcome(`i'))</span>
   3<span class="stinp">.         matrix b`i'=r(b)'  <span class="stcmt">/*建立名為b1~b4的矩陣以儲存healthre中的資料*/</span></span>
@@ -670,7 +670,7 @@ Expression   : <span class="stres">Pr(healthre==4), predict(outcome(4))</span>
 </center>
 <h3 id="15-5">多分類邏輯迴歸（Multinomial Logistic Regression）</h3>
 <p>可用於Nominal Scale</p>
-<p><b>注意：</b>在<span class="code">mlogit</span>中若要顯示Odds Ratio，須改為<span class="code">rrr</span>，而非<span class="code">or</span></p>
+<p><b>注意：</b>在<code>mlogit</code>中若要顯示Odds Ratio，須改為<code>rrr</code>，而非<code>or</code></p>
 <pre id="stlog-11" class="stlog"><samp><span class="stinp">. cd data</span>
 <span class="stres">C:\Users\misti\Documents\Stata\unify\data</span>
 

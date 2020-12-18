@@ -72,8 +72,8 @@ variable name   type    format     label      variable label
                  Total |<span class="stres">      2,134      100.00</span>
 </samp></pre>
 <p>從"d v11"這個指令可以知道v11的value label是V11</p>
-<p>利用<span class="code">numlabel V11, add</span>可以檢視各個選項的編號。</p>
-<p><span class="code">numlabel _all, add</span>可以一次處理所有變項，但資料較大時可能要等它運行幾秒鐘。</p>
+<p>利用<code>numlabel V11, add</code>可以檢視各個選項的編號。</p>
+<p><code>numlabel _all, add</code>可以一次處理所有變項，但資料較大時可能要等它運行幾秒鐘。</p>
 <pre id="stlog-3" class="stlog"><samp><span class="stinp">. numlabel V11, add</span>
 
 <span class="stinp">. ta v11</span>
@@ -217,12 +217,12 @@ variable name   type    format     label      variable label
 
 <span class="stinp">. restore</span>
 </samp></pre>
-<p>若codebook中已經標明遺漏值（通常為999），那也可以使用<span class="code">mvdecode _all, mv(999)</span>來一次定義資料中所有變項的遺漏值，不過視你的需求而定，某些變項有可能需要個別調整。</p>
+<p>若codebook中已經標明遺漏值（通常為999），那也可以使用<code>mvdecode _all, mv(999)</code>來一次定義資料中所有變項的遺漏值，不過視你的需求而定，某些變項有可能需要個別調整。</p>
     <h3 id="4-3">重新編碼</h3>
     <p>將各個選項重新編碼為教育年數，如：選項1.無/不識字=0年</p>
 <p>這裡有兩種不同的方式，各有其用處，會在不同地方派上用場</p>
-<p><b>第一種方式：<span class="code">recode</span></b></p>
-<p>recode是針對單一變項重新編碼，指令較簡短，常常會遇到有些資料需要進行反項編碼才能讓人更容易理解，此時適合使用這種方式。</p>
+<p><b>第一種方式：<code>recode</code></b></p>
+<p><code>recode</code>是針對單一變項重新編碼，指令較簡短，常常會遇到有些資料需要進行反項編碼才能讓人更容易理解，此時適合使用這種方式。</p>
 <pre id="stlog-7" class="stlog"><samp><span class="stinp">. cap drop edyear  <span class="stcmt">/*如過有edyear這個變項就先拋棄，如過沒有則不做動作。*/</span></span>
 
 <span class="stinp">. <span class="stcmt">/*</span>
@@ -256,8 +256,8 @@ variable name   type    format     label      variable label
 ------------+-----------------------------------
       Total |<span class="stres">      2,130      100.00</span>
 </samp></pre>
-<p><b>第二種方式：<span class="code">replace</span></b></p>
-<p>replace是一一指定新變項中obs的條件，雖然較繁複，但好處是可以將多個變項中的obs整合進同一個變項中。</p>
+<p><b>第二種方式：<code>replace</code></b></p>
+<p><code>replace</code>是一一指定新變項中obs的條件，雖然較繁複，但好處是可以將多個變項中的obs整合進同一個變項中。</p>
 <pre id="stlog-8" class="stlog"><samp><span class="stinp">. cap drop edyear</span>
 
 <span class="stinp">. g edyear = .  <span class="stcmt">/*g: generate的縮寫，建立變項，也能寫為gen。建立一個名為edyear，裡面沒有任何obs的變項*/</span></span>
@@ -314,8 +314,8 @@ variable name   type    format     label      variable label
       Total |<span class="stres">      2,130      100.00</span>
 </samp></pre>
     <h3 id="4-4">職業地位計算（EGP Class Scheme）</h3>
-    <p><a href="https://www.jstor.org/stable/589632?seq=1">EGP Class Scheme</a>是一種職業地位的分類方法，在STATA中可以利用<span class="code">iscoegp</span>進行分類。</p>
-    <p>以iscoegp計算職業地位需要先獲取以下資訊：</p>
+    <p><a href="https://www.jstor.org/stable/589632?seq=1">EGP Class Scheme</a>是一種職業地位的分類方法，在STATA中可以利用<code>iscoegp</code>進行分類。</p>
+    <p>以<code>iscoegp</code>計算職業地位需要先獲取以下資訊：</p>
     <ol>
       <li>職業編碼：isco88碼（在以下範例資料中為v34b5）</li>
       <li>在哪裡工作？為誰工作？</li>
