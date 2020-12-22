@@ -1,95 +1,34 @@
+/* 網頁字體設定 */
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 12pt; 
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 12pt; 
 }
 pre, code, samp {
-  font-size: 11pt;
-  font-family: Courier, monospace;
+  font-family: Courier, monospace; font-size: 11pt;
 }
+
+/* 代碼塊 */
 code, samp {
+  padding: 1%; border-radius: 1%;
   background-color: #F5F5F5;
-  border-radius: 1%; 
-  padding: 1%;
 }
 pre code, pre samp {
-  white-space: pre; 
-  background: transparent;
-  border: none; 
   padding: 0;
+  white-space: pre; background: transparent; border: none; 
 }
 pre {
-  line-height: 133%; 
-  background-color: #F5F5F5;
-  border: 1px solid #CCCCCC; 
-  border-radius: 1%;
-  padding: 2%; 
-  overflow: auto;
+  overflow: auto; padding: 2%;
   max-height: 800px;
-}
-a:link {
-  text-decoration: none;
-  color: rgb(0,0,143);
-}
-a:hover{
-  text-decoration: underline;
-}
-a:visited {
-  text-decoration: none;
-  color: rgb(160,160,255);
-}
-table {
-  border: 3px #CCCCCC solid;
-}
-th {
-  background-color: rgb(212,212,212);
-}
-td {
-  background-color: rgb(237,237,237);
-}
-.container {
-  padding: 13px 3%;
-  width: 95%;
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 142.8%;
-  min-height: 500px;
-}
-.button {
-  z-index: 9999; 
-  position: fixed !important; 
-  right: 2%;
-  top: 3%;
-  text-align: center;
-}
-.button_01 {
-  background: rgba(145,145,145,0.4);
-  position: absolute;
-  width: 70px;
-  right: 0;
-  top: 0;
-}
-.menu {
-  margin: 5% auto;
-  position: relative;
-  line-height: 142.8%;
-  width: 50%
-}
-.link {
-  width: 30%;
-  min-width: 300px;
-  line-height: 145.8%;
-  margin: 0 auto;
+  line-height: 133%;
+  background-color: #F5F5F5; border: 1px solid #CCCCCC; border-radius: 1%;
 }
 .stres { 
   color: #324F58; 
 }
 .stinp { 
-  font-weight: bold; 
-  color: #000000; 
+  font-weight: bold; color: #000000; 
 }
 .stcmd .stcmt { 
-  font-style: italic; 
-  opacity: 0.5; 
+  font-style: italic; opacity: 0.5; 
 }
 .stoom, .stcnp { 
   font-style: italic; 
@@ -100,8 +39,71 @@ td {
   }
 }
 .shortcut {
-  font-style: italic;
-  font-size: 10pt;
-  background-color: rgb(243, 243, 243);
-  color: rgb(85, 85, 85);
+  font-style: italic; font-size: 10pt;
+  background-color: rgb(243, 243, 243); color: rgb(85, 85, 85);
 }
+
+/* 連結 */
+a:link {
+  text-decoration: none; color: rgb(0,0,143);
+}
+a:hover{
+  text-decoration: underline;
+}
+a:visited {
+  text-decoration: none; color: rgb(160,160,255);
+}
+
+/* 表格 */
+table {
+  border: 3px #CCCCCC solid;
+}
+th {
+  background-color: rgb(212,212,212);
+}
+td {  
+  background-color: rgb(237,237,237);
+}
+
+/* 主要網頁內容位置 */
+.container {
+  margin: 0 auto; padding: 13px 3%; 
+  width: 95%; max-width: 800px; min-height: 500px;
+  line-height: 142.8%;
+}
+
+/* home選單 */
+.menu {
+  margin: 5% auto; position: relative;
+  width: 80%; max-width: 800px; min-width: 300px;
+  display: flex; justify-content: space-around; align-content: center; line-height: 142.8%;
+}
+.app {
+  max-width: 64px; max-height: 84px;
+}
+.app_icon {
+  width: 64px; height: 64px;
+}
+.app_text {
+  max-width: 64px; max-height: 20px;
+  text-align: center; 
+}
+
+/* 網頁右上按鈕 */
+.button {
+  z-index: 9999; position: fixed !important; right: 2%; top: 3%;
+  text-align: center;
+}
+.button_01 {
+  position: absolute; top: 0;
+  width: 70px; right: 0;
+  background: rgba(145,145,145,0.4);
+}
+
+/* 目錄 */
+.link {
+  margin: 0 auto;
+  width: 30%; min-width: 300px;
+  line-height: 145.8%;
+}
+
