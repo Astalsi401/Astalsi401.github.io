@@ -75,8 +75,9 @@ td {
 /* home選單 */
 .menu {
   margin: 5% auto; position: relative;
-  width: 80%; max-width: 800px; min-width: 300px;
-  display: flex; justify-content: space-around; align-content: center; line-height: 142.8%;
+  width: 80%; max-width: 1200px; min-width: 300px;
+  display: flex; flex-wrap: nowrap;
+  justify-content: space-around; align-content: center; line-height: 142.8%;
 }
 .app {
   max-width: 64px; max-height: 84px;
