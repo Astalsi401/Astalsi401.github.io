@@ -1,0 +1,18 @@
+button {
+	background-color: #0080FF;
+	color: #FFFFFF
+}
+
+.content {
+	text-align: center;
+	width: 90%; max-width: 600px;
+	margin: 0 auto;
+}
+
+.title {
+	font-weight: bold;
+}
+
+.message_box {
+	background-color: #f0f0f0
+}

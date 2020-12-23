@@ -1,23 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="public/main.css">
-	<title>Comment</title>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="c_style.css">
+	<title>Comments</title>
 </head>
+<script src="comments.js"></script>
 <body>
-	<div class="container">
-		<div class="comment-send">
-			<form id="commentForm" method="GET" action="https://astalsi401.github.io/comment">
-				<textarea class="comment-send-input" name="comment" form="commentForm" cols="80" rows="5" placeholder="輸入評論..."></textarea>
-				<input class="comment-send-button" type="submit" value="發表評論">			
-			</form>
-		</div>
-		<div class="comment-list" id="commentList">
-		</div>
-	</div>
+	<div class="content">
+        <div class="title">使用者留言</div>
+        <div class="message_box" id="messageBox"></div>
+        <div class="incomment"><input id="myInput" type="text" placeholder="請輸入留言類容"><button id="doPost">提交</button></div>
+    </div>
 </body>
 </html>
-
