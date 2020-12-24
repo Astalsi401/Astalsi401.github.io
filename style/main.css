@@ -76,7 +76,7 @@ td {
 .menu {
   margin: 5% auto; position: relative;
   width: 80%; max-width: 1200px; min-width: 300px;
-  display: flex; flex-wrap: nowrap;
+  display: flex; flex-wrap: wrap;
   justify-content: space-around; align-content: center; line-height: 142.8%;
 }
 .app {
@@ -92,13 +92,10 @@ td {
 
 /* 網頁右上按鈕 */
 .button {
+  width: 70px;
   z-index: 9999; position: fixed !important; right: 2%; top: 3%;
   text-align: center;
-}
-.button_01 {
-  position: absolute; top: 0;
-  width: 70px; right: 0;
-  background: rgba(145,145,145,0.4);
+  display: flex; flex-wrap: wrap;
 }
 
 /* 目錄 */
