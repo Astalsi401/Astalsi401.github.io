@@ -1,26 +1,20 @@
 /* 網頁字體設定 */
-html {
-  font-family:sans-serif; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
-}
 body {
-  margin:0
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 12pt; 
 }
-code, kbd, pre, samp {
-  font-family:monospace,monospace; font-size:11pt;
+pre, code, samp {
+  font-family: Courier, monospace; font-size: 11pt;
 }
 
 /* 圖片 */
 img {
   max-width: 100%;
 }
-img, tr {
-  page-break-inside:avoid;
-}
 
 /* 代碼塊 */
 code, samp {
   padding: 1%; border-radius: 1%;
-  background-color: rgba(0,0,0,0.04);
+  background-color: #F5F5F5;
 }
 pre code, pre samp {
   padding: 0;
@@ -30,10 +24,7 @@ pre {
   overflow: auto; padding: 2%;
   max-height: 800px;
   line-height: 133%;
-  background-color: rgba(0,0,0,0.04); border: 1px solid #CCCCCC; border-radius: 1%;
-}
-pre:not([class]) {
-    background-color: white;
+  background-color: #F5F5F5; border: 1px solid #CCCCCC; border-radius: 1%;
 }
 .stres { 
   color: #324F58; 
@@ -56,26 +47,6 @@ pre:not([class]) {
   font-style: italic; font-size: 10pt;
   background-color: rgb(243, 243, 243); color: rgb(85, 85, 85);
 }
-
-/* R代碼高亮 */
-.hljs-literal {
-color: #990073;
-}
-.hljs-number {
-color: #099;
-}
-.hljs-comment {
-color: #998;
-font-style: italic;
-}
-.hljs-keyword {
-color: #900;
-font-weight: bold;
-}
-.hljs-string {
-color: #d14;
-}
-
 
 /* 連結 */
 a:link {
