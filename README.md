@@ -7,6 +7,10 @@
 
 ## 資料夾介紹
 
-* [comment](https://github.com/Astalsi401/Astalsi401.github.io/tree/master/comment)：嘗試製作中的匿名網站評論功能
+* [comment](https://github.com/Astalsi401/Astalsi401.github.io/tree/master/comment)：嘗試製作中的評論功能
+
+* [js](https://github.com/Astalsi401/Astalsi401.github.io/tree/master/js)：網站js
 
 * [stata](https://github.com/Astalsi401/Astalsi401.github.io/tree/master/stata)：stata網站的html文件檔
+
+* [style](https://github.com/Astalsi401/Astalsi401.github.io/tree/master/style)：網站css檔
