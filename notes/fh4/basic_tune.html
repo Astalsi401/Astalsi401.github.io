@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<title>Forza Horizon 4 Basic Tune</title>
+	<link rel="stylesheet" type="text/css" href="../../style/main.css">
+</head>
+<body>
+<div class="container">
+	<h1 class="title">Forza Horizin 4 基礎調教</h1>
+	<ol>
+		<li><h3>重量</h3></li>
+		<p>影響操控、加速、剎車，越輕越好，防滾籠通常不需要。</p>
+		<li><h3>差速器</h3></li>
+		<p>控制左右輪轉速的同步率，0%代表各自獨立，100%則完全同步。同步率越高，車輛就能傳送越多馬力到輪上，有越快的加速。差速器對轉向過度、轉向不足，出灣加速有相當大的影響。</p>
+		<ol type="i">
+			<li><h4>前差速器加速（25%）：</h4></li>
+			<p>不宜調到太高，雖然使出彎速度較慢，但也會減少過度轉向。</p>
+			<li><h4>後差速器加速（40~50%）：</h4></li>
+			<p>減少後差速，出彎速度低，但增加抓地；增加後差速，抓地力降低，出彎速度提高。</p>
+			<li><h4>差速器減速（0%）：</h4></li>
+			<p>屬於個人偏好，不過0%更有利加速。</p>
+			<li><h4>中央差速器（70%~90%）：</h4></li>
+			<p>決定前後輪分配的馬力，讓稱更偏向前驅或後驅。增加後輪馬力，增加轉向過度；但後輪出力過高時將導致加速降低。</p>
+		</ol>
+		<li><h3>剎車</h3></li>
+		<p>當啟用abs時，將剎車力度調到100%以上將對剎車速度有負面影響。</p>
+		<li><h3>空力</h3></li>
+		<p>減少空力，過彎性能降低，但增加極速。增加空力，犧牲少許極速換取更佳的彎道性能。</p>
+		<ol type="i">
+			<li><h4>前空力：</h4></li>
+			<p>有時候前空力並不適合調到最高，不然在高速時反而會導致失去抓地力。</p>
+			<li><h4>後空力（調到最高）</h4></li>
+		</ol>
+		<li>阻尼</li>
+		<ol type="i">
+			<li><h4>阻尼（公式決定）</h4></li>
+			<li><h4>回彈硬度（避震的60%）：</h4></li>
+			<p>影響避震器面對彈跳時的表現。</p>
+		</ol>
+		<li><h3>彈簧</h3></li>
+		<ol type="i">
+			<li><h4>彈簧（公式決定）</h4></li>
+			<li><h4>車身高度：</h4></li>
+			<p>降到最低再視情況調高。</p>
+		</ol>
+		<li><h3>防傾桿（公式決定）</h3></li>
+		<li><h3>輪胎定位</h3></li>
+		<ol type="i">
+			<li><h4>外傾角：</h4></li>
+			<p>決定過彎抓地力，調整至過彎時接近0。</p>
+			<li><h4>前後傾角：</h4></li>
+			<p>越高，直線時傾角越穩定，但過彎時將增加負傾角。</p>
+		</ol>
+		<li><h3>齒輪裝置</h3></li>
+		<p>調整至1檔起跑只會碰到紅區1~2次，第3次時就應該上2檔，2檔轉速不宜過高，避免剛換檔就進入紅區。</p>
+		<li><h3>胎壓</h3></li>
+		<p>越高，轉向越靈敏。越低，抓地力越好。觀察輪胎溫度變化，盡量保持正常狀態以維持峰值抓地力。</p>
+	</ol>
+	<h2>公式</h2>
+	<p><code>(最大-最小)×重量比+最小</code></p>
+			(<input id="max" type="text" />-<input id="min" type="text" />)×<input id="ratio" type="text" />+<input id="min" type="text" /><button onclick="tuneformula()">＝</button>
+    		<p>前：<output id="f"></output></p>
+			<p>後：<output id="r"></output></p>
+		<script>
+			function tuneformula(){
+				var ratio = parseFloat(document.getElementById("ratio").value);
+				var max = parseFloat(document.getElementById("max").value);
+				var min = parseFloat(document.getElementById("min").value);
+				var f = ((max-min)*(ratio))+min;
+				var r = ((max-min)*(1-ratio))+min;
+				document.getElementById("f").innerHTML = f;
+				document.getElementById("r").innerHTML = r;
+			}
+		</script>
+</div>
+</body>
+</html>
+
+	
