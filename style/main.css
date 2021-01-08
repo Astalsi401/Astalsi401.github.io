@@ -42,7 +42,7 @@ img, tr {
 
 /* yt嵌入影片 */
 .youtube {
-  width: 560px; height: 315px; min-width: 100%;
+  width: 560px; height: 315px; max-width: 100%;
 }
 
 /* 代碼塊 */
