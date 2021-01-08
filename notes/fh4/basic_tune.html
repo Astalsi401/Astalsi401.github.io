@@ -68,9 +68,12 @@
 		<p>越高，轉向越靈敏。越低，抓地力越好。觀察輪胎溫度變化，盡量保持正常狀態以維持峰值抓地力。</p>
 	</ol>
 	<h2 id="formula">公式</h2>
+	<p><code>(最大值-最小值)×重量比+最小值</code></p>
+	<p>以防傾桿為例，賽車防傾桿最大值為65，最小值為1，若車輛前端重量比為45%，則：</p>
+	<p>前防傾桿：<code>(65-1)*0.45+1=29.8</code></p>
+	<p>後防傾桿：<code>(65-1)*(1-0.45)+1=36.2</code></p>
 	<center>
-		<p><code>(最大值-最小值)×重量比+最小值</code></p>
-		重量比：<input id="ratio" type="text" /><br>
+		重量比：<input id="ratio" type="text" placeholder="請輸入小數" /><br>
 		最大值：<input id="max" type="text" /><br>
 		最小值：<input id="min" type="text" /><br>
 		<button onclick="tuneformula()">計算</button>
