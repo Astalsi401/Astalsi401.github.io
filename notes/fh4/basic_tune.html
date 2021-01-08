@@ -9,8 +9,8 @@
 <div class="container">
 	<h1>Forza Horizin 4 基礎調教</h1>
 	<p>本頁面為<a href="https://www.youtube.com/c/HokiHoshi">HokiHoshi</a>車輛調教教學影片的簡易中文摘要。</p>
-	<center><iframe class="yt" src="https://www.youtube.com/embed/WM7_3NGGUoQ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-	<center><iframe class="yt" src="https://www.youtube.com/embed/D6qthLir2iI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+	<center><iframe maxwidth="100%" width="560" height="315" src="https://www.youtube.com/embed/WM7_3NGGUoQ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+	<center><iframe maxwidth="100%" width="560" height="315" src="https://www.youtube.com/embed/D6qthLir2iI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 	<ol>
 		<li><h3>重量</h3></li>
 		<p>影片位置：<a href="https://youtu.be/WM7_3NGGUoQ?t=71">1:11</a></p>
@@ -65,21 +65,26 @@
 		<p>越高，轉向越靈敏。越低，抓地力越好。觀察輪胎溫度變化，盡量保持正常狀態以維持峰值抓地力。</p>
 	</ol>
 	<h2 id="formula">公式</h2>
-	<p><code>(最大-最小)×重量比+最小</code></p>
-			(<input id="max" type="text" />-<input id="min" type="text" />)×<input id="ratio" type="text" />+<input id="min" type="text" /><button onclick="tuneformula()">＝</button>
-    		<p>前：<output id="f"></output></p>
-			<p>後：<output id="r"></output></p>
-		<script>
-			function tuneformula(){
-				var ratio = parseFloat(document.getElementById("ratio").value);
-				var max = parseFloat(document.getElementById("max").value);
-				var min = parseFloat(document.getElementById("min").value);
-				var f = ((max-min)*(ratio))+min;
-				var r = ((max-min)*(1-ratio))+min;
-				document.getElementById("f").innerHTML = f;
-				document.getElementById("r").innerHTML = r;
-			}
-		</script>
+	<center>
+		<p><code>(最大-最小)×重量比+最小</code></p>
+		重量比：<input id="ratio" type="text" /><br>
+		最大：<input id="max" type="text" /><br>
+		最小：<input id="min" type="text" /><br>
+		<button onclick="tuneformula()">計算</button>
+    	<p>前：<output id="f"></output></p>
+		<p>後：<output id="r"></output></p>
+	</center>
+	<script>
+		function tuneformula(){
+			var ratio = parseFloat(document.getElementById("ratio").value);
+			var max = parseFloat(document.getElementById("max").value);
+			var min = parseFloat(document.getElementById("min").value);
+			var f = ((max-min)*(ratio))+min;
+			var r = ((max-min)*(1-ratio))+min;
+			document.getElementById("f").innerHTML = f;
+			document.getElementById("r").innerHTML = r;
+		}
+	</script>
 </div>
 </body>
 </html>
