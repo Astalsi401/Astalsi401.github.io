@@ -42,7 +42,8 @@ img, tr {
 
 /* yt嵌入影片 */
 .youtube {
-  width: 560px; height: 315px; max-width: 100%;
+  width: 560vw; height: 315vw; max-width: 560px; max-height: 315px;
+  margin: 0 auto;
 }
 
 /* 代碼塊 */
