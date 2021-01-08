@@ -10,6 +10,7 @@ code, kbd, pre, samp {
 }
 h1 {
   font-size: 34px;
+  line-height: 200%;
 }
 h1.title {
   font-size: 38px;
