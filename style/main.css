@@ -38,6 +38,11 @@ img, tr {
   page-break-inside:avoid;
 }
 
+/* yt影片嵌入 */
+.yt {
+  max-width: 100%; width: 560px; height: 315px;
+}
+
 /* 代碼塊 */
 code, samp {
   padding: 1%; border-radius: 1%;
