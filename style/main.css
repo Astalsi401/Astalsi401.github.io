@@ -175,7 +175,7 @@ td {
 }
 
 .inobj {
-  margin-top: 10px;
+  margin-top: 10px; padding-right: 15px;
   background-color: rgba(128,0,128,0.04);
   border-style: dotted; border-color: rgba(128,0,128,0.8);
 }
