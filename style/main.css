@@ -167,6 +167,19 @@ td {
   line-height: 145.8%;
 }
 
+/* fh4總結 */
+.sumobj {
+  width: 95%; max-width: 800px; min-height: 500px;
+  display: flex; flex-wrap: wrap; justify-content: space-around;
+  align-content: center;
+}
+
+.inobj {
+  margin-top: 10px;
+  background-color: rgba(128,0,128,0.04);
+  border-style: dotted; border-color: rgba(128,0,128,0.8);
+}
+
 /* FH4計算欄位 */
 .formula {
   max-width: 200px;
