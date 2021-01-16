@@ -34,7 +34,7 @@ h6 {
 
 /* 圖片 */
 img {
-  max-width: 100%;
+  max-width: 95%;
 }
 img, tr {
   page-break-inside:avoid;
@@ -169,7 +169,7 @@ td {
 
 /* fh4總結 */
 .sumobj {
-  width: 95%; max-width: 800px; min-height: 500px;
+  width: 92%; max-width: 780px; min-height: 500px;
   display: flex; flex-wrap: wrap; justify-content: space-around;
   align-content: center;
 }
