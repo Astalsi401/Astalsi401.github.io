@@ -5,14 +5,14 @@
 	<title>Html & Stata</title>
 	<link rel="stylesheet" type="text/css" href="../../../style/main.css">
 </head>
-<script src="../../../import/button/back_to_content.js"></script>
+<script src="../../import/button/back_to_content.js"></script>
 <body>
 	<div class="container">
 		<h2 id="other_stata_02">Html & Stata</h2>
 		<p>在本節終將介紹兩種能將Stata執行結果加上文字說明輸出為html檔的方法。</p>
 		<h3><code>dyndoc</code></h3>
 		<p><code>dyndoc</code>的do檔格式如下：</p>
-		<pre>
+		<pre class="stata">
 <code>
 將Markdown語法的文字輸入在這裡，ex:
 
@@ -55,7 +55,7 @@ cd "D:/Documents/Git/stata/other/02"
 			<li><code>t("example2")</code>:html頁面的名稱，不需要跟檔名相同</li>
 			<li><code>st(ocean cbf)</code>:主題為ocean（海藍色），cbf代表Stata輸入指令為粗體字</li>
 		</ul>
-		<pre>
+		<pre class="stata">
 <code>
 clear
 cd "D:/Documents/Git/stata/other/02"  /*要匯出的do檔所在的工作目錄*/
