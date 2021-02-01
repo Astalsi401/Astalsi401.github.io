@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-F8SLV521P4"></script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+  		gtag('config', 'G-F8SLV521P4');
+	</script>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<title>Forza Horizon 4 Upgrades</title>
+	<link rel="stylesheet" type="text/css" href="../../style/main.css">
+</head>
+<body class="fh4">
+<script src="../../import/button/back_to_content_notes.js"></script>
+<div class="container">
+	<h1>FH4車輛升級</h1>
+	<p>本頁面為<a href="https://www.youtube.com/channel/UCGK33hhvffYv5hUNqB0wVnQ">Johnson Racing</a>影片升級部分的簡易中文摘要。</p>
+	<p>車輛升級主要考量四個方面：<b>重量</b>、<b>馬力</b>、<b>操控</b>、<b>分數</b></p>
+	<p>建議依據以下順序來升級車輛。</p>
+	<ol>
+		<h2><li>改造</li></h2>
+		<ol type="i">
+			<h3><li>置換引擎</li></h3>
+			<p>不同的引擎會影響之後的升級，因此優先處理。在FH4中V10引擎通常有最佳的數值，不過還是建議自己計算。</p>
+			<h3><li>傳動系統置換</li></h3>
+			<p>RWD通常在單圈速度上會有更佳的表現，因為在同樣的分數下能擁有更高的馬力，但起步速度慢，駕駛難度高。AWD起步快，駕駛難度較低，遭遇碰撞推擠時更穩定，但馬力較低。</p>
+			<h3><li>進氣</li></h3>
+			<p>離心式機械增壓>渦輪增壓>正壓排氣式增壓</p>
+			<h3><li>寬體</li></h3>
+			<p>允許更寬的輪距，能增加操控，但也會增加重量。</p>
+		</ol>
+		<h2><li>空力套件與外觀</li></h2>
+		<p>建議先解鎖前後空力，其餘選項在最後用來調整分數。</p>
+		<h2><li>輪胎與輪圈</li></h2>
+		<ol type="i">
+			<h3><li>輪胎踏面膠料</li></h3>
+			<p>依據車輛分數選擇，分數超過S1後建議將操控升至8以上，因此大多會安裝賽車胎。</p>
+			<h3><li>胎寬</li></h3>
+			<ul>
+				<li>AWD：前輪不必要、後輪最寬</li>
+			</ul>
+			<p>其餘選項在最後用來調整分數</p>
+		</ol>
+		<h2><li>傳動系統</li></h2>
+		<ol type="i">
+			<h3><li>離合器</li></h3>
+			<p>不需要，換檔時間可以手排（含離合器）改善。</p>
+			<h3><li>變速箱</li></h3>
+			<p>一般跑車變速箱已經夠用，但賽車變速箱若不增加分數則建議裝上，可以更細緻的調整車輛。</p>
+			<h3><li>傳動軸</li></h3>
+			<p>減少些許重量，可最後再決定是否升級。</p>
+			<h3><li>差速器</li></h3>
+			<p>務必升滿，對車輛調教非常重要。</p>
+		</ol>
+		<h2><li>底盤與操控性</li></h2>
+		<ol type="i">
+			<h3><li>剎車</li></h3>
+			<p>不需要。</p>
+			<h3><li>彈簧及阻尼</li></h3>
+			<p>依據需求選擇賽車或拉力。</p>
+			<h3><li>前後防傾桿</li></h3>
+			<p>必需。</p>
+			<h3><li>底盤強化/防滾籠</li></h3>
+			<p>不需要。</p>
+			<h3><li>車重減輕</li></h3>
+			<p>必須，建議升滿。</p>
+		</ol>
+		<h2><li>引擎</li></h2>
+		<p>優先順序：增壓（ex:渦輪）>排氣系統>凸輪軸>氣閥=進氣系統=活塞/壓縮比=飛輪</p>
+		<p>中間冷卻器、機油/冷卻系統的升級有時會降低分數，可以用來調整。</p>
+	</ol>
+	<center>
+		<h2>馬力重量比計算</h2>
+		<p>每匹馬力需負擔的重量。</p>
+		<p><code>kg/hp</code></p>
+		改裝前重量<input id="bw" type="text"><br>
+		改裝前馬力<input id="bh" type="text"><br>
+		改裝後重量<input id="aw" type="text"><br>
+		改裝後馬力<input id="ah" type="text"><br>
+		<button onclick="whp()">計算</button>
+		<p>原：<output id="before"></output></p>
+		<p>新：<output id="after"></output></p>
+	</center>
+	<script>
+		function whp(){
+			var bh = parseFloat(document.getElementById("bh").value);
+			var bw = parseFloat(document.getElementById("bw").value);
+			var ah = parseFloat(document.getElementById("ah").value);
+			var aw = parseFloat(document.getElementById("aw").value);
+			var before = bw/bh
+			var after = aw/ah
+			document.getElementById("before").innerHTML = before
+			document.getElementById("after").innerHTML = after
+		}
+	</script>
+</div>
+</body>
+</html>
