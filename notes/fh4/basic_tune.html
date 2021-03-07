@@ -17,7 +17,7 @@
 <script src="../../import/button/back_to_content_notes.js"></script>
 <div class="container">
 	<h1>FH4基礎調教</h1>
-	<p>本頁面為Youtube上倒到的FH4車輛調教教學影片的簡易中文摘要。</p>
+	<p>本頁面為Youtube上FH4車輛調教影片的簡易中文摘要。</p>
 	<p>影片清單：</p>
 	<ul>
 		<li><a href="https://www.youtube.com/c/HokiHoshi">HokiHoshi</a></li>
@@ -33,9 +33,6 @@
 		</ul>
 	</ul>
 	<ol>
-		<h3><li>重量</li></h3>
-		<p>影片位置：<a href="https://youtu.be/WM7_3NGGUoQ?t=71">1:11</a></p>
-		<p>影響操控、加速、剎車，越輕越好，防滾籠通常不需要。</p>
 		<h3><li>差速器</li></h3>
 		<p>影片位置：<a href="https://youtu.be/WM7_3NGGUoQ?t=152">2:32</a></p>
 		<p>控制左右輪轉速的同步率，0%代表各自獨立，100%則完全同步。同步率越高，車輛就能傳送越多馬力到輪上，有越快的加速。差速器對轉向過度、轉向不足，出灣加速有相當大的影響。</p>
@@ -185,7 +182,7 @@
 		<p>前防傾桿：<code>(65-1)*0.45+1=29.8</code></p>
 		<p>後防傾桿：<code>(65-1)*(1-0.45)+1=36.2</code></p>
 	</div>
-	<center>
+	<div style="text-align: center;">
 		重量比：<input id="ratio" type="text" placeholder="請輸入小數" /><br>
 		最大值：<input id="max" type="text" /><br>
 		最小值：<input id="min" type="text" /><br>
@@ -197,7 +194,7 @@
 		<button onclick="tune2()">計算阻尼壓縮硬度</button>
 		<p>前：<output id="fd2"></output></p>
 		<p>後：<output id="rd2"></output></p>
-	</center>
+	</div>
 	<script>
 		function tuneformula(){
 			var ratio = parseFloat(document.getElementById("ratio").value);
