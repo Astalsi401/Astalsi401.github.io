@@ -16,7 +16,7 @@
 <body>
 	<script src="../../../import/button/back_to_content_stata_other.js"></script>
 	<div class="container">
-		<h2 id="other_stata_02">Html & Stata</h2>
+		<h2 data-type="title_1" id="other_stata_02">Html & Stata</h2>
 		<p>在本節終將介紹兩種能將Stata執行結果加上文字說明輸出為html檔的方法。</p>
 		<h3><code>dyndoc</code></h3>
 		<p><code>dyndoc</code>的do檔格式如下：</p>
@@ -94,7 +94,7 @@ cd "D:/Documents/Git/stata/other/02"
 
 /*另一段Stata code....*/  
 </code>
-		</pre>
+	</pre>
 		<p>然後利用<code>webdoc do 檔名.do, replace</code>即可輸出，結果如下：</p>
 		<iframe class="container" src="https://astalsi401.github.io/stata/other/02-html_stata/example2.html"></iframe>
 		<p>本網站也是使用<code>webdoc</code>製作，不過在輸出後又手動對html檔進行編輯，本站中所有頁面的html檔，以及style設定檔都能在<a href="https://github.com/Astalsi401/Astalsi401.github.io">我的github</a>找到。</p>

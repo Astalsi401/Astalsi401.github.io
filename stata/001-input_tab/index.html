@@ -16,8 +16,8 @@
   <body>
     <script src="../../import/button/back_to_content_stata.js"></script>
     <div class="container">
-        <h2 id="001">001. 資料輸入與表格呈現</h2>
-        <h3 id="1-1">常用符號</h3>
+        <h2 data-type="title_1" id="001">001. 資料輸入與表格呈現</h2>
+        <h3 data-type="title_2" id="1-1">常用符號</h3>
         <p>以下簡單介紹Stata中常用的符號：</p>
         <ul>
           <li><p><code>==</code>：等號，以連續兩個等號代表數值的相等。</p></li>
@@ -26,7 +26,7 @@
           <li><p><code>|</code>：或，只要滿足其中一個條件。</p></li>
           <li><p><code>/* some text... */</code>：加入註解</p></li>
        </ul>
-        <h3 id="1-2">資料輸入</h3>
+        <h3 data-type="title_2" id="1-2">資料輸入</h3>
         <p>輸入case、response、freq三個變項。</p>
 <pre id="stlog-1" class="stlog"><samp>
 <span class="stinp">. clear</span>
@@ -96,7 +96,7 @@ Sorted by:
 <span class="stinp">. lab def case 1 "f" 2 "%", modify</span>
 <span class="stinp">. lab val case case</span>
         </samp></pre>
-        <h3 id="1-3">輸出表格</h3>
+        <h3 data-type="title_2" id="1-3">輸出表格</h3>
         <p><b>第一種方法:</b> 將加權變項中的數值視為"個案數"，然後增加"n-1"個案數。以此資料為例，第一列為一個個案，但由於freq＝9，因此當執行完<span class="code">expand freq</span>後，這資料會增加9-1＝8列的"1 1 9"的個案</p>
         <pre id="stlog-3" class="stlog"><samp>
 <span class="stinp">. preserve</span>
@@ -131,7 +131,7 @@ Sorted by:
 -----------+----------------------+----------
      Total |<span class="stres">       150        100 </span>|<span class="stres">       250 </span>
 </samp></pre>
-<h3 id="1-4">表格範例2</h3>
+<h3 data-type="title_2" id="1-4">表格範例2</h3>
 <pre id="stlog-5" class="stlog"><samp>
 <span class="stinp">. clear</span>
 <span class="stinp">. input x y freq</span>
@@ -159,7 +159,7 @@ Sorted by:
       Total |<span class="stres">        20         20 </span>|<span class="stres">        40 </span>
  Pearson chi2(<span class="stres">1</span>) = <span class="stres">  2.6667  </span> Pr = <span class="stres">0.102</span>
 </samp></pre>
-<h3 id="1-5">建立亂數(Stata Random Number)</h3>
+<h3 data-type="title_2" id="1-5">建立亂數(Stata Random Number)</h3>
 <p>各種建立亂數的指令</p>
 <ul>
   <li><b>runiform():</b> generates rectangularly (uniformly) distributed random number over [0,1).</li>
