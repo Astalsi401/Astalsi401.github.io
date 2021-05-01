@@ -36,17 +36,28 @@
 		<h3><li>差速器</li></h3>
 		<div class="textbox">
 			<p>影片位置：<a href="https://youtu.be/WM7_3NGGUoQ?t=152">2:32</a></p>
-			<p>控制左右輪轉速的同步率，0%代表各自獨立，100%則完全同步。同步率越高，車輛就能傳送越多馬力到輪上，有越快的加速。差速器對轉向過度、轉向不足，出灣加速有相當大的影響。</p>
+			<p>感謝補充：<a href="https://forum.gamer.com.tw/Co.php?bsn=7697&sn=18681&subbsn=7&bPage=0">暗行者(halcyon1211)</a></p>
+			<p>差速器控制左右輪轉速的同步率，0%代表各自獨立，100%則完全同步。同步率越高，車輛就能傳送越多馬力到輪上，有越快的加速。差速器對轉向過度、轉向不足，出灣加速有相當大的影響，建議每次5%做增減。</p>
 			<ol type="i">
-				<h4><li>前差速器加速（25%）：</li></h4>
-				<p>不宜調到太高，雖然使出彎速度較慢，但也會減少過度轉向。</p>
-				<h4><li>後差速器加速（40~50%）：</li></h4>
-				<p>減少後差速，出彎速度低，但增加抓地；增加後差速，抓地力降低，出彎速度提高。</p>
-				<h4><li>差速器減速（0%）：</li></h4>
-				<p>屬於個人偏好，不過0%更有利出彎加速。</p>
-				<h4><li>中央差速器（70%~90%）：</li></h4>
-				<p>決定前後輪分配的馬力，讓車更偏向前驅或後驅。增加後輪馬力，增加轉向過度；但後輪出力過高時將導致加速降低。</p>
-				<h4><li>後驅車差速器（45%~80%）</li></h4>
+				<h4><li>AWD</li></h4>
+				<ul>
+					<li>前差速器加速（25%）：</li>
+					<p>不宜調到太高，雖然使出彎速度較慢，但也會減少過度轉向。</p>
+					<li>後差速器加速（40~50%）：</li>
+					<p>減少後差速，出彎速度低，但增加抓地；增加後差速，抓地力降低，出彎速度提高。</p>
+					<li>差速器減速（0%）：</li>
+					<p>屬於個人偏好，不過0%更有利出彎加速。</p>
+					<li>中央差速器（70%~90%）：</li>
+					<p>決定前後輪分配的馬力，讓車更偏向前驅或後驅。增加後輪馬力，增加轉向過度；但後輪出力過高時將導致加速降低。</p>
+				
+				</ul>
+				<h4><li>RWD</li></h4>
+				<ul>
+					<li>後驅車差速器加速（45%~80%）：</li>
+					<p>根據車輛馬力來調整，越大馬力需要越高的值，越高的值代表轉向過度。判斷的依據為看後側輪胎狀況，過低內側會打滑，過高則是外側打滑。宗旨是在輪胎不打滑的情況下找到自己最習慣的手感。</p>
+					<li>後驅車差速器減速（5%~50%）：</li>
+					<p></p>
+				</ul>
 			</ol>
 		</div>
 		<h3><li>剎車</li></h3>
@@ -61,7 +72,8 @@
 			<ol type="i">
 				<h4><li>前空力：</li></h4>
 				<p>有時候前空力並不適合調到最高（保持在約80%的位置），不然在高速時反而會導致失去抓地力。</p>
-				<h4><li>後空力（調到最高）</li></h4>
+				<h4><li>後空力</li></h4>
+				<p>調到最高，若轉向不足再調低</p>
 			</ol>
 		</div>
 		<h3><li>阻尼</li></h3>
@@ -73,17 +85,30 @@
 			</ol>
 		</div>
 		<h3><li>彈簧</li></h3>
+		<p>感謝補充：<a href="https://forum.gamer.com.tw/Co.php?bsn=7697&sn=18681&subbsn=7&bPage=0">雪飄夏日(gi516811)</a></p>
 		<div class="textbox">
 			<ol type="i">
-				<h4><li>彈簧<a href="#formula">（公式決定）</a></li></h4>
+				<h4><li>彈簧</li></h4>
+				<p>使用公式：<code>(最大值-最小值)×重量比</code></p>
+				<p>注意彈簧公式並未加上最小值。</p>
 				<h4><li>車身高度：</li></h4>
 				<p>降到最低再視情況調高。</p>
 			</ol>
 		</div>
-		<h3><li>防傾桿</li></h3>
+		<h3 id="anti_roll_bar"><li>防傾桿</li></h3>
 		<div class="textbox">
 		<ol type="i">
-			<li><h4>防傾桿（公路）：<a href="#formula">公式決定</a></h4></li>
+			<li><h4>防傾桿（公路）：</h4></li>
+			<p>感謝補充：<a href="https://forum.gamer.com.tw/Co.php?bsn=7697&sn=18681&subbsn=7&bPage=0">暗行者(halcyon1211)</a></p>
+			<ul>
+				<li>前置四驅<a href="#formula">（公式決定）</a></li>
+				<li>中置四驅：</li>
+				<p>同樣使用公式，不過前防傾桿比例可增加2%，例：原重量比48%，改以50%進行計算。</p>
+				<li>後驅：</li>
+				<p>同樣使用公式，因容易轉向過度，所以前防傾桿要比較硬，建議增加6%。</p>
+				<li>前驅：</li>
+				<p>同樣使用公式，因容易轉向不足，所以要比較軟，建議減少8%。</p>
+			</ul>
 			<li><h4>防傾桿（甩尾）</h4></li>
 			<ul>
 				<li>前：<a href="#formula">公式</a>為基礎，視情況調低。</li>
@@ -122,8 +147,24 @@
 		</div>
 		<h3><li>齒輪裝置</li></h3>
 		<div class="textbox">
-			<p>影片位置：<a href="https://youtu.be/D6qthLir2iI?t=350">5:50</a></p>
-			<p>調整至1檔起跑只會碰到紅區1~2次，第3次時就應該上2檔，2檔轉速不宜過高，避免剛換檔就進入紅區。</p>
+			<ol>
+				<h3><li><a href="https://youtu.be/D6qthLir2iI?t=350">Hokihoshi</a>的調法：</li></h3>
+				<p>調整尺比時需要先理解Power Band（功率帶）的觀念，即車輛產生最大動力的區間。如果在遊戲內使用英制單位，進入引擎升級，從性能圖表中可發現馬力與扭力約在5200轉時交叉，這個點即是功率帶。不過在競速中，維持高轉速非常重要，因此功率帶還要再往上升一些，大至落在6500轉左右，會隨不同車輛與改裝而有所不同。只能實際駕駛後依手感確認。</p>
+				<p>調整至1檔起跑只會碰到紅區1~2次，第3次時就應該上2檔，2檔轉速與功率帶銜接。影片中正是在約6500轉時上2檔，之後每次升檔轉速都比前一檔稍微高2~300轉。</p>
+				<script src="pic/power_band_png.js"></script>
+				<h3><li><a href="https://forum.gamer.com.tw/Co.php?bsn=7697&sn=18681&subbsn=7&bPage=0">halcyon1211</a>的調法：</li></h3>
+				<ol type="i">
+					<li>最終傳動比</li>
+					<p>調整終傳比讓極速出現時轉速到紅區。極速無法跑進紅區時，往加速的地方調整，直到左邊的極速發生1～2km/h的下降（這邊指的不是累積而是拉一次要下降1～2)。若轉速過早抵達紅區則相反，往極速拉，直到極速上升幅度低於1km。</p>
+					<li>最後一檔</li>
+					<p>調整方式同最終傳動比。</p>
+					<li>1檔</li>
+					<p>同<a href="https://youtu.be/D6qthLir2iI?t=350">Hokihoshi</a></p>
+					<li>其餘檔位</li>
+					<p>同<a href="https://youtu.be/D6qthLir2iI?t=350">Hokihoshi</a></p>
+				</ol>
+			</ol>
+			
 			<h3>齒輪裝置（甩尾）</h3>
 			<ol type="i">
 				<li><p><b>方法1：</b>首先找到適合甩尾的動力區間，然後把3檔及之後的檔位都調整至接近這個區間。最後齒比看起來會類似下圖：</p></li>
@@ -156,34 +197,34 @@
 		<div class="inobj">
 			<h3 style="text-align: center;">轉向不足：</h3>
 			<ul>
-				<li>調低前防傾桿</li>
-				<li>調軟前彈簧</li>
+				<li>降低差速器百分比</li>
 				<li>增加後輪出力（AWD）</li>
+				<li>調低前防傾桿</li>
 				<li>增加前空力</li>
+				<li>調軟前彈簧</li>
 				<li>增加前阻尼壓縮硬度</li>
 				<li>降低前阻尼回彈硬度</li>
-				<li>降低差速器百分比</li>
 			</ul>
 		</div>
 		<div class="inobj">
 			<h3 style="text-align: center;">轉向過度：</h3>
 			<ul>
-				<li>調低後防傾桿</li>
-				<li>增加後空力</li>
-				<li>增加後束角</li>
-				<li>降低後阻尼回彈硬度</li>
 				<li>增加差速器百分比</li>
 				<li>將中央差速器調向50%（AWD）</li>
+				<li>調低後防傾桿</li>
+				<li>增加後空力</li>
+				<li>降低後阻尼回彈硬度</li>
+				<li>增加後束角</li>
 			</ul>
 		</div>
 		<div class="inobj">
 			<h3 style="text-align: center;">穩定度過低：</h3>
 			<ul>
+				<li>確認車身高度是否過低</li>
+				<li>調整空力</li>
+				<li>調整阻尼回彈硬度百分比</li>
 				<li>條軟前彈簧</li>
 				<li>減少束角</li>
-				<li>調整阻尼回彈硬度百分比</li>
-				<li>調整空力</li>
-				<li>確認車身高度是否過低</li>
 			</ul>
 		</div>
 		<div class="inobj">
@@ -193,76 +234,144 @@
 				<li>降低差速器百分比</li>
 				<li>將中央差速器調向50%（AWD）</li>
 				<li>調整阻尼回彈硬度百分比</li>
-				<li>檢查車輪定位</li>
 				<li>將齒輪比調整為更重視極速（調低齒比）</li>
 				<li>增加空力</li>
 				<li>調軟彈簧</li>
+				<li>檢查車輪定位</li>
 			</ul>
 		</div>
 	</div>
-	<div style="text-align: center;">
-		<h2 id="formula">公式</h2>
-		<p><code>(最大值-最小值)×重量比+最小值</code></p>
-		<p>以防傾桿為例，賽車防傾桿最大值為65，最小值為1，若車輛前端重量比為45%，則：</p>
-		<p>前防傾桿：<code>(65-1)*0.45+1=29.8</code></p>
-		<p>後防傾桿：<code>(65-1)*(1-0.45)+1=36.2</code></p>
+	<div>
+		<h2 id="formula" style="text-align: center;">公式</h2>
+		<ol>
+			<h3><li>防傾桿、阻尼：</li></h3>
+			<p><code>(最大值-最小值)×重量比+最小值</code></p>
+			<p>以防傾桿為例，賽車防傾桿最大值為65，最小值為1，若車輛前端重量比為45%，則：</p>
+			<p>前防傾桿：<code>(65-1)*0.45+1=29.8</code></p>
+			<p>後防傾桿：<code>(65-1)*(1-0.45)+1=36.2</code></p>
+			<h3><li>彈簧：</li></h3>
+			<p><code>(最大值-最小值)×重量比</code></p>
+		</ol>
 	</div>
-	<center>
-		<table>
-			<tr>
-				<th>重量比</th>
-				<td><input id="ratio" type="text" placeholder="請輸入小數" /><br></td>
-			</tr>
-			<tr>
-				<th>最大值</th>
-				<td><input id="max" type="text" /><br></td>
-			</tr>
-			<tr>
-				<th>最小值</th>
-				<td><input id="min" type="text" /><br></td>
-			</tr>
-			<tr>
-				<td colspan="2" align="center"><button onclick="tuneformula()">計算</button></td>
-			</tr>
-			<tr>
-				<th>前：</th>
-				<td><output id="f"></output></td>
-			</tr>
-			<tr>
-				<th>後：</th>
-				<td><output id="r"></output></td>
-			</tr>
-		</table>
-	</center>
-	<p style="color: red; text-align: center;"><b>請先計算完阻尼回彈硬度後再計算壓縮硬度</b></p><br>
-	<center>
-		<table>
-			<tr>
-				<th>期望阻尼壓縮硬度比：</th>
-				<td><input id="dampr" type="text" placeholder="請輸入小數" /></td>
-			</tr>
-			<tr>
-				<td colspan="2" align="center"><button onclick="tune2()">計算阻尼壓縮硬度</button></td>
-			</tr>
-			<tr>
-				<th>前阻尼壓縮硬度：</th>
-				<td><output id="fd2"></output></p></td>
-			</tr>
-			<tr>
-				<th>後阻尼壓縮硬度：</th>
-				<td><output id="rd2"></output></td>
-			</tr>
-		</table>
-	</center>
+	<div>
+		<h2 id="calculator" style="text-align: center;">計算器：</h2>
+		<p style="color: red; text-align: center;"><b>
+			注意最大值：<br />
+			輸入大於65將計算彈簧<br />
+			輸入小於21將計算阻尼<br />
+			其他數值將計算防傾桿<br />
+			防傾桿公式已依<a href="#anti_roll_bar">前文</a>進行調整
+		</b></p>
+		<center>
+			<table>
+				<caption><b>防傾桿、阻尼回彈硬度、彈簧</b></caption>
+				<tr>
+					<th>重量比</th>
+					<td><input id="ratio" type="text" placeholder="請輸入小數" /><br /></td>
+				</tr>
+				<tr>
+					<th>最大值</th>
+					<td><input id="max" type="text" /><br /></td>
+				</tr>
+				<tr>
+					<th>最小值</th>
+					<td><input id="min" type="text" /><br /></td>
+				</tr>
+				<tr>
+					<th>驅動方式：</th>
+					<td>
+						<select name="type" id="type" onchange="tuneformula();">
+							<option value="0">前置四驅</option>
+							<option value="1">中置四驅</option>
+							<option value="2">後驅</option>
+							<option value="3">前驅</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center"><button onclick="tuneformula();">計算</button></td>
+				</tr>
+				<tr>
+					<th>前：</th>
+					<td><output id="f"></output></td>
+				</tr>
+				<tr>
+					<th>後：</th>
+					<td><output id="r"></output></td>
+				</tr>
+			</table>
+		</center>
+		<p style="color: red; text-align: center;"><b>請先計算完阻尼回彈硬度後再計算壓縮硬度</b></p><br />
+		<center>
+			<table>
+				<caption><b>阻尼壓縮硬度</b></caption>
+				<tr>
+					<th>期望阻尼壓縮硬度比：</th>
+					<td><input id="dampr" type="text" placeholder="請輸入小數" /></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center"><button onclick="tune2();">計算阻尼壓縮硬度</button></td>
+				</tr>
+				<tr>
+					<th>前阻尼壓縮硬度：</th>
+					<td><output id="fd2"></output></p></td>
+				</tr>
+				<tr>
+					<th>後阻尼壓縮硬度：</th>
+					<td><output id="rd2"></output></td>
+				</tr>
+			</table>
+		</center>
+	</div>
 	<script>
 		function tuneformula(){
 			var ratio = parseFloat(document.getElementById("ratio").value);
 			var max = parseFloat(document.getElementById("max").value);
 			var min = parseFloat(document.getElementById("min").value);
-			var f = ((max-min)*(ratio))+min;
-			var r = ((max-min)*(1-ratio))+min;
-			document.getElementById("f").innerHTML = f.toFixed(2);
-			document.getElementById("r").innerHTML = r.toFixed(2);
+			var type = document.getElementById("type").value;
+			if (max > 65) {				//計算彈簧
+				var f = ((max-min)*(ratio));
+				var r = ((max-min)*(1-ratio));
+				document.getElementById("f").innerHTML = f.toFixed(2);
+				document.getElementById("r").innerHTML = r.toFixed(2);
+			}
+			else if (max < 21) {		//計算阻尼
+				var f = ((max-min)*(ratio))+min;
+				var r = ((max-min)*(1-ratio))+min;
+				document.getElementById("f").innerHTML = f.toFixed(2);
+				document.getElementById("r").innerHTML = r.toFixed(2);
+			}
+			else if (type == 0) {		//前置四驅防傾桿
+				var f = ((max-min)*(ratio))+min;
+				var r = ((max-min)*(1-ratio))+min;
+				document.getElementById("f").innerHTML = f.toFixed(2);
+				document.getElementById("r").innerHTML = r.toFixed(2);
+			}
+			else if (type == 1) {		//中置四驅防傾桿
+				var nratio = ratio+0.02;
+				var f = ((max-min)*(nratio))+min;
+				var r = ((max-min)*(1-nratio))+min;
+				document.getElementById("f").innerHTML = f.toFixed(2);
+				document.getElementById("r").innerHTML = r.toFixed(2);
+			}
+			else if (type == 2) {		//後驅防傾桿
+				var nratio = ratio+0.06;
+				var f = ((max-min)*(nratio))+min;
+				var r = ((max-min)*(1-nratio))+min;
+				document.getElementById("f").innerHTML = f.toFixed(2);
+				document.getElementById("r").innerHTML = r.toFixed(2);
+			}
+			else if (type == 3) {		//前驅防傾桿
+				var nratio = ratio-0.08;
+				var f = ((max-min)*(nratio))+min;
+				var r = ((max-min)*(1-nratio))+min;
+				document.getElementById("f").innerHTML = f.toFixed(2);
+				document.getElementById("r").innerHTML = r.toFixed(2);
+			}
+			else {
+				document.getElementById("f").innerHTML = "NULL";
+				document.getElementById("r").innerHTML = "NULL";
+			}
 		}
 	</script>
 	<script>

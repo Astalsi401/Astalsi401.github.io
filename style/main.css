@@ -185,7 +185,7 @@ td {
   width: 92%; max-width: 780px;
   border-style: double; border-width: 4px; border-color: rgba(300, 300, 300, 1);
   background-color: rgba(245, 0, 0, 0.13);
-  padding: 3%;
+  padding: 1.2%;
 }
 
 /* FH4計算欄位 */
