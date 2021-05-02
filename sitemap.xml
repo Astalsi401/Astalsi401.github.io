@@ -1,7 +1,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!--Home-->
   <url>
     <loc>https://astalsi401.github.io/</loc>
   </url>
+  <!--Stata-->
   <url>
     <loc>https://astalsi401.github.io/stata/</loc>
   </url>
@@ -56,8 +58,20 @@
   <url>
     <loc>https://astalsi401.github.io/stata/other/02-html_stata/</loc>
   </url>
+  <!--R-->
+  <url>
+  	<loc>https://astalsi401.github.io/R/r_index.html</loc>
+  </url>
+  <url>
+  	<loc>https://astalsi401.github.io/R/001/data_input.html</loc>
+  </url>
+  <!--雜物間-->
   <url>
     <loc>https://astalsi401.github.io/notes/notes_index.html</loc>
+  </url>
+  <!--Forza Horizon 4-->
+  <url>
+  	<loc>https://astalsi401.github.io/notes/fh4/upgrade.html</loc>
   </url>
   <url>
     <loc>https://astalsi401.github.io/notes/fh4/basic_tune.html</loc>
