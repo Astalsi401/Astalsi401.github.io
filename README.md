@@ -1,5 +1,5 @@
 # 網站上傳
-這裡是我借助github上傳網站所建立的專案，目前仍持續更新中
+這裡是我借助github上傳網頁所建立的專案，目前仍持續更新中
 
 ## 網站列表
 
@@ -7,7 +7,7 @@
 
 * [R筆記](https://astalsi401.github.io/R/r_index.html)
 
-* [FH4 Tune](https://astalsi401.github.io/notes/fh4/basic_tune.html)
+* [雜物間](https://astalsi401.github.io/notes/notes_index.html)
 
 ## 資料夾介紹
 
@@ -16,6 +16,8 @@
 * [comment](https://github.com/Astalsi401/Astalsi401.github.io/tree/master/comment)：嘗試製作中的評論功能
 
 * [import](https://github.com/Astalsi401/Astalsi401.github.io/tree/master/import)：以js引入的重複性html
+
+* [jQuery](https://github.com/Astalsi401/Astalsi401.github.io/tree/master/jQuery)：空的
 
 * [js](https://github.com/Astalsi401/Astalsi401.github.io/tree/master/js)：網站js
 
