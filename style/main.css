@@ -134,6 +134,16 @@ td {
   line-height: 142.8%;
 }
 
+/* 網頁左側目錄 */
+.left_content {
+  z-index: 9997; position: fixed !important; left: 0px;
+  width: 220px; max-width: 70%; height: 100%;
+  background-color: rgb(245, 245, 245);
+  border-style: double;
+  box-shadow:0px 0px 9px black;
+  padding-top: 7px; padding-left: 7px; padding-bottom: 7px;
+}
+
 /* home選單 */
 .menu {
   margin: 5% auto; position: relative;
@@ -158,6 +168,64 @@ td {
   z-index: 9999; position: fixed !important; right: 2%; top: 3%;
   text-align: center;
   display: flex; flex-wrap: wrap;
+}
+
+/* 網頁左側目錄箭頭 */
+/* 右 */
+.right_arrow {
+  z-index: 9998; position: fixed !important; left: 0px; top: 40%;
+  width: 0;
+  height: 0;
+  border-left: 20px solid #cccf;
+  border-top: 45px solid transparent;
+  border-bottom: 45px solid transparent;
+  box-shadow:0px 0px 9px black;
+}
+/* 左 */
+.left_arrow {
+  z-index: 9998; position: fixed !important; left: 208px; top: 40%;
+  width: 0;
+  height: 0;
+  border-right: 20px solid #ccc;
+  border-top: 45px solid transparent;
+  border-bottom: 45px solid transparent;
+  box-shadow:0px 0px 9px black;
+}
+
+/* 箭頭向上 */
+.to_top {
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid #ccc;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
+/* 箭頭向下 */
+.to_bottom {
+  width: 0;
+  height: 0;
+  border-top: 10px solid #ccc;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
+/* 箭頭向左 */
+.to_left {
+  width: 0;
+  height: 0;
+  border-right: 10px solid #ccc;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+/* 箭頭向右 */
+.to_right {
+  width: 0;
+  height: 0;
+  border-left: 10px solid #cccf;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
 }
 
 /* 目錄 */

@@ -15,13 +15,15 @@
 </head>
 <body class="fh4">
 <script src="../../import/button/back_to_content_notes.js"></script>
+<script src="../../js/left_content_showhide.js"></script>
+<script src="../../import/left_content.js"></script>
 <div class="container">
 	<h1>FH4車輛升級</h1>
 	<p>本頁面為<a href="https://www.youtube.com/channel/UCGK33hhvffYv5hUNqB0wVnQ">Johnson Racing</a>影片升級部分的簡易中文摘要。</p>
 	<p>車輛升級主要考量四個方面：<b>重量</b>、<b>馬力</b>、<b>操控</b>、<b>分數</b></p>
 	<p>建議依據以下順序來升級車輛。</p>
 	<ol>
-		<h2><li>改造</li></h2>
+		<h2 id="conversion"><li>改造</li></h2>
 		<div class="textbox">
 			<ol type="i">
 				<h3><li>置換引擎</li></h3>
@@ -34,11 +36,11 @@
 				<p>允許更寬的輪距，能增加操控，但也會增加重量。</p>
 			</ol>
 		</div>
-		<h2><li>空力套件與外觀</li></h2>
+		<h2 id="aero_and_appearance"><li>空力套件與外觀</li></h2>
 		<div class="textbox">
 			<p>S1以上建議先解鎖前後空力，其餘選項在最後用來調整分數。</p>
 		</div>
-		<h2><li>輪胎與輪圈</li></h2>
+		<h2 id="tires_and_rims"><li>輪胎與輪圈</li></h2>
 		<div class="textbox">
 			<ol type="i">
 				<h3><li>輪胎踏面膠料</li></h3>
@@ -55,7 +57,7 @@
 				<p>其餘選項在最後用來調整分數</p>
 			</ol>
 		</div>	
-		<h2><li>傳動系統</li></h2>
+		<h2 id="drivetrain"><li>傳動系統</li></h2>
 		<div class="textbox">
 			<ol type="i">
 				<h3><li>離合器</li></h3>
@@ -68,7 +70,7 @@
 				<p>務必升滿，對車輛調教非常重要。</p>
 			</ol>
 		</div>
-		<h2><li>底盤與操控性</li></h2>
+		<h2 id="plateform_and_handling"><li>底盤與操控性</li></h2>
 		<div class="textbox">
 			<ol type="i">
 				<h3><li>剎車</li></h3>
@@ -83,7 +85,7 @@
 				<p>必須，建議升滿。</p>
 			</ol>
 		</div>
-		<h2><li>引擎</li></h2>
+		<h2 id="engine"><li>引擎</li></h2>
 			<div class="textbox">
 			<h3>優先順序：</h3>
 			<ol type="a">
@@ -99,7 +101,7 @@
 		</div>
 	</ol>
 	<center>
-		<h2>馬力重量比計算</h2>
+		<h2 id="kg/hp">馬力重量比計算</h2>
 		<p>每匹馬力需負擔的重量。</p>
 		<table>
 			<tr>

@@ -15,6 +15,8 @@
 </head>
 <body class="fh4">
 <script src="../../import/button/back_to_content_notes.js"></script>
+<script src="../../js/left_content_showhide.js"></script>
+<script src="../../import/left_content.js"></script>
 <div class="container">
 	<h1>FH4基礎調教</h1>
 	<p>本頁面為Youtube上FH4車輛調教影片的簡易中文摘要。</p>
@@ -33,7 +35,7 @@
 		</ul>
 	</ul>
 	<ol>
-		<h3><li>差速器</li></h3>
+		<h3 id="differential"><li>差速器</li></h3>
 		<div class="textbox">
 			<p>影片位置：<a href="https://youtu.be/WM7_3NGGUoQ?t=152">2:32</a></p>
 			<p>感謝補充：<a href="https://forum.gamer.com.tw/Co.php?bsn=7697&sn=18681&subbsn=7&bPage=0">暗行者(halcyon1211)</a></p>
@@ -60,12 +62,12 @@
 				</ul>
 			</ol>
 		</div>
-		<h3><li>剎車</li></h3>
+		<h3 id="brake"><li>剎車</li></h3>
 			<div class="textbox">
 			<p>影片位置：<a href="https://youtu.be/WM7_3NGGUoQ?t=298">4:58</a></p>
 			<p>當啟用abs時，將剎車力度調到100%以上將對剎車速度有負面影響。</p>
 		</div>
-		<h3><li>空力</li></h3>
+		<h3 id="aero"><li>空力</li></h3>
 		<div class="textbox">
 			<p>影片位置：<a href="https://youtu.be/WM7_3NGGUoQ?t=340">5:40</a></p>
 			<p>減少空力，過彎性能降低，但增加極速。增加空力，犧牲少許極速換取更佳的彎道性能。</p>
@@ -76,7 +78,7 @@
 				<p>調到最高，若轉向不足再調低</p>
 			</ol>
 		</div>
-		<h3><li>阻尼</li></h3>
+		<h3 id="damping"><li>阻尼</li></h3>
 		<div class="textbox">
 			<ol type="i">
 				<h4><li>回彈硬度<a href="#formula">（公式決定）</a></li></h4>
@@ -84,7 +86,7 @@
 				<p>影響避震器面對彈跳時的表現，一般在回彈硬度的50%~70%。</p>
 			</ol>
 		</div>
-		<h3><li>彈簧</li></h3>
+		<h3 id="springs"><li>彈簧</li></h3>
 		<p>感謝補充：<a href="https://forum.gamer.com.tw/Co.php?bsn=7697&sn=18681&subbsn=7&bPage=0">雪飄夏日(gi516811)</a></p>
 		<div class="textbox">
 			<ol type="i">
@@ -121,7 +123,7 @@
 			</ul>
 		</ol>
 		</div>
-		<h3><li>輪胎定位</li></h3>
+		<h3 id="alignment"><li>輪胎定位</li></h3>
 		<div class="textbox">
 			<p>影片位置：<a href="https://youtu.be/WM7_3NGGUoQ?t=650">10:50</a>、<a href="https://youtu.be/WM7_3NGGUoQ?t=920">15:20</a></p>
 			<ol type="i">
@@ -145,7 +147,7 @@
 				<li>前後傾角：7°</li>
 			</ol>
 		</div>
-		<h3><li>齒輪裝置</li></h3>
+		<h3 id="gearing"><li>齒輪裝置</li></h3>
 		<div class="textbox">
 			<ol>
 				<h3><li><a href="https://youtu.be/D6qthLir2iI?t=350">Hokihoshi</a>的調法：</li></h3>
@@ -178,7 +180,7 @@
 				</ul>
 			</ol>
 		</div>
-		<h3><li>胎壓</li></h3>
+		<h3 id="tires"><li>胎壓</li></h3>
 		<div class="textbox">
 			<ol>
 				<li><a href="https://www.youtube.com/c/HokiHoshi">HokiHoshi</a>的調法</li>
@@ -192,7 +194,7 @@
 			</ol>
 		</div>
 	</ol>
-	<h2 style="text-align: center;">總結</h2>
+	<h2 id="summary" style="text-align: center;">總結</h2>
 	<div class="sumobj">
 		<div class="inobj">
 			<h3 style="text-align: center;">轉向不足：</h3>
@@ -254,7 +256,7 @@
 		</ol>
 	</div>
 	<div>
-		<h2 id="calculator" style="text-align: center;">計算器：</h2>
+		<h2 id="calculator" style="text-align: center;">計算器</h2>
 		<p style="color: red; text-align: center;"><b>
 			注意最大值：<br />
 			輸入大於65將計算彈簧<br />
