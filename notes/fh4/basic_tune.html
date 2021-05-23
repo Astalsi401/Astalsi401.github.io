@@ -265,22 +265,22 @@
 			防傾桿公式已依<a href="#anti_roll_bar">前文</a>進行調整
 		</b></p>
 		<center>
-			<table>
+			<table class="calculator_table">
 				<caption><b>防傾桿、阻尼回彈硬度、彈簧</b></caption>
 				<tr>
 					<th>重量比</th>
-					<td><input id="ratio" type="text" placeholder="請輸入小數" /><br /></td>
+					<td><input class="calculator_input" id="ratio" type="text" placeholder="請輸入小數" /><br /></td>
 				</tr>
 				<tr>
 					<th>最大值</th>
-					<td><input id="max" type="text" /><br /></td>
+					<td><input class="calculator_input" id="max" type="text" /><br /></td>
 				</tr>
 				<tr>
 					<th>最小值</th>
-					<td><input id="min" type="text" /><br /></td>
+					<td><input class="calculator_input" id="min" type="text" /><br /></td>
 				</tr>
 				<tr>
-					<th>驅動方式：</th>
+					<th>驅動方式</th>
 					<td>
 						<select name="type" id="type" onchange="tuneformula();">
 							<option value="0">前置四驅</option>
@@ -294,32 +294,32 @@
 					<td colspan="2" align="center"><button onclick="tuneformula();">計算</button></td>
 				</tr>
 				<tr>
-					<th>前：</th>
+					<th>前</th>
 					<td><output id="f"></output></td>
 				</tr>
 				<tr>
-					<th>後：</th>
+					<th>後</th>
 					<td><output id="r"></output></td>
 				</tr>
 			</table>
 		</center>
 		<p style="color: red; text-align: center;"><b>請先計算完阻尼回彈硬度後再計算壓縮硬度</b></p><br />
 		<center>
-			<table>
+			<table class="calculator_table">
 				<caption><b>阻尼壓縮硬度</b></caption>
 				<tr>
-					<th>期望阻尼壓縮硬度比：</th>
-					<td><input id="dampr" type="text" placeholder="請輸入小數" /></td>
+					<th>期望阻尼壓縮硬度比</th>
+					<td><input class="calculator_input" id="dampr" type="text" placeholder="請輸入小數" /></td>
 				</tr>
 				<tr>
 					<td colspan="2" align="center"><button onclick="tune2();">計算阻尼壓縮硬度</button></td>
 				</tr>
 				<tr>
-					<th>前阻尼壓縮硬度：</th>
+					<th>前阻尼壓縮硬度</th>
 					<td><output id="fd2"></output></p></td>
 				</tr>
 				<tr>
-					<th>後阻尼壓縮硬度：</th>
+					<th>後阻尼壓縮硬度</th>
 					<td><output id="rd2"></output></td>
 				</tr>
 			</table>
