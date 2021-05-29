@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-F8SLV521P4"></script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+  		gtag('config', 'G-F8SLV521P4');
+	</script>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<title>FH4調教分享（施工中）</title>
+	<link rel="stylesheet" type="text/css" href="../../style/main.css">
+</head>
+<body>
+	<script src="../../import/button/back_to_content_notes.js"></script>
+	<script src="../../js/left_content_showhide.js"></script>
+	<script src="../../import/left_content.js"></script>
+	<script>
+		function tuneSearch() {
+			var input, filter, table, tr, td, i;
+			input = document.getElementById("tune_search");
+			filter = input.value.toUpperCase(); //toUpperCase()是不區分大小寫
+			table = document.getElementById("tune_table");
+			tr = table.getElementsByTagName("tr");
+			// 迴圈表格每一行，查詢匹配項
+		 	for (i = 0; i < tr.length; i++) {
+		 		td = tr[i].getElementsByTagName("td")[0,1,2,3,4,5];
+		    	if (td) {
+		    		if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {  //如果要區分大小寫就去掉這個toUpperCase()
+		    			tr[i].style.display = "";
+					}
+					else {
+						tr[i].style.display = "none";
+					}
+				}
+			}
+		}
+	</script>
+	<div class="container">
+		<h1 id="tune_share">FH4調教分(施工中)</h1>
+		<center>
+			<input type="text" id="tune_search" class="tune_search" placeholder="輸入關鍵字">
+			<button onclick="tuneSearch()">搜尋</button>
+			<table id="tune_table" style="text-align: center;">
+			<tr>
+				<th>調教者</th>
+				<th>調教名稱</th>
+				<th>性能等級</th>
+				<th colspan="2">車型</th>
+				<th>特性</th>
+				<th>分享代碼</th>
+			</tr>
+			<tr>
+				<td>Astalsi401</td>
+				<td>GOLIATH V2</td>
+				<td>A 800</td>
+				<td colspan="2">Toyota Trueno</td>				
+				<td>公路 後驅 極速</td>
+				<td><a href="">147 650 586</a></td>
+			</tr>
+			<tr>
+				<td>Astalsi401</td>
+				<td>RALLY V2</td>
+				<td>A 800</td>
+				<td colspan="2">Toyota Trueno</td>
+				<td>泥地 四驅</td>
+				<td><a href="">145 523 335</a></td>
+			</tr>
+			<tr>
+				<td>Astalsi401</td>
+				<td>RALLY V1</td>
+				<td>A 800</td>
+				<td colspan="2">Toyota Trueno</td>
+				<td>泥地 四驅</td>
+				<td><a href="">133 115 556</a></td>
+			</tr>
+			<tr>
+				<td>Astalsi401</td>
+				<td>2JZ TURBO ROAD</td>
+				<td>S1 900</td>
+				<td colspan="2">Toyota Supra RZ</td>
+				<td>公路 後驅</td>
+				<td><a href="">140 984 507</a></td>
+			</tr>
+			<tr>
+				<td>Astalsi401</td>
+				<td>TWIN TURBO ROAD</td>
+				<td>S1 900</td>
+				<td colspan="2">Toyota Supra RZ</td>
+				<td>公路 後驅</td>
+				<td><a href="">284 536 768</a></td>
+			</tr>
+			<tr>
+				<td>Astalsi401</td>
+				<td>AWD ROAD</td>
+				<td>S1 900</td>
+				<td colspan="2">Toyota Supra RZ</td>
+				<td>公路 四驅</td>
+				<td><a href=""></a></td>
+			</tr>
+			<tr>
+				<td>SimpleAsPye</td>
+				<td>BEST B</td>
+				<td>B 700</td>
+				<td colspan="2">Abarth 695 Biposto</td>
+				<td>公路 四驅</td>
+				<td><a href="">205 668 466</a></td>
+			</tr>
+			<tr>
+				<td>TDU1PlatinumMod</td>
+				<td>DIRT RANKED V2</td>
+				<td>S1 900</td>
+				<td colspan="2">Alfa 33 Stradale</td>
+				<td>泥地 四驅</td>
+				<td><a href="">129 987 023</a></td>
+			</tr>
+			<tr>
+				<td>Nalak28</td>
+				<td>REALLY GOOD</td>
+				<td>S1 900</td>
+				<td colspan="2">Alfa 155 Q4</td>
+				<td>公路 四驅</td>
+				<td><a href="">497 192 768</a></td>
+			</tr>
+			<tr>
+				<td>Nalak28</td>
+				<td>A GRIP</td>
+				<td>A 800</td>
+				<td colspan="2">Alfa Giulia TZ2</td>
+				<td>公路 四驅</td>
+				<td><a href="">672 423 432</a></td>
+			</tr>
+			<tr>
+				<td>STEVEtheP1R4TE</td>
+				<td>OFFROAD CHAMP</td>
+				<td>A 800</td>
+				<td colspan="2">Arial Nomad</td>
+				<td>越野 四驅</td>
+				<td><a href="">157 705 147</a></td>
+			</tr>
+			<tr>
+				<td>ESV Suimin</td>
+				<td>UPDATE | EASY</td>
+				<td>S1 900</td>
+				<td colspan="2">ATS GT</td>
+				<td>公路 四驅</td>
+				<td><a href="">119 580 611</a></td>
+			</tr>
+			<tr>
+				<td>C0DCAOS</td>
+				<td>59.376 ASTMOR</td>
+				<td>A 800</td>
+				<td colspan="2">Chevrolet Nova Super Sport 369 FE</td>
+				<td>公路 四驅</td>
+				<td><a href="">230 802 672</a></td>
+			</tr>
+			<tr>
+				<td>Gaizi junet</td>
+				<td>EZ DRIVE</td>
+				<td>S1 900</td>
+				<td colspan="2">Dodge Viper SRT10 ACR</td>
+				<td>公路 四驅</td>
+				<td><a href="">293 155 787</a></td>
+			</tr>
+			<tr>
+				<td>Rocklxd</td>
+				<td>S2 DRY 100BP</td>
+				<td>S2 998</td>
+				<td colspan="2">Ferrari FXX</td>
+				<td>公路 四驅</td>
+				<td><a href="">123 303 848</a></td>
+			</tr>
+			<tr>
+				<td>Nalak28</td>
+				<td>UPDATE?</td>
+				<td>S2 998</td>
+				<td colspan="2">Ferrari F40 Competizione</td>
+				<td>公路 四驅</td>
+				<td><a href="">120 711 580</a></td>
+			</tr>
+			<tr>
+				<td>Grandma Driving</td>
+				<td>S2 998 DRY ONLY</td>
+				<td>S2 998</td>
+				<td colspan="2">Ferrari 599XX Evolution</td>
+				<td>公路 四驅</td>
+				<td><a href="">178 902 351</a></td>
+			</tr>
+			<tr>
+				<td>Rocklxd</td>
+				<td>GOLIATH? V2</td>
+				<td>S2 998</td>
+				<td colspan="2">Ferrari 599XX Evolution</td>
+				<td>公路 四驅</td>
+				<td><a href="">771 582 330</a></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td colspan="2"></td>
+				<td></td>
+				<td><a href=""></a></td>
+			</tr>
+		</table>
+		</center>		
+	</div>
+</body>
+</html>
