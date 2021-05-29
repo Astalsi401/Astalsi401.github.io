@@ -4,10 +4,10 @@
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-F8SLV521P4"></script>
 	<script>
-  		window.dataLayer = window.dataLayer || [];
-  		function gtag(){dataLayer.push(arguments);}
-  		gtag('js', new Date());
-  		gtag('config', 'G-F8SLV521P4');
+  	window.dataLayer = window.dataLayer || [];
+  	function gtag(){dataLayer.push(arguments);}
+  	gtag('js', new Date());
+  	gtag('config', 'G-F8SLV521P4');
 	</script>
 	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<title>FH4調教分享</title>
@@ -17,57 +17,14 @@
 	<script src="../../import/button/back_to_content_notes.js"></script>
 	<script src="../../js/left_content_showhide.js"></script>
 	<script src="../../import/left_content.js"></script>
-	<script>
-  (function(document) {
-  'use strict';
-
-  // 建立 LightTableFilter
-  var LightTableFilter = (function(Arr) {
-
-    var _input;
-
-    // 資料輸入事件處理函數
-    function _onInputEvent(e) {
-      _input = e.target;
-      var tables = document.getElementsByClassName(_input.getAttribute('data-table'));
-      Arr.forEach.call(tables, function(table) {
-        Arr.forEach.call(table.tBodies, function(tbody) {
-          Arr.forEach.call(tbody.rows, _filter);
-        });
-      });
-    }
-
-    // 資料篩選函數，顯示包含關鍵字的列，其餘隱藏
-    function _filter(row) {
-      var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
-      row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
-    }
-
-    return {
-      // 初始化函數
-      init: function() {
-        var inputs = document.getElementsByClassName('light-table-filter');
-        Arr.forEach.call(inputs, function(input) {
-          input.oninput = _onInputEvent;
-        });
-      }
-    };
-  })(Array.prototype);
-
-  // 網頁載入完成後，啟動 LightTableFilter
-  document.addEventListener('readystatechange', function() {
-    if (document.readyState === 'complete') {
-      LightTableFilter.init();
-    }
-  });
-
-})(document);
-</script>
+	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+  <script src="../../jQuery/jquery.sortElements.js"></script>
+	<script src="../../js/search_table.js"></script>
 <div class="container">
   <h1 id="tune_list">FH4調教分享(施工中)</h1>
 	<center>
 		<input type="search" class="light-table-filter" data-table="order-table" placeholder="請輸入關鍵字">
-		<table class="order-table" style="text-align: center;">
+		<table class="order-table">
 		  	<thead>
 		    	<tr>
 		    	  	<th>調教者</th>
@@ -296,6 +253,126 @@
 		  		  	<td><a href="">748 480 008</a></td>
 		  		</tr>
 		  		<tr>
+		  		  	<td>C0DCAOS</td>
+		  		  	<td>1:01,100 ASTMOR</td>
+		  		  	<td>A 800</td>
+		  		  	<td>Mazada RX7</td>
+		  		  	<td>road awd</td>
+		  		  	<td><a href="">759 945 018</a></td>
+		  		</tr>
+		  		<tr>
+		  		  	<td>Nalak28</td>
+		  		  	<td>UPDATED BRRR</td>
+		  		  	<td>S2 997</td>
+		  		  	<td>Mclaren F1 GT</td>
+		  		  	<td>road rwd</td>
+		  		  	<td><a href="">394 059 655</a></td>
+		  		</tr>
+		  		<tr>
+		  		  	<td>SeeyeahBoss</td>
+		  		  	<td>#5 60\100BP</td>
+		  		  	<td>S1 900</td>
+		  		  	<td>Mclaren 570S Coupe</td>
+		  		  	<td>road awd</td>
+		  		  	<td><a href="">150 582 077</a></td>
+		  		</tr>
+		  		<tr>
+		  		  	<td>Rocklxd</td>
+		  		  	<td>S2 WET 100BP</td>
+		  		  	<td>S2 998</td>
+		  		  	<td>Mercedes-Benz AMG CLK GTR</td>
+		  		  	<td>road rain awd</td>
+		  		  	<td><a href="">145 153 439</a></td>
+		  		</tr>
+		  		<tr>
+		  		  	<td>Rocklxd</td>
+		  		  	<td>A CC ONLINE</td>
+		  		  	<td>A 800</td>
+		  		  	<td>Mercedes-Benz X-Class</td>
+		  		  	<td>offroad snow awd</td>
+		  		  	<td><a href="">763 265 232</a></td>
+		  		</tr>
+		  		<tr>
+		  		  	<td>EXR Garmite</td>
+		  		  	<td>B-DIRT META</td>
+		  		  	<td>B 700</td>
+		  		  	<td>Nissan Pulsar GTI-R</td>
+		  		  	<td>dirt awd</td>
+		  		  	<td><a href="">286 832 237</a></td>
+		  		</tr>
+		  		<tr>
+		  		  	<td>Astalsi401</td>
+		  		  	<td>A</td>
+		  		  	<td>A 800</td>
+		  		  	<td>Nissan Skyline GT-R V-Spec</td>
+		  		  	<td>road awd</td>
+		  		  	<td><a href="">117 710 073</a></td>
+		  		</tr>
+		  		<tr>
+		  		  	<td>Nalak28</td>
+		  		  	<td>100BP</td>
+		  		  	<td>S2 998</td>
+		  		  	<td>Pagani Zonda R</td>
+		  		  	<td>road awd</td>
+		  		  	<td><a href="">325 704 720</a></td>
+		  		</tr>
+		  		<tr>
+		  		  	<td>Rocklxd</td>
+		  		  	<td>A RANkED V1.42</td>
+		  		  	<td>A 800</td>
+		  		  	<td>Plymouth Atomic Punk Bubbletop</td>
+		  		  	<td>road awd</td>
+		  		  	<td><a href="">122 975 700</a></td>
+		  		</tr>
+		  		<tr>
+		  		  	<td>C0DCAOS</td>
+		  		  	<td>THE BEST 49,5 </td>
+		  		  	<td>S1 900</td>
+		  		  	<td>Porsche Carrera GT</td>
+		  		  	<td>road awd</td>
+		  		  	<td><a href="">603 850 563</a></td>
+		  		</tr>
+		  		<tr>
+		  		  	<td>GreetedDust8</td>
+		  		  	<td>NYOOM 3</td>
+		  		  	<td>S1 900</td>
+		  		  	<td>Shelby Monaco King Cobra</td>
+		  		  	<td>road rwd top-speed</td>
+		  		  	<td><a href="">156 543 761</a></td>
+		  		</tr>
+		  		<tr>
+		  		  	<td>Rocklxd</td>
+		  		  	<td>S2 DRY RWD V2</td>
+		  		  	<td>S2 998</td>
+		  		  	<td>Shelby Monaco King Cobra</td>
+		  		  	<td>road rwd top-speed</td>
+		  		  	<td><a href="">845 723 038</a></td>
+		  		</tr>
+		  		<tr>
+		  		  	<td>GreetedDust8</td>
+		  		  	<td>NO WING</td>
+		  		  	<td>B 700</td>
+		  		  	<td>Shelby Cobra Daytona Coupe</td>
+		  		  	<td>dirt awd</td>
+		  		  	<td><a href=""></a></td>
+		  		</tr>
+		  		<tr>
+		  		  	<td>RockNRoIIa608</td>
+		  		  	<td>B DIRT FULL AERO</td>
+		  		  	<td>B 700</td>
+		  		  	<td>Subaru Legacy RS</td>
+		  		  	<td>dirt awd</td>
+		  		  	<td><a href="">102 233 042</a></td>
+		  		</tr>
+		  		<tr>
+		  		  	<td>Nalak28</td>
+		  		  	<td>AMAZING CC/DIRT</td>
+		  		  	<td>S1 900</td>
+		  		  	<td>Toyota #1 T100 Baja Truck "WP"</td>
+		  		  	<td>offroad dirt awd</td>
+		  		  	<td><a href="">183 662 432</a></td>
+		  		</tr>
+		  		<tr>
 		  		  	<td></td>
 		  		  	<td></td>
 		  		  	<td></td>
@@ -307,5 +384,6 @@
 		</table>
 	</center>
 </div>
+<script src="../../js/sort_table.js"></script>
 </body>
 </html>

@@ -17,6 +17,8 @@
   <script src="../../import/button/back_to_content_notes.js"></script>
   <script src="../../js/left_content_showhide.js"></script>
   <script src="../../import/left_content.js"></script>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+  <script src="../../jQuery/jquery.sortElements.js"></script>
 <script>
   (function(document) {
   'use strict';
@@ -63,19 +65,58 @@
 
 })(document);
 </script>
+<script>
+var table = $('table');
+
+$('.sortable th')
+    .wrapInner('<span title="sort this column"/>')
+    .each(function(){
+
+        var th = $(this),
+            thIndex = th.index(),
+            inverse = false;
+
+        th.click(function(){
+
+            table.find('td').filter(function(){
+
+                return $(this).index() === thIndex;
+
+            }).sortElements(function(a, b){
+
+                if( $.text([a]) == $.text([b]) )
+                    return 0;
+
+                return $.text([a]) > $.text([b]) ?
+                    inverse ? -1 : 1
+                    : inverse ? 1 : -1;
+
+            }, function(){
+
+                // parentNode is the element we want to move
+                return this.parentNode; 
+
+            });
+
+            inverse = !inverse;
+
+        });
+
+    });
+</script>
 <div class="container">
   <h1 id="tune_share">FH4調教分享(施工中)</h1>
 <center>
 <input type="search" class="light-table-filter" data-table="order-table" placeholder="請輸入關鍵字">
-<table class="order-table" style="text-align: center;">
+<table class="order-table">
   <thead>
     <tr>
-      <th>調教者</th>
-      <th>調教名稱</th>
-      <th>性能等級</th>
-      <th>車型</th>
-      <th>特性</th>
-      <th>分享代碼</th>
+      <th class="string">調教者</th>
+      <th class="string">調教名稱</th>
+      <th class="string">性能等級</th>
+      <th class="string">車型</th>
+      <th class="string">特性</th>
+      <th class="num">分享代碼</th>
     </tr>
   </thead>
   <tbody>
