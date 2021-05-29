@@ -288,13 +288,13 @@ table tr.header, table tr:hover {
 /* FH4調教搜尋結果  */
 .order-table th, td {
   padding: 2px 2px;
-  font-size: 10px;
 }
 
 .order-table {
   max-width: 95%;
   text-align: center;
   cursor: pointer;
+  font-size: 10px;
 }
 
 /* table排序箭頭 */
