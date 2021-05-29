@@ -284,3 +284,9 @@ table tr.header, table tr:hover {
   border: 1px solid #ddd;
   margin-bottom: 12px; 
 }
+
+/* FH4調教搜尋結果  */
+.tune_list th, td {
+  padding: 2px 2px;
+  font-size: 10px;
+}
