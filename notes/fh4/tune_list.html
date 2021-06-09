@@ -21,377 +21,425 @@
   <script src="../../jQuery/jquery.sortElements.js"></script>
 	<script src="../../js/search_table.js"></script>
 <div class="container">
-  <h1 id="tune_list">FH4調教分享</h1>
+  <h1 id="tune_list" style="text-align: center;">FH4調教分享</h1>
 	<center>
 		<input type="search" class="light-table-filter" data-table="order-table" placeholder="請輸入關鍵字">
+		<!--<table>
+			<td>
+				<select class="compType" onchange="">
+					<option value="">競賽種類</option>
+					<option value="0">road</option>
+					<option value="1">dirt</option>
+					<option value="2">offroad</option>
+				</select>
+			</td>
+			<td>
+				<select class="driveType" onchange="">
+					<option value="">驅動種類</option>
+					<option value="0">awd</option>
+					<option value="1">rwd</option>
+				</select>
+			</td>
+			<td>
+				<select class="preferance" onchange="">
+					<option value="">特性</option>
+					<option value="0">top-speed</option>
+				</select>
+			</td>
+			<td>
+				<select class="weather" onchange="">
+					<option value="">天氣</option>
+					<option value="0">dry</option>
+					<option value="1">wet</option>
+					<option value="2">snow</option>
+				</select>
+			</td>
+		</table>-->
 		<table class="order-table">
-		  	<thead>
-		    	<tr>
-		    	  	<th>調教者</th>
-		    	  	<th>調教名稱</th>
-		    	  	<th>性能等級</th>
-		    	  	<th>車型</th>
-		    	  	<th>特性</th>
-		    	  	<th>分享代碼</th>
-		    	</tr>
-		 	 </thead>
-		 	 <tbody>
-		    	<tr>
-		    	  	<td>Astalsi401</td>
-		    	  	<td>GOLIATH V2</td>
-		    	  	<td>A 800</td>
-		    	  	<td>Toyota Trueno</td>        
-		    	  	<td>road rwd top-speed</td>
-		    	  	<td><a href="">147 650 586</a></td>
-		    	</tr>
-		  		<tr>
-		  		  	<td>Astalsi401</td>
-		  		  	<td>RALLY V2</td>
-		  		  	<td>A 800</td>
-		  		  	<td>Toyota Trueno</td>
-		  		  	<td>dirt awd</td>
-		  		  	<td><a href="">145 523 335</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>Astalsi401</td>
-		  		  	<td>RALLY V1</td>
-		  		  	<td>A 800</td>
-		  		  	<td>Toyota Trueno</td>
-		  		  	<td>dirt awd</td>
-		  		  	<td><a href="">133 115 556</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>Astalsi401</td>
-		  		  	<td>2JZ TURBO ROAD</td>
-		  		  	<td>S1 900</td>
-		  		  	<td>Toyota Supra RZ</td>
-		  		  	<td>road rwd top-speed</td>
-		  		  	<td><a href="">122 876 920</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>Astalsi401</td>
-		  		  	<td>TWIN TURBO ROAD</td>
-		  		  	<td>S1 900</td>
-		  		  	<td>Toyota Supra RZ</td>
-		  		  	<td>road rwd</td>
-		  		  	<td><a href="">137 664 933</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>Astalsi401</td>
-		  		  	<td>AWD ROAD</td>
-		  		  	<td>S1 900</td>
-		  		  	<td>Toyota Supra RZ</td>
-		  		  	<td>road awd</td>
-		  		  	<td><a href="">137 743 984</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>SimpleAsPye</td>
-		  		  	<td>BEST B</td>
-		  		  	<td>B 700</td>
-		  		  	<td>Abarth 695 Biposto</td>
-		  		  	<td>road awd</td>
-		  		  	<td><a href="">205 668 466</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>TDU1PlatinumMod</td>
-		  		  	<td>DIRT RANKED V2</td>
-		  		  	<td>S1 900</td>
-		  		  	<td>Alfa 33 Stradale</td>
-		  		  	<td>dirt awd</td>
-		  		  	<td><a href="">129 987 023</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>Nalak28</td>
-		  		  	<td>REALLY GOOD</td>
-		  		  	<td>S1 900</td>
-		  		  	<td>Alfa 155 Q4</td>
-		  		  	<td>road awd</td>
-		  		  	<td><a href="">497 192 768</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>Nalak28</td>
-		  		  	<td>A GRIP</td>
-		  		  	<td>A 800</td>
-		  		  	<td>Alfa Giulia TZ2</td>
-		  		  	<td>road awd</td>
-		  		  	<td><a href="">672 423 432</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>STEVEtheP1R4TE</td>
-		  		  	<td>OFFROAD CHAMP</td>
-		  		  	<td>A 800</td>
-		  		  	<td>Arial Nomad</td>
-		  		  	<td>offroad awd</td>
-		  		  	<td><a href="">157 705 147</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>ESV Suimin</td>
-		  		  	<td>UPDATE | EASY</td>
-		  		  	<td>S1 900</td>
-		  		  	<td>ATS GT</td>
-		  		  	<td>road awd</td>
-		  		  	<td><a href="">119 580 611</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>C0DCAOS</td>
-		  		  	<td>59.376 ASTMOR</td>
-		  		  	<td>A 800</td>
-		  		  	<td>Chevrolet Nova Super Sport 369 FE</td>
-		  		  	<td>road awd</td>
-		  		  	<td><a href="">230 802 672</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>Gaizi junet</td>
-		  		  	<td>EZ DRIVE</td>
-		  		  	<td>S1 900</td>
-		  		  	<td>Dodge Viper SRT10 ACR</td>
-		  		  	<td>road awd</td>
-		  		  	<td><a href="">293 155 787</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>Rocklxd</td>
-		  		  	<td>S2 DRY 100BP</td>
-		  		  	<td>S2 998</td>
-		  		  	<td>Ferrari FXX</td>
-		  		  	<td>road awd</td>
-		  		  	<td><a href="">123 303 848</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>Nalak28</td>
-		  		  	<td>UPDATE?</td>
-		  		  	<td>S2 998</td>
-		  		  	<td>Ferrari F40 Competizione</td>
-		  		  	<td>road awd</td>
-		  		  	<td><a href="">120 711 580</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>Grandma Driving</td>
-		  		  	<td>S2 998 DRY ONLY</td>
-		  		  	<td>S2 998</td>
-		  		  	<td>Ferrari 599XX Evolution</td>
-		  		  	<td>road awd</td>
-		  		  	<td><a href="">178 902 351</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>Rocklxd</td>
-		  		  	<td>GOLIATH? V2</td>
-		  		  	<td>S2 998</td>
-		  		  	<td>Ferrari 599XX Evolution</td>
-		  		  	<td>road awd</td>
-		  		  	<td><a href="">771 582 330</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>Rocklxd</td>
-		  		  	<td>S1 RANKED V1.44</td>
-		  		  	<td>S1 900</td>
-		  		  	<td>Ford GT 2005</td>
-		  		  	<td>road awd</td>
-		  		  	<td><a href="">931 670 572</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>ZHTBILBILI</td>
-		  		  	<td>RALLY / SNOW ROAD </td>
-		  		  	<td>S1 900</td>
-		  		  	<td>Ford Mustang GT Deberti Design</td>
-		  		  	<td>road dirt snow awd</td>
-		  		  	<td><a href="">178 020 733</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>Rocklxd</td>
-		  		  	<td>B RALLY V1.5</td>
-		  		  	<td>B 700</td>
-		  		  	<td>Honda Civic RS</td>
-		  		  	<td>dirt awd</td>
-		  		  	<td><a href="">947 620 288</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>jvvvvvvvvvvv552</td>
-		  		  	<td>MUDKICKERS</td>
-		  		  	<td>S2 998</td>
-		  		  	<td>Hoonigan Ford RS200 Evolution</td>
-		  		  	<td>dirt awd</td>
-		  		  	<td><a href="">115 745 144</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>Astalsi401</td>
-		  		  	<td>434km</td>
-		  		  	<td>S1 900</td>
-		  		  	<td>Koenigsegg CCX</td>
-		  		  	<td>road rwd</td>
-		  		  	<td><a href="">665 898 163</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>Rocklxd</td>
-		  		  	<td>S2 DRY 100BP</td>
-		  		  	<td>S2 998</td>
-		  		  	<td>Koenigsegg CCGT</td>
-		  		  	<td>road awd</td>
-		  		  	<td><a href="">372 316 435</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>Rocklxd</td>
-		  		  	<td>S2 WET 100BP</td>
-		  		  	<td>S2 998</td>
-		  		  	<td>Koenigsegg CCGT</td>
-		  		  	<td>road awd</td>
-		  		  	<td><a href="">104 433 161</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>GreetedDust8</td>
-		  		  	<td>SHNOW</td>
-		  		  	<td>S2 998</td>
-		  		  	<td>Lamborghini Diablo GTR</td>
-		  		  	<td>road snow awd</td>
-		  		  	<td><a href="">568 441 140</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>aTTaX Johnson</td>
-		  		  	<td>S2 WINTER GOD</td>
-		  		  	<td>S2 998</td>
-		  		  	<td>Lotus Elise GT1</td>
-		  		  	<td>road snow awd</td>
-		  		  	<td><a href="">748 480 008</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>C0DCAOS</td>
-		  		  	<td>1:01,100 ASTMOR</td>
-		  		  	<td>A 800</td>
-		  		  	<td>Mazada RX7</td>
-		  		  	<td>road awd</td>
-		  		  	<td><a href="">759 945 018</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>Nalak28</td>
-		  		  	<td>UPDATED BRRR</td>
-		  		  	<td>S2 997</td>
-		  		  	<td>Mclaren F1 GT</td>
-		  		  	<td>road rwd</td>
-		  		  	<td><a href="">394 059 655</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>SeeyeahBoss</td>
-		  		  	<td>#5 60\100BP</td>
-		  		  	<td>S1 900</td>
-		  		  	<td>Mclaren 570S Coupe</td>
-		  		  	<td>road awd</td>
-		  		  	<td><a href="">150 582 077</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>Rocklxd</td>
-		  		  	<td>S2 WET 100BP</td>
-		  		  	<td>S2 998</td>
-		  		  	<td>Mercedes-Benz AMG CLK GTR</td>
-		  		  	<td>road rain awd</td>
-		  		  	<td><a href="">145 153 439</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>Rocklxd</td>
-		  		  	<td>A CC ONLINE</td>
-		  		  	<td>A 800</td>
-		  		  	<td>Mercedes-Benz X-Class</td>
-		  		  	<td>offroad snow awd</td>
-		  		  	<td><a href="">763 265 232</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>EXR Garmite</td>
-		  		  	<td>B-DIRT META</td>
-		  		  	<td>B 700</td>
-		  		  	<td>Nissan Pulsar GTI-R</td>
-		  		  	<td>dirt awd</td>
-		  		  	<td><a href="">286 832 237</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>Astalsi401</td>
-		  		  	<td>A</td>
-		  		  	<td>A 800</td>
-		  		  	<td>Nissan Skyline GT-R V-Spec</td>
-		  		  	<td>road awd</td>
-		  		  	<td><a href="">117 710 073</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>Nalak28</td>
-		  		  	<td>100BP</td>
-		  		  	<td>S2 998</td>
-		  		  	<td>Pagani Zonda R</td>
-		  		  	<td>road awd</td>
-		  		  	<td><a href="">325 704 720</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>Rocklxd</td>
-		  		  	<td>A RANkED V1.42</td>
-		  		  	<td>A 800</td>
-		  		  	<td>Plymouth Atomic Punk Bubbletop</td>
-		  		  	<td>road awd</td>
-		  		  	<td><a href="">122 975 700</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>C0DCAOS</td>
-		  		  	<td>THE BEST 49,5 </td>
-		  		  	<td>S1 900</td>
-		  		  	<td>Porsche Carrera GT</td>
-		  		  	<td>road awd</td>
-		  		  	<td><a href="">603 850 563</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>GreetedDust8</td>
-		  		  	<td>NYOOM 3</td>
-		  		  	<td>S1 900</td>
-		  		  	<td>Shelby Monaco King Cobra</td>
-		  		  	<td>road rwd top-speed</td>
-		  		  	<td><a href="">156 543 761</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>Rocklxd</td>
-		  		  	<td>S2 DRY RWD V2</td>
-		  		  	<td>S2 998</td>
-		  		  	<td>Shelby Monaco King Cobra</td>
-		  		  	<td>road rwd top-speed</td>
-		  		  	<td><a href="">845 723 038</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>GreetedDust8</td>
-		  		  	<td>NO WING</td>
-		  		  	<td>B 700</td>
-		  		  	<td>Shelby Cobra Daytona Coupe</td>
-		  		  	<td>dirt awd</td>
-		  		  	<td><a href="">927 394 042</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>RockNRoIIa608</td>
-		  		  	<td>B DIRT FULL AERO</td>
-		  		  	<td>B 700</td>
-		  		  	<td>Subaru Legacy RS</td>
-		  		  	<td>dirt awd</td>
-		  		  	<td><a href="">102 233 042</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>Nalak28</td>
-		  		  	<td>AMAZING CC/DIRT</td>
-		  		  	<td>S1 900</td>
-		  		  	<td>Toyota #1 T100 Baja Truck "WP"</td>
-		  		  	<td>offroad dirt awd</td>
-		  		  	<td><a href="">183 662 432</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td>Astalsi401<td>
-		  		  	<td>BETTER BRAKE</td>
-		  		  	<td>S1 900</td>
-		  		  	<td>Toyota Supra RZ</td>
-		  		  	<td>road rwd top-speed</td>
-		  		  	<td><a href="">469 059 586</a></td>
-		  		</tr>
-		  		<tr>
-		  		  	<td></td>
-		  		  	<td></td>
-		  		  	<td></td>
-		  		  	<td></td>
-		  		  	<td></td>
-		  		  	<td><a href=""></a></td>
-		  		</tr>
-		  </tbody>
-		</table>
+		  <thead>
+		   	<tr>
+		   	  <th data-type="tunner">調教者</th>
+		   	  <th data-type="tune_name">調教名稱</th>
+		   	  <th data-type="score">性能等級</th>
+		   	  <th data-type="car_type">車型</th>
+		   	  <th data-type="preferance">特性</th>
+		   	  <th data-type="share_code">分享代碼</th>
+		   	</tr>
+		  </thead>
+		  <tbody>
+	    	<tr>
+	    	  <td data-type="tunner">Astalsi401</td>
+	    	  <td data-type="tune_name">GOLIATH V2</td>
+	    	  <td data-type="score">800 A</td>
+	    	  <td data-type="car_type">Toyota Trueno</br><center id="detail_1" style="display: none;"><script src="pic/tune1.js"></script></center></td>
+	    	  <td data-type="preferance" data-comptype="road" data-drivetype="rwd" data-preferance="top-speed">road rwd top-speed</td>
+	    	  <td data-type="share_code"><button type="button" id="detail_button_1">147 650 586</button></td>
+	    	</tr>	    
+	    	<tr>
+	  		  <td data-type="tunner">Astalsi401</td>
+	  		  <td data-type="tune_name">RALLY V2</td>
+	  		  <td data-type="score">800 A</td>
+	  		  <td data-type="car_type">Toyota Trueno</br><center id="detail_2" style="display: none;"><script src="pic/tune2.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="dirt" data-drivetype="awd" data-preferance="" data-weather="">dirt awd</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_2">145 523 335</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">Astalsi401</td>
+	  		  <td data-type="tune_name">RALLY V1</td>
+	  		  <td data-type="score">800 A</td>
+	  		  <td data-type="car_type">Toyota Trueno</br><center id="detail_3" style="display: none;"><script src="pic/tune3.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="dirt" data-drivetype="awd" data-preferance="" data-weather="">dirt awd</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_3">133 115 556</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">Astalsi401</td>
+	  		  <td data-type="tune_name">2JZ TURBO ROAD</td>
+	  		  <td data-type="score">900 S1</td>
+	  		  <td data-type="car_type">Toyota Supra RZ</br><center id="detail_4" style="display: none;"><script src="pic/tune4.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="road" data-drivetype="rwd" data-preferance="top-speed" data-weather="">road rwd top-speed</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_4">122 876 920</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">Astalsi401</td>
+	  		  <td data-type="tune_name">TWIN TURBO ROAD</td>
+	  		  <td data-type="score">900 S1</td>
+	  		  <td data-type="car_type">Toyota Supra RZ</br><center id="detail_5" style="display: none;"><script src="pic/tune5.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="road" data-drivetype="rwd" data-preferance="" data-weather="">road rwd</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_5">137 664 933</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">Astalsi401</td>
+	  		  <td data-type="tune_name">AWD ROAD</td>
+	  		  <td data-type="score">900 S1</td>
+	  		  <td data-type="car_type">Toyota Supra RZ</br><center id="detail_6" style="display: none;"><script src="pic/tune6.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="road" data-drivetype="awd" data-preferance="" data-weather="">road awd</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_6">137 743 984</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">SimpleAsPye</td>
+	  		  <td data-type="tune_name">BEST B</td>
+	  		  <td data-type="score">700 B</td>
+	  		  <td data-type="car_type">Abarth 695 Biposto</br><center id="detail_7" style="display: none;"><script src="pic/tune7.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="road" data-drivetype="awd" data-preferance="" data-weather="">road awd</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_7">205 668 466</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">TDU1PlatinumMod</td>
+	  		  <td data-type="tune_name">DIRT RANKED V2</td>
+	  		  <td data-type="score">900 S1</td>
+	  		  <td data-type="car_type">Alfa 33 Stradale</br><center id="detail_8" style="display: none;"><script src="pic/tune8.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="dirt" data-drivetype="awd" data-preferance="" data-weather="">dirt awd</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_8">129 987 023</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">Nalak28</td>
+	  		  <td data-type="tune_name">REALLY GOOD</td>
+	  		  <td data-type="score">900 S1</td>
+	  		  <td data-type="car_type">Alfa 155 Q4</br><center id="detail_9" style="display: none;"><script src="pic/tune9.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="road" data-drivetype="awd" data-preferance="" data-weather="">road awd</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_9">497 192 768</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">Nalak28</td>
+	  		  <td data-type="tune_name">A GRIP</td>
+	  		  <td data-type="score">800 A</td>
+	  		  <td data-type="car_type">Alfa Giulia TZ2</br><center id="detail_10" style="display: none;"><script src="pic/tune10.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="road" data-drivetype="awd" data-preferance="" data-weather="">road awd</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_10">672 423 432</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">STEVEtheP1R4TE</td>
+	  		  <td data-type="tune_name">OFFROAD CHAMP</td>
+	  		  <td data-type="score">800 A</td>
+	  		  <td data-type="car_type">Arial Nomad</br><center id="detail_11" style="display: none;"><script src="pic/tune11.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="offroad" data-drivetype="awd" data-preferance="" data-weather="">offroad awd</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_11">157 705 147</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">ESV Suimin</td>
+	  		  <td data-type="tune_name">UPDATE | EASY</td>
+	  		  <td data-type="score">900 S1</td>
+	  		  <td data-type="car_type">ATS GT</br><center id="detail_12" style="display: none;"><script src="pic/tune12.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="road" data-drivetype="awd" data-preferance="" data-weather="">road awd</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_12">119 580 611</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">C0DCAOS</td>
+	  		  <td data-type="tune_name">59.376 ASTMOR</td>
+	  		  <td data-type="score">800 A</td>
+	  		  <td data-type="car_type">Chevrolet Nova Super Sport 369 FE</br><center id="detail_13" style="display: none;"><script src="pic/tune13.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="road" data-drivetype="awd" data-preferance="" data-weather="">road awd</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_13">230 802 672</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">Gaizi junet</td>
+	  		  <td data-type="tune_name">EZ DRIVE</td>
+	  		  <td data-type="score">900 S1</td>
+	  		  <td data-type="car_type">Dodge Viper SRT10 ACR</br><center id="detail_14" style="display: none;"><script src="pic/tune14.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="road" data-drivetype="awd" data-preferance="" data-weather="">road awd</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_14">293 155 787</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">Rocklxd</td>
+	  		  <td data-type="tune_name">S2 DRY 100BP</td>
+	  		  <td data-type="score">998 S2</td>
+	  		  <td data-type="car_type">Ferrari FXX</br><center id="detail_15" style="display: none;"><script src="pic/tune15.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="road" data-drivetype="awd" data-preferance="" data-weather="dry">road awd dry</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_15">123 303 848</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">Nalak28</td>
+	  		  <td data-type="tune_name">UPDATE?</td>
+	  		  <td data-type="score">998 S2</td>
+	  		  <td data-type="car_type">Ferrari F40 Competizione</br><center id="detail_16" style="display: none;"><script src="pic/tune16.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="road" data-drivetype="awd" data-preferance="" data-weather="dry">road awd dry</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_16">120 711 580</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">Grandma Driving</td>
+	  		  <td data-type="tune_name">998 S2 DRY ONLY</td>
+	  		  <td data-type="score">998 S2</td>
+	  		  <td data-type="car_type">Ferrari 599XX Evolution</br><center id="detail_17" style="display: none;"><script src="pic/tune17.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="road" data-drivetype="awd" data-preferance="" data-weather="dry">road awd dry</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_17">178 902 351</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">Rocklxd</td>
+	  		  <td data-type="tune_name">GOLIATH? V2</td>
+	  		  <td data-type="score">998 S2</td>
+	  		  <td data-type="car_type">Ferrari 599XX Evolution</br><center id="detail_18" style="display: none;"><script src="pic/tune18.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="road" data-drivetype="awd" data-preferance="" data-weather="">road awd</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_18">771 582 330</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">Rocklxd</td>
+	  		  <td data-type="tune_name">S1 RANKED V1.44</td>
+	  		  <td data-type="score">900 S1</td>
+	  		  <td data-type="car_type">Ford GT 2005</br><center id="detail_19" style="display: none;"><script src="pic/tune19.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="road" data-drivetype="awd" data-preferance="" data-weather="">road awd</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_19">931 670 572</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">ZHTBILBILI</td>
+	  		  <td data-type="tune_name">RALLY / SNOW ROAD </td>
+	  		  <td data-type="score">900 S1</td>
+	  		  <td data-type="car_type">Ford Mustang GT Deberti Design</br><center id="detail_20" style="display: none;"><script src="pic/tune20.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="road" data-drivetype="awd" data-preferance="" data-weather="snow">road dirt snow awd</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_20">178 020 733</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">Rocklxd</td>
+	  		  <td data-type="tune_name">B RALLY V1.5</td>
+	  		  <td data-type="score">700 B</td>
+	  		  <td data-type="car_type">Honda Civic RS</br><center id="detail_21" style="display: none;"><script src="pic/tune21.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="dirt" data-drivetype="awd" data-preferance="" data-weather="">dirt awd</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_21">947 620 288</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">jvvvvvvvvvvv552</td>
+	  		  <td data-type="tune_name">MUDKICKERS</td>
+	  		  <td data-type="score">998 S2</td>
+	  		  <td data-type="car_type">Hoonigan Ford RS200 Evolution</br><center id="detail_22" style="display: none;"><script src="pic/tune22.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="dirt" data-drivetype="awd" data-preferance="" data-weather="">dirt awd</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_22">115 745 144</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">Astalsi401</td>
+	  		  <td data-type="tune_name">434km</td>
+	  		  <td data-type="score">900 S1</td>
+	  		  <td data-type="car_type">Koenigsegg CCX</br><center id="detail_23" style="display: none;"><script src="pic/tune23.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="road" data-drivetype="rwd" data-preferance="" data-weather="">road rwd</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_23">665 898 163</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">Rocklxd</td>
+	  		  <td data-type="tune_name">S2 DRY 100BP</td>
+	  		  <td data-type="score">998 S2</td>
+	  		  <td data-type="car_type">Koenigsegg CCGT</br><center id="detail_24" style="display: none;"><script src="pic/tune24.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="road" data-drivetype="awd" data-preferance="" data-weather="dry">road awd dry</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_24">372 316 435</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">Rocklxd</td>
+	  		  <td data-type="tune_name">S2 WET 100BP</td>
+	  		  <td data-type="score">998 S2</td>
+	  		  <td data-type="car_type">Koenigsegg CCGT</br><center id="detail_25" style="display: none;"><script src="pic/tune25.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="road" data-drivetype="awd" data-preferance="" data-weather="wet">road awd wet</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_25">104 433 161</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">GreetedDust8</td>
+	  		  <td data-type="tune_name">SHNOW</td>
+	  		  <td data-type="score">998 S2</td>
+	  		  <td data-type="car_type">Lamborghini Diablo GTR</br><center id="detail_26" style="display: none;"><script src="pic/tune26.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="road" data-drivetype="awd" data-preferance="" data-weather="snow">road awd snow</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_26">568 441 140</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">aTTaX Johnson</td>
+	  		  <td data-type="tune_name">S2 WINTER GOD</td>
+	  		  <td data-type="score">998 S2</td>
+	  		  <td data-type="car_type">Lotus Elise GT1</br><center id="detail_27" style="display: none;"><script src="pic/tune27.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="road" data-drivetype="awd" data-preferance="" data-weather="snow">road awd snow</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_27">748 480 008</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">C0DCAOS</td>
+	  		  <td data-type="tune_name">1:01,100 ASTMOR</td>
+	  		  <td data-type="score">800 A</td>
+	  		  <td data-type="car_type">Mazada RX7</br><center id="detail_28" style="display: none;"><script src="pic/tune28.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="road" data-drivetype="awd" data-preferance="" data-weather="">road awd</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_28">759 945 018</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">Nalak28</td>
+	  		  <td data-type="tune_name">UPDATED BRRR</td>
+	  		  <td data-type="score">997 S2</td>
+	  		  <td data-type="car_type">Mclaren F1 GT</br><center id="detail_29" style="display: none;"><script src="pic/tune29.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="road" data-drivetype="rwd" data-preferance="top-speed" data-weather="">road rwd top-speed</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_29">394 059 655</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">SeeyeahBoss</td>
+	  		  <td data-type="tune_name">#5 60\100BP</td>
+	  		  <td data-type="score">900 S1</td>
+	  		  <td data-type="car_type">Mclaren 570S Coupe</br><center id="detail_30" style="display: none;"><script src="pic/tune30.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="road" data-drivetype="awd" data-preferance="" data-weather="">road awd</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_30">150 582 077</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">Rocklxd</td>
+	  		  <td data-type="tune_name">S2 WET 100BP</td>
+	  		  <td data-type="score">998 S2</td>
+	  		  <td data-type="car_type">Mercedes-Benz AMG CLK GTR</br><center id="detail_31" style="display: none;"><script src="pic/tune31.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="road" data-drivetype="awd" data-preferance="" data-weather="wet">road awd wet</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_31">145 153 439</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">Rocklxd</td>
+	  		  <td data-type="tune_name">A CC ONLINE</td>
+	  		  <td data-type="score">800 A</td>
+	  		  <td data-type="car_type">Mercedes-Benz X-Class</br><center id="detail_32" style="display: none;"><script src="pic/tune32.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="offroad" data-drivetype="awd" data-preferance="" data-weather="snow">offroad awd snow</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_32">763 265 232</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">EXR Garmite</td>
+	  		  <td data-type="tune_name">B-DIRT META</td>
+	  		  <td data-type="score">700 B</td>
+	  		  <td data-type="car_type">Nissan Pulsar GTI-R</br><center id="detail_33" style="display: none;"><script src="pic/tune33.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="dirt" data-drivetype="awd" data-preferance="" data-weather="">dirt awd</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_33">286 832 237</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">Astalsi401</td>
+	  		  <td data-type="tune_name">A</td>
+	  		  <td data-type="score">800 A</td>
+	  		  <td data-type="car_type">Nissan Skyline GT-R V-Spec</br><center id="detail_34" style="display: none;"><script src="pic/tune34.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="road" data-drivetype="awd" data-preferance="" data-weather="">road awd</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_34">117 710 073</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">Nalak28</td>
+	  		  <td data-type="tune_name">100BP</td>
+	  		  <td data-type="score">998 S2</td>
+	  		  <td data-type="car_type">Pagani Zonda R</br><center id="detail_35" style="display: none;"><script src="pic/tune35.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="road" data-drivetype="awd" data-preferance="" data-weather="">road awd</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_35">325 704 720</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">Rocklxd</td>
+	  		  <td data-type="tune_name">A RANkED V1.42</td>
+	  		  <td data-type="score">800 A</td>
+	  		  <td data-type="car_type">Plymouth Atomic Punk Bubbletop</br><center id="detail_36" style="display: none;"><script src="pic/tune36.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="road" data-drivetype="awd" data-preferance="" data-weather="">road awd</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_36">122 975 700</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">C0DCAOS</td>
+	  		  <td data-type="tune_name">THE BEST 49,5 </td>
+	  		  <td data-type="score">900 S1</td>
+	  		  <td data-type="car_type">Porsche Carrera GT</br><center id="detail_37" style="display: none;"><script src="pic/tune37.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="road" data-drivetype="awd" data-preferance="" data-weather="">road awd</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_37">603 850 563</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">GreetedDust8</td>
+	  		  <td data-type="tune_name">NYOOM 3</td>
+	  		  <td data-type="score">900 S1</td>
+	  		  <td data-type="car_type">Shelby Monaco King Cobra</br><center id="detail_38" style="display: none;"><script src="pic/tune38.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="road" data-drivetype="rwd" data-preferance="top-speed" data-weather="">road rwd top-speed</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_38">156 543 761</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">Rocklxd</td>
+	  		  <td data-type="tune_name">S2 DRY RWD V2</td>
+	  		  <td data-type="score">998 S2</td>
+	  		  <td data-type="car_type">Shelby Monaco King Cobra</br><center id="detail_39" style="display: none;"><script src="pic/tune39.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="road" data-drivetype="rwd" data-preferance="top-speed" data-weather="dry">road rwd top-speed dry</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_39">845 723 038</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">GreetedDust8</td>
+	  		  <td data-type="tune_name">NO WING</td>
+	  		  <td data-type="score">700 B</td>
+	  		  <td data-type="car_type">Shelby Cobra Daytona Coupe</br><center id="detail_40" style="display: none;"><script src="pic/tune40.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="dirt" data-drivetype="awd" data-preferance="" data-weather="">dirt awd</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_40">927 394 042</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">RockNRoIIa608</td>
+	  		  <td data-type="tune_name">B DIRT FULL AERO</td>
+	  		  <td data-type="score">700 B</td>
+	  		  <td data-type="car_type">Subaru Legacy RS</br><center id="detail_41" style="display: none;"><script src="pic/tune41.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="dirt" data-drivetype="awd" data-preferance="" data-weather="">dirt awd</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_41">102 233 042</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">Nalak28</td>
+	  		  <td data-type="tune_name">AMAZING CC/DIRT</td>
+	  		  <td data-type="score">900 S1</td>
+	  		  <td data-type="car_type">Toyota #1 T100 Baja Truck "WP"</br><center id="detail_42" style="display: none;"><script src="pic/tune42.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="offroad" data-drivetype="awd" data-preferance="" data-weather="">offroad dirt awd</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_42">183 662 432</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">Astalsi401</td>
+	  		  <td data-type="tune_name">BETTER BRAKE</td>
+	  		  <td data-type="score">900 S1</td>
+	  		  <td data-type="car_type">Toyota Supra RZ</br><center id="detail_43" style="display: none;"><script src="pic/tune43.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="road" data-drivetype="rwd" data-preferance="top-speed" data-weather="">road rwd top-speed</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_43">469 059 586</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">Astalsi401</td>
+	  		  <td data-type="tune_name">4.0 F6 TT ROAD</td>
+	  		  <td data-type="score">900 S1</td>
+	  		  <td data-type="car_type">Subaru Impreza 22B STI</br><center id="detail_44" style="display: none;"><script src="pic/tune44.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="road" data-drivetype="awd" data-preferance="" data-weather="">road awd</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_44">108 028 436</button></td>
+	    	</tr>	    
+	  		<tr>
+	  		  <td data-type="tunner">Rocklxd</td>
+	  		  <td data-type="tune_name">A RANKED V1.0B</td>
+	  		  <td data-type="score">800 A</td>
+	  		  <td data-type="car_type">Subaru Impreza 22B STI</br><center id="detail_45" style="display: none;"><script src="pic/tune45.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="dirt" data-drivetype="awd" data-preferance="" data-weather="">dirt awd</td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_45">543 376 903</button></td>
+	    	</tr>
+	    	<tr>
+	  		  <td data-type="tunner"></td>
+	  		  <td data-type="tune_name"></td>
+	  		  <td data-type="score"></td>
+	  		  <td data-type="car_type"></br><center id="detail_46" style="display: none;"><script src="pic/tune46.js"></script></center></td>
+	  		  <td data-type="preferance" data-comptype="" data-drivetype="" data-preferance="" data-weather=""></td>
+	  		  <td data-type="share_code"><button type="button" id="detail_button_46"></button></td>
+	    	</tr>
+	    </tbody>	
+	  </table>
 	</center>
 </div>
 <script src="../../js/sort_table.js"></script>
+<script src="../../js/show_detail.js"></script>
 </body>
 </html>

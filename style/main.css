@@ -287,7 +287,7 @@ table tr.header, table tr:hover {
 
 /* FH4調教搜尋結果  */
 .order-table th, td {
-  padding: 2px 2px;
+  padding: 2px 5px;
 }
 
 .order-table {
