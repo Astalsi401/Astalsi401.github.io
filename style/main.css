@@ -163,7 +163,7 @@ table tr.header, table tr:hover {
 
 .left_content_button {
   background-color: rgba(0, 0, 0, 0);
-  z-index: 9990; position: fixed !important; top: 85%; right: 25%;
+  z-index: 9990; position: fixed !important; top: 90%; right: 25%;
   width: 50%; height: 10%;
   cursor: pointer;
 }
