@@ -1,352 +1,140 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F8SLV521P4"></script>
-  <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-F8SLV521P4');
-  </script>
-  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <title>FH4調教分享</title>
-  <link rel="stylesheet" type="text/css" href="../../style/main.css">
+<meta charset="UTF_8">
+<title>toggle_jquery1.9</title>
+<script src="https://cdn.bootcss.com/jquery/1.9.0/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../style/main.css">
 </head>
 <body>
-  <script src="../../import/button/back_to_content_notes.js"></script>
-  <script src="../../js/left_content_showhide.js"></script>
+  <div class="previous_page"></div>
+  <div class="next_page"></div>
+  <nav class="top"></nav>
   <script src="../../import/left_content.js"></script>
-  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
-  <script src="../../jQuery/jquery.sortElements.js"></script>
-<script>
-  (function(document) {
-  'use strict';
-
-  // 建立 LightTableFilter
-  var LightTableFilter = (function(Arr) {
-
-    var _input;
-
-    // 資料輸入事件處理函數
-    function _onInputEvent(e) {
-      _input = e.target;
-      var tables = document.getElementsByClassName(_input.getAttribute('data-table'));
-      Arr.forEach.call(tables, function(table) {
-        Arr.forEach.call(table.tBodies, function(tbody) {
-          Arr.forEach.call(tbody.rows, _filter);
-        });
-      });
-    }
-
-    // 資料篩選函數，顯示包含關鍵字的列，其餘隱藏
-    function _filter(row) {
-      var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
-      row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
-    }
-
-    return {
-      // 初始化函數
-      init: function() {
-        var inputs = document.getElementsByClassName('light-table-filter');
-        Arr.forEach.call(inputs, function(input) {
-          input.oninput = _onInputEvent;
-        });
-      }
-    };
-  })(Array.prototype);
-
-  // 網頁載入完成後，啟動 LightTableFilter
-  document.addEventListener('readystatechange', function() {
-    if (document.readyState === 'complete') {
-      LightTableFilter.init();
-    }
-  });
-
-})(document);
-</script>
-<script>
-var table = $('table');
-
-$('.sortable th')
-    .wrapInner('<span title="sort this column"/>')
-    .each(function(){
-
-        var th = $(this),
-            thIndex = th.index(),
-            inverse = false;
-
-        th.click(function(){
-
-            table.find('td').filter(function(){
-
-                return $(this).index() === thIndex;
-
-            }).sortElements(function(a, b){
-
-                if( $.text([a]) == $.text([b]) )
-                    return 0;
-
-                return $.text([a]) > $.text([b]) ?
-                    inverse ? -1 : 1
-                    : inverse ? 1 : -1;
-
-            }, function(){
-
-                // parentNode is the element we want to move
-                return this.parentNode; 
-
-            });
-
-            inverse = !inverse;
-
-        });
-
-    });
-</script>
+  <script src="../../js/left_content_showhide.js"></script>
 <div class="container">
-  <h1 id="tune_share">FH4調教分享(施工中)</h1>
-<center>
-<input type="search" class="light-table-filter" data-table="order-table" placeholder="請輸入關鍵字">
-<table class="order-table">
-  <thead>
-    <tr>
-      <th class="string">調教者</th>
-      <th class="string">調教名稱</th>
-      <th class="string">性能等級</th>
-      <th class="string">車型</th>
-      <th class="string">特性</th>
-      <th class="num">分享代碼</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Astalsi401</td>
-      <td>GOLIATH V2</td>
-      <td>A 800</td>
-      <td>Toyota Trueno</td>        
-      <td>road rwd top-speed</td>
-      <td><a href="">147 650 586</a></td>
-    </tr>
-    <tr>
-      <td>Astalsi401</td>
-      <td>RALLY V2</td>
-      <td>A 800</td>
-      <td>Toyota Trueno</td>
-      <td>dirt awd</td>
-      <td><a href="">145 523 335</a></td>
-    </tr>
-    <tr>
-      <td>Astalsi401</td>
-      <td>RALLY V1</td>
-      <td>A 800</td>
-      <td>Toyota Trueno</td>
-      <td>dirt awd</td>
-      <td><a href="">133 115 556</a></td>
-    </tr>
-    <tr>
-      <td>Astalsi401</td>
-      <td>2JZ TURBO ROAD</td>
-      <td>S1 900</td>
-      <td>Toyota Supra RZ</td>
-      <td>road rwd</td>
-      <td><a href="">140 984 507</a></td>
-    </tr>
-    <tr>
-      <td>Astalsi401</td>
-      <td>TWIN TURBO ROAD</td>
-      <td>S1 900</td>
-      <td>Toyota Supra RZ</td>
-      <td>road rwd</td>
-      <td><a href="">284 536 768</a></td>
-    </tr>
-    <tr>
-      <td>Astalsi401</td>
-      <td>AWD ROAD</td>
-      <td>S1 900</td>
-      <td>Toyota Supra RZ</td>
-      <td>road awd</td>
-      <td><a href="">137 743 984</a></td>
-    </tr>
-    <tr>
-      <td>SimpleAsPye</td>
-      <td>BEST B</td>
-      <td>B 700</td>
-      <td>Abarth 695 Biposto</td>
-      <td>road awd</td>
-      <td><a href="">205 668 466</a></td>
-    </tr>
-    <tr>
-      <td>TDU1PlatinumMod</td>
-      <td>DIRT RANKED V2</td>
-      <td>S1 900</td>
-      <td>Alfa 33 Stradale</td>
-      <td>dirt awd</td>
-      <td><a href="">129 987 023</a></td>
-    </tr>
-    <tr>
-      <td>Nalak28</td>
-      <td>REALLY GOOD</td>
-      <td>S1 900</td>
-      <td>Alfa 155 Q4</td>
-      <td>road awd</td>
-      <td><a href="">497 192 768</a></td>
-    </tr>
-    <tr>
-      <td>Nalak28</td>
-      <td>A GRIP</td>
-      <td>A 800</td>
-      <td>Alfa Giulia TZ2</td>
-      <td>road awd</td>
-      <td><a href="">672 423 432</a></td>
-    </tr>
-    <tr>
-      <td>STEVEtheP1R4TE</td>
-      <td>OFFROAD CHAMP</td>
-      <td>A 800</td>
-      <td>Arial Nomad</td>
-      <td>offroad awd</td>
-      <td><a href="">157 705 147</a></td>
-    </tr>
-    <tr>
-      <td>ESV Suimin</td>
-      <td>UPDATE | EASY</td>
-      <td>S1 900</td>
-      <td>ATS GT</td>
-      <td>road awd</td>
-      <td><a href="">119 580 611</a></td>
-    </tr>
-    <tr>
-      <td>C0DCAOS</td>
-      <td>59.376 ASTMOR</td>
-      <td>A 800</td>
-      <td>Chevrolet Nova Super Sport 369 FE</td>
-      <td>road awd</td>
-      <td><a href="">230 802 672</a></td>
-    </tr>
-    <tr>
-      <td>Gaizi junet</td>
-      <td>EZ DRIVE</td>
-      <td>S1 900</td>
-      <td>Dodge Viper SRT10 ACR</td>
-      <td>road awd</td>
-      <td><a href="">293 155 787</a></td>
-    </tr>
-    <tr>
-      <td>Rocklxd</td>
-      <td>S2 DRY 100BP</td>
-      <td>S2 998</td>
-      <td>Ferrari FXX</td>
-      <td>road awd</td>
-      <td><a href="">123 303 848</a></td>
-    </tr>
-    <tr>
-      <td>Nalak28</td>
-      <td>UPDATE?</td>
-      <td>S2 998</td>
-      <td>Ferrari F40 Competizione</td>
-      <td>road awd</td>
-      <td><a href="">120 711 580</a></td>
-    </tr>
-    <tr>
-      <td>Grandma Driving</td>
-      <td>S2 998 DRY ONLY</td>
-      <td>S2 998</td>
-      <td>Ferrari 599XX Evolution</td>
-      <td>road awd</td>
-      <td><a href="">178 902 351</a></td>
-    </tr>
-    <tr>
-      <td>Rocklxd</td>
-      <td>GOLIATH? V2</td>
-      <td>S2 998</td>
-      <td>Ferrari 599XX Evolution</td>
-      <td>road awd</td>
-      <td><a href="">771 582 330</a></td>
-    </tr>
-    <tr>
-      <td>Rocklxd</td>
-      <td>S1 RANKED V1.44</td>
-      <td>S1 900</td>
-      <td>Ford GT 2005</td>
-      <td>road awd</td>
-      <td><a href="">931 670 572</a></td>
-    </tr>
-    <tr>
-      <td>ZHTBILBILI</td>
-      <td>RALLY / SNOW ROAD </td>
-      <td>S1 900</td>
-      <td>Ford Mustang GT Deberti Design</td>
-      <td>road dirt snow awd</td>
-      <td><a href="">178 020 733</a></td>
-    </tr>
-    <tr>
-      <td>Rocklxd</td>
-      <td>B RALLY V1.5</td>
-      <td>B 700</td>
-      <td>Honda Civic RS</td>
-      <td>dirt awd</td>
-      <td><a href="">947 620 288</a></td>
-    </tr>
-    <tr>
-      <td>jvvvvvvvvvvv552</td>
-      <td>MUDKICKERS</td>
-      <td>S2 998</td>
-      <td>Hoonigan Ford RS200 Evolution</td>
-      <td>dirt awd</td>
-      <td><a href="">115 745 144</a></td>
-    </tr>
-    <tr>
-      <td>Astalsi401</td>
-      <td>434km</td>
-      <td>S1 900</td>
-      <td>Koenigsegg CCX</td>
-      <td>road rwd</td>
-      <td><a href="">665 898 163</a></td>
-    </tr>
-    <tr>
-      <td>Rocklxd</td>
-      <td>S2 DRY 100BP</td>
-      <td>S2 998</td>
-      <td>Koenigsegg CCGT</td>
-      <td>road awd</td>
-      <td><a href="">372 316 435</a></td>
-    </tr>
-    <tr>
-      <td>Rocklxd</td>
-      <td>S2 WET 100BP</td>
-      <td>S2 998</td>
-      <td>Koenigsegg CCGT</td>
-      <td>road awd</td>
-      <td><a href="">104 433 161</a></td>
-    </tr>
-    <tr>
-      <td>GreetedDust8</td>
-      <td>SHNOW</td>
-      <td>S2 998</td>
-      <td>Lamborghini Diablo GTR</td>
-      <td>road snow awd</td>
-      <td><a href="">568 441 140</a></td>
-    </tr>
-    <tr>
-      <td>aTTaX Johnson</td>
-      <td>S2 WINTER GOD</td>
-      <td>S2 998</td>
-      <td>Lotus Elise GT1</td>
-      <td>road snow awd</td>
-      <td><a href="">748 480 008</a></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td><a href=""></a></td>
-    </tr>
-  </tbody>
-</table>
-</center>
+  <h1>FH4基礎調教</h1>
+  <p>本頁面為Youtube上FH4車輛調教影片的簡易中文摘要。</p>
+  <p>影片清單：</p>
+  <ul>
+    <li><a href="https://www.youtube.com/c/HokiHoshi">HokiHoshi</a></li>
+    <ul>
+      <li><a href="https://youtu.be/WM7_3NGGUoQ">Forza Horizon 4 Tuning Guide</a></li>
+      <li><a href="https://youtu.be/D6qthLir2iI">Gear Tuning</a></li>
+      <li><a href="https://youtu.be/BfZHOWwR5Gw">Drift Guide</a></li>
+      <li><a href="https://youtu.be/rAuvIlPi2KE">Drift Gearing</a></li>
+    </ul>
+    <li><a href="https://www.youtube.com/channel/UCGK33hhvffYv5hUNqB0wVnQ">Johnson Racing</a></li>
+    <ul>
+      <li><a href="https://youtu.be/W4s1VP1nUoM">HOW TO TUNE in Forza Horizon 4 | OP Car Tutorial (Upgrades & Tuning)</a></li>
+    </ul>
+  </ul>
+  <ol>
+    <h3 id="differential"><li>差速器</li></h3>
+    <div class="textbox">
+      <p>影片位置：<a href="https://youtu.be/WM7_3NGGUoQ?t=152">2:32</a></p>
+      <p>感謝補充：<a href="https://forum.gamer.com.tw/Co.php?bsn=7697&sn=18681&subbsn=7&bPage=0">暗行者(halcyon1211)</a></p>
+      <p>差速器控制左右輪轉速的同步率，0%代表各自獨立，100%則完全同步。同步率越高，車輛就能傳送越多馬力到輪上，有越快的加速。差速器對轉向過度、轉向不足，出灣加速有相當大的影響，建議每次5%做增減。</p>
+      <ol type="i">
+        <h4><li>AWD</li></h4>
+        <ul>
+          <li>前差速器加速（25%）：</li>
+          <p>不宜調到太高，雖然使出彎速度較慢，但也會減少過度轉向。</p>
+          <li>後差速器加速（40~50%）：</li>
+          <p>減少後差速，出彎速度低，但增加抓地；增加後差速，抓地力降低，出彎速度提高。</p>
+          <li>差速器減速（0%）：</li>
+          <p>屬於個人偏好，不過0%更有利出彎加速。</p>
+          <li>中央差速器（70%~90%）：</li>
+          <p>決定前後輪分配的馬力，讓車更偏向前驅或後驅。增加後輪馬力，增加轉向過度；但後輪出力過高時將導致加速降低。</p>
+        
+        </ul>
+        <h4><li>RWD</li></h4>
+        <ul>
+          <li>後驅車差速器加速（45%~80%）：</li>
+          <p>根據車輛馬力來調整，越大馬力需要越高的值，越高的值代表轉向過度。判斷的依據為看後側輪胎狀況，過低內側會打滑，過高則是外側打滑。宗旨是在輪胎不打滑的情況下找到自己最習慣的手感。</p>
+          <li>後驅車差速器減速（5%~50%）：</li>
+          <p></p>
+        </ul>
+      </ol>
+    </div>
+    <h3 id="brake"><li>剎車</li></h3>
+      <div class="textbox">
+      <p>影片位置：<a href="https://youtu.be/WM7_3NGGUoQ?t=298">4:58</a></p>
+      <p>當啟用abs時，將剎車力度調到100%以上將對剎車速度有負面影響。</p>
+    </div>
+    <h3 id="aero"><li>空力</li></h3>
+    <div class="textbox">
+      <p>影片位置：<a href="https://youtu.be/WM7_3NGGUoQ?t=340">5:40</a></p>
+      <p>減少空力，過彎性能降低，但增加極速。增加空力，犧牲少許極速換取更佳的彎道性能。</p>
+      <ol type="i">
+        <h4><li>前空力：</li></h4>
+        <p>有時候前空力並不適合調到最高（保持在約80%的位置），不然在高速時反而會導致失去抓地力。</p>
+        <h4><li>後空力</li></h4>
+        <p>調到最高，若轉向不足再調低</p>
+      </ol>
+    </div>
+    <h3 id="damping"><li>阻尼</li></h3>
+    <div class="textbox">
+      <ol type="i">
+        <h4><li>回彈硬度<a href="#formula">（公式決定）</a></li></h4>
+        <h4><li>壓縮硬度（建議為60%）：</li></h4>
+        <p>影響避震器面對彈跳時的表現，一般在回彈硬度的50%~70%。</p>
+      </ol>
+    </div>
+    <h3 id="springs"><li>彈簧</li></h3>
+    <p>感謝補充：<a href="https://forum.gamer.com.tw/Co.php?bsn=7697&sn=18681&subbsn=7&bPage=0">雪飄夏日(gi516811)</a></p>
+    <div class="textbox">
+      <ol type="i">
+        <h4><li>彈簧</li></h4>
+        <p>使用公式：<code>(最大值-最小值)×重量比</code></p>
+        <p>注意彈簧公式並未加上最小值。</p>
+        <h4><li>車身高度：</li></h4>
+        <p>降到最低再視情況調高。</p>
+      </ol>
+    </div>
+    <h3 id="anti_roll_bar"><li>防傾桿</li></h3>
+    <div class="textbox">
+    <ol type="i">
+      <li><h4>防傾桿（公路）：</h4></li>
+      <p>感謝補充：<a href="https://forum.gamer.com.tw/Co.php?bsn=7697&sn=18681&subbsn=7&bPage=0">暗行者(halcyon1211)</a></p>
+      <ul>
+        <li>前置四驅<a href="#formula">（公式決定）</a></li>
+        <li>中置四驅：</li>
+        <p>同樣使用公式，不過前防傾桿比例可增加2%，例：原重量比48%，改以50%進行計算。</p>
+        <li>後驅：</li>
+        <p>同樣使用公式，因容易轉向過度，所以前防傾桿要比較硬，建議增加6%。</p>
+        <li>前驅：</li>
+        <p>同樣使用公式，因容易轉向不足，所以要比較軟，建議減少8%。</p>
+      </ul>
+      <li><h4>防傾桿（甩尾）</h4></li>
+      <ul>
+        <li>前：<a href="#formula">公式</a>為基礎，視情況調低。</li>
+        <li>後：可直接調到最低，再視情況調高。</li>
+      </ul>
+      <li><h4>防傾桿（拉力）：</h4></li>
+      <ul>
+          <li>前：依<a href="#formula">公式</a>決定，視情況調低。</li>
+          <li>後：約20%的位置</li>
+      </ul>
+    </ol>
+    </div>
+    <h3 id="alignment"><li>輪胎定位</li></h3>
+    <div class="textbox">
+      <p>影片位置：<a href="https://youtu.be/WM7_3NGGUoQ?t=650">10:50</a>、<a href="https://youtu.be/WM7_3NGGUoQ?t=920">15:20</a></p>
+      <ol type="i">
+        <h4><li>外傾角：</li></h4>
+        <p>決定過彎抓地力，調整至踩著油門過彎時外側車輪時接近0°。</p>
+        <p>也可以從車輪溫度調整，內側過高，增加外傾角；外側過高，減少外傾角。調整至車輪溫度內側>中間>外側，但差異不要太大（個位數，最好5°C內）</p>
+        <script src="pic/camber_png.js"></script>
+        <h4><li>束角：</li></h4>
+        <p>影響轉向能力，束角越大，轉向角度越大，直線時越不穩定。下圖為前+後-。拉力賽容許更大的前束角。調整束角時建議以0.1為單位慢慢調整。</p>
+        <script src="pic/toe_png.js"></script>
+        <h4><li>前後傾角（4°~6°）：</li></h4>
+        <p>越高，直線時外傾角越穩定，但過彎時將增加負外傾角。在某些情況下，調到太高有可能使車輛重心過度自行回正，導致難以預測的移動。</p>
+        <script src="pic/caster_png.js"></script>
+      </ol>
+      <h3>輪胎定位（甩尾）</h3>
+      <ol type="i">
 </div>
 </body>
 </html>
