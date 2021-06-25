@@ -153,16 +153,14 @@ table tr.header, table tr:hover {
 /* 網頁左側目錄 */
 .left_content {
   z-index: 9997; position: fixed !important; left: 0px; top: 0px;
-  width: 220px; max-width: 70%; height: 100%;
+  width: 220px; max-width: 45%; height: 100%;
   background-color: rgb(245, 245, 245);
   padding: 0px 7px 35px; margin-top: 35px; margin-bottom: 15%;
   box-shadow:0px 0px 9px black;
   overflow-y: scroll; overflow-x: hidden;
   display: none;
 }
-.left_content {
-  
-}
+
 .left_content_button {
   background-color: rgba(0, 0, 0, 0);
   z-index: 9990; position: fixed !important; top: 85%; right: 25%;

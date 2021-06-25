@@ -262,10 +262,10 @@
 	<div>
 		<h2 id="calculator" style="text-align: center;">計算器</h2>
 		<p style="color: red; text-align: center;"><b>
-			注意最大值：<br />
-			輸入大於65將計算彈簧<br />
-			輸入小於21將計算阻尼<br />
-			其他數值將計算防傾桿<br />
+			注意最大值：<br>
+			輸入大於65將計算彈簧<br>
+			輸入小於21將計算阻尼<br>
+			其他數值將計算防傾桿<br>
 			防傾桿公式已依<a href="#anti_roll_bar">前文</a>進行調整
 		</b></p>
 		<center>
@@ -273,29 +273,26 @@
 				<caption><b>防傾桿、阻尼回彈硬度、彈簧</b></caption>
 				<tr>
 					<th>重量比</th>
-					<td><input class="calculator_input" id="ratio" type="text" placeholder="請輸入小數" /><br /></td>
+					<td><input class="calculator_input" id="ratio" type="text" placeholder="請輸入小數" oninput="tuneformula()" /><br /></td>
 				</tr>
 				<tr>
 					<th>最大值</th>
-					<td><input class="calculator_input" id="max" type="text" /><br /></td>
+					<td><input class="calculator_input" id="max" type="text" oninput="tuneformula()"><br></td>
 				</tr>
 				<tr>
 					<th>最小值</th>
-					<td><input class="calculator_input" id="min" type="text" /><br /></td>
+					<td><input class="calculator_input" id="min" type="text" oninput="tuneformula()"><br></td>
 				</tr>
 				<tr>
 					<th>驅動方式</th>
 					<td>
-						<select name="type" id="type" onchange="tuneformula();">
+						<select name="type" id="type" onchange="tuneformula()">
 							<option value="0">前置四驅</option>
 							<option value="1">中置四驅</option>
 							<option value="2">後驅</option>
 							<option value="3">前驅</option>
 						</select>
 					</td>
-				</tr>
-				<tr>
-					<td colspan="2" align="center"><button onclick="tuneformula();">計算</button></td>
 				</tr>
 				<tr>
 					<th>前</th>
@@ -313,10 +310,10 @@
 				<caption><b>阻尼壓縮硬度</b></caption>
 				<tr>
 					<th>期望阻尼壓縮硬度比</th>
-					<td><input class="calculator_input" id="dampr" type="text" placeholder="請輸入小數" /></td>
+					<td><input class="calculator_input" id="dampr" type="text" placeholder="請輸入小數" oninput="tune2()" /></td>
 				</tr>
 				<tr>
-					<td colspan="2" align="center"><button onclick="tune2();">計算阻尼壓縮硬度</button></td>
+					<td colspan="2" align="center"><button onclick="tune2()">計算阻尼壓縮硬度</button></td>
 				</tr>
 				<tr>
 					<th>前阻尼壓縮硬度</th>
