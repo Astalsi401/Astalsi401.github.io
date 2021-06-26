@@ -1,69 +1,75 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!--Home-->
   <url>
-    <loc>https://astalsi401.github.io/</loc>
+    <loc>https://astalsi401.github.io/index.html</loc>
   </url>
   <!--Stata-->
   <url>
-    <loc>https://astalsi401.github.io/stata/</loc>
+    <loc>https://astalsi401.github.io/stata/index.html</loc>
   </url>
   <url>
-    <loc>https://astalsi401.github.io/stata/001-input_tab/</loc>
+    <loc>https://astalsi401.github.io/stata/001-input_tab.html</loc>
   </url>
   <url>
-    <loc>https://astalsi401.github.io/stata/002-import_export/</loc>
+    <loc>https://astalsi401.github.io/stata/002-import_export.html</loc>
   </url>
   <url>
-    <loc>https://astalsi401.github.io/stata/003-data_des/</loc>
+    <loc>https://astalsi401.github.io/stata/003-data_des.html</loc>
   </url>
   <url>
-    <loc>https://astalsi401.github.io/stata/004-data_sort/</loc>
+    <loc>https://astalsi401.github.io/stata/004-data_sort.html</loc>
   </url>
   <url>
-    <loc>https://astalsi401.github.io/stata/005-stata_loop/</loc>
+    <loc>https://astalsi401.github.io/stata/005-stata_loop.html</loc>
   </url>
   <url>
-    <loc>https://astalsi401.github.io/stata/006-graph/</loc>
+    <loc>https://astalsi401.github.io/stata/006-graph.html</loc>
   </url>
   <url>
-    <loc>https://astalsi401.github.io/stata/007-zscore/</loc>
+    <loc>https://astalsi401.github.io/stata/007-zscore.html</loc>
   </url>
   <url>
-    <loc>https://astalsi401.github.io/stata/008-ttest/</loc>
+    <loc>https://astalsi401.github.io/stata/008-ttest.html</loc>
   </url>
   <url>
-    <loc>https://astalsi401.github.io/stata/009-Anova_Test/</loc>
+    <loc>https://astalsi401.github.io/stata/009-Anova_Test.html</loc>
   </url>
   <url>
-    <loc>https://astalsi401.github.io/stata/010-nonparametric_statistics/</loc>
+    <loc>https://astalsi401.github.io/stata/010-nonparametric_statistics.html</loc>
   </url>
   <url>
-    <loc>https://astalsi401.github.io/stata/011-median_test/</loc>
+    <loc>https://astalsi401.github.io/stata/011-median_test.html</loc>
   </url>
   <url>
-    <loc>https://astalsi401.github.io/stata/012-correlation/</loc>
+    <loc>https://astalsi401.github.io/stata/012-correlation.html</loc>
   </url>
   <url>
-    <loc>https://astalsi401.github.io/stata/013-regression/</loc>
+    <loc>https://astalsi401.github.io/stata/013-regression.html</loc>
   </url>
   <url>
-    <loc>https://astalsi401.github.io/stata/014-factor_analysis/</loc>
+    <loc>https://astalsi401.github.io/stata/014-factor_analysis.html</loc>
   </url>
   <url>
-    <loc>https://astalsi401.github.io/stata/015-logisitic_analysis/</loc>
+    <loc>https://astalsi401.github.io/stata/015-logisitic_analysis.html</loc>
   </url>
   <url>
-  	<loc>https://astalsi401.github.io/stata/other/01-st3_stata/</loc>
+  	<loc>https://astalsi401.github.io/stata/other_01-st3.html</loc>
   </url>
   <url>
-    <loc>https://astalsi401.github.io/stata/other/02-html_stata/</loc>
+    <loc>https://astalsi401.github.io/stata/other_02-html.html</loc>
   </url>
   <!--R-->
   <url>
   	<loc>https://astalsi401.github.io/R/r_index.html</loc>
   </url>
   <url>
-  	<loc>https://astalsi401.github.io/R/001/data_input.html</loc>
+  	<loc>https://astalsi401.github.io/R/001-data_input.html</loc>
+  </url>
+  <url>
+    <loc>https://astalsi401.github.io/R/003-import_export.html</loc>
+  </url>
+  <url>
+    <loc>https://astalsi401.github.io/R/003-social_network_1.html</loc>
   </url>
   <!--雜物間-->
   <url>

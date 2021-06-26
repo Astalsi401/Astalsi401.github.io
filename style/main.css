@@ -162,7 +162,8 @@ table tr.header, table tr:hover {
 }
 
 .left_content_button {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0
+    );
   z-index: 9990; position: fixed !important; top: 90%; right: 25%;
   width: 50%; height: 10%;
   cursor: pointer;
@@ -176,12 +177,22 @@ nav a{
 nav a:hover {
   background-color: rgba(115, 115, 115, 1.0);
   color: white;
+  text-decoration: none;
 }
 nav > ul {
-  margin: 0px 0px 35px; padding: 0;
+  margin: 0px 0px 35px; padding: 7px;
+  list-style: none;
+}
+nav > ol {
+  list-style: none;
+}
+nav > ol > ul {
   list-style: none;
 }
 
+nav > ul > ol {
+  list-style: none;
+}
 /* 上、下頁 */
 .next_page {
   background-color: rgba(0, 0, 0, 0);

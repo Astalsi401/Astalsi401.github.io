@@ -4,39 +4,44 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F8SLV521P4"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-F8SLV521P4');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-F8SLV521P4');
     </script>
-	  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-	  <title>匯入與匯出</title>
-    <link rel="stylesheet" type="text/css" href="../../style/main.css">
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <title>匯入與匯出</title>
+        <link rel="stylesheet" type="text/css" href="../style/main.css">
+        <script src="https://cdn.bootcss.com/jquery/1.9.0/jquery.min.js"></script>
   </head>
-  <script src="../../js/old_to_new.js"></script>
-  <script src="../../import/button/back_to_content_stata.js"></script>
   <body>
+    <script src="../js/left_content_showhide.js"></script>
+    <script src="../import/button/back_to_content_stata.js"></script>
+    <script src="../import/left_content_stata.js"></script>
+    <a class="previous_page" href=""></a>
+    <a class="next_page" href=""></a>
+    <nav class="top"></nav>
   	<div class="container">
-  	  <h2 data-type="title_1" id="002">002. 匯入與匯出</h2>
-      <p><b>工作目錄</b></p>
-      <p>匯入資料前最好先確認STATA的工作目錄，這樣可以減少需要輸入的路徑的長度。</p>
-      <p><code>cd "路徑"</code>：直接指定工作目錄</p>
-      <pre id="stlog-1" class="stlog"><samp>
+        <h2 data-type="title_1" id="002">002. 匯入與匯出</h2>
+        <p><b>工作目錄</b></p>
+        <p>匯入資料前最好先確認STATA的工作目錄，這樣可以減少需要輸入的路徑的長度。</p>
+        <p><code>cd "路徑"</code>：直接指定工作目錄</p>
+        <pre id="stlog-1" class="stlog"><samp>
 <span class="stinp">. cd "C:\Users\misti\Documents\Stata\unify"</span>
 <span class="stres">C:\Users\misti\Documents\Stata\unify</span>
-      </samp></pre>
-      <p><code>pwd</code>：確認當前目錄</p>
-      <pre id="stlog-2" class="stlog"><samp>
+        </samp></pre>
+        <p><code>pwd</code>：確認當前目錄</p>
+        <pre id="stlog-2" class="stlog"><samp>
 <span class="stinp">. pwd</span>
 <span class="stres">C:\Users\misti\Documents\Stata\unify</span>
-      </samp></pre>
-      <p><code>cd ..</code>：回到上一層目錄</p>
-      <pre id="stlog-3" class="stlog"><samp>
+        </samp></pre>
+        <p><code>cd ..</code>：回到上一層目錄</p>
+        <pre id="stlog-3" class="stlog"><samp>
 <span class="stinp">. cd ..</span>
 <span class="stres">C:\Users\misti\Documents\Stata</span>
-      </samp></pre>
-      <p><code>ls</code>：確認目前工作目錄中有哪些檔案及資料夾</p>
-      <pre id="stlog-4" class="stlog"><samp>
+        </samp></pre>
+        <p><code>ls</code>：確認目前工作目錄中有哪些檔案及資料夾</p>
+        <pre id="stlog-4" class="stlog"><samp>
 <span class="stinp">. ls</span>
 &lt;dir&gt;  11/18/20 13:42  <span class="stres">.                 </span>
 &lt;dir&gt;  11/18/20 13:42  <span class="stres">..                </span>
