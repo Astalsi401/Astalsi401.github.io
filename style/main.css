@@ -162,10 +162,6 @@ table tr.header, table tr:hover {
 }
 
 .left_content_button {
-  background-color: rgba(0, 0, 0, 0
-    );
-  z-index: 9990; position: fixed !important; top: 90%; right: 25%;
-  width: 50%; height: 10%;
   cursor: pointer;
 }
 nav a{
@@ -192,21 +188,6 @@ nav > ol > ul {
 
 nav > ul > ol {
   list-style: none;
-}
-/* 上、下頁 */
-.next_page {
-  background-color: rgba(0, 0, 0, 0);
-  z-index: 9990; position: fixed !important; top: 25%; right: 0%;
-  width: 5%; height: 50%;
-  cursor: pointer;
-  display: block;
-}
-.previous_page {
-  background-color: rgba(0, 0, 0, 0);
-  z-index: 9990; position: fixed !important; top: 25%; left: 0%;
-  width: 5%; height: 50%;
-  cursor: pointer;
-  display: block;
 }
 
 /* home選單 */
