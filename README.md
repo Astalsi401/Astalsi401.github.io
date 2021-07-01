@@ -1,9 +1,9 @@
 # 網站上傳
 這裡是我借助github上傳網頁所建立的專案，目前仍持續更新中
 
-## 網站列表
+## 網頁列表
 
-* [Stata技巧整理](https://astalsi401.github.io/stata/#stata)
+* [Stata技巧整理](https://astalsi401.github.io/stata/index.html)
 
 * [R筆記](https://astalsi401.github.io/R/r_index.html)
 
@@ -17,7 +17,7 @@
 
 * [import](https://github.com/Astalsi401/Astalsi401.github.io/tree/master/import)：以js引入的重複性html
 
-* [jQuery](https://github.com/Astalsi401/Astalsi401.github.io/tree/master/jQuery)：空的
+* [jQuery](https://github.com/Astalsi401/Astalsi401.github.io/tree/master/jQuery)：網站jquery
 
 * [js](https://github.com/Astalsi401/Astalsi401.github.io/tree/master/js)：網站js
 
