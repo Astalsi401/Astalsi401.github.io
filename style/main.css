@@ -216,6 +216,24 @@ nav > ul > ol {
   display: flex; flex-wrap: wrap;
 }
 
+/* 網頁左測按鈕  */
+.plate {
+  width: 80px;
+  position: fixed; top: 50%; right: -20px;
+}
+.obj {
+  width: 50px; height: 20px;
+  right: -20px;
+  padding: 7px 3px; margin: 0px 15px;
+}
+.obj:hover {
+  margin: 0px;
+}
+.plate .obj {
+  padding-right: 5px;
+  background: rgba(0, 0, 0, 0);
+}
+
 /* 目錄 */
 .link {
   margin: 0 auto;
