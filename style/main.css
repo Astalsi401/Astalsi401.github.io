@@ -208,7 +208,7 @@ nav > ul > ol {
   text-align: center; 
 }
 
-/* 網頁右上按鈕 */
+/* 網頁右上按鈕(7/31刪除) */
 .button {
   width: 70px;
   z-index: 9999; position: fixed !important; right: 2%; top: 3%;
@@ -216,7 +216,7 @@ nav > ul > ol {
   display: flex; flex-wrap: wrap;
 }
 
-/* 網頁左測按鈕  */
+/* 網頁右側按鈕  */
 .plate {
   width: 80px;
   position: fixed; top: 50%; right: -20px;
