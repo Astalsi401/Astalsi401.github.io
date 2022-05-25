@@ -1,0 +1,29 @@
+{
+  "pics": [
+    {
+      "page": "basicTune",
+      "id": "#camber",
+      "pic": "../../assets/images/camber.png"
+    },
+    {
+      "page": "basicTune",
+      "id": "#toe",
+      "pic": "../../assets/images/toe.png"
+    },
+    {
+      "page": "basicTune",
+      "id": "#caster",
+      "pic": "../../assets/images/caster.png"
+    },
+    {
+      "page": "basicTune",
+      "id": "#powerBand",
+      "pic": "../../assets/images/powerBand.png"
+    },
+    {
+      "page": "basicTune",
+      "id": "#driftGear",
+      "pic": "../../assets/images/driftGear.png"
+    }
+  ]
+}

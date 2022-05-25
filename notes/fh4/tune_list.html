@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F8SLV521P4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-F8SLV521P4');
+    </script>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>FH4調教分享</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/style/main.css">
+    <script src="https://astalsi401.github.io/jQuery/jquery-1.9.0.min.js"></script>
+</head>
+
+<body>
+    <div id="top"></div>
+    <div id="fhPage" class="sidebar"></div>
+    <div id="plate"></div>
+    <div id="largePic" class="largePic">
+        <div id="pic"></div>
+    </div>
+    <div class="container">
+        <h1 id="tune_list">FH4調教分享</h1>
+        <div class="block">
+            <input type="search" class="table-filter" data-table="order-table" placeholder="請輸入關鍵字">
+        </div>
+        <div class="block">
+            <table class="order-table">
+                <thead>
+                    <tr>
+                        <th>調教者</th>
+                        <th>調教名稱</th>
+                        <th>性能分</th>
+                        <th>車型</th>
+                        <th>特性</th>
+                        <th>分享代碼</th>
+                    </tr>
+                </thead>
+                <tbody id="tuneList"></tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        const requestURL = '../../assets/js/json/data.json'
+    </script>
+    <script src="../../assets/js/main.js"></script>
+    <script>
+        $(document).ready(() => {
+            fetch('../../assets/js/json/tuneList.json')
+                .then(res => {
+                    return res.json()
+                })
+                .then(data => {
+                    /*匯入tuneList並製作表格*/
+                    let tuneTable = "";
+                    data.tuneList.forEach((a) => {
+                        tuneTable += `<tr><td>${a.tunner}</td>`;
+                        tuneTable += `<td>${a.tuneName}</td>`;
+                        tuneTable += `<td>${a.score}</td>`;
+                        tuneTable += `<td>${a.carType}</td>`;
+                        tuneTable += `<td>`;
+                        a.preferance.forEach((b) => {
+                            tuneTable += ` ${b}`;
+                        });
+                        tuneTable += `</td><td>${a.shareCode}</td></tr>`;
+                    });
+                    $("#tuneList").html(tuneTable);
+                    /*show detail*/
+                    $('#tuneList tr').click(function (e) {
+                        let index = data.tuneList[$(this).index()],
+                            carType = $(this).find('td').eq(3)
+                        if ($(this).hasClass('active') && $(e.target).prop('tagName') !== 'IMG') {
+                            $(this).removeClass('active')
+                            carType.html(`${index.carType}`)
+                        } else {
+                            $(this).addClass('active')
+                            carType.html(`${index.carType}<div class="img-block"><img src="${index.pic}"><span></span></div>`)
+                        }
+                    });
+                })
+            /*點擊圖片放大&縮小 tuneList專用*/
+            $(document).click((e) => {
+                if ($(e.target).prop('tagName') === 'IMG' && $(e.target).parent().hasClass('img-block')) {
+                    $(".largePic").addClass("active");
+                    $("#pic").html(e.target);
+                    $(".largePic").click(() => {
+                        $(".largePic").removeClass("active");
+                    });
+                }
+            })
+        })
+    </script>
+    <script src="../../jQuery/jquery.sortElements.js"></script>
+</body>
+
+</html>

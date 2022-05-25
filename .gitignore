@@ -1,0 +1,12 @@
+# log
+logs/
+
+# Sublime
+.sublime-workspace
+.sublime-project
+
+# Vscode
+.vscode/
+
+# test
+test/

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F8SLV521P4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-F8SLV521P4');
+    </script>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Anova Test</title>
+    <link rel="stylesheet" type="text/css" href="../assets/style/main.css">
+    <script src="https://astalsi401.github.io/jQuery/jquery-1.9.0.min.js"></script>
+</head>
+
+<body>
+    <div id="top"></div>
+    <div id="stataPage" class="sidebar"></div>
+    <div id="plate"></div>
+    <div class="largePic">
+        <div id="pic"></div>
+    </div>
+    <div class="container">
+        <h2 data-type="title_1" id="009">009. anova test</h2>
+        <div id="showCode">本頁do file</div>
+        <pre id="code">
+clear
+input class score
+1 70
+1 75
+1 80
+2 75
+2 80
+2 85
+3 80
+3 85
+3 90
+end
+lab var class "班級別"
+lab def class 1 "A班" 2 "B班" 3 "C班"
+lab val class class
+lab var score "考試成績"
+anova score class
+
+di invFtail(2, 6, 0.05)
+
+set more off
+clear
+input type interest
+1 6
+1 7
+1 8
+1 6
+1 4
+2 2
+2 5
+2 4
+2 3
+2 5
+3 3
+3 2
+3 4
+3 4
+3 3
+end
+lab var type "姓名性別感覺"
+lab def type 1 "男性" 2 "中性" 3 "女性"
+lab val type type
+lab var interest "感興趣程度"
+pwmean interest, over(type) mcompare(tuk) effects
+
+oneway interest type, sch  /*只有一個自變項才能用oneway*/
+
+anova interest type
+margins type
+marginsplot, ylabel(0(2)10, angle(0)) noci
+*                   0(2)10  ylabel從0~10排列，每2為一距 
+*                           angle調整文字傾斜角度
+graph export "anova01.png", replace
+
+clear
+input violent sexual score
+0 0 8
+0 0 10
+0 0 7
+0 0 9
+0 1 9
+0 1 5
+0 1 7
+0 1 7
+1 0 6
+1 0 4
+1 0 8
+1 0 6
+1 1 2
+1 1 1
+1 1 1
+1 1 2
+end
+
+lab var violent "電影是否暴力"
+lab var sexual "電影是否色情"
+lab var score "Empathy Scores"
+lab def violent 0 "無暴力" 1 "有暴力"
+lab def sexual 0 "無色情" 1 "有色情"
+lab val violent violent
+lab val sexual sexual
+
+anova score violent sexual violent#sexual
+margins violent sexual violent#sexual
+marginsplot, ylabel(0(2)10) noci
+graph export "twoway anova07.png", replace
+table violent sexual, c(mean score n score) row col format(%8.2f)
+</pre>
+        <div class="block">
+            <h3 data-type="title_2" id="9-1">單因子變異數分析（One-way Anova）：</h3>
+            <ol>
+                <li>分析的目的是檢驗各組平均值是否相等，而判斷的準則是透過變異數的比較。</li>
+                <li>在下例中，在同一班中，樣本的觀測值是不同的，由於這是隨機抽取的案例，因此其中的差異可視為隨機的差異，也稱為隨機誤差。在進行分析時，此類誤差的推算稱之為組內變異數。</li>
+                <li>在下例中，各班之間的觀測值也不同。這種差異可能是由於抽樣的隨機性所造成，也可能是由於各班的差異（如老師的教學方法、按學業成績分班的結果）。在此，我們將各班的差異視為系統性的誤差。在進行分析時，此類誤差的推算稱之為組間變異數。
+                </li>
+                <li>換句話說，組間變異數（組別效應）愈大，而組內變異數（隨機誤差效應）愈小的話，則F值就愈大，意味著虛無假設被排斥的可能性就愈大。</li>
+                <li>當只有兩組時，t 分配與Anova的結果是一樣的。即F test比T test更容易拒絕虛無假設，因為t test虛無假設之條件只有兩個，而f test的虛無假設之條件有多個。</li>
+            </ol>
+            <p><code>di invFtail(組間df, 組內df, CI)</code></p>
+            <p><code>di Ftail(組間df, 組內df, F值)</code></p>
+            <p><b>範例1：不同班級的成績是否有影響</b></p>
+            <pre id="stlog-24" class="stlog"><samp>
+<span class="stinp">. clear</span>
+
+<span class="stinp">. input class score</span>
+
+   class      score
+  1. 1 70
+  2. 1 75
+  3. 1 80
+  4. 2 75
+  5. 2 80
+  6. 2 85
+  7. 3 80
+  8. 3 85
+  9. 3 90
+ 10. end
+
+<span class="stinp">. lab var class "班級別"</span>
+
+<span class="stinp">. lab def class 1 "A班" 2 "B班" 3 "C班"</span>
+
+<span class="stinp">. lab val class class</span>
+
+<span class="stinp">. lab var score "考試成績"</span>
+
+<span class="stinp">. anova score class</span>
+
+                         Number of obs = <span class="stres">         9    </span>R-squared     =<span class="stres">  0.5000</span>
+<span class="stres">                         </span>Root MSE      =   <span class="stres">       5    </span>Adj R-squared =<span class="stres">  0.3333</span>
+
+<span class="stres">                  </span>Source | Partial SS         df         MS        F    Prob&gt;F
+              -----------+----------------------------------------------------
+                   Model | <span class="stres">       150          2          75      3.00  0.1250</span>
+<span class="stres">                         </span>|
+                   class | <span class="stres">       150          2          75      3.00  0.1250</span>
+<span class="stres">                         </span>|
+                Residual | <span class="stres">       150          6          25  </span>
+<span class="stres">              </span>-----------+----------------------------------------------------
+                   Total | <span class="stres">       300          8        37.5  </span>
+</samp></pre>
+            <p>表格解讀：</p>
+            <p>若我們設定α=0.05，查F分配表，則在自由度為2, 6的情形下，F分配的數值為5.14</p>
+            <pre id="stlog-25" class="stlog"><samp><span class="stinp">. di invFtail(2, 6, 0.05)</span>
+<span class="stres">5.1432528</span>
+</samp></pre>
+            <p>由於3&lt;5.14，因此不能拒絕虛無假設。對於這個結果，可以有以下的的說法：</p>
+            <ol>
+                <li>應變項（考試分數）上的方差並不會造成組間的差異。</li>
+                <li>班級在考試成績上的差異並不顯著（也就是說，雖然有差異，但差異並不顯著）。</li>
+                <li>就讀的班級與學生的考試成績無顯著關係。</li>
+            </ol>
+            <p><b>範例2：姓名的性別感覺在求職是否有影響？</b></p>
+            <pre id="stlog-26" class="stlog"><samp><span class="stinp">. set more off</span>
+
+<span class="stinp">. clear</span>
+
+<span class="stinp">. input type interest</span>
+
+    type   interest
+  1. 1 6
+  2. 1 7
+  3. 1 8
+  4. 1 6
+  5. 1 4
+  6. 2 2
+  7. 2 5
+  8. 2 4
+  9. 2 3
+ 10. 2 5
+ 11. 3 3
+ 12. 3 2
+ 13. 3 4
+ 14. 3 4
+ 15. 3 3
+ 16. end
+
+<span class="stinp">. lab var type "姓名性別感覺"</span>
+
+<span class="stinp">. lab def type 1 "男性" 2 "中性" 3 "女性"</span>
+
+<span class="stinp">. lab val type type</span>
+
+<span class="stinp">. lab var interest "感興趣程度"</span>
+
+<span class="stinp">. pwmean interest, over(type) mcompare(tuk) effects</span>
+
+Pairwise comparisons of means with equal variances
+
+over         : <span class="stres">type</span>
+
+---------------------------
+             |    Number of
+             |  Comparisons
+-------------+-------------
+        type |<span class="stres">            3</span>
+---------------------------
+
+-------------------------------------------------------------------------------
+              |                              Tukey                Tukey
+     interest |   Contrast   Std. Err.      t    P&gt;|t|     [95% Conf. Interval]
+--------------+----------------------------------------------------------------
+         type |
+ 中性 vs 男性 |<span class="stres">       -2.4    .783156    -3.06   0.025    -4.489353   -.3106466</span>
+ 女性 vs 男性 |<span class="stres">         -3    .783156    -3.83   0.006    -5.089353   -.9106466</span>
+ 女性 vs 中性 |<span class="stres">        -.6    .783156    -0.77   0.730    -2.689353    1.489353</span>
+-------------------------------------------------------------------------------
+</samp></pre>
+            <p>姓名的性別感覺在求職時是無效果的說法是得不到支持的</p>
+            <p>(F ratio=8.22 P value&lt;0.01)</p>
+            <pre id="stlog-27" class="stlog"><samp><span class="stinp">. oneway interest type, sch  <span class="stcmt">/*只有一個自變項才能用oneway*/</span></span>
+
+                        Analysis of Variance
+    Source              SS         df      MS            F     Prob &gt; F
+------------------------------------------------------------------------
+Between groups     <span class="stres">       25.2      2         12.6      8.22     0.0056</span>
+ Within groups     <span class="stres">       18.4     12   1.53333333</span>
+------------------------------------------------------------------------
+    Total          <span class="stres">       43.6     14   3.11428571</span>
+
+Bartlett's test for equal variances:  chi2(<span class="stres">2</span>) = <span class="stres">  1.1517</span>  Prob&gt;chi2 = <span class="stres">0.562</span>
+
+<span class="stres">             </span>Comparison of 感興趣程度 by 姓名性別感覺
+  (Scheffe)
+Row Mean-|
+Col Mean |       男性       中性
+---------+----------------------
+    中性 |   <span class="stres">    -2.4</span>
+<span class="stres">         </span>|  <span class="stres">    0.031</span>
+<span class="stres">         </span>|
+    女性 |   <span class="stres">      -3        -.6</span>
+<span class="stres">         </span>|  <span class="stres">    0.008      0.751</span>
+
+<span class="stinp">. anova interest type</span>
+
+                         Number of obs = <span class="stres">        15    </span>R-squared     =<span class="stres">  0.5780</span>
+<span class="stres">                         </span>Root MSE      =   <span class="stres"> 1.23828    </span>Adj R-squared =<span class="stres">  0.5076</span>
+
+<span class="stres">                  </span>Source | Partial SS         df         MS        F    Prob&gt;F
+              -----------+----------------------------------------------------
+                   Model | <span class="stres">      25.2          2        12.6      8.22  0.0056</span>
+<span class="stres">                         </span>|
+                    type | <span class="stres">      25.2          2        12.6      8.22  0.0056</span>
+<span class="stres">                         </span>|
+                Residual | <span class="stres">      18.4         12   1.5333333  </span>
+<span class="stres">              </span>-----------+----------------------------------------------------
+                   Total | <span class="stres">      43.6         14   3.1142857  </span>
+
+<span class="stinp">. margins type</span>
+
+Adjusted predictions                            Number of obs     = <span class="stres">        15</span>
+
+Expression   : <span class="stres">Linear prediction, predict()</span>
+
+------------------------------------------------------------------------------
+             |            Delta-method
+             |     Margin   Std. Err.      t    P&gt;|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+        type |
+       男性  |<span class="stres">        6.2   .5537749    11.20   0.000     4.993428    7.406572</span>
+       中性  |<span class="stres">        3.8   .5537749     6.86   0.000     2.593428    5.006572</span>
+       女性  |<span class="stres">        3.2   .5537749     5.78   0.000     1.993428    4.406572</span>
+------------------------------------------------------------------------------
+
+<span class="stinp">. marginsplot, ylabel(0(2)10, angle(0)) noci</span>
+
+  Variables that uniquely identify margins: type
+
+<span class="stinp">. <span class="stcmt">*                   0(2)10  ylabel從0~10排列，每2為一距 </span></span>
+<span class="stinp">. <span class="stcmt">*                           angle調整文字傾斜角度</span></span>
+<span class="stinp">. graph export "anova01.png", replace</span>
+(file anova01.png written in PNG format)
+</samp></pre>
+            <div class="img-block"><img id="anova01" src="" alt=""></div>
+        </div>
+        <div class=" block">
+            <h3 data-type="title_2" id="9-2">兩因子變異數分析（Twoway Anova）：</h3>
+            <ol>
+                <li>兩因子變異數分析的重點</li>
+                <ol type="i">
+                    <li>ANOVA分析是進入迴歸分析的基礎，不僅可以處理理單一因子多組的平均數分析，更可以處理多因子下多組平均數的分析。</li>
+                    <li>本節之分析包括兩個自變項與一個應變項。換言之，因子有兩個，而分析的目的就是探討這兩個因子是否與應變項有關。此處開始涉及到多因素分析。</li>
+                    <li>雙因素變異數分析的目的，在於檢驗以下三者：</li>
+                    <ul>
+                        <li>A因子是否與應變項有關（亦稱為主效應 main effects）。即A因素之間各組的平均數不存在差異。</li>
+                        <li>B因⼦是否與應變項有關。即B因素之間各組的平均數不存在差異。</li>
+                        <li>AB因子間是否存在交互作用效應（interaction effect）。</li>
+                    </ul>
+                </ol>
+                <li>用途行顯示兩因子的效應，及其交互作用</li>
+                <ol type="i">
+                    <li>A和B因子均無效應：</li>
+                    <p>顯示無論有沒有使用到A因子，心率⼀直停留在60bps(Beats per minutes) </p>
+                    <div class="img-block"><img id="twoway-anova01" src="" alt=""></div>
+                    <li>只有A因子有效應：</li>
+                    <p>顯示在無論有沒有使用到B因子的情況下，若使用到A因子，則心率會從60bps增加到80bps。</p>
+                    <div class=" img-block"><img id="twoway-anova02" src="" alt=""></div>
+                    <li>只有B因子有效應：</li>
+                    <p>顯示在無論有沒有使用到A因子的情況下，若沒有使用到B因子，則心率會一直停留在60bps，但若使用了B因子時，則⼼率增加到70bps。</p>
+                    <div class=" img-block"><img id="twoway-anova03" src="" alt=""></div>
+                    <li>A因子和B因子之間不存在交互作用：</li>
+                    <p>當沒使用到A因子時，若沒使用B因子，則心跳停留在60bps，而一旦使用到B因子時，則心率增加到70bps。換言之，在沒使用到A因子的狀況下，使用B因子，則心跳會增加10bps。</p>
+                    <p>當沒使用到A因子時，若沒使用B因子，則⼼跳停留在80bps，而一旦使用到B因子時，則心率增加到90bps。換言之，即是使用了A因子，使用B因子與否的效應也僅是10bps。和前面沒使用A因⼦時一樣。</p>
+                    <p>因此，A與B之間沒有交互影響。</p>
+                    <div class=" img-block"><img id="twoway-anova04" src="" alt=""></div>
+                    <li>A因子和B因子之間存在交互作用，但主要效應僅在B因子上：</li>
+                    <p>這裡心率增加的15bps是A與B交互作用的效應。另外，我們也可以說A因子是沒有效應的，但⼀旦增加了B因⼦後，我們不但看到了B因子的效應，也看到了A和B合起來的效應。</p>
+                    <div class=" img-block"><img id="twoway-anova05" src="" alt=""></div>
+                    <li>A和B都存在著主效應，並且交互作用的效應也存在。</li>
+                    <div class=" img-block"><img id="twoway-anova06" src="" alt=""></div>
+                </ol>
+
+                <p><b>範例：電影內容與獲得評分</b></p>
+                <pre id=" stlog-28" class="stlog"><samp><span class="stinp">. clear</span>
+
+<span class="stinp">. input violent sexual score</span>
+
+violent sexual score
+1. 0 0 8
+2. 0 0 10
+3. 0 0 7
+4. 0 0 9
+5. 0 1 9
+6. 0 1 5
+7. 0 1 7
+8. 0 1 7
+9. 1 0 6
+10. 1 0 4
+11. 1 0 8
+12. 1 0 6
+13. 1 1 2
+14. 1 1 1
+15. 1 1 1
+16. 1 1 2
+17. end
+
+<span class="stinp">. lab var violent "電影是否暴力"</span>
+
+<span class="stinp">. lab var sexual "電影是否色情"</span>
+
+<span class="stinp">. lab var score "Empathy Scores"</span>
+
+<span class="stinp">. lab def violent 0 "無暴力" 1 "有暴力"</span>
+
+<span class="stinp">. lab def sexual 0 "無色情" 1 "有色情"</span>
+
+<span class="stinp">. lab val violent violent</span>
+
+<span class="stinp">. lab val sexual sexual</span>
+
+<span class="stinp">. anova score violent sexual violent#sexual</span>
+
+Number of obs = <span class="stres"> 16 </span>R-squared =<span class="stres"> 0.8321</span>
+<span class="stres"> </span>Root MSE = <span class="stres"> 1.35401 </span>Adj R-squared =<span class="stres"> 0.7901</span>
+
+<span class="stres"> </span>Source | Partial SS df MS F Prob&gt;F
+---------------+----------------------------------------------------
+Model | <span class="stres"> 109 3 36.333333 19.82 0.0001</span>
+<span class="stres"> </span>|
+violent | <span class="stres"> 64 1 64 34.91 0.0001</span>
+sexual | <span class="stres"> 36 1 36 19.64 0.0008</span>
+violent#sexual | <span class="stres"> 9 1 9 4.91 0.0468</span>
+<span class="stres"> </span>|
+Residual | <span class="stres"> 22 12 1.8333333 </span>
+<span class="stres"> </span>---------------+----------------------------------------------------
+Total | <span class="stres"> 131 15 8.7333333 </span>
+
+<span class="stinp">. margins violent sexual violent#sexual</span>
+
+Predictive margins Number of obs = <span class="stres"> 16</span>
+
+Expression : <span class="stres">Linear prediction, predict()</span>
+
+--------------------------------------------------------------------------------
+| Delta-method
+| Margin Std. Err. t P&gt;|t| [95% Conf. Interval]
+---------------+----------------------------------------------------------------
+violent |
+無暴力 |<span class="stres"> 7.75 .4787136 16.19 0.000 6.706973 8.793027</span>
+有暴力 |<span class="stres"> 3.75 .4787136 7.83 0.000 2.706973 4.793027</span>
+|
+sexual |
+無色情 |<span class="stres"> 7.25 .4787136 15.14 0.000 6.206973 8.293027</span>
+有色情 |<span class="stres"> 4.25 .4787136 8.88 0.000 3.206973 5.293027</span>
+|
+violent#sexual |
+無暴力#無色情 |<span class="stres"> 8.5 .6770032 12.56 0.000 7.024937 9.975063</span>
+無暴力#有色情 |<span class="stres"> 7 .6770032 10.34 0.000 5.524937 8.475063</span>
+有暴力#無色情 |<span class="stres"> 6 .6770032 8.86 0.000 4.524937 7.475063</span>
+有暴力#有色情 |<span class="stres"> 1.5 .6770032 2.22 0.047 .0249367 2.975063</span>
+--------------------------------------------------------------------------------
+
+<span class="stinp">. marginsplot, ylabel(0(2)10) noci</span>
+
+Variables that uniquely identify margins: violent sexual
+
+<span class="stinp">. graph export "twoway anova07.png", replace</span>
+(file twoway anova07.png written in PNG format)
+
+<span class="stinp">. table violent sexual, c(mean score n score) row col format(%8.2f)</span>
+
+----------------------------------
+電影是否 | 電影是否色情
+暴力 | 無色情 有色情 Total
+----------+-----------------------
+無暴力 | <span class="stres">8.50 7.00 7.75</span>
+<span class="stres"> </span>| <span class="stres">4 4 8</span>
+<span class="stres"> </span>|
+有暴力 | <span class="stres">6.00 1.50 3.75</span>
+<span class="stres"> </span>| <span class="stres">4 4 8</span>
+<span class="stres"> </span>|
+Total | <span class="stres">7.25 4.25 5.75</span>
+<span class="stres"> </span>| <span class="stres">8 8 16</span>
+----------------------------------
+                            </samp></pre>
+                <div class="img-block"><img id="twoway-anova07" src="" alt=""></div>
+        </div>
+    </div>
+    <script>
+        const requestURL = '../assets/js/json/data.json'
+        const picsUrl = '../assets/js/json/pics/stata009.json'
+    </script>
+    <script src=" ../assets/js/main.js"></script>
+</body>
+
+</html>

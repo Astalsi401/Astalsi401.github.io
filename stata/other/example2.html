@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<title>example2</title>
+<style>
+html { -webkit-text-size-adjust: 100%; }
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px; line-height: 1.428;
+  max-width: 800px;
+  margin: 0 auto; padding: 0 15px;
+}
+h1, h2, h3, h4, h5, h6 { margin: 20px 0 10px; }
+h1 { font-size: 28px; } h2 { font-size: 24px; }
+h3 { font-size: 18px; } h4 { font-size: 16px; }
+h5 { font-size: 14px; } h6 { font-size: 12px; }
+a { color: #337AB7; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+ul, ol { padding-left: 30px; }
+pre, code, samp {
+  font-size: 13px;
+  font-family: Courier, monospace;
+}
+code, samp {
+  background-color: #F5F5F5;
+  border-radius: 3px; padding: 3px;
+}
+pre code, pre samp {
+  white-space: pre; background: transparent;
+  border: none; padding: 0;
+}
+pre {
+  line-height: 1.33; background-color: #F5F5F5;
+  border: 1px solid #CCCCCC; border-radius: 3px;
+  padding: 8px; overflow: auto;
+}
+</style>
+<style>
+.stlog { color: #000000; background-color: #F0F3F9; }
+.stres { color: #324F58; }
+.stinp { font-weight: bold; color: #000000; }
+.stcmd .stcmt { font-style: italic; opacity: 0.5; }
+.stoom, .stcnp { font-style: italic; }
+@media screen { .stcnp { display: none; }}
+</style>
+</head>
+<body>
+將Html語法的文字輸入在這裡，ex:
+
+<h1>標題</h1>
+<h2>標題2</h2>
+<ul>
+	<li>A</li>
+	<li>B</li>
+	<li>C</li>
+</ul>
+<pre id="stlog-1" class="stlog"><samp><span class="stinp">. <span class="stcmt">/*將Stata code輸入在這裡, ex:*/</span></span>
+<span class="stinp">. cd "D:/Documents/Stata/Stata/data"</span>
+<span class="stres">D:\Documents\Stata\Stata\data</span>
+
+<span class="stinp">. use us_birth_rate, clear</span>
+
+<span class="stinp">. list in 1/8</span>
+
+     +---------------------+
+     | <span class="stres">      state   birth </span>|
+     |---------------------|
+  1. | <span class="stres">    Alabama      14 </span>|
+  2. | <span class="stres">     Alaska    16.2 </span>|
+  3. | <span class="stres">    Arizona    16.2 </span>|
+  4. | <span class="stres">   Arkansas    14.6 </span>|
+  5. | <span class="stres"> California    15.5 </span>|
+     |---------------------|
+  6. | <span class="stres">   Colorado    14.6 </span>|
+  7. | <span class="stres">Connecticut    11.9 </span>|
+  8. | <span class="stres">   Delaware    14.1 </span>|
+     +---------------------+
+
+<span class="stinp">. cd "D:/Documents/Git/stata/other/02"</span>
+<span class="stres">D:\Documents\Git\stata\other\02</span>
+</samp></pre>
+另一段Html....
+<pre id="stlog-2" class="stlog"><samp><span class="stinp">. <span class="stcmt">/*另一段Stata code....*/</span></span>
+</samp></pre>
+</body>
+</html>

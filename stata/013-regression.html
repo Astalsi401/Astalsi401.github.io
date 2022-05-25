@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F8SLV521P4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-F8SLV521P4');
+    </script>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>迴歸分析</title>
+    <link rel="stylesheet" type="text/css" href="../assets/style/main.css">
+    <script src="https://astalsi401.github.io/jQuery/jquery-1.9.0.min.js"></script>
+</head>
+
+<body>
+    <div id="top"></div>
+    <div id="stataPage" class="sidebar"></div>
+    <div id="plate"></div>
+    <div class="largePic">
+        <div id="pic"></div>
+    </div>
+    <div class="container">
+        <h2 data-type="title_1" id="013">013. 迴歸分析</h2>
+        <div id="showCode">本頁do file</div>
+        <pre id="code">
+clear
+set obs 50
+set seed 1245
+gen x= int((100-1)*runiform() +1)
+gen y= 11.5+2.3*x
+/* sc= scatter */
+twoway sc y x || lfit y x, ///
+  legend(off) ///
+  text(250 24 "y= 11.5+2.3*x") ///
+  text(215 24 "when the rangr of {&epsilon} is 0") ///
+  legend(off) ytitle("y")
+
+graph save reg2-1.gph, replace
+gen e1= (20-1)*runiform() +1
+cap drop y
+gen y= 11.5+2.3*x+e1
+twoway sc y x || lfit y x, ///
+  legend(off) ///
+  text(285 24 "y= 11.5+2.3*x + {&epsilon}{sub:1}") ///
+  text(250 24 "when the rangr of {&epsilon} is") ///
+  text(215 24 "between 0-20") ///
+  legend(off) ytitle("y")
+
+/* {&epsilon}{sub:1} 希臘字母 下標1 */
+graph save reg2-2.gph, replace
+gen e2= (100-1)*runiform() +1
+cap drop y
+gen y= 11.5+2.3*x+e2
+twoway sc y x || lfit y x, ///
+  legend(off) ///
+  text(295 24 "y= 11.5+2.3*x + {&epsilon}{sub:1}") ///
+  text(260 24 "when the rangr of {&epsilon} is") ///
+  text(225 24 "between 0-100") ///
+  legend(off) ytitle("y")
+
+graph save reg2-3.gph, replace
+gen e3= (200-1)*runiform() +1
+cap drop y
+gen y= 11.5+2.3*x+e3
+twoway sc y x || lfit y x, ///
+  legend(off) ///
+  text(100 70 "y= 11.5+2.3*x + {&epsilon}{sub:1}") ///
+  text(65  70 "when the rangr of {&epsilon} is") ///
+  text(30  70 "between 0-200") ///
+  legend(off) ytitle("y")
+
+graph save reg2-4.gph, replace
+graph export reg01.png, replace
+graph combine reg2-1.gph reg2-2.gph reg2-3.gph reg2-4.gph, ycommon
+graph export "reg02.png", replace
+
+clear
+input x y
+0  12
+3  13
+1  15
+0  19
+6  26
+5  27
+3  29
+4  31
+10 40
+8  48
+end
+
+lab var x "先前犯罪紀錄"
+lab var y "刑期(⽉)"
+
+reg y x
+
+cap drop yhat
+predict yhat, xb
+list x y yhat, nolab clean noobs
+twoway (sca y x, mc(black)) ///
+  (sca yhat x, c(l) mc(red)), ///
+  ylab(0(5)50, angle(0)) ///
+  ytitle("刑期（月）") ///
+  legend(label(1 "x的原始觀察點") label(2 "y的預測點"))
+
+graph export reg03.png, replace
+
+predict cancha, resid
+list x y yhat cancha, nolab clean noobs
+
+corr x cancha
+corr yhat cancha
+
+clear matrix
+mat a = [6,3,7\1,4,0\5,2,8]  /*mat: matrix的縮寫，輸入矩陣a*/
+mat list a    /*列出矩陣a*/
+mat b = [51\26\46]
+mat list b
+
+mat inva=inv(a)
+mat r=inva*b
+mat list r
+
+clear
+input y x1 x2 x3 
+ .6  8 12 5
+1.2 11  6 2
+1.0  9  6 1
+ .7  6  3 3
+ .3  6 18 4
+end
+
+clear matrix
+d
+sca k = r(k)
+sca n=r(N)
+
+mat y =(.6\1.2\1.0\.7\.3)
+mat list y, title(Y變項的矩陣)
+
+matrix x =(1,8,12,5\1,11,6,2\1,9,6,1\1,6,3,3\1,6,18,4)
+ 
+/* 產生 x'，即x的轉置矩陣(transpose matrix) */ 
+matrix xp=x'
+mat list xp, title(轉置矩陣 x')  
+
+/* 產生 x'x，意即成為下三角矩陣(triangular matrix)，右上空白位置對應左下數值  */ 
+matrix xpx=xp*x             
+matrix list xpx, title(產生下三角矩陣 x'x)  
+
+/* 產生 x'y  */     
+matrix xpy=xp*y         
+matrix list xpy  
+
+/* 產生 x'x的反矩陣，意即 (x'x)^-1 */
+matrix invxp= inv(xpx)           
+matrix list invxp, title(x'x的反矩陣) 
+
+matrix regbx=invxp*xpy  
+matrix list regbx, title(迴歸係數)
+
+mat e = y-x*regbx   /* e=y-xp，意即迴歸的殘差 */
+mat ep=e'
+mat _sb=((ep*e)/(n-k))*inv(xpx) 
+mat list _sb, title(迴歸係數的變異數)
+
+/* 將上面矩陣中轉換成為對角線矩陣，意即保留對角線的數值，但將其它數值轉為0。*/
+mat S = diag(vecdiag(_sb))  
+mat S = cholesky(S)   /*開根號*/
+mat li S, title(迴歸係數的標準誤)
+ 
+/*將上面矩陣中對角線上的標準誤轉置成為行矩陣（Column Matrix ）*/
+mat ste = vecdiag(S)'
+mat li ste
+
+reg y x1 x2 x3
+</pre>
+        <div class="block">
+            <h3 data-type="title_2" id="13-1">迴歸分析的意義</h3>
+            <ol>
+                <li>相關與迴歸</li>
+                <ul>
+                    <li>相關是用來探討兩變項之間的關連程度，但分析中對兩個變項並不設計因果關係。</li>
+                    <li>在迴歸分析中，變項之間具有因果關係的意義，其中一定有一個變項被設定為<b>結果</b>。</li>
+                </ul>
+                <li>迴歸分析</li>
+                <ul>
+                    <li>當自變數只有一個時，為簡單迴歸分析，而超過一個自變項時，為多元迴歸分析（multiple regression，又稱複迴歸）。簡單迴歸分析是所有迴歸分析的基礎，可看做迴歸分析的原型。</li>
+                    <li>基本上，迴歸分析的原型在自變項與應變項所用到的尺度皆是間距尺度（interval scale）或比例尺度（ratio scale）。</li>
+                    <li>迴歸分析是以數學等式表示，研究者可根據數學等式去預測變項的變化。因此，在統計分析中，迴歸分析具有預測的作用。</li>
+                </ul>
+                <li>函數關係與統計關係</li>
+                <ol type="i">
+                    <li>函數關係：是一種確定關係，表現在某一數值改變後，另一現象也隨之產生變化，而且有確定的值與之相對應。例如：</li>
+                    <ul>
+                        <li>求圓的面積：</li>
+                        <center>
+                            <p><i>S=πr<sup>2</sup></i></p>
+                        </center>
+                        <li>加速度的公式：</li>
+                        <center>
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGMAAAAsCAYAAABxNQYsAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASGSURBVHhe7ZpZKH1fFMeJB1KUiJIoklIypjwgw4tQygtlKDJkeECkpEh5MJUUTyQyZ4gHIsOTMTMllCEKmcdM319r/7bfX3/3uo7f717nOudTu85a95zT6X7PWWvttbcOZESDLIaIkMUQEbIYIkIWQ0TIYghgdnYWMTExiIyMRF5eHjY2NvgvwMHBAfLz89lvLS0t3CsMWQyBxMfHQ0dHhwnzf5qbm+Hr64uXlxfuEYYshkDoDycx+vr6uOc/AgMDsba2xi3haIUYX33T1MHi4iITo7y8nHt+09vbi5ycHG59DVGLMTw8DE9PT6SkpHAPUFRUBBcXF25pnru7O+jp6SE5OZl7gPv7e/j5+eH6+pp7vobov4zCwkJ4eXlxC9jb24OdnR23gPX1dYyMjODp6Yl71I+9vT38/f25BZSUlKCzs5NbX0f0YvT398PIyOhPqLq6ukJ6ejo7rq6uRk1NDba3txEeHs7e0I/o7u5GfX39h2N0dJSfrZzQ0FBYW1uz4/39fURERLDjv0X0YqyurrIYvbu7y2x6Cw8PD3F6egpbW1s8PDwwf3Z2NioqKtixMqKjo+Hj4/PhKCgo4GcrJzc3F7q6uri9vWXV1dsS9xV6LhJfCKIX4+bmhokxPz/PKhVKlERjYyMCAgLYMdHV1YWgoCBuqZeGhgb2TLW1tQrFoyRPlVVcXByOjo64VzWiF4PQ19dHR0cHKisruQeoqqpi4eKVgYEBODg4cEu9zMzMMDGcnJzY16EId3d3HB8fc+tzaIUYJiYmiI2NxfPzM/eAvZXBwcHc+p1bnJ2duaVeKG9RmFI01yBOTk7g5ubGrc+jFWJkZGS8S86Tk5Pw8PDgFlBXV8daEZqC2iHKoK84KyuLW59HK8RQhre395/EHhYWxvKKGKB5UVtbG6vyhKDVYuzs7LDqikrS1tZW7v1+qLKjZxKKVovx01ApBlUEY2NjODs7w8rKCqvxZdSDUjGociktLUVmZiY2NzdRVlYGAwODD7uSg4ODLFaqGkJLPqmgVAyKe4mJidwCi4FWVlbcUkxUVBSrcFSNubk5foXMWxSK0d7eDlNTU1xcXHAPWD+IVrk0AfWhqPH3E8bbuZEqFIrh6uqK1NRUboHd1MLCgrUBNEFxcTGb4f6EQSt/n+WdGMvLy+wmlLRfoRBFPmpffwT19M3MzFSOiYkJfoViaIJ3fn7+I4aQNY53YgwNDbE/nrqlxNLSEhISEmBpacn6MAsLC8yvCBJyampK5bi8vORXyLzlnRi0y8Hc3Jw14agxR91RWl2zsbFhFdXj4yM/U+ZfozBn0FdBCzev7QUqbZuamgQlIxnhKBRD5nuQvBgUdik0iwFJi0FhNykpia3MiQHJikFVHS3TGhoasqVcKkO/G8mKMT09zTYgUNU4Pj6udPlUk0g6TGmyq/AZJCvGa6eB9j2JBcmKQRNaR0dHbokDyYoREhKCtLQ0bokDSYpBXWhjY2P09PSIau1ckmJsbW2xfEFbM2lTg1iQbJii3et/u4X/XyNZMcSILIaIkMUQDcAv9rmZv2mSWwcAAAAASUVORK5CYII=" width="99" heigh="44" id="12">
+                        </center>
+                        <li>以及常見之兩變量x與y之間的函數關係一般可以用下列數學關係表示：</li>
+                        <center>
+                            <p><i>y=f(x)</i></p>
+                        </center>
+                    </ul>
+                    <li>統計關係: 指現象之間存在的非確定性的數量依存關係。也就是說，雖然現象之間存在著數量的關係，當一變項的數值改變時，另一變項的數值也產生相應的變化，但這種關係並不是嚴格一對一對應的。</li>
+                    <ul>
+                        <li>大多數的社會現象都有這種意涵。例如，教育程度與收入有關，但並不是所有教育程度高的人，收入就一定高。</li>
+                        <li>下式中的<i>&#1013;</i>為隨機誤差，反映隨機因素對y的影響。</li>
+                        <center>
+                            <p><i>y=f(x)+&#1013;</i></p>
+                        </center>
+                        <li>下圖顯示的就是兩變量之間的統計關係，雖然Y的變化隨著X的改變而增長，但不是所有的Y都在那條直線上，而是散佈在其周圍。</li>
+                        <div class="img-block"><img id="reg01" src="" alt=""></div>
+                    </ul>
+                    <li>線性關係</li>
+                    <ol type="i">
+                        <li>在線性關係中，用來表達自變項與應變項之間關係的方程式為：</li>
+                        <center>
+                            <p><i>Y=A+BX</i></p>
+                        </center>
+                        <ul>
+                            <li>其中，Y是應變項，X是自變項，A是截距或常數（intercept or constant），B是迴歸係數或稱斜率（regression coeﬃcient or slope）。</li>
+                            <li>以下圖為例，截距為11.5，斜率為2.3，表示每增加1個單位的X，則y會增加2.3個單位。</li>
+                        </ul>
+                    </ol>
+                    <pre id="stlog-47" class="stlog"><samp><span class="stinp">. clear</span>
+
+<span class="stinp">. set obs 50</span>
+number of observations (_N) was 0, now 50
+
+<span class="stinp">. set seed 1245</span>
+
+<span class="stinp">. gen x= int((100-1)*runiform() +1)</span>
+
+<span class="stinp">. </span>
+<span class="stinp">. gen y= 11.5+2.3*x</span>
+
+<span class="stinp">. <span class="stcmt">*sc= scatter</span></span>
+<span class="stinp">. twoway sc y x || lfit y x, <span class="stcmt">///</span>
+&gt;        legend(off) <span class="stcmt">///</span>
+&gt;            text(250 24 "y= 11.5+2.3*x") <span class="stcmt">///</span>
+&gt;            text(215 24 "when the rangr of {&amp;epsilon} is 0") <span class="stcmt">///</span>
+&gt;            legend(off) ytitle("y")</span>
+
+<span class="stinp">. graph save reg2-1.gph, replace</span>
+(file reg2-1.gph saved)
+
+<span class="stinp">. </span>
+<span class="stinp">. gen e1= (20-1)*runiform() +1</span>
+
+<span class="stinp">. cap drop y</span>
+
+<span class="stinp">. gen y= 11.5+2.3*x+e1</span>
+
+<span class="stinp">. twoway sc y x || lfit y x, <span class="stcmt">///</span>
+&gt;        legend(off) <span class="stcmt">///</span>
+&gt;            text(285 24 "y= 11.5+2.3*x + {&amp;epsilon}{sub:1}") <span class="stcmt">///</span>
+&gt;            text(250 24 "when the rangr of {&amp;epsilon} is") <span class="stcmt">///</span>
+&gt;            text(215 24 "between 0-20") <span class="stcmt">///</span>
+&gt;            legend(off) ytitle("y")</span>
+
+<span class="stinp">. <span class="stcmt">*{&amp;epsilon}{sub:1} 希臘字母 下標1</span></span>
+<span class="stinp">. graph save reg2-2.gph, replace</span>
+(file reg2-2.gph saved)
+
+<span class="stinp">. </span>
+<span class="stinp">. gen e2= (100-1)*runiform() +1</span>
+
+<span class="stinp">. cap drop y</span>
+
+<span class="stinp">. gen y= 11.5+2.3*x+e2</span>
+
+<span class="stinp">. twoway sc y x || lfit y x, <span class="stcmt">///</span>
+&gt;        legend(off) <span class="stcmt">///</span>
+&gt;            text(295 24 "y= 11.5+2.3*x + {&amp;epsilon}{sub:1}") <span class="stcmt">///</span>
+&gt;            text(260 24 "when the rangr of {&amp;epsilon} is") <span class="stcmt">///</span>
+&gt;            text(225 24 "between 0-100") <span class="stcmt">///</span>
+&gt;            legend(off) ytitle("y")</span>
+
+<span class="stinp">. graph save reg2-3.gph, replace</span>
+(file reg2-3.gph saved)
+
+<span class="stinp">. </span>
+<span class="stinp">. gen e3= (200-1)*runiform() +1</span>
+
+<span class="stinp">. cap drop y</span>
+
+<span class="stinp">. gen y= 11.5+2.3*x+e3</span>
+
+<span class="stinp">. twoway sc y x || lfit y x, <span class="stcmt">///</span>
+&gt;        legend(off) <span class="stcmt">///</span>
+&gt;            text(100 70 "y= 11.5+2.3*x + {&amp;epsilon}{sub:1}") <span class="stcmt">///</span>
+&gt;            text(65  70 "when the rangr of {&amp;epsilon} is") <span class="stcmt">///</span>
+&gt;            text(30  70 "between 0-200") <span class="stcmt">///</span>
+&gt;            legend(off) ytitle("y")</span>
+
+<span class="stinp">. graph save reg2-4.gph, replace</span>
+(file reg2-4.gph saved)
+
+<span class="stinp">. graph export reg01.png, replace</span>
+(file reg01.png written in PNG format)
+
+<span class="stinp">. </span>
+<span class="stinp">. graph combine reg2-1.gph reg2-2.gph reg2-3.gph reg2-4.gph, ycommon</span>
+
+<span class="stinp">. graph export "reg02.png", replace</span>
+(file reg02.png written in PNG format)
+</samp></pre>
+                    <div class="img-block"><img id="reg02" src="" alt=""></div>
+                </ol>
+                <li>線性迴歸模型</li>
+                <ul>
+                    <li>
+                        在線性迴歸模型中，如上圖，雖然截距與斜率都一樣，但意義上卻相當不同。其不同點就在散佈于直線周遭的散佈點上，即在同一個X上的散佈點與直線上的點的距離上，即<i>&#1013;</i>上。此處的<i>&#1013;</i>代表隨機誤差。
+                    </li>
+                    <li>換句話說，有些x值並不能夠準確地預測到所有的y值。這就說明了社會現象並非存在著一對一的對應關係。即因此故，正確的迴歸模型（regression model）應為：</li>
+                    <center>
+                        <p><i>Y=A+BX+&#1013;</i></p>
+                    </center>
+                </ul>
+            </ol>
+        </div>
+        <div class="block">
+            <h3 data-type="title_2" id="13-2">STATA迴歸分析範例</h3>
+            <pre id="stlog-48" class="stlog"><samp><span class="stinp">. clear</span>
+
+<span class="stinp">. input x y</span>
+
+             x          y
+  1. 0  12
+  2. 3  13
+  3. 1  15
+  4. 0  19
+  5. 6  26
+  6. 5  27
+  7. 3  29
+  8. 4  31
+  9. 10 40
+ 10. 8  48
+ 11. end
+
+<span class="stinp">. lab var x "先前犯罪紀錄"</span>
+
+<span class="stinp">. lab var y "刑期(⽉)"</span>
+
+<span class="stinp">. </span>
+<span class="stinp">. reg y x</span>
+
+      Source |       SS           df       MS      Number of obs   =<span class="stres">        10</span>
+-------------+----------------------------------   F(1, 8)         = <span class="stres">    20.57</span>
+       Model | <span class="stres">        900         1         900   </span>Prob &gt; F        =<span class="stres">    0.0019</span>
+    Residual | <span class="stres">        350         8       43.75   </span>R-squared       =<span class="stres">    0.7200</span>
+-------------+----------------------------------   Adj R-squared   =<span class="stres">    0.6850</span>
+       Total | <span class="stres">       1250         9  138.888889   </span>Root MSE        =   <span class="stres"> 6.6144</span>
+
+------------------------------------------------------------------------------
+           y |      Coef.   Std. Err.      t    P&gt;|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+           x |<span class="stres">          3   .6614378     4.54   0.002     1.474722    4.525278</span>
+       _cons |<span class="stres">         14   3.372684     4.15   0.003     6.222576    21.77742</span>
+------------------------------------------------------------------------------
+</samp></pre>
+            <p>此結果可分成兩部分，上面是有關模型的結果，下面則是迴歸係數的部分。</p>
+            <ol>
+                <li>在上表中，Rseidual為殘差和，代表不能解釋的部分，平均殘差值為43.75。</li>
+                <li>Model SS會受到X與迴歸係數的影響，因此代表可以被解釋的部分，此處為900。</li>
+                <li>如何判斷一個模型的好壞：</li>
+                <ul>
+                    <li>F ratio：代表可解釋部分與不可解釋之間的比值，比值愈高代表可被解釋的成分愈大。換言之，虛無假設為0的可能性愈低。</li>
+                    <li>
+                        <i>R<sup>2</sup></i>：是Model-ss/Total-ss之間的比值，其值域介於0與1之間。愈接近1，代表模型擬合程度愈高，即散佈點愈接近那條迴歸線。在本模型中，<i>R<sup>2</sup></i>=0.72，是相當擬合的模型。
+                    </li>
+                    <li>在只有一個自變項的情況下，X和Y之間相關係數的平方=<i>R<sup>2</sup></i></li>
+                </ul>
+            </ol>
+
+            <p><b>迴歸係數的功用</b></p>
+            <ol>
+                <li>首先，重點在斜率部分。以此處所得到的迴歸係數為例，3意味著每增加一次的犯罪紀錄，則刑期會多增加3個月。</li>
+                <li>可用來推算出迴歸線的各個點（即，迴歸預測值，用<i>Y&#770;</i>表示），從而畫出迴歸線。</li>
+                <pre id="stlog-49" class="stlog"><samp><span class="stinp">. cap drop yhat</span>
+
+<span class="stinp">. predict yhat, xb</span>
+
+<span class="stinp">. list x y yhat, nolab clean noobs</span>
+
+    <span class="stres"> x    y   yhat </span> 
+    <span class="stres"> 0   12     14 </span> 
+    <span class="stres"> 3   13     23 </span> 
+    <span class="stres"> 1   15     17 </span> 
+    <span class="stres"> 0   19     14 </span> 
+    <span class="stres"> 6   26     32 </span> 
+    <span class="stres"> 5   27     29 </span> 
+    <span class="stres"> 3   29     23 </span> 
+    <span class="stres"> 4   31     26 </span> 
+    <span class="stres">10   40     44 </span> 
+    <span class="stres"> 8   48     38 </span> 
+
+<span class="stinp">. twoway (sca y x, mc(black)) <span class="stcmt">///</span>
+&gt;            (sca yhat x, c(l) mc(red)), <span class="stcmt">///</span>
+&gt;        ylab(0(5)50, angle(0)) <span class="stcmt">///</span>
+&gt;        ytitle("刑期（月）") <span class="stcmt">///</span>
+&gt;        legend(label(1 "x的原始觀察點") label(2 "y的預測點"))</span>
+
+<span class="stinp">. graph export reg03.png, replace</span>
+(file reg03.png written in PNG format)
+</samp></pre>
+                <div class="img-block"><img id="reg03" src="" alt=""></div>
+                <li>得到的迴歸係數可用來估算當x在某一狀況時，Y可能有的結果。</li>
+                <li>其次，我們可以從迴歸係數故估算殘差值，從而了解模型的擬合程度（The goodness of ﬁt）。此部分可以用來了解模型的優劣。</li>
+                <pre id="stlog-50" class="stlog"><samp><span class="stinp">. predict cancha, resid</span>
+
+<span class="stinp">. list x y yhat cancha, nolab clean noobs</span>
+
+    <span class="stres"> x    y   yhat   cancha </span> 
+    <span class="stres"> 0   12     14       -2 </span> 
+    <span class="stres"> 3   13     23      -10 </span> 
+    <span class="stres"> 1   15     17       -2 </span> 
+    <span class="stres"> 0   19     14        5 </span> 
+    <span class="stres"> 6   26     32       -6 </span> 
+    <span class="stres"> 5   27     29       -2 </span> 
+    <span class="stres"> 3   29     23        6 </span> 
+    <span class="stres"> 4   31     26        5 </span> 
+    <span class="stres">10   40     44       -4 </span> 
+    <span class="stres"> 8   48     38       10 </span> 
+</samp></pre>
+                <li>一個好的迴歸模型其殘差與X變項之間的關係為0，例如：</li>
+                <pre id="stlog-51" class="stlog"><samp><span class="stinp">. corr x cancha</span>
+(obs=10)
+
+             |        x   cancha
+-------------+------------------
+           x |<span class="stres">   1.0000</span>
+<span class="stres">      </span>cancha |<span class="stres">   0.0000   1.0000</span>
+
+</samp></pre>
+                <li>殘差與y的預測值之間的相關係數也應該是0，例如：</li>
+                <pre id="stlog-52" class="stlog"><samp><span class="stinp">. corr yhat cancha </span>
+(obs=10)
+
+             |     yhat   cancha
+-------------+------------------
+        yhat |<span class="stres">   1.0000</span>
+<span class="stres">      </span>cancha |<span class="stres">   0.0000   1.0000</span>
+
+</samp></pre>
+            </ol>
+        </div>
+        <div class="block">
+            <h3 data-type="title_2" id="13-3">矩陣運算與迴歸</h3>
+            <p><b>矩陣解聯立方程式</b></p>
+            <p>6x+3y+7z=51</p>
+            <p>1x+4y+0z=26</p>
+            <p>5x+2y+8z=46</p>
+            <p>輸入資料：</p>
+            <pre id="stlog-1" class="stlog"><samp><span class="stinp">. clear matrix</span>
+
+<span class="stinp">. mat a = [6,3,7\1,4,0\5,2,8]  <span class="stcmt">/*mat: matrix的縮寫，輸入矩陣a*/</span></span>
+
+<span class="stinp">. mat list a    <span class="stcmt">/*列出矩陣a*/</span></span>
+
+a[3,3]
+    c1  c2  c3
+r1 <span class="stres">  6   3   7</span>
+r2 <span class="stres">  1   4   0</span>
+r3 <span class="stres">  5   2   8</span>
+
+<span class="stinp">. mat b = [51\26\46]</span>
+
+<span class="stinp">. mat list b</span>
+
+b[3,1]
+    c1
+r1 <span class="stres"> 51</span>
+r2 <span class="stres"> 26</span>
+r3 <span class="stres"> 46</span>
+</samp></pre>
+            <p>求解公式：r =(a<sup>-1</sup>)*b</p>
+            <pre id="stlog-2" class="stlog"><samp><span class="stinp">. mat inva=inv(a)</span>
+
+<span class="stinp">. mat r=inva*b</span>
+
+<span class="stinp">. mat list r</span>
+
+r[3,1]
+    c1
+c1 <span class="stres">  2</span>
+c2 <span class="stres">  6</span>
+c3 <span class="stres">  3</span>
+</samp></pre>
+            <p>Ans：x=2, y=6, z=3</p>
+            <p><b>矩陣與迴歸係數的運算</b></p>
+            <p>輸入資料：</p>
+            <pre id="stlog-3" class="stlog"><samp><span class="stinp">. clear</span>
+
+<span class="stinp">. input y x1 x2 x3 </span>
+
+             y         x1         x2         x3
+  1.  .6  8 12 5
+  2. 1.2 11  6 2
+  3. 1.0  9  6 1
+  4.  .7  6  3 3
+  5.  .3  6 18 4
+  6. end
+</samp></pre>
+            <p>建立變項數與樣本數</p>
+            <pre id="stlog-4" class="stlog"><samp><span class="stinp">. clear matrix</span>
+
+<span class="stinp">. d</span>
+
+Contains data
+  obs:<span class="stres">             5                          </span>
+ vars:<span class="stres">             4                          </span>
+ size:<span class="stres">            80                          </span>
+---------------------------------------------------------------------------------------------------------------
+              storage   display    value
+variable name   type    format     label      variable label
+---------------------------------------------------------------------------------------------------------------
+<span class="stres">y              </span> float   %9.0g                 
+<span class="stres">x1             </span> float   %9.0g                 
+<span class="stres">x2             </span> float   %9.0g                 
+<span class="stres">x3             </span> float   %9.0g                 
+---------------------------------------------------------------------------------------------------------------
+Sorted by: 
+<span class="stres">     Note: Dataset has changed since last saved.</span>
+
+<span class="stinp">. sca k = r(k)</span>
+
+<span class="stinp">. sca n=r(N)</span>
+</samp></pre>
+            <p>輸入矩陣y</p>
+            <pre id="stlog-5" class="stlog"><samp><span class="stinp">. mat y =(.6\1.2\1.0\.7\.3)</span>
+
+<span class="stinp">. mat list y, title(Y變項的矩陣)</span>
+
+y[5,1]:  Y變項的矩陣
+     c1
+r1 <span class="stres">  .6</span>
+r2 <span class="stres"> 1.2</span>
+r3 <span class="stres">   1</span>
+r4 <span class="stres">  .7</span>
+r5 <span class="stres">  .3</span>
+</samp></pre>
+            <p>輸入矩陣 X1, X2, and X3。</p>
+            <p>迴歸計算的是自變項每增加1單位，應變項的變化量，因此矩陣每一行的第一個數字都是1。</p>
+            <pre id="stlog-6" class="stlog"><samp><span class="stinp">. matrix x =(1,8,12,5\1,11,6,2\1,9,6,1\1,6,3,3\1,6,18,4)</span>
+
+<span class="stinp">. </span>
+<span class="stinp">. <span class="stcmt">/* 產生 x'，即x的轉置矩陣(transpose matrix) */</span> </span>
+<span class="stinp">. matrix xp=x'</span>
+
+<span class="stinp">. mat list xp, title(轉置矩陣 x')  </span>
+
+xp[4,5]:  轉置矩陣 x'
+    r1  r2  r3  r4  r5
+c1 <span class="stres">  1   1   1   1   1</span>
+c2 <span class="stres">  8  11   9   6   6</span>
+c3 <span class="stres"> 12   6   6   3  18</span>
+c4 <span class="stres">  5   2   1   3   4</span>
+
+<span class="stinp">. </span>
+<span class="stinp">. <span class="stcmt">/* 產生 x'x，意即成為下三角矩陣(triangular matrix)，右上空白位置對應左下數值  */</span> </span>
+<span class="stinp">. matrix xpx=xp*x             </span>
+
+<span class="stinp">. matrix list xpx, title(產生下三角矩陣 x'x)  </span>
+
+symmetric xpx[4,4]:  產生下三角矩陣 x'x
+     c1   c2   c3   c4
+c1 <span class="stres">   5</span>
+c2 <span class="stres">  40  338</span>
+c3 <span class="stres">  45  342  549</span>
+c4 <span class="stres">  15  113  159   55</span>
+
+<span class="stinp">. </span>
+<span class="stinp">. <span class="stcmt">/* 產生 x'y  */</span>     </span>
+<span class="stinp">. matrix xpy=xp*y         </span>
+
+<span class="stinp">. matrix list xpy  </span>
+
+xpy[4,1]
+      c1
+c1 <span class="stres">  3.8</span>
+c2 <span class="stres">   33</span>
+c3 <span class="stres"> 27.9</span>
+c4 <span class="stres">  9.7</span>
+
+<span class="stinp">. </span>
+<span class="stinp">. <span class="stcmt">/* 產生 x'x的反矩陣，意即 (x'x)^-1 */</span></span>
+<span class="stinp">. matrix invxp= inv(xpx)           </span>
+
+<span class="stinp">. matrix list invxp, title(x'x的反矩陣) </span>
+
+symmetric invxp[4,4]:  x'x的反矩陣
+            c1          c2          c3          c4
+c1 <span class="stres">  8.9730892</span>
+c2 <span class="stres"> -.77388535   .07643312</span>
+c3 <span class="stres"> -.03158174   .00106157   .01158882</span>
+c4 <span class="stres"> -.76592357   .05095541  -.02707006   .20063694</span>
+</samp></pre>
+            <p>計算出迴歸係數</p>
+            <pre id="stlog-7" class="stlog"><samp><span class="stinp">. matrix regbx=invxp*xpy  </span>
+
+<span class="stinp">. matrix list regbx, title(迴歸係數)</span>
+
+regbx[4,1]:  迴歸係數
+            c1
+c1 <span class="stres">  .24893312</span>
+c2 <span class="stres">  .10541401</span>
+c3 <span class="stres"> -.02423036</span>
+c4 <span class="stres"> -.03805732</span>
+</samp></pre>
+            <p>迴歸係數的變異數</p>
+            <pre id="stlog-8" class="stlog"><samp><span class="stinp">. mat e = y-x*regbx   <span class="stcmt">/* e=y-xp，意即迴歸的殘差 */</span></span>
+
+<span class="stinp">. mat ep=e'</span>
+
+<span class="stinp">. mat _sb=((ep*e)/(n-k))*inv(xpx) </span>
+
+<span class="stinp">. mat list _sb, title(迴歸係數的變異數)</span>
+
+symmetric _sb[4,4]:  迴歸係數的變異數
+            c1          c2          c3          c4
+c1 <span class="stres">   .0051581</span>
+c2 <span class="stres"> -.00044486   .00004394</span>
+c3 <span class="stres"> -.00001815   6.102e-07   6.662e-06</span>
+c4 <span class="stres"> -.00044028   .00002929  -.00001556   .00011533</span>
+</samp></pre>
+            <p>迴歸係數的標準誤</p>
+            <pre id="stlog-9" class="stlog"><samp><span class="stinp">. <span class="stcmt">/* 將上面矩陣中轉換成為對角線矩陣，意即保留對角線的數值，但將其它數值轉為0。*/</span></span>
+<span class="stinp">. mat S = diag(vecdiag(_sb))  </span>
+
+<span class="stinp">. mat S = cholesky(S)   <span class="stcmt">/*開根號*/</span></span>
+
+<span class="stinp">. mat li S, title(迴歸係數的標準誤)</span>
+
+symmetric S[4,4]:  迴歸係數的標準誤
+           c1         c2         c3         c4
+c1 <span class="stres">  .0718199</span>
+c2 <span class="stres">         0  .00662849</span>
+c3 <span class="stres">         0          0  .00258103</span>
+c4 <span class="stres">         0          0          0  .01073938</span>
+
+<span class="stinp">. </span>
+<span class="stinp">. <span class="stcmt">/*將上面矩陣中對角線上的標準誤轉置成為行矩陣（Column Matrix ）*/</span></span>
+<span class="stinp">. mat ste = vecdiag(S)'</span>
+
+<span class="stinp">. mat li ste</span>
+
+ste[4,1]
+           r1
+c1 <span class="stres">  .0718199</span>
+c2 <span class="stres"> .00662849</span>
+c3 <span class="stres"> .00258103</span>
+c4 <span class="stres"> .01073938</span>
+</samp></pre>
+            <p>與迴歸結果對照</p>
+            <pre id="stlog-10" class="stlog"><samp><span class="stinp">. reg y x1 x2 x3</span>
+
+      Source |       SS           df       MS      Number of obs   =<span class="stres">         5</span>
+-------------+----------------------------------   F(3, 1)         = <span class="stres">   284.96</span>
+       Model | <span class="stres"> .491425183         3  .163808394   </span>Prob &gt; F        =<span class="stres">    0.0435</span>
+    Residual | <span class="stres"> .000574842         1  .000574842   </span>R-squared       =<span class="stres">    0.9988</span>
+-------------+----------------------------------   Adj R-squared   =<span class="stres">    0.9953</span>
+       Total | <span class="stres"> .492000025         4  .123000006   </span>Root MSE        =   <span class="stres"> .02398</span>
+
+------------------------------------------------------------------------------
+           y |      Coef.   Std. Err.      t    P&gt;|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+          x1 |<span class="stres">    .105414   .0066285    15.90   0.040      .021191     .189637</span>
+          x2 |<span class="stres">  -.0242304    .002581    -9.39   0.068    -.0570255    .0085648</span>
+          x3 |<span class="stres">  -.0380573   .0107394    -3.54   0.175    -.1745142    .0983995</span>
+       _cons |<span class="stres">    .248933   .0718199     3.47   0.179    -.6636259    1.161492</span>
+------------------------------------------------------------------------------
+</samp></pre>
+        </div>
+    </div>
+    <script>
+        const requestURL = '../assets/js/json/data.json'
+        const picsUrl = '../assets/js/json/pics/stata013.json'
+    </script>
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

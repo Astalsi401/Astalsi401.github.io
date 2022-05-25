@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F8SLV521P4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-F8SLV521P4');
+    </script>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Comment test</title>
+    <link rel="stylesheet" type="text/css" href="../assets/style/main.css">
+    <script src="https://astalsi401.github.io/jQuery/jquery-1.9.0.min.js"></script>
+</head>
+
+<body>
+    <div class="plate">
+        <center>
+            <div class="obj">
+                <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=misting401@gmail.com" target="_blank">
+                    <span class="icon_bg"><span class="mail"></span></span>
+                </a>
+            </div>
+            <div class="obj">
+                <a href="https://github.com/Astalsi401" target="_blank">
+                    <span class="icon_bg"><span class="git">git</span></span>
+                </a>
+            </div>
+        </center>
+    </div>
+    <nav class="top">
+        <script src="https://astalsi401.github.io/import/left_content_button.js"></script>
+    </nav>
+    <div class="container">
+        <h1>Comment Test</h1>
+        <div id="gitalk-container"></div>
+    </div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+    <script>
+        var gitalk = new Gitalk({
+            clientID: '60e84cd3686fbecf1d34',
+            clientSecret: 'b1e38abe195b5999451eca64053910b16ddb4325',
+            repo: 'Astalsi401.github.io',
+            owner: 'Astalsi401',
+            admin: ['Astalsi401'],
+            id: location.pathname,      // Ensure uniqueness and length less than 50
+            distractionFreeMode: false  // Facebook-like distraction free mode
+        })
+        gitalk.render('gitalk-container')
+    </script>
+    <script>
+        mounted(){
+            this.gitalk.render("gitalk-container");
+        }
+    </script>
+</body>
+
+</html>

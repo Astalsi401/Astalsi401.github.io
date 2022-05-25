@@ -1,0 +1,19 @@
+{
+  "pics": [
+    {
+      "page": "stata015",
+      "id": "#logit01",
+      "pic": "../assets/images/logit01.png"
+    },
+    {
+      "page": "stata015",
+      "id": "#logit02",
+      "pic": "../assets/images/logit02.png"
+    },
+    {
+      "page": "stata015",
+      "id": "#logit03",
+      "pic": "../assets/images/logit03.png"
+    }
+  ]
+}

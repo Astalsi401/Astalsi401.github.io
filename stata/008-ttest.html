@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F8SLV521P4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-F8SLV521P4');
+    </script>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>T test</title>
+    <link rel="stylesheet" type="text/css" href="../assets/style/main.css">
+    <script src="https://astalsi401.github.io/jQuery/jquery-1.9.0.min.js"></script>
+</head>
+
+<body>
+    <div id="top"></div>
+    <div id="stataPage" class="sidebar"></div>
+    <div id="plate"></div>
+    <div class="largePic">
+        <div id="pic"></div>
+    </div>
+    <div class="container">
+        <h2 data-type="title_1" id="008">008. T test</h2>
+        <div id="showCode">本頁do file</div>
+        <pre id="code">
+clear
+use "C:/Users/misti/Documents/Stata/社會一/社會統計/統計2-02/GSS2010.dta"
+set more off
+capture drop college
+
+recode educ (0/12=0 "high school and below") ///
+    (13/20=1 "College and beyond"), gen(college)
+tab educ college, m
+ttest physhlth , by(college)
+</pre>
+        <div class="block">
+            <p>測試不同教育程度（大學 vs. 高中或以下）是否會影響生理健康狀況</p>
+            <pre id="stlog-23" class="stlog"><samp>
+<span class="stinp">. clear</span>
+
+<span class="stinp">. use "C:/Users/misti/Documents/Stata/社會一/社會統計/統計2-02/GSS2010.dta"</span>
+
+<span class="stinp">. set more off</span>
+
+<span class="stinp">. capture drop college</span>
+
+<span class="stinp">. recode educ (0/12=0 "high school and below") <span class="stcmt">///</span>
+&gt;              (13/20=1 "College and beyond"), gen(college)</span>
+(2034 differences between educ and college)
+
+<span class="stinp">. tab educ college, m</span>
+
+   HIGHEST |
+   YEAR OF |   RECODE of educ (HIGHEST YEAR OF SCHOOL
+    SCHOOL |                 COMPLETED)
+ COMPLETED | high scho  College a         .b         .c |     Total
+-----------+--------------------------------------------+----------
+         0 |<span class="stres">         5          0          0          0 </span>|<span class="stres">         5 </span>
+         1 |<span class="stres">         1          0          0          0 </span>|<span class="stres">         1 </span>
+         2 |<span class="stres">         5          0          0          0 </span>|<span class="stres">         5 </span>
+         3 |<span class="stres">         4          0          0          0 </span>|<span class="stres">         4 </span>
+         4 |<span class="stres">         9          0          0          0 </span>|<span class="stres">         9 </span>
+         5 |<span class="stres">         6          0          0          0 </span>|<span class="stres">         6 </span>
+         6 |<span class="stres">        30          0          0          0 </span>|<span class="stres">        30 </span>
+         7 |<span class="stres">        12          0          0          0 </span>|<span class="stres">        12 </span>
+         8 |<span class="stres">        45          0          0          0 </span>|<span class="stres">        45 </span>
+         9 |<span class="stres">        55          0          0          0 </span>|<span class="stres">        55 </span>
+        10 |<span class="stres">        66          0          0          0 </span>|<span class="stres">        66 </span>
+        11 |<span class="stres">       108          0          0          0 </span>|<span class="stres">       108 </span>
+        12 |<span class="stres">       558          0          0          0 </span>|<span class="stres">       558 </span>
+        13 |<span class="stres">         0        186          0          0 </span>|<span class="stres">       186 </span>
+        14 |<span class="stres">         0        229          0          0 </span>|<span class="stres">       229 </span>
+        15 |<span class="stres">         0        109          0          0 </span>|<span class="stres">       109 </span>
+        16 |<span class="stres">         0        334          0          0 </span>|<span class="stres">       334 </span>
+        17 |<span class="stres">         0         71          0          0 </span>|<span class="stres">        71 </span>
+        18 |<span class="stres">         0        101          0          0 </span>|<span class="stres">       101 </span>
+        19 |<span class="stres">         0         33          0          0 </span>|<span class="stres">        33 </span>
+        20 |<span class="stres">         0         72          0          0 </span>|<span class="stres">        72 </span>
+        dk |<span class="stres">         0          0          1          0 </span>|<span class="stres">         1 </span>
+        .c |<span class="stres">         0          0          0          4 </span>|<span class="stres">         4 </span>
+-----------+--------------------------------------------+----------
+     Total |<span class="stres">       904      1,135          1          4 </span>|<span class="stres">     2,044 </span>
+
+
+<span class="stinp">. ttest physhlth , by(college)</span>
+
+Two-sample t test with equal variances
+------------------------------------------------------------------------------
+   Group |     Obs        Mean    Std. Err.   Std. Dev.   [95% Conf. Interval]
+---------+--------------------------------------------------------------------
+high sch |<span class="stres">     421    3.315914    .3454995    7.089057    2.636791    3.995038</span>
+<span class="stres"> </span>College |<span class="stres">     733    2.837653    .2296183     6.21668    2.386865    3.288442</span>
+---------+--------------------------------------------------------------------
+combined |<span class="stres">   1,154    3.012132    .1927969    6.549421     2.63386    3.390404</span>
+---------+--------------------------------------------------------------------
+    diff |<span class="stres">             .478261    .4004354               -.3074034    1.263925</span>
+------------------------------------------------------------------------------
+    diff = mean(<span class="stres">high sch</span>) - mean(<span class="stres">College</span>)                         t = <span class="stres">  1.1944</span>
+Ho: diff = 0                                     degrees of freedom = <span class="stres">    1152</span>
+
+<span class="stres">    </span>Ha: diff &lt; 0                 Ha: diff != 0                 Ha: diff &gt; 0
+Pr(T &lt; t) = <span class="stres">0.8837         </span>Pr(|T| &gt; |t|) = <span class="stres">0.2326          </span>Pr(T &gt; t) = <span class="stres">0.1163</span>
+      </samp></pre>
+            <p>t value = 1.1944, P value>0.05</p>
+            <p>支持虛無假設，兩群體間沒有差異</p>
+        </div>
+    </div>
+    <script>
+        const requestURL = '../assets/js/json/data.json'
+    </script>
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,427 @@
+{
+  "tuneList": [
+    {
+      "tunner": "Astalsi401",
+      "tuneName": "GOLIATH V2",
+      "score": "800 A",
+      "carType": "Toyota Trueno",
+      "preferance": ["road", "rwd", "top-speed"],
+      "shareCode": "147 650 586",
+      "pic": "../../assets/images/147650586.png"
+    },
+    {
+      "tunner": "Astalsi401",
+      "tuneName": "RALLY V2",
+      "score": "800 A",
+      "carType": "Toyota Trueno",
+      "preferance": ["dirt", "awd"],
+      "shareCode": "145 523 335",
+      "pic": "../../assets/images/145523335.png"
+    },
+    {
+      "tunner": "Astalsi401",
+      "tuneName": "RALLY V1",
+      "score": "800 A",
+      "carType": "Toyota Trueno",
+      "preferance": ["dirt", "awd"],
+      "shareCode": "133 115 556",
+      "pic": "../../assets/images/133115556.png"
+    },
+    {
+      "tunner": "Astalsi401",
+      "tuneName": "2JZ TURBO ROAD",
+      "score": "900 S1",
+      "carType": "Toyota Supra RZ",
+      "preferance": ["road", "rwd", "top-speed"],
+      "shareCode": "122 876 920",
+      "pic": "../../assets/images/122876920.png"
+    },
+    {
+      "tunner": "Astalsi401",
+      "tuneName": "TWIN TURBO ROAD",
+      "score": "900 S1",
+      "carType": "Toyota Supra RZ",
+      "preferance": ["road", "rwd"],
+      "shareCode": "137 664 933",
+      "pic": "../../assets/images/137664933.png"
+    },
+    {
+      "tunner": "Astalsi401",
+      "tuneName": "AWD ROAD",
+      "score": "900 S1",
+      "carType": "Toyota Supra RZ",
+      "preferance": ["road", "awd"],
+      "shareCode": "137 743 984",
+      "pic": "../../assets/images/137743984.png"
+    },
+    {
+      "tunner": "SimpleAsPye",
+      "tuneName": "BEST B",
+      "score": "700 B",
+      "carType": "Abarth 695 Biposto",
+      "preferance": ["road", "awd"],
+      "shareCode": "205 668 466",
+      "pic": "../../assets/images/205668466.png"
+    },
+    {
+      "tunner": "TDU1PlatinumMod",
+      "tuneName": "DIRT RANKED V2",
+      "score": "900 S1",
+      "carType": "Alfa 33 Stradale",
+      "preferance": ["dirt", "awd"],
+      "shareCode": "129 987 023",
+      "pic": "../../assets/images/129987023.png"
+    },
+    {
+      "tunner": "Nalak28",
+      "tuneName": "REALLY GOOD",
+      "score": "900 S1",
+      "carType": "Alfa 155 Q4",
+      "preferance": ["road", "awd"],
+      "shareCode": "497 192 768",
+      "pic": "../../assets/images/497192768.png"
+    },
+    {
+      "tunner": "Nalak28",
+      "tuneName": "A GRIP",
+      "score": "800 A",
+      "carType": "Alfa Giulia TZ2",
+      "preferance": ["road", "awd"],
+      "shareCode": "672 423 432",
+      "pic": "../../assets/images/672423432.png"
+    },
+    {
+      "tunner": "STEVEtheP1R4TE",
+      "tuneName": "OFFROAD CHAMP",
+      "score": "800 A",
+      "carType": "Arial Nomad",
+      "preferance": ["offroad", "awd"],
+      "shareCode": "157 705 147",
+      "pic": "../../assets/images/157705147.png"
+    },
+    {
+      "tunner": "ESV Suimin",
+      "tuneName": "UPDATE | EASY",
+      "score": "900 S1",
+      "carType": "ATS GT",
+      "preferance": ["road", "awd"],
+      "shareCode": "119 580 611",
+      "pic": "../../assets/images/119580611.png"
+    },
+    {
+      "tunner": "C0DCAOS",
+      "tuneName": "59.376 ASTMOR",
+      "score": "800 A",
+      "carType": "Chevrolet Nova Super Sport 369 FE",
+      "preferance": ["road", "awd"],
+      "shareCode": "230 802 672",
+      "pic": "../../assets/images/230802672.png"
+    },
+    {
+      "tunner": "Gaizi junet",
+      "tuneName": "EZ DRIVE",
+      "score": "900 S1",
+      "carType": "Dodge Viper SRT10 ACR",
+      "preferance": ["road", "awd"],
+      "shareCode": "293 155 787",
+      "pic": "../../assets/images/293155787.png"
+    },
+    {
+      "tunner": "Rocklxd",
+      "tuneName": "S2 DRY 100BP",
+      "score": "998 S2",
+      "carType": "Ferrari FXX",
+      "preferance": ["road", "awd", "dry"],
+      "shareCode": "123 303 848",
+      "pic": "../../assets/images/123303848.png"
+    },
+    {
+      "tunner": "Nalak28",
+      "tuneName": "UPDATE?",
+      "score": "998 S2",
+      "carType": "Ferrari F40 Competizione",
+      "preferance": ["road", "awd", "dry"],
+      "shareCode": "120 711 580",
+      "pic": "../../assets/images/120711580.png"
+    },
+    {
+      "tunner": "Grandma Driving",
+      "tuneName": "998 S2 DRY ONLY",
+      "score": "998 S2",
+      "carType": "Ferrari 599XX Evolution",
+      "preferance": ["road", "awd", "dry"],
+      "shareCode": "178 902 351",
+      "pic": "../../assets/images/178902351.png"
+    },
+    {
+      "tunner": "Rocklxd",
+      "tuneName": "GOLIATH? V2",
+      "score": "998 S2",
+      "carType": "Ferrari 599XX Evolution",
+      "preferance": ["road", "awd"],
+      "shareCode": "771 582 330",
+      "pic": "../../assets/images/771582330.png"
+    },
+    {
+      "tunner": "Rocklxd",
+      "tuneName": "S1 RANKED V1.44",
+      "score": "900 S1",
+      "carType": "Ford GT 2005",
+      "preferance": ["road", "awd"],
+      "shareCode": "931 670 572",
+      "pic": "../../assets/images/931670572.png"
+    },
+    {
+      "tunner": "ZHTBILBILI",
+      "tuneName": "RALLY / SNOW ROAD",
+      "score": "900 S1",
+      "carType": "Ford Mustang GT Deberti Design",
+      "preferance": ["road", "dirt", "snow", "awd"],
+      "shareCode": "178 020 733",
+      "pic": "../../assets/images/178020733.png"
+    },
+    {
+      "tunner": "Rocklxd",
+      "tuneName": "B RALLY V1.5",
+      "score": "700 B",
+      "carType": "Honda Civic RS",
+      "preferance": ["dirt", "awd"],
+      "shareCode": "947 620 288",
+      "pic": "../../assets/images/947620288.png"
+    },
+    {
+      "tunner": "jvvvvvvvvvvv552",
+      "tuneName": "MUDKICKERS",
+      "score": "998 S2",
+      "carType": "Hoonigan Ford RS200 Evolution",
+      "preferance": ["dirt", "awd"],
+      "shareCode": "115 745 144",
+      "pic": "../../assets/images/115745144.png"
+    },
+    {
+      "tunner": "Astalsi401",
+      "tuneName": "434km",
+      "score": "900 S1",
+      "carType": "Koenigsegg CCX",
+      "preferance": ["road", "rwd"],
+      "shareCode": "665 898 163",
+      "pic": "../../assets/images/665898163.png"
+    },
+    {
+      "tunner": "Rocklxd",
+      "tuneName": "S2 DRY 100BP",
+      "score": "998 S2",
+      "carType": "Koenigsegg CCGT",
+      "preferance": ["road", "awd", "dry"],
+      "shareCode": "372 316 435",
+      "pic": "../../assets/images/372316435.png"
+    },
+    {
+      "tunner": "Rocklxd",
+      "tuneName": "S2 WET 100BP",
+      "score": "998 S2",
+      "carType": "Koenigsegg CCGT",
+      "preferance": ["road", "awd", "wet"],
+      "shareCode": "104 433 161",
+      "pic": "../../assets/images/104433161.png"
+    },
+    {
+      "tunner": "GreetedDust8",
+      "tuneName": "SHNOW",
+      "score": "998 S2",
+      "carType": "Lamborghini Diablo GTR",
+      "preferance": ["road", "awd", "snow"],
+      "shareCode": "568 441 140",
+      "pic": "../../assets/images/568441140.png"
+    },
+    {
+      "tunner": "aTTaX Johnson",
+      "tuneName": "S2 WINTER GOD",
+      "score": "998 S2",
+      "carType": "Lotus Elise GT1",
+      "preferance": ["road", "awd", "snow"],
+      "shareCode": "748 480 008",
+      "pic": "../../assets/images/748480008.png"
+    },
+    {
+      "tunner": "C0DCAOS",
+      "tuneName": "1:01,100 ASTMOR",
+      "score": "800 A",
+      "carType": "Mazada RX7",
+      "preferance": ["road", "awd"],
+      "shareCode": "759 945 018",
+      "pic": "../../assets/images/759945018.png"
+    },
+    {
+      "tunner": "Nalak28",
+      "tuneName": "UPDATED BRRR",
+      "score": "997 S2",
+      "carType": "Mclaren F1 GT",
+      "preferance": ["road", "rwd", "top-speed"],
+      "shareCode": "394 059 655",
+      "pic": "../../assets/images/394059655.png"
+    },
+    {
+      "tunner": "SeeyeahBoss",
+      "tuneName": "#5 60\\100BP",
+      "score": "900 S1",
+      "carType": "Mclaren 570S Coupe",
+      "preferance": ["road", "awd"],
+      "shareCode": "150 582 077",
+      "pic": "../../assets/images/150582077.png"
+    },
+    {
+      "tunner": "Rocklxd",
+      "tuneName": "S2 WET 100BP",
+      "score": "998 S2",
+      "carType": "Mercedes-Benz AMG CLK GTR",
+      "preferance": ["road", "awd", "wet"],
+      "shareCode": "145 153 439",
+      "pic": "../../assets/images/145153439.png"
+    },
+    {
+      "tunner": "Rocklxd",
+      "tuneName": "A CC ONLINE",
+      "score": "800 A",
+      "carType": "Mercedes-Benz X-Class",
+      "preferance": ["offroad", "awd", "snow"],
+      "shareCode": "763 265 232",
+      "pic": "../../assets/images/763265232.png"
+    },
+    {
+      "tunner": "EXR Garmite",
+      "tuneName": "B-DIRT META",
+      "score": "700 B",
+      "carType": "Nissan Pulsar GTI-R",
+      "preferance": ["dirt", "awd"],
+      "shareCode": "286 832 237",
+      "pic": "../../assets/images/286832237.png"
+    },
+    {
+      "tunner": "Astalsi401",
+      "tuneName": "A",
+      "score": "800 A",
+      "carType": "Nissan Skyline GT-R V-Spec",
+      "preferance": ["road", "awd"],
+      "shareCode": "117 710 073",
+      "pic": "../../assets/images/117710073.png"
+    },
+    {
+      "tunner": "Nalak28",
+      "tuneName": "100BP",
+      "score": "998 S2",
+      "carType": "Pagani Zonda R",
+      "preferance": ["road", "awd"],
+      "shareCode": "325 704 720",
+      "pic": "../../assets/images/325704720.png"
+    },
+    {
+      "tunner": "Rocklxd",
+      "tuneName": "A RANkED V1.42",
+      "score": "800 A",
+      "carType": "Plymouth Atomic Punk Bubbletop",
+      "preferance": ["road", "awd"],
+      "shareCode": "122 975 700",
+      "pic": "../../assets/images/122975700.png"
+    },
+    {
+      "tunner": "C0DCAOS",
+      "tuneName": "THE BEST 49,5",
+      "score": "900 S1",
+      "carType": "Porsche Carrera GT",
+      "preferance": ["road", "awd"],
+      "shareCode": "603 850 563",
+      "pic": "../../assets/images/603850563.png"
+    },
+    {
+      "tunner": "GreetedDust8",
+      "tuneName": "NYOOM 3",
+      "score": "900 S1",
+      "carType": "Shelby Monaco King Cobra",
+      "preferance": ["road", "rwd", "top-speed"],
+      "shareCode": "156 543 761",
+      "pic": "../../assets/images/156543761.png"
+    },
+    {
+      "tunner": "Rocklxd",
+      "tuneName": "S2 DRY RWD V2",
+      "score": "998 S2",
+      "carType": "Shelby Monaco King Cobra",
+      "preferance": ["road", "rwd", "top-speed", "dry"],
+      "shareCode": "845 723 038",
+      "pic": "../../assets/images/845723038.png"
+    },
+    {
+      "tunner": "GreetedDust8",
+      "tuneName": "NO WING",
+      "score": "700 B",
+      "carType": "Shelby Cobra Daytona Coupe",
+      "preferance": ["dirt", "awd"],
+      "shareCode": "927 394 042",
+      "pic": "../../assets/images/927394042.png"
+    },
+    {
+      "tunner": "RockNRoIIa608",
+      "tuneName": "B DIRT FULL AERO",
+      "score": "700 B",
+      "carType": "Subaru Legacy RS",
+      "preferance": ["dirt", "awd"],
+      "shareCode": "102 233 042",
+      "pic": "../../assets/images/102233042.png"
+    },
+    {
+      "tunner": "Nalak28",
+      "tuneName": "AMAZING CC/DIRT",
+      "score": "900 S1",
+      "carType": "Toyota #1 T100 Baja Truck \"WP\"",
+      "preferance": ["offroad", "dirt", "awd"],
+      "shareCode": "183 662 432",
+      "pic": "../../assets/images/183662432.png"
+    },
+    {
+      "tunner": "Astalsi401",
+      "tuneName": "BETTER BRAKE",
+      "score": "900 S1",
+      "carType": "Toyota Supra RZ",
+      "preferance": ["road", "rwd", "top-speed"],
+      "shareCode": "469 059 586",
+      "pic": "../../assets/images/469059586.png"
+    },
+    {
+      "tunner": "Astalsi401",
+      "tuneName": "4.0 F6 TT ROAD",
+      "score": "900 S1",
+      "carType": "Subaru Impreza 22B STI",
+      "preferance": ["road", "awd"],
+      "shareCode": "108 028 436",
+      "pic": "../../assets/images/108028436.png"
+    },
+    {
+      "tunner": "Rocklxd",
+      "tuneName": "A RANKED V1.0B",
+      "score": "800 A",
+      "carType": "Subaru Impreza 22B STI",
+      "preferance": ["dirt", "awd"],
+      "shareCode": "543 376 903",
+      "pic": "../../assets/images/543376903.png"
+    },
+    {
+      "tunner": "Astalsi401",
+      "tuneName": "ACCELERATE",
+      "score": "900 S1",
+      "carType": "Toyota Supra RZ",
+      "preferance": ["road", "rwd"],
+      "shareCode": "113 568 380",
+      "pic": "../../assets/images/113568380.png"
+    },
+    {
+      "tunner": "Astalsi401",
+      "tuneName": "GRIP",
+      "score": "900 S1",
+      "carType": "Toyota Supra RZ",
+      "preferance": ["road", "awd"],
+      "shareCode": "495 951 003",
+      "pic": "../../assets/images/495951003.png"
+    }
+  ]
+}

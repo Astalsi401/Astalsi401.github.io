@@ -1,0 +1,39 @@
+{
+  "pics": [
+    {
+      "page": "stataOther01",
+      "id": "#step5-1",
+      "pic": "../assets/images/step5-1.png"
+    },
+    {
+      "page": "stataOther01",
+      "id": "#step5-2",
+      "pic": "../assets/images/step5-2.png"
+    },
+    {
+      "page": "stataOther01",
+      "id": "#step5-5",
+      "pic": "../assets/images/step5-5.png"
+    },
+    {
+      "page": "stataOther01",
+      "id": "#step7",
+      "pic": "../assets/images/step7.png"
+    },
+    {
+      "page": "stataOther01",
+      "id": "#step8",
+      "pic": "../assets/images/step8.png"
+    },
+    {
+      "page": "stataOther01",
+      "id": "#step9-2",
+      "pic": "../assets/images/step9-2.png"
+    },
+    {
+      "page": "stataOther01",
+      "id": "#step9-1",
+      "pic": "../assets/images/step9-1.png"
+    }
+  ]
+}

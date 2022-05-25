@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F8SLV521P4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-F8SLV521P4');
+    </script>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>整理資料檔</title>
+    <link rel="stylesheet" type="text/css" href="../assets/style/main.css">
+    <script src="https://astalsi401.github.io/jQuery/jquery-1.9.0.min.js"></script>
+</head>
+
+<body>
+    <div id="top"></div>
+    <div id="stataPage" class="sidebar"></div>
+    <div id="plate"></div>
+    <div class="largePic">
+        <div id="pic"></div>
+    </div>
+    <div class="container">
+        <h2 data-type="title_1" id="004">004. 整理資料檔</h2>
+        <div id="showCode">本頁do file</div>
+        <pre id="code">
+cd "C:/Users/misti/Documents/Stata/unify/data"
+ls
+use 2012_063Q1xia.dta, clear
+cd ..
+
+d v11   /*d: describe的縮寫，也可以寫成des，檢視該份資料的屬性*/
+ta v11  /*ta: tabulate的縮寫，以表格呈現，也能寫為tab*/
+
+numlabel V11, add
+ta v11
+
+preserve
+mvdecode v11, mv(22)
+ta v11
+restore
+
+preserve
+mvdecode v11, mv(18=.\22=.)
+ta v11
+restore
+
+preserve
+mvdecode v11, mv(18/22=.)
+ta v11
+restore
+
+cap drop edyear  /*如過有edyear這個變項就先拋棄，如過沒有則不做動作。*/
+/*
+因為下一條指令會建立名為edyear的變項，而STATA不能同時存在同名的變項
+，若重複執行這條指令會出現錯誤，因此用cap drop先把edyear拋棄。
+*/
+recode v11 (1=0) (2=3) (3=6) (4/5=9) (6/9=12) (10/11 13/15 =14) /// /*代碼過長時可用///換行*/
+    (12=15) (16/19=16) (20=18) (21=22) (22=.), g(edyear)
+ta edyear
+
+cap drop edyear
+g edyear = .  /*g: generate的縮寫，建立變項，也能寫為gen。建立一個名為edyear，裡面沒有任何obs的變項*/
+replace edyear = 0  if v11 == 1
+replace edyear = 3  if v11 == 2
+replace edyear = 6  if v11 == 3
+replace edyear = 9  if v11 == 4 | v11 == 5
+replace edyear = 12 if v11 >= 6 & v11 <= 9
+replace edyear = 14 if v11 == 10 | v11 == 11 | v11 >= 13 & v11 <= 15
+replace edyear = 15 if v11 == 12
+replace edyear = 16 if v11 >= 16 & v11 <= 19
+replace edyear = 18 if v11 == 20
+replace edyear = 22 if v11 == 21
+replace edyear = .  if v11 == 22
+ta edyear
+
+cap drop sempnow 
+recode v36 (1 3/99=0) (2=1), g(sempnow)
+lab var sempnow "自雇"
+
+cap drop suvpnow
+g suvpnow=.
+replace suvpnow=v37 if v37&lt;10
+replace suvpnow=0 if v37&gt;9 & v37&lt;100
+lab var suvpnow "工作單位規模"
+
+cap drop _egpnow
+iskoegp _egpnow,  isko(v34b5) sempl(sempnow) supvis(suvpnow)
+cap drop egpnow
+
+recode _egpnow (1=1 "Mangement") (2/3=2 "whiteC") (4/5=3 "PetitiB") ///
+    (7/9=4 "BWorer") (10/11=5 "Farmer"), g(egpnow)
+lab var egpnow "職業地位"
+
+list v34b5 egpnow if egpnow==. & v34b5&lt;9997
+replace egpnow=1 if (v34b5==1114 | v34b5==1124) & egpnow==.
+replace egpnow=3 if (v34b5==3341 | v34b5==3343) & egpnow==.
+replace egpnow=4 if  v34b5==8410                & egpnow==.
+
+table egpnow, c(mean edyear sd edyear n edyear) format(%9.2f) row
+</pre>
+        <p>大多數剛匯入的資料並不適合直接分析，為了讓資料更符合符合我們的需求，需要對資料進行整理，以下介紹幾個整理資料經常用到的指令。</p>
+        <div class="block">
+            <h3 data-type="title_2" id="4-1">整理資料常用指令</h3>
+            <p>載入資料</p>
+            <pre id="stlog-1" class="stlog"><samp><span class="stinp">. cd "C:/Users/misti/Documents/Stata/unify/data"</span>
+<span class="stres">C:\Users\misti\Documents\Stata\unify\data</span>
+
+<span class="stinp">. ls</span>
+  &lt;dir&gt;  11/20/20 21:16  <span class="stres">.                 </span>
+  &lt;dir&gt;  11/20/20 21:16  <span class="stres">..                </span>
+  11.3M   5/31/18 10:37  <span class="stres">2012_063Q1xia.dta </span>
+   0.2k   3/29/18 11:14  <span class="stres">data1b.csv        </span>
+  33.0k   3/29/18 11:14  <span class="stres">data2b.xlsx       </span>
+2272.7k   4/26/18 12:18  <span class="stres">tscs131.dta       </span>
+
+<span class="stinp">. use 2012_063Q1xia.dta, clear</span>
+
+<span class="stinp">. cd ..</span>
+<span class="stres">C:\Users\misti\Documents\Stata\unify</span>
+</samp></pre>
+            <p>以表格呈現資料中的學歷變項（v11）。</p>
+            <p>通常下載下來的資料會有一份codebook，裡面有每個問題的代號，以及選項的編碼方式。</p>
+            <ul>
+                <li>
+                    <p><b><code>describe varname</code></b></p>
+                </li>
+                <li>
+                    <p><b><code>tabulate varname</code></b></p>
+                </li>
+                <pre id="stlog-2" class="stlog"><samp><span class="stinp">. d v11   <span class="stcmt">/*d: describe的縮寫，也可以寫成des，檢視該份資料的屬性*/</span></span>
+
+              storage   display    value
+variable name   type    format     label      variable label
+---------------------------------------------------------------------------------------------------------------
+<span class="stres">v11            </span> byte    %30.0g     V11        <span class="stres">v11 請問您的教育程度是:(提示卡1)</span>
+
+<span class="stinp">. ta v11  <span class="stcmt">/*ta: tabulate的縮寫，以表格呈現，也能寫為tab*/</span></span>
+
+                   v11 |
+        請問您的教育程 |
+        度是:(提示卡1) |      Freq.     Percent        Cum.
+-----------------------+-----------------------------------
+     無/不識字(跳答14) |<span class="stres">        101        4.73        4.73</span>
+自修/識字/私塾(跳答14) |<span class="stres">         13        0.61        5.34</span>
+          小學(跳答13) |<span class="stres">        305       14.29       19.63</span>
+      國(初)中(跳答13) |<span class="stres">        241       11.29       30.93</span>
+          初職(跳答13) |<span class="stres">          5        0.23       31.16</span>
+    高中普通科(跳答13) |<span class="stres">         84        3.94       35.10</span>
+    高中職業科(跳答13) |<span class="stres">         68        3.19       38.28</span>
+          高職(跳答13) |<span class="stres">        391       18.32       56.61</span>
+      士官學校(跳答13) |<span class="stres">          6        0.28       56.89</span>
+                  五專 |<span class="stres">         70        3.28       60.17</span>
+                  二專 |<span class="stres">        148        6.94       67.10</span>
+                  三專 |<span class="stres">         22        1.03       68.13</span>
+          軍警校專修班 |<span class="stres">          5        0.23       68.37</span>
+          軍警校專科班 |<span class="stres">          4        0.19       68.56</span>
+         空中行專/商專 |<span class="stres">          7        0.33       68.88</span>
+              空中大學 |<span class="stres">          9        0.42       69.31</span>
+        軍警官校或大學 |<span class="stres">         16        0.75       70.06</span>
+         技術學院,科大 |<span class="stres">        177        8.29       78.35</span>
+                  大學 |<span class="stres">        316       14.81       93.16</span>
+                  碩士 |<span class="stres">        131        6.14       99.30</span>
+                  博士 |<span class="stres">         11        0.52       99.81</span>
+          其他(請說明) |<span class="stres">          4        0.19      100.00</span>
+-----------------------+-----------------------------------
+                 Total |<span class="stres">      2,134      100.00</span>
+</samp></pre>
+                <p>從<code>d v11</code>這個指令可以知道v11的value label是V11</p>
+                <li>
+                    <p><b><code>numlabel varname, add</code></b></p>
+                </li>
+            </ul>
+            <p>利用<code>numlabel V11, add</code>可以檢視各個選項的編號。</p>
+            <p><code>numlabel _all, add</code>可以一次處理所有變項，但資料較大時可能要等它運行幾秒鐘。</p>
+            <pre id="stlog-3" class="stlog"><samp><span class="stinp">. numlabel V11, add</span>
+
+<span class="stinp">. ta v11</span>
+
+                      v11 |
+           請問您的教育程度 |
+              是:(提示卡1) |      Freq.     Percent        Cum.
+--------------------------+-----------------------------------
+      1. 無/不識字(跳答14) |<span class="stres">        101        4.73        4.73</span>
+  2. 自修/識字/私塾(跳答14) |<span class="stres">         13        0.61        5.34</span>
+           3. 小學(跳答13) |<span class="stres">        305       14.29       19.63</span>
+       4. 國(初)中(跳答13) |<span class="stres">        241       11.29       30.93</span>
+           5. 初職(跳答13) |<span class="stres">          5        0.23       31.16</span>
+     6. 高中普通科(跳答13) |<span class="stres">         84        3.94       35.10</span>
+     7. 高中職業科(跳答13) |<span class="stres">         68        3.19       38.28</span>
+          8. 高職(跳答13) |<span class="stres">        391       18.32       56.61</span>
+       9. 士官學校(跳答13) |<span class="stres">          6        0.28       56.89</span>
+                 10. 五專 |<span class="stres">         70        3.28       60.17</span>
+                 11. 二專 |<span class="stres">        148        6.94       67.10</span>
+                 12. 三專 |<span class="stres">         22        1.03       68.13</span>
+          13. 軍警校專修班 |<span class="stres">          5        0.23       68.37</span>
+          14. 軍警校專科班 |<span class="stres">          4        0.19       68.56</span>
+         15. 空中行專/商專 |<span class="stres">          7        0.33       68.88</span>
+              16. 空中大學 |<span class="stres">          9        0.42       69.31</span>
+        17. 軍警官校或大學 |<span class="stres">         16        0.75       70.06</span>
+         18. 技術學院,科大 |<span class="stres">        177        8.29       78.35</span>
+                 19. 大學 |<span class="stres">        316       14.81       93.16</span>
+                 20. 碩士 |<span class="stres">        131        6.14       99.30</span>
+                 21. 博士 |<span class="stres">         11        0.52       99.81</span>
+          22. 其他(請說明) |<span class="stres">          4        0.19      100.00</span>
+--------------------------+-----------------------------------
+                    Total |<span class="stres">      2,134      100.00</span>
+</samp></pre>
+        </div>
+        <div class="block">
+            <h3 data-type="title_2" id="4-2">定義遺漏值</h3>
+            <p>將編號22的「其他」設為遺漏值，可以發現「22. 其他」消失了</p>
+            <pre id="stlog-4" class="stlog"><samp><span class="stinp">. preserve</span>
+
+<span class="stinp">. mvdecode v11, mv(22)</span>
+         v11:<span class="stres"> 4</span> missing values generated
+
+<span class="stinp">. ta v11</span>
+
+                      v11 |
+         請問您的教育程度 |
+             是:(提示卡1) |      Freq.     Percent        Cum.
+--------------------------+-----------------------------------
+     1. 無/不識字(跳答14) |<span class="stres">        101        4.74        4.74</span>
+2. 自修/識字/私塾(跳答14) |<span class="stres">         13        0.61        5.35</span>
+          3. 小學(跳答13) |<span class="stres">        305       14.32       19.67</span>
+      4. 國(初)中(跳答13) |<span class="stres">        241       11.31       30.99</span>
+          5. 初職(跳答13) |<span class="stres">          5        0.23       31.22</span>
+    6. 高中普通科(跳答13) |<span class="stres">         84        3.94       35.16</span>
+    7. 高中職業科(跳答13) |<span class="stres">         68        3.19       38.36</span>
+          8. 高職(跳答13) |<span class="stres">        391       18.36       56.71</span>
+      9. 士官學校(跳答13) |<span class="stres">          6        0.28       57.00</span>
+                 10. 五專 |<span class="stres">         70        3.29       60.28</span>
+                 11. 二專 |<span class="stres">        148        6.95       67.23</span>
+                 12. 三專 |<span class="stres">         22        1.03       68.26</span>
+         13. 軍警校專修班 |<span class="stres">          5        0.23       68.50</span>
+         14. 軍警校專科班 |<span class="stres">          4        0.19       68.69</span>
+        15. 空中行專/商專 |<span class="stres">          7        0.33       69.01</span>
+             16. 空中大學 |<span class="stres">          9        0.42       69.44</span>
+       17. 軍警官校或大學 |<span class="stres">         16        0.75       70.19</span>
+        18. 技術學院,科大 |<span class="stres">        177        8.31       78.50</span>
+                 19. 大學 |<span class="stres">        316       14.84       93.33</span>
+                 20. 碩士 |<span class="stres">        131        6.15       99.48</span>
+                 21. 博士 |<span class="stres">         11        0.52      100.00</span>
+--------------------------+-----------------------------------
+                    Total |<span class="stres">      2,130      100.00</span>
+
+<span class="stinp">. restore</span>
+</samp></pre>
+            <p>將編號18、22設為遺漏值</p>
+            <pre id="stlog-5" class="stlog"><samp><span class="stinp">. preserve</span>
+
+<span class="stinp">. mvdecode v11, mv(18=.\22=.)</span>
+         v11:<span class="stres"> 181</span> missing values generated
+
+<span class="stinp">. ta v11</span>
+
+                      v11 |
+         請問您的教育程度 |
+             是:(提示卡1) |      Freq.     Percent        Cum.
+--------------------------+-----------------------------------
+     1. 無/不識字(跳答14) |<span class="stres">        101        5.17        5.17</span>
+2. 自修/識字/私塾(跳答14) |<span class="stres">         13        0.67        5.84</span>
+          3. 小學(跳答13) |<span class="stres">        305       15.62       21.45</span>
+      4. 國(初)中(跳答13) |<span class="stres">        241       12.34       33.79</span>
+          5. 初職(跳答13) |<span class="stres">          5        0.26       34.05</span>
+    6. 高中普通科(跳答13) |<span class="stres">         84        4.30       38.35</span>
+    7. 高中職業科(跳答13) |<span class="stres">         68        3.48       41.83</span>
+          8. 高職(跳答13) |<span class="stres">        391       20.02       61.85</span>
+      9. 士官學校(跳答13) |<span class="stres">          6        0.31       62.16</span>
+                 10. 五專 |<span class="stres">         70        3.58       65.75</span>
+                 11. 二專 |<span class="stres">        148        7.58       73.32</span>
+                 12. 三專 |<span class="stres">         22        1.13       74.45</span>
+         13. 軍警校專修班 |<span class="stres">          5        0.26       74.71</span>
+         14. 軍警校專科班 |<span class="stres">          4        0.20       74.91</span>
+        15. 空中行專/商專 |<span class="stres">          7        0.36       75.27</span>
+             16. 空中大學 |<span class="stres">          9        0.46       75.73</span>
+       17. 軍警官校或大學 |<span class="stres">         16        0.82       76.55</span>
+                 19. 大學 |<span class="stres">        316       16.18       92.73</span>
+                 20. 碩士 |<span class="stres">        131        6.71       99.44</span>
+                 21. 博士 |<span class="stres">         11        0.56      100.00</span>
+--------------------------+-----------------------------------
+                    Total |<span class="stres">      1,953      100.00</span>
+
+<span class="stinp">. restore</span>
+</samp></pre>
+            <p>將編號18至22全部設為遺漏值</p>
+            <pre id="stlog-6" class="stlog"><samp><span class="stinp">. preserve</span>
+
+<span class="stinp">. mvdecode v11, mv(18/22=.)</span>
+         v11:<span class="stres"> 639</span> missing values generated
+
+<span class="stinp">. ta v11</span>
+
+                      v11 |
+         請問您的教育程度 |
+             是:(提示卡1) |      Freq.     Percent        Cum.
+--------------------------+-----------------------------------
+     1. 無/不識字(跳答14) |<span class="stres">        101        6.76        6.76</span>
+2. 自修/識字/私塾(跳答14) |<span class="stres">         13        0.87        7.63</span>
+          3. 小學(跳答13) |<span class="stres">        305       20.40       28.03</span>
+      4. 國(初)中(跳答13) |<span class="stres">        241       16.12       44.15</span>
+          5. 初職(跳答13) |<span class="stres">          5        0.33       44.48</span>
+    6. 高中普通科(跳答13) |<span class="stres">         84        5.62       50.10</span>
+    7. 高中職業科(跳答13) |<span class="stres">         68        4.55       54.65</span>
+          8. 高職(跳答13) |<span class="stres">        391       26.15       80.80</span>
+      9. 士官學校(跳答13) |<span class="stres">          6        0.40       81.20</span>
+                 10. 五專 |<span class="stres">         70        4.68       85.89</span>
+                 11. 二專 |<span class="stres">        148        9.90       95.79</span>
+                 12. 三專 |<span class="stres">         22        1.47       97.26</span>
+         13. 軍警校專修班 |<span class="stres">          5        0.33       97.59</span>
+         14. 軍警校專科班 |<span class="stres">          4        0.27       97.86</span>
+        15. 空中行專/商專 |<span class="stres">          7        0.47       98.33</span>
+             16. 空中大學 |<span class="stres">          9        0.60       98.93</span>
+       17. 軍警官校或大學 |<span class="stres">         16        1.07      100.00</span>
+--------------------------+-----------------------------------
+                    Total |<span class="stres">      1,495      100.00</span>
+
+<span class="stinp">. restore</span>
+</samp></pre>
+            <p>若codebook中已經標明遺漏值（通常為999），那也可以使用<code>mvdecode _all, mv(999)</code>來一次定義資料中所有變項的遺漏值，不過視你的需求而定，某些變項有可能需要個別調整。</p>
+        </div>
+        <div class="block">
+            <h3 data-type="title_2" id="4-3">重新編碼</h3>
+            <p>將各個選項重新編碼為教育年數，如：選項1.無/不識字=0年</p>
+            <p>這裡有兩種不同的方式，各有其用處，會在不同地方派上用場</p>
+            <p><b>第一種方式：<code>recode</code></b></p>
+            <p><code>recode</code>是針對單一變項重新編碼，指令較簡短，常常會遇到有些資料需要進行反項編碼才能讓人更容易理解，此時適合使用這種方式。</p>
+            <pre id="stlog-7" class="stlog"><samp><span class="stinp">. cap drop edyear  <span class="stcmt">/*如過有edyear這個變項就先拋棄，如過沒有則不做動作。*/</span></span>
+
+<span class="stinp">. <span class="stcmt">/*</span>
+&gt; <span class="stcmt">因為下一條指令會建立名為edyear的變項，而STATA不能同時存在同名的變項</span>
+&gt; <span class="stcmt">，若重複執行這條指令會出現錯誤，因此用cap drop先把edyear拋棄。</span>
+&gt; <span class="stcmt">*/</span></span>
+<span class="stinp">. recode v11 (1=0) (2=3) (3=6) (4/5=9) (6/9=12) (10/11 13/15 =14) <span class="stcmt">/// /*代碼過長時可用///換行*/</span>
+&gt;            (12=15) (16/19=16) (20=18) (21=22) (22=.), g(edyear)</span>
+(2121 differences between v11 and edyear)
+
+<span class="stinp">. ta edyear</span>
+
+  RECODE of |
+   v11 (v11 |
+     請問您 |
+     的教育 |
+   程度是:( |
+   提示卡1) |
+          ) |      Freq.     Percent        Cum.
+------------+-----------------------------------
+          0 |<span class="stres">        101        4.74        4.74</span>
+          3 |<span class="stres">         13        0.61        5.35</span>
+          6 |<span class="stres">        305       14.32       19.67</span>
+          9 |<span class="stres">        246       11.55       31.22</span>
+         12 |<span class="stres">        549       25.77       57.00</span>
+         14 |<span class="stres">        234       10.99       67.98</span>
+         15 |<span class="stres">         22        1.03       69.01</span>
+         16 |<span class="stres">        518       24.32       93.33</span>
+         18 |<span class="stres">        131        6.15       99.48</span>
+         22 |<span class="stres">         11        0.52      100.00</span>
+------------+-----------------------------------
+      Total |<span class="stres">      2,130      100.00</span>
+</samp></pre>
+            <p><b>第二種方式：<code>replace</code></b></p>
+            <p><code>replace</code>是一一指定新變項中obs的條件，雖然較繁複，但好處是可以將多個變項中的obs整合進同一個變項中。</p>
+            <pre id="stlog-8" class="stlog"><samp><span class="stinp">. cap drop edyear</span>
+
+<span class="stinp">. g edyear = .  <span class="stcmt">/*g: generate的縮寫，建立變項，也能寫為gen。建立一個名為edyear，裡面沒有任何obs的變項*/</span></span>
+(2,134 missing values generated)
+
+<span class="stinp">. replace edyear = 0  if v11 == 1</span>
+(101 real changes made)
+
+<span class="stinp">. replace edyear = 3  if v11 == 2</span>
+(13 real changes made)
+
+<span class="stinp">. replace edyear = 6  if v11 == 3</span>
+(305 real changes made)
+
+<span class="stinp">. replace edyear = 9  if v11 == 4 | v11 == 5</span>
+(246 real changes made)
+
+<span class="stinp">. replace edyear = 12 if v11 &gt;= 6 &amp; v11 &lt;= 9</span>
+(549 real changes made)
+
+<span class="stinp">. replace edyear = 14 if v11 == 10 | v11 == 11 | v11 &gt;= 13 &amp; v11 &lt;= 15</span>
+(234 real changes made)
+
+<span class="stinp">. replace edyear = 15 if v11 == 12</span>
+(22 real changes made)
+
+<span class="stinp">. replace edyear = 16 if v11 &gt;= 16 &amp; v11 &lt;= 19</span>
+(518 real changes made)
+
+<span class="stinp">. replace edyear = 18 if v11 == 20</span>
+(131 real changes made)
+
+<span class="stinp">. replace edyear = 22 if v11 == 21</span>
+(11 real changes made)
+
+<span class="stinp">. replace edyear = .  if v11 == 22</span>
+(0 real changes made)
+
+<span class="stinp">. ta edyear</span>
+
+     edyear |      Freq.     Percent        Cum.
+------------+-----------------------------------
+          0 |<span class="stres">        101        4.74        4.74</span>
+          3 |<span class="stres">         13        0.61        5.35</span>
+          6 |<span class="stres">        305       14.32       19.67</span>
+          9 |<span class="stres">        246       11.55       31.22</span>
+         12 |<span class="stres">        549       25.77       57.00</span>
+         14 |<span class="stres">        234       10.99       67.98</span>
+         15 |<span class="stres">         22        1.03       69.01</span>
+         16 |<span class="stres">        518       24.32       93.33</span>
+         18 |<span class="stres">        131        6.15       99.48</span>
+         22 |<span class="stres">         11        0.52      100.00</span>
+------------+-----------------------------------
+      Total |<span class="stres">      2,130      100.00</span>
+</samp></pre>
+        </div>
+        <div class="block">
+            <h3 data-type="title_2" id="4-4">職業地位計算（EGP Class Scheme）</h3>
+            <p><a href="https://www.jstor.org/stable/589632?seq=1">EGP Class
+                    Scheme</a>是一種職業地位的分類方法，在STATA中可以利用<code>iscoegp</code>進行分類。</p>
+            <p>以<code>iscoegp</code>計算職業地位需要先獲取以下資訊：</p>
+            <ol>
+                <li>職業編碼：isco88碼（在以下範例資料中為v34b5）</li>
+                <li>在哪裡工作？為誰工作？</li>
+                <li>工作的公司/機構大約雇有多少員工？</li>
+            </ol>
+            <p><b>是否受雇</b></p>
+            <pre id="stlog-9" class="stlog"><samp><span class="stinp">. cap drop sempnow </span>
+
+<span class="stinp">. recode v36 (1 3/99=0) (2=1), g(sempnow)</span>
+(2134 differences between v36 and sempnow)
+
+<span class="stinp">. lab var sempnow "自雇"</span>
+</samp></pre>
+            <p><b>工作單位規模</b></p>
+            <pre id="stlog-10" class="stlog"><samp><span class="stinp">. cap drop suvpnow</span>
+
+<span class="stinp">. g suvpnow=.</span>
+(2,134 missing values generated)
+
+<span class="stinp">. replace suvpnow=v37 if v37&lt;10</span>
+(1,531 real changes made)
+
+<span class="stinp">. replace suvpnow=0 if v37&gt;9 &amp; v37&lt;100</span>
+(603 real changes made)
+
+<span class="stinp">. lab var suvpnow "工作單位規模"</span>
+</samp></pre>
+            <p><b>計算社經地位</b></p>
+            <pre id="stlog-11" class="stlog"><samp><span class="stinp">. cap drop _egpnow</span>
+
+<span class="stinp">. iskoegp _egpnow,  isko(v34b5) sempl(sempnow) supvis(suvpnow)</span>
+
+<span class="stinp">. </span>
+<span class="stinp">. cap drop egpnow</span>
+
+<span class="stinp">. recode _egpnow (1=1 "Mangement") (2/3=2 "whiteC") (4/5=3 "PetitiB") <span class="stcmt">///</span>
+&gt;                (7/9=4 "BWorer") (10/11=5 "Farmer"), g(egpnow)</span>
+(1104 differences between _egpnow and egpnow)
+
+<span class="stinp">. lab var egpnow "職業地位"</span>
+</samp></pre>
+            <p><b>定義遺漏值</b></p>
+            <pre id="stlog-12" class="stlog"><samp><span class="stinp">. list v34b5 egpnow if egpnow==. &amp; v34b5&lt;9997</span>
+
+      +----------------------------------------+
+      | <span class="stres">                        v34b5   egpnow </span>|
+      |----------------------------------------|
+  11. | <span class="stres">        國,高中升學補習班老師        . </span>|
+ 116. | <span class="stres">成人語文補習班,各種才藝班老師        . </span>|
+ 135. | <span class="stres">        國,高中升學補習班老師        . </span>|
+ 147. | <span class="stres">成人語文補習班,各種才藝班老師        . </span>|
+ 247. | <span class="stres">        國,高中升學補習班老師        . </span>|
+      |----------------------------------------|
+ 305. | <span class="stres">成人語文補習班,各種才藝班老師        . </span>|
+ 454. | <span class="stres">        國,高中升學補習班老師        . </span>|
+ 479. | <span class="stres">        國,高中升學補習班老師        . </span>|
+ 514. | <span class="stres">               鄉鎮市民意代表        . </span>|
+ 527. | <span class="stres">        國,高中升學補習班老師        . </span>|
+      |----------------------------------------|
+ 582. | <span class="stres">成人語文補習班,各種才藝班老師        . </span>|
+ 606. | <span class="stres">成人語文補習班,各種才藝班老師        . </span>|
+ 659. | <span class="stres">        國,高中升學補習班老師        . </span>|
+ 670. | <span class="stres">        國,高中升學補習班老師        . </span>|
+ 774. | <span class="stres">        國,高中升學補習班老師        . </span>|
+      |----------------------------------------|
+ 951. | <span class="stres">成人語文補習班,各種才藝班老師        . </span>|
+ 995. | <span class="stres">成人語文補習班,各種才藝班老師        . </span>|
+1136. | <span class="stres">        國,高中升學補習班老師        . </span>|
+1209. | <span class="stres">        國,高中升學補習班老師        . </span>|
+1461. | <span class="stres">成人語文補習班,各種才藝班老師        . </span>|
+      |----------------------------------------|
+1712. | <span class="stres">             公立高中(職)校長        . </span>|
+1780. | <span class="stres">        國,高中升學補習班老師        . </span>|
+1803. | <span class="stres">成人語文補習班,各種才藝班老師        . </span>|
+1857. | <span class="stres">               其他半技術工人        . </span>|
+1908. | <span class="stres">成人語文補習班,各種才藝班老師        . </span>|
+      |----------------------------------------|
+2085. | <span class="stres">成人語文補習班,各種才藝班老師        . </span>|
+2130. | <span class="stres">        國,高中升學補習班老師        . </span>|
+      +----------------------------------------+
+
+<span class="stinp">. replace egpnow=1 if (v34b5==1114 | v34b5==1124) &amp; egpnow==.</span>
+(2 real changes made)
+
+<span class="stinp">. replace egpnow=3 if (v34b5==3341 | v34b5==3343) &amp; egpnow==.</span>
+(24 real changes made)
+
+<span class="stinp">. replace egpnow=4 if  v34b5==8410                &amp; egpnow==.</span>
+(1 real change made)
+</samp></pre>
+            <p><b>職業分類建立完成</b></p>
+            <pre id="stlog-13" class="stlog"><samp><span class="stinp">. table egpnow, c(mean edyear sd edyear n edyear) format(%9.2f) row</span>
+
+----------------------------------------------------
+ 職業地位 | mean(edyear)    sd(edyear)     N(edyear)
+----------+-----------------------------------------
+Mangement |        <span class="stres">16.83          2.79            71</span>
+<span class="stres">   </span>whiteC |        <span class="stres">13.88          3.16           940</span>
+<span class="stres">  </span>PetitiB |        <span class="stres">15.07          2.90            30</span>
+<span class="stres">   </span>BWorer |        <span class="stres">10.09          3.96           848</span>
+<span class="stres">   </span>Farmer |         <span class="stres">5.69          4.87           143</span>
+<span class="stres">          </span>| 
+    Total |        <span class="stres">11.84          4.48         2,032</span>
+----------------------------------------------------
+</samp></pre>
+        </div>
+        <div class="block">
+            <h3 id="4-5">其他技巧</h3>
+            <ol>
+                <li><code>egen miny = min(y), by(x)</code>：</li>
+                <p>依據變項<code>x</code>分類建立最小值，命名為<code>miny</code>。</p>
+                <li><code>by varname: g count = _N</code>：</li>
+                <p>計算重複變項的數量。</p>
+                <li><code>by varname: g count = _n</code>：</li>
+                <p>為重複變項編號。</p>
+                <li><code>nrow</code></li>
+                <p>將第一列作為變項名稱</p>
+                <li><code>replace x = subinstr(x, ",", "", .)</code></li>
+                <p>將變項x中的逗號替換掉</p>
+                <li><code>g y = "a" if strmatch(x, "*a*")</code></li>
+                <p>如果<code>x</code>包含字母"a"，建立變項<code>y = "a"</code></p>
+                <li><code>g y = usubstr("abcde", 2, 2)</code></li>
+                <p>從字串<code>abcde</code>的第2個字開始，往後數2個字母，建立<code>y</code>變項，在本範例中<code>y = "bc"</code></p>
+                <li><code>preserve</code>、<code>restore</code></li>
+                <p>建立還原點、回到還原點</p>
+                <li><code>split strvar, p("/") g(a)</code></li>
+                <p>依據字符<code>/</code>分割文字變項<code>strvar</code>為<code>a1</code>、<code>a2</code>、<code>a3</code>...</p>
+                <li><code>char(10)</code></li>
+                <p>ASCII編碼中的換行符，可插入字串中</p>
+                <li>stata if/else用法，<code>var</code> = 變項名稱</li>
+                <pre>
+local varType: type var  /*獲取變項類型*/
+if substr("`varType'", 1, 3) == "str" {
+  如果變項類型為文字(str) do some stata code...
+} else {
+  some stata code...
+}
+</pre>
+            </ol>
+        </div>
+    </div>
+    <script>
+        const requestURL = '../assets/js/json/data.json'
+    </script>
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

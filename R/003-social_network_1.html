@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F8SLV521P4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-F8SLV521P4');
+    </script>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="../assets/style/main.css">
+    <script src="https://astalsi401.github.io/jQuery/jquery-1.9.0.min.js"></script>
+    <title>網絡分析（一）</title>
+    <script src="../assets/js/highlight.js"></script>
+    <script type="text/javascript">
+        if (window.hljs) {
+            hljs.configure({ languages: [] });
+            hljs.initHighlightingOnLoad();
+            if (document.readyState && document.readyState === "complete") {
+                window.setTimeout(function () { hljs.initHighlighting(); }, 0);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="top"></div>
+    <div id="rPage" class="sidebar"></div>
+    <div id="plate"></div>
+    <div class="largePic">
+        <div id="pic"></div>
+    </div>
+    <div class="container">
+        <h1>003. 網絡分析（一）</h1>
+        <div class="block">
+            <h2 id="3-1">網絡資料的格式</h2>
+            <div class="block">
+                <p><b>無方向性（Undirected, Binary）</b></p>
+                <center>
+                    <div class="img-block">
+                        <img id="r003_1" width="400px" src="" alt="r003_1">
+                    </div>
+                    <div class="sumobj">
+                        <div>
+                            <table>
+                                <caption>Adjacency List</caption>
+                                <thead>
+                                    <tr>
+                                        <th>ego</th>
+                                        <th>alter1</th>
+                                        <th>alter2</th>
+                                        <th>alter3</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>a</td>
+                                        <td>b</td>
+                                        <td>.</td>
+                                        <td>.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>b</td>
+                                        <td>a</td>
+                                        <td>c</td>
+                                        <td>.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>c</td>
+                                        <td>b</td>
+                                        <td>d</td>
+                                        <td>e</td>
+                                    </tr>
+                                    <tr>
+                                        <td>d</td>
+                                        <td>c</td>
+                                        <td>e</td>
+                                        <td>.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>e</td>
+                                        <td>c</td>
+                                        <td>d</td>
+                                        <td>.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <table>
+                                <caption>Matrices</caption>
+                                <tr>
+                                    <th>.</th>
+                                    <th>a</th>
+                                    <th>b</th>
+                                    <th>c</th>
+                                    <th>d</th>
+                                    <th>e</th>
+                                </tr>
+                                <tr>
+                                    <th>a</th>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <th>b</th>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <th>c</th>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <th>d</th>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <th>e</th>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div>
+                            <table>
+                                <caption>Arc List</caption>
+                                <tr>
+                                    <th>vertex</th>
+                                    <th>vertex</th>
+                                </tr>
+                                <tr>
+                                    <td>a</td>
+                                    <td>b</td>
+                                </tr>
+                                <tr>
+                                    <td>b</td>
+                                    <td>a</td>
+                                </tr>
+                                <tr>
+                                    <td>b</td>
+                                    <td>c</td>
+                                </tr>
+                                <tr>
+                                    <td>c</td>
+                                    <td>b</td>
+                                </tr>
+                                <tr>
+                                    <td>c</td>
+                                    <td>d</td>
+                                </tr>
+                                <tr>
+                                    <td>c</td>
+                                    <td>e</td>
+                                </tr>
+                                <tr>
+                                    <td>d</td>
+                                    <td>c</td>
+                                </tr>
+                                <tr>
+                                    <td>d</td>
+                                    <td>e</td>
+                                </tr>
+                                <tr>
+                                    <td>e</td>
+                                    <td>c</td>
+                                </tr>
+                                <tr>
+                                    <td>e</td>
+                                    <td>d</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </center>
+            </div>
+            <div class="block">
+                <p><b>有方向性（Directed, Binary）</b></p>
+                <center>
+                    <div class="img-block">
+                        <img id="r003_2" width="350px" src="" alt="r003_2">
+                    </div>
+                    <div class="sumobj">
+                        <div>
+                            <table>
+                                <caption>Matrices</caption>
+                                <tr>
+                                    <th>.</th>
+                                    <th>a</th>
+                                    <th>b</th>
+                                    <th>c</th>
+                                    <th>d</th>
+                                    <th>e</th>
+                                </tr>
+                                <tr>
+                                    <th>a</th>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <th>b</th>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <th>c</th>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <th>d</th>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <th>e</th>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </center>
+            </div>
+            <div class="block">
+                <p><b>無方向性，有強弱差異（Undirected, Valued）</b></p>
+                <center>
+                    <div class="img-block">
+                        <img id="r003_3" width="400px" src="" alt="r003_3">
+                    </div>
+                    <div class="sumobj">
+                        <div>
+                            <table>
+                                <caption>Edgelist</caption>
+                                <tr>
+                                    <th>ego</th>
+                                    <th>alter</th>
+                                    <th>relation</th>
+                                </tr>
+                                <tr>
+                                    <td>a</td>
+                                    <td>b</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>b</td>
+                                    <td>a</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>b</td>
+                                    <td>c</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>c</td>
+                                    <td>b</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>c</td>
+                                    <td>d</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>c</td>
+                                    <td>e</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>d</td>
+                                    <td>c</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>d</td>
+                                    <td>e</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>e</td>
+                                    <td>c</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>e</td>
+                                    <td>d</td>
+                                    <td>2</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </center>
+            </div>
+            <div class="block">
+                <p><b>有方向性，有強弱差異（Directed, Valued）</b></p>
+                <center>
+                    <div class="img-block">
+                        <img id="r003_4" width="400px" src="" alt="r003_4">
+                    </div>
+                    <div class="sumobj">
+                        <div>
+                            <table>
+                                <caption>Edgelist</caption>
+                                <tr>
+                                    <th>ego</th>
+                                    <th>alter</th>
+                                    <th>relation</th>
+                                </tr>
+                                <tr>
+                                    <td>a</td>
+                                    <td>b</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>b</td>
+                                    <td>a</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>c</td>
+                                    <td>b</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>c</td>
+                                    <td>d</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>c</td>
+                                    <td>e</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>e</td>
+                                    <td>d</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>e</td>
+                                    <td>c</td>
+                                    <td>2</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </center>
+            </div>
+        </div>
+        <div class="block">
+            <h2 id="3-2">網絡分析基本概念</h2>
+            <p>
+            <ul>
+                <li>相通性（Reachability）：</li>
+                <center>
+                    <div class="img-block">
+                        <img id="r003_5" width="130px" src="" alt="r003_5">
+                    </div>
+                </center>
+                <p>
+                    X<sup>n</sup>=在n步之內，有多少條路徑可連回actors<br>
+                    可利用矩陣次方進行計算<br>
+                </p>
+                <pre class="r"><code>X &lt;- matrix(c(0,1,0,0,0,1,
+              1,0,1,0,0,0,
+              0,1,0,1,1,1,
+              0,0,1,0,1,0,
+              0,0,1,1,0,0,
+              1,0,1,0,0,0), 6, byrow = T)
+X</code></pre>
+                <pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6]
+## [1,]    0    1    0    0    0    1
+## [2,]    1    0    1    0    0    0
+## [3,]    0    1    0    1    1    1
+## [4,]    0    0    1    0    1    0
+## [5,]    0    0    1    1    0    0
+## [6,]    1    0    1    0    0    0</code></pre>
+                <pre class="r"><code>X2 &lt;- X %^% 2
+# 例：在兩步之內能連結到a的有
+# a-b-a
+# a-f-a
+# c-b-a
+# c-f-a
+# 因此[a,a]=2 [a,c]=2
+X2</code></pre>
+                <pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6]
+## [1,]    2    0    2    0    0    0
+## [2,]    0    2    0    1    1    2
+## [3,]    2    0    4    1    1    0
+## [4,]    0    1    1    2    1    1
+## [5,]    0    1    1    1    2    1
+## [6,]    0    2    0    1    1    2</code></pre>
+                <li>Degree：與其他actors的直接連結數目</li>
+                <li>In-degree：從其他actors接收的連結</li>
+                <li>Out-degree：發送給其他actors的連結</li>
+                <center>
+                    <div class="img-block">
+                        <img id="r003_6" width="350px" src="" alt="r003_6">
+                    </div>
+                    <div class="sumobj">
+                        <div>
+                            <table>
+                                <tr>
+                                    <th>.</th>
+                                    <th>a</th>
+                                    <th>b</th>
+                                    <th>c</th>
+                                    <th>d</th>
+                                    <th>e</th>
+                                </tr>
+                                <tr>
+                                    <th>a</th>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <th>b</th>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <th>c</th>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <th>d</th>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <th>e</th>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div>
+                            <table>
+                                <tr>
+                                    <th>Node</th>
+                                    <th>In-Degree</th>
+                                    <th>Out-Degree</th>
+                                </tr>
+                                <tr>
+                                    <td>a</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>b</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>c</td>
+                                    <td>1</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>d</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>e</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>Mean</td>
+                                    <td>7/5</td>
+                                    <td>7/5</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </center>
+                <li>度中心性（Degree Centrality）：能連結到的數量 / 總數-1</li>
+                <center><img id="degree_centrality" width="88px" src="" alt="degree_centrality"></center>
+                <p><i>A<sub>ij</sub></i> = socio-matrix</p>
+                <li>接近中心性（Closeness Centrality）：與其他actors的鄰近程度</li>
+                <center><img id="closeness_centrality" width="90px" src="" alt="closeness_centrality"></center>
+                <p><i>d<sub>ij</sub></i> = 到每個actors的距離</p>
+                <li>界數中心性（Betweenness Centrality）：兩actors經過第三actor的最短路徑數</li>
+                <center><img id="betweenness_centrality" width="151px" src="" alt="betweenness_centrality"></center>
+                <p>
+                    <i>G<sub>jk</sub></i> = jk之間的最短路徑<br>
+                    <i>G<sub>jik</sub></i> = jk之間，經過i的最短路徑<br>
+                </p>
+                <li>網絡密度（Density）：</li>
+                <center><img id="density" width="117px" src="" alt="density"></center>
+                <p>
+                    實際存在的路徑數/最多可能路徑數<br>
+                    <i>N</i> = actors數量<br>
+                </p>
+            </ul>
+            </p>
+        </div>
+    </div>
+    <script>
+        const picsUrl = '../assets/js/json/pics/r003.json'
+        const requestURL = '../assets/js/json/data.json'
+    </script>
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

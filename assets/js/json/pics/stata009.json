@@ -1,0 +1,44 @@
+{
+  "pics": [
+    {
+      "page": "stata009",
+      "id": "#anova01",
+      "pic": "../assets/images/anova01.png"
+    },
+    {
+      "page": "stata009",
+      "id": "#twoway-anova01",
+      "pic": "../assets/images/twoway-anova01.png"
+    },
+    {
+      "page": "stata009",
+      "id": "#twoway-anova02",
+      "pic": "../assets/images/twoway-anova02.png"
+    },
+    {
+      "page": "stata009",
+      "id": "#twoway-anova03",
+      "pic": "../assets/images/twoway-anova03.png"
+    },
+    {
+      "page": "stata009",
+      "id": "#twoway-anova04",
+      "pic": "../assets/images/twoway-anova04.png"
+    },
+    {
+      "page": "stata009",
+      "id": "#twoway-anova05",
+      "pic": "../assets/images/twoway-anova05.png"
+    },
+    {
+      "page": "stata009",
+      "id": "#twoway-anova06",
+      "pic": "../assets/images/twoway-anova06.png"
+    },
+    {
+      "page": "stata009",
+      "id": "#twoway-anova07",
+      "pic": "../assets/images/twoway-anova07.png"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "pics": [
+    {
+      "page": "stata006",
+      "id": "#line01",
+      "pic": "../assets/images/line01.png"
+    },
+    {
+      "page": "stata006",
+      "id": "#bar01",
+      "pic": "../assets/images/bar01.png"
+    },
+    {
+      "page": "stata006",
+      "id": "#pie01",
+      "pic": "../assets/images/pie01.png"
+    },
+    {
+      "page": "stata006",
+      "id": "#sca01",
+      "pic": "../assets/images/sca01.png"
+    },
+    {
+      "page": "stata006",
+      "id": "#box01",
+      "pic": "../assets/images/box01.png"
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F8SLV521P4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-F8SLV521P4');
+    </script>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>迴圈</title>
+    <link rel="stylesheet" type="text/css" href="../assets/style/main.css">
+    <script src="https://astalsi401.github.io/jQuery/jquery-1.9.0.min.js"></script>
+</head>
+
+<body>
+    <div id="top"></div>
+    <div id="stataPage" class="sidebar"></div>
+    <div id="plate"></div>
+    <div class="largePic">
+        <div id="pic"></div>
+    </div>
+    <div class="container">
+        <h2 data-type="title_1" id="005">迴圈</h2>
+        <div id="showCode">本頁do file</div>
+        <pre id="code">
+cd data
+use "tscs071 v5.dta", clear
+numlabel _all, add
+ta e2_1
+d e2_*  /*列出所有以e2_開頭的變項*/
+
+/*如果後方文字是有序排列，如英文字母或本資料中的數字，亦可用以下方法*/
+d e2_1-e2_9
+
+forvalues i = 1/9 {
+  cap drop e2r_`i'
+  recode e2_`i' (1=4) (2=3) (95/98=.) (3=2) (4=1), g(e2r_`i')
+}
+
+use "tscs071 v4.dta", clear
+preserve
+foreach w in a b c d e f g h {
+  rename e2`w' e2`w'new
+}
+restore
+
+local i = 1
+foreach w in a b c d e f g h i {
+  cap drop e2_`i'
+  recode e2`w' (1=4) (2=3) (95/98=.) (3=2) (4=1), g(e2_`i')
+  local i = `i'+1
+}
+</pre>
+        <div class="block">
+            <p>在量化分析的過程中，從一開始清理資料、統計分析，到最後輸出結果都少不了大量重複性高的步驟，若能學會利用迴圈處理將使效率大幅提升。</p>
+            <p>以下將做簡單的示範，首先匯入資料，並觀察資料的信息：</p>
+            <pre id="stlog-1" class="stlog"><samp><span class="stinp">. cd data</span>
+<span class="stres">C:\Users\misti\Documents\Stata\unify\data</span>
+
+<span class="stinp">. use "tscs071 v5.dta", clear</span>
+
+<span class="stinp">. numlabel _all, add</span>
+
+<span class="stinp">. ta e2_1</span>
+
+       因為努力不夠 |      Freq.     Percent        Cum.
+--------------------+-----------------------------------
+          1. 很贊成 |<span class="stres">        227       11.13       11.13</span>
+            2. 贊成 |<span class="stres">      1,053       51.62       62.75</span>
+          3. 不贊成 |<span class="stres">        696       34.12       96.86</span>
+        4. 很不贊成 |<span class="stres">         46        2.25       99.12</span>
+     95. 不瞭解題意 |<span class="stres">          3        0.15       99.26</span>
+97. 不知道,無法選擇 |<span class="stres">         13        0.64       99.90</span>
+           98. 拒答 |<span class="stres">          2        0.10      100.00</span>
+--------------------+-----------------------------------
+              Total |<span class="stres">      2,040      100.00</span>
+
+<span class="stinp">. d e2_*  <span class="stcmt">/*列出所有以e2_開頭的變項*/</span></span>
+
+              storage   display    value
+variable name   type    format     label      variable label
+---------------------------------------------------------------------------------------------------------------
+<span class="stres">e2_1           </span> byte    %26.0f     e2a        <span class="stres">因為努力不夠</span>
+<span class="stres">e2_2           </span> byte    %26.0f     e2a        <span class="stres">因為命運不好</span>
+<span class="stres">e2_3           </span> byte    %26.0f     e2a        <span class="stres">因為能力,才智不夠</span>
+<span class="stres">e2_4           </span> byte    %26.0f     e2a        <span class="stres">因為隨意用錢</span>
+<span class="stres">e2_5           </span> byte    %26.0f     e2a        <span class="stres">因為身體不好</span>
+<span class="stres">e2_6           </span> byte    %26.0f     e2a        <span class="stres">因為沒有工作機會</span>
+<span class="stres">e2_7           </span> byte    %26.0f     e2a        <span class="stres">因為社會對他(她)不公平</span>
+<span class="stres">e2_8           </span> byte    %26.0f     e2a        <span class="stres">因為他(她)不願意工作</span>
+<span class="stres">e2_9           </span> byte    %26.0f     e2a        <span class="stres">因為他(她)家庭背景不好</span>
+
+<span class="stinp">. <span class="stcmt">/*</span>
+&gt; <span class="stcmt">如果後方文字是有序排列，如英文字母或本資料中的數字，亦可用以下方法*/</span></span>
+<span class="stinp">. d e2_1-e2_9</span>
+
+              storage   display    value
+variable name   type    format     label      variable label
+---------------------------------------------------------------------------------------------------------------
+<span class="stres">e2_1           </span> byte    %26.0f     e2a        <span class="stres">因為努力不夠</span>
+<span class="stres">e2_2           </span> byte    %26.0f     e2a        <span class="stres">因為命運不好</span>
+<span class="stres">e2_3           </span> byte    %26.0f     e2a        <span class="stres">因為能力,才智不夠</span>
+<span class="stres">e2_4           </span> byte    %26.0f     e2a        <span class="stres">因為隨意用錢</span>
+<span class="stres">e2_5           </span> byte    %26.0f     e2a        <span class="stres">因為身體不好</span>
+<span class="stres">e2_6           </span> byte    %26.0f     e2a        <span class="stres">因為沒有工作機會</span>
+<span class="stres">e2_7           </span> byte    %26.0f     e2a        <span class="stres">因為社會對他(她)不公平</span>
+<span class="stres">e2_8           </span> byte    %26.0f     e2a        <span class="stres">因為他(她)不願意工作</span>
+<span class="stres">e2_9           </span> byte    %26.0f     e2a        <span class="stres">因為他(她)家庭背景不好</span>
+</samp></pre>
+            <p><b><code>forvalues</code></b></p>
+            <p>適合用於將數字代入，例如：</p>
+            <p>利用迴圈反向編碼，並將95到98定義為遺失值</p>
+            <pre id="stlog-2" class="stlog"><samp><span class="stinp">. forvalues i = 1/9 {</span>
+  2<span class="stinp">.         cap drop e2r_`i'</span>
+  3<span class="stinp">.         recode e2_`i' (1=4) (2=3) (95/98=.) (3=2) (4=1), g(e2r_`i')</span>
+  4<span class="stinp">. }</span>
+(2040 differences between e2_1 and e2r_1)
+(2040 differences between e2_2 and e2r_2)
+(2040 differences between e2_3 and e2r_3)
+(2040 differences between e2_4 and e2r_4)
+(2040 differences between e2_5 and e2r_5)
+(2040 differences between e2_6 and e2r_6)
+(2040 differences between e2_7 and e2r_7)
+(2040 differences between e2_8 and e2r_8)
+(2040 differences between e2_9 and e2r_9)
+</samp></pre>
+            <p><b><code>foreach</code></b></p>
+            <p>適合用於將文字代入，例如：</p>
+            <p>利用迴圈重新命名變項</p>
+            <pre id="stlog-3" class="stlog"><samp><span class="stinp">. use "tscs071 v4.dta", clear</span>
+
+<span class="stinp">. preserve</span>
+
+<span class="stinp">. foreach w in a b c d e f g h {</span>
+  2<span class="stinp">.         rename e2`w' e2`w'new</span>
+  3<span class="stinp">. }</span>
+
+<span class="stinp">. restore</span>
+</samp></pre>
+            <p><b>其他範例：</b></p>
+            <p>在迴圈中放入兩個變數</p>
+            <pre id="stlog-4" class="stlog"><samp><span class="stinp">. local i = 1</span>
+
+<span class="stinp">. foreach w in a b c d e f g h i {</span>
+  2<span class="stinp">.         cap drop e2_`i'</span>
+  3<span class="stinp">.         recode e2`w' (1=4) (2=3) (95/98=.) (3=2) (4=1), g(e2_`i')</span>
+  4<span class="stinp">.         local i = `i'+1</span>
+  5<span class="stinp">. }</span>
+(2040 differences between e2a and e2_1)
+(2040 differences between e2b and e2_2)
+(2040 differences between e2c and e2_3)
+(2040 differences between e2d and e2_4)
+(2040 differences between e2e and e2_5)
+(2040 differences between e2f and e2_6)
+(2040 differences between e2g and e2_7)
+(2040 differences between e2h and e2_8)
+(2040 differences between e2i and e2_9)
+</samp></pre>
+        </div>
+    </div>
+    <script>
+        const requestURL = '../assets/js/json/data.json'
+    </script>
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+{
+  "pics": [
+    {
+      "page": "stata013",
+      "id": "#reg01",
+      "pic": "../assets/images/reg01.png"
+    },
+    {
+      "page": "stata013",
+      "id": "#reg02",
+      "pic": "../assets/images/reg02.png"
+    },
+    {
+      "page": "stata013",
+      "id": "#reg03",
+      "pic": "../assets/images/reg03.png"
+    }
+  ]
+}

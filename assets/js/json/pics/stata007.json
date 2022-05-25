@@ -1,0 +1,19 @@
+{
+  "pics": [
+    {
+      "page": "stata007",
+      "id": "#normal-curve",
+      "pic": "../assets/images/normal-curve.png"
+    },
+    {
+      "page": "stata007",
+      "id": "#tabplot01",
+      "pic": "../assets/images/tabplot01.png"
+    },
+    {
+      "page": "stata007",
+      "id": "#kdnesity01",
+      "pic": "../assets/images/kdnesity01.png"
+    }
+  ]
+}

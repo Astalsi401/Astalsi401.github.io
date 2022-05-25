@@ -1,0 +1,50 @@
+{
+  "pics": [
+    {
+      "page": "r003",
+      "id": "#r003_1",
+      "pic": "../assets/images/r003_1.png"
+    },
+    {
+      "page": "r003",
+      "id": "#r003_2",
+      "pic": "../assets/images/r003_2.png"
+    },
+    {
+      "page": "r003",
+      "id": "#r003_3",
+      "pic": "../assets/images/r003_3.png"
+    },
+    {
+      "page": "r003",
+      "id": "#r003_4",
+      "pic": "../assets/images/r003_4.png"
+    },
+    {
+      "page": "r003",
+      "id": "#r003_5",
+      "pic": "../assets/images/r003_5.png"
+    },
+    {
+      "page": "r003",
+      "id": "#r003_6",
+      "pic": "../assets/images/r003_6.png"
+    },
+    {
+      "id": "#betweenness_centrality",
+      "pic": "../assets/images/betweenness_centrality.png"
+    },
+    {
+      "id": "#degree_centrality",
+      "pic": "../assets/images/degree_centrality.png"
+    },
+    {
+      "id": "#closeness_centrality",
+      "pic": "../assets/images/closeness_centrality.png"
+    },
+    {
+      "id": "#density",
+      "pic": "../assets/images/density.png"
+    }
+  ]
+}

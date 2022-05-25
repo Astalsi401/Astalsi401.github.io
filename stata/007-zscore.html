@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F8SLV521P4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-F8SLV521P4');
+    </script>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>z-score</title>
+    <link rel="stylesheet" type="text/css" href="../assets/style/main.css">
+    <script src="https://astalsi401.github.io/jQuery/jquery-1.9.0.min.js"></script>
+</head>
+
+<body>
+    <div id="top"></div>
+    <div id="stataPage" class="sidebar"></div>
+    <div id="plate"></div>
+    <div class="largePic">
+        <div id="pic"></div>
+    </div>
+    <div class="container">
+        <h2 data-type="title_1" id="007">007. z-socre</h2>
+        <div id="showCode">本頁do file</div>
+        <pre id="code">
+twoway (function y=normalden(x) , range(-4 4)        ///
+  droplines(-2 -1 0 1 2)),                       ///
+  title("常態分配曲線")                         ///
+  plotregion(margin(zero))                       ///
+  yscale(off) ylabel(, nogrid)                   ///
+  xlabel(-4 -3 -2 -1 0 1 2 3 4, format(%4.2f))       ///
+  xtitle("Standard deviations") 
+graph export "normal curve.png", replace
+cd "C:/Users/misti/Documents/Stata/unify/temp"
+
+clear
+input s3
+1
+2
+3
+4
+5
+6
+end
+save d0, replace
+
+forv x = 0/5 {
+  forv i = 1/6 {
+    clear
+    use d`x'
+    cap drop s2
+    g s2 = `i'
+    save d`i', replace
+  }
+}
+
+use d1
+
+forvalues i = 2 (1) 6 {
+  append using d`i'
+}
+
+save d0, replace
+
+forv x = 0/5 {
+  forv i = 1/6 {
+    clear
+    use d`x'
+    cap drop s1
+    g s1 = `i'
+    save d`i', replace
+  }
+}
+
+use d1
+
+forvalues i = 2 (1) 6 {
+  append using d`i'
+}
+
+cd "C:/Users/misti/Documents/Stata/unify"
+egen mean=rowmean(s1 s2 s3)
+tabplot mean
+graph export "tabplot01.png", replace
+
+kdensity mean, normal
+graph export "kdnesity01.png", replace
+
+clear
+input x freq
+1 21
+2 32 
+3 22
+4 17
+5 13
+6 8
+7 4
+8 3
+end
+expand freq
+
+su x, d
+sca se=r(sd)/sqrt(r(N))
+
+*95% CI
+sca tscore95=invttail(120-1, 0.05/2)
+sca ME95=tscore95*se
+di r(mean)-ME95
+di r(mean)+ME95
+
+*99% CI
+sca tscore99=invttail(120-1, 0.01/2)
+sca ME99=tscore99*se
+di r(mean)-ME99
+di r(mean)+ME99
+
+clear
+set obs 100000
+set seed 1 
+g grade = int(floor((101)*runiform()+0))
+su grade, d
+
+zcalc 70 50.10906 29.11979
+di 100000*(1-normal(.68))
+
+/*
+di normal(.68) = .75174777  求出由-∞ 到Z=0.68的累積面積（機率）=75.17
+di invnormal(.75174777) = .68  求出累積機率為0.75174777時的Z分數
+*/
+</pre>
+        <div class="block">
+            <h3 data-type="title_2" id="7-1">常態分配曲線</h3>
+            <pre id="stlog-18" class="stlog"><samp>
+<span class="stinp">. twoway (function y=normalden(x) , range(-4 4)        <span class="stcmt">///</span>
+&gt;         droplines(-2 -1 0 1 2)),                       <span class="stcmt">///</span>
+&gt;         title("常態分配曲線")                         <span class="stcmt">///</span>
+&gt;         plotregion(margin(zero))                       <span class="stcmt">///</span>
+&gt;         yscale(off) ylabel(, nogrid)                   <span class="stcmt">///</span>
+&gt;         xlabel(-4 -3 -2 -1 0 1 2 3 4, format(%4.2f))       <span class="stcmt">///</span>
+&gt;         xtitle("Standard deviations") </span>
+
+<span class="stinp">. graph export "normal curve.png", replace</span>
+(file normal curve.png written in PNG format)
+      </samp></pre>
+            <div class="img-block">
+                <img id="normal-curve" src="" alt="">
+            </div>
+            <p><b>Kernel density estimation</b></p>
+            <p>利用迴圈快速建立規律的資料檔</p>
+            <pre id="stlog-19" class="stlog"><samp>
+<span class="stinp">. cd "C:/Users/misti/Documents/Stata/unify/temp"</span>
+<span class="stres">C:\Users\misti\Documents\Stata\unify\temp</span>
+
+<span class="stinp">. clear</span>
+
+<span class="stinp">. input s3</span>
+
+     s3
+  1. 1
+  2. 2
+  3. 3
+  4. 4
+  5. 5
+  6. 6
+  7. end
+
+<span class="stinp">. save d0, replace</span>
+file d0.dta saved
+
+<span class="stinp">. </span>
+<span class="stinp">. forv x = 0/5 {</span>
+  2<span class="stinp">.         forv i = 1/6 {</span>
+  3<span class="stinp">.                 clear</span>
+  4<span class="stinp">.                 use d`x'</span>
+  5<span class="stinp">.                 cap drop s2</span>
+  6<span class="stinp">.                 g s2 = `i'</span>
+  7<span class="stinp">.                 save d`i', replace</span>
+  8<span class="stinp">.         }</span>
+  9<span class="stinp">. }</span>
+file d1.dta saved
+file d2.dta saved
+file d3.dta saved
+file d4.dta saved
+file d5.dta saved
+file d6.dta saved
+file d1.dta saved
+file d2.dta saved
+file d3.dta saved
+file d4.dta saved
+file d5.dta saved
+file d6.dta saved
+file d1.dta saved
+file d2.dta saved
+file d3.dta saved
+file d4.dta saved
+file d5.dta saved
+file d6.dta saved
+file d1.dta saved
+file d2.dta saved
+file d3.dta saved
+file d4.dta saved
+file d5.dta saved
+file d6.dta saved
+file d1.dta saved
+file d2.dta saved
+file d3.dta saved
+file d4.dta saved
+file d5.dta saved
+file d6.dta saved
+file d1.dta saved
+file d2.dta saved
+file d3.dta saved
+file d4.dta saved
+file d5.dta saved
+file d6.dta saved
+<span class="stinp">. use d1</span>
+
+<span class="stinp">. forvalues i = 2 (1) 6 {</span>
+  2<span class="stinp">.         append using d`i'</span>
+  3<span class="stinp">. }</span>
+
+<span class="stinp">. save d0, replace</span>
+file d0.dta saved
+
+<span class="stinp">. </span>
+<span class="stinp">. forv x = 0/5 {</span>
+  2<span class="stinp">.         forv i = 1/6 {</span>
+  3<span class="stinp">.                 clear</span>
+  4<span class="stinp">.                 use d`x'</span>
+  5<span class="stinp">.                 cap drop s1</span>
+  6<span class="stinp">.                 g s1 = `i'</span>
+  7<span class="stinp">.                 save d`i', replace</span>
+  8<span class="stinp">.         }</span>
+  9<span class="stinp">. }</span>
+file d1.dta saved
+file d2.dta saved
+file d3.dta saved
+file d4.dta saved
+file d5.dta saved
+file d6.dta saved
+file d1.dta saved
+file d2.dta saved
+file d3.dta saved
+file d4.dta saved
+file d5.dta saved
+file d6.dta saved
+file d1.dta saved
+file d2.dta saved
+file d3.dta saved
+file d4.dta saved
+file d5.dta saved
+file d6.dta saved
+file d1.dta saved
+file d2.dta saved
+file d3.dta saved
+file d4.dta saved
+file d5.dta saved
+file d6.dta saved
+file d1.dta saved
+file d2.dta saved
+file d3.dta saved
+file d4.dta saved
+file d5.dta saved
+file d6.dta saved
+file d1.dta saved
+file d2.dta saved
+file d3.dta saved
+file d4.dta saved
+file d5.dta saved
+file d6.dta saved
+
+<span class="stinp">. use d1</span>
+
+<span class="stinp">. forvalues i = 2 (1) 6 {</span>
+  2<span class="stinp">.         append using d`i'</span>
+  3<span class="stinp">. }</span>
+
+<span class="stinp">. </span>
+        <span class="stinp">. cd "C:/Users/misti/Documents/Stata/unify"</span>
+<span class="stres">C:\Users\misti\Documents\Stata\unify</span>
+
+<span class="stinp">. egen mean=rowmean(s1 s2 s3)</span>
+
+<span class="stinp">. tabplot mean</span>
+
+<span class="stinp">. graph export "tabplot01.png", replace</span>
+(file tabplot01.png written in PNG format)
+
+<span class="stinp">. kdensity mean, normal</span>
+
+<span class="stinp">. graph export "kdnesity01.png", replace</span>
+(file kdnesity01.png written in PNG format)
+      </samp></pre>
+            <div class="img-block"><img id="tabplot01" src="" alt=""></div>
+            <div class="img-block"><img id="kdnesity01" src="" alt=""></div>
+        </div>
+        <div class="block">
+            <h3 data-type="title_2" id="7-2">t score</h3>
+            <pre id="stlog-20" class="stlog"><samp>
+<span class="stinp">. clear</span>
+
+<span class="stinp">. input x freq</span>
+
+    x freq
+ 1. 1 21
+ 2. 2 32 
+ 3. 3 22
+ 4. 4 17
+ 5. 5 13
+ 6. 6 8
+ 7. 7 4
+ 8. 8 3
+ 9. end
+
+<span class="stinp">. expand freq</span>
+(112 observations created)
+
+<span class="stinp">. su x, d</span>
+
+                              x
+-------------------------------------------------------------
+      Percentiles      Smallest
+ 1%    <span class="stres">        1              1</span>
+ 5%    <span class="stres">        1              1</span>
+10%    <span class="stres">        1              1       </span>Obs         <span class="stres">        120</span>
+25%    <span class="stres">        2              1       </span>Sum of Wgt. <span class="stres">        120</span>
+
+50%    <span class="stres">        3                      </span>Mean          <span class="stres">      3.2</span>
+        <span class="stres">                        </span>Largest       Std. Dev.     <span class="stres"> 1.813117</span>
+75%    <span class="stres">        4              7</span>
+90%    <span class="stres">        6              8       </span>Variance      <span class="stres"> 3.287395</span>
+95%    <span class="stres">        7              8       </span>Skewness      <span class="stres"> .7536421</span>
+99%    <span class="stres">        8              8       </span>Kurtosis      <span class="stres"> 2.838571</span>
+
+<span class="stinp">. sca se=r(sd)/sqrt(r(N))</span>
+
+<span class="stinp">. <span class="stcmt">*95% CI</span></span>
+<span class="stinp">. sca tscore95=invttail(120-1, 0.05/2)</span>
+
+<span class="stinp">. sca ME95=tscore95*se</span>
+
+<span class="stinp">. di r(mean)-ME95</span>
+<span class="stres">2.8722653</span>
+
+<span class="stinp">. di r(mean)+ME95</span>
+<span class="stres">3.5277347</span>
+
+<span class="stinp">. <span class="stcmt">*99% CI</span></span>
+<span class="stinp">. sca tscore99=invttail(120-1, 0.01/2)</span>
+
+<span class="stinp">. sca ME99=tscore99*se</span>
+
+<span class="stinp">. di r(mean)-ME99</span>
+<span class="stres">2.7667208</span>
+
+<span class="stinp">. di r(mean)+ME99</span>
+<span class="stres">3.6332792</span>
+      </samp></pre>
+        </div>
+        <div class="block">
+            <h3 data-type="title_2" id="7-3"><code>zcalc</code>的使用方法</h3>
+            <p>建立亂數成績資料</p>
+            <pre id="stlog-21" class="stlog"><samp>
+<span class="stinp">. clear</span>
+
+<span class="stinp">. set obs 100000</span>
+number of observations (_N) was 0, now 100,000
+
+<span class="stinp">. set seed 1 </span>
+
+<span class="stinp">. g grade = int(floor((101)*runiform()+0))</span>
+
+<span class="stinp">. su grade, d</span>
+
+                            grade
+-------------------------------------------------------------
+      Percentiles      Smallest
+ 1%    <span class="stres">        0              0</span>
+ 5%    <span class="stres">        5              0</span>
+10%    <span class="stres">       10              0       </span>Obs         <span class="stres">    100,000</span>
+25%    <span class="stres">       25              0       </span>Sum of Wgt. <span class="stres">    100,000</span>
+
+50%    <span class="stres">       50                      </span>Mean          <span class="stres"> 50.10906</span>
+<span class="stres">                        </span>Largest       Std. Dev.     <span class="stres"> 29.11979</span>
+75%    <span class="stres">       75            100</span>
+90%    <span class="stres">       90            100       </span>Variance      <span class="stres"> 847.9622</span>
+95%    <span class="stres">       95            100       </span>Skewness      <span class="stres">-.0053086</span>
+99%    <span class="stres">       99            100       </span>Kurtosis      <span class="stres">  1.80178</span>
+      </samp></pre>
+            <p><b>求70分者高於多少人?<code>zcalc X mean sd</code></b></p>
+            <pre id="stlog-22" class="stlog"><samp>
+<span class="stinp">. zcalc 70 50.10906 29.11979</span>
+
+z-score for sample observations
+
+      (X - m)       (70 - 50.10906)
+ z = ---------  =  ------------------  =  0.68
+         s              29.11979
+
+<span class="stinp">. di 100000*(1-normal(.68))</span>
+<span class="stres">24825.223</span>
+
+<span class="stinp">. <span class="stcmt">/*</span>
+&gt; <span class="stcmt">di normal(.68) = .75174777  求出由-∞ 到Z=0.68的累積面積（機率）=75.17</span>
+&gt; <span class="stcmt">di invnormal(.75174777) = .68  求出累積機率為0.75174777時的Z分數</span>
+&gt; <span class="stcmt">*/</span></span>
+      </samp></pre>
+        </div>
+    </div>
+    <script>
+        const requestURL = '../assets/js/json/data.json'
+        const picsUrl = '../assets/js/json/pics/stata007.json'
+    </script>
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

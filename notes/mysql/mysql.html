@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F8SLV521P4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-F8SLV521P4');
+    </script>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>MySQL</title>
+    <link rel="stylesheet" href="../../assets/style/main.css">
+    <script src="https://astalsi401.github.io/jQuery/jquery-1.9.0.min.js"></script>
+</head>
+
+<body>
+    <div id="top"></div>
+    <div id="notesPage" class="sidebar"></div>
+    <div id="plate"></div>
+    <div class="largePic">
+        <div id="pic"></div>
+    </div>
+    <div class="container">
+        <h1>MySQL使用筆記</h1>
+        <div class="block">
+            <h2>設定</h2>
+            <ol>
+                <li>
+                    安裝後，新增路徑至環境變數 > 系統變數 > PATH
+                </li>
+                <li>新增my.ini至安裝目錄，內容為</li>
+                <pre>
+[client]
+# 設定客戶端mysql編碼
+default-character-set=utf8
+ 
+[mysqld]
+# 設定3306端口
+port = 3306
+# 設定mysql安裝目錄
+basedir=D:\\Tools\\mysql-8.0.27-winx64
+# 允許最大連接數
+max_connections=20
+# 設定服務端編碼
+character-set-server=utf8
+# 創建新表時使用默認儲存引擎
+default-storage-engine=INNODB
+            </pre>
+                <li>初始化數據庫，執行後將輸出默認密碼</li>
+                <pre>mysqld --initialize --console</pre>
+                <li>安裝</li>
+                <pre>mysqld install</pre>
+                <li>啟動</li>
+                <pre>net start mysql</pre>
+                <li>登錄數據庫</li>
+                <pre>mysql -h 主機名 -u 用戶名 -p</pre>
+                <li>登錄本機數據庫</li>
+                <pre>mysql -u root -p</pre>
+            </ol>
+        </div>
+        <div class="block">
+            <h2>常用指令</h2>
+            <ol>
+                <li>mysql啟動時使用系統指令需加上<code>system</code>，例如：</li>
+                <pre>system pwd</pre>
+            </ol>
+        </div>
+    </div>
+    <script>
+        const requestURL = '../../assets/js/json/data.json'
+    </script>
+    <script src="../../assets/js/main.js"></script>
+</body>
+
+</html>
