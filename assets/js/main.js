@@ -31,7 +31,7 @@ let writeContents = () => {
         });
         $(".page").click(function () {
           $(this).parent().find("ul").slideToggle("200ms");
-          $(this).find("span").toggleClass("rotate");
+          $(this).find("span").toggleClass("active");
         });
       });
   },
@@ -97,6 +97,12 @@ let writeContents = () => {
             return this.parentNode;
           }
         );
+      $(".order-table thead th span").removeClass();
+      if (inverse) {
+        $(this).find("span").addClass("descend");
+      } else {
+        $(this).find("span").addClass("ascend");
+      }
       inverse = !inverse;
     });
   },
@@ -146,5 +152,5 @@ $(document).ready(() => {
     $(".tags div.active").css("left", `calc(${index} * 100% / (${$(this).parent().find("li").size()}))`);
     $(".switch").css("left", `calc(${index} * -100%)`);
   });
-  $(".light-table-filter").on("input", tableFilter);
+  $(".table-filter").on("input", tableFilter);
 });

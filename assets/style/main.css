@@ -169,15 +169,14 @@ samp {
 
 pre {
   display: block;
-  padding: 2px;
+  padding: 25px 2px 2px 2px;
   background: rgba(var(--black), var(--code-bg));
   border: 1px solid rgb(var(--gray));
   border-radius: 5px;
-  max-height: 800px;
   margin: 20px auto;
-  overflow: auto;
 }
 pre#code {
+  margin: 0 auto;
   background: rgb(var(--white));
   height: 0;
   width: 0;
@@ -186,8 +185,9 @@ pre#code {
   opacity: 0;
 }
 pre#code.active {
+  margin: 20px auto;
   transition: 0.4s;
-  height: 80vh;
+  height: min(600px, 60vh);
   width: 100%;
   overflow: auto;
   opacity: 1;
@@ -197,10 +197,13 @@ pre:not([class]) {
 }
 pre code,
 pre samp {
-  padding: 0px 10px;
-  white-space: pre;
   background: transparent;
   border: none;
+  display: block;
+  height: 100%;
+  overflow: auto;
+  padding: 0px 10px;
+  white-space: pre;
 }
 
 kbd {
@@ -254,6 +257,25 @@ table.order-table {
   text-align: center;
   font-size: 0.6rem;
 }
+table.order-table thead th {
+  position: relative;
+}
+table.order-table thead th span {
+  position: absolute;
+  top: 45%;
+  margin-left: 5px;
+  border-style: solid;
+  border-width: 3px 3px 0 3px;
+  border-color: rgba(var(--black), var(--translucent)) transparent transparent transparent;
+  transition: 0.4s;
+}
+table.order-table thead th .ascend,
+table.order-table thead th .descend {
+  border-color: rgba(var(--black)) transparent transparent transparent;
+}
+table.order-table thead th .ascend {
+  transform: rotate(180deg);
+}
 table.order-table tr {
   cursor: pointer;
   background: rgba(var(--white), var(--transparent));
@@ -263,8 +285,8 @@ table.order-table tr:hover {
 }
 table.order-table th,
 table.order-table td {
-  padding: 20px 5px;
-  min-width: 40px;
+  padding: 15px 10px;
+  min-width: 50px;
 }
 /* 輸入框 */
 input.table-filter {
@@ -322,7 +344,7 @@ input.table-filter {
   cursor: pointer;
   position: absolute;
   top: 3px;
-  right: 6px;
+  right: 2px;
   background: rgba(0, 0, 0, 0.4);
   width: 15px;
   height: 18px;
@@ -360,14 +382,14 @@ input.table-filter {
 }
 .page span {
   position: absolute;
+  right: 10px;
+  top: 45%;
   border-style: solid;
   border-width: 7px 7px 0 7px;
   border-color: rgb(var(--blue)) transparent transparent transparent;
-  right: 10px;
-  top: 45%;
   transition: 0.4s;
 }
-.page span.rotate {
+.page span.active {
   transform: rotate(180deg);
 }
 .page:hover {

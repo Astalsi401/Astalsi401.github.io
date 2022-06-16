@@ -26,7 +26,7 @@
     <div class="container">
         <h2 data-type="title_1" id="015">邏輯分析（Logistic Analysis）</h2>
         <div id="showCode">本頁do file</div>
-        <pre id="code">
+        <pre id="code"><code>
 cd data
 use "tracking.dta", clear
 cd ..
@@ -51,7 +51,7 @@ ta prob
 
 margins, at(atrack=(0 1))
 
-logit college atrack male gpa chinese, or  /*or:以odds ratio顯示，預設為對數*/
+logit college atrack male gpa chinese, or /*or:以odds ratio顯示，預設為對數*/
 /*Pseudo R2: 可解釋的改變量*/
 
 margins, at(gpa=(2(.5)4) atrack=(0 1)) atmeans /*繪圖*/
@@ -64,8 +64,8 @@ ta healthre
 ologit healthre i.maritals age educ i.male
 
 forvalue i=1/4{
-    margins, at(age=(20(5)60) educ=(6)) atmeans predict(outcome(`i'))
-    matrix b`i'=r(b)'  /*建立名為b1~b4的矩陣以儲存healthre中的資料*/
+margins, at(age=(20(5)60) educ=(6)) atmeans predict(outcome(`i'))
+matrix b`i'=r(b)' /*建立名為b1~b4的矩陣以儲存healthre中的資料*/
 }
 
 cd data
@@ -75,23 +75,24 @@ numlabel _all, add
 ta occ
 mlogit occ white ed exper, base(5) nolog rrr /*以occ的第五項（Prof）作為比較對項*/
 
-margins, at(ed=(3(1)20) white=(0 1)) atmeans predict(outcome(1))   /* atmeans:沒有出現在這便的變項全部採用平均值 */
+margins, at(ed=(3(1)20) white=(0 1)) atmeans predict(outcome(1)) /* atmeans:沒有出現在這便的變項全部採用平均值 */
 
 marginsplot, noci title("種族與成為低階工人的機率") ///
-    xlabel(3(1)20) ylabel(0(0.1)0.4, angle(0))
-graph export logit03.png, replace 
+xlabel(3(1)20) ylabel(0(0.1)0.4, angle(0))
+graph export logit03.png, replace
 
 eststo clear
 eststo M1: mlogit occ white, base(5) nolog rrr
 eststo M2: mlogit occ white ed exper, base(5) nolog rrr
 esttab M1 M2, eform se scalars(ll aic bic) mtitles label legend style(fixed) ///
-    varwidth(35) modelwidth(10)   ///
-    starlevels(* .05 ** .01 *** 0.001)
+varwidth(35) modelwidth(10) ///
+starlevels(* .05 ** .01 *** 0.001)
 
 esttab M1 M2 using mlogit01.csv, eform se mtitles legend style(fixed) ///
-    varwidth(35) modelwidth(10)  ///
-    starlevels(* .05 ** .01 *** 0.001) replace
-</pre>
+varwidth(35) modelwidth(10) ///
+starlevels(* .05 ** .01 *** 0.001) replace
+
+        </code></pre>
         <div class="block">
             <h3 data-type="title_2" id="15-1">Odds Ratio</h3>
             <p>在logistic analysis分析中，應變項必須是0或者1（有/無、是/否），自變項可以使用類別變項，也可以使用連續變項。所得到的結果更可以轉換成為機率（Odds Ratio）的概念解讀。</p>
