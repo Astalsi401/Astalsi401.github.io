@@ -292,7 +292,8 @@ graph export "box01.png", replace
                         <li><code>xtitle("")</code>：X軸標題<br></li>
                         <li><code>ytitle("")</code>：Y軸標題<br></li>
                         <li><code>ytitle("", orientation(horizontal))</code>：橫向標題<br></li>
-                        <li><code>ytitle("", height(-60))</code>：Y軸標題上移60<br></li>
+                        <li><code>ytitle("", height(-60))</code>：Y軸標題區塊高度-60，區塊變短，文字會向上移動<br></li>
+                        <li><code>ytitle("", placement(nw))</code>：移動標題位置，<code>nw</code>代表左上角(north, west)，詳細位置看<a href="https://www.stata.com/manuals/g-3added_text_options.pdf#g-3added_text_optionsOptions">Options for adding text to twoway graphs</a></li>
                     </ul>
                 </li>
                 <li>設定刻度
@@ -306,6 +307,7 @@ graph export "box01.png", replace
                 <li>設定圖例
                     <ul>
                         <li><code>legend(label(1 "分類1") label(2 "分類2"))</code>：設定圖例名稱，Y變項有多個分類時可用，此處的1並非資料檔中的分類編碼，而是製作圖表時畫上去的順序。</li>
+                        <li><code>legend(c(2))</code>：圖例內容兩兩並排(column = 2)，也可使用<code>r(#)</code># = 正整數</li>
                         <li><code>legend(pos(6))</code>：代表圖例出現的位置，以時鐘上的數字為方向。</li>
                         <li><code>legend(symx(*0.25))</code>：圖例尺寸，<code>*0.25</code>代表0.25倍。</li>
                     </ul>

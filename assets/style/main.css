@@ -1,4 +1,17 @@
 @charset "UTF-8";
+:root {
+  --white: 255, 255, 255;
+  --gray: 204, 204, 204;
+  --black: 0, 0, 0;
+  --blue: 55, 67, 121;
+  --blue-link: 0, 0, 143;
+  --blue-link-visited: 160, 160, 255;
+  --red: 148, 0, 0;
+  --transparent: 0;
+  --translucent: 0.3;
+  --code-bg: 0.08;
+}
+
 div.largePic div#pic img, div.img-block, div.sidebar, table.order-table th img,
 table.order-table td img {
   -webkit-user-select: none;
@@ -13,20 +26,22 @@ table.order-table td img {
   -ms-text-size-adjust: 100%;
   padding: 0;
   margin: 0;
+  /* firefox */
+  scrollbar-width: thin;
 }
 *::-webkit-scrollbar {
   width: 5px;
   height: 5px;
 }
 *::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0);
+  background: rgba(var(--white), var(--transparent));
 }
 *::-webkit-scrollbar-thumb {
-  background: #cccccc;
+  background: rgb(var(--gray));
   border-radius: 2.5px;
 }
 *::-webkit-scrollbar-thumb:hover {
-  background: #374379;
+  background: rgb(var(--blue));
 }
 
 h1 {
@@ -52,10 +67,10 @@ h5 {
 
 a {
   text-decoration: none;
-  color: #00008f;
+  color: rgb(var(--blue-link));
 }
 a:visited {
-  color: #a0a0ff;
+  color: rgb(var(--blue-link-visited));
 }
 
 ul,
@@ -71,6 +86,7 @@ ol li {
 body {
   font-size: 18px;
   line-height: 1.5;
+  font-family: Microsoft JhengHei, sans-serif;
 }
 
 /*一般頁面*/
@@ -80,7 +96,7 @@ body {
   min-height: 100vh;
   margin: 0 auto;
   padding: 80px 10px;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 30px rgba(var(--black), var(--code-bg));
 }
 
 /*目錄頁面*/
@@ -109,12 +125,12 @@ body {
   transition: 0.4s;
 }
 .content ul li a:hover {
-  background: #374379;
-  color: white;
+  background: rgb(var(--blue));
+  color: rgb(var(--white));
   padding-left: 15px;
 }
 .content ul li ul {
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid rgb(var(--gray));
   display: none;
 }
 .content ul li ul li a {
@@ -122,10 +138,10 @@ body {
   padding-left: 20px;
 }
 .content ul li ul li:hover {
-  background: #374379;
+  background: rgb(var(--blue));
 }
 .content ul li ul li:hover a {
-  color: white;
+  color: rgb(var(--white));
   padding-left: 25px;
 }
 
@@ -134,7 +150,6 @@ kbd,
 pre,
 samp {
   font-size: 14px;
-  font-family: monospace;
 }
 
 pre,
@@ -145,21 +160,21 @@ code {
 code,
 samp {
   border-radius: 1px;
-  background: rgba(0, 0, 0, 0.08);
+  background: rgba(var(--black), var(--code-bg));
 }
 
 pre {
   display: block;
   padding: 2px;
-  background: rgba(0, 0, 0, 0.08);
-  border: 1px solid #cccccc;
+  background: rgba(var(--black), var(--code-bg));
+  border: 1px solid rgb(var(--gray));
   border-radius: 5px;
   max-height: 800px;
   margin: 20px auto;
   overflow: auto;
 }
 pre#code {
-  background: white;
+  background: rgb(var(--white));
   height: 0;
   width: 0;
   transition: 0.4s;
@@ -174,7 +189,7 @@ pre#code.active {
   opacity: 1;
 }
 pre:not([class]) {
-  background: white;
+  background: rgb(var(--white));
 }
 pre code,
 pre samp {
@@ -187,10 +202,10 @@ pre samp {
 kbd {
   display: inline-block;
   border-radius: 3px;
-  box-shadow: 1px 1px 1px black;
+  box-shadow: 1px 1px 1px rgb(var(--black));
   padding: 0px 4px;
   margin: 2px;
-  background: rgba(0, 0, 0, 0.08);
+  background: rgba(var(--black), var(--code-bg));
 }
 
 img {
@@ -215,20 +230,20 @@ tr {
 /*表格*/
 table {
   border-collapse: collapse;
-  border: 1px solid #cccccc;
+  border: 1px solid rgb(var(--gray));
 }
 table th,
 table td {
   padding: 5px 7px;
 }
 table tr {
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid rgb(var(--gray));
 }
 table tr.header, table tr:hover {
-  background: rgba(0, 0, 0, 0.08);
+  background: rgba(var(--black), var(--code-bg));
 }
 table tr:nth-child(even) {
-  background: rgba(0, 0, 0, 0.08);
+  background: rgba(var(--black), var(--code-bg));
 }
 table.order-table {
   width: calc(100% - 2px);
@@ -237,10 +252,10 @@ table.order-table {
 }
 table.order-table tr {
   cursor: pointer;
-  background: rgba(0, 0, 0, 0);
+  background: rgba(var(--white), var(--transparent));
 }
 table.order-table tr:hover {
-  background: rgba(0, 0, 0, 0.08);
+  background: rgba(var(--black), var(--code-bg));
 }
 table.order-table th,
 table.order-table td {
@@ -251,7 +266,7 @@ table.order-table td {
 input.table-filter {
   display: block;
   font-size: 18px;
-  border: 1px solid #cccccc;
+  border: 1px solid rgb(var(--gray));
   padding: 12px 20px;
   margin: 20px auto 0px;
 }
@@ -308,7 +323,7 @@ input.table-filter {
   width: 15px;
   height: 18px;
   border-radius: 15%;
-  border: white solid 0.5px;
+  border: rgb(var(--white)) solid 0.5px;
   box-shadow: -2px -2px 0 rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: center;
@@ -317,23 +332,23 @@ input.table-filter {
 .copy::before, .copy::after {
   content: "";
   position: absolute;
-  background: white;
+  background: rgb(var(--white));
   width: 78%;
   height: 2px;
 }
 .copy::before {
   transform: translateY(-5px);
-  box-shadow: 0 5px 0 white;
+  box-shadow: 0 5px 0 rgb(var(--white));
 }
 .copy::after {
   transform: translateY(5px);
 }
 .copy:hover {
-  background: black;
-  box-shadow: -2px -2px 0 black;
+  background: rgb(var(--black));
+  box-shadow: -2px -2px 0 rgb(var(--black));
 }
 .copy:active {
-  box-shadow: -1px -1px 0 black;
+  box-shadow: -1px -1px 0 rgb(var(--black));
 }
 
 .page {
@@ -343,7 +358,7 @@ input.table-filter {
   position: absolute;
   border-style: solid;
   border-width: 7px 7px 0 7px;
-  border-color: #374379 transparent transparent transparent;
+  border-color: rgb(var(--blue)) transparent transparent transparent;
   right: 10px;
   top: 45%;
   transition: 0.4s;
@@ -352,11 +367,11 @@ input.table-filter {
   transform: rotate(180deg);
 }
 .page:hover {
-  background: #374379;
-  color: white;
+  background: rgb(var(--blue));
+  color: rgb(var(--white));
 }
 .page:hover span {
-  border-color: white transparent transparent transparent;
+  border-color: rgb(var(--white)) transparent transparent transparent;
 }
 
 .tags {
@@ -385,7 +400,7 @@ input.table-filter {
 .tags div.active {
   position: absolute;
   height: 100%;
-  background: rgba(0, 0, 0, 0.08);
+  background: rgba(var(--black), var(--code-bg));
   box-shadow: 0 -1px 0px rgba(0, 0, 0, 0.1);
   left: 0;
 }
@@ -405,7 +420,7 @@ div.switchBox .switch {
   display: flex;
   flex-direction: row;
   height: max(70vh, 600px);
-  background: rgba(0, 0, 0, 0.08);
+  background: rgba(var(--black), var(--code-bg));
   transition: 0.4s;
 }
 div.switchBox .switch::before, div.switchBox .switch::after {
@@ -416,10 +431,10 @@ div.switchBox .switch::before, div.switchBox .switch::after {
   height: 20px;
 }
 div.switchBox .switch::before {
-  background: linear-gradient(white, rgba(0, 0, 0, 0));
+  background: linear-gradient(rgb(var(--white)), rgba(var(--white), var(--transparent)));
 }
 div.switchBox .switch::after {
-  background: linear-gradient(rgba(0, 0, 0, 0), white);
+  background: linear-gradient(rgba(var(--white), var(--transparent)), rgb(var(--white)));
   bottom: 0;
 }
 div.switchBox .switch div {
@@ -439,15 +454,22 @@ div.sidebar {
   left: max(-400px, -100%);
   width: min(400px, 100%);
   height: calc(100% - 200px);
-  background: rgba(255, 255, 255, 0.5);
   transition: 0.4s;
   overflow: auto;
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
+}
+div.sidebar {
+  background: rgb(var(--white));
+}
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  div.sidebar {
+    background: rgba(var(--white), var(--translucent));
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+  }
 }
 div.sidebar.show {
   left: 0;
-  box-shadow: 0px 0px 9px black;
+  box-shadow: 0px 0px 9px rgb(var(--black));
 }
 div.sidebar div {
   font-size: 24px;
@@ -496,10 +518,10 @@ div.sidebar ul li ul li a {
   width: 85%;
 }
 div.sidebar ul li ul li:hover {
-  background: #374379;
+  background: rgb(var(--blue));
 }
 div.sidebar ul li ul li:hover a {
-  color: white;
+  color: rgb(var(--white));
 }
 div#top {
   /* 網頁上端選單 */
@@ -510,39 +532,46 @@ div#top {
   left: 0px;
   width: 100%;
   height: 38px;
-  background: rgba(250, 250, 250, 0.1);
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
-  box-shadow: 0px 0px 5px black;
+  box-shadow: 0px 0px 5px rgb(var(--black));
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+div#top {
+  background: rgb(var(--white));
+}
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  div#top {
+    background: rgba(var(--white), var(--translucent));
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+  }
 }
 div#top div {
   position: relative;
   cursor: pointer;
   width: 38px;
   height: 38px;
-  background: #374379;
+  background: rgb(var(--blue));
   transition: 0.2s;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 div#top div:hover {
-  background: white;
+  background: rgb(var(--white));
   transition: 0.2s;
 }
 div#top div#sidebarBtn:hover::before, div#top div#sidebarBtn:hover::after {
-  background: #374379;
+  background: rgb(var(--blue));
 }
 div#top div#sidebarBtn:hover::before {
-  box-shadow: 0 10px 0 #374379;
+  box-shadow: 0 10px 0 rgb(var(--blue));
 }
 div#top div#sidebarBtn::before, div#top div#sidebarBtn::after {
   content: "";
   position: absolute;
-  background: white;
+  background: rgb(var(--white));
   transition: 0.2s;
   width: 76%;
   height: 3px;
@@ -550,35 +579,35 @@ div#top div#sidebarBtn::before, div#top div#sidebarBtn::after {
 }
 div#top div#sidebarBtn::before {
   transform: translateY(-10px);
-  box-shadow: 0 10px 0 white;
+  box-shadow: 0 10px 0 rgb(var(--white));
 }
 div#top div#sidebarBtn::after {
   transform: translateY(10px);
 }
 div#top div#sidebarBtn.active {
-  background: #940000;
+  background: rgb(var(--red));
 }
 div#top div#sidebarBtn.active::before {
   transform: translateY(0) rotate(45deg);
-  box-shadow: 0 0 0 white;
+  box-shadow: 0 0 0 rgb(var(--white));
 }
 div#top div#sidebarBtn.active::after {
   transform: translateY(0) rotate(-45deg);
 }
 div#top div#sidebarBtn.active:hover {
-  background: white;
+  background: rgb(var(--white));
 }
 div#top div#sidebarBtn.active:hover::before, div#top div#sidebarBtn.active:hover::after {
-  background: #940000;
+  background: rgb(var(--red));
 }
 div#top div#sidebarBtn.active:hover::before {
-  box-shadow: 0 0 0 #940000;
+  box-shadow: 0 0 0 rgb(var(--red));
 }
 div#home {
   position: relative;
   width: 38px;
   height: 38px;
-  background: #374379;
+  background: rgb(var(--blue));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -595,7 +624,7 @@ div#home::before {
   position: absolute;
   border-style: solid;
   border-width: 0px 12px 12px 12px;
-  border-color: transparent transparent white transparent;
+  border-color: transparent transparent rgb(var(--white)) transparent;
   transform: translateY(-5px);
 }
 div#home::after {
@@ -603,37 +632,37 @@ div#home::after {
   position: absolute;
   width: 13px;
   height: 13px;
-  background: white;
+  background: rgb(var(--white));
   transform: translateY(5px);
 }
 div#home:hover {
-  background: white;
+  background: rgb(var(--white));
 }
 div#home:hover::before {
-  border-color: transparent transparent #374379 transparent;
+  border-color: transparent transparent rgb(var(--blue)) transparent;
 }
 div#home:hover::after {
-  background: #374379;
+  background: rgb(var(--blue));
 }
 div#showCode {
   cursor: pointer;
   font-size: 16px;
-  background: #374379;
-  color: white;
+  background: rgb(var(--blue));
+  color: rgb(var(--white));
   text-align: center;
   width: clamp(90px, 90px, 50%);
   height: 30px;
   line-height: 30px;
-  border: 1px solid white;
+  border: 1px solid rgb(var(--white));
   border-radius: 10px;
   transition: 0.2s;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
   margin: 20px 0;
 }
 div#showCode:hover {
-  background: white;
-  color: #374379;
-  border-color: #374379;
+  background: rgb(var(--white));
+  color: rgb(var(--blue));
+  border-color: rgb(var(--blue));
   transition: 0.2s;
   font-weight: 600;
 }
@@ -725,18 +754,18 @@ div#plate div a.mail::after {
 }
 div#plate div:hover {
   margin-left: 0;
-  background-color: #374379;
+  background-color: rgb(var(--blue));
   transition: 0.4s;
   box-shadow: rgba(55, 67, 121, 0.5) 0 0 10px;
 }
 div#plate div:hover a {
-  color: white;
+  color: rgb(var(--white));
 }
 div#plate div:hover a.mail {
-  background: white;
+  background: rgb(var(--white));
 }
 div#plate div:hover a.mail::before, div#plate div:hover a.mail::after {
-  background: #374379;
+  background: rgb(var(--blue));
 }
 div#sumObj {
   /* FH4 總結 */
@@ -752,10 +781,10 @@ div#sumObj div {
   width: max(280px, 50% - 52px);
   margin: 10px;
   padding: 15px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 10px 20px rgba(var(--black), var(--translucent));
   border-radius: 10%;
-  border-top: 1px solid #374379;
-  border-left: 1px solid #374379;
+  border-top: 1px solid rgb(var(--blue));
+  border-left: 1px solid rgb(var(--blue));
   backdrop-filter: blur(5px);
 }
 div#calculator {
@@ -775,7 +804,7 @@ div#calculator table th {
   background-color: #ededed;
 }
 div.img-block {
-  background: rgba(0, 0, 0, 0);
+  background: rgba(var(--white), var(--transparent));
   box-sizing: border-box;
   width: 90%;
 }
@@ -789,7 +818,7 @@ div.largePic {
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(var(--black), var(--translucent));
   display: flex;
   justify-content: center;
   align-items: center;
