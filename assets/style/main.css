@@ -44,25 +44,35 @@ table.order-table td img {
   background: rgb(var(--blue));
 }
 
+html {
+  font-size: 18px;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: Microsoft JhengHei, sans-serif;
+}
+
 h1 {
-  font-size: 36px;
+  font-size: 2rem;
   text-align: center;
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 1.5rem;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 1.1rem;
 }
 
 h4 {
-  font-size: 18px;
+  font-size: 1rem;
 }
 
 h5 {
-  font-size: 16px;
+  font-size: 0.8rem;
 }
 
 a {
@@ -81,12 +91,6 @@ ol {
 ul li,
 ol li {
   margin-top: 5px;
-}
-
-body {
-  font-size: 18px;
-  line-height: 1.5;
-  font-family: Microsoft JhengHei, sans-serif;
 }
 
 /*一般頁面*/
@@ -110,7 +114,7 @@ body {
   display: block;
   font-weight: 600;
   text-align: center;
-  font-size: 30px;
+  font-size: 1.5rem;
 }
 .content ul {
   padding-left: 0;
@@ -118,7 +122,7 @@ body {
   list-style-type: none;
 }
 .content ul li a {
-  font-size: 24px;
+  font-size: 1.1rem;
   display: block;
   padding: 2px 10px;
   font-weight: 600;
@@ -134,7 +138,7 @@ body {
   display: none;
 }
 .content ul li ul li a {
-  font-size: 18px;
+  font-size: 1rem;
   padding-left: 20px;
 }
 .content ul li ul li:hover {
@@ -149,7 +153,7 @@ code,
 kbd,
 pre,
 samp {
-  font-size: 14px;
+  font-size: 0.75rem;
 }
 
 pre,
@@ -248,7 +252,7 @@ table tr:nth-child(even) {
 table.order-table {
   width: calc(100% - 2px);
   text-align: center;
-  font-size: 8px;
+  font-size: 0.6rem;
 }
 table.order-table tr {
   cursor: pointer;
@@ -265,7 +269,7 @@ table.order-table td {
 /* 輸入框 */
 input.table-filter {
   display: block;
-  font-size: 18px;
+  font-size: 1rem;
   border: 1px solid rgb(var(--gray));
   padding: 12px 20px;
   margin: 20px auto 0px;
@@ -472,7 +476,7 @@ div.sidebar.show {
   box-shadow: 0px 0px 9px rgb(var(--black));
 }
 div.sidebar div {
-  font-size: 24px;
+  font-size: 1.1rem;
   letter-spacing: 2px;
   line-height: 65px;
   font-weight: 600;
@@ -498,7 +502,7 @@ div.sidebar ul li a {
   padding-left: 10%;
   padding-right: 10%;
   width: 80%;
-  font-size: 18px;
+  font-size: 1rem;
 }
 div.sidebar ul li a b {
   margin-right: 30px;
@@ -513,7 +517,7 @@ div.sidebar ul li ul li {
   border-bottom: none;
 }
 div.sidebar ul li ul li a {
-  font-size: 16px;
+  font-size: 0.8rem;
   padding-left: 15%;
   width: 85%;
 }
@@ -646,7 +650,7 @@ div#home:hover::after {
 }
 div#showCode {
   cursor: pointer;
-  font-size: 16px;
+  font-size: 0.8rem;
   background: rgb(var(--blue));
   color: rgb(var(--white));
   text-align: center;
