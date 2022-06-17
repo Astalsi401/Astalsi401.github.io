@@ -26,7 +26,8 @@
     <div class="container">
         <h2 data-type="title_1" id="006">006. 繪圖</h2>
         <div id="showCode">本頁do file</div>
-        <pre id="code">
+        <pre id="code"><code>
+            
 clear
 quietly input str14 state ur 
  
@@ -118,7 +119,8 @@ lab val gender gender
 graph box x, over (gender) ytitle("抽菸次數/週") b1title("性別") 
                                               /*b1title: b1=下排第一層*/
 graph export "box01.png", replace
-</pre>
+
+        </code></pre>
         <div class="block">
             <p>輸入資料</p>
             <pre id="stlog-11" class="stlog"><samp>
@@ -185,6 +187,11 @@ graph export "box01.png", replace
     </samp></pre>
             <div class="img-block">
                 <img id="bar01" src="" alt="">
+            </div>
+            <div>
+                <ul>
+                    <li>更多範例：<a href="https://journals.sagepub.com/doi/pdf/10.1177/1536867X1101100310">ighlighting specific bars</a></li>
+                </ul>
             </div>
         </div>
         <div class="block">
@@ -306,10 +313,24 @@ graph export "box01.png", replace
                 </li>
                 <li>設定圖例
                     <ul>
+                        <li><code>legend(off)</code>：隱藏圖例</li>
                         <li><code>legend(label(1 "分類1") label(2 "分類2"))</code>：設定圖例名稱，Y變項有多個分類時可用，此處的1並非資料檔中的分類編碼，而是製作圖表時畫上去的順序。</li>
                         <li><code>legend(c(2))</code>：圖例內容兩兩並排(column = 2)，也可使用<code>r(#)</code># = 正整數</li>
                         <li><code>legend(pos(6))</code>：代表圖例出現的位置，以時鐘上的數字為方向。</li>
                         <li><code>legend(symx(*0.25))</code>：圖例尺寸，<code>*0.25</code>代表0.25倍。</li>
+                    </ul>
+                </li>
+                <li>繪圖區域(bar)
+                    <ul>
+                        <li><code>blabel()</code>：添加bar標籤</li>
+                        <li><code>bar(#, bfcolor(navy))</code>：變更x軸第#種類別的顏色</li>
+                        <li><code>over(var1, sort(var2) descending)</code>：依據var1分類，依據var2遞減排序</li>
+                    </ul>
+                </li>
+                <li>其他
+                    <ul>
+                        <li><code>separate var1, by(var2 == 1)</code>：依據條件分割var1</li>
+                        <li><code>scale(*.8)</code>：字體大小</li>
                     </ul>
                 </li>
             </ol>

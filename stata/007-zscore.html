@@ -26,14 +26,15 @@
     <div class="container">
         <h2 data-type="title_1" id="007">007. z-socre</h2>
         <div id="showCode">本頁do file</div>
-        <pre id="code">
+        <pre id="code"><code>
+            
 twoway (function y=normalden(x) , range(-4 4)        ///
-  droplines(-2 -1 0 1 2)),                       ///
-  title("常態分配曲線")                         ///
-  plotregion(margin(zero))                       ///
-  yscale(off) ylabel(, nogrid)                   ///
-  xlabel(-4 -3 -2 -1 0 1 2 3 4, format(%4.2f))       ///
-  xtitle("Standard deviations") 
+droplines(-2 -1 0 1 2)),                       ///
+title("常態分配曲線")                         ///
+plotregion(margin(zero))                       ///
+yscale(off) ylabel(, nogrid)                   ///
+xlabel(-4 -3 -2 -1 0 1 2 3 4, format(%4.2f))       ///
+xtitle("Standard deviations") 
 graph export "normal curve.png", replace
 cd "C:/Users/misti/Documents/Stata/unify/temp"
 
@@ -49,37 +50,37 @@ end
 save d0, replace
 
 forv x = 0/5 {
-  forv i = 1/6 {
-    clear
-    use d`x'
-    cap drop s2
-    g s2 = `i'
-    save d`i', replace
-  }
+forv i = 1/6 {
+  clear
+  use d`x'
+  cap drop s2
+  g s2 = `i'
+  save d`i', replace
+}
 }
 
 use d1
 
 forvalues i = 2 (1) 6 {
-  append using d`i'
+append using d`i'
 }
 
 save d0, replace
 
 forv x = 0/5 {
-  forv i = 1/6 {
-    clear
-    use d`x'
-    cap drop s1
-    g s1 = `i'
-    save d`i', replace
-  }
+forv i = 1/6 {
+  clear
+  use d`x'
+  cap drop s1
+  g s1 = `i'
+  save d`i', replace
+}
 }
 
 use d1
 
 forvalues i = 2 (1) 6 {
-  append using d`i'
+append using d`i'
 }
 
 cd "C:/Users/misti/Documents/Stata/unify"
@@ -131,7 +132,8 @@ di 100000*(1-normal(.68))
 di normal(.68) = .75174777  求出由-∞ 到Z=0.68的累積面積（機率）=75.17
 di invnormal(.75174777) = .68  求出累積機率為0.75174777時的Z分數
 */
-</pre>
+
+        </code></pre>
         <div class="block">
             <h3 data-type="title_2" id="7-1">常態分配曲線</h3>
             <pre id="stlog-18" class="stlog"><samp>

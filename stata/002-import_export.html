@@ -26,7 +26,8 @@
     <div class="container">
         <h2 data-type="title_1" id="002">002. 匯入與匯出</h2>
         <div id="showCode">本頁do file</div>
-        <pre id="code">
+        <pre id="code"><code>
+            
 cd "C:\Users\misti\Documents\Stata\unify"
 pwd
 cd ..
@@ -89,7 +90,8 @@ reshape long score, i(id) j(exam)
 list in 1/10
 reshape wide score, i(id) j(exam)  /*或輸入reshape wide也能恢復原本格式*/
 list in 1/5
-</pre>
+
+        </code></pre>
         <div class="block">
             <p><b>工作目錄</b></p>
             <p>匯入資料前最好先確認STATA的工作目錄，這樣可以減少需要輸入的路徑的長度。</p>

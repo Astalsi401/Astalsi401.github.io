@@ -26,7 +26,8 @@
     <div class="container">
         <h2 data-type="title_1" id="005">迴圈</h2>
         <div id="showCode">本頁do file</div>
-        <pre id="code">
+        <pre id="code"><code>
+
 cd data
 use "tscs071 v5.dta", clear
 numlabel _all, add
@@ -54,7 +55,8 @@ foreach w in a b c d e f g h i {
   recode e2`w' (1=4) (2=3) (95/98=.) (3=2) (4=1), g(e2_`i')
   local i = `i'+1
 }
-</pre>
+
+        </code></pre>
         <div class="block">
             <p>在量化分析的過程中，從一開始清理資料、統計分析，到最後輸出結果都少不了大量重複性高的步驟，若能學會利用迴圈處理將使效率大幅提升。</p>
             <p>以下將做簡單的示範，首先匯入資料，並觀察資料的信息：</p>

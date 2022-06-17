@@ -832,7 +832,7 @@ div#calculator table th {
 div.img-block {
   background: rgba(var(--white), var(--transparent));
   box-sizing: border-box;
-  width: 90%;
+  width: 100%;
 }
 div.img-block img {
   display: block;

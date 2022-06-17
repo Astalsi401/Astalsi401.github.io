@@ -844,7 +844,7 @@ div {
   &.img-block {
     background: rgba(var(--white), var(--transparent));
     box-sizing: border-box;
-    width: 90%;
+    width: 100%;
     @extend %no-anti-white;
     img {
       display: block;
