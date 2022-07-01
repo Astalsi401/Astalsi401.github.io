@@ -61,7 +61,6 @@ let writeContents = () => {
       document.body.appendChild(copyHex);
       copyHex.select();
       document.execCommand("copy");
-      console.log(copyHex.value);
       document.body.removeChild(copyHex);
     });
     $("pre div.copy").click(function (e) {
@@ -71,7 +70,6 @@ let writeContents = () => {
       document.body.appendChild(copyHex);
       copyHex.select();
       document.execCommand("copy");
-      console.log(copyHex.value);
       document.body.removeChild(copyHex);
     });
   },
@@ -149,8 +147,8 @@ $(document).ready(() => {
   /*FH4 基礎調教*/
   $(".tags li").click(function () {
     let index = $(this).index();
-    $(".tags div.active").css("left", `calc(${index} * 100% / (${$(this).parent().find("li").size()}))`);
-    $(".switch").css("left", `calc(${index} * -100%)`);
+    $(".tags div.active").css({ left: `calc(${index} * 100% / (${$(this).parent().find("li").size()}))` });
+    $(".switch").css({ left: `calc(${index} * -100%)` });
   });
   $(".table-filter").on("input", tableFilter);
 });
