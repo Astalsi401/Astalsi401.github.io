@@ -118,6 +118,9 @@ let writeContents = () => {
       .children()
       .css({ width: `calc(100% / ${switchWidth})` });
     $(".switch").css({ width: `calc(100% * ${switchWidth})` });
+  },
+  scroll = function () {
+    $("html,body").animate({ scrollTop: $(this).attr("href").offset().top }, 800);
   };
 $(document).ready(() => {
   writePics();
@@ -151,4 +154,5 @@ $(document).ready(() => {
     $(".switch").css({ left: `calc(${index} * -100%)` });
   });
   $(".table-filter").on("input", tableFilter);
+  $("a").on("click", scroll);
 });

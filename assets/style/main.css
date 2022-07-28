@@ -46,6 +46,7 @@ table.order-table td img {
 
 html {
   font-size: 18px;
+  scroll-padding-top: 50px;
 }
 
 body {
