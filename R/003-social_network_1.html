@@ -15,7 +15,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="../assets/style/main.css">
-    <script src="https://astalsi401.github.io/jQuery/jquery-1.9.0.min.js"></script>
     <script src="../assets/js/highlight.js"></script>
     <script type="text/javascript">
         if (window.hljs) {
@@ -30,15 +29,17 @@
 </head>
 
 <body>
-    <div id="top"></div>
-    <div id="rPage" class="sidebar"></div>
-    <div id="plate"></div>
-    <div class="largePic">
-        <div id="pic"></div>
-    </div>
-    <div class="container">
+    <header>
+        <div id="top"></div>
+        <div id="rPage" class="sidebar"></div>
+        <div id="plate"></div>
+        <div class="largePic">
+            <div id="pic"></div>
+        </div>
+    </header>
+    <main class="container">
         <h1>003. 網絡分析（一）</h1>
-        <div class="block">
+        <section>
             <h2 id="3-1">網絡資料的格式</h2>
             <div class="block">
                 <p><b>無方向性（Undirected, Binary）</b></p>
@@ -385,8 +386,8 @@
                     </div>
                 </center>
             </div>
-        </div>
-        <div class="block">
+        </section>
+        <section>
             <h2 id="3-2">網絡分析基本概念</h2>
             <p>
             <ul>
@@ -550,13 +551,16 @@ X2</code></pre>
                 </p>
             </ul>
             </p>
-        </div>
-    </div>
-    <script>
-        const picsUrl = '../assets/js/json/pics/r003.json'
-        const requestURL = '../assets/js/json/data.json'
-    </script>
-    <script src="../assets/js/main.js"></script>
+        </section>
+    </main>
+    <footer>
+        <script src="https://astalsi401.github.io/jQuery/jquery-3.6.0.min.js"></script>
+        <script>
+            const picsUrl = '../assets/js/json/pics/r003.json'
+            const requestURL = '../assets/js/json/data.json'
+        </script>
+        <script src="../assets/js/main.js"></script>
+    </footer>
 </body>
 
 </html>

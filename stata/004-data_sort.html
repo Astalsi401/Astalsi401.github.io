@@ -10,19 +10,22 @@
         gtag('js', new Date());
         gtag('config', 'G-F8SLV521P4');
     </script>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>整理資料檔</title>
     <link rel="stylesheet" type="text/css" href="../assets/style/main.css">
 </head>
 
 <body>
-    <div id="top"></div>
-    <div id="stataPage" class="sidebar"></div>
-    <div id="plate"></div>
-    <div class="largePic">
-        <div id="pic"></div>
-    </div>
-    <div class="container">
+    <header>
+        <div id="top"></div>
+        <div id="stataPage" class="sidebar"></div>
+        <div id="plate"></div>
+        <div class="largePic">
+            <div id="pic"></div>
+        </div>
+    </header>
+    <main class="container">
         <h2 data-type="title_1" id="004">004. 整理資料檔</h2>
         <div id="showCode">本頁do file</div>
         <pre id="code"><code>
@@ -103,7 +106,7 @@ replace egpnow=4 if  v34b5==8410                & egpnow==.
 table egpnow, c(mean edyear sd edyear n edyear) format(%9.2f) row
         </code></pre>
         <p>大多數剛匯入的資料並不適合直接分析，為了讓資料更符合符合我們的需求，需要對資料進行整理，以下介紹幾個整理資料經常用到的指令。</p>
-        <div class="block">
+        <section>
             <h3 data-type="title_2" id="4-1">整理資料常用指令</h3>
             <p>載入資料</p>
             <pre id="stlog-1" class="stlog"><samp><span class="stinp">. cd "C:/Users/misti/Documents/Stata/unify/data"</span>
@@ -209,8 +212,8 @@ variable name   type    format     label      variable label
 --------------------------+-----------------------------------
                     Total |<span class="stres">      2,134      100.00</span>
 </samp></pre>
-        </div>
-        <div class="block">
+        </section>
+        <section>
             <h3 data-type="title_2" id="4-2">定義遺漏值</h3>
             <p>將編號22的「其他」設為遺漏值，可以發現「22. 其他」消失了</p>
             <pre id="stlog-4" class="stlog"><samp><span class="stinp">. preserve</span>
@@ -322,8 +325,8 @@ variable name   type    format     label      variable label
 <span class="stinp">. restore</span>
 </samp></pre>
             <p>若codebook中已經標明遺漏值（通常為999），那也可以使用<code>mvdecode _all, mv(999)</code>來一次定義資料中所有變項的遺漏值，不過視你的需求而定，某些變項有可能需要個別調整。</p>
-        </div>
-        <div class="block">
+        </section>
+        <section>
             <h3 data-type="title_2" id="4-3">重新編碼</h3>
             <p>將各個選項重新編碼為教育年數，如：選項1.無/不識字=0年</p>
             <p>這裡有兩種不同的方式，各有其用處，會在不同地方派上用場</p>
@@ -419,8 +422,8 @@ variable name   type    format     label      variable label
 ------------+-----------------------------------
       Total |<span class="stres">      2,130      100.00</span>
 </samp></pre>
-        </div>
-        <div class="block">
+        </section>
+        <section>
             <h3 data-type="title_2" id="4-4">職業地位計算（EGP Class Scheme）</h3>
             <p><a href="https://www.jstor.org/stable/589632?seq=1">EGP Class
                     Scheme</a>是一種職業地位的分類方法，在STATA中可以利用<code>iscoegp</code>進行分類。</p>
@@ -530,8 +533,8 @@ Mangement |        <span class="stres">16.83          2.79            71</span>
     Total |        <span class="stres">11.84          4.48         2,032</span>
 ----------------------------------------------------
 </samp></pre>
-        </div>
-        <div class="block">
+        </section>
+        <section>
             <h3 id="4-5">其他技巧</h3>
             <ol>
                 <li><code>egen miny = min(y), by(x)</code>：</li>
@@ -564,13 +567,15 @@ if substr("`varType'", 1, 3) == "str" {
 }
 </pre>
             </ol>
-        </div>
-    </div>
-    <script src="https://astalsi401.github.io/jQuery/jquery-1.9.0.min.js"></script>
-    <script>
-        const requestURL = '../assets/js/json/data.json'
-    </script>
-    <script src="../assets/js/main.js"></script>
+        </section>
+    </main>
+    <footer>
+        <script src="https://astalsi401.github.io/jQuery/jquery-3.6.0.min.js"></script>
+        <script>
+            const requestURL = '../assets/js/json/data.json'
+        </script>
+        <script src="../assets/js/main.js"></script>
+    </footer>
 </body>
 
 </html>

@@ -10,19 +10,22 @@
         gtag('js', new Date());
         gtag('config', 'G-F8SLV521P4');
     </script>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>邏輯分析</title>
     <link rel="stylesheet" type="text/css" href="../assets/style/main.css">
 </head>
 
 <body>
-    <div id="top"></div>
-    <div id="stataPage" class="sidebar"></div>
-    <div id="plate"></div>
-    <div class="largePic">
-        <div id="pic"></div>
-    </div>
-    <div class="container">
+    <header>
+        <div id="top"></div>
+        <div id="stataPage" class="sidebar"></div>
+        <div id="plate"></div>
+        <div class="largePic">
+            <div id="pic"></div>
+        </div>
+    </header>
+    <main class="container">
         <h2 data-type="title_1" id="015">邏輯分析（Logistic Analysis）</h2>
         <div id="showCode">本頁do file</div>
         <pre id="code"><code>
@@ -92,7 +95,7 @@ varwidth(35) modelwidth(10) ///
 starlevels(* .05 ** .01 *** 0.001) replace
 
         </code></pre>
-        <div class="block">
+        <section>
             <h3 data-type="title_2" id="15-1">Odds Ratio</h3>
             <p>在logistic analysis分析中，應變項必須是0或者1（有/無、是/否），自變項可以使用類別變項，也可以使用連續變項。所得到的結果更可以轉換成為機率（Odds Ratio）的概念解讀。</p>
             <p><b>範例：</b></p>
@@ -207,8 +210,8 @@ Expression   : <span class="stres">Pr(college), predict()</span>
 </samp></pre>
                 </ol>
             </ul>
-        </div>
-        <div class="block">
+        </section>
+        <section>
             <h3 data-type="title_2" id="15-2">二元邏輯迴歸（Logistic Regression）</h3>
             <pre id="stlog-7" class="stlog"><samp><span class="stinp">. logit college atrack male gpa chinese, or  <span class="stcmt">/*or:以odds ratio顯示，預設為對數*/</span></span>
 
@@ -317,8 +320,8 @@ Expression   : <span class="stres">Pr(college), predict()</span>
   Variables that uniquely identify margins: gpa atrack
 </samp></pre>
             <div class="img-block"><img id="logit01" src="" alt=""></div>
-        </div>
-        <div class="block">
+        </section>
+        <section>
             <h3 data-type="title_2" id="15-3">順序邏輯迴歸（Ordinal Logistic Regression）</h3>
             <p>可用於Ordinal Scale的應變項。</p>
             <pre id="stlog-9" class="stlog"><samp><span class="stinp">. cd data</span>
@@ -750,8 +753,8 @@ Expression   : <span class="stres">Pr(healthre==4), predict(outcome(4))</span>
 (file logit02.png saved)
 </samp></pre>
             <div class="img-block"><img id="logit02" src="" alt=""></div>
-        </div>
-        <div class="block">
+        </section>
+        <section>
             <h3 data-type="title_2" id="15-4">多分類邏輯迴歸（Multinomial Logistic Regression）</h3>
             <p>可用於Nominal Scale</p>
             <p><b>注意：</b>在<code>mlogit</code>中須使用relative-risk ratio，代碼為<code>rrr</code>，而非odds ratio的<code>or</code></p>
@@ -1022,7 +1025,7 @@ Expression   : <span class="stres">Pr(occ==1__Menial), predict(outcome(1))</span
 (file logit03.png written in PNG format)
 </samp></pre>
             <div class="img-block"><img id="logit03" src="" alt=""></div>
-        </div>
+        </section>
         <h3 data-type="title_2" id="15-5">利用Stata製作迴歸表格</h3>
         <pre id="stlog-13" class="stlog"><samp><span class="stinp">. eststo clear</span>
 
@@ -1172,13 +1175,15 @@ Exponentiated coefficients; Standard errors in parentheses
 &gt;                 starlevels(* .05 ** .01 *** 0.001) replace</span>
 (output written to mlogit01.csv)
 </samp></pre>
-    </div>
-    <script src="https://astalsi401.github.io/jQuery/jquery-1.9.0.min.js"></script>
-    <script>
-        const requestURL = '../assets/js/json/data.json'
-        const picsUrl = '../assets/js/json/pics/stata015.json'
-    </script>
-    <script src="../assets/js/main.js"></script>
+    </main>
+    <footer>
+        <script src="https://astalsi401.github.io/jQuery/jquery-3.6.0.min.js"></script>
+        <script>
+            const requestURL = '../assets/js/json/data.json'
+            const picsUrl = '../assets/js/json/pics/stata015.json'
+        </script>
+        <script src="../assets/js/main.js"></script>
+    </footer>
 </body>
 
 </html>

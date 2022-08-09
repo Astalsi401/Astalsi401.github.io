@@ -10,22 +10,24 @@
         gtag('js', new Date());
         gtag('config', 'G-F8SLV521P4');
     </script>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cmder Setting</title>
     <link rel="stylesheet" type="text/css" href="../../assets/style/main.css">
-    <script src="https://astalsi401.github.io/jQuery/jquery-1.9.0.min.js"></script>
 </head>
 
 <body>
-    <div id="top"></div>
-    <div id="notesPage" class="sidebar"></div>
-    <div id="plate"></div>
-    <div class="largePic">
-        <div id="pic"></div>
-    </div>
-    <div class="container">
+    <header>
+        <div id="top"></div>
+        <div id="notesPage" class="sidebar"></div>
+        <div id="plate"></div>
+        <div class="largePic">
+            <div id="pic"></div>
+        </div>
+    </header>
+    <main class="container">
         <h1>Python筆記</h1>
-        <div class="block">
+        <section>
             <h2>讀取檔案</h2>
             <table>
                 <tr>
@@ -61,12 +63,15 @@
                     <td>exclusive creation, failing if file exists</td>
                 </tr>
             </table>
-        </div>
-    </div>
-    <script>
-        const requestURL = '../../assets/js/json/data.json'
-    </script>
-    <script src="../../assets/js/main.js"></script>
+        </section>
+    </main>
+    <footer>
+        <script src="https://astalsi401.github.io/jQuery/jquery-3.6.0.min.js"></script>
+        <script>
+            const requestURL = '../../assets/js/json/data.json'
+        </script>
+        <script src="../../assets/js/main.js"></script>
+    </footer>
 </body>
 
 </html>

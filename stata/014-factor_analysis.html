@@ -10,19 +10,22 @@
         gtag('js', new Date());
         gtag('config', 'G-F8SLV521P4');
     </script>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>因素分析</title>
     <link rel="stylesheet" type="text/css" href="../assets/style/main.css">
 </head>
 
 <body>
-    <div id="top"></div>
-    <div id="stataPage" class="sidebar"></div>
-    <div id="plate"></div>
-    <div class="largePic">
-        <div id="pic"></div>
-    </div>
-    <div class="container">
+    <header>
+        <div id="top"></div>
+        <div id="stataPage" class="sidebar"></div>
+        <div id="plate"></div>
+        <div class="largePic">
+            <div id="pic"></div>
+        </div>
+    </header>
+    <main class="container">
         <h2 data-type="title_1" id="014">因素分析</h2>
         <div id="showCode">本頁do file</div>
         <pre id="code"><code>
@@ -105,7 +108,7 @@ corr noluck3 noeffort3
 list e2_2  e2_6  e2_7  e2_9 noluck3 in 1/20 , noobs clean
 
         </code></pre>
-        <div class="block">
+        <section>
             <p>因素分析以所觀察到的變項的數據為基礎，找出其中的潛在變項（或一些共同因子），其步驟如下：</p>
             <ol type="i">
                 <li>先檢查要觀察的變項內容，並對這些變項做些調整，如：重新編碼、定義遺漏值。</li>
@@ -114,8 +117,8 @@ list e2_2  e2_6  e2_7  e2_9 noluck3 in 1/20 , noobs clean
                 <li>正式分析，並進行座標軸旋轉，以突出潛在因子。</li>
                 <li>建立潛在因子變項。</li>
             </ol>
-        </div>
-        <div class="block">
+        </section>
+        <section>
             <h3 data-type="title_2" id="14-1">範例：</h3>
             <p>因素分析 - 會窮的原因（題號e2a-e2i）</p>
             <ol>
@@ -1469,14 +1472,16 @@ Scoring coefficients (method = regression; based on varimax rotated factors)
 <span class="stinp">. lab var noeffort3 "總加個人努力指數"</span>
 </samp></pre>
             </ol>
-        </div>
-    </div>
-    <script src="https://astalsi401.github.io/jQuery/jquery-1.9.0.min.js"></script>
-    <script>
-        const requestURL = '../assets/js/json/data.json'
-        const picsUrl = '../assets/js/json/pics/stata014.json'
-    </script>
-    <script src="../assets/js/main.js"></script>
+        </section>
+    </main>
+    <footer>
+        <script src="https://astalsi401.github.io/jQuery/jquery-3.6.0.min.js"></script>
+        <script>
+            const requestURL = '../assets/js/json/data.json'
+            const picsUrl = '../assets/js/json/pics/stata014.json'
+        </script>
+        <script src="../assets/js/main.js"></script>
+    </footer>
 </body>
 
 </html>

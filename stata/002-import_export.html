@@ -10,19 +10,22 @@
         gtag('js', new Date());
         gtag('config', 'G-F8SLV521P4');
     </script>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>匯入與匯出</title>
     <link rel="stylesheet" type="text/css" href="../assets/style/main.css">
 </head>
 
 <body>
-    <div id="top"></div>
-    <div id="stataPage" class="sidebar"></div>
-    <div id="plate"></div>
-    <div class="largePic">
-        <div id="pic"></div>
-    </div>
-    <div class="container">
+    <header>
+        <div id="top"></div>
+        <div id="stataPage" class="sidebar"></div>
+        <div id="plate"></div>
+        <div class="largePic">
+            <div id="pic"></div>
+        </div>
+    </header>
+    <main class="container">
         <h2 data-type="title_1" id="002">002. 匯入與匯出</h2>
         <div id="showCode">本頁do file</div>
         <pre id="code"><code>
@@ -91,7 +94,7 @@ reshape wide score, i(id) j(exam)  /*或輸入reshape wide也能恢復原本格�
 list in 1/5
 
         </code></pre>
-        <div class="block">
+        <section>
             <p><b>工作目錄</b></p>
             <p>匯入資料前最好先確認STATA的工作目錄，這樣可以減少需要輸入的路徑的長度。</p>
             <p><code>cd "路徑"</code>：直接指定工作目錄</p>
@@ -134,8 +137,8 @@ list in 1/5
 <span class="stinp">. cd unify</span>
 <span class="stres">C:\Users\misti\Documents\Stata\unify</span>
       </samp></pre>
-        </div>
-        <div class="block">
+        </section>
+        <section>
             <h3 data-type="title_2" id="2-1">資料檔匯入</h3>
             <p><b>Txt匯入：<code>insheet</code></b></p>
             <p>直接從指定的目錄匯入，無須變更工作目錄。</p>
@@ -250,8 +253,8 @@ import exc using data2b.xlsx, sh("sheetname") cellra(A2) first clear
 <span class="stinp">. cd ..</span>
 <span class="stres">C:\Users\misti\Documents\Stata\unify</span>
       </samp></pre>
-        </div>
-        <div class="block">
+        </section>
+        <section>
             <h3 data-type="title_2" id="2-2">資料檔匯出</h3>
             <p><code>sysuse auto, clear</code>清除上一筆資料，使用stata內建，名為auto的資料</p>
             <p>查看資料中的變項。</p>
@@ -306,8 +309,8 @@ outsheet using "1978 Automobile.csv", c n replace
             <pre class="stlog"><code>
 export exc using 1978 Automobile.xlsx, sh("sheetname") first(var) sheetrep
     </code></pre>
-        </div>
-        <div class="block">
+        </section>
+        <section>
             <h3 data-type="title_2" id="2-3">圖表匯入</h3>
             <p>在STATA中開啟圖表</p>
             <pre id="stlog-9" class="stlog"><samp>
@@ -316,8 +319,8 @@ export exc using 1978 Automobile.xlsx, sh("sheetname") first(var) sheetrep
             <div class="img-block">
                 <img id="1978auto_1" src="" alt="">
             </div>
-        </div>
-        <div class="block">
+        </section>
+        <section>
             <h3 data-type="title_2" id="2-4">圖表匯出</h3>
             <p><b>匯出為png</b></p>
             <pre id="stlog-10" class="stlog"><samp>
@@ -337,8 +340,8 @@ export exc using 1978 Automobile.xlsx, sh("sheetname") first(var) sheetrep
 putexcel set pathToXlsxFile.xlsx, sheet("xlsxSheetName") modify
 putexcel A1 = picture(pathToPngFile.png)
     </code></pre>
-        </div>
-        <div class="block">
+        </section>
+        <section>
             <h3 data-type="title_2" id="2-5">資料檔合併</h3>
             <p>以下將介紹兩種資料合併的方法：</p>
             <p><b>方法一：<code>append</code></b></p>
@@ -475,8 +478,8 @@ variable name   type    format     label      variable label
 ---------------------------------------------------------------------------------------------------------------
 Sorted by: <span class="stres">id</span>
 </samp></pre>
-        </div>
-        <div class="block">
+        </section>
+        <section>
             <h3 data-type="title_2" id="2-6">資料長寬轉換</h3>
             <p>在這份資料中可以看到score1、score2，利用以下指令，將score合併為一個變項，另外新增exam變項作為兩次分數的區分。</p>
             <pre id="stlog-18" class="stlog"><samp><span class="stinp">. reshape long score, i(id) j(exam)</span>
@@ -534,14 +537,16 @@ xij variables:
   5. | <span class="stres"> 5       78       78       2      1      1 </span>|
      +--------------------------------------------+
 </samp></pre>
-        </div>
-    </div>
-    <script src="https://astalsi401.github.io/jQuery/jquery-1.9.0.min.js"></script>
-    <script>
-        const requestURL = '../assets/js/json/data.json'
-        const picsUrl = '../assets/js/json/pics/stata002.json'
-    </script>
-    <script src="../assets/js/main.js"></script>
+        </section>
+    </main>
+    <footer>
+        <script src="https://astalsi401.github.io/jQuery/jquery-3.6.0.min.js"></script>
+        <script>
+            const requestURL = '../assets/js/json/data.json'
+            const picsUrl = '../assets/js/json/pics/stata002.json'
+        </script>
+        <script src="../assets/js/main.js"></script>
+    </footer>
 </body>
 
 </html>

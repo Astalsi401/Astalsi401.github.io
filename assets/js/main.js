@@ -117,42 +117,45 @@ let writeContents = () => {
     $(".tags")
       .children()
       .css({ width: `calc(100% / ${switchWidth})` });
-    $(".switch").css({ width: `calc(100% * ${switchWidth})` });
+    $(".switch").css({ width: `calc(100% * ${switchWidth})`, left: `0` });
   },
-  scroll = function () {
-    $("html,body").animate({ scrollTop: $(this).attr("href").offset().top }, 800);
+  isScrolledIntoView = (e) => {
+    let docViewTop = $(window).scrollTop();
+    let docViewBottom = docViewTop + $(window).height();
+    let elemTop = $(e).offset().top;
+    let elemBottom = elemTop + $(e).height();
+    return elemBottom <= docViewBottom && elemTop >= docViewTop;
   };
-$(document).ready(() => {
+$(() => {
   writePics();
   writeContents();
   copyCode();
   style();
   sortTable();
   /*點擊sidebar之外可隱藏sidebar*/
-  $(document).click((e) => {
+  $(document).on("click", (e) => {
     if (!$(e.target).parents().hasClass("sidebar") && !$(e.target).hasClass("sidebarBtn")) {
       $(".sidebar").removeClass("show");
       $("#sidebarBtn").removeClass("active");
     }
   });
   /*show stata code*/
-  $("#showCode").click(() => {
+  $("#showCode").on("click", () => {
     $("#code").toggleClass("active");
   });
   /*點擊圖片放大&縮小*/
-  $(".img-block").click(function () {
+  $(".img-block").on("click", function () {
     $(".largePic").addClass("active");
     $("#pic").html(`<img src="${$(this).find("img").attr("src")}">`);
   });
-  $(".largePic").click(() => {
+  $(".largePic").on("click", () => {
     $(".largePic").removeClass("active");
   });
   /*FH4 基礎調教*/
-  $(".tags li").click(function () {
+  $(".tags li").on("click", function () {
     let index = $(this).index();
-    $(".tags div.active").css({ left: `calc(${index} * 100% / (${$(this).parent().find("li").size()}))` });
+    $(".tags div.active").css({ left: `calc(${index} * 100% / (${$(this).parent().find("li").length}))` });
     $(".switch").css({ left: `calc(${index} * -100%)` });
   });
   $(".table-filter").on("input", tableFilter);
-  $("a").on("click", scroll);
 });

@@ -10,19 +10,22 @@
         gtag('js', new Date());
         gtag('config', 'G-F8SLV521P4');
     </script>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>z-score</title>
     <link rel="stylesheet" type="text/css" href="../assets/style/main.css">
 </head>
 
 <body>
-    <div id="top"></div>
-    <div id="stataPage" class="sidebar"></div>
-    <div id="plate"></div>
-    <div class="largePic">
-        <div id="pic"></div>
-    </div>
-    <div class="container">
+    <header>
+        <div id="top"></div>
+        <div id="stataPage" class="sidebar"></div>
+        <div id="plate"></div>
+        <div class="largePic">
+            <div id="pic"></div>
+        </div>
+    </header>
+    <main class="container">
         <h2 data-type="title_1" id="007">007. z-socre</h2>
         <div id="showCode">本頁do file</div>
         <pre id="code"><code>
@@ -133,7 +136,7 @@ di invnormal(.75174777) = .68  求出累積機率為0.75174777時的Z分數
 */
 
         </code></pre>
-        <div class="block">
+        <section>
             <h3 data-type="title_2" id="7-1">常態分配曲線</h3>
             <pre id="stlog-18" class="stlog"><samp>
 <span class="stinp">. twoway (function y=normalden(x) , range(-4 4)        <span class="stcmt">///</span>
@@ -298,8 +301,8 @@ file d6.dta saved
       </samp></pre>
             <div class="img-block"><img id="tabplot01" src="" alt=""></div>
             <div class="img-block"><img id="kdnesity01" src="" alt=""></div>
-        </div>
-        <div class="block">
+        </section>
+        <section>
             <h3 data-type="title_2" id="7-2">t score</h3>
             <pre id="stlog-20" class="stlog"><samp>
 <span class="stinp">. clear</span>
@@ -361,8 +364,8 @@ file d6.dta saved
 <span class="stinp">. di r(mean)+ME99</span>
 <span class="stres">3.6332792</span>
       </samp></pre>
-        </div>
-        <div class="block">
+        </section>
+        <section>
             <h3 data-type="title_2" id="7-3"><code>zcalc</code>的使用方法</h3>
             <p>建立亂數成績資料</p>
             <pre id="stlog-21" class="stlog"><samp>
@@ -410,14 +413,16 @@ z-score for sample observations
 &gt; <span class="stcmt">di invnormal(.75174777) = .68  求出累積機率為0.75174777時的Z分數</span>
 &gt; <span class="stcmt">*/</span></span>
       </samp></pre>
-        </div>
-    </div>
-    <script src="https://astalsi401.github.io/jQuery/jquery-1.9.0.min.js"></script>
-    <script>
-        const requestURL = '../assets/js/json/data.json'
-        const picsUrl = '../assets/js/json/pics/stata007.json'
-    </script>
-    <script src="../assets/js/main.js"></script>
+        </section>
+    </main>
+    <footer>
+        <script src="https://astalsi401.github.io/jQuery/jquery-3.6.0.min.js"></script>
+        <script>
+            const requestURL = '../assets/js/json/data.json'
+            const picsUrl = '../assets/js/json/pics/stata007.json'
+        </script>
+        <script src="../assets/js/main.js"></script>
+    </footer>
 </body>
 
 </html>

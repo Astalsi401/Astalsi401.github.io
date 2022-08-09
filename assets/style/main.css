@@ -47,6 +47,7 @@ table.order-table td img {
 html {
   font-size: 18px;
   scroll-padding-top: 50px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -237,6 +238,7 @@ tr {
 
 /*表格*/
 table {
+  margin: 20px auto;
   border-collapse: collapse;
   border: 1px solid rgb(var(--gray));
 }
@@ -432,11 +434,11 @@ input.table-filter {
   left: 0;
 }
 
-div.block {
-  padding-top: 20px;
-  padding-bottom: 40px;
+section {
+  margin: 30px auto;
   width: 100%;
 }
+
 div.switchBox {
   position: relative;
   width: clamp(300px, 100%, 1000px);
@@ -808,27 +810,8 @@ div#sumObj div {
   width: max(280px, 50% - 52px);
   margin: 10px;
   padding: 15px;
-  box-shadow: 10px 10px 20px rgba(var(--black), var(--translucent));
-  border-radius: 10%;
-  border-top: 1px solid rgb(var(--blue));
-  border-left: 1px solid rgb(var(--blue));
-  backdrop-filter: blur(5px);
-}
-div#calculator {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-div#calculator table {
-  cursor: pointer;
-}
-div#calculator table input {
-  position: static;
-  max-width: 70px;
-}
-div#calculator table th {
-  background-color: #ededed;
+  box-shadow: 0 0 20px 0 rgba(var(--black), var(--translucent));
+  border-radius: 5px;
 }
 div.img-block {
   background: rgba(var(--white), var(--transparent));
@@ -869,6 +852,36 @@ div.largePic.active {
 }
 div.largePic.active div#pic, div.largePic.active {
   opacity: 1;
+}
+
+#calculator form {
+  margin: 0 auto;
+  width: min(98%, 500px);
+}
+#calculator form table,
+#calculator form fieldset {
+  border: none;
+  width: min(100%, 350px);
+  margin: 20px auto;
+}
+#calculator form table:first-of-type,
+#calculator form fieldset:first-of-type {
+  border-bottom: 1px solid rgba(var(--black), 0.3);
+}
+#calculator form table label,
+#calculator form fieldset label {
+  display: block;
+  margin: 10px auto;
+}
+#calculator form table label input,
+#calculator form table label select,
+#calculator form table label span,
+#calculator form fieldset label input,
+#calculator form fieldset label select,
+#calculator form fieldset label span {
+  padding-left: 10px;
+  height: 30px;
+  float: right;
 }
 
 /*# sourceMappingURL=main.css.map */

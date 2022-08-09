@@ -10,24 +10,30 @@
         gtag('js', new Date());
         gtag('config', 'G-F8SLV521P4');
     </script>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Html & Stata</title>
     <link rel="stylesheet" type="text/css" href="../assets/style/main.css">
 </head>
 
 <body>
-    <div id="top"></div>
-    <div id="stataPage" class="sidebar"></div>
-    <div id="plate"></div>
-    <div class="largePic">
-        <div id="pic"></div>
-    </div>
-    <div class="container">
+    <header>
+        <div id="top"></div>
+        <div id="stataPage" class="sidebar"></div>
+        <div id="plate"></div>
+        <div class="largePic">
+            <div id="pic"></div>
+        </div>
+    </header>
+    <main class="container">
         <h2 data-type="title_1" id="other_stata_02">Html & Stata</h2>
-        <p>在本節終將介紹兩種能將Stata執行結果加上文字說明輸出為html檔的方法。</p>
-        <h3><code>dyndoc</code></h3>
-        <p><code>dyndoc</code>的do檔格式如下：</p>
-        <pre class="stata">
+        <section>
+            <p>本頁將介紹兩種能將Stata執行結果加上文字說明輸出為html檔的方法。</p>
+        </section>
+        <section>
+            <h3><code>dyndoc</code></h3>
+            <p><code>dyndoc</code>的do檔格式如下：</p>
+            <pre class="stata">
 <code>
 將Markdown語法的文字輸入在這裡，ex:
 
@@ -60,17 +66,19 @@ cd "D:/Documents/Git/stata/other/02"
 ~~~~
 </code>
 		</pre>
-        <p>然後利用<code>dyndoc 檔名.do, replace</code>即可將檔案與執行結果輸出為html，輸出檔案如下：</p>
-        <iframe class="container" src="https://astalsi401.github.io/stata/other/example.html"></iframe>
-        <h3><code>webdoc</code></h3>
-        <p><code>webdoc</code>的do檔案看起來如下：</p>
-        <ul>
-            <li><code>head()</code>代表html中&lt;head&gt;標籤內的資訊</li>
-            <li><code>w(800px)</code>:頁面寬度800px</li>
-            <li><code>t("example2")</code>:html頁面的名稱，不需要跟檔名相同</li>
-            <li><code>st(ocean cbf)</code>:主題為ocean（海藍色），cbf代表Stata輸入指令為粗體字</li>
-        </ul>
-        <pre class="stata">
+            <p>以<code>dyndoc 檔名.do, replace</code>將檔案與執行結果輸出為html，輸出檔案如下：</p>
+            <iframe class="container" src="https://astalsi401.github.io/stata/other/example.html"></iframe>
+        </section>
+        <section>
+            <h3><code>webdoc</code></h3>
+            <p><code>webdoc</code>的do檔案看起來如下：</p>
+            <ul>
+                <li><code>head()</code>代表html中&lt;head&gt;標籤內的資訊</li>
+                <li><code>w(800px)</code>:頁面寬度800px</li>
+                <li><code>t("example2")</code>:html頁面的名稱，不需要跟檔名相同</li>
+                <li><code>st(ocean cbf)</code>:主題為ocean（海藍色），cbf代表Stata輸入指令為粗體字</li>
+            </ul>
+            <pre class="stata">
 <code>
 clear
 cd "D:/Documents/Git/stata/other/02"  /*要匯出的do檔所在的工作目錄*/
@@ -102,15 +110,18 @@ cd "D:/Documents/Git/stata/other/02"
 /*另一段Stata code....*/  
 </code>
 	</pre>
-        <p>然後利用<code>webdoc do 檔名.do, replace</code>即可輸出，結果如下：</p>
-        <iframe class="container" src="https://astalsi401.github.io/stata/other/example2.html"></iframe>
-        <p>本網站也是使用<code>webdoc</code>製作，不過在輸出後又手動對html檔進行編輯，本站中所有頁面的html檔，以及style設定檔都能在<a href="https://github.com/Astalsi401/Astalsi401.github.io">我的github</a>找到。</p>
-    </div>
-    <script src="https://astalsi401.github.io/jQuery/jquery-1.9.0.min.js"></script>
-    <script>
-        const requestURL = '../assets/js/json/data.json'
-    </script>
-    <script src="../assets/js/main.js"></script>
+            <p>以<code>webdoc do 檔名.do, replace</code>將檔案輸出為html，結果如下：</p>
+            <iframe class="container" src="https://astalsi401.github.io/stata/other/example2.html"></iframe>
+            <p>本網站也是使用<code>webdoc</code>製作，不過在輸出後又手動對html檔進行編輯，本站中所有頁面的html檔，以及style設定檔都能在<a href="https://github.com/Astalsi401/Astalsi401.github.io">我的github</a>找到。</p>
+        </section>
+    </main>
+    <footer>
+        <script src="https://astalsi401.github.io/jQuery/jquery-3.6.0.min.js"></script>
+        <script>
+            const requestURL = '../assets/js/json/data.json'
+        </script>
+        <script src="../assets/js/main.js"></script>
+    </footer>
 </body>
 
 </html>

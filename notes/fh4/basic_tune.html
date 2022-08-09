@@ -10,22 +10,24 @@
         gtag('js', new Date());
         gtag('config', 'G-F8SLV521P4');
     </script>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Forza Horizon 4 Basic Tune</title>
     <link rel="stylesheet" type="text/css" href="../../assets/style/main.css">
-    <script src="https://astalsi401.github.io/jQuery/jquery-1.9.0.min.js"></script>
 </head>
 
 <body>
-    <div id="top"></div>
-    <div id="plate"></div>
-    <div class="largePic">
-        <div id="pic"></div>
-    </div>
-    <div id="fhPage" class="sidebar"></div>
-    <div class="container">
+    <header>
+        <div id="top"></div>
+        <div id="plate"></div>
+        <div class="largePic">
+            <div id="pic"></div>
+        </div>
+        <div id="fhPage" class="sidebar"></div>
+    </header>
+    <main class="container">
         <h1>FH4基礎調教</h1>
-        <div class="block">
+        <section>
             <p>本頁面為Youtube上FH4車輛調教影片的簡易中文摘要。<br>影片清單：</p>
             <ul>
                 <li><a href="https://www.youtube.com/c/HokiHoshi">HokiHoshi</a></li>
@@ -40,8 +42,8 @@
                     <li><a href="https://youtu.be/W4s1VP1nUoM">HOW TO TUNE in Forza Horizon 4 | OP Car Tutorial (Upgrades & Tuning)</a></li>
                 </ul>
             </ul>
-        </div>
-        <div class="block">
+        </section>
+        <section>
             <div class="switchBox" ontouchmove="swipe(e)">
                 <ul class="tags">
                     <li>差速器</li>
@@ -266,8 +268,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="block">
+        </section>
+        <section>
             <h2 id="summary" style="text-align: center;">總結</h2>
             <div id="sumObj">
                 <div class="inobj">
@@ -317,8 +319,8 @@
                     </ul>
                 </div>
             </div>
-        </div>
-        <div class="block">
+        </section>
+        <section>
             <div id="formula">
                 <h2 style="text-align: center;">公式</h2>
                 <ol>
@@ -335,8 +337,8 @@
                     <p><code>(最大值-最小值)×重量比</code></p>
                 </ol>
             </div>
-        </div>
-        <div class="block">
+        </section>
+        <section>
             <div id="calculator">
                 <h2 style="text-align: center;">計算器</h2>
                 <p style="color: red; text-align: center;"><b>
@@ -345,126 +347,57 @@
                         輸入小於21將計算阻尼<br>
                         其他數值將計算防傾桿<br>
                     </b></p>
-                <table>
-                    <tr>
-                        <th>重量比</th>
-                        <td><input id="ratio" type="text" placeholder="請輸入小數" oninput="tuneformula()" /><br /></td>
-                    </tr>
-                    <tr>
-                        <th>最大值</th>
-                        <td><input id="max" type="text" oninput="tuneformula()"><br></td>
-                    </tr>
-                    <tr>
-                        <th>最小值</th>
-                        <td><input id="min" type="text" oninput="tuneformula()"><br></td>
-                    </tr>
-                    <tr>
-                        <th>阻尼壓縮硬度比</th>
-                        <td><input id="dampr" type="text" placeholder="請輸入小數" oninput="tuneformula()" /></td>
-                    </tr>
-                    <tr>
-                        <th>驅動方式</th>
-                        <td>
-                            <select name="type" id="type" onchange="tuneformula()">
+                <form oninput="tuneformula()">
+                    <fieldset>
+                        <label>重量比：<input name="ratio" type="number" min="0" max="1" step="0.01" placeholder="請輸入小數"></label>
+                        <label>最大值：<input name="max" type="number" min="0"></label>
+                        <label>最小值：<input name="min" type="number" min="0"></label>
+                        <label>阻尼壓縮硬度比：<input name="dampr" type="number" min="0" max="1" step="0.01" placeholder="請輸入小數"></label>
+                        <label>驅動方式：<select name="type">
                                 <option value="0">前置四驅</option>
-                                <option value="1">中置四驅</option>
-                                <option value="2">後驅</option>
-                                <option value="3">前驅</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>前</th>
-                        <td><output id="f"></output></td>
-                    </tr>
-                    <tr>
-                        <th>後</th>
-                        <td><output id="r"></output></td>
-                    </tr>
-                    <tr>
-                        <th>前阻尼壓縮硬度</th>
-                        <td><output id="fd2"></output></p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>後阻尼壓縮硬度</th>
-                        <td><output id="rd2"></output></td>
-                    </tr>
-                </table>
+                                <option value="0.02">中置四驅</option>
+                                <option value="0.06">後驅</option>
+                                <option value="-0.08">前驅</option>
+                            </select></label>
+                    </fieldset>
+                    <fieldset>
+                        <label><output name="front"></output></label>
+                        <label><output name="rear"></output></label>
+                    </fieldset>
+                </form>
             </div>
-        </div>
+        </section>
+    </main>
+    <footer>
+        <script src="https://astalsi401.github.io/jQuery/jquery-3.6.0.min.js"></script>
         <script>
             function tuneformula() {
-                let ratio = parseFloat($('#ratio').val()),
-                    max = parseFloat($('#max').val()),
-                    min = parseFloat($('#min').val()),
-                    type = $('#type').val(),
-                    dampr = $('#dampr').val(),
-                    f,
-                    r;
-                if (max > 65) {				//計算彈簧
-                    let f = ((max - min) * (ratio)),
-                        r = ((max - min) * (1 - ratio));
-                    $('#f').html(f.toFixed(2));
-                    $('#r').html(r.toFixed(2));
-                    $('#fd2').html('NULL');
-                    $('#rd2').html('NULL');
+                let type = parseFloat($('select[name="type"]').val()),
+                    max = parseFloat($('input[name="max"]').val()),
+                    min = parseFloat($('input[name="min"]').val()),
+                    dampr = parseFloat($('input[name="max"]').val()),
+                    ratio = parseFloat($('input[name="ratio"]').val()),
+                    f, r
+                if (max > 65) {
+                    f = `前彈簧：<span>${(((max - min) * (ratio))).toFixed(2)}</span>`;
+                    r = `後彈簧：<span>${(((max - min) * (1 - ratio))).toFixed(2)}</span>`;
+                } else if (max < 21) {
+                    f = `前阻尼：<span>${(((max - min) * (ratio)) + min).toFixed(2)}</span>`;
+                    r = `後阻尼：<span>${(((max - min) * (1 - ratio)) + min).toFixed(2)}</span>`;
+                } else {
+                    f = `前防傾桿：<span>${(((max - min) * (ratio + type)) + min).toFixed(2)}</span>`;
+                    r = `後防傾桿：<span>${(((max - min) * (1 - ratio)) + min).toFixed(2)}</span>`;
                 }
-                else if (max < 21) {		//計算阻尼
-                    let f = ((max - min) * (ratio)) + min,
-                        r = ((max - min) * (1 - ratio)) + min;
-                    $('#f').html(f.toFixed(2));
-                    $('#r').html(r.toFixed(2));
-                    $('#fd2').html((f * dampr).toFixed(2));
-                    $('#rd2').html((r * dampr).toFixed(2));
-                }
-                else if (type == 0) {		//前置四驅防傾桿
-                    let f = ((max - min) * (ratio)) + min,
-                        r = ((max - min) * (1 - ratio)) + min;
-                    $('#f').html(f.toFixed(2));
-                    $('#r').html(r.toFixed(2));
-                    $('#fd2').html('NULL');
-                    $('#rd2').html('NULL');
-                }
-                else if (type == 1) {		//中置四驅防傾桿
-                    let nratio = ratio + 0.02,
-                        f = ((max - min) * (nratio)) + min,
-                        r = ((max - min) * (1 - nratio)) + min;
-                    $('#f').html(f.toFixed(2));
-                    $('#r').html(r.toFixed(2));
-                    $('#fd2').html('NULL');
-                    $('#rd2').html('NULL');
-                }
-                else if (type == 2) {		//後驅防傾桿
-                    let nratio = ratio + 0.06,
-                        f = ((max - min) * (nratio)) + min,
-                        r = ((max - min) * (1 - nratio)) + min;
-                    $('#f').html(f.toFixed(2));
-                    $('#r').html(r.toFixed(2));
-                    $('#fd2').html('NULL');
-                    $('#rd2').html('NULL');
-                }
-                else if (type == 3) {		//前驅防傾桿
-                    let nratio = ratio - 0.08,
-                        f = ((max - min) * (nratio)) + min,
-                        r = ((max - min) * (1 - nratio)) + min;
-                    $('#f').html(f.toFixed(2));
-                    $('#r').html(r.toFixed(2));
-                    $('#fd2').html('NULL');
-                    $('#rd2').html('NULL');
-                }
-                else {
-                    $('#f').html('NULL');
-                    $('#r').html('NULL');
-                }
+                $('output[name="front"]').html(f)
+                $('output[name="rear"]').html(r)
             }
         </script>
-    </div>
-    <script>
-        const requestURL = '../../assets/js/json/data.json'
-        const picsUrl = '../../assets/js/json/pics/basicTune.json'
-    </script>
-    <script src="../../assets/js/main.js"></script>
+        <script>
+            const requestURL = '../../assets/js/json/data.json'
+            const picsUrl = '../../assets/js/json/pics/basicTune.json'
+        </script>
+        <script src="../../assets/js/main.js"></script>
+    </footer>
 </body>
 
 </html>

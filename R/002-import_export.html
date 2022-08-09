@@ -15,7 +15,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="../assets/style/main.css">
-    <script src="https://astalsi401.github.io/jQuery/jquery-1.9.0.min.js"></script>
     <script src="../assets/js/highlight.js"></script>
     <script type="text/javascript">
         if (window.hljs) {
@@ -30,15 +29,17 @@
 </head>
 
 <body>
-    <div id="top"></div>
-    <div id="rPage" class="sidebar"></div>
-    <div id="plate"></div>
-    <div class="largePic">
-        <div id="pic"></div>
-    </div>
-    <div class="container">
+    <header>
+        <div id="top"></div>
+        <div id="rPage" class="sidebar"></div>
+        <div id="plate"></div>
+        <div class="largePic">
+            <div id="pic"></div>
+        </div>
+    </header>
+    <main class="container">
         <h1 id="002">002. 資料匯入與匯出</h1>
-        <div class="block">
+        <section>
             <h2 id="2-1">.csv</h2>
             <pre class="r"><code>setwd(&quot;D:/Documents/R/site/data&quot;)
 list.files()</code></pre>
@@ -72,8 +73,8 @@ list.files()</code></pre>
             <pre><code>## [1] &quot;data.fauxhigh.csv&quot;   &quot;edges.fauxhigh.csv&quot;  &quot;export01.csv&quot;       
 ## [4] &quot;export02.csv&quot;        &quot;export03.rdata&quot;      &quot;export04_ids.rds&quot;   
 ## [7] &quot;export05.dta&quot;        &quot;matrix.fauxhigh.csv&quot;</code></pre>
-        </div>
-        <div class="block">
+        </section>
+        <section>
             <h2 id="2-2">.Rdata</h2>
             <p>用以儲存多個變項組成的資料</p>
             <pre class="r"><code>setwd(&quot;D:/Documents/R/site/data&quot;)
@@ -86,8 +87,8 @@ list.files()</code></pre>
 ## [7] &quot;export05.dta&quot;        &quot;matrix.fauxhigh.csv&quot;</code></pre>
             <pre class="r"><code># 匯入
 load(&quot;export03.rdata&quot;)</code></pre>
-        </div>
-        <div class="block">
+        </section>
+        <section>
             <h2 id="2-3">.rds</h2>
             <p>用來儲存單一變項</p>
             <pre class="r"><code>setwd(&quot;D:/Documents/R/site/data&quot;)
@@ -121,8 +122,8 @@ head(fauxhs)</code></pre>
 ## 4   4    11      M NatAm 1.976382      4
 ## 5   5     9      M White 1.599860      5
 ## 6   6     9      M  Hisp 1.288948      6</code></pre>
-        </div>
-        <div class="block">
+        </section>
+        <section>
             <h2 id="2-4">.dta</h2>
             <pre class="r"><code>setwd(&quot;D:/Documents/R/site/data&quot;)
 
@@ -147,12 +148,15 @@ head(import_dta)</code></pre>
 ## 4   4    11      M NatAm 1.976382      4
 ## 5   5     9      M White 1.599860      5
 ## 6   6     9      M  Hisp 1.288948      6</code></pre>
-        </div>
-    </div>
-    <script>
-        const requestURL = '../assets/js/json/data.json'
-    </script>
-    <script src="../assets/js/main.js"></script>
+        </section>
+    </main>
+    <footer>
+        <script src="https://astalsi401.github.io/jQuery/jquery-3.6.0.min.js"></script>
+        <script>
+            const requestURL = '../assets/js/json/data.json'
+        </script>
+        <script src="../assets/js/main.js"></script>
+    </footer>
 </body>
 
 </html>

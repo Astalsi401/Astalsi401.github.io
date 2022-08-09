@@ -10,19 +10,22 @@
         gtag('js', new Date());
         gtag('config', 'G-F8SLV521P4');
     </script>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>中位數檢驗</title>
     <link rel="stylesheet" type="text/css" href="../assets/style/main.css">
 </head>
 
 <body>
-    <div id="top"></div>
-    <div id="stataPage" class="sidebar"></div>
-    <div id="plate"></div>
-    <div class="largePic">
-        <div id="pic"></div>
-    </div>
-    <div class="container">
+    <header>
+        <div id="top"></div>
+        <div id="stataPage" class="sidebar"></div>
+        <div id="plate"></div>
+        <div class="largePic">
+            <div id="pic"></div>
+        </div>
+    </header>
+    <main class="container">
         <h2 data-type="title_1" id="011">011. 中位數檢驗（Median Test）</h2>
         <div id="showCode">本頁do file</div>
         <pre id="code"><code>
@@ -76,7 +79,7 @@ kwallis reward, by(g)
 di invchi2tail(2, .05)
 
         </code></pre>
-        <div class="block">
+        <section>
             <h3 data-type="title_2" id="11-1">Mann Whitney U Test</h3>
             <ol>
                 <li>適用範圍：</li>
@@ -147,8 +150,8 @@ Ho: stress(g==1) = stress(g==2)
              z = <span class="stres"> -1.372</span>
     Prob &gt; |z| = <span class="stres">  0.1700</span>
 </samp></pre>
-        </div>
-        <div class="block">
+        </section>
+        <section>
             <h3 data-type="title_2" id="11-2">Kruskal-Wallis Test</h3>
             <ol>
                 <li>適用範圍：</li>
@@ -220,13 +223,15 @@ probability = <span class="stres">    0.0039</span>
             <pre id="stlog-38" class="stlog"><samp><span class="stinp">. di invchi2tail(2, .05)</span>
 <span class="stres">5.9914645</span>
 </samp></pre>
-        </div>
-    </div>
-    <script src="https://astalsi401.github.io/jQuery/jquery-1.9.0.min.js"></script>
-    <script>
-        const requestURL = '../assets/js/json/data.json'
-    </script>
-    <script src="../assets/js/main.js"></script>
+        </section>
+    </main>
+    <footer>
+        <script src="https://astalsi401.github.io/jQuery/jquery-3.6.0.min.js"></script>
+        <script>
+            const requestURL = '../assets/js/json/data.json'
+        </script>
+        <script src="../assets/js/main.js"></script>
+    </footer>
 </body>
 
 </html>

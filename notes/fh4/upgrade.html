@@ -10,27 +10,29 @@
         gtag('js', new Date());
         gtag('config', 'G-F8SLV521P4');
     </script>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Forza Horizon 4 Upgrades</title>
     <link rel="stylesheet" type="text/css" href="../../assets/style/main.css">
-    <script src="https://astalsi401.github.io/jQuery/jquery-1.9.0.min.js"></script>
 </head>
 
 <body class="fh4">
-    <div id="top"></div>
-    <div id="fhPage" class="sidebar"></div>
-    <div id="plate"></div>
-    <div class="largePic">
-        <div id="pic"></div>
-    </div>
-    <div class="container">
+    <header>
+        <div id="top"></div>
+        <div id="fhPage" class="sidebar"></div>
+        <div id="plate"></div>
+        <div class="largePic">
+            <div id="pic"></div>
+        </div>
+    </header>
+    <main class="container">
         <h1>FH4車輛升級</h1>
-        <div class="block">
+        <section>
             <p>本頁面為<a href="https://www.youtube.com/channel/UCGK33hhvffYv5hUNqB0wVnQ">Johnson Racing</a>影片升級部分的簡易中文摘要。</p>
             <p>車輛升級主要考量四個方面：<b>重量</b>、<b>動力</b>、<b>操控</b>、<b>分數</b></p>
             <p>建議依據以下順序來升級車輛：<br>改造 > 空力套件與外觀 > 輪胎與輪圈 > 傳動系統 > 底盤與操控性 > 引擎</p>
-        </div>
-        <div class="block">
+        </section>
+        <section>
             <div class="switchBox">
                 <ul class="tags">
                     <li>改造</li>
@@ -152,11 +154,11 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="calculator">
-            <div class="block">
-                <h2 id="kg/hp">馬力重量比計算</h2>
-                <p>每匹馬力需負擔的重量。</p>
+        </section>
+        <section id="calculator">
+            <h2 id="kg/hp" style="text-align: center;">馬力重量比計算</h2>
+            <p style="text-align: center;">每匹馬力需負擔的重量。</p>
+            <form oninput="whp()">
                 <table class="calculator_table">
                     <tr>
                         <td></td>
@@ -165,57 +167,56 @@
                     </tr>
                     <tr>
                         <th>重量</th>
-                        <td><input id="bw" type="text" placeholder="kg" oninput="whp()"><br></td>
-                        <td><input id="aw" type="text" placeholder="kg" oninput="whp()"><br></td>
+                        <td><label><input name="bw" type="text" placeholder="kg" oninput="whp()"></label></td>
+                        <td><label><input name="aw" type="text" placeholder="kg" oninput="whp()"></label></td>
                     </tr>
                     <tr>
                         <th>馬力</th>
-                        <td><input id="bh" type="text" placeholder="hp" oninput="whp()"><br></td>
-                        <td><input id="ah" type="text" placeholder="hp" oninput="whp()"><br></td>
+                        <td><label><input name="bh" type="text" placeholder="hp" oninput="whp()"></label></td>
+                        <td><label><input name="ah" type="text" placeholder="hp" oninput="whp()"></label></td>
                     </tr>
                     <tr>
                         <th>馬力重量比</th>
                         <td align="center"><b>
-                                <font id="before">__</font>kg/hp
+                                <output name="before">__</output>kg/hp
                             </b></td>
                         <td align="center"><b>
-                                <font id="after">__</font>kg/hp
+                                <output name="after">__</output>kg/hp
                             </b></td>
                     </tr>
                 </table>
-            </div>
-        </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <script src="https://astalsi401.github.io/jQuery/jquery-3.6.0.min.js"></script>
         <script>
             function whp() {
-                let bh = parseFloat($('#bh').val());
-                let bw = parseFloat($('#bw').val());
-                let ah = parseFloat($('#ah').val());
-                let aw = parseFloat($('#aw').val());
-                let before = bw / bh
-                let after = aw / ah
+                let bh = parseFloat($('input[name="bh"]').val()),
+                    bw = parseFloat($('input[name="bw"]').val()),
+                    ah = parseFloat($('input[name="ah"]').val()),
+                    aw = parseFloat($('input[name="aw"]').val());
+                let before = bw / bh,
+                    after = aw / ah
                 if (before > after) {
-                    $('#before').css('color', '#f50000')
-                    $('#after').css('color', '#00d100')
-                    $('#before').html(before.toFixed(2))
-                    $('#after').html(after.toFixed(2))
+                    $('output[name="before"]').css('color', '#f50000')
+                    $('output[name="after"]').css('color', '#00d100')
+                } else if (before < after) {
+                    $('output[name="before"]').css('color', '#00d100')
+                    $('output[name="after"]').css('color', '#f50000')
+                } else {
+                    $('output[name="before"]').css('color', '#000000')
+                    $('output[name="after"]').css('color', '#000000')
                 }
-                else if (before < after) {
-                    $('#before').css('color', '#00d100')
-                    $('#after').css('color', '#f50000')
-                    $('#before').html(before.toFixed(2))
-                    $('#after').html(after.toFixed(2))
-                }
-                else {
-                    $('#before').html(before.toFixed(2))
-                    $('#after').html(after.toFixed(2))
-                }
+                $('output[name="before"]').html(before.toFixed(2))
+                $('output[name="after"]').html(after.toFixed(2))
             }
         </script>
-    </div>
-    <script>
-        const requestURL = '../../assets/js/json/data.json'
-    </script>
-    <script src="../../assets/js/main.js"></script>
+        <script>
+            const requestURL = '../../assets/js/json/data.json'
+        </script>
+        <script src="../../assets/js/main.js"></script>
+    </footer>
 </body>
 
 </html>

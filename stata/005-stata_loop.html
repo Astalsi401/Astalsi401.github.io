@@ -10,19 +10,22 @@
         gtag('js', new Date());
         gtag('config', 'G-F8SLV521P4');
     </script>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>迴圈</title>
     <link rel="stylesheet" type="text/css" href="../assets/style/main.css">
 </head>
 
 <body>
-    <div id="top"></div>
-    <div id="stataPage" class="sidebar"></div>
-    <div id="plate"></div>
-    <div class="largePic">
-        <div id="pic"></div>
-    </div>
-    <div class="container">
+    <header>
+        <div id="top"></div>
+        <div id="stataPage" class="sidebar"></div>
+        <div id="plate"></div>
+        <div class="largePic">
+            <div id="pic"></div>
+        </div>
+    </header>
+    <main class="container">
         <h2 data-type="title_1" id="005">迴圈</h2>
         <div id="showCode">本頁do file</div>
         <pre id="code"><code>
@@ -56,7 +59,7 @@ foreach w in a b c d e f g h i {
 }
 
         </code></pre>
-        <div class="block">
+        <section>
             <p>在量化分析的過程中，從一開始清理資料、統計分析，到最後輸出結果都少不了大量重複性高的步驟，若能學會利用迴圈處理將使效率大幅提升。</p>
             <p>以下將做簡單的示範，首先匯入資料，並觀察資料的信息：</p>
             <pre id="stlog-1" class="stlog"><samp><span class="stinp">. cd data</span>
@@ -161,13 +164,15 @@ variable name   type    format     label      variable label
 (2040 differences between e2h and e2_8)
 (2040 differences between e2i and e2_9)
 </samp></pre>
-        </div>
-    </div>
-    <script src="https://astalsi401.github.io/jQuery/jquery-1.9.0.min.js"></script>
-    <script>
-        const requestURL = '../assets/js/json/data.json'
-    </script>
-    <script src="../assets/js/main.js"></script>
+        </section>
+    </main>
+    <footer>
+        <script src="https://astalsi401.github.io/jQuery/jquery-3.6.0.min.js"></script>
+        <script>
+            const requestURL = '../assets/js/json/data.json'
+        </script>
+        <script src="../assets/js/main.js"></script>
+    </footer>
 </body>
 
 </html>

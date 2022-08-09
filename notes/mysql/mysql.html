@@ -10,22 +10,24 @@
         gtag('js', new Date());
         gtag('config', 'G-F8SLV521P4');
     </script>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MySQL</title>
     <link rel="stylesheet" href="../../assets/style/main.css">
-    <script src="https://astalsi401.github.io/jQuery/jquery-1.9.0.min.js"></script>
 </head>
 
 <body>
-    <div id="top"></div>
-    <div id="notesPage" class="sidebar"></div>
-    <div id="plate"></div>
-    <div class="largePic">
-        <div id="pic"></div>
-    </div>
-    <div class="container">
+    <header>
+        <div id="top"></div>
+        <div id="notesPage" class="sidebar"></div>
+        <div id="plate"></div>
+        <div class="largePic">
+            <div id="pic"></div>
+        </div>
+    </header>
+    <main class="container">
         <h1>MySQL使用筆記</h1>
-        <div class="block">
+        <section>
             <h2>設定</h2>
             <ol>
                 <li>
@@ -60,19 +62,22 @@ default-storage-engine=INNODB
                 <li>登錄本機數據庫</li>
                 <pre>mysql -u root -p</pre>
             </ol>
-        </div>
-        <div class="block">
+        </section>
+        <section>
             <h2>常用指令</h2>
             <ol>
                 <li>mysql啟動時使用系統指令需加上<code>system</code>，例如：</li>
                 <pre>system pwd</pre>
             </ol>
-        </div>
-    </div>
-    <script>
-        const requestURL = '../../assets/js/json/data.json'
-    </script>
-    <script src="../../assets/js/main.js"></script>
+        </section>
+    </main>
+    <footer>
+        <script src="https://astalsi401.github.io/jQuery/jquery-3.6.0.min.js"></script>
+        <script>
+            const requestURL = '../../assets/js/json/data.json'
+        </script>
+        <script src="../../assets/js/main.js"></script>
+    </footer>
 </body>
 
 </html>

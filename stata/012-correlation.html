@@ -10,19 +10,22 @@
         gtag('js', new Date());
         gtag('config', 'G-F8SLV521P4');
     </script>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>相關係數</title>
     <link rel="stylesheet" type="text/css" href="../assets/style/main.css">
 </head>
 
 <body>
-    <div id="top"></div>
-    <div id="stataPage" class="sidebar"></div>
-    <div id="plate"></div>
-    <div class="largePic">
-        <div id="pic"></div>
-    </div>
-    <div class="container">
+    <header>
+        <div id="top"></div>
+        <div id="stataPage" class="sidebar"></div>
+        <div id="plate"></div>
+        <div class="largePic">
+            <div id="pic"></div>
+        </div>
+    </header>
+    <main class="container">
         <h2 data-type="title_1" id="012">012. 相關係數</h2>
         <div id="showCode">本頁do file</div>
         <pre id="code"><code>
@@ -152,7 +155,7 @@ twoway (sca  y x if group==2, m(O)) ///
 graph export "sca02.png", replace
 
         </code></pre>
-        <div class="block">
+        <section>
             <h3 data-type="title_2" id="12-1">相關係數的公式推導</h3>
             <center>
                 <img src="data:image/png;base64,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" width="154" heigh="56">
@@ -177,8 +180,8 @@ graph export "sca02.png", replace
             <center>
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMoAAAA4CAYAAAC8P2e6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAA/PSURBVHhe7Z0J1E3VF8CFKEKlLEuplUqrLBpMTRoMDSqNQmnOmGYlTYgojRppHqkUojTPhKIQRfOEWiENosn5r9/+7nndd945993+vXe/73rnt9ZZvnvP8+595559zj5777NvJeXxePLiBcXjiYEXFI8nBl5QPJ4YeEFJIXPmzFFnnnlmVunZs2dQm14WLVqU87soa9euDT5RfnhBSSFLlixREyZMyCoTJ04MatPLDz/8kPO7KH/++WfwifLDC4rHE4OSEZQFCxao++67L7Kg0pgwmk2dOlX+XrFihXr77bezypo1a6Ru5syZmXNffvmlnCs0zCTha1PWrVunfv/996xzzz33nPrmm2+C/2WH//P888/L36g24f8/a9YsOf/HH39knS+GCvTrr79mXeO9996T86tXr846/84776ivv/5a6sqDkhEUpvXttttOVapUSV199dXqhRdeyJSHHnpI7bjjjurSSy8NPl3Gb7/9Jjqy7nR0rsmTJ6uNN95YbbjhhvLw/v77b6lDv+bciSeeqL7//ns5V2i4n3vvvVd+Q/369dXChQvlPMLyyiuvqA022EBdeOGF6scff1QXXXSR3JONn3/+WZ1++umZ++T/v/rqq6patWpql112UV999VXm/Oeffy7nr7322sxvLSR//fWXevrpp+U37bXXXmrp0qVynmvNnz9fzt99991yPGDAAPXRRx9JfdKUlOr1wQcfqFq1aqmtttoq80A0PIDLLrssOCp7UB07dhRhMOnRo4c8wE8++SQ4o9Rtt92mzj777OCouLRv317VqFFDOrwGAbnxxhuDIyUz3WGHHZbzO5kl2rVrJ21hwvduvfXWwVEZDz74oPzeYrPbbrtJCXPDDTeogQMHBkdlM9/hhx8uM2vSlNwahdGrcuXKqnXr1hm1SRPuPGPGjFEnnXRScJTN7NmzRVAuvvhiOZ4yZYo69thjizLi2hg/frxc/84775TjO+64Q5177rnyd5ixY8eqU045JTgq4/rrr1d9+/YNjrKhY/K9eqb64osvZLBAuIoNAsGM+N1338kxs4mtTR9//HHVvXv34Cg5SnIxP3z4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" width="202" heigh="56">
             </center>
-        </div>
-        <div class="block">
+        </section>
+        <section>
             <h3 data-type="title_2" id="12-2">相關係數的意義</h3>
             <ul>
                 <li>相關係數介於-1到+1之間。</li>
@@ -196,8 +199,8 @@ graph export "sca02.png", replace
                     <li>若在 0.6與 1之間，代表程度很強的正相關</li>
                 </ul>
             </ul>
-        </div>
-        <div class="block">
+        </section>
+        <section>
             <h3 data-type="title_2" id="12-3">相關係數的限制</h3>
             <p>相關係數僅適用于直線型的關係中。若兩變項之關係呈曲線狀，例如下圖的案例，年輕人看電視的時間隨著年齡的增長而減少，至40歲左右降至最低點，但隨著年齡的增長，逐漸離開工作崗位，年齡大的人有更多看電視的時間。</p>
             <pre id="stlog-39" class="stlog"><samp><span class="stinp">. clear</span>
@@ -267,8 +270,8 @@ graph export "sca02.png", replace
 
 </samp></pre>
             <div class="img-block"><img id="cor01" src="" alt=""></div>
-        </div>
-        <div class="block">
+        </section>
+        <section>
             <h3 data-type="title_2" id="12-4">STATA相關係數範例</h3>
             <p><b>範例1：</b></p>
             <pre id="stlog-40" class="stlog"><samp><span class="stinp">. clear</span>
@@ -345,8 +348,8 @@ graph export "sca02.png", replace
 <span class="stres">             </span>|<span class="stres">   0.5636</span>
 <span class="stres">             </span>|
 </samp></pre>
-        </div>
-        <div class="block">
+        </section>
+        <section>
             <h3 data-type="title_2" id="12-5">偏相關係數（Partial Correlation）</h3>
             <p>偏相關指移除掉掉第三個變項在其中的影響後，兩個變項之間的相關。可瞭解兩個變項之間原有的關係會不會因為第三個變項介入其中後，導致改變。</p>
             <p><b>偏相關範例：</b></p>
@@ -461,14 +464,16 @@ Partial and semipartial correlations of y with
 (file sca02.png written in PNG format)
 </samp></pre>
             <div class="img-block"><img id="sca02" src="" alt=""></div>
-        </div>
-    </div>
-    <script src="https://astalsi401.github.io/jQuery/jquery-1.9.0.min.js"></script>
-    <script>
-        const requestURL = '../assets/js/json/data.json'
-        const picsUrl = '../assets/js/json/pics/stata012.json'
-    </script>
-    <script src="../assets/js/main.js"></script>
+        </section>
+    </main>
+    <footer>
+        <script src="https://astalsi401.github.io/jQuery/jquery-3.6.0.min.js"></script>
+        <script>
+            const requestURL = '../assets/js/json/data.json'
+            const picsUrl = '../assets/js/json/pics/stata012.json'
+        </script>
+        <script src="../assets/js/main.js"></script>
+    </footer>
 </body>
 
 </html>
