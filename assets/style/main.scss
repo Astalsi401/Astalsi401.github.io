@@ -831,6 +831,7 @@ div {
     width: 100%;
     @extend %no-anti-white;
     img {
+      cursor: zoom-in;
       display: block;
       margin: 0 auto;
     }
@@ -849,6 +850,7 @@ div {
     div#pic {
       width: 90%;
       img {
+        cursor: zoom-out;
         max-width: 100%;
         display: block;
         margin: 0 auto;

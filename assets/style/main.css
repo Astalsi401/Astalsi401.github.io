@@ -819,6 +819,7 @@ div.img-block {
   width: 100%;
 }
 div.img-block img {
+  cursor: zoom-in;
   display: block;
   margin: 0 auto;
 }
@@ -838,6 +839,7 @@ div.largePic div#pic {
   width: 90%;
 }
 div.largePic div#pic img {
+  cursor: zoom-out;
   max-width: 100%;
   display: block;
   margin: 0 auto;
