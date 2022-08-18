@@ -125,7 +125,33 @@ let writeContents = () => {
     let elemTop = $(e).offset().top;
     let elemBottom = elemTop + $(e).height();
     return elemBottom <= docViewBottom && elemTop >= docViewTop;
+  },
+  addNumber = (e) => {
+    if (!isScrolledIntoView(e)) return;
+    count += 1;
+    let end = parseInt($(e).attr("data-value")),
+      start = 0,
+      timer;
+    let a = parseInt(end / 50);
+    if (a < 1) a = 1;
+    if (start < end) {
+      timer = setInterval(function () {
+        start += a;
+        if (start > end) {
+          clearInterval(timer);
+          $(e).html(end.toLocaleString());
+        } else {
+          $(e).html(start.toLocaleString());
+          $(e).removeClass("addNumber");
+        }
+      }, 30);
+    }
   };
+$(window).on("DOMContentLoaded load resize scroll", () => {
+  $(".addNumber").each((i) => {
+    addNumber($(".addNumber").eq(i));
+  });
+});
 $(() => {
   writePics();
   writeContents();

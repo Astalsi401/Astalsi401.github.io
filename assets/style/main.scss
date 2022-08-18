@@ -292,20 +292,22 @@ table {
     width: calc(100% - 2px);
     text-align: center;
     @include fontSize("xx-small");
-    thead th {
-      position: relative;
-      span {
-        position: absolute;
-        top: 45%;
-        margin-left: 5px;
-        @include triangle(3px, rgba(var(--black), var(--translucent)));
-      }
-      .ascend,
-      .descend {
-        border-color: rgba(var(--black)) transparent transparent transparent;
-      }
-      .ascend {
-        transform: rotate(180deg);
+    thead {
+      th {
+        position: relative;
+        span {
+          position: absolute;
+          top: 45%;
+          margin-left: 5px;
+          @include triangle(3px, rgba(var(--black), var(--translucent)));
+        }
+        .ascend,
+        .descend {
+          border-color: rgba(var(--black)) transparent transparent transparent;
+        }
+        .ascend {
+          transform: rotate(180deg);
+        }
       }
     }
     tr {
