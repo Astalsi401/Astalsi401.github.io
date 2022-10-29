@@ -41,10 +41,10 @@
                 <li>更改命令提示字元</li>
                 <p>
                     cmder預設為<code>λ</code>，偶爾會導致有一個字符無法刪除的bug，雖然多餘的字符並不會影響指令運作，但還是建議替換。<br>
-                    到<code>cmder安裝路徑\vender\clink.lua</code>，將
-                <pre><code>local cmder_prompt = "\x1b[1;32;40m{cwd} {git}{hg}{svn} \n\x1b[1;39;40m{lamb} \x1b[0m"</code></pre>
+                    到<code>cmder安裝路徑\config\cmder_prompt_config.lua</code>，將
+                <pre><code>prompt_lambSymbol = "λ"</code></pre>
                 改為
-                <pre><code>local cmder_prompt = "\x1b[1;32;40m{cwd} {git}{hg}{svn} \n\x1b[1;39;40m$ \x1b[0m"</code></pre>
+                <pre><code>prompt_lambSymbol = "$"</code></pre>
                 重啟cmder。
                 </p>
             </ol>
