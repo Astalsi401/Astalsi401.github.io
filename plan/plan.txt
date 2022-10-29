@@ -1,6 +1,1 @@
 網頁修改方向
-1. tune_list頁面資料改為json格式，以迴圈建立table V
-2. 以export/import個別匯入function
-3. sidebar樣式更改
-4. 將重複性html儲存進同一js檔中(array)
-5. es6簡潔函數聲明、對象字面變量聲明、模板字面變量
