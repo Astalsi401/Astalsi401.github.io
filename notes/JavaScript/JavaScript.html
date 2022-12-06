@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F8SLV521P4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-F8SLV521P4');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cmder Setting</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/style/main.css">
+</head>
+
+<body>
+    <header>
+        <div id="top"></div>
+        <div id="notesPage" class="sidebar"></div>
+        <div id="plate"></div>
+        <div class="largePic">
+            <div id="pic"></div>
+        </div>
+    </header>
+    <main class="container">
+        <h1>JavaScript筆記</h1>
+        <section>
+            <h2>fetch儲存於github的檔案</h2>
+            <pre><code>
+function getgit(owner, repo, path) {
+    fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`)
+        .then(d => d.json())
+        .then(d =>
+            fetch(`https://api.github.com/repos/${owner}/${repo}/git/blobs/${d.sha}`)
+        )
+        .then(d => d.json())
+        .then(d => JSON.parse(atob(d.content)))
+        .then(json => {
+            console.log(json)
+        });
+}
+getgit('Astalsi401', 'ibmiWork', 'test/test.json')
+            </code></pre>
+            <a href="https://betterprogramming.pub/how-to-fetch-files-from-github-in-javascript-e0ed2c72aeb4">原文</a>
+        </section>
+    </main>
+    <footer>
+        <script src="https://astalsi401.github.io/jQuery/jquery-3.6.0.min.js"></script>
+        <script>
+            const requestURL = '../../assets/js/json/data.json'
+        </script>
+        <script src="../../assets/js/main.js"></script>
+    </footer>
+</body>
+
+</html>

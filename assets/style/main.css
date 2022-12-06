@@ -17,7 +17,8 @@ table.order-table td img {
   -webkit-user-select: none;
   -moz-user-select: none;
   -o-user-select: none;
-  user-select: none;
+  -ms-user-select: none;
+      user-select: none;
 }
 
 * {
@@ -301,12 +302,12 @@ input.table-filter {
 }
 
 .stres {
-  color: #324f58;
+  color: rgb(50, 79, 88);
 }
 
 .stinp {
   font-weight: bold;
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 .stcmd .stcmt {
@@ -321,25 +322,25 @@ input.table-filter {
 
 /* R代碼高亮 */
 .hljs-literal {
-  color: #990073;
+  color: rgb(153, 0, 115);
 }
 
 .hljs-number {
-  color: #009999;
+  color: rgb(0, 153, 153);
 }
 
 .hljs-comment {
-  color: #999988;
+  color: rgb(153, 153, 136);
   font-style: italic;
 }
 
 .hljs-keyword {
-  color: #990000;
+  color: rgb(153, 0, 0);
   font-weight: bold;
 }
 
 .hljs-string {
-  color: #dd1144;
+  color: rgb(221, 17, 68);
 }
 
 /* 一鍵複製代碼 */
@@ -420,7 +421,7 @@ input.table-filter {
   z-index: 1;
   display: block;
   text-align: center;
-  box-shadow: inset 0 0px 1px black;
+  box-shadow: inset 0 0px 1px rgb(0, 0, 0);
   margin-top: 0;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -489,7 +490,7 @@ div.sidebar {
 div.sidebar {
   background: rgb(var(--white));
 }
-@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
   div.sidebar {
     background: rgba(var(--white), var(--translucent));
     backdrop-filter: blur(30px);
@@ -569,7 +570,7 @@ div#top {
 div#top {
   background: rgb(var(--white));
 }
-@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
   div#top {
     background: rgba(var(--white), var(--translucent));
     backdrop-filter: blur(30px);
@@ -850,7 +851,8 @@ div.largePic div#pic, div.largePic {
 }
 div.largePic.active {
   z-index: 10000;
-  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
 }
 div.largePic.active div#pic, div.largePic.active {
   opacity: 1;
@@ -884,6 +886,4 @@ div.largePic.active div#pic, div.largePic.active {
   padding-left: 10px;
   height: 30px;
   float: right;
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

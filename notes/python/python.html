@@ -28,6 +28,13 @@
     <main class="container">
         <h1>Python筆記</h1>
         <section>
+            <h2>pip</h2>
+            儲存已安裝的libraries清單為reqs.txt
+            <pre><code>pip freeze > reqs.txt</code></pre>
+            重新安裝儲存於reqs.txt的libraries
+            <pre><code>pip install -r reqs.txt</code></pre>
+        </section>
+        <section>
             <h2>讀取檔案</h2>
             <table>
                 <tr>
@@ -63,6 +70,13 @@
                     <td>exclusive creation, failing if file exists</td>
                 </tr>
             </table>
+        </section>
+        <section>
+            <h2>pandas</h2>
+            <ul>
+                <li>在function中對column資料進行處理，並回傳新資料</li>
+                <pre><code>series.map(function)</code></pre>
+            </ul>
         </section>
     </main>
     <footer>
