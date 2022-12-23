@@ -136,6 +136,12 @@ ol {
 /*一般頁面*/
 .container {
   width: min(calc(100% - 20px), 800px);
+}
+.container-lg {
+  width: min(calc(100% - 20px), 1320px);
+}
+.container,
+.container-lg {
   min-width: 270px;
   min-height: 100vh;
   margin: 0 auto;

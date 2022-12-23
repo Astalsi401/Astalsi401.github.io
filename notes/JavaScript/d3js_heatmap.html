@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F8SLV521P4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-F8SLV521P4');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FreeCodeCamp D3.js Heatmap</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/style/main.css">
+</head>
+
+<body>
+    <header>
+        <div id="top"></div>
+        <div id="notesPage" class="sidebar"></div>
+        <div id="plate"></div>
+        <div class="largePic">
+            <div id="pic"></div>
+        </div>
+    </header>
+    <main class="container-lg">
+        <h1>FreeCodeCamp D3.js Heatmap</h1>
+        <section>
+            <div id="title">Monthly Global Land-Surface Temperature</div>
+            <div id="description"></div>
+            <div id="graph"></div>
+        </section>
+    </main>
+    <footer>
+        <script src="https://astalsi401.github.io/jQuery/jquery-3.6.0.min.js"></script>
+        <script>
+            const requestURL = '../../assets/js/json/data.json'
+        </script>
+        <script src="../../assets/js/main.js"></script>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="./graph/js/heatmap.js"></script>
+        <link rel="stylesheet" href="./graph/css/heatmap.min.css">
+    </footer>
+</body>
+
+</html>
