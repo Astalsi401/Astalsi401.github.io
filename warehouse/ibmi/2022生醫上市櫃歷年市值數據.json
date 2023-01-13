@@ -1,8 +1,17 @@
 [
   { "year": 2007, "num": 47, "total": 1262, "mean": 26.85 },
+  { "year": 2008, "num": 0, "total": 943, "mean": 0 },
+  { "year": 2009, "num": 0, "total": 2201, "mean": 0 },
+  { "year": 2010, "num": 0, "total": 3114, "mean": 0 },
   { "year": 2011, "num": 94, "total": 2824, "mean": 30.04 },
+  { "year": 2012, "num": 0, "total": 5259, "mean": 0 },
+  { "year": 2013, "num": 0, "total": 8316, "mean": 0 },
+  { "year": 2014, "num": 0, "total": 9018, "mean": 0 },
   { "year": 2015, "num": 156, "total": 11538, "mean": 74 },
+  { "year": 2016, "num": 0, "total": 10003, "mean": 0 },
+  { "year": 2017, "num": 0, "total": 9256, "mean": 0 },
   { "year": 2018, "num": 188, "total": 8404, "mean": 44.7 },
+  { "year": 2019, "num": 0, "total": 8736, "mean": 0 },
   { "year": 2020, "num": 188, "total": 10601, "mean": 56.39 },
   { "year": 2021, "num": 207, "total": 13465, "mean": 65.05 },
   { "year": 2022, "num": 214, "total": 12129, "mean": 56.68 }
