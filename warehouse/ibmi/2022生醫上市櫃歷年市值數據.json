@@ -1,9 +1,9 @@
 [
-  { "year": 2007, "'num": 47, "total": 1262, "mean": 26.85 },
-  { "year": 2011, "'num": 94, "total": 2824, "mean": 30.04 },
-  { "year": 2015, "'num": 156, "total": 11538, "mean": 74 },
-  { "year": 2018, "'num": 188, "total": 8404, "mean": 44.7 },
-  { "year": 2020, "'num": 188, "total": 10601, "mean": 56.39 },
-  { "year": 2021, "'num": 207, "total": 13465, "mean": 65.05 },
-  { "year": 2022, "'num": 214, "total": 12129, "mean": 56.68 }
+  { "year": 2007, "num": 47, "total": 1262, "mean": 26.85 },
+  { "year": 2011, "num": 94, "total": 2824, "mean": 30.04 },
+  { "year": 2015, "num": 156, "total": 11538, "mean": 74 },
+  { "year": 2018, "num": 188, "total": 8404, "mean": 44.7 },
+  { "year": 2020, "num": 188, "total": 10601, "mean": 56.39 },
+  { "year": 2021, "num": 207, "total": 13465, "mean": 65.05 },
+  { "year": 2022, "num": 214, "total": 12129, "mean": 56.68 }
 ]
