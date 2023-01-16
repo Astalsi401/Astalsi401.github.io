@@ -1,0 +1,70 @@
+[
+  {
+    "year": 2019,
+    "total": 86,
+    "markets": [
+      { "market": "上市", "num": 2 },
+      { "market": "上櫃", "num": 4 },
+      { "market": "興櫃", "num": 8 }
+    ],
+    "categories": [
+      { "category": "醫材製造/研發", "num": 10 },
+      { "category": "藥品製造/新藥研發", "num": 2 },
+      { "category": "醫療通路/產品經銷", "num": 0 },
+      { "category": "生技服務/基因檢測服務", "num": 2 },
+      { "category": "健康器材及醫療保健品", "num": 0 },
+      { "category": "醫學美容/藥妝保健", "num": 0 }
+    ]
+  },
+  {
+    "year": 2020,
+    "total": 73,
+    "markets": [
+      { "market": "上市", "num": 1 },
+      { "market": "上櫃", "num": 2 },
+      { "market": "興櫃", "num": 10 }
+    ],
+    "categories": [
+      { "category": "醫材製造/研發", "num": 7 },
+      { "category": "藥品製造/新藥研發", "num": 3 },
+      { "category": "醫療通路/產品經銷", "num": 0 },
+      { "category": "生技服務/基因檢測服務", "num": 1 },
+      { "category": "健康器材及醫療保健品", "num": 1 },
+      { "category": "醫學美容/藥妝保健", "num": 1 }
+    ]
+  },
+  {
+    "year": 2021,
+    "total": 107,
+    "markets": [
+      { "market": "上市", "num": 0 },
+      { "market": "上櫃", "num": 5 },
+      { "market": "興櫃", "num": 19 }
+    ],
+    "categories": [
+      { "category": "醫材製造/研發", "num": 13 },
+      { "category": "藥品製造/新藥研發", "num": 7 },
+      { "category": "醫療通路/產品經銷", "num": 2 },
+      { "category": "生技服務/基因檢測服務", "num": 1 },
+      { "category": "健康器材及醫療保健品", "num": 1 },
+      { "category": "醫學美容/藥妝保健", "num": 0 }
+    ]
+  },
+  {
+    "year": 2022,
+    "total": 114,
+    "markets": [
+      { "market": "上市", "num": 4 },
+      { "market": "上櫃", "num": 0 },
+      { "market": "興櫃", "num": 14 }
+    ],
+    "categories": [
+      { "category": "醫材製造/研發", "num": 5 },
+      { "category": "藥品製造/新藥研發", "num": 9 },
+      { "category": "醫療通路/產品經銷", "num": 1 },
+      { "category": "生技服務/基因檢測服務", "num": 3 },
+      { "category": "健康器材及醫療保健品", "num": 0 },
+      { "category": "醫學美容/藥妝保健", "num": 0 }
+    ]
+  }
+]
