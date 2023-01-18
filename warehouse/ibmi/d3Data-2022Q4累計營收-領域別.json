@@ -1,8 +1,8 @@
 {
   "data": [
     { "category": "藥品製造/新藥研發", "thisYear": 890.9, "lastYear": 806.0 },
-    { "category": "醫材製造/研發", "thisYear": 763.6, "lastYear": 718.23 },
-    { "category": "健康器材及預防保健品", "thisYear": 671.7, "lastYear": 740.17 },
+    { "category": "醫材製造/研發", "thisYear": 763.6, "lastYear": 740.17 },
+    { "category": "健康器材及預防保健品", "thisYear": 671.7, "lastYear": 718.23 },
     { "category": "醫療通路/產品經銷", "thisYear": 587.1, "lastYear": 471.3 },
     { "category": "醫學美容/藥妝保健", "thisYear": 218.3, "lastYear": 225.4 },
     { "category": "農業生技/農科健康", "thisYear": 129.1, "lastYear": 210.68 },
