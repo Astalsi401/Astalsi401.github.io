@@ -1,12 +1,12 @@
 {
   "data": [
-    { "category": "藥品製造/新藥研發", "thisYear": 890.9, "lastYear": 806.0 },
-    { "category": "醫材製造/研發", "thisYear": 763.6, "lastYear": 740.17 },
-    { "category": "健康器材及預防保健品", "thisYear": 671.7, "lastYear": 718.23 },
-    { "category": "醫療通路/產品經銷", "thisYear": 587.1, "lastYear": 471.3 },
-    { "category": "醫學美容/藥妝保健", "thisYear": 218.3, "lastYear": 225.4 },
-    { "category": "農業生技/農科健康", "thisYear": 129.1, "lastYear": 210.68 },
-    { "category": "原料藥", "thisYear": 128.7, "lastYear": 116.7 },
-    { "category": "生技服務/基因檢測服務", "thisYear": 75.2, "lastYear": 60.6 }
+    { "category": "藥品製造/新藥研發", "thisYear": 890.9, "lastYear": 806.0, "category_en": "Bio-Pharmaceuticals" },
+    { "category": "醫材製造/研發", "thisYear": 763.6, "lastYear": 740.17, "category_en": "Medical Device, R&D, Manufacturing" },
+    { "category": "健康器材及預防保健品", "thisYear": 671.7, "lastYear": 718.23, "category_en": "Workout Equipment & Health Supplement" },
+    { "category": "醫療通路/產品經銷", "thisYear": 587.1, "lastYear": 471.3, "category_en": "Pharmacy & Distributor" },
+    { "category": "醫學美容/藥妝保健", "thisYear": 218.3, "lastYear": 225.4, "category_en": "Aesthetic Medicine & Beauty Care" },
+    { "category": "農業生技/農科健康", "thisYear": 129.1, "lastYear": 210.68, "category_en": "Agriculture & Agricultural Science" },
+    { "category": "原料藥", "thisYear": 128.7, "lastYear": 116.7, "category_en": "APIs" },
+    { "category": "生技服務/基因檢測服務", "thisYear": 75.2, "lastYear": 60.6, "category_en": "Genetic Testing & Wellness Check" }
   ]
 }
