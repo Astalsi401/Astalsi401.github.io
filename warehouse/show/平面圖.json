@@ -196,7 +196,7 @@
   { "type": "booth", "floor": 1, "w": 2400, "h": 600, "x": 9120, "y": 4810, "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" }, "text": { "tc": [], "en": [] }, "size": 1, "num": 16 },
   { "type": "booth", "floor": 1, "w": 2400, "h": 600, "x": 9120, "y": 5710, "cat": { "tc": "全齡健康展區", "en": "Health Tech" }, "text": { "tc": [], "en": [] }, "size": 1, "num": 14 },
   { "type": "booth", "floor": 1, "w": 2400, "h": 600, "x": 9120, "y": 6610, "cat": { "tc": "全齡健康展區", "en": "Health Tech" }, "text": { "tc": [], "en": [] }, "size": 1, "num": 16 },
-  { "type": "booth", "floor": 1, "w": 2400, "h": 1500, "x": 9120, "y": 7510, "cat": { "tc": "醫療機構展區", "en": "Health Tech" }, "text": { "tc": [], "en": [] }, "size": 1, "num": 38 },
+  { "type": "booth", "floor": 1, "w": 2400, "h": 1500, "x": 9120, "y": 7510, "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" }, "text": { "tc": [], "en": [] }, "size": 1, "num": 38 },
   { "type": "booth", "floor": 1, "w": 2100, "h": 300, "x": 11820, "y": 300, "cat": { "tc": "全齡健康展區", "en": "Health Tech" }, "text": { "tc": [], "en": [] }, "size": 1, "num": 6 },
   { "type": "booth", "floor": 1, "w": 2100, "h": 300, "x": 11820, "y": 900, "cat": { "tc": "全齡健康展區", "en": "Health Tech" }, "text": { "tc": [], "en": [] }, "size": 1, "num": 7 },
   { "type": "booth", "floor": 1, "w": 2100, "h": 1200, "x": 11820, "y": 3310, "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" }, "text": { "tc": [], "en": [] }, "size": 1, "num": 26 },
