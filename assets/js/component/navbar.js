@@ -28,11 +28,11 @@ class Sidebar extends React.Component {
     this.click = this.click.bind(this);
   }
   componentDidMount() {
-    fetch("./index.json")
+    fetch("https://astalsi401.github.io/assets/js/json/index.json")
       .then((res) => res.json())
       .then((data) => {
         this.setState({
-          index: data.find((d) => d.category === this.props.category),
+          index: data.index.find((d) => d.category === this.props.category),
           indexLoaded: true,
         });
       });
