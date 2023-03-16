@@ -99,3 +99,16 @@ class Header extends React.Component {
     );
   }
 }
+class Main extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div className="container shadow-lg p-3">
+        <h1 className="text-center">{this.props.title}</h1>
+        <Main />
+      </div>
+    );
+  }
+}

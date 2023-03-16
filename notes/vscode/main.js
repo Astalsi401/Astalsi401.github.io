@@ -1,4 +1,4 @@
-class MainContent extends React.Component {
+class Content extends React.Component {
   constructor(props) {
     super(props);
     this.ctrl = "Ctrl";
@@ -162,8 +162,7 @@ class MainContent extends React.Component {
   }
   render() {
     return (
-      <div className="container shadow-lg p-3">
-        <h1>vscode筆記</h1>
+      <div>
         <h2>快捷鍵(個人用)</h2>
         {this.state.data.map((section) => (
           <section className="my-4">
@@ -181,6 +180,3 @@ class MainContent extends React.Component {
     );
   }
 }
-
-ReactDOM.render(<Header category="Notes" />, document.getElementById("header"));
-ReactDOM.render(<MainContent />, document.getElementById("main-content"));
