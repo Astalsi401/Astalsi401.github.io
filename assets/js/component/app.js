@@ -83,7 +83,7 @@ class Header extends React.Component {
   }
   render() {
     return (
-      <div ref={this.wrapperRef}>
+      <header id="header" ref={this.wrapperRef}>
         <nav id="navbar">
           <div className={`hamberger${toggleActive(this.state.sidebarActive)}`} onClick={this.click}>
             <span></span>
@@ -95,19 +95,22 @@ class Header extends React.Component {
           </a>
         </nav>
         <Sidebar sidebarActive={this.state.sidebarActive} category={this.props.category} />
-      </div>
+      </header>
     );
   }
 }
-class Main extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
   }
   render() {
     return (
-      <div className="container shadow-lg p-3">
-        <h1 className="text-center">{this.props.title}</h1>
-        <Content />
+      <div>
+        <Header category={this.props.category} />
+        <main id="main-content" className="container shadow-lg p-3">
+          <h1 className="text-center">{this.props.title}</h1>
+          <Content title={this.props.title} />
+        </main>
       </div>
     );
   }

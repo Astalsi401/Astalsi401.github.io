@@ -5,5 +5,5 @@
 @import "./header.scss";
 
 #main-content {
-  padding-top: var(--nav-h);
+  padding-top: var(--nav-h) !important;
 }
