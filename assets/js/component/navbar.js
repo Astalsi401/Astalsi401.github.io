@@ -107,7 +107,7 @@ class Main extends React.Component {
     return (
       <div className="container shadow-lg p-3">
         <h1 className="text-center">{this.props.title}</h1>
-        <Main />
+        <Content />
       </div>
     );
   }
