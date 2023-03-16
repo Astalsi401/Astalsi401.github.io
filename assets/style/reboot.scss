@@ -1,0 +1,54 @@
+:root {
+  @each $colors in ($theme-colors, $theme-decoration-colors) {
+    @each $color, $color-value in $colors {
+      --#{$color}: #{$color-value};
+    }
+  }
+  @each $color, $color-value in $theme-colors-rgb {
+    @each $a, $a-value in $alpha {
+      --#{$color}-#{$a}: rgba(#{join(($color-value), (), comma)}, #{$a-value});
+    }
+  }
+  @each $u, $u-value in $units {
+    --unit-#{$u}: #{$u-value};
+  }
+  --nav-h: 40px;
+  scroll-behavior: smooth;
+}
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  font-family: Microsoft JhengHei, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background 0.4s;
+}
+html {
+  font-size: 16px;
+}
+@each $i, $size in (1: xxx-large, 2: xx-large, 3: x-large, 4: large, 5: medium, 6: small) {
+  h#{$i} {
+    font-size: map-get($text-size, $size);
+  }
+}
+code,
+kbd,
+pre,
+samp {
+  font-size: map-get($text-size, small);
+}
+kbd {
+  display: inline-block;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px var(--main-shadow);
+  padding: 0px 4px;
+  margin: 2px;
+  background: var(--black-80);
+}
+li {
+  list-style-position: outside;
+  margin-top: var(--unit-1);
+  margin-bottom: var(--unit-1);
+  margin-left: var(--unit-2);
+}

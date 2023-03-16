@@ -1,0 +1,20 @@
+[
+  {
+    "category": "Notes",
+    "pages": [
+      {
+        "page": "cmder筆記",
+        "href": "https://astalsi401.github.io/notes/cmder/setting.html",
+        "section": [
+          { "title": "安裝", "href": "https://astalsi401.github.io/notes/cmder/setting.html#install" },
+          { "title": "基礎設定", "href": "https://astalsi401.github.io/notes/cmder/setting.html#settings" },
+          { "title": "Cmder & Git", "href": "https://astalsi401.github.io/notes/cmder/setting.html#cmder_git" },
+          { "title": "Cmder & Sublime Text 3", "href": "https://astalsi401.github.io/notes/cmder/setting.html#cmder_sublime" },
+          { "title": "Cmder快捷鍵", "href": "https://astalsi401.github.io/notes/cmder/setting.html#cmder_hotkey" }
+        ]
+      },
+      { "page": "mysql筆記", "href": "https://astalsi401.github.io/notes/mysql/mysql.html" },
+      { "page": "php筆記", "href": "https://astalsi401.github.io/notes/php/php.html" }
+    ]
+  }
+]

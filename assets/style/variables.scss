@@ -1,0 +1,178 @@
+$screen-size: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+$theme-decoration-colors: (
+  link: rgb(0, 0, 143),
+  link-visited: rgb(160, 160, 255),
+);
+$theme-colors: (
+  "white": rgb(255, 255, 255),
+  "gray": rgb(204, 204, 204),
+  "black": rgb(0, 0, 0),
+  primary: rgb(55, 67, 121),
+  secondary: rgb(148, 0, 0),
+  main-bg: rgb(255, 255, 255),
+  main-shadow: rgb(0, 0, 0),
+  main-text: rgb(0, 0, 0),
+);
+$theme-colors-rgb: (
+  "white": 255 255 255,
+  "gray": 204 204 204,
+  "black": 0 0 0,
+  primary: 55 67 121,
+  secondary: 148 0 0,
+);
+$alpha: (
+  0: 0,
+  80: 0.08,
+  300: 0.3,
+);
+$elements: (
+  text: color,
+  bd: border,
+  bg: background,
+);
+$unit: 0.25rem;
+$units: (
+  0: 0rem,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 1rem,
+  4: 1.5rem,
+  5: 3rem,
+  auto: auto,
+);
+$block-length: (
+  0: 0%,
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%,
+);
+$block-wh: (
+  w: width,
+  h: height,
+);
+$element-sides: (
+  "": "",
+  t: top,
+  b: bottom,
+  s: left,
+  e: right,
+  x: left right,
+  y: top bottom,
+);
+$margin_padding: (
+  m: margin,
+  p: padding,
+);
+$display: (
+  flex: flex,
+  block: block,
+  inline: inline,
+  inline-flex: inline-flex,
+  inline-block: inline-block,
+  none: none,
+  initial: initial,
+  table: table,
+  table-cell: table-cell,
+  table-row: table-row,
+);
+$flex-position: (
+  justify-content: (
+    start: start,
+    end: end,
+    center: center,
+    between: space-between,
+    around: space-around,
+  ),
+  align-items: (
+    start: start,
+    end: end,
+    center: center,
+    baseline: baseline,
+    stretch: stretch,
+  ),
+);
+$position: (absolute, fixed, static, sticky, relative);
+$text-decoration: (line-through, underline, none);
+$text-align: (center, left, right);
+$text-weight: (thin, normal, bold, bolder);
+$text-size: (
+  xxx-large: 2rem,
+  xx-large: 1.5rem,
+  x-large: 1.2rem,
+  large: 1.1rem,
+  medium: 1rem,
+  small: 0.8rem,
+  x-small: 0.7rem,
+);
+$rounded-edge: (
+  "": "",
+  top: "top-left-" "top-right-",
+  bottom: "bottom-left-" "bottom-right-",
+  start: "top-left-" "bottom-left-",
+  end: "top-right-" "bottom-right-",
+);
+$overflow: (auto, hidden);
+$container: (
+  "": (
+    container: 540px,
+    container-sm: 540px,
+    container-md: 100%,
+    container-lg: 100%,
+    container-xl: 100%,
+    container-xxl: 100%,
+  ),
+  sm: (
+    container: 540px,
+    container-sm: 540px,
+    container-md: 100%,
+    container-lg: 100%,
+    container-xl: 100%,
+    container-xxl: 100%,
+  ),
+  md: (
+    container: 720px,
+    container-sm: 720px,
+    container-md: 720px,
+    container-lg: 100%,
+    container-xl: 100%,
+    container-xxl: 100%,
+  ),
+  lg: (
+    container: 960px,
+    container-sm: 960px,
+    container-md: 960px,
+    container-lg: 960px,
+    container-xl: 100%,
+    container-xxl: 100%,
+  ),
+  xl: (
+    container: 1140px,
+    container-sm: 1140px,
+    container-md: 1140px,
+    container-lg: 1140px,
+    container-xl: 1140px,
+    container-xxl: 100%,
+  ),
+  xxl: (
+    container: 1320px,
+    container-sm: 1320px,
+    container-md: 1320px,
+    container-lg: 1320px,
+    container-xl: 1320px,
+    container-xxl: 1320px,
+  ),
+);
+$shadows: (
+  none: 0,
+  sm: 0.25rem,
+  "": 1rem,
+  lg: 3rem,
+);
+$z-index: (sidebar, navbar);

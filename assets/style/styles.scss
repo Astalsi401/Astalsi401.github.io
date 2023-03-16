@@ -1,0 +1,74 @@
+@import "./basic.scss";
+/* color */
+@each $elem, $elem-value in $elements {
+  @each $color, $color-value in $theme-colors {
+    @include builder($elem-value, var(--#{$color}), #{$elem}-#{$color});
+  }
+}
+/* end of color */
+/* position */
+@each $pos in $position {
+  @include builder(position, $pos, position, $class-e: -$pos);
+}
+/* end of position */
+/* text decoration */
+@each $dec in $text-decoration {
+  @include builder(text-decoration, $dec, text-decoration, $class-e: -$dec);
+}
+/* end of text decoration */
+/* text align */
+@each $align in $text-align {
+  @include builder(text-align, $align, text, $class-e: -$align);
+}
+/* end of text-align */
+/* text weight */
+@each $weight in $text-weight {
+  @include builder(font-weight, $weight, text, $class-e: -$weight);
+}
+/* end of text weight */
+/* round */
+@each $round, $round-values in $rounded-edge {
+  @each $u, $u-value in $units {
+    $tmp: ();
+    @each $round-value in $round-values {
+      $tmp: append($tmp, border-#{$round-value}radius);
+    }
+    @if $u != auto {
+      @include builder($tmp, $u-value, if($round == "", rounded-#{$round}, rounded-#{$round}-), $class-e: $u);
+    }
+  }
+}
+/* end of round */
+/* overflow */
+@each $overflow-value in $overflow {
+  @include builder(overflow, $overflow-value, overflow-#{$overflow-value});
+}
+/* end of overflow */
+/* shadow */
+@each $shadow, $shadow-value in $shadows {
+  @include builder(box-shadow, 0 0 $shadow-value var(--black-300), if($shadow != "", shadow-#{$shadow}, shadow));
+}
+/* end of shadow */
+.row > * {
+  width: 100%;
+}
+.container,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl,
+.container-fluid {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@include basic();
+@each $screen, $screen-value in $screen-size {
+  @media (min-width: $screen-value) {
+    @include basic($screen);
+  }
+}
+.flex-grow-1 {
+  flex-grow: 1;
+}

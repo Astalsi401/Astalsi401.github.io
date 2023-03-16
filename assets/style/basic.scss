@@ -1,0 +1,48 @@
+@mixin basic($screen: "") {
+  /* display */
+  @each $d, $d-value in $display {
+    @include builder(display, $d-value, d, $class-e: -#{$d}, $screen: $screen);
+  }
+  /* end of display */
+  /* flex */
+  @each $flex-pos, $flex-pos-values in $flex-position {
+    @each $pos, $pos-val in $flex-pos-values {
+      @include builder($flex-pos, $pos-val, $flex-pos, $class-e: -#{$pos}, $screen: $screen);
+    }
+  }
+  @each $flex-wrap in (wrap, nowrap) {
+    @include builder(flex-wrap, $flex-wrap, flex, $class-e: -#{$flex-wrap}, $screen: $screen);
+  }
+  @each $mp, $mp-value in $margin_padding {
+    @each $side, $side-values in $element-sides {
+      $props: ();
+      @each $side-value in $side-values {
+        $props: append($props, if($side-value == "", $mp-value, #{$mp-value}-#{$side-value}));
+      }
+      @each $u, $u-value in $units {
+        @include builder($props, $u-value, #{$mp}#{$side}, $class-e: -#{$u}, $screen: $screen);
+      }
+    }
+  }
+  /* end of flex */
+  /* block length */
+  @each $wh, $wh-value in $block-wh {
+    @each $length, $length-value in $block-length {
+      @include builder($wh-value, $length-value, $wh, $class-e: -$length, $screen: $screen);
+    }
+  }
+  /* end of block length */
+  /* grid */
+  @for $i from 1 through 12 {
+    @include builder(width, calc(100% / 12) * $i, col, $class-e: -$i, $screen: $screen, $imp: false);
+  }
+  /* end of grid */
+  /* container */
+  @each $c in (container, container-sm, container-md, container-lg, container-xl, container-xxl) {
+    .#{$c} {
+      max-width: map-get(map-get($container, $screen), $c);
+    }
+  }
+
+  /* end of container */
+}
