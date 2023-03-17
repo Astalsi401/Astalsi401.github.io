@@ -108,7 +108,7 @@ class App extends React.Component {
       <div>
         <Header category={this.props.category} />
         <main id="main-content" className="container shadow-lg p-3">
-          <h1 className="text-center">{this.props.title}</h1>
+          <h1 className="my-5 text-center">{this.props.title}</h1>
           <Content title={this.props.title} />
         </main>
       </div>

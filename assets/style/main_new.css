@@ -3571,9 +3571,7 @@ li {
   justify-content: center;
   align-items: center;
 }
-.hamberger span,
-.hamberger span::before,
-.hamberger span::after {
+.hamberger span, .hamberger span::before, .hamberger span::after {
   content: "";
   position: absolute;
   display: block;
@@ -3592,9 +3590,7 @@ li {
 .hamberger:hover {
   background: var(--bg);
 }
-.hamberger:hover span,
-.hamberger:hover span::before,
-.hamberger:hover span::after {
+.hamberger:hover span, .hamberger:hover span::before, .hamberger:hover span::after {
   background: var(--elem);
 }
 .hamberger.active {
@@ -3603,8 +3599,7 @@ li {
 .hamberger.active span {
   background: var(--primary-0);
 }
-.hamberger.active span::before,
-.hamberger.active span::after {
+.hamberger.active span::before, .hamberger.active span::after {
   top: 0;
   background: var(--bg);
 }
@@ -3617,8 +3612,7 @@ li {
 .hamberger.active:hover {
   background: var(--primary-0);
 }
-.hamberger.active:hover span::before,
-.hamberger.active:hover span::after {
+.hamberger.active:hover span::before, .hamberger.active:hover span::after {
   background: var(--bg-active);
 }
 
@@ -3666,4 +3660,4 @@ li {
 
 #main-content {
   padding-top: var(--nav-h) !important;
-} /*# sourceMappingURL=main_new.css.map */
+}/*# sourceMappingURL=main_new.css.map */
