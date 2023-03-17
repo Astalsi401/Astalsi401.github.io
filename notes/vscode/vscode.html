@@ -2,6 +2,9 @@
 <html lang="zh-Hant">
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>vscode筆記</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F8SLV521P4"></script>
     <script>
@@ -10,84 +13,20 @@
         gtag('js', new Date());
         gtag('config', 'G-F8SLV521P4');
     </script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>vscode筆記</title>
-    <link rel="stylesheet" href="../../assets/style/main.css">
+    <!-- react -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <!-- babel -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- component -->
+    <script defer type="text/jsx" src="./main.js"></script>
+    <script defer type="text/jsx" src="https://astalsi401.github.io/assets/js/component/app.js"></script>
+    <script defer type="text/jsx" src="./render.js"></script>
+    <link rel="stylesheet" href="https://astalsi401.github.io/assets/style/main_new.min.css">
 </head>
 
 <body>
-    <header>
-        <div id="top"></div>
-        <div id="notesPage" class="sidebar"></div>
-        <div id="plate"></div>
-        <div class="largePic">
-            <div id="pic"></div>
-        </div>
-    </header>
-    <main class="container">
-        <h1>vscode筆記</h1>
-        <h2>快捷鍵(個人用)</h2>
-        <section>
-            <h3>一般</h3>
-            <ul>
-                <li>搜尋：<kbd>Ctrl</kbd>+<kbd>F</kbd></li>
-                <li>取代：<kbd>Ctrl</kbd>+<kbd>H</kbd></li>
-                <li>隱藏終端機面板：<kbd>Ctrl</kbd>+<kbd>J</kbd><kbd>Ctrl</kbd>+<kbd>S</kbd></li>
-                <li>問題：<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd></li>
-                <li>輸出：<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>'</kbd></li>
-                <li>偵錯主控台：<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Y</kbd></li>
-                <li>output自動滾動<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>R</kbd></li>
-                <li>代碼摺疊：<kbd>Ctrl</kbd>+<kbd>J</kbd><kbd>Ctrl</kbd>+<kbd>H</kbd></li>
-                <li>代碼展開：<kbd>Ctrl</kbd>+<kbd>J</kbd><kbd>Ctrl</kbd>+<kbd>J</kbd></li>
-                <li>markdown、python preview：<kbd>Ctrl</kbd>+<kbd>K</kbd><kbd>V</kbd></li>
-                <li>向右分割編輯器<kbd>Ctrl</kbd>+<kbd>\</kbd></li>
-                <li>切換分割區域<kbd>Ctrl</kbd>+<kbd>1</kbd><kbd>2</kbd><kbd>3</kbd>...</li>
-                <li>變更視窗分割方向：<kbd>Shift</kbd>+<kbd>Alt</kbd>+<kbd>0</kbd></li>
-                <li>多重選取：<kbd>Shift</kbd>+<kbd>Alt</kbd>+<kbd>N</kbd></li>
-                <li>啟用/停用自動換行：<kbd>Alt</kbd>+<kbd>Z</kbd></li>
-            </ul>
-        </section>
-        <section>
-            <h3>Run code</h3>
-            <ul>
-                <li>run code：<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>N</kbd></li>
-                <li>stop code run：<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>M</kbd></li>
-                <li>run sql code：<kbd>Ctrl</kbd>+<kbd>enter</kbd></li>
-            </ul>
-        </section>
-        <section>
-            <h3>Quokka</h3>
-            <ul>
-                <li>start quokka：<kbd>Ctrl</kbd>+<kbd>K</kbd><kbd>Q</kbd></li>
-                <li>stop quokka：<kbd>Ctrl</kbd>+<kbd>K</kbd><kbd>E</kbd></li>
-            </ul>
-        </section>
-        <section>
-            <h3>Live Sass</h3>
-            <ul>
-                <li>compile current sass file：<kbd>Alt</kbd>+<kbd>L</kbd><kbd>Alt</kbd>+<kbd>S</kbd></li>
-            </ul>
-        </section>
-        <section>
-            <h3>Live Server</h3>
-            <ul>
-                <li>change live server workspace：<kbd>Alt</kbd>+<kbd>L</kbd><kbd>Alt</kbd>+<kbd>H</kbd></li>
-                <li>open live server：<kbd>Alt</kbd>+<kbd>L</kbd><kbd>Alt</kbd>+<kbd>Q</kbd></li>
-                <li>stop live server：<kbd>Alt</kbd>+<kbd>L</kbd><kbd>Alt</kbd>+<kbd>C</kbd></li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <script src="https://astalsi401.github.io/jQuery/jquery-3.6.0.min.js"></script>
-        <script>
-            const requestURL = '../../assets/js/json/data.json'
-        </script>
-        <script src="../../assets/js/main.js"></script>
-        <script>
-            fetch('https://astalsi401.github.io/assets/js/json/index.json').then(res => res.json()).then(data => console.log(data))
-        </script>
-    </footer>
+    <div id="App"></div>
 </body>
 
 </html>
