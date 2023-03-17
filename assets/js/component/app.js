@@ -48,7 +48,7 @@ class Sidebar extends React.Component {
           <ul className="menu">
             {this.state.index.pages.map((p) => (
               <li className={p.section && `has-children${toggleActive(this.state.childrenActive)}`} onClick={this.click}>
-                <a className="px-3 text-decoration-none" href={p.href}>
+                <a className="px-3 text-decoration-none text-large text-bold" href={p.href}>
                   {p.page}
                 </a>
                 {p.section && <SidebarChild sections={p.section} childrenActive={this.state.childrenActive} />}

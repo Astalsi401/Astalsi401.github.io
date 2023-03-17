@@ -262,6 +262,36 @@ li {
 }
 
 /* end of text weight */
+/* text size */
+.text-xxx-large {
+  font-size: 2rem !important;
+}
+
+.text-xx-large {
+  font-size: 1.5rem !important;
+}
+
+.text-x-large {
+  font-size: 1.2rem !important;
+}
+
+.text-large {
+  font-size: 1.1rem !important;
+}
+
+.text-medium {
+  font-size: 1rem !important;
+}
+
+.text-small {
+  font-size: 0.8rem !important;
+}
+
+.text-x-small {
+  font-size: 0.7rem !important;
+}
+
+/* end of text size */
 /* round */
 .rounded-0 {
   border-radius: 0rem !important;
@@ -3541,7 +3571,9 @@ li {
   justify-content: center;
   align-items: center;
 }
-.hamberger span, .hamberger span::before, .hamberger span::after {
+.hamberger span,
+.hamberger span::before,
+.hamberger span::after {
   content: "";
   position: absolute;
   display: block;
@@ -3560,7 +3592,9 @@ li {
 .hamberger:hover {
   background: var(--bg);
 }
-.hamberger:hover span, .hamberger:hover span::before, .hamberger:hover span::after {
+.hamberger:hover span,
+.hamberger:hover span::before,
+.hamberger:hover span::after {
   background: var(--elem);
 }
 .hamberger.active {
@@ -3569,7 +3603,8 @@ li {
 .hamberger.active span {
   background: var(--primary-0);
 }
-.hamberger.active span::before, .hamberger.active span::after {
+.hamberger.active span::before,
+.hamberger.active span::after {
   top: 0;
   background: var(--bg);
 }
@@ -3582,7 +3617,8 @@ li {
 .hamberger.active:hover {
   background: var(--primary-0);
 }
-.hamberger.active:hover span::before, .hamberger.active:hover span::after {
+.hamberger.active:hover span::before,
+.hamberger.active:hover span::after {
   background: var(--bg-active);
 }
 
@@ -3630,4 +3666,4 @@ li {
 
 #main-content {
   padding-top: var(--nav-h) !important;
-}/*# sourceMappingURL=main_new.css.map */
+} /*# sourceMappingURL=main_new.css.map */

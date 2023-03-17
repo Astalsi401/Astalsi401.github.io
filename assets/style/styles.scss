@@ -26,6 +26,11 @@
   @include builder(font-weight, $weight, text, $class-e: -$weight);
 }
 /* end of text weight */
+/* text size */
+@each $size, $size-value in $text-size {
+  @include builder(font-size, $size-value, text, $class-e: -$size);
+}
+/* end of text size */
 /* round */
 @each $round, $round-values in $rounded-edge {
   @each $u, $u-value in $units {
