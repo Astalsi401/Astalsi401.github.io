@@ -106,7 +106,6 @@ class CodeChunk extends React.Component {
     this.copy = this.copy.bind(this);
   }
   copy() {
-    console.log(this.props.code);
     let copyText = document.createElement("input");
     copyText.value = this.props.code;
     document.body.appendChild(copyText);

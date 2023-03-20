@@ -2,6 +2,9 @@
 <html lang="zh-Hant">
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>php筆記</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F8SLV521P4"></script>
     <script>
@@ -10,63 +13,21 @@
         gtag('js', new Date());
         gtag('config', 'G-F8SLV521P4');
     </script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>php筆記</title>
-    <link rel="stylesheet" href="../../assets/style/main.css">
+    <!-- react -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <!-- babel -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- component -->
+    <script defer type="text/jsx" src="https://astalsi401.github.io/assets/js/component/components.js"></script>
+    <script defer type="text/jsx" src="./php/main.js"></script>
+    <script defer type="text/jsx" src="https://astalsi401.github.io/assets/js/component/app.js"></script>
+    <script defer type="text/jsx" src="./php/render.js"></script>
+    <link rel="stylesheet" href="https://astalsi401.github.io/assets/style/main_new.min.css">
 </head>
 
 <body>
-    <header>
-        <div id="top"></div>
-        <div id="notesPage" class="sidebar"></div>
-        <div id="plate"></div>
-        <div class="largePic">
-            <div id="pic"></div>
-        </div>
-    </header>
-    <main class="container">
-        <h1>php筆記</h1>
-        <section>
-            <h2>參考文章</h2>
-            <ul>
-                <li>
-                    安裝流程：<a href="https://iter01.com/532365.html" target="_blank">PHP安裝配置(Windows和Linux)-一篇就夠了</a>
-                </li>
-                <li>
-                    apache安裝：<a href="https://blog.csdn.net/Jack_windows/article/details/72683237?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1.pc_relevant_default&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1.pc_relevant_default&utm_relevant_index=2" target="_blank">Apache Http 服務器安裝教程</a>
-                </li>
-            </ul>
-        </section>
-        <section>
-            <h2>容易踩到的坑</h2>
-            <ol>
-                <li>php與apache必須為相同位元，如X64。</li>
-                <li>php8以上，<code>php8apache2_4.dll</code>已經自帶在安裝包中，無須額外下載。</li>
-                <li>php8以上，<code>httpd.conf</code>載入php的代碼須改為</li>
-                <pre>
-#載入PHP
-LoadModule <span style="color: red;">php_module</span> 'D:/Tools/php/php8apache2_4.dll'
-
-#將PHP配置檔案載入到Apache配置檔案中，共同生效
-PHPIniDir 'D:/Tools/php'
-
-#配置Apache分配工作給PHP模組，把PHP程式碼交給PHP處理
-#即.php字尾名的檔案
-AddType application/x-httpd-php .php
-            </pre>
-                <li><a href="http://localhost/test.php" target="_blank">http://localhost/test.php</a>存取被拒時請重新開機。</li>
-                <li>連接mysql出現<code>Call to undefined function mysqli_connect()</code>，請參考<a href="https://blog.csdn.net/www121104115/article/details/75006164" target="_blank">PHP中出现Call to undefined function mysqli_connect()</a></li>
-            </ol>
-        </section>
-    </main>
-    <footer>
-        <script src="https://astalsi401.github.io/jQuery/jquery-3.6.0.min.js"></script>
-        <script>
-            const requestURL = '../../assets/js/json/data.json'
-        </script>
-        <script src="../../assets/js/main.js"></script>
-    </footer>
+    <div id="App"></div>
 </body>
 
 </html>

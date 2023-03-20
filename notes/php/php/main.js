@@ -25,8 +25,8 @@ class Content extends React.Component {
             </li>
           </ul>
         </section>
-        <section>
-          <h2>容易踩到的坑</h2>
+        <section className="my-4">
+          <h3 className="my-3">容易踩到的坑</h3>
           <ol>
             <li>php與apache必須為相同位元，如X64。</li>
             <li>
