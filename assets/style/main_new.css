@@ -3699,9 +3699,13 @@ table td {
 
 pre {
   position: relative;
-  padding: var(--unit-2) var(--unit-1);
+  padding: var(--unit-2);
   margin: var(--unit-3) 0;
-  overflow: auto;
+}
+pre code {
+  display: block;
+  overflow-x: auto;
+  padding: var(--unit-2) 0;
 }
 
 code {
