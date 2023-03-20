@@ -23,6 +23,7 @@
   margin: 0;
   padding: 0;
   transition: background 0.4s;
+  line-height: 1.5rem;
 }
 html {
   font-size: 16px;
@@ -50,5 +51,16 @@ li {
   list-style-position: outside;
   margin-top: var(--unit-1);
   margin-bottom: var(--unit-1);
-  margin-left: var(--unit-2);
+  margin-left: var(--unit-3);
+}
+table {
+  border-collapse: collapse;
+  th {
+    font-weight: bold;
+  }
+  th,
+  td {
+    padding: var(--unit-2);
+    border: 1px solid var(--black-80);
+  }
 }

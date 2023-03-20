@@ -18,6 +18,8 @@ $theme-colors: (
   main-bg: rgb(255, 255, 255),
   main-shadow: rgb(0, 0, 0),
   main-text: rgb(0, 0, 0),
+  code-bg: rgb(240, 240, 240),
+  code-copy: rgb(0, 0, 0),
 );
 $theme-colors-rgb: (
   "white": 255 255 255,
@@ -175,4 +177,4 @@ $shadows: (
   "": 1rem,
   lg: 3rem,
 );
-$z-index: (sidebar, navbar);
+$z-index: (content, sidebar, navbar);

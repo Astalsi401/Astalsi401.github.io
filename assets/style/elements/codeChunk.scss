@@ -1,0 +1,27 @@
+pre {
+  position: relative;
+  padding: var(--unit-2) var(--unit-1);
+  margin: var(--unit-3) 0;
+  overflow: auto;
+}
+code {
+  padding: 0 var(--unit-1);
+}
+pre,
+code {
+  background: var(--code-bg);
+}
+.copyBtn {
+  cursor: pointer;
+  position: absolute;
+  transition: opacity 0.4s;
+  stroke: var(--code-copy);
+  opacity: 0.3;
+  top: 4px;
+  right: 4px;
+  width: 20px;
+  height: 20px;
+  &:hover {
+    opacity: 1;
+  }
+}

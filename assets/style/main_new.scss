@@ -3,7 +3,11 @@
 @import "./reboot.scss";
 @import "./styles.scss";
 @import "./header.scss";
+@import "./elements/codeChunk.scss";
 
+#header {
+  z-index: index($z-index, navbar);
+}
 #main-content {
   padding-top: var(--nav-h) !important;
 }

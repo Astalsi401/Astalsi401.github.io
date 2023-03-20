@@ -15,7 +15,8 @@
           ]
         },
         { "page": "mysql筆記", "href": "https://astalsi401.github.io/notes/mysql/mysql.html" },
-        { "page": "php筆記", "href": "https://astalsi401.github.io/notes/php/php.html" }
+        { "page": "php筆記", "href": "https://astalsi401.github.io/notes/php/php.html" },
+        { "page": "Python筆記", "href": "https://astalsi401.github.io/notes/python/python.html" }
       ]
     }
   ]

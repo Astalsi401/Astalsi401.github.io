@@ -7,6 +7,8 @@
   --main-bg: rgb(255, 255, 255);
   --main-shadow: rgb(0, 0, 0);
   --main-text: rgb(0, 0, 0);
+  --code-bg: rgb(240, 240, 240);
+  --code-copy: rgb(0, 0, 0);
   --link: rgb(0, 0, 143);
   --link-visited: rgb(160, 160, 255);
   --white-0: rgba(255, 255, 255, 0);
@@ -43,6 +45,7 @@
   margin: 0;
   padding: 0;
   transition: background 0.4s;
+  line-height: 1.5rem;
 }
 
 html {
@@ -93,7 +96,19 @@ li {
   list-style-position: outside;
   margin-top: var(--unit-1);
   margin-bottom: var(--unit-1);
-  margin-left: var(--unit-2);
+  margin-left: var(--unit-3);
+}
+
+table {
+  border-collapse: collapse;
+}
+table th {
+  font-weight: bold;
+}
+table th,
+table td {
+  padding: var(--unit-2);
+  border: 1px solid var(--black-80);
 }
 
 /* color */
@@ -129,6 +144,14 @@ li {
   color: var(--main-text) !important;
 }
 
+.text-code-bg {
+  color: var(--code-bg) !important;
+}
+
+.text-code-copy {
+  color: var(--code-copy) !important;
+}
+
 .bd-white {
   border: var(--white) !important;
 }
@@ -161,6 +184,14 @@ li {
   border: var(--main-text) !important;
 }
 
+.bd-code-bg {
+  border: var(--code-bg) !important;
+}
+
+.bd-code-copy {
+  border: var(--code-copy) !important;
+}
+
 .bg-white {
   background: var(--white) !important;
 }
@@ -191,6 +222,14 @@ li {
 
 .bg-main-text {
   background: var(--main-text) !important;
+}
+
+.bg-code-bg {
+  background: var(--code-bg) !important;
+}
+
+.bg-code-copy {
+  background: var(--code-copy) !important;
 }
 
 /* end of color */
@@ -3547,7 +3586,7 @@ li {
   --bg-active: var(--secondary);
   --elem: var(--primary);
   position: relative;
-  z-index: 2;
+  z-index: 3;
   top: 0;
   background: var(--bg);
   box-shadow: 0 0 5px var(--main-shadow);
@@ -3630,7 +3669,7 @@ li {
 
 #sidebar {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   margin-top: var(--nav-h);
   width: min(400px, 100%);
@@ -3656,6 +3695,41 @@ li {
 .menu li a:hover {
   background: var(--primary);
   color: var(--main-bg);
+}
+
+pre {
+  position: relative;
+  padding: var(--unit-2) var(--unit-1);
+  margin: var(--unit-3) 0;
+  overflow: auto;
+}
+
+code {
+  padding: 0 var(--unit-1);
+}
+
+pre,
+code {
+  background: var(--code-bg);
+}
+
+.copyBtn {
+  cursor: pointer;
+  position: absolute;
+  transition: opacity 0.4s;
+  stroke: var(--code-copy);
+  opacity: 0.3;
+  top: 4px;
+  right: 4px;
+  width: 20px;
+  height: 20px;
+}
+.copyBtn:hover {
+  opacity: 1;
+}
+
+#header {
+  z-index: 3;
 }
 
 #main-content {
