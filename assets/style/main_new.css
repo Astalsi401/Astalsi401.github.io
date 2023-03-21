@@ -46,6 +46,30 @@
   padding: 0;
   transition: background 0.4s;
   line-height: 1.5rem;
+  /* firefox */
+  scrollbar-width: thin;
+}
+*::-webkit-scrollbar,
+::before::-webkit-scrollbar,
+::after::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+*::-webkit-scrollbar-track,
+::before::-webkit-scrollbar-track,
+::after::-webkit-scrollbar-track {
+  background: rgba(var(--white), var(--transparent));
+}
+*::-webkit-scrollbar-thumb,
+::before::-webkit-scrollbar-thumb,
+::after::-webkit-scrollbar-thumb {
+  background: rgb(var(--gray));
+  border-radius: 2.5px;
+}
+*::-webkit-scrollbar-thumb:hover,
+::before::-webkit-scrollbar-thumb:hover,
+::after::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--blue));
 }
 
 html {
@@ -3678,6 +3702,7 @@ table td {
   transform: translateX(-100%);
   transition: transform 0.4s;
   box-shadow: 0 0 0 var(--main-shadow);
+  overflow-y: auto;
 }
 #sidebar.active {
   transform: translateX(0);

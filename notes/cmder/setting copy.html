@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F8SLV521P4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-F8SLV521P4');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cmder Setting</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/style/main.css">
+</head>
+
+<body>
+    <header>
+        <div id="top"></div>
+        <div id="notesPage" class="sidebar"></div>
+        <div id="plate"></div>
+        <div class="largePic">
+            <div id="pic"></div>
+        </div>
+    </header>
+    <main class="container">
+        <h1>Cmder使用筆記</h1>
+        <section>
+            <h2 id="install">安裝</h2>
+            <ol>
+                <li>Cmder下載：<a href="https://cmder.net/">官網</a></li>
+                <li>解壓縮至想安裝的資料夾，例如我安裝於：<code>D:\Tools\cmder</code></li>
+                <li>新增以上路徑至環境變數 > 系統變數 > PATH</li>
+            </ol>
+        </section>
+        <section>
+            <h2 id="settings">基礎設定</h2>
+            <ol>
+                <li>更改命令提示字元</li>
+                <p>
+                    cmder預設為<code>λ</code>，偶爾會導致有一個字符無法刪除的bug，雖然多餘的字符並不會影響指令運作，但還是建議替換。<br>
+                    到<code>cmder安裝路徑\config\cmder_prompt_config.lua</code>，將
+                <pre><code>prompt_lambSymbol = "λ"</code></pre>
+                改為
+                <pre><code>prompt_lambSymbol = "$"</code></pre>
+                重啟cmder。
+                </p>
+            </ol>
+        </section>
+        <section>
+            <h2 id="cmder_git">Cmder & Git</h2>
+            <ol>
+                <li>設定email與user name</li>
+                <p>
+                <pre><code>git config --global user.email "misting401@gmail.com"</code></pre>
+                <pre><code>git config --global user.name "Astalsi401"</code></pre>
+                <li>設定ssh key</li>
+                <pre><code>ssh-keygen -t rsa -C "misting401@gmail.com"</code></pre>
+                ssh key會被儲存於<code>C:\Users\user\.ssh\id_rsa.pub</code><br>
+                </p>
+                <li>將<code>id_rsa.pub</code>中的內容全選並直接複製到<a href="https://github.com/settings/ssh/new">Key欄位</a>。</li>
+                <li>確認是否成功</li>
+                <pre><code>ssh -T git@github.com</code></pre>
+            </ol>
+            <ul>
+                <li>更改github密碼後，遠端倉庫網址會變更為https，並在每次進行<code>push</code>、<code>pull</code>等指令時要求輸入user.name、password，然而在今年（2021）git已經取消使用密碼進行推送的途徑，在密碼欄位須改為使用<a href="https://github.com/settings/tokens">Personal access token</a>作為密碼。此時使用以下指令即可改回SSH網址，不需再輸入用戶名與密碼。
+                    <pre><code>git remote set-url origin git@github.com:username/repository.git</code></pre>
+                    確認遠端倉庫網址
+                    <pre><code>git remote -v</code></pre>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2 id="cmder_sublime">Cmder & Sublime Text 3</h2>
+            <ol>
+                <li>將<a href="">Sublime Text 3</a>安裝於<code>cmder安裝路徑\bin\Sublime_Text_3\</code></li>
+                <li>在<code>cmder安裝路徑\config\user_aliases.cmd</code>中加入：</li>
+                <pre><code>subl="cmder安裝路徑\bin\Sublime_Text_3\sublime_text.exe" $* -new_console:s50H</code></pre>
+                <p><code>subl</code>是用以叫出Sublime的代號，可替換為你習慣的稱呼。<code>-new_console</code>在新分頁開啟。<code>s50</code>占比50%。<code>H</code>橫向排列。縱向排列則為<code>V</code>。
+                </p>
+            </ol>
+        </section>
+        <section>
+            <h2 id="cmder_hotkey">Cmder快捷鍵</h2>
+            <table>
+                <tr>
+                    <td>Ctrl+T</td>
+                    <td>新頁面</td>
+                </tr>
+                <tr>
+                    <td>Ctrl+W</td>
+                    <td>關閉頁面</td>
+                </tr>
+                <tr>
+                    <td>Ctrl+Tab</td>
+                    <td>切換頁面</td>
+                </tr>
+                <tr>
+                    <td>Alt+Shift+1</td>
+                    <td>開啟cmd.exe</td>
+                </tr>
+                <tr>
+                    <td>Alt+Shift+2</td>
+                    <td>開啟powershell.exe</td>
+                </tr>
+                <tr>
+                    <td>Alt+Shift+3</td>
+                    <td>開啟powershell.exe (系統管理員許可權)</td>
+                </tr>
+                <tr>
+                    <td>Ctrl+n</td>
+                    <td>快速切換到第n個頁籤</td>
+                </tr>
+                <tr>
+                    <td>Ctrl+R</td>
+                    <td>歷史命令搜尋</td>
+                </tr>
+                <tr>
+                    <td>Win+Alt+P</td>
+                    <td>開啟設定視窗</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h2 id="cmder_cmd">其他指令</h2>
+            <ul>
+                <li>
+                    <p>運行bat：</p>
+                    <pre><code>cmder /x "/cmd test.bat"</code></pre>
+                </li>
+                <li>
+                    <p>scss to css：</p>
+                    <pre><code>sass --watch main.scss main.css</code></pre>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <script src="https://astalsi401.github.io/jQuery/jquery-3.6.0.min.js"></script>
+        <script>
+            const requestURL = '../../assets/js/json/data.json'
+        </script>
+        <script src="../../assets/js/main.js"></script>
+    </footer>
+</body>
+
+</html>

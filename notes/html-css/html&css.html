@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Html & Css</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F8SLV521P4"></script>
     <script>
@@ -9,45 +13,21 @@
         gtag('js', new Date());
         gtag('config', 'G-F8SLV521P4');
     </script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Html & Css</title>
-    <link rel="stylesheet" type="text/css" href="../../assets/style/main.css">
+    <!-- react -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <!-- babel -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- component -->
+    <script defer type="text/jsx" src="https://astalsi401.github.io/assets/js/component/components.js"></script>
+    <script defer type="text/jsx" src="./html&css/main.js"></script>
+    <script defer type="text/jsx" src="https://astalsi401.github.io/assets/js/component/app.js"></script>
+    <script defer type="text/jsx" src="./html&css/render.js"></script>
+    <link rel="stylesheet" href="https://astalsi401.github.io/assets/style/main_new.min.css">
 </head>
+
 <body>
-    <header>
-        <div id="top"></div>
-        <div id="notesPage" class="sidebar"></div>
-        <div id="plate"></div>
-        <div class="largePic">
-            <div id="pic"></div>
-        </div>
-    </header>
-    <main class="container">
-        <h1>Html&Css</h1>
-        <section>
-            <h2>css</h2>
-            <code>object-fit</code>
-            <ul>
-                <li><code>fill</code>：預設，圖片變形</li>
-                <li><code>contain</code>：保持比例完整呈現於容器中</li>
-                <li><code>cover</code>：裁減圖片填滿容器</li>
-                <li><code>none</code>：不調整圖片比例</li>
-                <li><code>scale-down</code>：等比縮小</li>
-            </ul>
-            <code>object-position</code>
-            <ul>
-                <li><code>left</code>、<code>right</code>、<code>top</code>、<code>bottom</code>、<code>center</code>...</li>
-                <li><code>50% 50%</code></li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <script src="https://astalsi401.github.io/jQuery/jquery-3.6.0.min.js"></script>
-        <script>
-            const requestURL = '../../assets/js/json/data.json'
-        </script>
-        <script src="../../assets/js/main.js"></script>
-    </footer>
+    <div id="App"></div>
 </body>
+
 </html>

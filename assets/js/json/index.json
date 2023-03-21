@@ -18,7 +18,8 @@
         { "page": "php筆記", "href": "https://astalsi401.github.io/notes/php/php.html" },
         { "page": "Python筆記", "href": "https://astalsi401.github.io/notes/python/python.html" },
         { "page": "JavaScript筆記", "href": "https://astalsi401.github.io/notes/JavaScript/JavaScript.html" },
-        { "page": "FreeCodeCamp D3.js Heatmap", "href": "https://astalsi401.github.io/notes/JavaScript/d3js_heatmap.html" }
+        { "page": "FreeCodeCamp D3.js Heatmap", "href": "https://astalsi401.github.io/notes/JavaScript/d3js_heatmap.html" },
+        { "page": "Html & Css", "href": "https://astalsi401.github.io/notes/html-css/html&css.html" }
       ]
     }
   ]
