@@ -45,7 +45,7 @@
   margin: 0;
   padding: 0;
   transition: background 0.4s;
-  line-height: 1.5rem;
+  line-height: 1.5em;
   /* firefox */
   scrollbar-width: thin;
 }
