@@ -22,6 +22,10 @@
     transform: translateX(0);
     box-shadow: 0 0 4px var(--main-shadow);
   }
+  ul,
+  ol {
+    margin: 0;
+  }
 }
 .menu {
   li {
