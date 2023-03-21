@@ -4,6 +4,8 @@
 @import "./styles.scss";
 @import "./header.scss";
 @import "./elements/codeChunk.scss";
+@import "./elements/image.scss";
+@import "./elements/calculator.scss";
 
 #header {
   z-index: index($z-index, navbar);

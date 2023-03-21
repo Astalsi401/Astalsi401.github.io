@@ -1,0 +1,14 @@
+.calculator {
+  width: min(98%, 500px);
+}
+.calculator label {
+  display: flex;
+}
+.calculator label :first-child() {
+  width: 150px;
+}
+.calculator input,
+.calculator select {
+  vertical-align: middle;
+  height: 30px;
+}/*# sourceMappingURL=calculator.css.map */

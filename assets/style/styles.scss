@@ -49,14 +49,24 @@
   @include builder(overflow, $overflow-value, overflow-#{$overflow-value});
 }
 /* end of overflow */
+/* border */
+@each $u, $u-value in $units {
+  @include builder(border-width, $u-value, border-#{$u});
+}
+/* end of border */
 /* shadow */
 @each $shadow, $shadow-value in $shadows {
   @include builder(box-shadow, 0 0 $shadow-value var(--black-300), if($shadow != "", shadow-#{$shadow}, shadow));
 }
 /* end of shadow */
-.row > * {
-  width: 100%;
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  & > * {
+    width: 100%;
+  }
 }
+
 .container,
 .container-sm,
 .container-md,

@@ -9,6 +9,7 @@
   --main-text: rgb(0, 0, 0);
   --code-bg: rgb(240, 240, 240);
   --code-copy: rgb(0, 0, 0);
+  --warn: rgb(255, 0, 0);
   --link: rgb(0, 0, 143);
   --link-visited: rgb(160, 160, 255);
   --white-0: rgba(255, 255, 255, 0);
@@ -85,7 +86,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 h4 {
@@ -180,6 +181,10 @@ table td {
   color: var(--code-copy) !important;
 }
 
+.text-warn {
+  color: var(--warn) !important;
+}
+
 .bd-white {
   border: var(--white) !important;
 }
@@ -220,6 +225,10 @@ table td {
   border: var(--code-copy) !important;
 }
 
+.bd-warn {
+  border: var(--warn) !important;
+}
+
 .bg-white {
   background: var(--white) !important;
 }
@@ -258,6 +267,10 @@ table td {
 
 .bg-code-copy {
   background: var(--code-copy) !important;
+}
+
+.bg-warn {
+  background: var(--warn) !important;
 }
 
 /* end of color */
@@ -339,7 +352,7 @@ table td {
 }
 
 .text-x-large {
-  font-size: 1.2rem !important;
+  font-size: 1.3rem !important;
 }
 
 .text-large {
@@ -515,6 +528,36 @@ table td {
 }
 
 /* end of overflow */
+/* border */
+.border-0 {
+  border-width: 0rem !important;
+}
+
+.border-1 {
+  border-width: 0.25rem !important;
+}
+
+.border-2 {
+  border-width: 0.5rem !important;
+}
+
+.border-3 {
+  border-width: 1rem !important;
+}
+
+.border-4 {
+  border-width: 1.5rem !important;
+}
+
+.border-5 {
+  border-width: 3rem !important;
+}
+
+.border-auto {
+  border-width: auto !important;
+}
+
+/* end of border */
 /* shadow */
 .shadow-none {
   box-shadow: 0 0 0 var(--black-300) !important;
@@ -533,6 +576,10 @@ table td {
 }
 
 /* end of shadow */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
 .row > * {
   width: 100%;
 }
@@ -3763,6 +3810,27 @@ code {
 }
 .copyBtn:hover {
   opacity: 1;
+}
+
+.image-normal {
+  width: min(100%, 600px);
+}
+
+.calculator {
+  width: min(98%, 500px);
+}
+.calculator label {
+  display: flex;
+  flex-wrap: wrap;
+}
+.calculator label div {
+  width: 80px;
+}
+.calculator label input,
+.calculator label select {
+  display: block;
+  height: 30px;
+  flex-grow: 1;
 }
 
 #header {

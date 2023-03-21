@@ -20,6 +20,7 @@ $theme-colors: (
   main-text: rgb(0, 0, 0),
   code-bg: rgb(240, 240, 240),
   code-copy: rgb(0, 0, 0),
+  warn: rgb(255, 0, 0),
 );
 $theme-colors-rgb: (
   "white": 255 255 255,
@@ -107,7 +108,7 @@ $text-weight: (thin, normal, bold, bolder);
 $text-size: (
   xxx-large: 2rem,
   xx-large: 1.5rem,
-  x-large: 1.2rem,
+  x-large: 1.3rem,
   large: 1.1rem,
   medium: 1rem,
   small: 0.8rem,
