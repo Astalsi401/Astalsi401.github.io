@@ -21,6 +21,14 @@
         { "page": "FreeCodeCamp D3.js Heatmap", "href": "https://astalsi401.github.io/notes/JavaScript/d3js_heatmap.html" },
         { "page": "Html & Css", "href": "https://astalsi401.github.io/notes/html-css/html&css.html" }
       ]
+    },
+    {
+      "category": "Games",
+      "pages": [
+        { "page": "車輛升級", "href": "https://astalsi401.github.io/notes/fh4/upgrade.html" },
+        { "page": "基礎調教", "href": "https://astalsi401.github.io/notes/fh4/basic_tune.html" },
+        { "page": "調教分享", "href": "https://astalsi401.github.io/notes/fh4/tune_list.html" }
+      ]
     }
   ]
 }
