@@ -10,6 +10,7 @@
   --code-bg: rgb(240, 240, 240);
   --code-copy: rgb(0, 0, 0);
   --warn: rgb(255, 0, 0);
+  --success: rgb(0, 128, 0);
   --link: rgb(0, 0, 143);
   --link-visited: rgb(160, 160, 255);
   --white-0: rgba(255, 255, 255, 0);
@@ -185,6 +186,10 @@ table td {
   color: var(--warn) !important;
 }
 
+.text-success {
+  color: var(--success) !important;
+}
+
 .bd-white {
   border: var(--white) !important;
 }
@@ -229,6 +234,10 @@ table td {
   border: var(--warn) !important;
 }
 
+.bd-success {
+  border: var(--success) !important;
+}
+
 .bg-white {
   background: var(--white) !important;
 }
@@ -271,6 +280,10 @@ table td {
 
 .bg-warn {
   background: var(--warn) !important;
+}
+
+.bg-success {
+  background: var(--success) !important;
 }
 
 /* end of color */

@@ -165,16 +165,18 @@ class Content extends React.Component {
       <div>
         <h2>快捷鍵(個人用)</h2>
         {this.state.data.map((section) => (
-          <section className="my-4">
-            <h3>{section.h3}</h3>
-            <ul>
-              {section.shortcut.map((li) => (
-                <li>
-                  {li.name}：{li.keys.map((keys) => keys.map((kbd) => <kbd>{kbd}</kbd>).reduce((prev, curr) => [prev, "+", curr]))}
-                </li>
-              ))}
-            </ul>
-          </section>
+          <Block
+            title={section.h3}
+            content={
+              <ul>
+                {section.shortcut.map((li) => (
+                  <li>
+                    {li.name}：{li.keys.map((keys) => keys.map((kbd) => <kbd>{kbd}</kbd>).reduce((prev, curr) => [prev, "+", curr]))}
+                  </li>
+                ))}
+              </ul>
+            }
+          />
         ))}
       </div>
     );

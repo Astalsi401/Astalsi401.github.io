@@ -37,53 +37,74 @@ class Content extends React.Component {
         { fm: "%W", des: "Returns the week number of the year (Monday as the first day of the week) from 00 to 53" },
       ],
     };
+    this.section = [
+      {
+        title: "pip",
+        content: (
+          <div>
+            儲存已安裝的libraries清單為reqs.txt
+            <CodeChunk code={"pip freeze > reqs.txt"} />
+            重新安裝儲存於reqs.txt的libraries
+            <CodeChunk code={"pip install -r reqs.txt"} />
+          </div>
+        ),
+      },
+      {
+        title: "讀取檔案",
+        content: (
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Mode</th>
+                  <th>Meaning</th>
+                </tr>
+              </thead>
+              <tbody>
+                {this.data.table.map((d) => (
+                  <tr>
+                    <td>{d.mode}</td>
+                    <td>{d.meaning}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ),
+      },
+      {
+        title: "pandas",
+        content: (
+          <div>
+            <ul>
+              <li>在function中對column資料進行處理，並回傳新資料</li>
+              <CodeChunk code="series.map(function)" />
+            </ul>
+          </div>
+        ),
+      },
+      {
+        title: "日期格式",
+        content: (
+          <div>
+            <ul>
+              {this.data.format.map((d) => (
+                <li>
+                  <code>{d.fm}</code>：{d.des}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ),
+      },
+    ];
   }
   render() {
     return (
       <div>
-        <section className="my-4">
-          <h3 className="my-3">pip</h3>
-          儲存已安裝的libraries清單為reqs.txt
-          <CodeChunk code={"pip freeze > reqs.txt"} />
-          重新安裝儲存於reqs.txt的libraries
-          <CodeChunk code={"pip install -r reqs.txt"} />
-        </section>
-        <section className="my-4">
-          <h3 className="my-3">讀取檔案</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Mode</th>
-                <th>Meaning</th>
-              </tr>
-            </thead>
-            <tbody>
-              {this.data.table.map((d) => (
-                <tr>
-                  <td>{d.mode}</td>
-                  <td>{d.meaning}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </section>
-        <section className="my-4">
-          <h3 className="my-3">pandas</h3>
-          <ul>
-            <li>在function中對column資料進行處理，並回傳新資料</li>
-            <CodeChunk code="series.map(function)" />
-          </ul>
-        </section>
-        <section className="my-4">
-          <h3 className="my-3">日期格式</h3>
-          <ul>
-            {this.data.format.map((d) => (
-              <li>
-                <code>{d.fm}</code>：{d.des}
-              </li>
-            ))}
-          </ul>
-        </section>
+        {this.section.map((s) => (
+          <Block title={s.title} content={s.content} />
+        ))}
       </div>
     );
   }

@@ -141,3 +141,16 @@ class Block extends React.Component {
     );
   }
 }
+class Label extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <label className="my-2 w-100">
+        <div>{this.props.label}：</div>
+        <input className="p-1" name={this.props.name} step={this.props.step} placeholder={this.props.placeholder} value={this.props.value} />
+      </label>
+    );
+  }
+}

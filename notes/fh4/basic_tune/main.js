@@ -1,16 +1,3 @@
-class Label extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    return (
-      <label className="my-2 w-100">
-        <div>{this.props.label}：</div>
-        <input className="p-1" name={this.props.name} step={this.props.step} placeholder={this.props.placeholder} value={this.props.value} />
-      </label>
-    );
-  }
-}
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
@@ -18,7 +5,7 @@ class Calculator extends React.Component {
     this.tuneformula = this.tuneformula.bind(this);
   }
   tuneformula(e) {
-    let val = !/[0-9]/.test(e.target.value) ? "" : e.target.value;
+    let val = !/^\d*$/.test(e.target.value) ? this.state[e.target.name] : e.target.value;
     this.setState(() => {
       switch (e.target.name) {
         case "ratio":
