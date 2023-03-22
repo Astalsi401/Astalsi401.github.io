@@ -505,7 +505,7 @@ class Content extends React.Component {
     return (
       <div>
         {this.section.map((section) => (
-          <Section id={section.id && section.id} title={section.title} content={section.content} />
+          <Block id={section.id && section.id} title={section.title} content={section.content} />
         ))}
       </div>
     );

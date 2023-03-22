@@ -126,7 +126,7 @@ class CodeChunk extends React.Component {
     );
   }
 }
-class Section extends React.Component {
+class Block extends React.Component {
   constructor(props) {
     super(props);
   }

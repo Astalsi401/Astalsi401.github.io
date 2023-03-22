@@ -22,26 +22,35 @@ class Content extends React.Component {
         },
       ],
     };
+    this.section = [
+      {
+        title: "css",
+        content: (
+          <div>
+            {this.data.css.map((d) => (
+              <div>
+                <code>{d.prop}</code>
+                <ul>
+                  {d.values.map((v) => (
+                    <li>
+                      <code>{v.val}</code>
+                      {v.des === "" ? "" : `：${v.des}`}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        ),
+      },
+    ];
   }
   render() {
     return (
       <div>
-        <section className="my-4">
-          <h3 className="my-3">css</h3>
-          {this.data.css.map((d) => (
-            <div>
-              <code>{d.prop}</code>
-              <ul>
-                {d.values.map((v) => (
-                  <li>
-                    <code>{v.val}</code>
-                    {v.des === "" ? "" : `：${v.des}`}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </section>
+        {this.section.map((section) => (
+          <Block title={section.title} content={section.content} />
+        ))}
       </div>
     );
   }
