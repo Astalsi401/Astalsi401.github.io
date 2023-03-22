@@ -14,7 +14,6 @@ class Calculator extends React.Component {
     after = isNaN(after) || !isFinite(after) ? "__" : after;
     return (
       <form className="my-3 mx-auto calculator" onChange={this.whp}>
-        <Label />
         <table>
           <tr>
             <td></td>
@@ -24,9 +23,7 @@ class Calculator extends React.Component {
           <tr>
             <th>重量</th>
             <td>
-              <label>
-                <input className="p-1" name="bw" placeholder="kg" value={this.state.bw} />
-              </label>
+              <Label name="bw" placeholder="kg" value={this.state.bw} />
             </td>
             <td>
               <label>
