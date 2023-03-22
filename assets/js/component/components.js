@@ -126,3 +126,18 @@ class CodeChunk extends React.Component {
     );
   }
 }
+class Section extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <section className="my-4">
+        <h3 id={this.props.id} className="mt-3">
+          {this.props.title}
+        </h3>
+        {this.props.content}
+      </section>
+    );
+  }
+}
