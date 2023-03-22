@@ -26,22 +26,16 @@ class Calculator extends React.Component {
               <Label name="bw" placeholder="kg" value={this.state.bw} />
             </td>
             <td>
-              <label>
-                <input className="p-1" name="aw" placeholder="kg" value={this.state.aw} />
-              </label>
+              <Label name="aw" placeholder="kg" value={this.state.aw} />
             </td>
           </tr>
           <tr>
             <th>馬力</th>
             <td>
-              <label>
-                <input className="p-1" name="bh" placeholder="hp" value={this.state.bh} />
-              </label>
+              <Label name="bh" placeholder="hp" value={this.state.bh} />
             </td>
             <td>
-              <label>
-                <input className="p-1" name="ah" placeholder="hp" value={this.state.ah} />
-              </label>
+              <Label name="ah" placeholder="hp" value={this.state.ah} />
             </td>
           </tr>
           <tr>
