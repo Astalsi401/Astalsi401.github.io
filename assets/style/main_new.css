@@ -3830,7 +3830,7 @@ code {
 }
 
 .calculator {
-  width: min(98%, 500px);
+  width: min(98%, 600px);
 }
 .calculator label {
   display: flex;
@@ -3844,6 +3844,7 @@ code {
   display: block;
   height: 30px;
   flex-grow: 1;
+  max-width: 100%;
 }
 
 #header {

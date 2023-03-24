@@ -13,51 +13,37 @@ class Calculator extends React.Component {
     before = isNaN(before) || !isFinite(before) ? "__" : before;
     after = isNaN(after) || !isFinite(after) ? "__" : after;
     return (
-      <form className="my-3 mx-auto calculator" onChange={this.whp}>
-        <table>
-          <tr>
-            <td></td>
-            <th>改裝前</th>
-            <th>改裝後</th>
-          </tr>
-          <tr>
-            <th>重量</th>
-            <td>
-              <Label name="bw" placeholder="kg" value={this.state.bw} />
-            </td>
-            <td>
-              <Label name="aw" placeholder="kg" value={this.state.aw} />
-            </td>
-          </tr>
-          <tr>
-            <th>馬力</th>
-            <td>
-              <Label name="bh" placeholder="hp" value={this.state.bh} />
-            </td>
-            <td>
-              <Label name="ah" placeholder="hp" value={this.state.ah} />
-            </td>
-          </tr>
-          <tr>
-            <th>馬力重量比</th>
-            <td align="center">
-              <b>
-                <output name="before" class={before > after ? "text-warn" : before < after ? "text-success" : ""}>
-                  {before}
-                </output>
-                kg/hp
-              </b>
-            </td>
-            <td align="center">
-              <b>
-                <output name="after" class={before > after ? "text-success" : before < after ? "text-warn" : ""}>
-                  {after}
-                </output>
-                kg/hp
-              </b>
-            </td>
-          </tr>
-        </table>
+      <form className="row my-3 mx-auto calculator" onChange={this.whp}>
+        <div className="col-2 p-1 d-flex align-items-center"></div>
+        <div className="col-5 p-1 d-flex align-items-center text-bold justify-content-center">改裝前</div>
+        <div className="col-5 p-1 d-flex align-items-center text-bold justify-content-center">改裝後</div>
+        <div className="col-2 p-1 d-flex align-items-center text-bold">重量</div>
+        <div className="col-5 p-1 d-flex align-items-center">
+          <Label name="bw" placeholder="kg" value={this.state.bw} />
+        </div>
+        <div className="col-5 p-1 d-flex align-items-center">
+          <Label name="aw" placeholder="kg" value={this.state.aw} />
+        </div>
+        <div className="col-2 p-1 d-flex align-items-center text-bold">馬力</div>
+        <div className="col-5 p-1 d-flex align-items-center">
+          <Label name="bh" placeholder="hp" value={this.state.bh} />
+        </div>
+        <div className="col-5 p-1 d-flex align-items-center">
+          <Label name="ah" placeholder="hp" value={this.state.ah} />
+        </div>
+        <div className="col-2 p-1 d-flex align-items-center text-bold">馬力重量比</div>
+        <div className="col-5 p-1 d-flex align-items-center text-bold justify-content-center">
+          <output name="before" class={before > after ? "text-warn" : before < after ? "text-success" : ""}>
+            {before}
+          </output>
+          kg/hp
+        </div>
+        <div className="col-5 p-1 d-flex align-items-center text-bold justify-content-center">
+          <output name="after" class={before > after ? "text-success" : before < after ? "text-warn" : ""}>
+            {after}
+          </output>
+          kg/hp
+        </div>
       </form>
     );
   }
