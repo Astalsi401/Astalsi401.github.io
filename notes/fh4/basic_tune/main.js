@@ -423,7 +423,7 @@ class Content extends React.Component {
       {
         title: "總結",
         content: (
-          <div>
+          <div className="row">
             {this.data.summarize.map((d) => (
               <div className="col-sm-6 p-2">
                 <div className="shadow-sm w-100 h-100 p-3 rounded-2">
@@ -492,7 +492,7 @@ class Content extends React.Component {
     return (
       <div>
         {this.section.map((section) => (
-          <Block id={section.id && section.id} title={section.title} content={section.content} />
+          <Block id={section.id && section.id} class={section.class && section.class} title={section.title} content={section.content} />
         ))}
       </div>
     );
