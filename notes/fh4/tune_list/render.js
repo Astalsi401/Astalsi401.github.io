@@ -1,2 +1,1 @@
-ReactDOM.createRoot(document.getElementById("App")).render(<App category="Games" title="" />);
-// FH4調教分享
+ReactDOM.createRoot(document.getElementById("App")).render(<App category="Games" title="FH4調教分享" />);

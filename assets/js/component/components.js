@@ -178,7 +178,7 @@ class ZoomImage extends React.Component {
     let imgSty = { transform: this.state.active ? `scale(${scale}) translate(${translate})` : "scale(1) translate(0)" };
     return (
       <div id={this.props.id && this.pages.id} className={`${this.props.class && this.props.class} imgBlock ${this.state.active && "active"}`}>
-        <img ref={this.ref} className="w-100" loading="lazy" src={this.props.scr} alt={this.props.alt && this.props.alt} style={imgSty} onClick={this.zoom} />
+        <img ref={this.ref} className="w-100" loading="lazy" src={this.props.src} alt={this.props.alt && this.props.alt} style={imgSty} onClick={this.zoom} />
       </div>
     );
   }

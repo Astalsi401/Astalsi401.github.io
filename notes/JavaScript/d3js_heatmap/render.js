@@ -1,1 +1,1 @@
-ReactDOM.render(<Header category="Notes" />, document.getElementById("App-header"));
+ReactDOM.createRoot(document.getElementById("App-header")).render(<Header category="Notes" />);
