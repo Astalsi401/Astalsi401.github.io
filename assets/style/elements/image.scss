@@ -10,7 +10,7 @@
   }
   &::before {
     content: "";
-    position: absolute;
+    position: fixed;
     display: block;
     z-index: -1;
     transition: opacity 0.4s;

@@ -172,13 +172,13 @@ class ZoomImage extends React.Component {
     let elem, scale, translate;
     if (this.ref.current) {
       elem = this.ref.current.getBoundingClientRect();
-      scale = window.innerWidth / elem.width;
-      translate = `${-elem.x / scale}px, ${(-elem.y + window.innerHeight / 2) / scale - elem.height / 2}px`;
+      scale = Math.min(window.innerWidth / elem.width, window.innerHeight / elem.height);
+      translate = `${(window.innerWidth / 2 - elem.x) / scale - elem.width / 2}px, ${(window.innerHeight / 2 - elem.y) / scale - elem.height / 2}px`;
     }
-    let imgSty = this.state.active ? { transform: `scale(${scale}) translate(${translate})` } : { transform: "scale(1) translate(0)" };
+    let imgSty = { transform: this.state.active ? `scale(${scale}) translate(${translate})` : "scale(1) translate(0)" };
     return (
-      <div className={`${this.props.class && this.props.class} imgBlock ${this.state.active && "active"}`}>
-        <img ref={this.ref} className="w-100" src={this.props.url} style={imgSty} onClick={this.zoom} />
+      <div id={this.props.id && this.pages.id} className={`${this.props.class && this.props.class} imgBlock ${this.state.active && "active"}`}>
+        <img ref={this.ref} className="w-100" src={this.props.scr} alt={this.props.alt && this.props.alt} style={imgSty} onClick={this.zoom} />
       </div>
     );
   }
