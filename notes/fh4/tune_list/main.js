@@ -1,19 +1,25 @@
-class CarTypeImg extends React.Component {
+class TuneListRow extends React.Component {
   constructor(props) {
     super(props);
     this.state = { active: false };
     this.showImg = this.showImg.bind(this);
   }
-  showImg() {
-    this.setState({ active: !this.state.active });
+  showImg(e) {
+    if (e.target.tagName !== "IMG") this.setState({ active: !this.state.active });
   }
   render() {
-    console.log(this.props.src);
     return (
-      <td>
-        {this.props.content}
-        <ZoomImage src={this.props.src} />
-      </td>
+      <tr onClick={this.showImg}>
+        <td>{this.props.data.tunner}</td>
+        <td>{this.props.data.tuneName}</td>
+        <td>{this.props.data.score}</td>
+        <td>
+          {this.props.data.carType}
+          <ZoomImage class={this.state.active ? "d-block" : "d-none"} src={this.props.data.pic} />
+        </td>
+        <td>{this.props.data.preferance.join(" ")}</td>
+        <td>{this.props.data.shareCode}</td>
+      </tr>
     );
   }
 }
@@ -49,14 +55,7 @@ class SortTable extends React.Component {
           </thead>
           <tbody>
             {this.props.data.map((d) => (
-              <tr>
-                <td>{d.tunner}</td>
-                <td>{d.tuneName}</td>
-                <td>{d.score}</td>
-                <CarTypeImg content={d.carType} src={d.pic} />
-                <td>{d.preferance.join(" ")}</td>
-                <td>{d.shareCode}</td>
-              </tr>
+              <TuneListRow data={d} />
             ))}
           </tbody>
         </table>
