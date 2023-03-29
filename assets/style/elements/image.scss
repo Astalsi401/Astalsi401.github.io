@@ -1,3 +1,35 @@
 .image-normal {
   width: min(100%, 600px);
 }
+.imgBlock {
+  img {
+    position: relative;
+    transition: transform 0.4s;
+    transform-origin: 0 0;
+    cursor: zoom-in;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    z-index: -1;
+    transition: opacity 0.4s;
+    opacity: 0;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100dvh;
+    background: var(--white);
+  }
+  &.active {
+    img {
+      object-fit: contain;
+      z-index: calc(index($z-index, model) + 1);
+      cursor: zoom-out;
+    }
+    &::before {
+      z-index: index($z-index, model);
+      opacity: 0.8;
+    }
+  }
+}

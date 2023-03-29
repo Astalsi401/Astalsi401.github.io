@@ -3829,6 +3829,36 @@ code {
   width: min(100%, 600px);
 }
 
+.imgBlock img {
+  position: relative;
+  transition: transform 0.4s;
+  transform-origin: 0 0;
+  cursor: zoom-in;
+}
+.imgBlock::before {
+  content: "";
+  position: absolute;
+  display: block;
+  z-index: -1;
+  transition: opacity 0.4s;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100dvh;
+  background: var(--white);
+}
+.imgBlock.active img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  z-index: 5;
+  cursor: zoom-out;
+}
+.imgBlock.active::before {
+  z-index: 4;
+  opacity: 0.8;
+}
+
 .calculator {
   width: min(98%, 600px);
 }

@@ -47,7 +47,7 @@ class Sidebar extends React.Component {
           <h1 className="text-center my-5">{this.state.index.category}</h1>
           <ul className="menu">
             {this.state.index.pages.map((p) => (
-              <li className={p.section && `has-children${toggleActive(this.state.childrenActive)}`} onClick={this.click}>
+              <li key={p.page} className={p.section && `has-children${toggleActive(this.state.childrenActive)}`} onClick={this.click}>
                 <a className="px-3 text-decoration-none text-large text-bold" href={p.href}>
                   {p.page}
                 </a>
@@ -151,6 +151,35 @@ class Label extends React.Component {
         {this.props.label && <div>{this.props.label}：</div>}
         <input className="p-1" name={this.props.name} step={this.props.step} placeholder={this.props.placeholder} value={this.props.value} />
       </label>
+    );
+  }
+}
+
+class ZoomImage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { active: false };
+    this.zoom = this.zoom.bind(this);
+    this.ref = React.createRef();
+  }
+  zoom() {
+    this.setState({ active: !this.state.active });
+  }
+  componentDidMount() {
+    window.addEventListener("resize", () => this.setState({ active: false }));
+  }
+  render() {
+    let elem, scale, translate;
+    if (this.ref.current) {
+      elem = this.ref.current.getBoundingClientRect();
+      scale = window.innerWidth / elem.width;
+      translate = `${-elem.x / scale}px, ${(-elem.y + window.innerHeight / 2) / scale - elem.height / 2}px`;
+    }
+    let imgSty = this.state.active ? { transform: `scale(${scale}) translate(${translate})` } : { transform: "scale(1) translate(0)" };
+    return (
+      <div className={`imgBlock ${this.state.active && "active"}`}>
+        <img ref={this.ref} className="w-100" src={this.props.url} style={imgSty} onClick={this.zoom} />
+      </div>
     );
   }
 }
