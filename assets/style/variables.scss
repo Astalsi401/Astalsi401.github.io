@@ -56,6 +56,8 @@ $block-length: (
   50: 50%,
   75: 75%,
   100: 100%,
+  min: min-content,
+  max: max-content,
 );
 $block-wh: (
   w: width,
@@ -121,6 +123,12 @@ $rounded-edge: (
   bottom: "bottom-left-" "bottom-right-",
   start: "top-left-" "bottom-left-",
   end: "top-right-" "bottom-right-",
+);
+$position-units: (
+  top: top,
+  bottom: bottom,
+  start: left,
+  end: right,
 );
 $overflow: (auto, hidden);
 $container: (

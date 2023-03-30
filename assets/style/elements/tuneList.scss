@@ -1,0 +1,6 @@
+.tuneSearch {
+  position: sticky;
+  z-index: index($z-index, sidebar);
+  top: var(--nav-h);
+  left: 0;
+}

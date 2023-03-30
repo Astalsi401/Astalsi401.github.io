@@ -59,7 +59,14 @@
   @include builder(box-shadow, 0 0 $shadow-value var(--black-300), if($shadow != "", shadow-#{$shadow}, shadow));
 }
 /* end of shadow */
-
+/* position value */
+@each $pos, $pos-value in $position-units {
+  @include builder($pos-value, 0, #{$pos}-0);
+}
+/* end of position value */
+.pointer {
+  cursor: pointer;
+}
 .container,
 .container-sm,
 .container-md,

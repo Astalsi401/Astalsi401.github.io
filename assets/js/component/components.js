@@ -132,10 +132,14 @@ class Block extends React.Component {
   }
   render() {
     return (
-      <section className="my-4">
-        <h3 id={this.props.id} className="mt-3">
-          {this.props.title}
-        </h3>
+      <section className={`my-4 ${this.props.class ? this.props.class : ""}`}>
+        {this.props.title ? (
+          <h3 id={this.props.id} className="mt-3">
+            {this.props.title}
+          </h3>
+        ) : (
+          ""
+        )}
         {this.props.content}
       </section>
     );

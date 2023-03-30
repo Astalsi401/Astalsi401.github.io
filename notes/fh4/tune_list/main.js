@@ -27,7 +27,7 @@ class TuneListRow extends React.Component {
 class Content extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { tuneList: [], search: "", res: [] };
+    this.state = { tuneList: [], search: "", res: [], asc: false, ascCol: "" };
     this.search = this.search.bind(this);
     this.sort = this.sort.bind(this);
     this.keys = [
@@ -48,7 +48,11 @@ class Content extends React.Component {
     this.setState({ search: e.target.value, res: this.state.tuneList.filter((d) => [d.tunner, d.tuneName, d.score, d.carType, d.preferance, d.shareCode.replace(/\s/g, "")].join("|").match(new RegExp(re, "gi"))) });
   }
   sort(type) {
-    this.setState({ res: this.state.res.sort((a, b) => (a[type] < b[type] ? -1 : a[type] > b[type] ? 1 : 0)) });
+    this.setState((state) => ({
+      res: state.res.sort((a, b) => (a[type] < b[type] ? (state.asc ? 1 : -1) : a[type] > b[type] ? (state.asc ? -1 : 1) : 0)),
+      asc: !state.asc,
+      ascCol: type,
+    }));
   }
   componentDidMount() {
     fetch("../../assets/js/json/tuneList.json")
@@ -64,6 +68,7 @@ class Content extends React.Component {
     return (
       <div>
         <Block
+          class="py-2 bg-white tuneSearch"
           content={
             <div className="row">
               <input type="search" className="d-block col-md-6 mx-auto p-2" placeholder="請輸入關鍵字" onChange={this.search} />
@@ -72,14 +77,14 @@ class Content extends React.Component {
         />
         <Block
           content={
-            <div>
-              <table className="mx-auto text-center">
+            <div className="row overflow-auto py-4">
+              <table className="mx-auto text-center text-small">
                 <thead>
                   <tr>
                     {this.keys.map((d) => (
-                      <th onClick={() => this.sort(d.key)}>
+                      <th className="pointer" onClick={() => this.sort(d.key)} style={{ "min-width": "80px" }}>
                         {d.type}
-                        <span></span>
+                        <span className={`trangle ${this.state.asc && "asc"} ${this.state.ascCol === d.key && "active"}`}></span>
                       </th>
                     ))}
                   </tr>
@@ -97,23 +102,3 @@ class Content extends React.Component {
     );
   }
 }
-
-//   <div>
-//     <table className="mx-auto text-center">
-//       <thead>
-//         <tr>
-//           {this.keys.map((d) => (
-//             <th onClick={() => this.sort(d.key)}>
-//               {d.type}
-//               <span></span>
-//             </th>
-//           ))}
-//         </tr>
-//       </thead>
-//       <tbody>
-//         {this.state.res.map((d) => (
-//           <TuneListRow data={d} />
-//         ))}
-//       </tbody>
-//     </table>
-//   </div>

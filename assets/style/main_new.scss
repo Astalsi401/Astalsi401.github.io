@@ -6,6 +6,8 @@
 @import "./elements/codeChunk.scss";
 @import "./elements/image.scss";
 @import "./elements/calculator.scss";
+@import "./elements/tuneList.scss";
+@import "./elements/shape.scss";
 
 #header {
   z-index: index($z-index, navbar);

@@ -1,0 +1,28 @@
+.trangle {
+  --t: 4px;
+  margin-left: var(--t);
+  position: relative;
+  opacity: 0.3;
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 50%;
+    width: 0;
+    height: 0;
+    border-width: var(--t);
+    border-style: solid;
+    transition: 0.4s;
+  }
+  &::after {
+    border-color: var(--black) transparent transparent transparent;
+    transform: translate(calc(var(--t) * 2), calc(-50% + var(--t)));
+  }
+  &.active {
+    opacity: 1;
+    &.asc::after {
+      transform: translate(calc(var(--t) * 2), -50%) rotate(180deg);
+    }
+  }
+}
