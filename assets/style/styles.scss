@@ -59,13 +59,6 @@
   @include builder(box-shadow, 0 0 $shadow-value var(--black-300), if($shadow != "", shadow-#{$shadow}, shadow));
 }
 /* end of shadow */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  & > * {
-    width: 100%;
-  }
-}
 
 .container,
 .container-sm,
@@ -78,6 +71,14 @@
   margin-left: auto;
   margin-right: auto;
 }
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  & > * {
+    width: 100%;
+  }
+}
+
 @include basic();
 @each $screen, $screen-value in $screen-size {
   @media (min-width: $screen-value) {

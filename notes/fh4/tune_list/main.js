@@ -5,7 +5,8 @@ class TuneListRow extends React.Component {
     this.showImg = this.showImg.bind(this);
   }
   showImg(e) {
-    if (e.target.tagName !== "IMG") this.setState({ active: !this.state.active });
+    if (["IMG", "DIV"].includes(e.target.tagName)) return;
+    this.setState({ active: !this.state.active });
   }
   render() {
     return (
@@ -23,55 +24,31 @@ class TuneListRow extends React.Component {
     );
   }
 }
-class SortTable extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    return (
-      <div>
-        <table className="mx-auto text-center">
-          <thead>
-            <tr>
-              <th>
-                調教者<span></span>
-              </th>
-              <th>
-                調教名稱<span></span>
-              </th>
-              <th>
-                性能分<span></span>
-              </th>
-              <th>
-                車型<span></span>
-              </th>
-              <th>
-                特性<span></span>
-              </th>
-              <th>
-                分享代碼<span></span>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.props.data.map((d) => (
-              <TuneListRow data={d} />
-            ))}
-          </tbody>
-        </table>
-      </div>
-    );
-  }
-}
-
 class Content extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { tuneList: [], search: "" };
+    this.state = { tuneList: [], search: "", res: [] };
     this.search = this.search.bind(this);
+    this.sort = this.sort.bind(this);
+    this.keys = [
+      { key: "tunner", type: "調教者" },
+      { key: "tuneName", type: "調教名稱" },
+      { key: "score", type: "性能分" },
+      { key: "carType", type: "車型" },
+      { key: "preferance", type: "特性" },
+      { key: "shareCode", type: "分享代碼" },
+    ];
   }
   search(e) {
-    this.setState({ search: e.target.value });
+    let re = e.target.value
+      .split(" ")
+      .map((d) => `(?=.*${d.replace(/^\s|\s$/g, "")})`)
+      .filter((d) => d !== "(?=.*)")
+      .join("");
+    this.setState({ search: e.target.value, res: this.state.tuneList.filter((d) => [d.tunner, d.tuneName, d.score, d.carType, d.preferance, d.shareCode.replace(/\s/g, "")].join("|").match(new RegExp(re, "gi"))) });
+  }
+  sort(type) {
+    this.setState({ res: this.state.res.sort((a, b) => (a[type] < b[type] ? -1 : a[type] > b[type] ? 1 : 0)) });
   }
   componentDidMount() {
     fetch("../../assets/js/json/tuneList.json")
@@ -79,23 +56,64 @@ class Content extends React.Component {
       .then((data) => {
         this.setState({
           tuneList: data,
+          res: data,
         });
       });
   }
   render() {
-    let re = new RegExp(this.state.search, "gi");
-    let res = this.state.tuneList.filter((d) => [d.tunner, d.tuneName, d.score].join("|").match(re));
     return (
       <div>
         <Block
           content={
-            <div>
-              <input type="search" className="d-block mx-auto p-2" placeholder="請輸入關鍵字" onChange={this.search} />
+            <div className="row">
+              <input type="search" className="d-block col-md-6 mx-auto p-2" placeholder="請輸入關鍵字" onChange={this.search} />
             </div>
           }
         />
-        <Block content={<SortTable data={res} />} />
+        <Block
+          content={
+            <div>
+              <table className="mx-auto text-center">
+                <thead>
+                  <tr>
+                    {this.keys.map((d) => (
+                      <th onClick={() => this.sort(d.key)}>
+                        {d.type}
+                        <span></span>
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {this.state.res.map((d) => (
+                    <TuneListRow data={d} />
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          }
+        />
       </div>
     );
   }
 }
+
+//   <div>
+//     <table className="mx-auto text-center">
+//       <thead>
+//         <tr>
+//           {this.keys.map((d) => (
+//             <th onClick={() => this.sort(d.key)}>
+//               {d.type}
+//               <span></span>
+//             </th>
+//           ))}
+//         </tr>
+//       </thead>
+//       <tbody>
+//         {this.state.res.map((d) => (
+//           <TuneListRow data={d} />
+//         ))}
+//       </tbody>
+//     </table>
+//   </div>

@@ -589,14 +589,6 @@ table td {
 }
 
 /* end of shadow */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-.row > * {
-  width: 100%;
-}
-
 .container,
 .container-sm,
 .container-md,
@@ -607,6 +599,14 @@ table td {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row > * {
+  width: 100%;
 }
 
 /* display */
