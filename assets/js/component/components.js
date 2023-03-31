@@ -25,7 +25,6 @@ class Sidebar extends React.Component {
   constructor(props) {
     super(props);
     this.state = { index: {}, indexLoaded: false, childrenActive: false };
-    this.click = this.click.bind(this);
   }
   componentDidMount() {
     fetch("https://astalsi401.github.io/assets/js/json/index.json")
@@ -37,9 +36,9 @@ class Sidebar extends React.Component {
         });
       });
   }
-  click() {
+  click = () => {
     this.setState((prev) => ({ childrenActive: !prev.childrenActive }));
-  }
+  };
   render() {
     if (this.state.indexLoaded) {
       return (
@@ -65,21 +64,19 @@ class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = { sidebarActive: false };
-    this.click = this.click.bind(this);
-    this.clickOut = this.clickOut.bind(this);
     this.wrapperRef = React.createRef();
   }
-  click() {
+  click = () => {
     this.setState((prev) => ({ sidebarActive: !prev.sidebarActive }));
-  }
+  };
+  clickOut = (e) => {
+    if (this.wrapperRef.current && !this.wrapperRef.current.contains(e.target)) this.setState({ sidebarActive: false });
+  };
   componentDidMount() {
     document.addEventListener("mousedown", this.clickOut);
   }
   componentWillUnmount() {
     document.removeEventListener("mousedown", this.clickOut);
-  }
-  clickOut(event) {
-    if (this.wrapperRef.current && !this.wrapperRef.current.contains(event.target)) this.setState({ sidebarActive: false });
   }
   render() {
     return (
@@ -103,9 +100,8 @@ class Header extends React.Component {
 class CodeChunk extends React.Component {
   constructor(props) {
     super(props);
-    this.copy = this.copy.bind(this);
   }
-  copy() {
+  copy = () => {
     let copyText = document.createElement("input");
     copyText.value = this.props.code;
     document.body.appendChild(copyText);
@@ -113,7 +109,7 @@ class CodeChunk extends React.Component {
     copyText.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(copyText.value);
     document.body.removeChild(copyText);
-  }
+  };
   render() {
     return (
       <pre>
@@ -163,20 +159,13 @@ class ZoomImage extends React.Component {
   constructor(props) {
     super(props);
     this.state = { active: false };
-    this.zoom = this.zoom.bind(this);
     this.ref = React.createRef();
   }
-  zoom(e) {
-    let ancestor = e.target.parentNode;
-    while (ancestor.classList !== undefined) {
-      if (ancestor.classList.contains("overflow-auto")) {
-        e.target.style.position = this.state.active ? "relative" : "absolute";
-        break;
-      }
-      ancestor = ancestor.parentNode;
-    }
+  zoom = (e) => {
+    let overflow = document.querySelector(".overflow-auto");
+    if (overflow && overflow.contains(e.target)) e.target.style.position = this.state.active ? "relative" : "absolute";
     this.setState({ active: !this.state.active });
-  }
+  };
   componentDidMount() {
     window.addEventListener("resize", () => this.setState({ active: false }));
   }
