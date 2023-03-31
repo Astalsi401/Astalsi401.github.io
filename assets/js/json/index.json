@@ -1,6 +1,14 @@
 {
   "index": [
     {
+      "category": "Index",
+      "pages": [
+        { "page": "Stata", "href": "https://astalsi401.github.io/stata/index.html" },
+        { "page": "R", "href": "https://astalsi401.github.io/R/r_index.html" },
+        { "page": "Notes", "href": "https://astalsi401.github.io/notes/notes_index.html" }
+      ]
+    },
+    {
       "category": "Notes",
       "pages": [
         {

@@ -167,9 +167,26 @@ class ZoomImage extends React.Component {
     let translate = elem ? `${(window.innerWidth / 2 - elem.x) / scale - elem.width / 2}px, ${(window.innerHeight / 2 - elem.y) / scale - elem.height / 2}px` : "0,0";
     let imgSty = { transform: this.state.active ? `scale(${scale}) translate(${translate})` : "scale(1) translate(0)" };
     return (
-      <div id={this.props.id && this.pages.id} className={`${this.props.class && this.props.class} imgBlock ${this.state.active && "active"}`}>
+      <div id={this.props.id && this.pages.id} className={`${this.props.class && this.props.class} imgBlock ${toggleActive(this.state.active)}`}>
         <img ref={this.ref} className="w-100" loading="lazy" src={this.props.src} alt={this.props.alt && this.props.alt} style={imgSty} onClick={this.zoom} />
       </div>
     );
+  }
+}
+
+class IndexPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { index: {}, indexLoaded: false };
+  }
+  componentDidMount() {
+    fetch("https://astalsi401.github.io/assets/js/json/index.json")
+      .then((res) => res.json())
+      .then((data) => {
+        this.setState({
+          index: data.index.find((d) => d.category === this.props.category),
+          indexLoaded: true,
+        });
+      });
   }
 }
