@@ -101,15 +101,7 @@ class CodeChunk extends React.Component {
   constructor(props) {
     super(props);
   }
-  copy = () => {
-    let copyText = document.createElement("input");
-    copyText.value = this.props.code;
-    document.body.appendChild(copyText);
-    copyText.select();
-    copyText.setSelectionRange(0, 99999);
-    navigator.clipboard.writeText(copyText.value);
-    document.body.removeChild(copyText);
-  };
+  copy = () => navigator.clipboard.writeText(this.props.code);
   render() {
     return (
       <pre>
@@ -170,12 +162,9 @@ class ZoomImage extends React.Component {
     window.addEventListener("resize", () => this.setState({ active: false }));
   }
   render() {
-    let elem, scale, translate;
-    if (this.ref.current) {
-      elem = this.ref.current.getBoundingClientRect();
-      scale = Math.min(window.innerWidth / elem.width, window.innerHeight / elem.height);
-      translate = `${(window.innerWidth / 2 - elem.x) / scale - elem.width / 2}px, ${(window.innerHeight / 2 - elem.y) / scale - elem.height / 2}px`;
-    }
+    let elem = this.ref.current && this.ref.current.getBoundingClientRect();
+    let scale = elem ? Math.min(window.innerWidth / elem.width, window.innerHeight / elem.height) : 1;
+    let translate = elem ? `${(window.innerWidth / 2 - elem.x) / scale - elem.width / 2}px, ${(window.innerHeight / 2 - elem.y) / scale - elem.height / 2}px` : "0,0";
     let imgSty = { transform: this.state.active ? `scale(${scale}) translate(${translate})` : "scale(1) translate(0)" };
     return (
       <div id={this.props.id && this.pages.id} className={`${this.props.class && this.props.class} imgBlock ${this.state.active && "active"}`}>

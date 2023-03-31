@@ -2,11 +2,10 @@ class Calculator extends React.Component {
   constructor(props) {
     super(props);
     this.state = { bh: "", bw: "", ah: "", aw: "" };
-    this.whp = this.whp.bind(this);
   }
-  whp(e) {
+  whp = (e) => {
     this.setState({ [e.target.name]: !/^\d*$/.test(e.target.value) ? this.state[e.target.name] : e.target.value });
-  }
+  };
   render() {
     let before = (Number(this.state.bw) / Number(this.state.bh)).toFixed(2),
       after = (Number(this.state.aw) / Number(this.state.ah)).toFixed(2);
