@@ -1,7 +1,7 @@
 {
   "index": [
     {
-      "category": "Index",
+      "category": "HOME",
       "pages": [
         { "page": "Stata", "href": "https://astalsi401.github.io/stata/index.html" },
         { "page": "R", "href": "https://astalsi401.github.io/R/r_index.html" },

@@ -1,1 +1,1 @@
-ReactDOM.createRoot(document.getElementById("App")).render(<App category="Index" title="Notes" />);
+ReactDOM.createRoot(document.getElementById("App")).render(<App category="HOME" title="Notes" />);
