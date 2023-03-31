@@ -387,205 +387,209 @@ table td {
 /* end of text size */
 /* round */
 .rounded-0 {
-  border-radius: 0rem !important;
+  border-radius: 0rem;
 }
 
 .rounded-1 {
-  border-radius: 0.25rem !important;
+  border-radius: 0.25rem;
 }
 
 .rounded-2 {
-  border-radius: 0.5rem !important;
+  border-radius: 0.5rem;
 }
 
 .rounded-3 {
-  border-radius: 1rem !important;
+  border-radius: 1rem;
 }
 
 .rounded-4 {
-  border-radius: 1.5rem !important;
+  border-radius: 1.5rem;
 }
 
 .rounded-5 {
-  border-radius: 3rem !important;
+  border-radius: 3rem;
 }
 
 .rounded-top-0 {
-  border-top-left-radius: 0rem !important;
-  border-top-right-radius: 0rem !important;
+  border-top-left-radius: 0rem;
+  border-top-right-radius: 0rem;
 }
 
 .rounded-top-1 {
-  border-top-left-radius: 0.25rem !important;
-  border-top-right-radius: 0.25rem !important;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
 }
 
 .rounded-top-2 {
-  border-top-left-radius: 0.5rem !important;
-  border-top-right-radius: 0.5rem !important;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
 
 .rounded-top-3 {
-  border-top-left-radius: 1rem !important;
-  border-top-right-radius: 1rem !important;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 .rounded-top-4 {
-  border-top-left-radius: 1.5rem !important;
-  border-top-right-radius: 1.5rem !important;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
 }
 
 .rounded-top-5 {
-  border-top-left-radius: 3rem !important;
-  border-top-right-radius: 3rem !important;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
 }
 
 .rounded-bottom-0 {
-  border-bottom-left-radius: 0rem !important;
-  border-bottom-right-radius: 0rem !important;
+  border-bottom-left-radius: 0rem;
+  border-bottom-right-radius: 0rem;
 }
 
 .rounded-bottom-1 {
-  border-bottom-left-radius: 0.25rem !important;
-  border-bottom-right-radius: 0.25rem !important;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
 }
 
 .rounded-bottom-2 {
-  border-bottom-left-radius: 0.5rem !important;
-  border-bottom-right-radius: 0.5rem !important;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
 .rounded-bottom-3 {
-  border-bottom-left-radius: 1rem !important;
-  border-bottom-right-radius: 1rem !important;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
 .rounded-bottom-4 {
-  border-bottom-left-radius: 1.5rem !important;
-  border-bottom-right-radius: 1.5rem !important;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
 }
 
 .rounded-bottom-5 {
-  border-bottom-left-radius: 3rem !important;
-  border-bottom-right-radius: 3rem !important;
+  border-bottom-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
 }
 
 .rounded-start-0 {
-  border-top-left-radius: 0rem !important;
-  border-bottom-left-radius: 0rem !important;
+  border-top-left-radius: 0rem;
+  border-bottom-left-radius: 0rem;
 }
 
 .rounded-start-1 {
-  border-top-left-radius: 0.25rem !important;
-  border-bottom-left-radius: 0.25rem !important;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
 }
 
 .rounded-start-2 {
-  border-top-left-radius: 0.5rem !important;
-  border-bottom-left-radius: 0.5rem !important;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
 }
 
 .rounded-start-3 {
-  border-top-left-radius: 1rem !important;
-  border-bottom-left-radius: 1rem !important;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
 }
 
 .rounded-start-4 {
-  border-top-left-radius: 1.5rem !important;
-  border-bottom-left-radius: 1.5rem !important;
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
 }
 
 .rounded-start-5 {
-  border-top-left-radius: 3rem !important;
-  border-bottom-left-radius: 3rem !important;
+  border-top-left-radius: 3rem;
+  border-bottom-left-radius: 3rem;
 }
 
 .rounded-end-0 {
-  border-top-right-radius: 0rem !important;
-  border-bottom-right-radius: 0rem !important;
+  border-top-right-radius: 0rem;
+  border-bottom-right-radius: 0rem;
 }
 
 .rounded-end-1 {
-  border-top-right-radius: 0.25rem !important;
-  border-bottom-right-radius: 0.25rem !important;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
 }
 
 .rounded-end-2 {
-  border-top-right-radius: 0.5rem !important;
-  border-bottom-right-radius: 0.5rem !important;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
 .rounded-end-3 {
-  border-top-right-radius: 1rem !important;
-  border-bottom-right-radius: 1rem !important;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
 .rounded-end-4 {
-  border-top-right-radius: 1.5rem !important;
-  border-bottom-right-radius: 1.5rem !important;
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
 }
 
 .rounded-end-5 {
-  border-top-right-radius: 3rem !important;
-  border-bottom-right-radius: 3rem !important;
+  border-top-right-radius: 3rem;
+  border-bottom-right-radius: 3rem;
 }
 
 /* end of round */
 /* overflow */
 .overflow-auto {
-  overflow: auto !important;
+  overflow: auto;
 }
 
 .overflow-hidden {
-  overflow: hidden !important;
+  overflow: hidden;
 }
 
 /* end of overflow */
 /* border */
 .border-0 {
-  border-width: 0rem !important;
+  border-width: 0px;
 }
 
 .border-1 {
-  border-width: 0.25rem !important;
+  border-width: 1px;
 }
 
 .border-2 {
-  border-width: 0.5rem !important;
+  border-width: 2px;
 }
 
 .border-3 {
-  border-width: 1rem !important;
+  border-width: 3px;
 }
 
 .border-4 {
-  border-width: 1.5rem !important;
+  border-width: 4px;
 }
 
 .border-5 {
-  border-width: 3rem !important;
+  border-width: 5px;
 }
 
-.border-auto {
-  border-width: auto !important;
+.border-solid {
+  border-style: solid;
 }
 
 /* end of border */
 /* shadow */
 .shadow-none {
-  box-shadow: 0 0 0 var(--black-300) !important;
+  box-shadow: 0 0 0 var(--black-300);
+}
+
+.shadow-1 {
+  box-shadow: 0 0 1px var(--black-300);
 }
 
 .shadow-sm {
-  box-shadow: 0 0 0.25rem var(--black-300) !important;
+  box-shadow: 0 0 0.25rem var(--black-300);
 }
 
 .shadow {
-  box-shadow: 0 0 1rem var(--black-300) !important;
+  box-shadow: 0 0 1rem var(--black-300);
 }
 
 .shadow-lg {
-  box-shadow: 0 0 3rem var(--black-300) !important;
+  box-shadow: 0 0 3rem var(--black-300);
 }
 
 /* end of shadow */

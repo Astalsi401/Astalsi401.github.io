@@ -117,6 +117,7 @@ $text-size: (
   small: 0.8rem,
   x-small: 0.7rem,
 );
+$border-style: (solid);
 $rounded-edge: (
   "": "",
   top: "top-left-" "top-right-",
@@ -183,6 +184,7 @@ $container: (
 );
 $shadows: (
   none: 0,
+  1: 1px,
   sm: 0.25rem,
   "": 1rem,
   lg: 3rem,

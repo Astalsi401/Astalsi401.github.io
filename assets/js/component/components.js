@@ -166,7 +166,8 @@ class ZoomImage extends React.Component {
     this.zoom = this.zoom.bind(this);
     this.ref = React.createRef();
   }
-  zoom() {
+  zoom(e) {
+    e.target.style.position = this.state.active ? "relative" : "absolute";
     this.setState({ active: !this.state.active });
   }
   componentDidMount() {

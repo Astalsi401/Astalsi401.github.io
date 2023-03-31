@@ -39,24 +39,27 @@
       $tmp: append($tmp, border-#{$round-value}radius);
     }
     @if $u != auto {
-      @include builder($tmp, $u-value, if($round == "", rounded-#{$round}, rounded-#{$round}-), $class-e: $u);
+      @include builder($tmp, $u-value, if($round == "", rounded-#{$round}, rounded-#{$round}-), $class-e: $u, $imp: false);
     }
   }
 }
 /* end of round */
 /* overflow */
 @each $overflow-value in $overflow {
-  @include builder(overflow, $overflow-value, overflow-#{$overflow-value});
+  @include builder(overflow, $overflow-value, overflow-#{$overflow-value}, $imp: false);
 }
 /* end of overflow */
 /* border */
-@each $u, $u-value in $units {
-  @include builder(border-width, $u-value, border-#{$u});
+@for $i from 0 through 5 {
+  @include builder(border-width, #{$i}px, border-#{$i}, $imp: false);
+}
+@each $bd-sty in $border-style {
+  @include builder(border-style, $bd-sty, border-#{$bd-sty}, $imp: false);
 }
 /* end of border */
 /* shadow */
 @each $shadow, $shadow-value in $shadows {
-  @include builder(box-shadow, 0 0 $shadow-value var(--black-300), if($shadow != "", shadow-#{$shadow}, shadow));
+  @include builder(box-shadow, 0 0 $shadow-value var(--black-300), if($shadow != "", shadow-#{$shadow}, shadow), $imp: false);
 }
 /* end of shadow */
 /* position value */
