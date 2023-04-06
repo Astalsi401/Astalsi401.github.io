@@ -2,7 +2,7 @@ class Content extends React.Component {
   constructor(props) {
     super(props);
     this.data = {
-      code1: `#載入PHP\nLoadModule <span style="color: red;">php_module</span> 'D:/Tools/php/php8apache2_4.dll'\n\n#將PHP配置檔案載入到Apache配置檔案中，共同生效\nPHPIniDir 'D:/Tools/php'\n\n#配置Apache分配工作給PHP模組，把PHP程式碼交給PHP處理\n#即.php字尾名的檔案\nAddType application/x-httpd-php .php`,
+      code1: `#載入PHP\nLoadModule php_module 'D:/Tools/php/php8apache2_4.dll'\n\n#將PHP配置檔案載入到Apache配置檔案中，共同生效\nPHPIniDir 'D:/Tools/php'\n\n#配置Apache分配工作給PHP模組，把PHP程式碼交給PHP處理\n#即.php字尾名的檔案\nAddType application/x-httpd-php .php`,
     };
     this.section = [
       {
