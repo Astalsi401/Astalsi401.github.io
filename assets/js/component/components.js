@@ -1,6 +1,5 @@
-const toggleActive = (active) => {
-  return active ? " active" : "";
-};
+const active = "active";
+const toggleActive = (stateActive) => (stateActive ? active : "");
 
 class SidebarChild extends React.Component {
   constructor(props) {
@@ -8,7 +7,7 @@ class SidebarChild extends React.Component {
   }
   render() {
     return (
-      <ul className={`children${toggleActive(this.props.childrenActive)}`}>
+      <ul className={`children ${toggleActive(this.props.childrenActive)}`}>
         {this.props.sections.map((s) => (
           <li>
             <a className="ps-4 text-decoration-none" href={s.href}>
@@ -42,11 +41,11 @@ class Sidebar extends React.Component {
   render() {
     if (this.state.indexLoaded) {
       return (
-        <aside id="sidebar" className={toggleActive(this.props.sidebarActive)}>
+        <aside id="sidebar" className={this.props.sidebarActive && active}>
           <h1 className="text-center my-5">{this.state.index.category}</h1>
           <ul className="menu">
             {this.state.index.pages.map((p) => (
-              <li key={p.page} className={p.section && `has-children${toggleActive(this.state.childrenActive)}`} onClick={this.click}>
+              <li key={p.page} className={p.section && `has-children ${toggleActive(this.state.childrenActive)}`} onClick={this.click}>
                 <a className="px-3 text-decoration-none text-large text-bold" href={p.href}>
                   {p.page}
                 </a>
@@ -82,7 +81,7 @@ class Header extends React.Component {
     return (
       <header id="header" ref={this.wrapperRef}>
         <nav id="navbar">
-          <div className={`hamberger${toggleActive(this.state.sidebarActive)}`} onClick={this.click}>
+          <div className={`hamberger ${toggleActive(this.state.sidebarActive)}`} onClick={this.click}>
             <span></span>
           </div>
           <a href="https://astalsi401.github.io/" className="home">
@@ -101,6 +100,9 @@ class CodeChunk extends React.Component {
   constructor(props) {
     super(props);
   }
+  componentDidMount() {
+    Prism.highlightAll();
+  }
   copy = () => navigator.clipboard.writeText(this.props.code);
   render() {
     return (
@@ -109,7 +111,7 @@ class CodeChunk extends React.Component {
           <path fill="none" d="M4.5 1 L7.5 1 Q8.5 1,8.5 2 L8.5 6 Q8.5 7,7.5 7 L4.5 7 Q3.5 7,3.5 6 L3.5 2 Q3.5 1,4.5 1"></path>
           <path fill="none" d="M2.5 3 L5.5 3 Q6.5 3,6.5 4 L6.5 8 Q6.5 9,5.5 9 L2.5 9 Q1.5 9,1.5 8 L1.5 4 Q1.5 3,2.5 3"></path>
         </svg>
-        <code dangerouslySetInnerHTML={{ __html: this.props.code }} />
+        <code children={this.props.code} className={`language-${this.props.language}`} />
       </pre>
     );
   }

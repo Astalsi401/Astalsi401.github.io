@@ -3924,7 +3924,7 @@ pre {
 pre code {
   display: block;
   overflow-x: auto;
-  padding: var(--unit-2) 0;
+  padding: var(--unit-3) 0;
 }
 
 code {
@@ -3949,6 +3949,11 @@ code {
 }
 .copyBtn:hover {
   opacity: 1;
+}
+
+code[class*=language-],
+pre[class*=language-] {
+  font-size: 0.8rem;
 }
 
 .image-normal {
