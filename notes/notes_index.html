@@ -2,6 +2,9 @@
 <html lang="zh-Hant">
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>雜物間</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F8SLV521P4"></script>
     <script>
@@ -10,42 +13,21 @@
         gtag('js', new Date());
         gtag('config', 'G-F8SLV521P4');
     </script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>雜物間</title>
-    <link rel="stylesheet" type="text/css" href="../assets/style/main.css">
+    <!-- react -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <!-- babel -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- component -->
+    <script defer type="text/jsx" src="https://astalsi401.github.io/assets/js/component/components.js"></script>
+    <script defer type="text/jsx" src="./main.js"></script>
+    <script defer type="text/jsx" src="https://astalsi401.github.io/assets/js/component/app.js"></script>
+    <script defer type="text/jsx" src="./render.js"></script>
+    <link rel="stylesheet" href="https://astalsi401.github.io/assets/style/main_new.min.css">
 </head>
 
-<body class="link">
-    <header>
-        <div id="top"></div>
-        <div id="indexPage" class="sidebar"></div>
-        <div id="plate"></div>
-        <div class="largePic">
-            <div id="pic"></div>
-        </div>
-    </header>
-    <main class="container">
-        <div id="notesPage" class="content"></div>
-        <div id="fhPage" class="content"></div>
-    </main>
-    <footer>
-        <script src="https://astalsi401.github.io/jQuery/jquery-3.6.0.min.js"></script>
-        <script>
-            $(document).ready(function () {
-                const list = [['#fh4', '#fh4Child'], ['#cmder', '#cmderChild']]
-                list.forEach(a => {
-                    $(a[0]).click(function () {
-                        $(a[1]).toggleClass('hide')
-                    })
-                })
-            })
-        </script>
-        <script>
-            const requestURL = '../assets/js/json/data.json'
-        </script>
-        <script src="../assets/js/main.js"></script>
-    </footer>
+<body>
+    <div id="App"></div>
 </body>
 
 </html>

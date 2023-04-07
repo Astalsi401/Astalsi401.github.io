@@ -192,6 +192,20 @@ class IndexPage extends React.Component {
       });
   }
   render() {
-    return <div></div>;
+    if (this.state.indexLoaded) {
+      return (
+        <div className="index">
+          <ul className="mx-auto my-3 text-center w-lg-50 w-100">
+            {this.state.index.pages.map((page) => (
+              <li className="my-2">
+                <a className="p-2" href={page.href}>
+                  {page.page}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      );
+    }
   }
 }

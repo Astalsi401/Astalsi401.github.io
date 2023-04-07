@@ -3916,6 +3916,43 @@ table td {
   color: var(--main-bg);
 }
 
+.index ul {
+  list-style-type: none;
+}
+.index a {
+  position: relative;
+  text-decoration: none;
+}
+.index a, .index a::before, .index a::after {
+  transition: 0.4s;
+  display: block;
+}
+.index a::before, .index a::after {
+  content: "";
+  position: absolute;
+  border-width: 2px;
+  border-style: solid;
+  inset: 0;
+  opacity: 0;
+}
+.index a::before {
+  border-color: var(--primary) transparent var(--primary) transparent;
+}
+.index a::after {
+  border-color: transparent var(--primary) transparent var(--primary);
+}
+.index a:hover::before, .index a:hover::after {
+  opacity: 0.5;
+}
+.index a:hover::before {
+  transform: skewX(-20deg);
+  inset: var(--unit-1);
+}
+.index a:hover::after {
+  transform: skewX(20deg);
+  inset: var(--unit-2);
+}
+
 pre {
   position: relative;
   padding: var(--unit-2);
