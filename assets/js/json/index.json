@@ -2,6 +2,7 @@
   "index": [
     {
       "category": "HOME",
+      "href": "https://astalsi401.github.io/",
       "pages": [
         { "page": "Stata", "href": "https://astalsi401.github.io/stata/index.html" },
         { "page": "R", "href": "https://astalsi401.github.io/R/r_index.html" },
@@ -10,6 +11,7 @@
     },
     {
       "category": "Notes",
+      "href": "https://astalsi401.github.io/notes/notes_index.html",
       "pages": [
         {
           "page": "cmder筆記",
@@ -32,6 +34,7 @@
     },
     {
       "category": "Games",
+      "href": "https://astalsi401.github.io/notes/notes_index.html",
       "pages": [
         { "page": "車輛升級", "href": "https://astalsi401.github.io/notes/fh4/upgrade.html" },
         { "page": "基礎調教", "href": "https://astalsi401.github.io/notes/fh4/basic_tune.html" },

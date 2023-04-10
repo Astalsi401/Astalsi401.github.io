@@ -42,7 +42,11 @@ class Sidebar extends React.Component {
     if (this.state.indexLoaded) {
       return (
         <aside id="sidebar" className={this.props.sidebarActive && active}>
-          <h1 className="text-center my-5">{this.state.index.category}</h1>
+          <h1 className="my-5 text-center">
+            <a className="text-decoration-none" href={this.state.index.href}>
+              {this.state.index.category}
+            </a>
+          </h1>
           <ul className="menu">
             {this.state.index.pages.map((p) => (
               <li key={p.page} className={p.section && `has-children ${toggleActive(this.state.childrenActive)}`} onClick={this.click}>
