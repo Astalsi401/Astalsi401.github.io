@@ -46,8 +46,8 @@
       "href": "https://astalsi401.github.io/stata/index.html",
       "pages": [
         { "page": "資料輸入與表格呈現", "href": "https://astalsi401.github.io/stata/001-input_tab.html" },
-        { "page": "資料輸入與表格呈現", "href": "https://astalsi401.github.io/stata/002-import_export.html" },
-        { "page": "匯入與匯出", "href": "https://astalsi401.github.io/stata/003-data_des.html" },
+        { "page": "匯入與匯出", "href": "https://astalsi401.github.io/stata/002-import_export.html" },
+        { "page": "檢視資料", "href": "https://astalsi401.github.io/stata/003-data_des.html" },
         { "page": "整理資料檔", "href": "https://astalsi401.github.io/stata/004-data_sort.html" },
         { "page": "迴圈", "href": "https://astalsi401.github.io/stata/005-stata_loop.html" },
         { "page": "繪圖", "href": "https://astalsi401.github.io/stata/006-graph.html" },
