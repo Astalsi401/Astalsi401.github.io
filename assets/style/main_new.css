@@ -3976,16 +3976,33 @@ code {
 .copyBtn {
   cursor: pointer;
   position: absolute;
-  transition: opacity 0.4s;
-  stroke: var(--code-copy);
+  transition: opacity 0.4s, transform 0.4s;
   opacity: 0.3;
   top: 4px;
   right: 4px;
   width: 20px;
   height: 20px;
 }
+.copyBtn svg {
+  stroke: var(--code-copy);
+}
 .copyBtn:hover {
   opacity: 1;
+}
+.copyBtn::before {
+  transition: inherit;
+  content: "copied!";
+  position: absolute;
+  display: block;
+  width: -moz-max-content;
+  width: max-content;
+  height: 20px;
+  opacity: 0;
+  transform: scale(0);
+}
+.copyBtn.active::before {
+  opacity: 1;
+  transform: scale(1) translateX(-110%);
 }
 
 code[class*=language-],
