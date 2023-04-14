@@ -40,6 +40,29 @@
         { "page": "基礎調教", "href": "https://astalsi401.github.io/notes/fh4/basic_tune.html" },
         { "page": "調教分享", "href": "https://astalsi401.github.io/notes/fh4/tune_list.html" }
       ]
+    },
+    {
+      "category": "Stata",
+      "href": "https://astalsi401.github.io/stata/index.html",
+      "pages": [
+        { "page": "資料輸入與表格呈現", "href": "https://astalsi401.github.io/stata/001-input_tab.html" },
+        { "page": "資料輸入與表格呈現", "href": "https://astalsi401.github.io/stata/002-import_export.html" },
+        { "page": "匯入與匯出", "href": "https://astalsi401.github.io/stata/003-data_des.html" },
+        { "page": "整理資料檔", "href": "https://astalsi401.github.io/stata/004-data_sort.html" },
+        { "page": "迴圈", "href": "https://astalsi401.github.io/stata/005-stata_loop.html" },
+        { "page": "繪圖", "href": "https://astalsi401.github.io/stata/006-graph.html" },
+        { "page": "z-score", "href": "https://astalsi401.github.io/stata/007-zscore.html" },
+        { "page": "t test", "href": "https://astalsi401.github.io/stata/008-ttest.html" },
+        { "page": "Anova Test", "href": "https://astalsi401.github.io/stata/009-Anova_Test.html" },
+        { "page": "非參數顯著性檢定", "href": "https://astalsi401.github.io/stata/010-nonparametric_statistics.html" },
+        { "page": "中位數檢驗（Median Test）", "href": "https://astalsi401.github.io/stata/011-median_test.html" },
+        { "page": "相關係數", "href": "https://astalsi401.github.io/stata/012-correlation.html" },
+        { "page": "迴歸分析", "href": "https://astalsi401.github.io/stata/013-regression.html" },
+        { "page": "因素分析", "href": "https://astalsi401.github.io/stata/014-factor_analysis.html" },
+        { "page": "邏輯分析（Logistic Analysis）", "href": "https://astalsi401.github.io/stata/015-logisitic_analysis.html" },
+        { "page": "Sublime Text 3 & Stata", "href": "https://astalsi401.github.io/stata/other_01-st3.html" },
+        { "page": "Html & Stata", "href": "https://astalsi401.github.io/stata/other_02-html.html" }
+      ]
     }
   ]
 }

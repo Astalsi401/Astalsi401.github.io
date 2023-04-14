@@ -3975,13 +3975,16 @@ code {
 
 .copyBtn {
   cursor: pointer;
+  --m: 4px;
+  --w: 20px;
+  --s: 0.4s;
   position: absolute;
-  transition: opacity 0.4s, transform 0.4s;
+  transition: opacity var(--s), transform var(--s);
   opacity: 0.3;
-  top: 4px;
-  right: 4px;
-  width: 20px;
-  height: 20px;
+  top: var(--m);
+  right: var(--m);
+  width: var(--w);
+  height: var(--w);
 }
 .copyBtn svg {
   stroke: var(--code-copy);
@@ -3996,7 +3999,7 @@ code {
   display: block;
   width: -moz-max-content;
   width: max-content;
-  height: 20px;
+  height: var(--w);
   opacity: 0;
   transform: scale(0);
 }
