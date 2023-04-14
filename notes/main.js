@@ -3,6 +3,11 @@ class Content extends React.Component {
     super(props);
   }
   render() {
-    return <IndexPage category="Notes" />;
+    return (
+      <div>
+        <IndexPage category="Notes" />
+        <IndexPage category="Games" />
+      </div>
+    );
   }
 }

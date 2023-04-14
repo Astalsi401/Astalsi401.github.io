@@ -198,7 +198,7 @@ class IndexPage extends React.Component {
   render() {
     if (this.state.indexLoaded) {
       return (
-        <div className="index">
+        <div className="index my-5">
           <ul className="mx-auto my-3 text-center w-lg-50 w-100">
             {this.state.index.pages.map((page) => (
               <li className="my-2">
