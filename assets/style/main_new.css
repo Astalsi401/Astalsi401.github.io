@@ -3973,6 +3973,16 @@ code {
   background: var(--code-bg);
 }
 
+code[class*=language-],
+pre[class*=language-] {
+  font-size: 0.8rem;
+}
+
+pre.language-output {
+  background: var(--gray-0);
+  border: 1px solid var(--code-bg);
+}
+
 .copyBtn {
   cursor: pointer;
   --m: 4px;
@@ -4006,11 +4016,6 @@ code {
 .copyBtn.active::before {
   opacity: 1;
   transform: scale(1) translateX(-110%);
-}
-
-code[class*=language-],
-pre[class*=language-] {
-  font-size: 0.8rem;
 }
 
 .image-normal {
