@@ -3969,14 +3969,15 @@ pre code {
   max-height: min(60dvh, 400px);
 }
 pre code::-webkit-scrollbar {
-  width: var(--scrollBar);
+  width: var(--scrollBar-w);
 }
 pre code::-webkit-scrollbar-track {
   background: var(--white);
 }
 pre code::-webkit-scrollbar-thumb {
-  background: var(--primary-300);
-  border-radius: calc(var(--scrollBar) / 2);
+  width: var(--scrollBar-w);
+  border-radius: calc(var(--scrollBar-w) / 2);
+  background: var(--scrollBar-bg);
 }
 pre code:hover {
   --scrollBar-bg: var(--primary-600);

@@ -25,6 +25,8 @@ class Content extends React.Component {
               </p>
               <CodeChunk code={`clear\ninput class score\n1 70\n1 75\n1 80\n2 75\n2 80\n2 85\n3 80\n3 85\n3 90\nend\n\nlab var class "班級別"\nlab def class 1 "A班" 2 "B班" 3 "C班"\nlab val class class\nlab var score "考試成績"\nanova score class`} language="stata"></CodeChunk>
               <CodeChunk code={`. clear\n\n. input class score\n\n   class      score\n  1. 1 70\n  2. 1 75\n  3. 1 80\n  4. 2 75\n  5. 2 80\n  6. 2 85\n  7. 3 80\n  8. 3 85\n  9. 3 90\n 10. end\n\n. lab var class "班級別"\n\n. lab def class 1 "A班" 2 "B班" 3 "C班"\n\n. lab val class class\n\n. lab var score "考試成績"\n\n. anova score class\n\n                         Number of obs =          9    R-squared     =  0.5000\n                         Root MSE      =          5    Adj R-squared =  0.3333\n\n                  Source | Partial SS         df         MS        F    Prob>F\n              -----------+----------------------------------------------------\n                   Model |        150          2          75      3.00  0.1250\n                         |\n                   class |        150          2          75      3.00  0.1250\n                         |\n                Residual |        150          6          25  \n              -----------+----------------------------------------------------\n                   Total |        300          8        37.5`} language="output"></CodeChunk>
+              <p>表格解讀：</p>
+              <p>若我們設定α=0.05，查F分配表，則在自由度為2, 6的情形下，F分配的數值為5.14</p>
             </div>
             <div className="my-2">
               <CodeChunk code={``} language="stata"></CodeChunk>

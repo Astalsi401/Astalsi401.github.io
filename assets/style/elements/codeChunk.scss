@@ -13,8 +13,9 @@ pre {
       background: var(--white);
     }
     &::-webkit-scrollbar-thumb {
-      background: var(--scrollBar-bg);
+      width: var(--scrollBar-w);
       border-radius: calc(var(--scrollBar-w) / 2);
+      background: var(--scrollBar-bg);
     }
     &:hover {
       --scrollBar-bg: var(--primary-600);
