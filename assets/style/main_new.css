@@ -3960,8 +3960,9 @@ pre {
 }
 pre code {
   display: block;
-  overflow-x: auto;
+  overflow: auto;
   padding: var(--unit-3) 0;
+  max-height: min(60dvh, 400px);
 }
 
 code {

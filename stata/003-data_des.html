@@ -2,6 +2,9 @@
 <html lang="zh-Hant">
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>檢視資料</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F8SLV521P4"></script>
     <script>
@@ -10,189 +13,24 @@
         gtag('js', new Date());
         gtag('config', 'G-F8SLV521P4');
     </script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>檢視資料</title>
-    <link rel="stylesheet" type="text/css" href="../assets/style/main.css">
+    <!-- prism -->
+    <script src=" https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js "></script>
+    <link href=" https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css " rel="stylesheet">
+    <!-- react -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <!-- babel -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- component -->
+    <script defer type="text/jsx" src="https://astalsi401.github.io/assets/js/component/components.js"></script>
+    <script defer type="text/jsx" src="./003/main.js"></script>
+    <script defer type="text/jsx" src="https://astalsi401.github.io/assets/js/component/app.js"></script>
+    <script defer type="text/jsx" src="./003/render.js"></script>
+    <link rel="stylesheet" href="https://astalsi401.github.io/assets/style/main_new.min.css">
 </head>
 
 <body>
-    <header>
-        <div id="top"></div>
-        <div id="stataPage" class="sidebar"></div>
-        <div id="plate"></div>
-        <div class="largePic">
-            <div id="pic"></div>
-        </div>
-    </header>
-    <main class="container">
-        <h2 data-type="title_1" id="003">003. 檢視資料</h2>
-        <div id="showCode">本頁do file</div>
-        <pre id="code"><code>
-
-clear
-input str9 name iq /*str9: 空出9個字元的長度*/
-"Gene"    125
-"Steve"    92
-"Bob"      72
-"Michael" 126
-"Joan"    120
-"Jim"      99
-"Jane"    130
-"Mary"    100
-"Kevin"   120
-end
-
-su iq, d
-/*su:summarize的縮寫，大致呈現一份資料的分配狀況，d代表detail，可以看到更詳細的信息。*/
-
-univar iq
-g dnp = r(N)    /*樣本數*/
-g dns = r(N)-1  /*自由度*/
-g mean = r(mean)
-di "樣本數:" _col(8) dnp /*在該行8字元後顯示樣本數r(N)*/
-di "加總:" _col(6) r(sum)
-di "平均:" _col(6) mean
-di "中位數:" _col(8) r(p50)
-
-egen mo = mode(iq)
-di "眾數:" _col(6) mo
-
-g vd = (iq-mean)^2
-su vd
-
-di "母體變異數:" _col(12) r(sum)/dnp
-di "樣本變異數:" _col(12) r(sum)/dns /*r(sum)/(r(N)-1)*/
-
-sca sdp = sqrt(r(sum)/dnp)
-di "母體標準差:" _col(12) sdp  /*stata會以樣本變異數進行計算 r(sd)*/
-
-sca sds = sqrt(r(sum)/dns)
-di "樣本標準差:" _col(12) sds
-
-sca sep = sdp/sqrt(dnp)
-di "母體標準誤:" sep
-
-sca ses = sds/sqrt(dnp)
-di "樣本標準誤:" ses
-
-        </code></pre>
-        <section>
-            <p>輸入資料</p>
-            <pre id="stlog-17" class="stlog"><samp>
-<span class="stinp">. clear</span>
-<span class="stinp">. input str9 name iq <span class="stcmt">/*str9: 空出9個字元的長度*/</span></span>
-
-     name     iq
- 1. "Gene"    125
- 2. "Steve"    92
- 3. "Bob"      72
- 4. "Michael" 126
- 5. "Joan"    120
- 6. "Jim"      99
- 7. "Jane"    130
- 8. "Mary"    100
- 9. "Kevin"   120
-10. end
-</samp></pre>
-            <p>檢視資料信息</p>
-            <pre id="stlog-16" class="stlog"><samp>
-<span class="stinp">. su iq, d</span>
-<span class="stcmt">/*su:summarize的縮寫，大致呈現一份資料的分配狀況，d代表detail，可以看到更詳細的信息。*/</span>
-                             iq
--------------------------------------------------------------
-      Percentiles      Smallest
- 1%    <span class="stres">       72             72</span>
- 5%    <span class="stres">       72             92</span>
-10%    <span class="stres">       72             99       </span>Obs         <span class="stres">          9</span>
-25%    <span class="stres">       99            100       </span>Sum of Wgt. <span class="stres">          9</span>
-
-50%    <span class="stres">      120                      </span>Mean          <span class="stres"> 109.3333</span>
-<span class="stres">                        </span>Largest       Std. Dev.     <span class="stres"> 19.57677</span>
-75%    <span class="stres">      125            120</span>
-90%    <span class="stres">      130            125       </span>Variance      <span class="stres">   383.25</span>
-95%    <span class="stres">      130            126       </span>Skewness      <span class="stres">-.6967588</span>
-99%    <span class="stres">      130            130       </span>Kurtosis      <span class="stres"> 2.295479</span>
-
-        </samp></pre>
-            <p>另一種檢視資料的指令</p>
-            <pre id="stlog-15" class="stlog"><samp>
-<span class="stinp">. univar iq</span>
-                                        -------------- Quantiles --------------
-Variable       n     Mean     S.D.      Min      .25      Mdn      .75      Max
--------------------------------------------------------------------------------
-      iq <span class="stres">      9   109.33    19.58    72.00    99.00   120.00   125.00   130.00</span>
--------------------------------------------------------------------------------
-
-        </samp></pre>
-            <p>單獨叫出資料中的某項資訊，需搭配<code>summarize</code>一起使用，可將其命名後作為數值代入計算。</p>
-            <pre id="stlog-14" class="stlog"><samp>
-<span class="stinp">. g dnp = r(N)    <span class="stcmt">/*樣本數*/</span></span>
-
-<span class="stinp">. g dns = r(N)-1  <span class="stcmt">/*自由度*/</span></span>
-
-<span class="stinp">. g mean = r(mean)</span>
-
-<span class="stinp">. di "樣本數:" _col(8) dnp <span class="stcmt">/*在該行8字元後顯示樣本數r(N)*/</span></span>
-<span class="stres">樣本數:9</span>
-
-<span class="stinp">. di "加總:" _col(6) r(sum)</span>
-<span class="stres">加總:984</span>
-
-<span class="stinp">. di "平均:" _col(6) mean</span>
-<span class="stres">平均:109.33334</span>
-
-<span class="stinp">. di "中位數:" _col(8) r(p50)</span>
-<span class="stres">中位數:120</span>
-
-<span class="stinp">. egen mo = mode(iq)</span>
-
-<span class="stinp">. di "眾數:" _col(6) mo</span>
-<span class="stres">眾數:120</span>
-
-<span class="stinp">. g vd = (iq-mean)^2</span>
-
-<span class="stinp">. su vd</span>
-
-    Variable |        Obs        Mean    Std. Dev.       Min        Max
--------------+---------------------------------------------------------
-          vd |<span class="stres">          9    340.6667    411.2645   87.11116   1393.778</span>
-
-<span class="stinp">. di "母體變異數:" _col(12) r(sum)/dnp</span>
-<span class="stres">母體變異數:340.66666</span>
-
-<span class="stinp">. di "樣本變異數:" _col(12) r(sum)/dns <span class="stcmt">/*r(sum)/(r(N)-1)*/</span></span>
-<span class="stres">樣本變異數:383.24999</span>
-
-<span class="stinp">. sca sdp = sqrt(r(sum)/dnp)</span>
-
-<span class="stinp">. di "母體標準差:" _col(12) sdp  <span class="stcmt">/*stata會以樣本變異數進行計算 r(sd)*/</span></span>
-<span class="stres">母體標準差:18.457157</span>
-
-<span class="stinp">. sca sds = sqrt(r(sum)/dns)</span>
-
-<span class="stinp">. di "樣本標準差:" _col(12) sds</span>
-<span class="stres">樣本標準差:19.576772</span>
-
-<span class="stinp">. sca sep = sdp/sqrt(dnp)</span>
-
-<span class="stinp">. di "母體標準誤:" sep</span>
-<span class="stres">母體標準誤:6.1523858</span>
-
-<span class="stinp">. sca ses = sds/sqrt(dnp)</span>
-
-<span class="stinp">. di "樣本標準誤:" ses</span>
-<span class="stres">樣本標準誤:6.5255906</span>
-      </samp></pre>
-        </section>
-    </main>
-    <footer>
-        <script src="https://astalsi401.github.io/jQuery/jquery-3.6.0.min.js"></script>
-        <script>
-            const requestURL = '../assets/js/json/data.json'
-        </script>
-        <script src="../assets/js/main.js"></script>
-    </footer>
+    <div id="App"></div>
 </body>
 
 </html>
