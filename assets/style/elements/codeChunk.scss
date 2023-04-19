@@ -1,12 +1,24 @@
 pre {
   position: relative;
-  padding: var(--unit-2);
-  margin: var(--unit-3) 0;
   code {
+    --scrollBar-w: 2px;
+    --scrollBar-bg: var(--primary-300);
     display: block;
     overflow: auto;
-    padding: var(--unit-3) 0;
     max-height: min(60dvh, 400px);
+    &::-webkit-scrollbar {
+      width: var(--scrollBar-w);
+    }
+    &::-webkit-scrollbar-track {
+      background: var(--white);
+    }
+    &::-webkit-scrollbar-thumb {
+      background: var(--scrollBar-bg);
+      border-radius: calc(var(--scrollBar-w) / 2);
+    }
+    &:hover {
+      --scrollBar-bg: var(--primary-600);
+    }
   }
 }
 code {
@@ -19,6 +31,9 @@ code {
 code[class*="language-"],
 pre[class*="language-"] {
   font-size: 0.8rem;
+}
+pre[class*="language-"] {
+  padding-top: var(--unit-4);
 }
 pre.language-output {
   background: var(--gray-0);
