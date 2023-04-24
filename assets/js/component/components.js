@@ -208,6 +208,7 @@ class IndexPage extends React.Component {
     if (this.state.indexLoaded) {
       return (
         <div className="index my-5">
+          {this.props.subtitle && <h2 className="text-center text-x-large text-bold">{this.props.subtitle}</h2>}
           <ul className="mx-auto my-3 text-center w-lg-50 w-100">
             {this.state.index.pages.map((page, i) => (
               <li key={i} className="my-2">

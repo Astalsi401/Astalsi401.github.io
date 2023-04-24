@@ -6,7 +6,7 @@ class Content extends React.Component {
     return (
       <div>
         <IndexPage category="Notes" />
-        <IndexPage category="Games" />
+        <IndexPage category="Forza Horizon 4" subtitle="Forza Horizon 4" />
       </div>
     );
   }

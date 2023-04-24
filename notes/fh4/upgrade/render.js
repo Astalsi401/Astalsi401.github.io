@@ -1,1 +1,1 @@
-ReactDOM.createRoot(document.getElementById("App")).render(<App category="Games" title="FH4車輛升級" />);
+ReactDOM.createRoot(document.getElementById("App")).render(<App category="Forza Horizon 4" title="FH4車輛升級" />);
