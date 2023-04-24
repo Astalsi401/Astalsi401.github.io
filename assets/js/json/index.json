@@ -28,7 +28,6 @@
         { "page": "php筆記", "href": "https://astalsi401.github.io/notes/php/php.html" },
         { "page": "Python筆記", "href": "https://astalsi401.github.io/notes/python/python.html" },
         { "page": "JavaScript筆記", "href": "https://astalsi401.github.io/notes/JavaScript/JavaScript.html" },
-        { "page": "FreeCodeCamp D3.js Heatmap", "href": "https://astalsi401.github.io/notes/JavaScript/d3js_heatmap.html" },
         { "page": "Html & Css", "href": "https://astalsi401.github.io/notes/html-css/html&css.html" }
       ]
     },
@@ -74,6 +73,11 @@
         { "page": "網絡分析（二）", "href": "https://astalsi401.github.io/R/004-social_network_2.html" },
         { "page": "網絡分析範例", "href": "https://astalsi401.github.io/R/other_01-network_example.html" }
       ]
+    },
+    {
+      "category": "Portfolio",
+      "href": "https://astalsi401.github.io/R/r_index.html",
+      "pages": [{ "page": "FreeCodeCamp D3.js Heatmap", "href": "https://astalsi401.github.io/portfolio/javascript-d3js-heatmap/d3js_heatmap.html" }]
     }
   ]
 }
