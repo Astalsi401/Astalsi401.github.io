@@ -2,6 +2,9 @@
 <html lang="zh-Hant">
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sublime Text 3 & Stata</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F8SLV521P4"></script>
     <script>
@@ -10,118 +13,24 @@
         gtag('js', new Date());
         gtag('config', 'G-F8SLV521P4');
     </script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Html & Stata</title>
-    <link rel="stylesheet" type="text/css" href="../assets/style/main.css">
+    <!-- prism -->
+    <script src=" https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js "></script>
+    <link href=" https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css " rel="stylesheet">
+    <!-- react -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <!-- babel -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- component -->
+    <script defer type="text/jsx" src="https://astalsi401.github.io/assets/js/component/components.js"></script>
+    <script defer type="text/jsx" src="./other_02/main.js"></script>
+    <script defer type="text/jsx" src="https://astalsi401.github.io/assets/js/component/app.js"></script>
+    <script defer type="text/jsx" src="./other_02/render.js"></script>
+    <link rel="stylesheet" href="https://astalsi401.github.io/assets/style/main_new.min.css">
 </head>
 
 <body>
-    <header>
-        <div id="top"></div>
-        <div id="stataPage" class="sidebar"></div>
-        <div id="plate"></div>
-        <div class="largePic">
-            <div id="pic"></div>
-        </div>
-    </header>
-    <main class="container">
-        <h2 data-type="title_1" id="other_stata_02">Html & Stata</h2>
-        <section>
-            <p>本頁將介紹兩種能將Stata執行結果加上文字說明輸出為html檔的方法。</p>
-        </section>
-        <section>
-            <h3><code>dyndoc</code></h3>
-            <p><code>dyndoc</code>的do檔格式如下：</p>
-            <pre class="stata">
-<code>
-將Markdown語法的文字輸入在這裡，ex:
-
-#標題
-
-##標題2
-
- - A
-
- - B
-
- - C
-
-~~~~
-&lt;&lt;dd_do&gt;&gt;
-/*將Stata code輸入在這裡, ex:*/
-cd "D:/Documents/Stata/Stata/data"
-use us_birth_rate, clear
-list in 1/8
-cd "D:/Documents/Git/stata/other/02"
-&lt;&lt;/dd_do&gt;&gt;
-~~~~
-
-另一段Markdown....
-
-~~~~
-&lt;&lt;dd_do&gt;&gt;
-/*另一段Stata code....*/
-&lt;&lt;/dd_do&gt;&gt;
-~~~~
-</code>
-		</pre>
-            <p>以<code>dyndoc 檔名.do, replace</code>將檔案與執行結果輸出為html，輸出檔案如下：</p>
-            <iframe class="container" src="https://astalsi401.github.io/stata/other/example.html"></iframe>
-        </section>
-        <section>
-            <h3><code>webdoc</code></h3>
-            <p><code>webdoc</code>的do檔案看起來如下：</p>
-            <ul>
-                <li><code>head()</code>代表html中&lt;head&gt;標籤內的資訊</li>
-                <li><code>w(800px)</code>:頁面寬度800px</li>
-                <li><code>t("example2")</code>:html頁面的名稱，不需要跟檔名相同</li>
-                <li><code>st(ocean cbf)</code>:主題為ocean（海藍色），cbf代表Stata輸入指令為粗體字</li>
-            </ul>
-            <pre class="stata">
-<code>
-clear
-cd "D:/Documents/Git/stata/other/02"  /*要匯出的do檔所在的工作目錄*/
-webdoc init example2, replace logall /// /*example2: 檔案名*/
-       head(w(800px) t("example2") st(ocean cbf))
-
-/***
-將Html語法的文字輸入在這裡，ex:
-
-&lt;h1&gt;標題&lt;/h1&gt;
-&lt;h2&gt;標題2&lt;/h2&gt;
-&lt;ul&gt;
-	&lt;li&gt;A&lt;/li&gt;
-	&lt;li&gt;B&lt;/li&gt;
-	&lt;li&gt;C&lt;/li&gt;
-&lt;/ul&gt;
-***/
-
-/*將Stata code輸入在這裡, ex:*/
-cd "D:/Documents/Stata/Stata/data"
-use us_birth_rate, clear
-list in 1/8
-cd "D:/Documents/Git/stata/other/02"
-
-/***
-另一段Html....
-***/
-
-/*另一段Stata code....*/  
-</code>
-	</pre>
-            <p>以<code>webdoc do 檔名.do, replace</code>將檔案輸出為html，結果如下：</p>
-            <iframe class="container" src="https://astalsi401.github.io/stata/other/example2.html"></iframe>
-            <p>本網站也是使用<code>webdoc</code>製作，不過在輸出後又手動對html檔進行編輯，本站中所有頁面的html檔，以及style設定檔都能在<a href="https://github.com/Astalsi401/Astalsi401.github.io">我的github</a>找到。</p>
-        </section>
-    </main>
-    <footer>
-        <script src="https://astalsi401.github.io/jQuery/jquery-3.6.0.min.js"></script>
-        <script>
-            const requestURL = '../assets/js/json/data.json'
-        </script>
-        <script src="../assets/js/main.js"></script>
-    </footer>
+    <div id="App"></div>
 </body>
 
 </html>

@@ -20,12 +20,8 @@ class Content extends React.Component {
                 language="output"
               ></CodeChunk>
               <div className="row">
-                <div className="col-md-6">
-                  <ZoomImage src="https://astalsi401.github.io/assets/images/tabplot01.png"></ZoomImage>
-                </div>
-                <div className="col-md-6">
-                  <ZoomImage src="https://astalsi401.github.io/assets/images/kdnesity01.png"></ZoomImage>
-                </div>
+                <ZoomImage class="col-md-6" src="https://astalsi401.github.io/assets/images/tabplot01.png"></ZoomImage>
+                <ZoomImage class="col-md-6" src="https://astalsi401.github.io/assets/images/kdnesity01.png"></ZoomImage>
               </div>
             </div>
           </div>

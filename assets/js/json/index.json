@@ -63,6 +63,17 @@
         { "page": "Sublime Text 3 & Stata", "href": "https://astalsi401.github.io/stata/other_01-st3.html" },
         { "page": "Html & Stata", "href": "https://astalsi401.github.io/stata/other_02-html.html" }
       ]
+    },
+    {
+      "category": "R",
+      "href": "https://astalsi401.github.io/R/r_index.html",
+      "pages": [
+        { "page": "基礎操作與資料輸入", "href": "https://astalsi401.github.io/R/001-data_input.html" },
+        { "page": "資料匯入與匯出", "href": "https://astalsi401.github.io/R/002-import_export.html" },
+        { "page": "網絡分析（一）", "href": "https://astalsi401.github.io/R/003-social_network_1.html" },
+        { "page": "網絡分析（二）", "href": "https://astalsi401.github.io/R/004-social_network_2.html" },
+        { "page": "網絡分析範例", "href": "https://astalsi401.github.io/R/other_01-network_example.html" }
+      ]
     }
   ]
 }

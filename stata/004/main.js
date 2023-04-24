@@ -81,11 +81,9 @@ class Content extends React.Component {
             <p>將各個選項重新編碼為教育年數，如：選項1.無/不識字=0年</p>
             <p>這裡有兩種不同的方式，各有其用處，會在不同地方派上用場</p>
             <div className="my-2">
-              <p>
-                <b>
-                  第一種方式：<code>recode</code>
-                </b>
-              </p>
+              <div className="text-bold text-large">
+                第一種方式：<code>recode</code>
+              </div>
               <p>
                 <code>recode</code>是針對單一變項重新編碼，指令較簡短，常常會遇到有些資料需要進行反項編碼才能讓人更容易理解，此時適合使用這種方式。
               </p>
@@ -93,11 +91,9 @@ class Content extends React.Component {
               <CodeChunk code={`. cap drop edyear  /*如過有edyear這個變項就先拋棄，如過沒有則不做動作。*/\n\n. /*\n> 因為下一條指令會建立名為edyear的變項，而STATA不能同時存在同名的變項\n> ，若重複執行這條指令會出現錯誤，因此用cap drop先把edyear拋棄。\n> */\n. recode v11 (1=0) (2=3) (3=6) (4/5=9) (6/9=12) (10/11 13/15 =14) /// /*代碼過長時可用///換行*/\n>            (12=15) (16/19=16) (20=18) (21=22) (22=.), g(edyear)\n(2121 differences between v11 and edyear)\n\n. ta edyear\n\n  RECODE of |\n   v11 (v11 |\n     請問您 |\n     的教育 |\n   程度是:( |\n   提示卡1) |\n          ) |      Freq.     Percent        Cum.\n------------+-----------------------------------\n          0 |        101        4.74        4.74\n          3 |         13        0.61        5.35\n          6 |        305       14.32       19.67\n          9 |        246       11.55       31.22\n         12 |        549       25.77       57.00\n         14 |        234       10.99       67.98\n         15 |         22        1.03       69.01\n         16 |        518       24.32       93.33\n         18 |        131        6.15       99.48\n         22 |         11        0.52      100.00\n------------+-----------------------------------\n      Total |      2,130      100.00`} language="output"></CodeChunk>
             </div>
             <div className="my-2">
-              <p>
-                <b>
-                  第二種方式：<code>replace</code>
-                </b>
-              </p>
+              <div className="text-bold text-large">
+                第二種方式：<code>replace</code>
+              </div>
               <p>
                 <code>replace</code>是一一指定新變項中obs的條件，雖然較繁複，但好處是可以將多個變項中的obs整合進同一個變項中。
               </p>
@@ -123,30 +119,22 @@ class Content extends React.Component {
               <li>工作的公司/機構大約雇有多少員工？</li>
             </ol>
             <div className="my-2">
-              <p>
-                <b>是否受雇</b>
-              </p>
+              <div className="text-bold text-large">是否受雇</div>
               <CodeChunk code={`cap drop sempnow \nrecode v36 (1 3/99=0) (2=1), g(sempnow)\nlab var sempnow "自雇"`} language="stata"></CodeChunk>
               <CodeChunk code={`. cap drop sempnow \n\n. recode v36 (1 3/99=0) (2=1), g(sempnow)\n(2134 differences between v36 and sempnow)\n\n. lab var sempnow "自雇"`} language="output"></CodeChunk>
             </div>
             <div className="my-2">
-              <p>
-                <b>工作單位規模</b>
-              </p>
+              <div className="text-bold text-large">工作單位規模</div>
               <CodeChunk code={`cap drop suvpnow\ng suvpnow=.\nreplace suvpnow=v37 if v37<10\nreplace suvpnow=0 if v37>9 & v37<100\nlab var suvpnow "工作單位規模"`} language="stata"></CodeChunk>
               <CodeChunk code={`. cap drop suvpnow\n\n. g suvpnow=.\n(2,134 missing values generated)\n\n. replace suvpnow=v37 if v37<10\n(1,531 real changes made)\n\n. replace suvpnow=0 if v37>9 & v37<100\n(603 real changes made)\n\n. lab var suvpnow "工作單位規模"`} language="output"></CodeChunk>
             </div>
             <div className="my-2">
-              <p>
-                <b>計算社經地位</b>
-              </p>
+              <div className="text-bold text-large">計算社經地位</div>
               <CodeChunk code={`cap drop _egpnow\niskoegp _egpnow,  isko(v34b5) sempl(sempnow) supvis(suvpnow)\ncap drop egpnow\nrecode _egpnow (1=1 "Mangement") (2/3=2 "whiteC") (4/5=3 "PetitiB") ///\n               (7/9=4 "BWorer") (10/11=5 "Farmer"), g(egpnow)\nlab var egpnow "職業地位"`} language="stata"></CodeChunk>
               <CodeChunk code={`. cap drop _egpnow\n\n. iskoegp _egpnow,  isko(v34b5) sempl(sempnow) supvis(suvpnow)\n\n. \n. cap drop egpnow\n\n. recode _egpnow (1=1 "Mangement") (2/3=2 "whiteC") (4/5=3 "PetitiB") ///\n>                (7/9=4 "BWorer") (10/11=5 "Farmer"), g(egpnow)\n(1104 differences between _egpnow and egpnow)\n\n. lab var egpnow "職業地位"`} language="output"></CodeChunk>
             </div>
             <div className="my-2">
-              <p>
-                <b>定義遺漏值</b>
-              </p>
+              <div className="text-bold text-large">定義遺漏值</div>
               <CodeChunk code={`list v34b5 egpnow if egpnow==. & v34b5<9997\nreplace egpnow=1 if (v34b5==1114 | v34b5==1124) & egpnow==.\nreplace egpnow=3 if (v34b5==3341 | v34b5==3343) & egpnow==.\nreplace egpnow=4 if  v34b5==8410                & egpnow==.`} language="stata"></CodeChunk>
               <CodeChunk
                 code={`. list v34b5 egpnow if egpnow==. & v34b5<9997\n\n      +----------------------------------------+\n      |                         v34b5   egpnow |\n      |----------------------------------------|\n  11. |         國,高中升學補習班老師        . |\n 116. | 成人語文補習班,各種才藝班老師        . |\n 135. |         國,高中升學補習班老師        . |\n 147. | 成人語文補習班,各種才藝班老師        . |\n 247. |         國,高中升學補習班老師        . |\n      |----------------------------------------|\n 305. | 成人語文補習班,各種才藝班老師        . |\n 454. |         國,高中升學補習班老師        . |\n 479. |         國,高中升學補習班老師        . |\n 514. |                鄉鎮市民意代表        . |\n 527. |         國,高中升學補習班老師        . |\n      |----------------------------------------|\n 582. | 成人語文補習班,各種才藝班老師        . |\n 606. | 成人語文補習班,各種才藝班老師        . |\n 659. |         國,高中升學補習班老師        . |\n 670. |         國,高中升學補習班老師        . |\n 774. |         國,高中升學補習班老師        . |\n      |----------------------------------------|\n 951. | 成人語文補習班,各種才藝班老師        . |\n 995. | 成人語文補習班,各種才藝班老師        . |\n1136. |         國,高中升學補習班老師        . |\n1209. |         國,高中升學補習班老師        . |\n1461. | 成人語文補習班,各種才藝班老師        . |\n      |----------------------------------------|\n1712. |              公立高中(職)校長        . |\n1780. |         國,高中升學補習班老師        . |\n1803. | 成人語文補習班,各種才藝班老師        . |\n1857. |                其他半技術工人        . |\n1908. | 成人語文補習班,各種才藝班老師        . |\n      |----------------------------------------|\n2085. | 成人語文補習班,各種才藝班老師        . |\n2130. |         國,高中升學補習班老師        . |\n      +----------------------------------------+\n\n. replace egpnow=1 if (v34b5==1114 | v34b5==1124) & egpnow==.\n(2 real changes made)\n\n. replace egpnow=3 if (v34b5==3341 | v34b5==3343) & egpnow==.\n(24 real changes made)\n\n. replace egpnow=4 if  v34b5==8410                & egpnow==.\n(1 real change made)`}
@@ -154,9 +142,7 @@ class Content extends React.Component {
               ></CodeChunk>
             </div>
             <div className="my-2">
-              <p>
-                <b>職業分類建立完成</b>
-              </p>
+              <div className="text-bold text-large">職業分類建立完成</div>
               <CodeChunk code={`table egpnow, c(mean edyear sd edyear n edyear) format(%9.2f) row`} language="stata"></CodeChunk>
               <CodeChunk code={`. table egpnow, c(mean edyear sd edyear n edyear) format(%9.2f) row\n\n----------------------------------------------------\n 職業地位 | mean(edyear)    sd(edyear)     N(edyear)\n----------+-----------------------------------------\nMangement |        16.83          2.79            71\n   whiteC |        13.88          3.16           940\n  PetitiB |        15.07          2.90            30\n   BWorer |        10.09          3.96           848\n   Farmer |         5.69          4.87           143\n          | \n    Total |        11.84          4.48         2,032\n----------------------------------------------------`} language="output"></CodeChunk>
             </div>

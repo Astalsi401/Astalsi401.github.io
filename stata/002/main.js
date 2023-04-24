@@ -40,46 +40,38 @@ class Content extends React.Component {
         content: (
           <div>
             <div className="my-2">
-              <p>
-                <b>
-                  Txt匯入：<code>insheet</code>
-                </b>
-              </p>
+              <div className="text-bold text-large">
+                Txt匯入：<code>insheet</code>
+              </div>
               <p>直接從指定的目錄匯入，無須變更工作目錄。</p>
               <CodeChunk code={`insheet using "C:\\Users\\misti\\Documents\\Stata\\社會一\\社會統計\\統計1-06\\grade.txt", clear\nta v1`} language="stata"></CodeChunk>
               <CodeChunk code={`. insheet using "C:\\Users\\misti\\Documents\\Stata\\社會一\\社會統計\\統計1-06\\grade.txt", clear\n(1 var, 34 obs)\n. ta v1\n         v1 |      Freq.     Percent        Cum.\n------------+-----------------------------------\n         40 |          5       14.71       14.71\n         60 |          2        5.88       20.59\n         61 |          2        5.88       26.47\n         62 |          1        2.94       29.41\n         63 |          1        2.94       32.35\n         65 |          1        2.94       35.29\n         68 |          1        2.94       38.24\n         69 |          1        2.94       41.18\n         70 |          2        5.88       47.06\n         71 |          1        2.94       50.00\n         72 |          1        2.94       52.94\n         73 |          2        5.88       58.82\n         75 |          1        2.94       61.76\n         77 |          1        2.94       64.71\n         78 |          1        2.94       67.65\n         79 |          1        2.94       70.59\n         82 |          1        2.94       73.53\n         86 |          2        5.88       79.41\n         88 |          2        5.88       85.29\n         90 |          1        2.94       88.24\n         91 |          1        2.94       91.18\n         92 |          1        2.94       94.12\n         94 |          1        2.94       97.06\n         96 |          1        2.94      100.00\n------------+-----------------------------------\n      Total |         34      100.00\n. /*路徑、檔案與變項名稱請自行更改*/`} language="output"></CodeChunk>
             </div>
             <div className="my-2">
-              <p>
-                <b>
-                  Csv匯入：<code>insheet</code>
-                </b>
-              </p>
+              <div className="text-bold text-large">
+                Csv匯入：<code>insheet</code>
+              </div>
               <CodeChunk code={`cd data\ninsheet using data1b.csv, c n clear  /*c 導入逗點分隔值檔案*/\nsort id /*以id排序*/\nlist in 1/10 /*列出這份資料的前10筆*/`} language="stata"></CodeChunk>
               <CodeChunk code={`. cd data\nC:\\Users\\misti\\Documents\\Stata\\unify\\data\n\n. insheet using data1b.csv, c n clear  /*c 導入逗點分隔值檔案*/\n(3 vars, 30 obs)\n\n. sort id /*以id排序*/\n\n. list in 1/10 /*列出這份資料的前10筆*/\n\n     +--------------------+\n     | id   male   score1 |\n     |--------------------|\n  1. | 31      0       64 |\n  2. | 32      0       70 |\n  3. | 33      0       61 |\n  4. | 34      0       67 |\n  5. | 35      0       84 |\n     |--------------------|\n  6. | 36      0       67 |\n  7. | 37      0       63 |\n  8. | 38      0       80 |\n  9. | 39      0       71 |\n 10. | 40      0       52 |\n     +--------------------+`} language="output"></CodeChunk>
             </div>
             <div className="my-2">
-              <p>
-                <b>
-                  Excel檔匯入（.Xlsx）：<code>import</code>
-                </b>
-              </p>
+              <div className="text-bold text-large">
+                Excel檔匯入（.Xlsx）：<code>import</code>
+              </div>
               <CodeChunk code={`import exc data2b.xlsx, first clear\n/*import exc option\nfirst: first row as var name\nsheet("sheetname")*/\nsort id\nlist in 1/10`} language="stata"></CodeChunk>
               <CodeChunk code={`. import exc data2b.xlsx, first clear\n. /*import exc option\n. first: first row as var name\n. sheet("sheetname")*/\n\n. sort id\n\n. list in 1/10\n\n     +----------------------------+\n     | id   score2   class   dist |\n     |----------------------------|\n  1. |  1       56       3      3 |\n  2. |  2       63       2      3 |\n  3. |  3       52       3      5 |\n  4. |  4       59       1      4 |\n  5. |  5       78       2      1 |\n     |----------------------------|\n  6. |  6       59       3      5 |\n  7. |  7       55       3      5 |\n  8. |  8       74       3      5 |\n  9. |  9       64       3      4 |\n 10. | 10       43       1      1 |\n     +----------------------------+`} language="output"></CodeChunk>
             </div>
             <div className="my-2">
-              <p>匯入有多個分頁的Excel</p>
+              <div className="text-bold text-large">匯入有多個分頁的Excel</div>
               <p>
                 <code>cellra(A2)</code>: 從A2開始讀取資料
               </p>
               <CodeChunk code={`import exc using data2b.xlsx, sh("sheetname") cellra(A2) first clear`} language="stata"></CodeChunk>
             </div>
             <div className="my-2">
-              <p>
-                <b>
-                  STATA資料檔匯入（.dta）：<code>use</code>
-                </b>
-              </p>
+              <div className="text-bold text-large">
+                STATA資料檔匯入（.dta）：<code>use</code>
+              </div>
               <CodeChunk code={`use data1a, clear\nlist in 1/5\ncd ..`} language="stata"></CodeChunk>
               <CodeChunk code={`. use data1a, clear\n. list in 1/5\n     +--------------------+\n     | id   male   score1 |\n     |--------------------|\n  1. |  1      1       58 |\n  2. |  2      1       65 |\n  3. |  3      1       55 |\n  4. |  4      1       62 |\n  5. |  5      1       78 |\n     +--------------------+\n. cd ..\nC:\\Users\\misti\\Documents\\Stata\\unify`} language="output"></CodeChunk>
             </div>
@@ -97,9 +89,7 @@ class Content extends React.Component {
             <CodeChunk code={`sysuse auto, clear\ndes\ncd data`} language="stata"></CodeChunk>
             <CodeChunk code={`. sysuse auto, clear\n(1978 Automobile Data)\n\n. des\n\nContains data from D:\\Tools\\Stata15\\ado\\base/a/auto.dta\n  obs:            74                          1978 Automobile Data\n vars:            12                          13 Apr 2016 17:45\n size:         3,182                          (_dta has notes)\n---------------------------------------------------------------------------------------------\n              storage   display    value\nvariable name   type    format     label      variable label\n---------------------------------------------------------------------------------------------\nmake            str18   %-18s                 Make and Model\nprice           int     %8.0gc                Price\nmpg             int     %8.0g                 Mileage (mpg)\nrep78           int     %8.0g                 Repair Record 1978\nheadroom        float   %6.1f                 Headroom (in.)\ntrunk           int     %8.0g                 Trunk space (cu. ft.)\nweight          int     %8.0gc                Weight (lbs.)\nlength          int     %8.0g                 Length (in.)\nturn            int     %8.0g                 Turn Circle (ft.)\ndisplacement    int     %8.0g                 Displacement (cu. in.)\ngear_ratio      float   %6.2f                 Gear Ratio\nforeign         byte    %8.0g      origin     Car type\n---------------------------------------------------------------------------------------------\nSorted by: foreign\n\n. cd data\nD:\\documents\\stata\\stata\\unify\\data`} language="output"></CodeChunk>
             <div className="my-2">
-              <p>
-                <b>匯出Csv</b>
-              </p>
+              <div className="text-bold text-large">匯出Csv</div>
               <p>
                 <code>outfile</code>匯出
               </p>
@@ -114,9 +104,7 @@ class Content extends React.Component {
               <CodeChunk code={`outsheet using "1978 Automobile.csv", c n replace`} language="stata"></CodeChunk>
             </div>
             <div className="my-2">
-              <p>
-                <b>匯出Xlsx</b>
-              </p>
+              <div className="text-bold text-large">匯出Xlsx</div>
               <CodeChunk code={`export exc using 1978 Automobile.xlsx, sh("sheetname") first(var) sheetrep`} language="stata"></CodeChunk>
             </div>
           </div>
@@ -128,7 +116,7 @@ class Content extends React.Component {
           <div>
             <p>在STATA中開啟圖表</p>
             <CodeChunk code={`graph use "1978auto.gph`} language="stata"></CodeChunk>
-            <ZoomImage src="http://127.0.0.1:5500/assets/images/1978auto_1.png" alt="1978auto_1.png"></ZoomImage>
+            <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="http://127.0.0.1:5500/assets/images/1978auto_1.png" alt="1978auto_1.png"></ZoomImage>
           </div>
         ),
       },
@@ -137,16 +125,12 @@ class Content extends React.Component {
         content: (
           <div>
             <div className="my-2">
-              <p>
-                <b>匯出為png</b>
-              </p>
+              <div className="text-bold text-large">匯出為png</div>
               <CodeChunk code={`twoway (sca weight length) (qfit weight length), ///\n       title("1978 Automobile Data")\ngraph save "1978auto.gph", replace  /*將圖表儲存為stata專用的gph格式*/\ngraph export "1978auto.png", replace   /*將圖表儲存為png格式*/`} language="stata"></CodeChunk>
               <CodeChunk code={`. twoway (sca weight length) (qfit weight length), ///\n>        title("1978 Automobile Data")\n. graph save "1978auto.gph", replace  /*將圖表儲存為stata專用的gph格式*/\n(file 1978auto.gph saved)\n. graph export "1978auto.png", replace   /*將圖表儲存為png格式*/\n(file 1978auto.png written in PNG format)`} language="output"></CodeChunk>
             </div>
             <div className="my-2">
-              <p>
-                <b>匯出png至excel</b>
-              </p>
+              <div className="text-bold text-large">匯出png至excel</div>
               <p>
                 <code>A1</code>= excel表格位置
               </p>
@@ -161,11 +145,9 @@ class Content extends React.Component {
           <div>
             <p>以下將介紹兩種資料合併的方法：</p>
             <div className="my-2">
-              <p>
-                <b>
-                  方法一：<code>append</code>
-                </b>
-              </p>
+              <div className="text-bold text-large">
+                方法一：<code>append</code>
+              </div>
               <p>
                 <code>append</code>是將資料b直接添加在資料a的後方，此時兩份資料必須擁有完全相同的變項才能成功合併。
               </p>
@@ -188,11 +170,9 @@ class Content extends React.Component {
               <CodeChunk code={`. d\n\nContains data from data1_all.dta\n  obs:            60                          \n vars:             3                          27 Nov 2020 21:27\n size:           720                          \n---------------------------------------------------------------------------------------------------------------\n              storage   display    value\nvariable name   type    format     label      variable label\n---------------------------------------------------------------------------------------------------------------\nid              float   %8.0g                 \nmale            float   %8.0g                 \nscore1          float   %8.0g                 \n---------------------------------------------------------------------------------------------------------------\nSorted by: id`} language="output"></CodeChunk>
             </div>
             <div className="my-2">
-              <p>
-                <b>
-                  方法二：<code>merge</code>
-                </b>
-              </p>
+              <div className="text-bold text-large">
+                方法二：<code>merge</code>
+              </div>
               <p>
                 <code>merge</code>是將資料2中的變項新增到資料1中，不過這種合併依然要求兩份資料至少有一個變項相同，且該變項的性質必須類似身分證號碼，每個樣本都有其自身的編號，這樣才能成功配對。
               </p>
