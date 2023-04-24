@@ -4,7 +4,7 @@
 .imgBlock {
   img {
     position: relative;
-    transition: transform 0.4s;
+    transition: transform var(--time);
     transform-origin: 0 0;
     cursor: zoom-in;
   }
@@ -13,7 +13,7 @@
     position: fixed;
     display: block;
     z-index: -1;
-    transition: opacity 0.4s;
+    transition: opacity var(--time);
     opacity: 0;
     left: 0;
     top: 0;

@@ -35,7 +35,7 @@
       width: calc(var(--nav-h) * 0.8);
       height: 4px;
       border-radius: 2px;
-      transition: 0.4s;
+      transition: var(--time);
     }
     &::before {
       top: -10px;

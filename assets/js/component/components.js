@@ -8,8 +8,8 @@ class SidebarChild extends React.Component {
   render() {
     return (
       <ul className={`children ${toggleActive(this.props.childrenActive)}`}>
-        {this.props.sections.map((s) => (
-          <li>
+        {this.props.sections.map((s, i) => (
+          <li key={i}>
             <a className="ps-4 text-decoration-none" href={s.href}>
               {s.title}
             </a>
@@ -48,8 +48,8 @@ class Sidebar extends React.Component {
             </a>
           </h1>
           <ul className="menu">
-            {this.state.index.pages.map((p) => (
-              <li key={p.page} className={p.section && `has-children ${toggleActive(this.state.childrenActive)}`} onClick={this.click}>
+            {this.state.index.pages.map((p, i) => (
+              <li key={i} className={p.section ? `has-children` : ""} onClick={this.click}>
                 <a className="px-3 text-decoration-none text-large text-bold" href={p.href}>
                   {p.page}
                 </a>
@@ -182,7 +182,7 @@ class ZoomImage extends React.Component {
     let translate = elem ? `${(window.innerWidth / 2 - elem.x) / scale - elem.width / 2}px, ${(window.innerHeight / 2 - elem.y) / scale - elem.height / 2}px` : "0,0";
     let imgSty = { transform: this.state.active ? `scale(${scale}) translate(${translate})` : "scale(1) translate(0)" };
     return (
-      <div id={this.props.id && this.pages.id} className={`${this.props.class && this.props.class} imgBlock ${toggleActive(this.state.active)}`}>
+      <div id={this.props.id && this.pages.id} className={`${this.props.class ? this.props.class : ""} imgBlock ${toggleActive(this.state.active)}`}>
         <img ref={this.ref} className="w-100" loading="lazy" src={this.props.src} alt={this.props.alt && this.props.alt} style={imgSty} onClick={this.zoom} />
       </div>
     );
@@ -209,8 +209,8 @@ class IndexPage extends React.Component {
       return (
         <div className="index my-5">
           <ul className="mx-auto my-3 text-center w-lg-50 w-100">
-            {this.state.index.pages.map((page) => (
-              <li className="my-2">
+            {this.state.index.pages.map((page, i) => (
+              <li key={i} className="my-2">
                 <a className="p-2" href={page.href}>
                   {page.page}
                 </a>

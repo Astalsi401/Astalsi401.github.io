@@ -41,6 +41,7 @@
   --unit-5: 3rem;
   --unit-auto: auto;
   --nav-h: 40px;
+  --time: 0.4s;
   scroll-behavior: smooth;
 }
 
@@ -51,7 +52,7 @@
   font-family: Microsoft JhengHei, sans-serif;
   margin: 0;
   padding: 0;
-  transition: background 0.4s;
+  transition: background var(--time);
   line-height: 1.5em;
   /* firefox */
   scrollbar-width: thin;
@@ -3837,7 +3838,7 @@ table td {
   width: calc(var(--nav-h) * 0.8);
   height: 4px;
   border-radius: 2px;
-  transition: 0.4s;
+  transition: var(--time);
 }
 .hamberger span::before {
   top: -10px;
@@ -3895,7 +3896,7 @@ table td {
   height: 100dvh;
   background: var(--main-bg);
   transform: translateX(-100%);
-  transition: transform 0.4s;
+  transition: transform var(--time), box-shadow calc(var(--time) * 2);
   box-shadow: 0 0 0 var(--main-shadow);
   overflow-y: auto;
 }
@@ -3929,7 +3930,7 @@ table td {
   text-decoration: none;
 }
 .index a, .index a::before, .index a::after {
-  transition: 0.4s;
+  transition: var(--time);
   display: block;
 }
 .index a::before, .index a::after {
@@ -4010,9 +4011,8 @@ pre.language-output {
   cursor: pointer;
   --m: 4px;
   --w: 20px;
-  --s: 0.4s;
   position: absolute;
-  transition: opacity var(--s), transform var(--s);
+  transition: opacity var(--time), transform var(--time);
   opacity: 0.3;
   top: var(--m);
   right: var(--m);
@@ -4047,7 +4047,7 @@ pre.language-output {
 
 .imgBlock img {
   position: relative;
-  transition: transform 0.4s;
+  transition: transform var(--time);
   transform-origin: 0 0;
   cursor: zoom-in;
 }
@@ -4056,7 +4056,7 @@ pre.language-output {
   position: fixed;
   display: block;
   z-index: -1;
-  transition: opacity 0.4s;
+  transition: opacity var(--time);
   opacity: 0;
   left: 0;
   top: 0;
@@ -4116,7 +4116,7 @@ pre.language-output {
   height: 0;
   border-width: var(--t);
   border-style: solid;
-  transition: 0.4s;
+  transition: var(--time);
 }
 .trangle::after {
   border-color: var(--black) transparent transparent transparent;

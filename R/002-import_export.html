@@ -2,6 +2,9 @@
 <html lang="zh-Hant">
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>資料匯入與匯出</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F8SLV521P4"></script>
     <script>
@@ -10,153 +13,24 @@
         gtag('js', new Date());
         gtag('config', 'G-F8SLV521P4');
     </script>
-    <meta charset="utf-8" />
-    <meta name="generator" content="pandoc" />
-    <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="../assets/style/main.css">
-    <script src="../assets/js/highlight.js"></script>
-    <script type="text/javascript">
-        if (window.hljs) {
-            hljs.configure({ languages: [] });
-            hljs.initHighlightingOnLoad();
-            if (document.readyState && document.readyState === "complete") {
-                window.setTimeout(function () { hljs.initHighlighting(); }, 0);
-            }
-        }
-    </script>
-    <title>資料匯入與匯出</title>
+    <!-- prism -->
+    <script src=" https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js "></script>
+    <link href=" https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css " rel="stylesheet">
+    <!-- react -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <!-- babel -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- component -->
+    <script defer type="text/jsx" src="https://astalsi401.github.io/assets/js/component/components.js"></script>
+    <script defer type="text/jsx" src="./002/main.js"></script>
+    <script defer type="text/jsx" src="https://astalsi401.github.io/assets/js/component/app.js"></script>
+    <script defer type="text/jsx" src="./002/render.js"></script>
+    <link rel="stylesheet" href="https://astalsi401.github.io/assets/style/main_new.min.css">
 </head>
 
 <body>
-    <header>
-        <div id="top"></div>
-        <div id="rPage" class="sidebar"></div>
-        <div id="plate"></div>
-        <div class="largePic">
-            <div id="pic"></div>
-        </div>
-    </header>
-    <main class="container">
-        <h1 id="002">002. 資料匯入與匯出</h1>
-        <section>
-            <h2 id="2-1">.csv</h2>
-            <pre class="r"><code>setwd(&quot;D:/Documents/R/site/data&quot;)
-list.files()</code></pre>
-            <pre><code>
-## [1] &quot;data.fauxhigh.csv&quot;   &quot;edges.fauxhigh.csv&quot;  &quot;export01.csv&quot;       
-## [4] &quot;export02.csv&quot;        &quot;export03.rdata&quot;      &quot;export04_ids.rds&quot;   
-## [7] &quot;export05.dta&quot;        &quot;matrix.fauxhigh.csv&quot;</code></pre>
-            <pre class="r"><code># 將匯入的文件命名為fauxhs
-fauxhs &lt;- read.csv(&quot;data.fauxhigh.csv&quot;)
-head(fauxhs)</code></pre>
-            <pre><code>##   ids grade gender  race      gpa
-## 1   1     7      F  Hisp 3.074965
-## 2   2     7      F  Hisp 1.826402
-## 3   3    10      F White 2.521067
-## 4   4    11      M NatAm 1.976382
-## 5   5     9      M White 1.599860
-## 6   6     9      M  Hisp 1.288948</code></pre>
-            <pre class="r"><code># 匯出為csv
-# 方法1
-write.csv(fauxhs, file = &quot;export01.csv&quot;)
-list.files()</code></pre>
-            <pre><code>## [1] &quot;data.fauxhigh.csv&quot;   &quot;edges.fauxhigh.csv&quot;  &quot;export01.csv&quot;       
-## [4] &quot;export02.csv&quot;        &quot;export03.rdata&quot;      &quot;export04_ids.rds&quot;   
-## [7] &quot;export05.dta&quot;        &quot;matrix.fauxhigh.csv&quot;</code></pre>
-            <pre class="r"><code># 方法2
-# sep &lt;- 逗點分隔
-# row.names = F &lt;- 不匯出列名稱
-# na = &quot;NA&quot; &lt;- 設定遺漏直
-write.table(fauxhs, file = &quot;export02.csv&quot;, sep = &quot;,&quot;, row.names = F, na = &quot;NA&quot;)
-list.files()</code></pre>
-            <pre><code>## [1] &quot;data.fauxhigh.csv&quot;   &quot;edges.fauxhigh.csv&quot;  &quot;export01.csv&quot;       
-## [4] &quot;export02.csv&quot;        &quot;export03.rdata&quot;      &quot;export04_ids.rds&quot;   
-## [7] &quot;export05.dta&quot;        &quot;matrix.fauxhigh.csv&quot;</code></pre>
-        </section>
-        <section>
-            <h2 id="2-2">.Rdata</h2>
-            <p>用以儲存多個變項組成的資料</p>
-            <pre class="r"><code>setwd(&quot;D:/Documents/R/site/data&quot;)
-
-# 匯出
-save(fauxhs, file = &quot;export03.rdata&quot;)
-list.files()</code></pre>
-            <pre><code>## [1] &quot;data.fauxhigh.csv&quot;   &quot;edges.fauxhigh.csv&quot;  &quot;export01.csv&quot;       
-## [4] &quot;export02.csv&quot;        &quot;export03.rdata&quot;      &quot;export04_ids.rds&quot;   
-## [7] &quot;export05.dta&quot;        &quot;matrix.fauxhigh.csv&quot;</code></pre>
-            <pre class="r"><code># 匯入
-load(&quot;export03.rdata&quot;)</code></pre>
-        </section>
-        <section>
-            <h2 id="2-3">.rds</h2>
-            <p>用來儲存單一變項</p>
-            <pre class="r"><code>setwd(&quot;D:/Documents/R/site/data&quot;)
-
-# 例如：只儲存fauxhs中的ids變項
-head(fauxhs)</code></pre>
-            <pre><code>##   ids grade gender  race      gpa
-## 1   1     7      F  Hisp 3.074965
-## 2   2     7      F  Hisp 1.826402
-## 3   3    10      F White 2.521067
-## 4   4    11      M NatAm 1.976382
-## 5   5     9      M White 1.599860
-## 6   6     9      M  Hisp 1.288948</code></pre>
-            <pre class="r"><code>saveRDS(fauxhs$ids, file = &quot;export04_ids.rds&quot;)
-list.files()</code></pre>
-            <pre><code>## [1] &quot;data.fauxhigh.csv&quot;   &quot;edges.fauxhigh.csv&quot;  &quot;export01.csv&quot;       
-## [4] &quot;export02.csv&quot;        &quot;export03.rdata&quot;      &quot;export04_ids.rds&quot;   
-## [7] &quot;export05.dta&quot;        &quot;matrix.fauxhigh.csv&quot;</code></pre>
-            <pre class="r"><code># 匯入rds
-# 將重新匯入的ids命名為newids
-newids &lt;- readRDS(&quot;export04_ids.rds&quot;)
-head(newids)</code></pre>
-            <pre><code>## [1] 1 2 3 4 5 6</code></pre>
-            <pre class="r"><code># 將ids.rds重新匯入fauxhs中，成為一個新的變項
-fauxhs$newids &lt;- readRDS(&quot;export04_ids.rds&quot;)
-head(fauxhs)</code></pre>
-            <pre><code>##   ids grade gender  race      gpa newids
-## 1   1     7      F  Hisp 3.074965      1
-## 2   2     7      F  Hisp 1.826402      2
-## 3   3    10      F White 2.521067      3
-## 4   4    11      M NatAm 1.976382      4
-## 5   5     9      M White 1.599860      5
-## 6   6     9      M  Hisp 1.288948      6</code></pre>
-        </section>
-        <section>
-            <h2 id="2-4">.dta</h2>
-            <pre class="r"><code>setwd(&quot;D:/Documents/R/site/data&quot;)
-
-# 匯出.dta
-
-#install.packages(&quot;foreign&quot;)
-require(foreign)</code></pre>
-            <pre><code>## Loading required package: foreign</code></pre>
-            <pre class="r"><code>write.dta(fauxhs, &quot;export05.dta&quot;)
-list.files()</code></pre>
-            <pre><code>## [1] &quot;data.fauxhigh.csv&quot;   &quot;edges.fauxhigh.csv&quot;  &quot;export01.csv&quot;       
-## [4] &quot;export02.csv&quot;        &quot;export03.rdata&quot;      &quot;export04_ids.rds&quot;   
-## [7] &quot;export05.dta&quot;        &quot;matrix.fauxhigh.csv&quot;</code></pre>
-            <pre class="r"><code># 匯入.dta
-
-import_dta &lt;- read.dta(&quot;export05.dta&quot;, convert.dates = T, convert.factors = T, missing.type = F, convert.underscore = F, warn.missing.labels = T)
-head(import_dta)</code></pre>
-            <pre><code>##   ids grade gender  race      gpa newids
-## 1   1     7      F  Hisp 3.074965      1
-## 2   2     7      F  Hisp 1.826402      2
-## 3   3    10      F White 2.521067      3
-## 4   4    11      M NatAm 1.976382      4
-## 5   5     9      M White 1.599860      5
-## 6   6     9      M  Hisp 1.288948      6</code></pre>
-        </section>
-    </main>
-    <footer>
-        <script src="https://astalsi401.github.io/jQuery/jquery-3.6.0.min.js"></script>
-        <script>
-            const requestURL = '../assets/js/json/data.json'
-        </script>
-        <script src="../assets/js/main.js"></script>
-    </footer>
+    <div id="App"></div>
 </body>
 
 </html>

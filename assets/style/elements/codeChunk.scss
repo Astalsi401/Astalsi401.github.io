@@ -44,9 +44,8 @@ pre.language-output {
   cursor: pointer;
   --m: 4px;
   --w: 20px;
-  --s: 0.4s;
   position: absolute;
-  transition: opacity var(--s), transform var(--s);
+  transition: opacity var(--time), transform var(--time);
   opacity: 0.3;
   top: var(--m);
   right: var(--m);

@@ -1,1 +1,1 @@
-ReactDOM.createRoot(document.getElementById("App")).render(<App category="Stata" title="資料輸入與表格呈現" />);
+ReactDOM.createRoot(document.getElementById("App")).render(<App category="R" title="資料匯入與匯出" />);

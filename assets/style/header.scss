@@ -15,7 +15,7 @@
   height: 100dvh;
   background: var(--main-bg);
   transform: translateX(-100%);
-  transition: transform 0.4s;
+  transition: transform var(--time), box-shadow calc(var(--time) * 2);
   box-shadow: 0 0 0 var(--main-shadow);
   overflow-y: auto;
   &.active {

@@ -13,6 +13,7 @@
     --unit-#{$u}: #{$u-value};
   }
   --nav-h: 40px;
+  --time: 0.4s;
   scroll-behavior: smooth;
 }
 *,
@@ -22,7 +23,7 @@
   font-family: Microsoft JhengHei, sans-serif;
   margin: 0;
   padding: 0;
-  transition: background 0.4s;
+  transition: background var(--time);
   line-height: 1.5em;
   &::-webkit-scrollbar {
     width: 5px;

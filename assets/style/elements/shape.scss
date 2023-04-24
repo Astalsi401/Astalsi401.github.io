@@ -13,7 +13,7 @@
     height: 0;
     border-width: var(--t);
     border-style: solid;
-    transition: 0.4s;
+    transition: var(--time);
   }
   &::after {
     border-color: var(--black) transparent transparent transparent;

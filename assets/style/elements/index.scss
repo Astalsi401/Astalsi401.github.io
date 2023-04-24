@@ -8,7 +8,7 @@
     &,
     &::before,
     &::after {
-      transition: 0.4s;
+      transition: var(--time);
       display: block;
     }
     &::before,
