@@ -4081,6 +4081,11 @@ pre.language-output {
   opacity: 0.8;
 }
 
+.thumbnail {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .calculator {
   width: min(98%, 600px);
 }

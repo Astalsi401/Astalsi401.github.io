@@ -77,7 +77,7 @@
     {
       "category": "Portfolio",
       "href": "https://astalsi401.github.io/R/r_index.html",
-      "pages": [{ "page": "FreeCodeCamp D3.js Heatmap", "href": "https://astalsi401.github.io/portfolio/javascript-d3js-heatmap/d3js_heatmap.html" }]
+      "pages": [{ "page": "FreeCodeCamp D3.js Heatmap", "href": "https://astalsi401.github.io/portfolio/javascript-d3js-heatmap/d3js_heatmap.html", "thumbnail": "https://astalsi401.github.io/assets/images/heatmap.png" }]
     }
   ]
 }
