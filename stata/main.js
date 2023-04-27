@@ -5,7 +5,7 @@ class Content extends React.Component {
   render() {
     return (
       <div>
-        <IndexPage category="Portfolio" />
+        <IndexPage category="Stata" />
       </div>
     );
   }
