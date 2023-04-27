@@ -5,18 +5,19 @@
   a {
     position: relative;
     text-decoration: none;
+    border-color: transparent;
     &,
     &::before,
     &::after {
       transition: var(--time);
       display: block;
+      border-width: 1px;
+      border-style: solid;
     }
     &::before,
     &::after {
       content: "";
       position: absolute;
-      border-width: 2px;
-      border-style: solid;
       inset: 0;
       opacity: 0;
     }
@@ -27,17 +28,16 @@
       border-color: transparent var(--primary) transparent var(--primary);
     }
     &:hover {
+      border-color: var(--primary-300);
       &::before,
       &::after {
         opacity: 0.5;
       }
       &::before {
-        transform: skewX(-20deg);
-        inset: var(--unit-1);
+        inset: var(--unit-1) var(--unit-0);
       }
       &::after {
-        transform: skewX(20deg);
-        inset: var(--unit-2);
+        inset: var(--unit-0) var(--unit-1);
       }
     }
   }

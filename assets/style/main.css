@@ -3932,16 +3932,17 @@ table td {
 .index a {
   position: relative;
   text-decoration: none;
+  border-color: transparent;
 }
 .index a, .index a::before, .index a::after {
   transition: var(--time);
   display: block;
+  border-width: 1px;
+  border-style: solid;
 }
 .index a::before, .index a::after {
   content: "";
   position: absolute;
-  border-width: 2px;
-  border-style: solid;
   inset: 0;
   opacity: 0;
 }
@@ -3951,16 +3952,17 @@ table td {
 .index a::after {
   border-color: transparent var(--primary) transparent var(--primary);
 }
+.index a:hover {
+  border-color: var(--primary-300);
+}
 .index a:hover::before, .index a:hover::after {
   opacity: 0.5;
 }
 .index a:hover::before {
-  transform: skewX(-20deg);
-  inset: var(--unit-1);
+  inset: var(--unit-1) var(--unit-0);
 }
 .index a:hover::after {
-  transform: skewX(20deg);
-  inset: var(--unit-2);
+  inset: var(--unit-0) var(--unit-1);
 }
 
 pre {
