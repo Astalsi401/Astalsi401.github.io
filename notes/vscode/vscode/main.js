@@ -87,6 +87,18 @@ class Content extends React.Component {
               name: "啟用/停用自動換行",
               keys: [[this.alt, "Z"]],
             },
+            {
+              name: "複製使用中檔案的路徑",
+              keys: [[this.shift, this.alt, "C"]],
+            },
+            {
+              name: "跳至工作區",
+              keys: [[this.ctrl, this.shift, "E"]],
+            },
+            {
+              name: "將資料夾自工作區移除",
+              keys: [[this.shift, this.alt, "Del"]],
+            },
           ],
         },
         {
