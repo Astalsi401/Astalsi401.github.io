@@ -66,6 +66,9 @@
 @each $pos, $pos-value in $position-units {
   @include builder($pos-value, 0, #{$pos}-0);
 }
+@each $fit in $object-fit {
+  @include builder(object-fit, $fit, "object-fit-#{$fit}");
+}
 /* end of position value */
 .pointer {
   cursor: pointer;

@@ -1,0 +1,8 @@
+.portfolio {
+  & > a {
+    transition: transform var(--time);
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
