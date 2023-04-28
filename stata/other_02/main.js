@@ -17,7 +17,7 @@ class Content extends React.Component {
             <p>
               <code>dyndoc</code>的do檔格式如下：
             </p>
-            <CodeChunk code={`將Markdown語法的文字輸入在這裡，ex:\n\n#標題\n\n##標題2\n\n - A\n\n - B\n\n - C\n\n~~~~\n<<dd_do>>\n/*將Stata code輸入在這裡, ex:*/\ncd "D:/Documents/Stata/Stata/data"\nuse us_birth_rate, clear\nlist in 1/8\ncd "D:/Documents/Git/stata/other/02"\n<</dd_do>>\n~~~~\n\n另一段Markdown....\n\n~~~~\n<<dd_do>>\n/*另一段Stata code....*/\n<</dd_do>>\n~~~~`} language="md"></CodeChunk>
+            <CodeChunk code={`將Markdown語法的文字輸入在這裡，ex:\n\n#標題\n\n##標題2\n\n - A\n\n - B\n\n - C\n\n~~~~\n<<dd_do>>\n/*將Stata code輸入在這裡, ex:*/\ncd "D:/Documents/Stata/Stata/data"\nuse us_birth_rate, clear\nlist in 1/8\ncd "D:/Documents/Git/stata/other/02"\n<</dd_do>>\n~~~~\n\n另一段Markdown....\n\n~~~~\n<<dd_do>>\n/*另一段Stata code....*/\n<</dd_do>>\n~~~~`} language="md" />
             <p>
               以<code>dyndoc 檔名.do, replace</code>將檔案與執行結果輸出為html，輸出檔案如下：
             </p>
@@ -46,7 +46,7 @@ class Content extends React.Component {
                 <code>st(ocean cbf)</code>:主題為ocean（海藍色），cbf代表Stata輸入指令為粗體字
               </li>
             </ul>
-            <CodeChunk code={`clear\ncd "D:/Documents/Git/stata/other/02"  /*要匯出的do檔所在的工作目錄*/\nwebdoc init example2, replace logall /// /*example2: 檔案名*/\n       head(w(800px) t("example2") st(ocean cbf))\n\n/***\n將Html語法的文字輸入在這裡，ex:\n\n<h1>標題</h1>\n<h2>標題2</h2>\n<ul>\n	<li>A</li>\n	<li>B</li>\n	<li>C</li>\n</ul>\n***/\n\n/*將Stata code輸入在這裡, ex:*/\ncd "D:/Documents/Stata/Stata/data"\nuse us_birth_rate, clear\nlist in 1/8\ncd "D:/Documents/Git/stata/other/02"\n\n/***\n另一段Html....\n***/\n\n/*另一段Stata code....*/`} language="html"></CodeChunk>
+            <CodeChunk code={`clear\ncd "D:/Documents/Git/stata/other/02"  /*要匯出的do檔所在的工作目錄*/\nwebdoc init example2, replace logall /// /*example2: 檔案名*/\n       head(w(800px) t("example2") st(ocean cbf))\n\n/***\n將Html語法的文字輸入在這裡，ex:\n\n<h1>標題</h1>\n<h2>標題2</h2>\n<ul>\n	<li>A</li>\n	<li>B</li>\n	<li>C</li>\n</ul>\n***/\n\n/*將Stata code輸入在這裡, ex:*/\ncd "D:/Documents/Stata/Stata/data"\nuse us_birth_rate, clear\nlist in 1/8\ncd "D:/Documents/Git/stata/other/02"\n\n/***\n另一段Html....\n***/\n\n/*另一段Stata code....*/`} language="html" />
             <p>
               以<code>webdoc do 檔名.do, replace</code>將檔案輸出為html，結果如下：
             </p>

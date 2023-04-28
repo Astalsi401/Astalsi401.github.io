@@ -1,0 +1,36 @@
+@import "./graph.scss";
+.main {
+  width: 960px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#title {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#description {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#graph {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.county {
+  &:hover {
+    stroke: black;
+    stroke-width: 1px;
+  }
+}
+
+#description {
+  text-align: center;
+}
+
+#tooltip {
+  padding: 10px;
+}

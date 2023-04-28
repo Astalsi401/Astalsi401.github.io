@@ -9,7 +9,7 @@ class Content extends React.Component {
             <p>
               <b>無方向性（Undirected, Binary）</b>
             </p>
-            <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/r003_1.png"></ZoomImage>
+            <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/r003_1.png" />
             <table className="mx-auto">
               <caption>Adjacency List</caption>
               <thead>
@@ -154,7 +154,7 @@ class Content extends React.Component {
             <p>
               <b>有方向性（Directed, Binary）</b>
             </p>
-            <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/r003_2.png"></ZoomImage>
+            <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/r003_2.png" />
             <table className="mx-auto">
               <caption>Matrices</caption>
               <tr>
@@ -209,7 +209,7 @@ class Content extends React.Component {
             <p>
               <b>無方向性，有強弱差異（Undirected, Valued）</b>
             </p>
-            <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/r003_3.png"></ZoomImage>
+            <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/r003_3.png" />
             <table className="mx-auto">
               <caption>Edgelist</caption>
               <tr>
@@ -271,7 +271,7 @@ class Content extends React.Component {
             <p>
               <b>有方向性，有強弱差異（Directed, Valued）</b>
             </p>
-            <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/r003_4.png"></ZoomImage>
+            <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/r003_4.png" />
             <table className="mx-auto">
               <caption>Edgelist</caption>
               <tr>
@@ -325,23 +325,23 @@ class Content extends React.Component {
             <ul>
               <li>
                 相通性（Reachability）：
-                <ZoomImage class="w-lg-25 w-sm-50 mx-auto" src="https://astalsi401.github.io/assets/images/r003_5.png"></ZoomImage>
+                <ZoomImage class="w-lg-25 w-sm-50 mx-auto" src="https://astalsi401.github.io/assets/images/r003_5.png" />
                 <p>
                   X<sup>n</sup>=在n步之內，有多少條路徑可連回actors
                   <br />
                   可利用矩陣次方進行計算
                   <br />
                 </p>
-                <CodeChunk code={`X <- matrix(c(0,1,0,0,0,1,\n  1,0,1,0,0,0,\n  0,1,0,1,1,1,\n  0,0,1,0,1,0,\n  0,0,1,1,0,0,\n  1,0,1,0,0,0), 6, byrow = T)\nX`} language="r"></CodeChunk>
-                <CodeChunk code={`##      [,1] [,2] [,3] [,4] [,5] [,6]\n## [1,]    0    1    0    0    0    1\n## [2,]    1    0    1    0    0    0\n## [3,]    0    1    0    1    1    1\n## [4,]    0    0    1    0    1    0\n## [5,]    0    0    1    1    0    0\n## [6,]    1    0    1    0    0    0`} language="output"></CodeChunk>
-                <CodeChunk code={`X2 <- X %^% 2\n# 例：在兩步之內能連結到a的有\n# a-b-a\n# a-f-a\n# c-b-a\n# c-f-a\n# 因此[a,a]=2 [a,c]=2\nX2`} language="r"></CodeChunk>
-                <CodeChunk code={`##      [,1] [,2] [,3] [,4] [,5] [,6]\n## [1,]    2    0    2    0    0    0\n## [2,]    0    2    0    1    1    2\n## [3,]    2    0    4    1    1    0\n## [4,]    0    1    1    2    1    1\n## [5,]    0    1    1    1    2    1\n## [6,]    0    2    0    1    1    2`} language="output"></CodeChunk>
+                <CodeChunk code={`X <- matrix(c(0,1,0,0,0,1,\n  1,0,1,0,0,0,\n  0,1,0,1,1,1,\n  0,0,1,0,1,0,\n  0,0,1,1,0,0,\n  1,0,1,0,0,0), 6, byrow = T)\nX`} language="r" />
+                <CodeChunk code={`##      [,1] [,2] [,3] [,4] [,5] [,6]\n## [1,]    0    1    0    0    0    1\n## [2,]    1    0    1    0    0    0\n## [3,]    0    1    0    1    1    1\n## [4,]    0    0    1    0    1    0\n## [5,]    0    0    1    1    0    0\n## [6,]    1    0    1    0    0    0`} language="output" />
+                <CodeChunk code={`X2 <- X %^% 2\n# 例：在兩步之內能連結到a的有\n# a-b-a\n# a-f-a\n# c-b-a\n# c-f-a\n# 因此[a,a]=2 [a,c]=2\nX2`} language="r" />
+                <CodeChunk code={`##      [,1] [,2] [,3] [,4] [,5] [,6]\n## [1,]    2    0    2    0    0    0\n## [2,]    0    2    0    1    1    2\n## [3,]    2    0    4    1    1    0\n## [4,]    0    1    1    2    1    1\n## [5,]    0    1    1    1    2    1\n## [6,]    0    2    0    1    1    2`} language="output" />
               </li>
               <li>Degree：與其他actors的直接連結數目</li>
               <li>In-degree：從其他actors接收的連結</li>
               <li>
                 Out-degree：發送給其他actors的連結
-                <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/r003_6.png"></ZoomImage>
+                <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/r003_6.png" />
                 <table className="mx-auto">
                   <tr>
                     <th>.</th>
@@ -477,8 +477,8 @@ class Content extends React.Component {
                 </p>
               </li>
             </ul>
-            <CodeChunk code={``} language="r"></CodeChunk>
-            <CodeChunk code={``} language="output"></CodeChunk>
+            <CodeChunk code={``} language="r" />
+            <CodeChunk code={``} language="output" />
           </div>
         ),
       },
@@ -486,8 +486,8 @@ class Content extends React.Component {
         title: "",
         content: (
           <div>
-            <CodeChunk code={``} language="r"></CodeChunk>
-            <CodeChunk code={``} language="output"></CodeChunk>
+            <CodeChunk code={``} language="r" />
+            <CodeChunk code={``} language="output" />
           </div>
         ),
       },

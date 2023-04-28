@@ -43,11 +43,11 @@ class Content extends React.Component {
                 <ol type="i">
                   <li>
                     開啟預設設定檔
-                    <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/step5-1.png"></ZoomImage>
+                    <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/step5-1.png" />
                   </li>
                   <li>
                     開啟自訂設定檔
-                    <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/step5-2.png"></ZoomImage>
+                    <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/step5-2.png" />
                   </li>
                   <li>將預設檔全選並複製到自訂檔</li>
                   <li>
@@ -55,26 +55,26 @@ class Content extends React.Component {
                   </li>
                   <li>
                     更改<code>stata_version</code>為自己的版本，存檔。
-                    <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/step5-5.png"></ZoomImage>
+                    <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/step5-5.png" />
                   </li>
                 </ol>
               </li>
               <li>在Stata安裝目錄中為stata建立捷徑</li>
               <li>
                 右鍵點選捷徑→內容，將目標中的路徑用英文的引號<code> " </code>括起來，後方隔一個空格輸入<code>/Register</code>，套用
-                <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/step7.png"></ZoomImage>
+                <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/step7.png" />
               </li>
               <li>
                 此時引號會消失，代表已成功
-                <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/step8.png"></ZoomImage>
+                <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/step8.png" />
               </li>
               <li>再次右鍵點選捷徑→以系統管理員身分執行→是，然後重新啟動電腦就完成了</li>
             </ol>
             <p>
               之後開啟Sublime，<kbd>ctrl</kbd>+<kbd>n</kbd>建立新分頁，選擇View&gt;Syntax&gt;Stata，隨意輸入一段statacode後用<kbd>ctrl</kbd>+<kbd>d</kbd>即可傳送到stata執行。
             </p>
-            <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/step9-1.png"></ZoomImage>
-            <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/step9-2.png"></ZoomImage>
+            <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/step9-1.png" />
+            <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/step9-2.png" />
           </div>
         ),
       },
@@ -82,8 +82,8 @@ class Content extends React.Component {
         title: "",
         content: (
           <div>
-            <CodeChunk code={``} language="stata"></CodeChunk>
-            <CodeChunk code={``} language="output"></CodeChunk>
+            <CodeChunk code={``} language="stata" />
+            <CodeChunk code={``} language="output" />
           </div>
         ),
       },

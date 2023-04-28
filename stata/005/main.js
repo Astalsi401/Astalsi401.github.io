@@ -6,8 +6,8 @@ class Content extends React.Component {
         title: "",
         content: (
           <div>
-            <CodeChunk code={``} language="stata"></CodeChunk>
-            <CodeChunk code={``} language="output"></CodeChunk>
+            <CodeChunk code={``} language="stata" />
+            <CodeChunk code={``} language="output" />
           </div>
         ),
       },
@@ -15,8 +15,8 @@ class Content extends React.Component {
         title: "",
         content: (
           <div>
-            <CodeChunk code={``} language="stata"></CodeChunk>
-            <CodeChunk code={``} language="output"></CodeChunk>
+            <CodeChunk code={``} language="stata" />
+            <CodeChunk code={``} language="output" />
           </div>
         ),
       },
