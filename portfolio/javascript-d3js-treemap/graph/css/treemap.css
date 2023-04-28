@@ -33,31 +33,43 @@
   opacity: 0.8;
 }
 
+.main {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#title {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#description {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+#graph {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#legend {
+  width: 210.75px;
+  display: block;
+  margin: 0 auto;
+}
+
 #tooltip {
-  display: none;
-  width: 120px;
-  padding: 10px 15px;
-  font-weight: bold;
-}
-#tooltip.active {
-  display: flex;
+  width: 200px;
+  padding: 10px;
 }
 
-.cell:hover {
-  stroke-width: 1px;
+.tile {
+  opacity: 0.9;
+}
+.tile:hover {
+  stroke-width: 0.5;
   stroke: black;
-}
-
-.tick {
-  opacity: 0.8;
-}
-.tick text {
-  transition: 0.4s;
-}
-
-@media (max-width: 768px) {
-  #x-axis .tick text {
-    rotate: -45deg;
-    translate: -10px 20px;
-  }
-}/*# sourceMappingURL=heatmap.css.map */
+  opacity: 1;
+}/*# sourceMappingURL=treemap.css.map */
