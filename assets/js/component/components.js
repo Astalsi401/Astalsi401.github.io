@@ -129,6 +129,27 @@ class CodeChunk extends React.Component {
     );
   }
 }
+class CodeChunkFromFile extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { code: "", loaded: false };
+  }
+  componentDidMount() {
+    fetch(this.props.path)
+      .then((res) => res.text())
+      .then((data) => {
+        this.setState({
+          code: data,
+          loaded: true,
+        });
+      });
+  }
+  render() {
+    if (this.state.loaded) {
+      return <CodeChunk code={this.state.code} language={this.props.lang} />;
+    }
+  }
+}
 class Block extends React.Component {
   constructor(props) {
     super(props);
