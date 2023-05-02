@@ -19,7 +19,7 @@ class Portfolio extends React.Component {
         <div className="row">
           {this.state.index.pages.map((page) => (
             <div className="col-sm-6 col-md-4 col-lg-3 p-2 portfolio">
-              <a className="d-block bg-white shadow-sm w-100 h-100 text-center text-decoration-none" href={page.href}>
+              <a className="d-block bg-white shadow-sm w-100 h-100 text-center text-decoration-none" href={page.href} target="_blank">
                 <img className="w-100 ratio-16by9 object-fit-cover" src={page.thumbnail} alt="" />
                 <div className="py-2">{page.page}</div>
               </a>

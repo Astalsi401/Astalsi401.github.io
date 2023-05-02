@@ -3948,6 +3948,10 @@ table td {
 
 .homePageIcon {
   width: min(80px, 100%);
+  transition: transform var(--time);
+}
+.homePageIcon:hover {
+  transform: scale(1.2);
 }
 
 .index ul {

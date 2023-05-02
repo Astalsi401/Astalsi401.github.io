@@ -26,33 +26,21 @@
         ga('send', 'pageview');
     </script>
     <!-- End Google Analytics -->
+    <!-- react -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <!-- babel -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- component -->
+    <script defer type="text/jsx" src="https://astalsi401.github.io/assets/js/component/components.js"></script>
+    <script defer type="text/jsx" src="./main.js"></script>
+    <script defer type="text/jsx" src="https://astalsi401.github.io/assets/js/component/app.js"></script>
+    <script defer type="text/jsx" src="./render.js"></script>
     <link rel="stylesheet" href="./assets/style/main.min.css">
 </head>
 
 <body>
-    <div class="container-sm py-5">
-        <h1 class="my-5 py-5 text-center text-xxx-large">Home</h1>
-        <div class="my-5 py-5 px-sm-5 d-flex flex-wrap justify-content-center">
-            <div class="m-2 p-1 homePageIcon">
-                <a href="./stata/index.html" class="text-decoration-none">
-                    <img src="./assets/images/stata.png" alt="" class="d-block w-100 mx-auto">
-                    <span class="d-block text-center">STATA</span>
-                </a>
-            </div>
-            <div class="m-2 p-1 homePageIcon">
-                <a href="./R/r_index.html" class="text-decoration-none">
-                    <img src="./assets/images/R.png" alt="" class="d-block w-100 mx-auto">
-                    <span class="d-block text-center">R</span>
-                </a>
-            </div>
-            <div class="m-2 p-1 homePageIcon">
-                <a href="notes/notes_index.html" class="text-decoration-none">
-                    <img src="./assets/images/notes.png" alt="" class="d-block w-100 mx-auto">
-                    <span class="d-block text-center">Other</span>
-                </a>
-            </div>
-        </div>
-    </div>
+    <div id="app"></div>
 </body>
 
 </html>
