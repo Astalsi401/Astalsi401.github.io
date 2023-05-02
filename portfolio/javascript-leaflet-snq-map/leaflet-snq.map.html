@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Leaflet SNQ Map</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F8SLV521P4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-F8SLV521P4');
+    </script>
+    <!-- prism -->
+    <script src=" https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js "></script>
+    <link href=" https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css " rel="stylesheet">
+    <!-- react -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <!-- babel -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- component -->
+    <script defer type="text/jsx" src="https://astalsi401.github.io/assets/js/component/components.js"></script>
+    <script defer type="text/jsx" src="https://astalsi401.github.io/assets/js/component/app.js"></script>
+    <script defer type="text/jsx" src="./render.js"></script>
+    <link rel="stylesheet" href="https://astalsi401.github.io/assets/style/main.min.css">
+</head>
+<body>
+    <div id="App-header"></div>
+    <div id="App">
+        <main id="main-content" class="container-xl shadow-lg p-3">
+            <h1 class="my-5 text-center">Leaflet SNQ Map</h1>
+            <section class="my-4">
+                <h3 class="my-t text-center">SNQ認證地圖</h3>
+                <div class="my-2" id="snqMap"></div>
+            </section>
+            <section class="my-4" id="code-1"></section>
+        </main>
+    </div>
+    <footer>
+        <!-- leaflet -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.8.0/leaflet.min.css" integrity="sha512-oIQ0EBio8LJupRpgmDsIsvm0Fsr6c3XNHLB7at5xb+Cf6eQuCX9xuX8XXGRIcokNgdqL1ms7nqbQ6ryXMGxXpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.8.0/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="./snqMap.min.css">
+        <script src="./snqMap.js"></script>
+    </footer>
+</body>
+</html>

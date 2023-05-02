@@ -81,7 +81,8 @@
         { "page": "FreeCodeCamp D3.js Heatmap", "href": "https://astalsi401.github.io/portfolio/javascript-d3js-heatmap/d3js_heatmap.html", "thumbnail": "https://astalsi401.github.io/assets/images/heatmap.png", "tags": ["d3js", "javascript", "js"] },
         { "page": "FreeCodeCamp D3.js Choropleth Map", "href": "https://astalsi401.github.io/portfolio/javascript-d3js-choropleth-map/d3js_choropleth-map.html", "thumbnail": "https://astalsi401.github.io/assets/images/choropleth-map.png", "tags": ["d3js", "javascript", "js"] },
         { "page": "FreeCodeCamp D3.js Treemap", "href": "https://astalsi401.github.io/portfolio/javascript-d3js-treemap/d3js-treemap.html", "thumbnail": "https://astalsi401.github.io/assets/images/treemap.png", "tags": ["d3js", "javascript", "js"] },
-        { "page": "南港展覽館醫療科技展平面圖", "href": "https://astalsi401.github.io/portfolio/javascript-d3js-nex-floormap/d3js_nex-floormap.html", "thumbnail": "https://astalsi401.github.io/assets/images/floormap.png", "tags": ["d3js", "javascript", "js"] }
+        { "page": "南港展覽館醫療科技展平面圖", "href": "https://astalsi401.github.io/portfolio/javascript-d3js-nex-floormap/d3js_nex-floormap.html", "thumbnail": "https://astalsi401.github.io/assets/images/floormap.png", "tags": ["d3js", "javascript", "js"] },
+        { "page": "Leaflet SNQ Map", "href": "https://astalsi401.github.io/portfolio/javascript-d3js-nex-floormap/d3js_nex-floormap.html", "thumbnail": "https://astalsi401.github.io/assets/images/snqMap.png", "tags": ["leaflet", "javascript", "js"] }
       ]
     }
   ]
