@@ -78,9 +78,9 @@
       "category": "Portfolio",
       "href": "https://astalsi401.github.io/R/portfolio_index.html",
       "pages": [
-        { "page": "FreeCodeCamp D3.js Heatmap", "href": "https://astalsi401.github.io/portfolio/javascript-d3js-heatmap/d3js_heatmap.html", "thumbnail": "https://astalsi401.github.io/assets/images/heatmap.png" },
-        { "page": "FreeCodeCamp D3.js Choropleth Map", "href": "https://astalsi401.github.io/portfolio/javascript-d3js-choropleth-map/d3js_choropleth-map.html", "thumbnail": "https://astalsi401.github.io/assets/images/choropleth-map.png" },
-        { "page": "FreeCodeCamp D3.js Treemap", "href": "https://astalsi401.github.io/portfolio/javascript-d3js-treemap/d3js-treemap.html", "thumbnail": "https://astalsi401.github.io/assets/images/treemap.png" }
+        { "page": "FreeCodeCamp D3.js Heatmap", "href": "https://astalsi401.github.io/portfolio/javascript-d3js-heatmap/d3js_heatmap.html", "thumbnail": "https://astalsi401.github.io/assets/images/heatmap.png", "tags": ["d3js", "javascript", "js"] },
+        { "page": "FreeCodeCamp D3.js Choropleth Map", "href": "https://astalsi401.github.io/portfolio/javascript-d3js-choropleth-map/d3js_choropleth-map.html", "thumbnail": "https://astalsi401.github.io/assets/images/choropleth-map.png", "tags": ["d3js", "javascript", "js"] },
+        { "page": "FreeCodeCamp D3.js Treemap", "href": "https://astalsi401.github.io/portfolio/javascript-d3js-treemap/d3js-treemap.html", "thumbnail": "https://astalsi401.github.io/assets/images/treemap.png", "tags": ["d3js", "javascript", "js"] }
       ]
     }
   ]
