@@ -16,14 +16,14 @@ class Content extends React.Component {
   render() {
     if (this.state.indexLoaded) {
       return (
-        <div class="container-sm py-5">
-          <h1 class="my-5 py-5 text-center text-xxx-large">Home</h1>
-          <div class="my-5 py-5 px-sm-5 d-flex flex-wrap justify-content-center">
+        <div className="container-sm py-5">
+          <h1 className="my-5 py-5 text-center text-xxx-large">Home</h1>
+          <div className="my-5 py-5 px-sm-5 d-flex flex-wrap justify-content-center">
             {this.state.index.pages.map((d) => (
-              <div class="m-2 p-1 homePageIcon">
-                <a href={d.href} class="text-decoration-none">
-                  <img src={d.icon} alt="" class="d-block w-100 mx-auto" />
-                  <span class="d-block text-center">{d.page}</span>
+              <div key={d.page} className="m-2 p-1 homePageIcon">
+                <a href={d.href} className="text-decoration-none">
+                  <img src={d.icon} alt="" className="d-block w-100 mx-auto" />
+                  <span className="d-block text-center">{d.page}</span>
                 </a>
               </div>
             ))}
