@@ -3946,6 +3946,10 @@ table td {
   color: var(--main-bg);
 }
 
+.homePageIcon {
+  width: min(80px, 100%);
+}
+
 .index ul {
   list-style-type: none;
 }
