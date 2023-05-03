@@ -2,7 +2,7 @@
   & > a {
     transition: transform var(--time);
     &:hover {
-      transform: scale(1.05);
+      transform: scale(var(--scale));
     }
   }
 }

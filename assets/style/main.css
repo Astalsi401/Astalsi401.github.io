@@ -42,6 +42,7 @@
   --unit-auto: auto;
   --nav-h: 40px;
   --time: 0.4s;
+  --scale: 1.05;
   scroll-behavior: smooth;
 }
 
@@ -3951,7 +3952,7 @@ table td {
   transition: transform var(--time);
 }
 .homePageIcon:hover {
-  transform: scale(1.2);
+  transform: scale(var(--scale));
 }
 
 .index ul {
@@ -4167,7 +4168,7 @@ pre.language-output {
   transition: transform var(--time);
 }
 .portfolio > a:hover {
-  transform: scale(1.05);
+  transform: scale(var(--scale));
 }
 
 #header {
