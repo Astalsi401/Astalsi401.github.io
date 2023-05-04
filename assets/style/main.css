@@ -3907,7 +3907,7 @@ table td {
   background-color: var(--elem);
   fill: var(--main-bg);
 }
-.home svg:hover {
+.home svg:hover, .home svg:focus {
   background-color: var(--main-bg);
   fill: var(--elem);
 }
