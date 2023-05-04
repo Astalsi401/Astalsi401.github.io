@@ -88,8 +88,10 @@
   svg {
     background-color: var(--elem);
     fill: var(--main-bg);
-    &:hover,
-    &:focus {
+  }
+  &:hover,
+  &:focus {
+    svg {
       background-color: var(--main-bg);
       fill: var(--elem);
     }
