@@ -85,7 +85,7 @@
         { "page": "南港展覽館醫療科技展平面圖", "href": "https://astalsi401.github.io/portfolio/javascript-d3js-nex-floormap/d3js_nex-floormap.html", "thumbnail": "https://astalsi401.github.io/assets/images/floormap.png", "tags": ["d3js", "javascript", "js", "svg"] },
         { "page": "Leaflet SNQ Map", "href": "https://astalsi401.github.io/portfolio/javascript-d3js-nex-floormap/d3js_nex-floormap.html", "thumbnail": "https://astalsi401.github.io/assets/images/snqMap.png", "tags": ["leaflet", "javascript", "js"] },
         { "page": "2023臺灣醫療科技展參展辦法頁", "href": "https://expo.taiwan-healthcare.org/zh/exhibit.php", "thumbnail": "https://astalsi401.github.io/assets/images/expoPage1.png", "tags": ["html", "css", "javascript", "js"] },
-        { "page": "Python GA4 API 串接", "href": "https://astalsi401.github.io/portfolio/python-ga4-api/python-ga4-api.html", "thumbnail": "https://astalsi401.github.io/assets/images/python-logo.png", "tags": ["python", "ga4", "google analytics"] }
+        { "page": "Python GA4 API 串接", "href": "https://astalsi401.github.io/portfolio/python-ga4-api/python-ga4-api.html", "thumbnail": "https://astalsi401.github.io/assets/images/python-logo.svg", "tags": ["python", "ga4", "google analytics"] }
       ]
     }
   ]
