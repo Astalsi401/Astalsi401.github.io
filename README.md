@@ -13,6 +13,5 @@
 - [stata](https://github.com/Astalsi401/Astalsi401.github.io/tree/master/stata)：stata 頁面的 html 文件檔
 - [R](https://github.com/Astalsi401/Astalsi401.github.io/tree/master/R)：R 頁面的 html 檔
 - [notes](https://github.com/Astalsi401/Astalsi401.github.io/tree/master/notes)：心血來潮的產物
-- [style](https://github.com/Astalsi401/Astalsi401.github.io/tree/master/assets/style)：網站 css 檔
-- [js](https://github.com/Astalsi401/Astalsi401.github.io/tree/master/assets/js)：網站 js
-- [jQuery](https://github.com/Astalsi401/Astalsi401.github.io/tree/master/jQuery)：網站 jquery
+- [portfolio](https://github.com/Astalsi401/Astalsi401.github.io/tree/master/portfolio)：作品集存放區
+- [assets](https://github.com/Astalsi401/Astalsi401.github.io/tree/master/assets/style)：網站 css, js
