@@ -4071,6 +4071,7 @@ pre.language-output {
   cursor: pointer;
   --m: 4px;
   --w: 20px;
+  display: block;
   position: absolute;
   transition: opacity var(--time), transform var(--time);
   opacity: 0.3;
@@ -4082,7 +4083,7 @@ pre.language-output {
 .copyBtn svg {
   stroke: var(--code-copy);
 }
-.copyBtn:hover {
+.copyBtn:hover, .copyBtn:focus {
   opacity: 1;
 }
 .copyBtn::before {
