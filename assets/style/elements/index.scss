@@ -27,7 +27,8 @@
     &::after {
       border-color: transparent var(--primary) transparent var(--primary);
     }
-    &:hover {
+    &:hover,
+    &:focus {
       border-color: var(--primary-300);
       &::before,
       &::after {

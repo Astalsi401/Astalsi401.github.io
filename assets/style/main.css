@@ -4007,16 +4007,16 @@ table td {
 .index a::after {
   border-color: transparent var(--primary) transparent var(--primary);
 }
-.index a:hover {
+.index a:hover, .index a:focus {
   border-color: var(--primary-300);
 }
-.index a:hover::before, .index a:hover::after {
+.index a:hover::before, .index a:hover::after, .index a:focus::before, .index a:focus::after {
   opacity: 0.5;
 }
-.index a:hover::before {
+.index a:hover::before, .index a:focus::before {
   inset: var(--unit-1) var(--unit-0);
 }
-.index a:hover::after {
+.index a:hover::after, .index a:focus::after {
   inset: var(--unit-0) var(--unit-1);
 }
 
