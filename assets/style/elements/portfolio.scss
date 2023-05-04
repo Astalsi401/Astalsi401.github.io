@@ -1,9 +1,7 @@
 .portfolio {
-  & > a {
-    transition: transform var(--time);
-    &:hover,
-    &:focus {
-      transform: scale(var(--scale));
-    }
+  transition: transform var(--time);
+  &:hover,
+  &:focus {
+    transform: scale(var(--scale));
   }
 }

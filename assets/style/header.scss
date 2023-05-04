@@ -34,7 +34,8 @@
     a {
       display: block;
       padding: var(--unit-2) var(--unit-1);
-      &:hover {
+      &:hover,
+      &:focus {
         background: var(--primary);
         color: var(--main-bg);
       }

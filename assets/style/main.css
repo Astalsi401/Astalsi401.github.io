@@ -3967,16 +3967,17 @@ table td {
   display: block;
   padding: var(--unit-2) var(--unit-1);
 }
-.menu li a:hover {
+.menu li a:hover, .menu li a:focus {
   background: var(--primary);
   color: var(--main-bg);
 }
 
 .homePageIcon {
+  display: block;
   width: min(80px, 100%);
   transition: transform var(--time);
 }
-.homePageIcon:hover {
+.homePageIcon:hover, .homePageIcon:focus {
   transform: scale(var(--scale));
 }
 
@@ -4190,10 +4191,10 @@ pre.language-output {
   transform: translate(calc(var(--t) * 2), -50%) rotate(180deg);
 }
 
-.portfolio > a {
+.portfolio {
   transition: transform var(--time);
 }
-.portfolio > a:hover, .portfolio > a:focus {
+.portfolio:hover, .portfolio:focus {
   transform: scale(var(--scale));
 }
 

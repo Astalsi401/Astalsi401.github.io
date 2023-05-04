@@ -20,12 +20,10 @@ class Content extends React.Component {
           <h1 className="my-5 py-5 text-center text-xxx-large">Home</h1>
           <div className="my-5 py-5 px-sm-5 d-flex flex-wrap justify-content-center">
             {this.state.index.pages.map((d) => (
-              <div key={d.page} className="m-2 p-1 homePageIcon">
-                <a href={d.href} className="text-decoration-none">
-                  <img src={d.icon} alt="" className="d-block w-100 mx-auto" />
-                  <span className="d-block text-center">{d.page}</span>
-                </a>
-              </div>
+              <a key={d.page} href={d.href} className="homePageIcon m-2 p-1 text-decoration-none">
+                <img src={d.icon} alt="" className="d-block w-100 mx-auto" />
+                <span className="d-block text-center">{d.page}</span>
+              </a>
             ))}
           </div>
         </div>
