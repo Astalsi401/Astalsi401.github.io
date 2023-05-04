@@ -3871,10 +3871,10 @@ table td {
 .hamberger span::after {
   top: 10px;
 }
-.hamberger:hover {
+.hamberger:hover, .hamberger:focus {
   background: var(--bg);
 }
-.hamberger:hover span, .hamberger:hover span::before, .hamberger:hover span::after {
+.hamberger:hover span, .hamberger:hover span::before, .hamberger:hover span::after, .hamberger:focus span, .hamberger:focus span::before, .hamberger:focus span::after {
   background: var(--elem);
 }
 .hamberger.active {
@@ -3893,10 +3893,10 @@ table td {
 .hamberger.active span::after {
   transform: rotate(-45deg);
 }
-.hamberger.active:hover {
+.hamberger.active:hover, .hamberger.active:focus {
   background: var(--primary-0);
 }
-.hamberger.active:hover span::before, .hamberger.active:hover span::after {
+.hamberger.active:hover span::before, .hamberger.active:hover span::after, .hamberger.active:focus span::before, .hamberger.active:focus span::after {
   background: var(--bg-active);
 }
 
@@ -4193,7 +4193,7 @@ pre.language-output {
 .portfolio > a {
   transition: transform var(--time);
 }
-.portfolio > a:hover {
+.portfolio > a:hover, .portfolio > a:focus {
   transform: scale(var(--scale));
 }
 

@@ -44,7 +44,8 @@
       top: 10px;
     }
   }
-  &:hover {
+  &:hover,
+  &:focus {
     background: var(--bg);
     span {
       &,
@@ -70,7 +71,8 @@
         transform: rotate(-45deg);
       }
     }
-    &:hover {
+    &:hover,
+    &:focus {
       background: var(--primary-0);
       span {
         &::before,
