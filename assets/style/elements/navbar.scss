@@ -92,3 +92,27 @@
     }
   }
 }
+.accessibility {
+  position: fixed;
+  top: calc(var(--nav-h) + var(--unit-2));
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  a {
+    transition: var(--time);
+    &:focus {
+      transform: translateY(0);
+      padding: var(--unit-2);
+      background: var(--main-bg);
+      opacity: 1;
+    }
+    &:not(:focus) {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+  }
+}

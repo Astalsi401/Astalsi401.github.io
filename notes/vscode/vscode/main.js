@@ -169,6 +169,18 @@ class Content extends React.Component {
             },
           ],
         },
+        {
+          h3: "",
+          shortcut: [
+            {
+              name: "open codeium",
+              keys: [
+                [this.ctrl, "C"],
+                [this.ctrl, "A"],
+              ],
+            },
+          ],
+        },
       ],
     };
   }

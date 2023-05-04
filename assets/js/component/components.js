@@ -35,15 +35,13 @@ class Sidebar extends React.Component {
         });
       });
   }
-  click = () => {
-    this.setState((prev) => ({ childrenActive: !prev.childrenActive }));
-  };
+  click = () => this.setState((prev) => ({ childrenActive: !prev.childrenActive }));
   render() {
     if (this.state.indexLoaded) {
       return (
         <aside id="sidebar" className={this.props.sidebarActive && active}>
           <h1 className="my-5 text-center">
-            <a className="text-decoration-none" href={this.state.index.href}>
+            <a id="sidebarAnchor" className="text-decoration-none" href={this.state.index.href}>
               {this.state.index.category}
             </a>
           </h1>
@@ -62,40 +60,59 @@ class Sidebar extends React.Component {
     }
   }
 }
-
+class Accessibility extends React.Component {
+  constructor(props) {
+    super(props);
+    this.access = [
+      { href: "#main-content", text: "Skip to main content" },
+      { href: "#sidebarAnchor", text: "Skip to sidebar" },
+    ];
+  }
+  render() {
+    return (
+      <div className="accessibility">
+        {this.access.map((a) => (
+          <a href={a.href}>{a.text}</a>
+        ))}
+      </div>
+    );
+  }
+}
 class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = { sidebarActive: false };
     this.wrapperRef = React.createRef();
   }
-  click = () => {
-    this.setState((prev) => ({ sidebarActive: !prev.sidebarActive }));
-  };
-  clickOut = (e) => {
-    if (this.wrapperRef.current && !this.wrapperRef.current.contains(e.target)) this.setState({ sidebarActive: false });
-  };
+  hadleFocusIn = (e) => this.setState({ sidebarActive: this.wrapperRef.current.contains(e.target) ? true : false });
+  click = () => this.setState((prev) => ({ sidebarActive: !prev.sidebarActive }));
+  clickOut = (e) => this.setState((prev) => ({ sidebarActive: this.wrapperRef.current && !this.wrapperRef.current.contains(e.target) ? false : prev.sidebarActive }));
   componentDidMount() {
     document.addEventListener("mousedown", this.clickOut);
+    document.addEventListener("focusin", this.hadleFocusIn);
   }
   componentWillUnmount() {
     document.removeEventListener("mousedown", this.clickOut);
+    document.removeEventListener("focusin", this.hadleFocusIn);
   }
   render() {
     return (
-      <header id="header" ref={this.wrapperRef}>
-        <nav id="navbar">
-          <div className={`hamberger ${toggleActive(this.state.sidebarActive)}`} onClick={this.click}>
-            <span></span>
-          </div>
-          <a href="https://astalsi401.github.io/" className="home">
-            <svg viewBox="0 0 500 500">
-              <path d="M250 100 L450 230,350 230,350 400,150 400,150 230,50 230,250 100"></path>
-            </svg>
-          </a>
-        </nav>
-        <Sidebar sidebarActive={this.state.sidebarActive} category={this.props.category} />
-      </header>
+      <div>
+        <Accessibility />
+        <header id="header" ref={this.wrapperRef}>
+          <nav id="navbar">
+            <div className={`hamberger ${toggleActive(this.state.sidebarActive)}`} onClick={this.click}>
+              <span></span>
+            </div>
+            <a href="https://astalsi401.github.io/" className="home">
+              <svg viewBox="0 0 500 500">
+                <path d="M250 100 L450 230,350 230,350 400,150 400,150 230,50 230,250 100"></path>
+              </svg>
+            </a>
+          </nav>
+          <Sidebar sidebarActive={this.state.sidebarActive} category={this.props.category} />
+        </header>
+      </div>
     );
   }
 }
