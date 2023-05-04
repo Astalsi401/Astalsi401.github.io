@@ -4080,6 +4080,7 @@ pre.language-output {
   right: var(--m);
   width: var(--w);
   height: var(--w);
+  color: var(--black);
 }
 .copyBtn svg {
   stroke: var(--code-copy);

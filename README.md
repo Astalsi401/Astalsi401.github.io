@@ -14,4 +14,4 @@
 - [R](https://github.com/Astalsi401/Astalsi401.github.io/tree/master/R)：R 頁面的 html 檔
 - [notes](https://github.com/Astalsi401/Astalsi401.github.io/tree/master/notes)：心血來潮的產物
 - [portfolio](https://github.com/Astalsi401/Astalsi401.github.io/tree/master/portfolio)：作品集存放區
-- [assets](https://github.com/Astalsi401/Astalsi401.github.io/tree/master/assets/style)：網站 css, js
+- [assets](https://github.com/Astalsi401/Astalsi401.github.io/tree/master/assets/style)：網站 css, js, 圖片
