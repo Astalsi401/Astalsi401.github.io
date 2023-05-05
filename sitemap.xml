@@ -115,5 +115,26 @@
     </url>    
     <url>
         <loc>https://astalsi401.github.io/stata/other/example2.html</loc>
+    </url>    
+    <url>
+        <loc>https://astalsi401.github.io/portfolio/portfolio_index.html</loc>
+    </url>    
+    <url>
+        <loc>https://astalsi401.github.io/portfolio/javascript-d3js-choropleth-map/d3js_choropleth-map.html</loc>
+    </url>    
+    <url>
+        <loc>https://astalsi401.github.io/portfolio/javascript-d3js-heatmap/d3js_heatmap.html</loc>
+    </url>    
+    <url>
+        <loc>https://astalsi401.github.io/portfolio/javascript-d3js-nex-floormap/d3js_nex-floormap.html</loc>
+    </url>    
+    <url>
+        <loc>https://astalsi401.github.io/portfolio/javascript-d3js-treemap/d3js-treemap.html</loc>
+    </url>    
+    <url>
+        <loc>https://astalsi401.github.io/portfolio/javascript-leaflet-snq-map/leaflet-snq.map.html</loc>
+    </url>    
+    <url>
+        <loc>https://astalsi401.github.io/portfolio/python-ga4-api/python-ga4-api.html</loc>
     </url>
 </urlset>

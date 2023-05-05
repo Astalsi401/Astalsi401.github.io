@@ -4198,6 +4198,28 @@ pre.language-output {
 .portfolio:hover, .portfolio:focus {
   transform: scale(var(--scale));
 }
+.portfolio:hover .tags, .portfolio:focus .tags {
+  opacity: 1;
+}
+
+.portfolioThumb {
+  position: relative;
+}
+.portfolioThumb .tags {
+  position: absolute;
+  display: flex;
+  align-items: end;
+  padding: var(--unit-1);
+  transition: opacity var(--time);
+  inset: 0;
+  background: var(--black-600);
+  opacity: 0;
+}
+
+.tag {
+  background: var(--white-600);
+  color: var(--black);
+}
 
 #header {
   z-index: 3;

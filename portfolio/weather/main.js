@@ -31,15 +31,15 @@ function Content() {
   if (loaded) {
     const { time, weathercode, temperature_2m_max, temperature_2m_min, precipitation_probability_mean } = weather.daily;
     const forecast = time.map((t, i) => {
+      t = new Date(t);
       return {
-        time: t,
+        time: `${t.getMonth() + 1}/${t.getDate()}`,
         wmo: weathercode[i],
-        temp_max: temperature_2m_max[i],
-        temp_min: temperature_2m_min[i],
-        prob: precipitation_probability_mean[i],
+        temp_max: `${temperature_2m_max[i]}°C`,
+        temp_min: `${temperature_2m_min[i]}°C`,
+        prob: `${precipitation_probability_mean[i]}%`,
       };
     });
-    console.log(forecast);
     return (
       <div>
         <select name="city" id="city" onChange={handleLocationChange}>
@@ -70,6 +70,17 @@ function Content() {
             <br />
             {weather.current_weather.precipitation_probability}
           </div>
+        </div>
+        <div className="d-flex flex-wrap">
+          {forecast.map((d) => (
+            <div key={d.time} className="my-2 flex-grow-1">
+              <div>{d.time}</div>
+              <div>{d.wmo}</div>
+              <div>{d.temp_max}</div>
+              <div>{d.temp_min}</div>
+              <div>{d.prob}</div>
+            </div>
+          ))}
         </div>
       </div>
     );
