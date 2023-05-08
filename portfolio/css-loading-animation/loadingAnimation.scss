@@ -1,18 +1,19 @@
 .loading {
   --rotate: 1;
   --bg: rgb(55, 67, 121);
+  --text: white;
+  margin: 0 auto;
+  padding: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
-  padding: 5px;
   aspect-ratio: 1;
   background: var(--bg);
   box-shadow: 0 0 5px var(--bg);
   & > span {
     --rotate: -1;
     display: block;
-    color: white;
+    color: var(--text);
     font-weight: bolder;
   }
   &,

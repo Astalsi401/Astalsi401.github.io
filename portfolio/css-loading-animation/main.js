@@ -11,8 +11,14 @@ class Content extends React.Component {
                 <span>Loading</span>
               </div>
             </div>
-            <CodeChunk code={`<div className="loading">\n  <span>Loading</span>\n</div>`} lang="html" />
-            <CodeChunkFromFile path="./loadingAnimation.scss" lang="scss" />
+            <div className="my-2">
+              HTML:
+              <CodeChunk code={`<div className="loading">\n  <span>Loading</span>\n</div>`} lang="html" />
+            </div>
+            <div className="my-2">
+              SCSS:
+              <CodeChunkFromFile path="./loadingAnimation.scss" lang="scss" />
+            </div>
           </div>
         ),
       },
