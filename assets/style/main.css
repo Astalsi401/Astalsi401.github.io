@@ -4215,8 +4215,7 @@ pre.language-output {
   background: var(--black-600);
   opacity: 0;
 }
-
-.tag {
+.portfolioThumb .tag {
   background: var(--white-600);
   color: var(--black);
 }
