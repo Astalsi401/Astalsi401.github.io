@@ -7,8 +7,8 @@ class Content extends React.Component {
         content: (
           <div>
             <p>輸入資料</p>
-            <CodeChunk code={`clear\nquietly input str14 state ur \ncap drop ur0  /*如果有ur0的話就拋棄，沒有則不做動作*/\nrecode ur (2.0/3.9=1 "2.0-3.9") (4.0/5.9=2 "4.0-5.9") /// \n          (6.0/7.9=3 "6.0-7.9") (8.0/9.9=4 "8.0-9.9") ,generate(ur0)   /*將ur重新編碼為ur0*/\nlab var ur0 "class interval"\ntab ur0`} language="stata" />
-            <CodeChunk code={`. clear\n. quietly input str14 state ur \n. \n. cap drop ur0  /*如果有ur0的話就拋棄，沒有則不做動作*/\n. recode ur (2.0/3.9=1 "2.0-3.9") (4.0/5.9=2 "4.0-5.9") /// \n>           (6.0/7.9=3 "6.0-7.9") (8.0/9.9=4 "8.0-9.9") ,generate(ur0)   /*將ur重新編碼為ur0*/\n(34 differences between ur and ur0)\n\n. lab var ur0 "class interval"\n\n. tab ur0\n\n      class |\n   interval |      Freq.     Percent        Cum.\n------------+-----------------------------------\n    2.0-3.9 |          5       14.71       14.71\n    4.0-5.9 |         20       58.82       73.53\n    6.0-7.9 |          8       23.53       97.06\n    8.0-9.9 |          1        2.94      100.00\n------------+-----------------------------------\n      Total |         34      100.00`} language="output" />
+            <CodeChunk code={`clear\nquietly input str14 state ur \ncap drop ur0  /*如果有ur0的話就拋棄，沒有則不做動作*/\nrecode ur (2.0/3.9=1 "2.0-3.9") (4.0/5.9=2 "4.0-5.9") /// \n          (6.0/7.9=3 "6.0-7.9") (8.0/9.9=4 "8.0-9.9") ,generate(ur0)   /*將ur重新編碼為ur0*/\nlab var ur0 "class interval"\ntab ur0`} lang="stata" />
+            <CodeChunk code={`. clear\n. quietly input str14 state ur \n. \n. cap drop ur0  /*如果有ur0的話就拋棄，沒有則不做動作*/\n. recode ur (2.0/3.9=1 "2.0-3.9") (4.0/5.9=2 "4.0-5.9") /// \n>           (6.0/7.9=3 "6.0-7.9") (8.0/9.9=4 "8.0-9.9") ,generate(ur0)   /*將ur重新編碼為ur0*/\n(34 differences between ur and ur0)\n\n. lab var ur0 "class interval"\n\n. tab ur0\n\n      class |\n   interval |      Freq.     Percent        Cum.\n------------+-----------------------------------\n    2.0-3.9 |          5       14.71       14.71\n    4.0-5.9 |         20       58.82       73.53\n    6.0-7.9 |          8       23.53       97.06\n    8.0-9.9 |          1        2.94      100.00\n------------+-----------------------------------\n      Total |         34      100.00`} lang="output" />
           </div>
         ),
       },
@@ -16,8 +16,8 @@ class Content extends React.Component {
         title: "折線圖",
         content: (
           <div>
-            <CodeChunk code={`preserve /*建立保存點*/\ncollapse (count) ur, by (ur0)\nlab def ur0 1 "2.0-3.9" 2 "4.0-5.9" 3 "6.0-7.9" 4 "8.0-9.9", modify\nlab val ur0 ur0\nlab var ur "Frequency"\nlab var ur0 "Class Interval"\nlist\ntwoway (sca ur ur0, c(1)), xlabel(1(1)4, valuelabel angle(0))\ngraph export "line01.png", replace\nrestore /*回到保存點*/`} language="stata" />
-            <CodeChunk code={`. preserve /*建立保存點*/\n. collapse (count) ur, by (ur0)\n. lab def ur0 1 "2.0-3.9" 2 "4.0-5.9" 3 "6.0-7.9" 4 "8.0-9.9", modify\n. lab val ur0 ur0\n. lab var ur "Frequency"\n. lab var ur0 "Class Interval"\n. list\n     +--------------+\n     |     ur0   ur |\n     |--------------|\n  1. | 2.0-3.9    5 |\n  2. | 4.0-5.9   20 |\n  3. | 6.0-7.9    8 |\n  4. | 8.0-9.9    1 |\n     +--------------+\n. twoway (sca ur ur0, c(1)), xlabel(1(1)4, valuelabel angle(0))\n(note:  named style 1 not found in class connectstyle, default attributes used)\n. graph export "line01.png", replace\n(file line01.png written in PNG format)\n. restore /*回到保存點*/`} language="output" />
+            <CodeChunk code={`preserve /*建立保存點*/\ncollapse (count) ur, by (ur0)\nlab def ur0 1 "2.0-3.9" 2 "4.0-5.9" 3 "6.0-7.9" 4 "8.0-9.9", modify\nlab val ur0 ur0\nlab var ur "Frequency"\nlab var ur0 "Class Interval"\nlist\ntwoway (sca ur ur0, c(1)), xlabel(1(1)4, valuelabel angle(0))\ngraph export "line01.png", replace\nrestore /*回到保存點*/`} lang="stata" />
+            <CodeChunk code={`. preserve /*建立保存點*/\n. collapse (count) ur, by (ur0)\n. lab def ur0 1 "2.0-3.9" 2 "4.0-5.9" 3 "6.0-7.9" 4 "8.0-9.9", modify\n. lab val ur0 ur0\n. lab var ur "Frequency"\n. lab var ur0 "Class Interval"\n. list\n     +--------------+\n     |     ur0   ur |\n     |--------------|\n  1. | 2.0-3.9    5 |\n  2. | 4.0-5.9   20 |\n  3. | 6.0-7.9    8 |\n  4. | 8.0-9.9    1 |\n     +--------------+\n. twoway (sca ur ur0, c(1)), xlabel(1(1)4, valuelabel angle(0))\n(note:  named style 1 not found in class connectstyle, default attributes used)\n. graph export "line01.png", replace\n(file line01.png written in PNG format)\n. restore /*回到保存點*/`} lang="output" />
             <ZoomImage src="https://astalsi401.github.io/assets/images/line01.png" />
           </div>
         ),
@@ -26,8 +26,8 @@ class Content extends React.Component {
         title: "柱狀圖",
         content: (
           <div>
-            <CodeChunk code={`graph bar (count) ur, over(ur0, label(angle(45))) /// /*將count換成percent就會變為百分比*/\n      ylabel(0(5)20, angle(0)) nofill ///\n      ytitle("Frequency") b1title("Class Interval") ///\n      blabel(bar, format(%4.0f)) legend(off)\ngraph export "bar01.png", replace`} language="stata" />
-            <CodeChunk code={`. graph bar (count) ur, over(ur0, label(angle(45))) /// /*將count換成percent就會變為百分比*/\n>       ylabel(0(5)20, angle(0)) nofill ///\n>       ytitle("Frequency") b1title("Class Interval") ///\n>       blabel(bar, format(%4.0f)) legend(off)\n. graph export "bar01.png", replace\n(file bar01.png written in PNG format)`} language="output" />
+            <CodeChunk code={`graph bar (count) ur, over(ur0, label(angle(45))) /// /*將count換成percent就會變為百分比*/\n      ylabel(0(5)20, angle(0)) nofill ///\n      ytitle("Frequency") b1title("Class Interval") ///\n      blabel(bar, format(%4.0f)) legend(off)\ngraph export "bar01.png", replace`} lang="stata" />
+            <CodeChunk code={`. graph bar (count) ur, over(ur0, label(angle(45))) /// /*將count換成percent就會變為百分比*/\n>       ylabel(0(5)20, angle(0)) nofill ///\n>       ytitle("Frequency") b1title("Class Interval") ///\n>       blabel(bar, format(%4.0f)) legend(off)\n. graph export "bar01.png", replace\n(file bar01.png written in PNG format)`} lang="output" />
             <ZoomImage src="https://astalsi401.github.io/assets/images/bar01.png" />
             <ul>
               <li>
@@ -41,8 +41,8 @@ class Content extends React.Component {
         title: "圓餅圖",
         content: (
           <div>
-            <CodeChunk code={`graph pie, over(ur0) plabel(_all percent) title(Class Interval) legend(cols(4))\ngraph export "pie01.png", replace`} language="stata" />
-            <CodeChunk code={`. graph pie, over(ur0) plabel(_all percent) title(Class Interval) legend(cols(4))\n. graph export "pie01.png", replace\n(file pie01.png written in PNG format)`} language="output" />
+            <CodeChunk code={`graph pie, over(ur0) plabel(_all percent) title(Class Interval) legend(cols(4))\ngraph export "pie01.png", replace`} lang="stata" />
+            <CodeChunk code={`. graph pie, over(ur0) plabel(_all percent) title(Class Interval) legend(cols(4))\n. graph export "pie01.png", replace\n(file pie01.png written in PNG format)`} lang="output" />
             <ZoomImage src="https://astalsi401.github.io/assets/images/pie01.png" />
           </div>
         ),
@@ -51,8 +51,8 @@ class Content extends React.Component {
         title: "散點圖",
         content: (
           <div>
-            <CodeChunk code={`clear\ninput year crate\n1987 612.5\n1988 640.6\n1989 666.9\n1990 729.6\n1991 758.2\n1992 757.7\n1993 747.1\n1994 713.6\n1995 684.5\n1996 636.6\n1997 611.0\n1998 567.6\n1999 523.0\n2000 506.5\n2001 504.5\n2002 494.4\n2003 475.8\n2004 463.2\n2005 469.0\n2006 479.3\n2007 471.8\n2008 458.6\n2009 431.9\n2010 403.6\nend\nlab var year "Year"\ntwoway (scatter crate year, c(l)), /// /*c(l) 用線將點連起來*/\n   ylabel(, angle(0))              ///\n   ytitle("Violent Crime Rate")\ngraph export "sca01.png", replace`} language="stata" />
-            <CodeChunk code={`. clear\n. input year crate\n      year crate\n   1. 1987 612.5\n   2. 1988 640.6\n   3. 1989 666.9\n   4. 1990 729.6\n   5. 1991 758.2\n   6. 1992 757.7\n   7. 1993 747.1\n   8. 1994 713.6\n   9. 1995 684.5\n  10. 1996 636.6\n  11. 1997 611.0\n  12. 1998 567.6\n  13. 1999 523.0\n  14. 2000 506.5\n  15. 2001 504.5\n  16. 2002 494.4\n  17. 2003 475.8\n  18. 2004 463.2\n  19. 2005 469.0\n  20. 2006 479.3\n  21. 2007 471.8\n  22. 2008 458.6\n  23. 2009 431.9\n  24. 2010 403.6\n  25. end\n. lab var year "Year"\n. twoway (scatter crate year, c(l)), /// /*c(l) 用線將點連起來*/\n>    ylabel(, angle(0))              ///\n>    ytitle("Violent Crime Rate")\n.  graph export "sca01.png", replace\n(file sca01.png written in PNG format)`} language="output" />
+            <CodeChunk code={`clear\ninput year crate\n1987 612.5\n1988 640.6\n1989 666.9\n1990 729.6\n1991 758.2\n1992 757.7\n1993 747.1\n1994 713.6\n1995 684.5\n1996 636.6\n1997 611.0\n1998 567.6\n1999 523.0\n2000 506.5\n2001 504.5\n2002 494.4\n2003 475.8\n2004 463.2\n2005 469.0\n2006 479.3\n2007 471.8\n2008 458.6\n2009 431.9\n2010 403.6\nend\nlab var year "Year"\ntwoway (scatter crate year, c(l)), /// /*c(l) 用線將點連起來*/\n   ylabel(, angle(0))              ///\n   ytitle("Violent Crime Rate")\ngraph export "sca01.png", replace`} lang="stata" />
+            <CodeChunk code={`. clear\n. input year crate\n      year crate\n   1. 1987 612.5\n   2. 1988 640.6\n   3. 1989 666.9\n   4. 1990 729.6\n   5. 1991 758.2\n   6. 1992 757.7\n   7. 1993 747.1\n   8. 1994 713.6\n   9. 1995 684.5\n  10. 1996 636.6\n  11. 1997 611.0\n  12. 1998 567.6\n  13. 1999 523.0\n  14. 2000 506.5\n  15. 2001 504.5\n  16. 2002 494.4\n  17. 2003 475.8\n  18. 2004 463.2\n  19. 2005 469.0\n  20. 2006 479.3\n  21. 2007 471.8\n  22. 2008 458.6\n  23. 2009 431.9\n  24. 2010 403.6\n  25. end\n. lab var year "Year"\n. twoway (scatter crate year, c(l)), /// /*c(l) 用線將點連起來*/\n>    ylabel(, angle(0))              ///\n>    ytitle("Violent Crime Rate")\n.  graph export "sca01.png", replace\n(file sca01.png written in PNG format)`} lang="output" />
             <ZoomImage src="https://astalsi401.github.io/assets/images/sca01.png" />
           </div>
         ),
@@ -61,8 +61,8 @@ class Content extends React.Component {
         title: "盒狀圖",
         content: (
           <div>
-            <CodeChunk code={`clear\ninput gender x\n0 5\n0 2\n0 7\n0 9\n0 3\n0 4\n0 3\n0 1\n0 3\n0 8\n1 3\n1 5\n1 7\n1 4\n1 5\n1 6\n1 7\n1 6\n1 5\n1 4\nend\nlab var gender "gender"\nlab def gender 0 "Male" 1 "Female", modify\nlab val gender gender\ngraph box x, over (gender) ytitle("抽菸次數/週") b1title("性別") \n                          /*b1title: b1=下排第一層*/\ngraph export "box01.png", replace`} language="stata" />
-            <CodeChunk code={`. clear\n. input gender x\n    gender x\n 1. 0 5\n 2. 0 2\n 3. 0 7\n 4. 0 9\n 5. 0 3\n 6. 0 4\n 7. 0 3\n 8. 0 1\n 9. 0 3\n10. 0 8\n11. 1 3\n12. 1 5\n13. 1 7\n14. 1 4\n15. 1 5\n16. 1 6\n17. 1 7\n18. 1 6\n19. 1 5\n20. 1 4\n21. end\n. lab var gender "gender"\n. lab def gender 0 "Male" 1 "Female", modify\n. lab val gender gender\n. graph box x, over (gender) ytitle("抽菸次數/週") b1title("性別") \n.                           /*b1title: b1=下排第一層*/\n. graph export "box01.png", replace\n(file box01.png written in PNG format)`} language="output" />
+            <CodeChunk code={`clear\ninput gender x\n0 5\n0 2\n0 7\n0 9\n0 3\n0 4\n0 3\n0 1\n0 3\n0 8\n1 3\n1 5\n1 7\n1 4\n1 5\n1 6\n1 7\n1 6\n1 5\n1 4\nend\nlab var gender "gender"\nlab def gender 0 "Male" 1 "Female", modify\nlab val gender gender\ngraph box x, over (gender) ytitle("抽菸次數/週") b1title("性別") \n                          /*b1title: b1=下排第一層*/\ngraph export "box01.png", replace`} lang="stata" />
+            <CodeChunk code={`. clear\n. input gender x\n    gender x\n 1. 0 5\n 2. 0 2\n 3. 0 7\n 4. 0 9\n 5. 0 3\n 6. 0 4\n 7. 0 3\n 8. 0 1\n 9. 0 3\n10. 0 8\n11. 1 3\n12. 1 5\n13. 1 7\n14. 1 4\n15. 1 5\n16. 1 6\n17. 1 7\n18. 1 6\n19. 1 5\n20. 1 4\n21. end\n. lab var gender "gender"\n. lab def gender 0 "Male" 1 "Female", modify\n. lab val gender gender\n. graph box x, over (gender) ytitle("抽菸次數/週") b1title("性別") \n.                           /*b1title: b1=下排第一層*/\n. graph export "box01.png", replace\n(file box01.png written in PNG format)`} lang="output" />
             <ZoomImage src="https://astalsi401.github.io/assets/images/box01.png" />
           </div>
         ),

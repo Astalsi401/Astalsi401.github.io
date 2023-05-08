@@ -332,10 +332,10 @@ class Content extends React.Component {
                   可利用矩陣次方進行計算
                   <br />
                 </p>
-                <CodeChunk code={`X <- matrix(c(0,1,0,0,0,1,\n  1,0,1,0,0,0,\n  0,1,0,1,1,1,\n  0,0,1,0,1,0,\n  0,0,1,1,0,0,\n  1,0,1,0,0,0), 6, byrow = T)\nX`} language="r" />
-                <CodeChunk code={`##      [,1] [,2] [,3] [,4] [,5] [,6]\n## [1,]    0    1    0    0    0    1\n## [2,]    1    0    1    0    0    0\n## [3,]    0    1    0    1    1    1\n## [4,]    0    0    1    0    1    0\n## [5,]    0    0    1    1    0    0\n## [6,]    1    0    1    0    0    0`} language="output" />
-                <CodeChunk code={`X2 <- X %^% 2\n# 例：在兩步之內能連結到a的有\n# a-b-a\n# a-f-a\n# c-b-a\n# c-f-a\n# 因此[a,a]=2 [a,c]=2\nX2`} language="r" />
-                <CodeChunk code={`##      [,1] [,2] [,3] [,4] [,5] [,6]\n## [1,]    2    0    2    0    0    0\n## [2,]    0    2    0    1    1    2\n## [3,]    2    0    4    1    1    0\n## [4,]    0    1    1    2    1    1\n## [5,]    0    1    1    1    2    1\n## [6,]    0    2    0    1    1    2`} language="output" />
+                <CodeChunk code={`X <- matrix(c(0,1,0,0,0,1,\n  1,0,1,0,0,0,\n  0,1,0,1,1,1,\n  0,0,1,0,1,0,\n  0,0,1,1,0,0,\n  1,0,1,0,0,0), 6, byrow = T)\nX`} lang="r" />
+                <CodeChunk code={`##      [,1] [,2] [,3] [,4] [,5] [,6]\n## [1,]    0    1    0    0    0    1\n## [2,]    1    0    1    0    0    0\n## [3,]    0    1    0    1    1    1\n## [4,]    0    0    1    0    1    0\n## [5,]    0    0    1    1    0    0\n## [6,]    1    0    1    0    0    0`} lang="output" />
+                <CodeChunk code={`X2 <- X %^% 2\n# 例：在兩步之內能連結到a的有\n# a-b-a\n# a-f-a\n# c-b-a\n# c-f-a\n# 因此[a,a]=2 [a,c]=2\nX2`} lang="r" />
+                <CodeChunk code={`##      [,1] [,2] [,3] [,4] [,5] [,6]\n## [1,]    2    0    2    0    0    0\n## [2,]    0    2    0    1    1    2\n## [3,]    2    0    4    1    1    0\n## [4,]    0    1    1    2    1    1\n## [5,]    0    1    1    1    2    1\n## [6,]    0    2    0    1    1    2`} lang="output" />
               </li>
               <li>Degree：與其他actors的直接連結數目</li>
               <li>In-degree：從其他actors接收的連結</li>
@@ -477,8 +477,8 @@ class Content extends React.Component {
                 </p>
               </li>
             </ul>
-            <CodeChunk code={``} language="r" />
-            <CodeChunk code={``} language="output" />
+            <CodeChunk code={``} lang="r" />
+            <CodeChunk code={``} lang="output" />
           </div>
         ),
       },
@@ -486,8 +486,8 @@ class Content extends React.Component {
         title: "",
         content: (
           <div>
-            <CodeChunk code={``} language="r" />
-            <CodeChunk code={``} language="output" />
+            <CodeChunk code={``} lang="r" />
+            <CodeChunk code={``} lang="output" />
           </div>
         ),
       },

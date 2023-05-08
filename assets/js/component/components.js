@@ -142,7 +142,7 @@ class CodeChunk extends React.Component {
             <path fill="none" d="M2.5 3 L5.5 3 Q6.5 3,6.5 4 L6.5 8 Q6.5 9,5.5 9 L2.5 9 Q1.5 9,1.5 8 L1.5 4 Q1.5 3,2.5 3"></path>
           </svg>
         </a>
-        <code children={this.props.code} className={`lang-${this.props.language}`} />
+        <code children={this.props.code} className={`lang-${this.props.lang}`} />
       </pre>
     );
   }
@@ -164,7 +164,7 @@ class CodeChunkFromFile extends React.Component {
   }
   render() {
     if (this.state.loaded) {
-      return <CodeChunk code={this.state.code} language={this.props.lang} />;
+      return <CodeChunk code={this.state.code} lang={this.props.lang} />;
     }
   }
 }

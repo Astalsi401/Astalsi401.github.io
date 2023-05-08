@@ -61,8 +61,8 @@ class Content extends React.Component {
             </ol>
             <div className="my-2">
               <div className="text-bold text-large">範例：</div>
-              <CodeChunk code={`clear\ninput g stress rank\n1 12 10\n1 15 11\n1 4  1\n1 7  3\n1 8  5\n1 16 12\n1 20 15\n1 10 8\n1 8  5\n2 23 17\n2 11 9\n2 24 18\n2 18 13.5\n2 18 13.5\n2 6  2  \n2 9  7\n2 8  5\n2 21 16\nend\n\nranksum stress, by(g)`} language="stata" />
-              <CodeChunk code={`. clear\n\n. input g stress rank\n\n             g     stress       rank\n  1. 1 12 10\n  2. 1 15 11\n  3. 1 4  1\n  4. 1 7  3\n  5. 1 8  5\n  6. 1 16 12\n  7. 1 20 15\n  8. 1 10 8\n  9. 1 8  5\n 10. 2 23 17\n 11. 2 11 9\n 12. 2 24 18\n 13. 2 18 13.5\n 14. 2 18 13.5\n 15. 2 6  2  \n 16. 2 9  7\n 17. 2 8  5\n 18. 2 21 16\n 19. end\n\n. \n. ranksum stress, by(g)\n\nTwo-sample Wilcoxon rank-sum (Mann-Whitney) test\n\n           g |      obs    rank sum    expected\n-------------+---------------------------------\n           1 |        9          70        85.5\n           2 |        9         101        85.5\n-------------+---------------------------------\n    combined |       18         171         171\n\nunadjusted variance      128.25\nadjustment for ties       -0.66\n                     ----------\nadjusted variance        127.59\n\nHo: stress(g==1) = stress(g==2)\n             z =  -1.372\n    Prob > |z| =   0.1700`} language="output" />
+              <CodeChunk code={`clear\ninput g stress rank\n1 12 10\n1 15 11\n1 4  1\n1 7  3\n1 8  5\n1 16 12\n1 20 15\n1 10 8\n1 8  5\n2 23 17\n2 11 9\n2 24 18\n2 18 13.5\n2 18 13.5\n2 6  2  \n2 9  7\n2 8  5\n2 21 16\nend\n\nranksum stress, by(g)`} lang="stata" />
+              <CodeChunk code={`. clear\n\n. input g stress rank\n\n             g     stress       rank\n  1. 1 12 10\n  2. 1 15 11\n  3. 1 4  1\n  4. 1 7  3\n  5. 1 8  5\n  6. 1 16 12\n  7. 1 20 15\n  8. 1 10 8\n  9. 1 8  5\n 10. 2 23 17\n 11. 2 11 9\n 12. 2 24 18\n 13. 2 18 13.5\n 14. 2 18 13.5\n 15. 2 6  2  \n 16. 2 9  7\n 17. 2 8  5\n 18. 2 21 16\n 19. end\n\n. \n. ranksum stress, by(g)\n\nTwo-sample Wilcoxon rank-sum (Mann-Whitney) test\n\n           g |      obs    rank sum    expected\n-------------+---------------------------------\n           1 |        9          70        85.5\n           2 |        9         101        85.5\n-------------+---------------------------------\n    combined |       18         171         171\n\nunadjusted variance      128.25\nadjustment for ties       -0.66\n                     ----------\nadjusted variance        127.59\n\nHo: stress(g==1) = stress(g==2)\n             z =  -1.372\n    Prob > |z| =   0.1700`} lang="output" />
             </div>
           </div>
         ),
@@ -117,14 +117,14 @@ class Content extends React.Component {
             </ol>
             <div className="my-2">
               <div className="text-bold text-large">範例：</div>
-              <CodeChunk code={`clear\ninput g reward\n1 20\n1 15\n1 17\n1 13\n1 18\n1 16\n2 14\n2 8\n2 11\n2 10\n2 6\n2 9\n3 12\n3 11\n3 9\n3 5\n3 6\n3 7\nend`} language="stata" />
-              <CodeChunk code={`. clear\n\n. input g reward\n\n             g     reward\n  1. 1 20\n  2. 1 15\n  3. 1 17\n  4. 1 13\n  5. 1 18\n  6. 1 16\n  7. 2 14\n  8. 2 8\n  9. 2 11\n 10. 2 10\n 11. 2 6\n 12. 2 9\n 13. 3 12\n 14. 3 11\n 15. 3 9\n 16. 3 5\n 17. 3 6\n 18. 3 7\n 19. end`} language="output" />
+              <CodeChunk code={`clear\ninput g reward\n1 20\n1 15\n1 17\n1 13\n1 18\n1 16\n2 14\n2 8\n2 11\n2 10\n2 6\n2 9\n3 12\n3 11\n3 9\n3 5\n3 6\n3 7\nend`} lang="stata" />
+              <CodeChunk code={`. clear\n\n. input g reward\n\n             g     reward\n  1. 1 20\n  2. 1 15\n  3. 1 17\n  4. 1 13\n  5. 1 18\n  6. 1 16\n  7. 2 14\n  8. 2 8\n  9. 2 11\n 10. 2 10\n 11. 2 6\n 12. 2 9\n 13. 3 12\n 14. 3 11\n 15. 3 9\n 16. 3 5\n 17. 3 6\n 18. 3 7\n 19. end`} lang="output" />
               <p>Stata算出H=11.038</p>
-              <CodeChunk code={`kwallis reward, by(g)`} language="stata" />
-              <CodeChunk code={`. kwallis reward, by(g)\n\nKruskal-Wallis equality-of-populations rank test\n\n  +--------------------+\n  | g | Obs | Rank Sum |\n  |---+-----+----------|\n  | 1 |   6 |    92.00 |\n  | 2 |   6 |    44.50 |\n  | 3 |   6 |    34.50 |\n  +--------------------+\n\nchi-squared =    11.038 with 2 d.f.\nprobability =     0.0040\n\nchi-squared with ties =    11.072 with 2 d.f.\nprobability =     0.0039`} language="output" />
+              <CodeChunk code={`kwallis reward, by(g)`} lang="stata" />
+              <CodeChunk code={`. kwallis reward, by(g)\n\nKruskal-Wallis equality-of-populations rank test\n\n  +--------------------+\n  | g | Obs | Rank Sum |\n  |---+-----+----------|\n  | 1 |   6 |    92.00 |\n  | 2 |   6 |    44.50 |\n  | 3 |   6 |    34.50 |\n  +--------------------+\n\nchi-squared =    11.038 with 2 d.f.\nprobability =     0.0040\n\nchi-squared with ties =    11.072 with 2 d.f.\nprobability =     0.0039`} lang="output" />
               <p>df=2 以組數來計算df</p>
-              <CodeChunk code={`di invchi2tail(2, .05)`} language="stata" />
-              <CodeChunk code={`. di invchi2tail(2, .05)\n5.9914645`} language="output" />
+              <CodeChunk code={`di invchi2tail(2, .05)`} lang="stata" />
+              <CodeChunk code={`. di invchi2tail(2, .05)\n5.9914645`} lang="output" />
             </div>
           </div>
         ),

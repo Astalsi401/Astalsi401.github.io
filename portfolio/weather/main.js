@@ -41,39 +41,43 @@ function Content() {
       };
     });
     return (
-      <div>
-        <select name="city" id="city" onChange={handleLocationChange}>
-          {cities.map((c) => (
-            <option key={c.city} value={c.city}>
-              {c.city}
-            </option>
-          ))}
-        </select>
-        <div>
-          <div>
-            <span className="text-bold">目前溫度</span>
-            <br />
-            {weather.current_weather.temperature}
+      <div className="container-fluid px-2">
+        <div className="row my-2">
+          <div class="col-sm-3">
+            <select name="city" id="city" onChange={handleLocationChange}>
+              {cities.map((c) => (
+                <option key={c.city} value={c.city}>
+                  {c.city}
+                </option>
+              ))}
+            </select>
           </div>
-          <div>
-            <span className="text-bold">WMO Weather interpretation codes</span>
-            <br />
-            {weather.current_weather.weathercode}
-          </div>
-          <div>
-            <span className="text-bold">雲量</span>
-            <br />
-            {weather.current_weather.cloudcover}
-          </div>
-          <div>
-            <span className="text-bold">降雨機率</span>
-            <br />
-            {weather.current_weather.precipitation_probability}
+          <div class="col-sm-9">
+            <div>
+              <span className="text-bold">目前溫度</span>
+              <br />
+              {weather.current_weather.temperature}
+            </div>
+            <div>
+              <span className="text-bold">WMO Weather interpretation codes</span>
+              <br />
+              {weather.current_weather.weathercode}
+            </div>
+            <div>
+              <span className="text-bold">雲量</span>
+              <br />
+              {weather.current_weather.cloudcover}
+            </div>
+            <div>
+              <span className="text-bold">降雨機率</span>
+              <br />
+              {weather.current_weather.precipitation_probability}
+            </div>
           </div>
         </div>
-        <div className="d-flex flex-wrap">
+        <div className="row my-2">
           {forecast.map((d) => (
-            <div key={d.time} className="my-2 flex-grow-1">
+            <div key={d.time} className="col-md-8 mx-auto">
               <div>{d.time}</div>
               <div>{d.wmo}</div>
               <div>{d.temp_max}</div>

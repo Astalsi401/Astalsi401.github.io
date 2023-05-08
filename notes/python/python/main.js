@@ -78,7 +78,7 @@ class Content extends React.Component {
           <div>
             <ul>
               <li>在function中對column資料進行處理，並回傳新資料</li>
-              <CodeChunk code="series.map(function)" language="py" />
+              <CodeChunk code="series.map(function)" lang="py" />
             </ul>
           </div>
         ),
