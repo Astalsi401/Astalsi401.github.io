@@ -3,6 +3,7 @@ pre {
   code {
     --scrollBar-w: 2px;
     --scrollBar-bg: var(--primary-300);
+    padding-bottom: var(--unit-2);
     display: block;
     overflow: auto;
     max-height: min(60dvh, 400px);
@@ -23,7 +24,7 @@ pre {
   }
 }
 code {
-  padding: 0 var(--unit-1) var(--unit-2);
+  padding: 0 var(--unit-1);
 }
 pre,
 code {
