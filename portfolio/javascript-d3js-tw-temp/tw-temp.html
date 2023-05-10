@@ -17,35 +17,23 @@
     <script src=" https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js "></script>
     <link href=" https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css " rel="stylesheet">
     <!-- react -->
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script> -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <!-- babel -->
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <!-- component -->
     <script defer type="text/jsx" src="https://astalsi401.github.io/assets/js/component/components.js"></script>
+    <script defer type="text/jsx" src="./graph/js/tw-temp.js"></script>
     <script defer type="text/jsx" src="https://astalsi401.github.io/assets/js/component/app.js"></script>
     <script defer type="text/jsx" src="./render.js"></script>
     <link rel="stylesheet" href="https://astalsi401.github.io/assets/style/main.min.css">
+    <link rel="stylesheet" href="./graph/css/graph.min.css">
 </head>
 
 <body>
-    <div id="App-header"></div>
-    <div id="App">
-        <main id="main-content" class="container-xl shadow-lg p-3">
-            <h1 class="my-5 text-center"></h1>
-            <section class="my-4">
-                <h3 class="my-t text-center"></h3>
-                <a href="https://archive-api.open-meteo.com/v1/archive?latitude=25.05&longitude=121.53&start_date=2023-04-19&end_date=2023-05-03&hourly=temperature_2m">https://archive-api.open-meteo.com/v1/archive?latitude=25.05&longitude=121.53&start_date=2023-04-19&end_date=2023-05-03&hourly=temperature_2m</a>
-                <div id="description"></div>
-                <div id="graph"></div>
-            </section>
-        </main>
-    </div>
-    <footer>
-        <!-- d3.js graph -->
-        <script src="https://d3js.org/d3.v7.min.js"></script>
-        <script src="./graph/js/tw-map.js"></script>
-    </footer>
+    <div id="App"></div>
 </body>
 
 </html>

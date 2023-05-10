@@ -1,1 +1,1 @@
-ReactDOM.createRoot(document.getElementById("App-header")).render(<Header category="Portfolio" />);
+ReactDOM.createRoot(document.getElementById("App")).render(<App category="Portfolio" title="tw temp" class="container shadow-lg p-3" />);

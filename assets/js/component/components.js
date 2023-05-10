@@ -39,7 +39,7 @@ class Sidebar extends React.Component {
   render() {
     if (this.state.indexLoaded) {
       return (
-        <aside id="sidebar" className={this.props.sidebarActive && active}>
+        <aside id="sidebar" className={this.props.sidebarActive ? active : undefined}>
           <h1 className="my-5 text-center">
             <a id="sidebarAnchor" className="text-decoration-none" href={this.state.index.href}>
               {this.state.index.category}
@@ -72,7 +72,9 @@ class Accessibility extends React.Component {
     return (
       <div className="accessibility">
         {this.access.map((a) => (
-          <a href={a.href}>{a.text}</a>
+          <a key={a.text} href={a.href}>
+            {a.text}
+          </a>
         ))}
       </div>
     );
@@ -83,6 +85,8 @@ class Header extends React.Component {
     super(props);
     this.state = { sidebarActive: false };
     this.wrapperRef = React.createRef();
+    document.removeEventListener("mousedown", this.clickOut);
+    document.removeEventListener("focusin", this.hadleFocusIn);
   }
   hadleFocusIn = (e) => this.setState({ sidebarActive: this.wrapperRef.current.contains(e.target) ? true : false });
   click = () => this.setState((prev) => ({ sidebarActive: !prev.sidebarActive }));
@@ -90,10 +94,6 @@ class Header extends React.Component {
   componentDidMount() {
     document.addEventListener("mousedown", this.clickOut);
     document.addEventListener("focusin", this.hadleFocusIn);
-  }
-  componentWillUnmount() {
-    document.removeEventListener("mousedown", this.clickOut);
-    document.removeEventListener("focusin", this.hadleFocusIn);
   }
   render() {
     return (
