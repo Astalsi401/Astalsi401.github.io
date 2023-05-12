@@ -33,10 +33,10 @@ function TempGraph() {
 
   const handleResize = () => {
     const { width, height } = graphRef.current.getBoundingClientRect();
-    setWidth(parseInt(width));
-    setHeight(parseInt(height));
-    setXScale((prev) => new scaleLinear(prev.domain, [0, parseInt(width)]));
-    setYScale((prev) => new scaleLinear(prev.domain, [0, parseInt(height)]));
+    setWidth(width);
+    setHeight(height);
+    setXScale((prev) => new scaleLinear(prev.domain, [0, width]));
+    setYScale((prev) => new scaleLinear(prev.domain, [0, height]));
   };
 
   React.useEffect(() => {
@@ -48,7 +48,7 @@ function TempGraph() {
             .map((d, i) => {
               const date = new Date(d);
               const timestemp = new Date(`${date.getFullYear()}-${date.getMonth() + 1}`);
-              return { year: date.getFullYear(), month: date.getMonth() + 1, timestemp: Math.floor(timestemp.getTime() / 864000000), time: `${date.getFullYear()}-${date.getMonth() + 1}`, mean: (daily.temperature_2m_max[i] + daily.temperature_2m_min[i]) / 2, max: daily.temperature_2m_max[i], min: daily.temperature_2m_min[i], rain: daily.rain_sum[i] };
+              return { year: date.getFullYear(), month: date.getMonth(), timestemp: Math.floor(timestemp.getTime() / 864000000), time: `${date.getFullYear()}-${date.getMonth() + 1}`, mean: (daily.temperature_2m_max[i] + daily.temperature_2m_min[i]) / 2, max: daily.temperature_2m_max[i], min: daily.temperature_2m_min[i], rain: daily.rain_sum[i] };
             })
             .reduce((acc, { year, month, timestemp, time, mean, max, min, rain }) => {
               acc[time] = acc[time] || { year, month, timestemp, time, max: -Infinity, min: Infinity, rain: 0, days: 0, mean: 0 };
@@ -81,15 +81,14 @@ function TempGraph() {
         Loading...
       </div>
     );
+  console.log(yScale.range, yScale.domain, height, yScale.scale(1));
   return (
     <div>
       <div id="graph" ref={graphRef}>
         <svg>
           <g className="rects">
             {temp.map((d) => (
-              <g key={d.time} transform={`translate(${xScale.scale(d.year)},${yScale.scale(d.month)})`}>
-                <rect width={1} height={height / 12} data-date={d.time} data-maxtemp={d.max} data-mintemp={d.min} data-meantemp={d.mean}></rect>
-              </g>
+              <rect key={d.time} x={xScale.scale(d.year)} y={yScale.scale(d.month)} width={1} height={height / 12} data-date={d.time} data-maxtemp={d.max} data-mintemp={d.min} data-meantemp={d.mean}></rect>
             ))}
           </g>
         </svg>
