@@ -4,8 +4,9 @@
 .imgBlock {
   img {
     position: relative;
-    transition: transform var(--time);
     transform-origin: 0 0;
+    transition: transform var(--time);
+    transition-timing-function: ease-in-out;
     cursor: zoom-in;
   }
   &::before {
