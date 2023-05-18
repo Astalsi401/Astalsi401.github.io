@@ -637,6 +637,22 @@ table td {
      object-fit: none !important;
 }
 
+.background-size-contain {
+  background-size: contain !important;
+}
+
+.background-size-cover {
+  background-size: cover !important;
+}
+
+.background-size-fill {
+  background-size: fill !important;
+}
+
+.background-size-none {
+  background-size: none !important;
+}
+
 /* end of position value */
 .pointer {
   cursor: pointer;
@@ -4200,11 +4216,27 @@ pre.language-output {
 .portfolio:hover, .portfolio:focus {
   transform: scale(var(--scale));
 }
-.portfolio:hover .tags, .portfolio:focus .tags {
+.portfolio:hover .tag, .portfolio:focus .tag {
   opacity: 1;
+  filter: blur(0);
+}
+.portfolio:hover .page-view, .portfolio:focus .page-view {
+  background-position: 50% 100%;
+}
+
+.page-logo {
+  background-size: contain;
+  background-position: 50% 50%;
+}
+
+.page-view {
+  transition: background-position calc(var(--time) * 10);
+  background-size: 100%;
+  background-position: 50% 0;
 }
 
 .portfolioThumb {
+  background-repeat: no-repeat;
   position: relative;
 }
 .portfolioThumb .tags {
@@ -4212,14 +4244,15 @@ pre.language-output {
   display: flex;
   align-items: end;
   padding: var(--unit-1);
-  transition: opacity var(--time);
   inset: 0;
-  background: var(--black-600);
-  opacity: 0;
 }
 .portfolioThumb .tag {
-  background: var(--white-600);
-  color: var(--black);
+  transition: opacity var(--time), filter var(--time);
+  transition-delay: calc(0.1s * var(--i));
+  background: var(--primary);
+  color: var(--white);
+  opacity: 0;
+  filter: blur(5px);
 }
 
 #header {

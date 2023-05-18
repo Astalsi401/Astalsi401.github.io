@@ -69,6 +69,9 @@
 @each $fit in $object-fit {
   @include builder(object-fit, $fit, "object-fit-#{$fit}");
 }
+@each $fit in $object-fit {
+  @include builder(background-size, $fit, "background-size-#{$fit}");
+}
 /* end of position value */
 .pointer {
   cursor: pointer;
