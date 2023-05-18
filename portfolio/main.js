@@ -9,16 +9,6 @@ class Portfolio extends React.Component {
     };
     this.ref = React.createRef();
   }
-  handleMouseEnter = (e) => {
-    const { height } = e.currentTarget.getBoundingClientRect();
-    if (e.currentTarget.querySelector(".page-view")) {
-      e.currentTarget.querySelector(".page-view").style.transform = `translateY(calc(-100% + ${height}px))`;
-      e.currentTarget.querySelector(".page-view").style.transition = "4s";
-    }
-  };
-  handleMouseLeave = (e) => {
-    if (e.currentTarget.querySelector(".page-view")) e.currentTarget.querySelector(".page-view").style.transform = `translateY(0)`;
-  };
   componentDidMount() {
     fetch("https://astalsi401.github.io/assets/js/json/index.json")
       .then((res) => res.json())
