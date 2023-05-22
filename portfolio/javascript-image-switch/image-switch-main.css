@@ -60,4 +60,17 @@
 .switch .next::before {
   right: 0;
   border-color: transparent transparent transparent var(--gray);
-}/*# sourceMappingURL=image-switch.css.map */
+}
+
+.switch2 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.img-cell {
+  display: block;
+  background-repeat: no-repeat;
+}/*# sourceMappingURL=image-switch-main.css.map */
