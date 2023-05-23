@@ -19,7 +19,7 @@
       opacity: 1;
     }
   }
-  .previous,
+  .prev,
   .next {
     position: absolute;
     top: 0;
@@ -45,7 +45,7 @@
       }
     }
   }
-  .previous {
+  .prev {
     left: 0;
     &::before {
       left: 0;
