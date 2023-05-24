@@ -1,0 +1,11 @@
+.scroll-on-hover {
+  width: 100%;
+  aspect-ratio: 16/9;
+  transition: background-position 10s;
+  background-image: url("https://astalsi401.github.io/assets/images/HealthcareB2B-page1.png");
+  background-size: 100%;
+  background-position: 50% 0;
+}
+.scroll-on-hover:hover {
+  background-position: 50% 100%;
+}/*# sourceMappingURL=image-scroll-onhover.css.map */
