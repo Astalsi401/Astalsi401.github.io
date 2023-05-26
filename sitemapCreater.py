@@ -16,7 +16,7 @@ def getFiles(path):
     Returns:
         list: A list of URLs of all HTML files found in the given directory and its subdirectories.
     '''
-    return ['https://astalsi401.github.io/' + re.sub(r'\\', '/', os.path.join(root, f)) for root, dirs, files in os.walk(path) for f in files if re.findall(r'\.html$', f)]
+    return ['https://astalsi401.github.io/' + re.sub(r'&', '&amp;', re.sub(r'\\', '/', os.path.join(root, f))) for root, dirs, files in os.walk(path) for f in files if re.findall(r'\.html$', f)]
 
 
 def url(file):

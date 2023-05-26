@@ -11,5 +11,13 @@ const contents = [
     id: "btn1-scss",
     content: <CodeChunkFromFile path="./btn1.scss" lang="scss" />,
   },
+  {
+    id: "btn2-html",
+    content: <CodeChunk code='<a class="btn2"><span class="text">btn2</span><span class="blur"></span></a>' lang="html" />,
+  },
+  {
+    id: "btn2-scss",
+    content: <CodeChunkFromFile path="./btn2.scss" lang="scss" />,
+  },
 ];
 contents.forEach((item) => ReactDOM.createRoot(document.getElementById(item.id)).render(item.content));

@@ -1,0 +1,63 @@
+.btn2 {
+  --bg: rgb(255, 255, 255);
+  --main: rgb(255, 0, 0);
+  --secondary: rgb(255, 145, 0);
+  --third: rgb(255, 251, 0);
+  --black: rgb(0, 0, 0);
+  color: var(--bg);
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 2px;
+  &,
+  .blur,
+  .text {
+    display: block;
+    border-radius: 10px;
+  }
+  .text {
+    position: relative;
+    padding: 10px;
+    background: var(--black);
+    z-index: 1;
+  }
+  .blur {
+    transition: 0.4s;
+    content: "";
+    position: absolute;
+    inset: 0px;
+    overflow: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      border-radius: 50%;
+      width: 150%;
+      aspect-ratio: 1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(0);
+      background: conic-gradient(var(--main) 0deg, var(--secondary) 120deg, var(--third) 240deg, var(--main) 360deg);
+    }
+  }
+  &:hover {
+    .blur {
+      inset: -5px;
+      filter: blur(5px);
+      &::before {
+        animation-name: rotate;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
