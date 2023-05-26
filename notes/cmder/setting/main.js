@@ -98,7 +98,7 @@ class Content extends React.Component {
             </li>
             <li>
               刪除文件
-              <CodeChunk code="git filter-branch --force --index-filter 'git rm -rf --cached --ignore-unmatch 文件/文件夹' --prune-empty --tag-name-filter cat -- --all" />
+              <CodeChunk code="git filter-branch --force --index-filter 'git rm -rf --cached --ignore-unmatch assets/images/expoPage1.png' --prune-empty --tag-name-filter cat -- --all" />
             </li>
             <li>
               清理殘餘歷史紀錄
