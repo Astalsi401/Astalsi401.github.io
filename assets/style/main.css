@@ -4127,6 +4127,7 @@ pre.language-output {
 
 .imgBlock img {
   position: relative;
+  z-index: 2;
   transform-origin: 0 0;
   transition: transform var(--time);
   transition-timing-function: ease-in-out;

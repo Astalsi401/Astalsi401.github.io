@@ -4,6 +4,7 @@
 .imgBlock {
   img {
     position: relative;
+    z-index: calc(index($z-index, sidebar));
     transform-origin: 0 0;
     transition: transform var(--time);
     transition-timing-function: ease-in-out;
