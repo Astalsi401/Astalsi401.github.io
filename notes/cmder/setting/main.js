@@ -80,6 +80,24 @@ class Content extends React.Component {
           </ul>
         </section>
         <section className="my-4">
+          <h3 className="my-3">清理.git</h3>
+          <ol>
+            <li>
+              運行bash.exe
+              <CodeChunk code="D:\\Tools\\Git\\bin\\bash.exe" />
+            </li>
+            <li>
+              列出pack包裏最大的5個文件(自行替換<code>.idx</code>檔名)
+              <CodeChunk code="git verify-pack -v .git/objects/pack/pack-a2ac68d28ef70a111b4db707db5c7a6b77275871.idx | sort -k 3 -n | tail -5" />
+              <ZoomImage src="https://astalsi401.github.io/assets/images/cmder-git-clean1.png" />
+            </li>
+            <li>
+              列出最大的文件名稱
+              <CodeChunk code="git rev-list --objects --all | grep 4f1a0424c890e4d3fa9b33dfe0d021ac119eb2be" />
+            </li>
+          </ol>
+        </section>
+        <section className="my-4">
           <h3 id="cmder_sublime" className="my-3">
             Cmder & Sublime Text 3
           </h3>
