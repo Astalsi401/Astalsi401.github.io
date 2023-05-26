@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Button Effects</title>
+    <title>Button Hover Effects</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F8SLV521P4"></script>
     <script>
@@ -34,15 +34,29 @@
     <div id="App-header"></div>
     <div id="App">
         <main id="main-content" class="container-xl shadow-lg p-3">
-            <h1 class="my-5 text-center">Button Effects</h1>
+            <h1 class="my-5 text-center">Button Hover Effects</h1>
             <section class="my-4 row">
-                <div class="col-sm-3"></div>
-                <div class="col-sm-3"></div>
-                <div class="col-sm-3"></div>
+                <div class="my-2 mx-auto col-sm-3 p-3">
+                    <a class="btn1">btn1
+                        <span style="--i:0;"></span>
+                        <span style="--i:0;"></span>
+                        <span style="--i:1;"></span>
+                        <span style="--i:2;"></span>
+                    </a>
+                </div>
+                <div class="my-2">
+                    Html:
+                    <div id="btn1-html"></div>
+                </div>
+                <div class="my-2">
+                    Scss:
+                    <div id="btn1-scss"></div>
+                </div>
             </section>
         </main>
     </div>
     <footer>
+        <link rel="stylesheet" href="./btn-effect-collections.min.css">
     </footer>
 </body>
 
