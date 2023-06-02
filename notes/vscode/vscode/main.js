@@ -99,6 +99,10 @@ class Content extends React.Component {
               name: "將資料夾自工作區移除",
               keys: [[this.shift, this.alt, "Del"]],
             },
+            {
+              name: "選取所有已定義的物件",
+              keys: [[this.ctrl, this.shift, "O"]],
+            },
           ],
         },
         {
