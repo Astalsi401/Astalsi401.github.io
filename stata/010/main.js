@@ -5,7 +5,7 @@ class Content extends React.Component {
       {
         title: "",
         content: (
-          <div>
+          <>
             <ol>
               <li>
                 參數顯著性檢驗：
@@ -173,18 +173,18 @@ class Content extends React.Component {
               <CodeChunk code={`prtesti 50 .54 .46`} lang="stata" />
               <CodeChunk code={`. prtesti 50 .54 .46\n\nOne-sample test of proportion                      x: Number of obs =       50\n------------------------------------------------------------------------------\n             |       Mean   Std. Err.                     [95% Conf. Interval]\n-------------+----------------------------------------------------------------\n           x |        .54    .070484                      .4018538    .6781462\n------------------------------------------------------------------------------\n    p = proportion(x)                                             z =   1.1350\nHo: p = 0.46\n\n    Ha: p < 0.46                 Ha: p != 0.46                 Ha: p > 0.46\n Pr(Z < z) = 0.8718         Pr(|Z| > |z|) = 0.2564          Pr(Z > z) = 0.1282`} lang="output" />
             </div>
-          </div>
+          </>
         ),
       },
     ];
   }
   render() {
     return (
-      <div>
+      <>
         {this.section.map((section) => (
           <Block title={section.title} content={section.content} />
         ))}
-      </div>
+      </>
     );
   }
 }

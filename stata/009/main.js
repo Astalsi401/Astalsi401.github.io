@@ -5,7 +5,7 @@ class Content extends React.Component {
       {
         title: "單因子變異數分析（One-way Anova）",
         content: (
-          <div>
+          <>
             <ol>
               <li>分析的目的是檢驗各組平均值是否相等，而判斷的準則是透過變異數的比較。</li>
               <li>在下例中，在同一班中，樣本的觀測值是不同的，由於這是隨機抽取的案例，因此其中的差異可視為隨機的差異，也稱為隨機誤差。在進行分析時，此類誤差的推算稱之為組內變異數。</li>
@@ -47,13 +47,13 @@ class Content extends React.Component {
               />
               <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/anova01.png" />
             </div>
-          </div>
+          </>
         ),
       },
       {
         title: "兩因子變異數分析（Twoway Anova）",
         content: (
-          <div>
+          <>
             <ol>
               <li>兩因子變異數分析的重點</li>
               <ol type="i">
@@ -98,18 +98,18 @@ class Content extends React.Component {
               />
               <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/twoway-anova07.png" />
             </div>
-          </div>
+          </>
         ),
       },
     ];
   }
   render() {
     return (
-      <div>
+      <>
         {this.section.map((section) => (
           <Block title={section.title} content={section.content} />
         ))}
-      </div>
+      </>
     );
   }
 }

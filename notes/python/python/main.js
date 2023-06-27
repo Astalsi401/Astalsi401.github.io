@@ -41,18 +41,18 @@ class Content extends React.Component {
       {
         title: "pip",
         content: (
-          <div>
+          <>
             儲存已安裝的libraries清單為reqs.txt
             <CodeChunk code={"pip freeze > reqs.txt"} />
             重新安裝儲存於reqs.txt的libraries
             <CodeChunk code={"pip install -r reqs.txt"} />
-          </div>
+          </>
         ),
       },
       {
         title: "讀取檔案",
         content: (
-          <div>
+          <>
             <table>
               <thead>
                 <tr>
@@ -62,50 +62,50 @@ class Content extends React.Component {
               </thead>
               <tbody>
                 {this.data.table.map((d) => (
-                  <tr>
+                  <tr key={d.mode}>
                     <td>{d.mode}</td>
                     <td>{d.meaning}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
-          </div>
+          </>
         ),
       },
       {
         title: "pandas",
         content: (
-          <div>
+          <>
             <ul>
               <li>在function中對column資料進行處理，並回傳新資料</li>
               <CodeChunk code="series.map(function)" lang="py" />
             </ul>
-          </div>
+          </>
         ),
       },
       {
         title: "日期格式",
         content: (
-          <div>
+          <>
             <ul>
               {this.data.format.map((d) => (
-                <li>
+                <li key={d.fm}>
                   <code>{d.fm}</code>：{d.des}
                 </li>
               ))}
             </ul>
-          </div>
+          </>
         ),
       },
     ];
   }
   render() {
     return (
-      <div>
+      <>
         {this.section.map((s) => (
           <Block title={s.title} content={s.content} />
         ))}
-      </div>
+      </>
     );
   }
 }

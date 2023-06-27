@@ -5,7 +5,7 @@ class Content extends React.Component {
       {
         title: "",
         content: (
-          <div>
+          <>
             <p>測試不同教育程度（大學 vs. 高中或以下）是否會影響生理健康狀況</p>
             <CodeChunk code={`\nclear\nuse "C:/Users/misti/Documents/Stata/社會一/社會統計/統計2-02/GSS2010.dta"\nset more off\n\ncapture drop college\nrecode educ (0/12=0 "high school and below") ///\n            (13/20=1 "College and beyond"), gen(college)\ntab educ college, m\nttest physhlth , by(college)`} lang="stata" />
             <CodeChunk
@@ -14,18 +14,18 @@ class Content extends React.Component {
             />
             <p>t value = 1.1944, P value&gt;0.05</p>
             <p>支持虛無假設，兩群體間沒有差異</p>
-          </div>
+          </>
         ),
       },
     ];
   }
   render() {
     return (
-      <div>
+      <>
         {this.section.map((section) => (
           <Block title={section.title} content={section.content} />
         ))}
-      </div>
+      </>
     );
   }
 }

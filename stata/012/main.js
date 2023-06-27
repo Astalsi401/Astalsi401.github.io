@@ -5,7 +5,7 @@ class Content extends React.Component {
       {
         title: "相關係數的公式推導",
         content: (
-          <div>
+          <>
             <img
               className="mx-auto d-block"
               src="data:image/png;base64,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"
@@ -65,13 +65,13 @@ class Content extends React.Component {
               width="202"
               heigh="56"
             />
-          </div>
+          </>
         ),
       },
       {
         title: "相關係數的意義",
         content: (
-          <div>
+          <>
             <ul>
               <li>相關係數介於-1到+1之間。</li>
               <li>相關係數若為負數，則代表兩變項為負相關，兩變項之間的關係是此消彼長。</li>
@@ -90,24 +90,24 @@ class Content extends React.Component {
                 </ul>
               </li>
             </ul>
-          </div>
+          </>
         ),
       },
       {
         title: "相關係數的限制",
         content: (
-          <div>
+          <>
             <p>相關係數僅適用于直線型的關係中。若兩變項之關係呈曲線狀，例如下圖的案例，年輕人看電視的時間隨著年齡的增長而減少，至40歲左右降至最低點，但隨著年齡的增長，逐漸離開工作崗位，年齡大的人有更多看電視的時間。</p>
             <CodeChunk code={`clear\ninput age tv\n1  9.8\n1  6.8\n3  3.9\n7  5\n9  8.2\n11 7.8\n15 3.5\n20 2\n21 3.6\n28 1.9\n31 2.4\n40 3\n43 2.5\n50 3.8\n52 4\n55 1.8\n60 4.2\n61 2.5\n70 3.2\n71 7.1\n77 6\n78 8.1\n79 4\n86 7.8\n88 9\nend\n\ngen age2=age^2\nreg tv age\n\ntwoway (sca tv age) (qfit tv age), ///\n    yti("Daiky TV Viewing") xti("Age") ///\n    ti("Age and Watching TV")\ngraph export cor01.png, replace\n\ncorr tv age`} lang="stata" />
             <CodeChunk code={`. clear\n\n. input age tv\n\n           age         tv\n  1. 1  9.8\n  2. 1  6.8\n  3. 3  3.9\n  4. 7  5\n  5. 9  8.2\n  6. 11 7.8\n  7. 15 3.5\n  8. 20 2\n  9. 21 3.6\n 10. 28 1.9\n 11. 31 2.4\n 12. 40 3\n 13. 43 2.5\n 14. 50 3.8\n 15. 52 4\n 16. 55 1.8\n 17. 60 4.2\n 18. 61 2.5\n 19. 70 3.2\n 20. 71 7.1\n 21. 77 6\n 22. 78 8.1\n 23. 79 4\n 24. 86 7.8\n 25. 88 9\n 26. end\n\n. gen age2=age^2\n\n. reg tv age\n\n      Source |       SS           df       MS      Number of obs   =        25\n-------------+----------------------------------  F(1, 23)        =      0.07\n       Model |  .429854802         1  .429854802   Prob > F        =    0.7979\n    Residual |  147.255751        23  6.40242396   R-squared       =    0.0029\n-------------+----------------------------------  Adj R-squared   =   -0.0404\n       Total |  147.685606        24  6.15356691   Root MSE        =    2.5303\n\n------------------------------------------------------------------------------\n          tv |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]\n-------------+----------------------------------------------------------------\n         age |   .0045551   .0175796     0.26   0.798     -.031811    .0409212\n       _cons |   4.683411   .8991879     5.21   0.000     2.823299    6.543523\n------------------------------------------------------------------------------\n\n. twoway (sca tv age) (qfit tv age), ///\n>        yti("Daiky TV Viewing") xti("Age") ///\n>        ti("Age and Watching TV")\n\n. graph export cor01.png, replace\n(file cor01.png written in PNG format)\n\n. corr tv age\n(obs=25)\n\n             |       tv      age\n-------------+------------------\n          tv |   1.0000\n         age |   0.0540   1.0000`} lang="output" />
             <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/cor01.png" />
-          </div>
+          </>
         ),
       },
       {
         title: "STATA相關係數範例",
         content: (
-          <div>
+          <>
             <div className="my-2">
               <div className="text-bold text-large">範例1：</div>
               <CodeChunk code={`clear\ninput str4 child height weight\n"A" 49 81\n"B" 50 88\n"C" 53 87\n"D" 55 99\n"E" 60 91\n"F" 55 89\n"G" 60 95\n"H" 50 90\nend\n\nlab var height "inches"\nlab var weight "lb"\n\ncorr height weight`} lang="stata" />
@@ -118,13 +118,13 @@ class Content extends React.Component {
               <CodeChunk code={`clear\ninput x y\n12 12\n10 8\n6  12\n16 11\n8  10\n9  8\n12 16\n11 15\nend\n. \ncorr x y\n\ncorr x y, cov\n\npwcorr x y, sig star(.05)`} lang="stata" />
               <CodeChunk code={`. clear\n\n. input x y\n\n             x          y\n  1. 12 12\n  2. 10 8\n  3. 6  12\n  4. 16 11\n  5. 8  10\n  6. 9  8\n  7. 12 16\n  8. 11 15\n  9. end\n\n. \n. corr x y\n(obs=8)\n\n             |        x        y\n-------------+------------------\n           x |   1.0000\n           y |   0.2421   1.0000\n\n\n. corr x y, cov\n(obs=8)\n\n             |        x        y\n-------------+------------------\n           x |  9.14286\n           y |  2.14286  8.57143\n\n\n. pwcorr x y, sig star(.05)\n\n             |        x        y\n-------------+------------------\n           x |   1.0000 \n             |\n             |\n           y |   0.2421   1.0000 \n             |   0.5636\n             |`} lang="output" />
             </div>
-          </div>
+          </>
         ),
       },
       {
         title: "偏相關係數（Partial Correlation）",
         content: (
-          <div>
+          <>
             <p>偏相關指移除掉掉第三個變項在其中的影響後，兩個變項之間的相關。可瞭解兩個變項之間原有的關係會不會因為第三個變項介入其中後，導致改變。</p>
             <div className="my-2">
               <div className="text-bold text-large">偏相關範例：</div>
@@ -156,18 +156,18 @@ class Content extends React.Component {
               <CodeChunk code={`. twoway (sca  y x if group==2, m(O)) ///\n>        (lfit y x if     group==2, lcolor(black)) ///\n>        (sca  y x if group==1, m(Oh)) ///\n>        (lfit y x if group==1, lcolor(gs12)) ///\n>        (lfit y x, lpattern(longdash) lcolor(red)), ///\n>        ylab(0(1)10, angle(0)) ///\n>        xlab(0(1)11) ///\n>        xline(1 2 3 4 5 6 7 8 9 10 11, lcolor(gs12)) ///\n>        yline(1 2 3 4 5 6 7 8 9 10, lcolor(gs12)) ///\n>        title(Conditional Relatioship) ///\n>        text(8.65 2   "全部樣本", place(e) color(red)) ///\n>        text(8    2   "相關係數＝0.67", place(e) color(black)) ///\n>        text(1    0.5 "Group 2樣本", place(e) color(red)) ///\n>        text(0.35 0.5 "相關係數＝0.58", place(e) color(black)) ///\n>        text(3    8   "Group 1樣本", place(e) color(red)) ///\n>        text(2.35 8   "相關係數＝0.09", place(e) color(black)) ///\n>        legend(lab(1 "Group 2") lab(2 "Group 2的迴歸預測線") ///\n>        lab(3 "Group 1") lab(4 "Group 1的迴歸預測線") ///\n>        lab(5 "全部樣本迴歸預測線"))    \n\n. graph export "sca02.png", replace                                       \n(file sca02.png written in PNG format)`} lang="output" />
               <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/sca02.png" />
             </div>
-          </div>
+          </>
         ),
       },
     ];
   }
   render() {
     return (
-      <div>
+      <>
         {this.section.map((section) => (
           <Block title={section.title} content={section.content} />
         ))}
-      </div>
+      </>
     );
   }
 }

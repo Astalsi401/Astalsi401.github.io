@@ -63,7 +63,7 @@ class Content extends React.Component {
   }
   render() {
     return (
-      <div>
+      <>
         <Block
           class="py-2 bg-white tuneSearch"
           content={
@@ -95,7 +95,7 @@ class Content extends React.Component {
             </div>
           }
         />
-      </div>
+      </>
     );
   }
 }

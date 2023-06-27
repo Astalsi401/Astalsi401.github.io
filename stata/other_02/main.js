@@ -4,16 +4,12 @@ class Content extends React.Component {
     this.section = [
       {
         title: "",
-        content: (
-          <div>
-            <p>本頁將介紹兩種能將Stata執行結果加上文字說明輸出為html檔的方法。</p>
-          </div>
-        ),
+        content: <p>本頁將介紹兩種能將Stata執行結果加上文字說明輸出為html檔的方法。</p>,
       },
       {
         title: "dyndoc",
         content: (
-          <div>
+          <>
             <p>
               <code>dyndoc</code>的do檔格式如下：
             </p>
@@ -22,13 +18,13 @@ class Content extends React.Component {
               以<code>dyndoc 檔名.do, replace</code>將檔案與執行結果輸出為html，輸出檔案如下：
             </p>
             <iframe class="w-100" style={{ "min-height": 500 }} src="https://astalsi401.github.io/stata/other/example.html"></iframe>
-          </div>
+          </>
         ),
       },
       {
         title: "webdoc",
         content: (
-          <div>
+          <>
             <p>
               <code>webdoc</code>的do檔案看起來如下：
             </p>
@@ -54,18 +50,18 @@ class Content extends React.Component {
             <p>
               本網站也是使用<code>webdoc</code>製作，不過在輸出後又手動對html檔進行編輯，本站中所有頁面的html檔，以及style設定檔都能在<a href="https://github.com/Astalsi401/Astalsi401.github.io">我的github</a>找到。
             </p>
-          </div>
+          </>
         ),
       },
     ];
   }
   render() {
     return (
-      <div>
+      <>
         {this.section.map((section) => (
           <Block title={section.title} content={section.content} />
         ))}
-      </div>
+      </>
     );
   }
 }

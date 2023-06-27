@@ -190,7 +190,7 @@ class Content extends React.Component {
   }
   render() {
     return (
-      <div>
+      <>
         <h2>快捷鍵(個人用)</h2>
         {this.state.data.map((section) => (
           <Block
@@ -198,7 +198,7 @@ class Content extends React.Component {
             content={
               <ul>
                 {section.shortcut.map((li) => (
-                  <li>
+                  <li key={li.name}>
                     {li.name}：{li.keys.map((keys) => keys.map((kbd) => <kbd>{kbd}</kbd>).reduce((prev, curr) => [prev, "+", curr]))}
                   </li>
                 ))}
@@ -206,7 +206,7 @@ class Content extends React.Component {
             }
           />
         ))}
-      </div>
+      </>
     );
   }
 }

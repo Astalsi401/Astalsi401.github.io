@@ -17,7 +17,7 @@ class Content extends React.Component {
   }
   render() {
     return (
-      <div>
+      <>
         <section className="my-4">
           <h3 id="install" className="my-3">
             安裝
@@ -126,12 +126,14 @@ class Content extends React.Component {
             Cmder快捷鍵
           </h3>
           <table>
-            {this.data.table.map((d) => (
-              <tr>
-                <td>{d.shortCut}</td>
-                <td>{d.des}</td>
-              </tr>
-            ))}
+            <tbody>
+              {this.data.table.map((d) => (
+                <tr key={d.shortCut}>
+                  <td>{d.shortCut}</td>
+                  <td>{d.des}</td>
+                </tr>
+              ))}
+            </tbody>
           </table>
         </section>
         <section className="my-4">
@@ -149,7 +151,7 @@ class Content extends React.Component {
             </li>
           </ul>
         </section>
-      </div>
+      </>
     );
   }
 }

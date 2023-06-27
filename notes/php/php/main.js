@@ -8,7 +8,7 @@ class Content extends React.Component {
       {
         title: "參考文章",
         content: (
-          <div>
+          <>
             <ul>
               <li>
                 安裝流程：
@@ -23,13 +23,13 @@ class Content extends React.Component {
                 </a>
               </li>
             </ul>
-          </div>
+          </>
         ),
       },
       {
         title: "容易踩到的坑",
         content: (
-          <div>
+          <>
             <ol>
               <li>php與apache必須為相同位元，如X64。</li>
               <li>
@@ -52,18 +52,18 @@ class Content extends React.Component {
                 </a>
               </li>
             </ol>
-          </div>
+          </>
         ),
       },
     ];
   }
   render() {
     return (
-      <div>
+      <>
         {this.section.map((s) => (
           <Block title={s.title} content={s.content} />
         ))}
-      </div>
+      </>
     );
   }
 }

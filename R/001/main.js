@@ -5,7 +5,7 @@ class Content extends React.Component {
       {
         title: "",
         content: (
-          <div>
+          <>
             <p>更改工作資料夾</p>
             <CodeChunk code={`setwd("D:/Documents/R/sna/week02")`} lang="r" />
             <p>確認工作資料夾</p>
@@ -16,13 +16,13 @@ class Content extends React.Component {
             <CodeChunk code={`## [1] "01.Rmd"`} lang="output" />
             <p>清空記憶體</p>
             <CodeChunk code={`rm(list = ls())`} lang="r" />
-          </div>
+          </>
         ),
       },
       {
         title: "R的符號",
         content: (
-          <div>
+          <>
             <ul>
               <li>
                 <p>
@@ -40,13 +40,13 @@ class Content extends React.Component {
                 </p>
               </li>
             </ul>
-          </div>
+          </>
         ),
       },
       {
         title: "資料輸入",
         content: (
-          <div>
+          <>
             <p>建立變項a=30</p>
             <CodeChunk code={`a <- 30\na`} lang="r" />
             <CodeChunk code={`## [1] 30`} lang="output" />
@@ -77,13 +77,13 @@ class Content extends React.Component {
             <CodeChunk code={`## [1] "a"`} lang="output" />
             <CodeChunk code={`rm(list = ls()); ls()  #移除所有變項`} lang="r" />
             <CodeChunk code={`## character(0)`} lang="output" />
-          </div>
+          </>
         ),
       },
       {
         title: "矩陣",
         content: (
-          <div>
+          <>
             <p>建立名為mat的矩陣，內容物為1~36，row=6，column=6</p>
             <CodeChunk code={`mat <- matrix(1:36, nr=6, ncol=6); mat`} lang="r" />
             <CodeChunk code={`##      [,1] [,2] [,3] [,4] [,5] [,6]\n## [1,]    1    7   13   19   25   31\n## [2,]    2    8   14   20   26   32\n## [3,]    3    9   15   21   27   33\n## [4,]    4   10   16   22   28   34\n## [5,]    5   11   17   23   29   35\n## [6,]    6   12   18   24   30   36`} lang="output" />
@@ -119,13 +119,13 @@ class Content extends React.Component {
             <CodeChunk code={`##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]\n##  [1,]  442  464  486  508  530  552  574  596  618   640\n##  [2,]  464  488  512  536  560  584  608  632  656   680\n##  [3,]  486  512  538  564  590  616  642  668  694   720\n##  [4,]  508  536  564  592  620  648  676  704  732   760\n##  [5,]  530  560  590  620  650  680  710  740  770   800\n##  [6,]  552  584  616  648  680  712  744  776  808   840\n##  [7,]  574  608  642  676  710  744  778  812  846   880\n##  [8,]  596  632  668  704  740  776  812  848  884   920\n##  [9,]  618  656  694  732  770  808  846  884  922   960\n## [10,]  640  680  720  760  800  840  880  920  960  1000`} lang="output" />
             <CodeChunk code={`mat2>4  #確認mat2中有多少大於4`} lang="r" />
             <CodeChunk code={`##        [,1] [,2]\n##  [1,] FALSE TRUE\n##  [2,] FALSE TRUE\n##  [3,] FALSE TRUE\n##  [4,] FALSE TRUE\n##  [5,]  TRUE TRUE\n##  [6,]  TRUE TRUE\n##  [7,]  TRUE TRUE\n##  [8,]  TRUE TRUE\n##  [9,]  TRUE TRUE\n## [10,]  TRUE TRUE`} lang="output" />
-          </div>
+          </>
         ),
       },
       {
         title: "建立資料",
         content: (
-          <div>
+          <>
             <CodeChunk code={`alist <- list(1:6, mat2, "ABCDE"); alist  #將3個變項分別儲存在3個儲存位`} lang="r" />
             <CodeChunk code={`## [[1]]\n## [1] 1 2 3 4 5 6\n## \n## [[2]]\n##       [,1] [,2]\n##  [1,]    1   21\n##  [2,]    2   22\n##  [3,]    3   23\n##  [4,]    4   24\n##  [5,]    5   25\n##  [6,]    6   26\n##  [7,]    7   27\n##  [8,]    8   28\n##  [9,]    9   29\n## [10,]   10   30\n## \n## [[3]]\n## [1] "ABCDE"`} lang="output" />
             <CodeChunk code={`alist[[1]]     #查看第一格儲存位`} lang="r" />
@@ -138,18 +138,18 @@ class Content extends React.Component {
             <CodeChunk code={`## [1] "element1" "element2"`} lang="output" />
             <CodeChunk code={`alist$element1  #直接以變項名稱叫出`} lang="r" />
             <CodeChunk code={`## [1] 1 2 3 4 5 6`} lang="output" />
-          </div>
+          </>
         ),
       },
     ];
   }
   render() {
     return (
-      <div>
+      <>
         {this.section.map((section, i) => (
           <Block key={i} title={section.title} content={section.content} />
         ))}
-      </div>
+      </>
     );
   }
 }

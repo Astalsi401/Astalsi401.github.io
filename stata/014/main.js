@@ -5,7 +5,7 @@ class Content extends React.Component {
       {
         title: "",
         content: (
-          <div>
+          <>
             <p>因素分析以所觀察到的變項的數據為基礎，找出其中的潛在變項（或一些共同因子），其步驟如下：</p>
             <ol type="i">
               <li>先檢查要觀察的變項內容，並對這些變項做些調整，如：重新編碼、定義遺漏值。</li>
@@ -14,13 +14,13 @@ class Content extends React.Component {
               <li>正式分析，並進行座標軸旋轉，以突出潛在因子。</li>
               <li>建立潛在因子變項。</li>
             </ol>
-          </div>
+          </>
         ),
       },
       {
         title: "範例：",
         content: (
-          <div>
+          <>
             <p>因素分析 - 會窮的原因（題號e2a-e2i）</p>
             <ol>
               <li>
@@ -179,18 +179,18 @@ class Content extends React.Component {
                 />
               </li>
             </ol>
-          </div>
+          </>
         ),
       },
     ];
   }
   render() {
     return (
-      <div>
+      <>
         {this.section.map((section) => (
           <Block title={section.title} content={section.content} />
         ))}
-      </div>
+      </>
     );
   }
 }

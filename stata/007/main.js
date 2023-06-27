@@ -5,7 +5,7 @@ class Content extends React.Component {
       {
         title: "常態分配曲線",
         content: (
-          <div>
+          <>
             <CodeChunk code={`twoway (function y=normalden(x) , range(-4 4)        ///\n        droplines(-2 -1 0 1 2)),                       ///\n        title("常態分配曲線")                         ///\n        plotregion(margin(zero))                       ///\n        yscale(off) ylabel(, nogrid)                   ///\n        xlabel(-4 -3 -2 -1 0 1 2 3 4, format(%4.2f))       ///\n        xtitle("Standard deviations") \ngraph export "normal curve.png", replace`} lang="stata" />
             <CodeChunk code={`. twoway (function y=normalden(x) , range(-4 4)        ///\n>         droplines(-2 -1 0 1 2)),                       ///\n>         title("常態分配曲線")                         ///\n>         plotregion(margin(zero))                       ///\n>         yscale(off) ylabel(, nogrid)                   ///\n>         xlabel(-4 -3 -2 -1 0 1 2 3 4, format(%4.2f))       ///\n>         xtitle("Standard deviations") \n\n. graph export "normal curve.png", replace\n(file normal curve.png written in PNG format)`} lang="output" />
             <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/normal-curve.png" />
@@ -24,22 +24,22 @@ class Content extends React.Component {
                 <ZoomImage class="col-md-6 px-md-1" src="https://astalsi401.github.io/assets/images/kdnesity01.png" />
               </div>
             </div>
-          </div>
+          </>
         ),
       },
       {
         title: "t score",
         content: (
-          <div>
+          <>
             <CodeChunk code={`clear\ninput x freq\n1 21\n2 32 \n3 22\n4 17\n5 13\n6 8\n7 4\n8 3\nend\n\nexpand freq\nsu x, d\n\nsca se=r(sd)/sqrt(r(N))\n*95% CI\nsca tscore95=invttail(120-1, 0.05/2)\nsca ME95=tscore95*se\ndi r(mean)-ME95\ndi r(mean)+ME95\n*99% CI\nsca tscore99=invttail(120-1, 0.01/2)\nsca ME99=tscore99*se\ndi r(mean)-ME99\ndi r(mean)+ME99`} lang="stata" />
             <CodeChunk code={`. clear\n\n. input x freq\n\n    x freq\n 1. 1 21\n 2. 2 32 \n 3. 3 22\n 4. 4 17\n 5. 5 13\n 6. 6 8\n 7. 7 4\n 8. 8 3\n 9. end\n\n. expand freq\n(112 observations created)\n\n. su x, d\n\n                              x\n-------------------------------------------------------------\n      Percentiles      Smallest\n 1%            1              1\n 5%            1              1\n10%            1              1       Obs                 120\n25%            2              1       Sum of Wgt.         120\n\n50%            3                      Mean                3.2\n                                Largest       Std. Dev.      1.813117\n75%            4              7\n90%            6              8       Variance       3.287395\n95%            7              8       Skewness       .7536421\n99%            8              8       Kurtosis       2.838571\n\n. sca se=r(sd)/sqrt(r(N))\n\n. *95% CI\n. sca tscore95=invttail(120-1, 0.05/2)\n\n. sca ME95=tscore95*se\n\n. di r(mean)-ME95\n2.8722653\n\n. di r(mean)+ME95\n3.5277347\n\n. *99% CI\n. sca tscore99=invttail(120-1, 0.01/2)\n\n. sca ME99=tscore99*se\n\n. di r(mean)-ME99\n2.7667208\n\n. di r(mean)+ME99\n3.6332792`} lang="output" />
-          </div>
+          </>
         ),
       },
       {
         title: "zcalc的使用方法",
         content: (
-          <div>
+          <>
             <p>建立亂數成績資料</p>
             <CodeChunk code={`clear\nset obs 100000\nset seed 1\ng grade = int(floor((101)*runiform()+0))\nsu grade, d`} lang="stata" />
             <CodeChunk code={`. clear\n\n. set obs 100000\nnumber of observations (_N) was 0, now 100,000\n\n. set seed 1 \n\n. g grade = int(floor((101)*runiform()+0))\n\n. su grade, d\n\n                            grade\n-------------------------------------------------------------\n      Percentiles      Smallest\n 1%            0              0\n 5%            5              0\n10%           10              0       Obs             100,000\n25%           25              0       Sum of Wgt.     100,000\n\n50%           50                      Mean           50.10906\n                        Largest       Std. Dev.      29.11979\n75%           75            100\n90%           90            100       Variance       847.9622\n95%           95            100       Skewness      -.0053086\n99%           99            100       Kurtosis        1.80178`} lang="output" />
@@ -50,18 +50,18 @@ class Content extends React.Component {
             </p>
             <CodeChunk code={`zcalc 70 50.10906 29.11979\ndi 100000*(1-normal(.68))\n/*\ndi normal(.68) = .75174777  求出由-∞ 到Z=0.68的累積面積（機率）=75.17\ndi invnormal(.75174777) = .68  求出累積機率為0.75174777時的Z分數\n*/`} lang="stata" />
             <CodeChunk code={`. zcalc 70 50.10906 29.11979\n\nz-score for sample observations\n\n      (X - m)       (70 - 50.10906)\n z = ---------  =  ------------------  =  0.68\n         s              29.11979\n\n. di 100000*(1-normal(.68))\n24825.223\n\n. /*\n> di normal(.68) = .75174777  求出由-∞ 到Z=0.68的累積面積（機率）=75.17\n> di invnormal(.75174777) = .68  求出累積機率為0.75174777時的Z分數\n> */`} lang="output" />
-          </div>
+          </>
         ),
       },
     ];
   }
   render() {
     return (
-      <div>
+      <>
         {this.section.map((section) => (
           <Block title={section.title} content={section.content} />
         ))}
-      </div>
+      </>
     );
   }
 }

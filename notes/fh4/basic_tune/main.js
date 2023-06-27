@@ -117,7 +117,7 @@ class Content extends React.Component {
       {
         title: "",
         content: (
-          <div>
+          <>
             本頁面為Youtube上FH4車輛調教影片的簡易中文摘要。
             <br />
             影片清單：
@@ -139,13 +139,13 @@ class Content extends React.Component {
                 </li>
               ))}
             </ul>
-          </div>
+          </>
         ),
       },
       {
         title: "差速器",
         content: (
-          <div>
+          <>
             <p>
               影片位置：<a href="https://youtu.be/WM7_3NGGUoQ?t=152">2:32</a>
             </p>
@@ -181,24 +181,24 @@ class Content extends React.Component {
                 <li>後驅車差速器減速（5%~50%）</li>
               </ul>
             </ol>
-          </div>
+          </>
         ),
       },
       {
         title: "剎車",
         content: (
-          <div>
+          <>
             <p>
               影片位置：<a href="https://youtu.be/WM7_3NGGUoQ?t=298">4:58</a>
             </p>
             <p>當啟用abs時，將剎車力度調到100%以上將對剎車速度有負面影響。</p>
-          </div>
+          </>
         ),
       },
       {
         title: "空力",
         content: (
-          <div>
+          <>
             <p>
               影片位置：<a href="https://youtu.be/WM7_3NGGUoQ?t=340">5:40</a>
             </p>
@@ -213,13 +213,13 @@ class Content extends React.Component {
               </h4>
               <p>調到最高，若轉向不足再調低</p>
             </ol>
-          </div>
+          </>
         ),
       },
       {
         title: "阻尼",
         content: (
-          <div>
+          <>
             <ol type="i">
               <h4>
                 <li>
@@ -231,13 +231,13 @@ class Content extends React.Component {
               </h4>
               <p>影響避震器面對彈跳時的表現，一般在回彈硬度的50%~70%。</p>
             </ol>
-          </div>
+          </>
         ),
       },
       {
         title: "彈簧",
         content: (
-          <div>
+          <>
             <p>
               感謝補充：<a href="https://forum.gamer.com.tw/Co.php?bsn=7697&sn=18681&subbsn=7&bPage=0">雪飄夏日(gi516811)</a>
             </p>
@@ -254,13 +254,13 @@ class Content extends React.Component {
               </h4>
               <p>降到最低再視情況調高。</p>
             </ol>
-          </div>
+          </>
         ),
       },
       {
         title: "防傾桿",
         content: (
-          <div>
+          <>
             <ol type="i">
               <li>
                 <h4>防傾桿（公路）：</h4>
@@ -298,13 +298,13 @@ class Content extends React.Component {
                 <li>後：約20%的位置</li>
               </ul>
             </ol>
-          </div>
+          </>
         ),
       },
       {
         title: "輪胎定位",
         content: (
-          <div>
+          <>
             <p>
               影片位置：<a href="https://youtu.be/WM7_3NGGUoQ?t=650">10:50</a>、<a href="https://youtu.be/WM7_3NGGUoQ?t=920">15:20</a>
             </p>
@@ -326,13 +326,13 @@ class Content extends React.Component {
               <p>越高，直線時外傾角越穩定，但過彎時將增加負外傾角。在某些情況下，調到太高有可能使車輛重心過度自行回正，導致難以預測的移動。</p>
               <ZoomImage class="my-2 mx-auto image-normal" src="https://astalsi401.github.io/assets/images/caster.png" />
             </ol>
-          </div>
+          </>
         ),
       },
       {
         title: "輪胎定位（甩尾）",
         content: (
-          <div>
+          <>
             <ol type="i">
               <li>前外傾角：-5°</li>
               <li>後外傾角：0°</li>
@@ -340,13 +340,13 @@ class Content extends React.Component {
               <li>後束角：1.5°</li>
               <li>前後傾角：7°</li>
             </ol>
-          </div>
+          </>
         ),
       },
       {
         title: "齒輪裝置",
         content: (
-          <div>
+          <>
             <ol>
               <li>
                 <a href="https://youtu.be/D6qthLir2iI?t=350">Hokihoshi</a>的調法：
@@ -392,13 +392,13 @@ class Content extends React.Component {
                 <li>4檔：1.00</li>
               </ul>
             </ol>
-          </div>
+          </>
         ),
       },
       {
         title: "胎壓",
         content: (
-          <div>
+          <>
             <ol>
               <li>
                 <a href="https://www.youtube.com/c/HokiHoshi">HokiHoshi</a>的調法
@@ -417,33 +417,35 @@ class Content extends React.Component {
               <p>在fh4中，胎壓應盡可能低，因為fh4無視了低胎壓導致的各種負面影響，如耗損、溫度過高、失去抓地力。</p>
               <p>建議胎壓為15psi~23.2psi</p>
             </ol>
-          </div>
+          </>
         ),
       },
       {
         title: "總結",
         content: (
-          <div className="row">
-            {this.data.summarize.map((d) => (
-              <div className="col-sm-6 p-2">
-                <div className="shadow-sm w-100 h-100 p-3 rounded-2">
-                  <h4>{d.title}：</h4>
-                  <ul>
-                    {d.list.map((li) => (
-                      <li>{li}</li>
-                    ))}
-                  </ul>
+          <>
+            <div className="row">
+              {this.data.summarize.map((d) => (
+                <div className="col-sm-6 p-2">
+                  <div className="shadow-sm w-100 h-100 p-3 rounded-2">
+                    <h4>{d.title}：</h4>
+                    <ul>
+                      {d.list.map((li) => (
+                        <li>{li}</li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </>
         ),
       },
       {
         id: "formula",
         title: "公式",
         content: (
-          <div>
+          <>
             <ol>
               <h4>
                 <li>防傾桿、阻尼：</li>
@@ -465,14 +467,14 @@ class Content extends React.Component {
                 <code>(最大值-最小值)×重量比</code>
               </p>
             </ol>
-          </div>
+          </>
         ),
       },
       {
         id: "calculator",
         title: "計算器",
         content: (
-          <div>
+          <>
             <p className="text-center text-bold text-warn">
               注意最大值：
               <br />
@@ -483,18 +485,18 @@ class Content extends React.Component {
               其他數值將計算防傾桿
             </p>
             <Calculator />
-          </div>
+          </>
         ),
       },
     ];
   }
   render() {
     return (
-      <div>
+      <>
         {this.section.map((section) => (
           <Block id={section.id && section.id} class={section.class && section.class} title={section.title} content={section.content} />
         ))}
-      </div>
+      </>
     );
   }
 }

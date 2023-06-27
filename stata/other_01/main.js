@@ -5,7 +5,7 @@ class Content extends React.Component {
       {
         title: "",
         content: (
-          <div>
+          <>
             <p>Stata只提供非常基礎的編輯器，使用上常會感到不方便。而利用Sublime Text 3的各種功能（ex：自動補齊）可大幅增加編寫效率。</p>
             <ol>
               <li>
@@ -75,27 +75,27 @@ class Content extends React.Component {
             </p>
             <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/step9-1.png" />
             <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/step9-2.png" />
-          </div>
+          </>
         ),
       },
       {
         title: "",
         content: (
-          <div>
+          <>
             <CodeChunk code={``} lang="stata" />
             <CodeChunk code={``} lang="output" />
-          </div>
+          </>
         ),
       },
     ];
   }
   render() {
     return (
-      <div>
+      <>
         {this.section.map((section) => (
           <Block title={section.title} content={section.content} />
         ))}
-      </div>
+      </>
     );
   }
 }

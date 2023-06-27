@@ -3,10 +3,6 @@ class Content extends React.Component {
     super(props);
   }
   render() {
-    return (
-      <div>
-        <IndexPage category="R" />
-      </div>
-    );
+    return <IndexPage category="R" />;
   }
 }

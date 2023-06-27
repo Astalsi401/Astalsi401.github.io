@@ -5,7 +5,7 @@ class Content extends React.Component {
       {
         title: "工作目錄",
         content: (
-          <div>
+          <>
             <p>匯入資料前最好先確認STATA的工作目錄，這樣可以減少需要輸入的路徑的長度。</p>
             <p>
               <code>cd "路徑"</code>：直接指定工作目錄
@@ -32,13 +32,13 @@ class Content extends React.Component {
             </p>
             <CodeChunk code={`cd unify`} lang="stata" />
             <CodeChunk code={`. cd unify\nC:\\Users\\misti\\Documents\\Stata\\unify`} lang="output" />
-          </div>
+          </>
         ),
       },
       {
         title: "資料檔匯入",
         content: (
-          <div>
+          <>
             <div className="my-2">
               <div className="text-bold text-large">
                 Txt匯入：<code>insheet</code>
@@ -75,13 +75,13 @@ class Content extends React.Component {
               <CodeChunk code={`use data1a, clear\nlist in 1/5\ncd ..`} lang="stata" />
               <CodeChunk code={`. use data1a, clear\n. list in 1/5\n     +--------------------+\n     | id   male   score1 |\n     |--------------------|\n  1. |  1      1       58 |\n  2. |  2      1       65 |\n  3. |  3      1       55 |\n  4. |  4      1       62 |\n  5. |  5      1       78 |\n     +--------------------+\n. cd ..\nC:\\Users\\misti\\Documents\\Stata\\unify`} lang="output" />
             </div>
-          </div>
+          </>
         ),
       },
       {
         title: "資料檔匯出",
         content: (
-          <div>
+          <>
             <p>
               <code>sysuse auto, clear</code>清除上一筆資料，使用stata內建，名為auto的資料
             </p>
@@ -107,23 +107,23 @@ class Content extends React.Component {
               <div className="text-bold text-large">匯出Xlsx</div>
               <CodeChunk code={`export exc using 1978 Automobile.xlsx, sh("sheetname") first(var) sheetrep`} lang="stata" />
             </div>
-          </div>
+          </>
         ),
       },
       {
         title: "圖表匯入",
         content: (
-          <div>
+          <>
             <p>在STATA中開啟圖表</p>
             <CodeChunk code={`graph use "1978auto.gph`} lang="stata" />
             <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="http://127.0.0.1:5500/assets/images/1978auto_1.png" alt="1978auto_1.png" />
-          </div>
+          </>
         ),
       },
       {
         title: "圖表匯出",
         content: (
-          <div>
+          <>
             <div className="my-2">
               <div className="text-bold text-large">匯出為png</div>
               <CodeChunk code={`twoway (sca weight length) (qfit weight length), ///\n       title("1978 Automobile Data")\ngraph save "1978auto.gph", replace  /*將圖表儲存為stata專用的gph格式*/\ngraph export "1978auto.png", replace   /*將圖表儲存為png格式*/`} lang="stata" />
@@ -136,13 +136,13 @@ class Content extends React.Component {
               </p>
               <CodeChunk code={`putexcel set pathToXlsxFile.xlsx, sheet("xlsxSheetName") modify\nputexcel A1 = picture(pathToPngFile.png)`} lang="stata" />
             </div>
-          </div>
+          </>
         ),
       },
       {
         title: "資料檔合併",
         content: (
-          <div>
+          <>
             <p>以下將介紹兩種資料合併的方法：</p>
             <div className="my-2">
               <div className="text-bold text-large">
@@ -186,31 +186,31 @@ class Content extends React.Component {
               <CodeChunk code={`d`} lang="stata" />
               <CodeChunk code={`. d\n\nContains data from data2_all.dta\n  obs:            60                          \n vars:             6                          27 Nov 2020 21:27\n size:           900                          \n---------------------------------------------------------------------------------------------------------------\n              storage   display    value\nvariable name   type    format     label      variable label\n---------------------------------------------------------------------------------------------------------------\nid              float   %10.0g                id\nscore2          byte    %10.0g                score2\nclass           byte    %10.0g                class\ndist            byte    %10.0g                dist\nmale            float   %8.0g                 \nscore1          float   %8.0g                 \n---------------------------------------------------------------------------------------------------------------\nSorted by: id`} lang="output" />
             </div>
-          </div>
+          </>
         ),
       },
       {
         title: "資料長寬轉換",
         content: (
-          <div>
+          <>
             <p>在這份資料中可以看到score1、score2，利用以下指令，將score合併為一個變項，另外新增exam變項作為兩次分數的區分。</p>
             <CodeChunk code={`reshape long score, i(id) j(exam)\nlist in 1/10`} lang="stata" />
             <CodeChunk code={`. reshape long score, i(id) j(exam)\n(note: j = 1 2)\n\nData                               wide   ->   long\n-----------------------------------------------------------------------------\nNumber of obs.                       60   ->     120\nNumber of variables                   6   ->       6\nj variable (2 values)                     ->   exam\nxij variables:\n                          score1 score2   ->   score\n-----------------------------------------------------------------------------\n\n. list in 1/10\n\n     +-----------------------------------------+\n     | id   exam   score   class   dist   male |\n     |-----------------------------------------|\n  1. |  1      1      58       3      3      1 |\n  2. |  1      2      56       3      3      1 |\n  3. |  2      1      65       2      3      1 |\n  4. |  2      2      63       2      3      1 |\n  5. |  3      1      55       3      5      1 |\n     |-----------------------------------------|\n  6. |  3      2      52       3      5      1 |\n  7. |  4      1      62       1      4      1 |\n  8. |  4      2      59       1      4      1 |\n  9. |  5      1      78       2      1      1 |\n 10. |  5      2      78       2      1      1 |\n     +-----------------------------------------+`} lang="output" />
             <p>轉回原本格式</p>
             <CodeChunk code={`reshape wide score, i(id) j(exam)  /*或輸入reshape wide也能恢復原本格式*/\nlist in 1/5`} lang="stata" />
             <CodeChunk code={`. reshape wide score, i(id) j(exam)  /*或輸入reshape wide也能恢復原本格式*/\n(note: j = 1 2)\n\nData                               long   ->   wide\n-----------------------------------------------------------------------------\nNumber of obs.                      120   ->      60\nNumber of variables                   6   ->       6\nj variable (2 values)              exam   ->   (dropped)\nxij variables:\n                                  score   ->   score1 score2\n-----------------------------------------------------------------------------\n\n. list in 1/5\n\n     +--------------------------------------------+\n     | id   score1   score2   class   dist   male |\n     |--------------------------------------------|\n  1. |  1       58       56       3      3      1 |\n  2. |  2       65       63       2      3      1 |\n  3. |  3       55       52       3      5      1 |\n  4. |  4       62       59       1      4      1 |\n  5. |  5       78       78       2      1      1 |\n     +--------------------------------------------+`} lang="output" />
-          </div>
+          </>
         ),
       },
     ];
   }
   render() {
     return (
-      <div>
+      <>
         {this.section.map((section) => (
           <Block title={section.title} content={section.content} />
         ))}
-      </div>
+      </>
     );
   }
 }

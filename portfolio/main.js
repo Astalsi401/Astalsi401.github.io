@@ -52,10 +52,6 @@ class Content extends React.Component {
   }
 
   render() {
-    return (
-      <div>
-        <Portfolio category="Portfolio" />
-      </div>
-    );
+    return <Portfolio category="Portfolio" />;
   }
 }

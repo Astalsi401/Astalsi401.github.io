@@ -97,7 +97,7 @@ class Header extends React.Component {
   }
   render() {
     return (
-      <div>
+      <>
         <Accessibility />
         <header id="header" ref={this.wrapperRef}>
           <nav id="navbar">
@@ -112,7 +112,7 @@ class Header extends React.Component {
           </nav>
           <Sidebar sidebarActive={this.state.sidebarActive} category={this.props.category} />
         </header>
-      </div>
+      </>
     );
   }
 }

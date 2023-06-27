@@ -5,7 +5,7 @@ class Content extends React.Component {
       {
         title: "匯入資料",
         content: (
-          <div>
+          <>
             <div className="my-2">
               <p>
                 <b>方法一：使用矩陣格式的資料</b>
@@ -59,13 +59,13 @@ class Content extends React.Component {
                 <br />
               </p>
             </div>
-          </div>
+          </>
         ),
       },
       {
         title: "合併actors資料與與網絡資料",
         content: (
-          <div>
+          <>
             <CodeChunk code={`V(fauxhs.net)$name`} lang="r" />
             <CodeChunk code={`##   [1] "1"   "2"   "3"   "4"   "5"   "6"   "7"   "8"   "9"   "10"  "11"  "12" \n##  [13] "13"  "14"  "15"  "16"  "17"  "18"  "19"  "20"  "21"  "22"  "23"  "24" \n##  [25] "25"  "26"  "27"  "28"  "29"  "30"  "31"  "32"  "33"  "34"  "35"  "36" \n##  [37] "37"  "38"  "39"  "40"  "41"  "42"  "43"  "44"  "45"  "46"  "47"  "48" \n##  [49] "49"  "50"  "51"  "52"  "53"  "54"  "55"  "56"  "57"  "58"  "59"  "60" \n##  [61] "61"  "62"  "63"  "64"  "65"  "66"  "67"  "68"  "69"  "70"  "71"  "72" \n##  [73] "73"  "74"  "75"  "76"  "77"  "78"  "79"  "80"  "81"  "82"  "83"  "84" \n##  [85] "85"  "86"  "87"  "88"  "89"  "90"  "91"  "92"  "93"  "94"  "95"  "96" \n##  [97] "97"  "98"  "99"  "100" "101" "102" "103" "104" "105" "106" "107" "108"\n## [109] "109" "110" "111" "112" "113" "114" "115" "116" "117" "118" "119" "120"`} lang="output" />
             <CodeChunk code={`V(fauxhs.eg)$name`} lang="r" />
@@ -93,13 +93,13 @@ class Content extends React.Component {
               <CodeChunk code={`V(fauxhs.net)$color=c("red", "blue")[as.numeric(V(fauxhs.net)$gender)]\nplot(fauxhs.net, vertex.size=5, vertex.label="", edge.arrow.size=0.5, layout = fauxhs.layout)`} lang="r" />
               <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/r004_4.png" />
             </div>
-          </div>
+          </>
         ),
       },
       {
         title: "計算網絡的詳細資訊",
         content: (
-          <div>
+          <>
             <ul>
               <li>
                 Degree
@@ -181,30 +181,30 @@ class Content extends React.Component {
                 <CodeChunk code={`## [1] 0.4046534`} lang="output" />
               </li>
             </ul>
-          </div>
+          </>
         ),
       },
       {
         title: "Community detection",
         content: (
-          <div>
+          <>
             <CodeChunk code={`fauxhs.net1 <- graph_from_adjacency_matrix(fauxhs.mat, mode="undirected", weighted = T)`} lang="r" />
             <CodeChunk code={`com <- cluster_louvain(fauxhs.net1)\ncom`} lang="r" />
             <CodeChunk code={`## IGRAPH clustering multi level, groups: 10, mod: 0.77\n## + groups:\n##   $\`1\`\n##    [1] "4"   "9"   "12"  "16"  "19"  "21"  "32"  "37"  "59"  "62"  "67"  "69" \n##   [13] "79"  "80"  "83"  "91"  "92"  "95"  "111"\n##   \n##   $\`2\`\n##   [1] "6"   "23"  "27"  "41"  "48"  "75"  "99"  "118"\n##   \n##   $\`3\`\n##   [1] "5"   "11"  "28"  "66"  "81"  "120"\n##   \n##   + ... omitted several groups/vertices`} lang="output" />
             <CodeChunk code={`plot(com, fauxhs.net1, vertex.label="", vertex.size=5, edge.width=E(fauxhs.net1)$weight, layout = fauxhs.layout)`} lang="r" />
             <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/r004_6.png" />
-          </div>
+          </>
         ),
       },
     ];
   }
   render() {
     return (
-      <div>
+      <>
         {this.section.map((section) => (
           <Block title={section.title} content={section.content} />
         ))}
-      </div>
+      </>
     );
   }
 }

@@ -26,9 +26,9 @@ class Content extends React.Component {
       {
         title: "css",
         content: (
-          <div>
+          <>
             {this.data.css.map((d) => (
-              <div>
+              <div className="my-2">
                 <code>{d.prop}</code>
                 <ul>
                   {d.values.map((v) => (
@@ -40,18 +40,18 @@ class Content extends React.Component {
                 </ul>
               </div>
             ))}
-          </div>
+          </>
         ),
       },
     ];
   }
   render() {
     return (
-      <div>
+      <>
         {this.section.map((section) => (
           <Block title={section.title} content={section.content} />
         ))}
-      </div>
+      </>
     );
   }
 }

@@ -5,7 +5,7 @@ class Content extends React.Component {
       {
         title: "迴歸分析的意義",
         content: (
-          <div>
+          <>
             <ol>
               <li>
                 相關與迴歸
@@ -114,13 +114,13 @@ class Content extends React.Component {
                 </ul>
               </li>
             </ol>
-          </div>
+          </>
         ),
       },
       {
         title: "STATA迴歸分析範例",
         content: (
-          <div>
+          <>
             <CodeChunk code={`clear\ninput x y\n0  12\n3  13\n1  15\n0  19\n6  26\n5  27\n3  29\n4  31\n10 40\n8  48\nend\n\nlab var x "先前犯罪紀錄"\nlab var y "刑期(⽉)"\n\nreg y x`} lang="stata" />
             <CodeChunk code={`. clear\n\n. input x y\n\n             x          y\n  1. 0  12\n  2. 3  13\n  3. 1  15\n  4. 0  19\n  5. 6  26\n  6. 5  27\n  7. 3  29\n  8. 4  31\n  9. 10 40\n 10. 8  48\n 11. end\n\n. lab var x "先前犯罪紀錄"\n\n. lab var y "刑期(⽉)"\n\n. \n. reg y x\n\n      Source |       SS           df       MS      Number of obs   =        10\n-------------+----------------------------------   F(1, 8)         =     20.57\n       Model |         900         1         900   Prob > F        =    0.0019\n    Residual |         350         8       43.75   R-squared       =    0.7200\n-------------+----------------------------------   Adj R-squared   =    0.6850\n       Total |        1250         9  138.888889   Root MSE        =    6.6144\n\n------------------------------------------------------------------------------\n           y |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]\n-------------+----------------------------------------------------------------\n           x |          3   .6614378     4.54   0.002     1.474722    4.525278\n       _cons |         14   3.372684     4.15   0.003     6.222576    21.77742\n------------------------------------------------------------------------------`} lang="output" />
             <p>此結果可分成兩部分，上面是有關模型的結果，下面則是迴歸係數的部分。</p>
@@ -176,13 +176,13 @@ class Content extends React.Component {
                 </li>
               </ol>
             </div>
-          </div>
+          </>
         ),
       },
       {
         title: "矩陣運算與迴歸",
         content: (
-          <div>
+          <>
             <div className="my-2">
               <div className="text-bold text-large">矩陣解聯立方程式</div>
               <p>6x+3y+7z=51</p>
@@ -226,18 +226,18 @@ class Content extends React.Component {
               <CodeChunk code={`reg y x1 x2 x3`} lang="stata" />
               <CodeChunk code={`. reg y x1 x2 x3\n\n      Source |       SS           df       MS      Number of obs   =         5\n-------------+----------------------------------   F(3, 1)         =    284.96\n       Model |  .491425183         3  .163808394   Prob > F        =    0.0435\n    Residual |  .000574842         1  .000574842   R-squared       =    0.9988\n-------------+----------------------------------   Adj R-squared   =    0.9953\n       Total |  .492000025         4  .123000006   Root MSE        =    .02398\n\n------------------------------------------------------------------------------\n           y |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]\n-------------+----------------------------------------------------------------\n          x1 |    .105414   .0066285    15.90   0.040      .021191     .189637\n          x2 |  -.0242304    .002581    -9.39   0.068    -.0570255    .0085648\n          x3 |  -.0380573   .0107394    -3.54   0.175    -.1745142    .0983995\n       _cons |    .248933   .0718199     3.47   0.179    -.6636259    1.161492\n------------------------------------------------------------------------------`} lang="output" />
             </div>
-          </div>
+          </>
         ),
       },
     ];
   }
   render() {
     return (
-      <div>
+      <>
         {this.section.map((section) => (
           <Block title={section.title} content={section.content} />
         ))}
-      </div>
+      </>
     );
   }
 }

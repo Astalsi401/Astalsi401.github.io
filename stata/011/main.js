@@ -5,7 +5,7 @@ class Content extends React.Component {
       {
         title: "Mann Whitney U Test",
         content: (
-          <div>
+          <>
             <ol>
               <li>適用範圍：</li>
               <ul>
@@ -64,13 +64,13 @@ class Content extends React.Component {
               <CodeChunk code={`clear\ninput g stress rank\n1 12 10\n1 15 11\n1 4  1\n1 7  3\n1 8  5\n1 16 12\n1 20 15\n1 10 8\n1 8  5\n2 23 17\n2 11 9\n2 24 18\n2 18 13.5\n2 18 13.5\n2 6  2  \n2 9  7\n2 8  5\n2 21 16\nend\n\nranksum stress, by(g)`} lang="stata" />
               <CodeChunk code={`. clear\n\n. input g stress rank\n\n             g     stress       rank\n  1. 1 12 10\n  2. 1 15 11\n  3. 1 4  1\n  4. 1 7  3\n  5. 1 8  5\n  6. 1 16 12\n  7. 1 20 15\n  8. 1 10 8\n  9. 1 8  5\n 10. 2 23 17\n 11. 2 11 9\n 12. 2 24 18\n 13. 2 18 13.5\n 14. 2 18 13.5\n 15. 2 6  2  \n 16. 2 9  7\n 17. 2 8  5\n 18. 2 21 16\n 19. end\n\n. \n. ranksum stress, by(g)\n\nTwo-sample Wilcoxon rank-sum (Mann-Whitney) test\n\n           g |      obs    rank sum    expected\n-------------+---------------------------------\n           1 |        9          70        85.5\n           2 |        9         101        85.5\n-------------+---------------------------------\n    combined |       18         171         171\n\nunadjusted variance      128.25\nadjustment for ties       -0.66\n                     ----------\nadjusted variance        127.59\n\nHo: stress(g==1) = stress(g==2)\n             z =  -1.372\n    Prob > |z| =   0.1700`} lang="output" />
             </div>
-          </div>
+          </>
         ),
       },
       {
         title: "Kruskal-Wallis Test",
         content: (
-          <div>
+          <>
             <ol>
               <li>
                 適用範圍：
@@ -126,18 +126,18 @@ class Content extends React.Component {
               <CodeChunk code={`di invchi2tail(2, .05)`} lang="stata" />
               <CodeChunk code={`. di invchi2tail(2, .05)\n5.9914645`} lang="output" />
             </div>
-          </div>
+          </>
         ),
       },
     ];
   }
   render() {
     return (
-      <div>
+      <>
         {this.section.map((section) => (
           <Block title={section.title} content={section.content} />
         ))}
-      </div>
+      </>
     );
   }
 }

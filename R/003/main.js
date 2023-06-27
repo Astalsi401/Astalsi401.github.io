@@ -5,7 +5,7 @@ class Content extends React.Component {
       {
         title: "網絡資料的格式",
         content: (
-          <div>
+          <>
             <p>
               <b>無方向性（Undirected, Binary）</b>
             </p>
@@ -315,13 +315,13 @@ class Content extends React.Component {
                 <td>2</td>
               </tr>
             </table>
-          </div>
+          </>
         ),
       },
       {
         title: "網絡分析基本概念",
         content: (
-          <div>
+          <>
             <ul>
               <li>
                 相通性（Reachability）：
@@ -479,27 +479,27 @@ class Content extends React.Component {
             </ul>
             <CodeChunk code={``} lang="r" />
             <CodeChunk code={``} lang="output" />
-          </div>
+          </>
         ),
       },
       {
         title: "",
         content: (
-          <div>
+          <>
             <CodeChunk code={``} lang="r" />
             <CodeChunk code={``} lang="output" />
-          </div>
+          </>
         ),
       },
     ];
   }
   render() {
     return (
-      <div>
+      <>
         {this.section.map((section) => (
           <Block title={section.title} content={section.content} />
         ))}
-      </div>
+      </>
     );
   }
 }

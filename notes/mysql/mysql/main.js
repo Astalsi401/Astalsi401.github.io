@@ -8,7 +8,7 @@ class Content extends React.Component {
       {
         title: "設定",
         content: (
-          <div>
+          <>
             <ol>
               <li>安裝後，新增路徑至環境變數 &gt; 系統變數 &gt; PATH</li>
               <li>
@@ -36,31 +36,31 @@ class Content extends React.Component {
                 <CodeChunk code="mysql -u root -p" />
               </li>
             </ol>
-          </div>
+          </>
         ),
       },
       {
         title: "常用指令",
         content: (
-          <div>
+          <>
             <ol>
               <li>
                 mysql啟動時使用系統指令需加上<code>system</code>，例如：
                 <CodeChunk code="system pwd" />
               </li>
             </ol>
-          </div>
+          </>
         ),
       },
     ];
   }
   render() {
     return (
-      <div>
+      <>
         {this.section.map((section) => (
           <Block title={section.title} content={section.content} />
         ))}
-      </div>
+      </>
     );
   }
 }

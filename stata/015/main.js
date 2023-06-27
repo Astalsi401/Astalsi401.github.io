@@ -5,7 +5,7 @@ class Content extends React.Component {
       {
         title: "Odds Ratio",
         content: (
-          <div>
+          <>
             <p>在logistic analysis分析中，應變項必須是0或者1（有/無、是/否），自變項可以使用類別變項，也可以使用連續變項。所得到的結果更可以轉換成為機率（Odds Ratio）的概念解讀。</p>
             <div className="my-2">
               <div className="text-bold text-large">範例：</div>
@@ -47,13 +47,13 @@ class Content extends React.Component {
                 </li>
               </ol>
             </div>
-          </div>
+          </>
         ),
       },
       {
         title: "二元邏輯迴歸（Logistic Regression）",
         content: (
-          <div>
+          <>
             <CodeChunk code={`logit college atrack male gpa chinese, or  /*or:以odds ratio顯示，預設為對數*/\n/*Pseudo R2: 可解釋的改變量*/`} lang="stata" />
             <CodeChunk code={`. logit college atrack male gpa chinese, or  /*or:以odds ratio顯示，預設為對數*/\n\nIteration 0:   log likelihood =  -20.59173  \nIteration 1:   log likelihood = -13.063015  \nIteration 2:   log likelihood =  -12.63741  \nIteration 3:   log likelihood = -12.627923  \nIteration 4:   log likelihood = -12.627905  \nIteration 5:   log likelihood = -12.627905  \n\nLogistic regression                             Number of obs     =         32\n                                                LR chi2(4)        =      15.93\n                                                Prob > chi2       =     0.0031\nLog likelihood = -12.627905                     Pseudo R2         =     0.3867\n\n------------------------------------------------------------------------------\n     college | Odds Ratio   Std. Err.      z    P>|z|     [95% Conf. Interval]\n-------------+----------------------------------------------------------------\n      atrack |   10.90221   11.57428     2.25   0.024     1.360942    87.33516\n        male |   2.068618   2.206442     0.68   0.496     .2557213    16.73377\n         gpa |   17.48493   22.27269     2.25   0.025     1.440074    212.2967\n     chinese |   1.038946    .049211     0.81   0.420     .9468358    1.140017\n       _cons |   6.66e-07   3.61e-06    -2.62   0.009     1.60e-11     .027769\n------------------------------------------------------------------------------\nNote: _cons estimates baseline odds.\n\n. /*Pseudo R2: 可解釋的改變量*/`} lang="output" />
             <p>從表中可知，控制性別、班級、成績、中文成績之後，升學班進入大學的機率比非升學班高10.90221倍，其餘數值依此類推。</p>
@@ -63,13 +63,13 @@ class Content extends React.Component {
               lang="output"
             />
             <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/logit01.png" />
-          </div>
+          </>
         ),
       },
       {
         title: "順序邏輯迴歸（Ordinal Logistic Regression）",
         content: (
-          <div>
+          <>
             <p>可用於Ordinal Scale的應變項。</p>
             <CodeChunk code={`cd data\nuse "GSS2012.dta", clear\ncd ..\nta healthre\nologit healthre i.maritals age educ i.male`} lang="stata" />
             <CodeChunk
@@ -95,13 +95,13 @@ class Content extends React.Component {
               lang="output"
             />
             <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/logit02.png" />
-          </div>
+          </>
         ),
       },
       {
         title: "多分類邏輯迴歸（Multinomial Logistic Regression）",
         content: (
-          <div>
+          <>
             <p>可用於Nominal Scale</p>
             <p>
               <b>注意：</b>在<code>mlogit</code>中須使用relative-risk ratio，代碼為<code>rrr</code>，而非odds ratio的<code>or</code>
@@ -118,13 +118,13 @@ class Content extends React.Component {
               lang="output"
             />
             <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/logit03.png" />
-          </div>
+          </>
         ),
       },
       {
         title: "利用Stata製作迴歸表格",
         content: (
-          <div>
+          <>
             <CodeChunk code={`eststo clear\neststo M1: mlogit occ white, base(5) nolog rrr\neststo M2: mlogit occ white ed exper, base(5) nolog rrr\nesttab M1 M2, eform se scalars(ll aic bic) mtitles label legend style(fixed) ///\n              varwidth(35) modelwidth(10)   ///\n              starlevels(* .05 ** .01 *** 0.001)`} lang="stata" />
             <CodeChunk
               code={`. eststo clear\n\n. eststo M1: mlogit occ white, base(5) nolog rrr\n\nMultinomial logistic regression                 Number of obs     =        337\n                                                LR chi2(4)        =       5.31\n                                                Prob > chi2       =     0.2566\nLog likelihood = -507.18706                     Pseudo R2         =     0.0052\n\n------------------------------------------------------------------------------\n         occ |        RRR   Std. Err.      z    P>|z|     [95% Conf. Interval]\n-------------+----------------------------------------------------------------\n1__Menial    |\n       white |   .3466667    .216727    -1.69   0.090     .1018036    1.180487\n       _cons |   .7142857   .4182429    -0.57   0.566     .2267041    2.250529\n-------------+----------------------------------------------------------------\n2__BlueCol   |\n       white |   1.083333   .7002102     0.12   0.901     .3052037    3.845337\n       _cons |   .5714286   .3581618    -0.89   0.372     .1672797    1.952004\n-------------+----------------------------------------------------------------\n3__Craft     |\n       white |   .4933333   .2543871    -1.37   0.171     .1795638    1.355383\n       _cons |   1.428571   .7040077     0.72   0.469     .5437825    3.753001\n-------------+----------------------------------------------------------------\n4__WhiteCol  |\n       white |        1.3   1.070447     0.32   0.750     .2588488    6.528907\n       _cons |   .2857143   .2290811    -1.56   0.118     .0593543    1.375345\n-------------+----------------------------------------------------------------\n5__Prof      |  (base outcome)\n------------------------------------------------------------------------------\nNote: _cons estimates baseline relative risk for each outcome.\n\n. eststo M2: mlogit occ white ed exper, base(5) nolog rrr\n\nMultinomial logistic regression                 Number of obs     =        337\n                                                LR chi2(12)       =     166.09\n                                                Prob > chi2       =     0.0000\nLog likelihood = -426.80048                     Pseudo R2         =     0.1629\n\n------------------------------------------------------------------------------\n         occ |        RRR   Std. Err.      z    P>|z|     [95% Conf. Interval]\n-------------+----------------------------------------------------------------\n1__Menial    |\n       white |    .169601    .128058    -2.35   0.019     .0386123    .7449581\n          ed |   .4589326   .0526071    -6.79   0.000     .3665863    .5745417\n       exper |   .9649771   .0174053    -1.98   0.048     .9314593     .999701\n       _cons |     100542   185937.9     6.23   0.000     2680.234     3771571\n-------------+----------------------------------------------------------------\n2__BlueCol   |\n       white |   .5840301   .4669924    -0.67   0.501     .1218461     2.79936\n          ed |   .4154983   .0417761    -8.74   0.000     .3411816    .5060029\n       exper |   .9695438   .0139698    -2.15   0.032     .9425465    .9973143\n       _cons |   210989.6   351961.2     7.35   0.000     8022.948     5548662\n-------------+----------------------------------------------------------------\n3__Craft     |\n       white |   .2719974   .1760954    -2.01   0.044     .0764686    .9674893\n          ed |   .5040718   .0450134    -7.67   0.000     .4231365     .600488\n       exper |   .9920646   .0126046    -0.63   0.531      .967665    1.017079\n       _cons |   33758.18      51243     6.87   0.000     1723.071    661385.6\n-------------+----------------------------------------------------------------\n4__WhiteCol  |\n       white |   .8163426   .7096525    -0.23   0.815     .1485651    4.485678\n          ed |    .653316   .0602483    -4.62   0.000     .5452883    .7827453\n       exper |   .9989455   .0143431    -0.07   0.941     .9712254    1.027457\n       _cons |   196.3154   330.5962     3.14   0.002     7.236457    5325.773\n-------------+----------------------------------------------------------------\n5__Prof      |  (base outcome)\n------------------------------------------------------------------------------\nNote: _cons estimates baseline relative risk for each outcome.\n\n. esttab M1 M2, eform se scalars(ll aic bic) mtitles label legend style(fixed) ///\n>               varwidth(35) modelwidth(10)   ///\n>                       starlevels(* .05 ** .01 *** 0.001)\n\n---------------------------------------------------------------\n                                           (1)           (2)   \n                                            M1            M2   \n---------------------------------------------------------------\n1__Menial                                                      \nRace: 1=white 0=nonwhite                 0.347         0.170*  \n                                       (0.217)       (0.128)   \n\nYears of education                                     0.459***\n                                                    (0.0526)   \n\nYears of work experience                               0.965*  \n                                                    (0.0174)   \n---------------------------------------------------------------\n2__BlueCol                                                     \nRace: 1=white 0=nonwhite                 1.083         0.584   \n                                       (0.700)       (0.467)   \n\nYears of education                                     0.415***\n                                                    (0.0418)   \n\nYears of work experience                               0.970*  \n                                                    (0.0140)   \n---------------------------------------------------------------\n3__Craft                                                       \nRace: 1=white 0=nonwhite                 0.493         0.272*  \n                                       (0.254)       (0.176)   \n\nYears of education                                     0.504***\n                                                    (0.0450)   \n\nYears of work experience                               0.992   \n                                                    (0.0126)   \n---------------------------------------------------------------\n4__WhiteCol                                                    \nRace: 1=white 0=nonwhite                 1.300         0.816   \n                                       (1.070)       (0.710)   \n\nYears of education                                     0.653***\n                                                    (0.0602)   \n\nYears of work experience                               0.999   \n                                                    (0.0143)   \n---------------------------------------------------------------\n5__Prof                                                        \nRace: 1=white 0=nonwhite                     1             1   \n                                           (.)           (.)   \n\nYears of education                                         1   \n                                                         (.)   \n\nYears of work experience                                   1   \n                                                         (.)   \n---------------------------------------------------------------\nObservations                               337           337   \nll                                      -507.2        -426.8   \naic                                     1030.4         885.6   \nbic                                     1060.9         946.7   \n---------------------------------------------------------------\nExponentiated coefficients; Standard errors in parentheses\n* p<.05, ** p<.01, *** p<0.001`}
@@ -136,18 +136,18 @@ class Content extends React.Component {
             <p>也可輸出為csv檔</p>
             <CodeChunk code={`esttab M1 M2 using mlogit01.csv, eform se mtitles legend style(fixed) ///\n        varwidth(35) modelwidth(10)  ///\n        starlevels(* .05 ** .01 *** 0.001) replace`} lang="stata" />
             <CodeChunk code={`. esttab M1 M2 using mlogit01.csv, eform se mtitles legend style(fixed) ///\n>         varwidth(35) modelwidth(10)  ///\n>         starlevels(* .05 ** .01 *** 0.001) replace\n(output written to mlogit01.csv)`} lang="output" />
-          </div>
+          </>
         ),
       },
     ];
   }
   render() {
     return (
-      <div>
+      <>
         {this.section.map((section) => (
           <Block title={section.title} content={section.content} />
         ))}
-      </div>
+      </>
     );
   }
 }

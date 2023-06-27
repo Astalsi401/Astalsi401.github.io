@@ -54,7 +54,7 @@ class Content extends React.Component {
       {
         title: "",
         content: (
-          <div>
+          <>
             <p>
               本頁面為
               <a target="_blank" href="https://www.youtube.com/channel/UCGK33hhvffYv5hUNqB0wVnQ">
@@ -70,14 +70,14 @@ class Content extends React.Component {
               <br />
               改造 &gt; 空力套件與外觀 &gt; 輪胎與輪圈 &gt; 傳動系統 &gt; 底盤與操控性 &gt; 引擎
             </p>
-          </div>
+          </>
         ),
       },
       {
         id: "conversion",
         title: "改造",
         content: (
-          <div>
+          <>
             <ol type="i">
               <h4>
                 <li>置換引擎</li>
@@ -96,21 +96,21 @@ class Content extends React.Component {
               </h4>
               <p>允許更寬的輪距，能增加操控，但也會增加重量。</p>
             </ol>
-          </div>
+          </>
         ),
       },
       {
         title: "空力套件與外觀",
         content: (
-          <div>
+          <>
             <p>S1以上建議先解鎖前後空力，其餘選項在最後用來調整分數。</p>
-          </div>
+          </>
         ),
       },
       {
         title: "輪胎與輪圈",
         content: (
-          <div>
+          <>
             <ol type="i">
               <h4>
                 <li>輪胎踏面膠料</li>
@@ -131,13 +131,13 @@ class Content extends React.Component {
               </ul>
               <p>其餘選項在最後用來調整分數</p>
             </ol>
-          </div>
+          </>
         ),
       },
       {
         title: "傳動系統",
         content: (
-          <div>
+          <>
             <ol type="i">
               <h4>
                 <li>離合器</li>
@@ -156,13 +156,13 @@ class Content extends React.Component {
               </h4>
               <p>務必升滿，對車輛調教非常重要。</p>
             </ol>
-          </div>
+          </>
         ),
       },
       {
         title: "底盤與操控性",
         content: (
-          <div>
+          <>
             <ol type="i">
               <h4>
                 <li>剎車</li>
@@ -185,13 +185,13 @@ class Content extends React.Component {
               </h4>
               <p>必須，建議升滿。</p>
             </ol>
-          </div>
+          </>
         ),
       },
       {
         title: "引擎",
         content: (
-          <div>
+          <>
             <h4>優先順序：</h4>
             <ol type="a">
               <li>增壓（ex:渦輪）</li>
@@ -203,28 +203,28 @@ class Content extends React.Component {
               <li>飛輪</li>
             </ol>
             <p>中間冷卻器、機油/冷卻系統的升級有時會降低分數，可以用來調整。</p>
-          </div>
+          </>
         ),
       },
       {
         id: "calculator",
         title: "馬力重量比計算",
         content: (
-          <div>
+          <>
             <p>每匹馬力需負擔的重量。</p>
             <Calculator />
-          </div>
+          </>
         ),
       },
     ];
   }
   render() {
     return (
-      <div>
+      <>
         {this.section.map((s) => (
           <Block title={s.title} content={s.content} />
         ))}
-      </div>
+      </>
     );
   }
 }

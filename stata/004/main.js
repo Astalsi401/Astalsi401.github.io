@@ -5,7 +5,7 @@ class Content extends React.Component {
       {
         title: "整理資料常用指令",
         content: (
-          <div>
+          <>
             <p>載入資料</p>
             <CodeChunk code={`cd "C:/Users/misti/Documents/Stata/unify/data"\nls\nuse 2012_063Q1xia.dta, clear\ncd ..`} lang="stata" />
             <CodeChunk code={`. cd "C:/Users/misti/Documents/Stata/unify/data"\nC:\\Users\\misti\\Documents\\Stata\\unify\\data\n\n. ls\n  <dir>  11/20/20 21:16  .                 \n  <dir>  11/20/20 21:16  ..                \n  11.3M   5/31/18 10:37  2012_063Q1xia.dta \n   0.2k   3/29/18 11:14  data1b.csv        \n  33.0k   3/29/18 11:14  data2b.xlsx       \n2272.7k   4/26/18 12:18  tscs131.dta       \n\n. use 2012_063Q1xia.dta, clear\n\n. cd ..\nC:\\Users\\misti\\Documents\\Stata\\unify`} lang="output" />
@@ -52,13 +52,13 @@ class Content extends React.Component {
                 <CodeChunk code={`. numlabel V11, add\n\n. ta v11\n\n                      v11 |\n         請問您的教育程度 |\n             是:(提示卡1) |      Freq.     Percent        Cum.\n--------------------------+-----------------------------------\n     1. 無/不識字(跳答14) |        101        4.73        4.73\n2. 自修/識字/私塾(跳答14) |         13        0.61        5.34\n          3. 小學(跳答13) |        305       14.29       19.63\n      4. 國(初)中(跳答13) |        241       11.29       30.93\n          5. 初職(跳答13) |          5        0.23       31.16\n    6. 高中普通科(跳答13) |         84        3.94       35.10\n    7. 高中職業科(跳答13) |         68        3.19       38.28\n          8. 高職(跳答13) |        391       18.32       56.61\n      9. 士官學校(跳答13) |          6        0.28       56.89\n                 10. 五專 |         70        3.28       60.17\n                 11. 二專 |        148        6.94       67.10\n                 12. 三專 |         22        1.03       68.13\n         13. 軍警校專修班 |          5        0.23       68.37\n         14. 軍警校專科班 |          4        0.19       68.56\n        15. 空中行專/商專 |          7        0.33       68.88\n             16. 空中大學 |          9        0.42       69.31\n       17. 軍警官校或大學 |         16        0.75       70.06\n        18. 技術學院,科大 |        177        8.29       78.35\n                 19. 大學 |        316       14.81       93.16\n                 20. 碩士 |        131        6.14       99.30\n                 21. 博士 |         11        0.52       99.81\n         22. 其他(請說明) |          4        0.19      100.00\n--------------------------+-----------------------------------\n                    Total |      2,134      100.00`} lang="output" />
               </li>
             </ul>
-          </div>
+          </>
         ),
       },
       {
         title: "定義遺漏值",
         content: (
-          <div>
+          <>
             <p>將編號22的「其他」設為遺漏值，可以發現「22. 其他」消失了</p>
             <CodeChunk code={`preserve\nmvdecode v11, mv(22)\nta v11\nrestore`} lang="stata" />
             <CodeChunk code={`. preserve\n\n. mvdecode v11, mv(22)\n         v11: 4 missing values generated\n\n. ta v11\n\n                      v11 |\n         請問您的教育程度 |\n             是:(提示卡1) |      Freq.     Percent        Cum.\n--------------------------+-----------------------------------\n     1. 無/不識字(跳答14) |        101        4.74        4.74\n2. 自修/識字/私塾(跳答14) |         13        0.61        5.35\n          3. 小學(跳答13) |        305       14.32       19.67\n      4. 國(初)中(跳答13) |        241       11.31       30.99\n          5. 初職(跳答13) |          5        0.23       31.22\n    6. 高中普通科(跳答13) |         84        3.94       35.16\n    7. 高中職業科(跳答13) |         68        3.19       38.36\n          8. 高職(跳答13) |        391       18.36       56.71\n      9. 士官學校(跳答13) |          6        0.28       57.00\n                 10. 五專 |         70        3.29       60.28\n                 11. 二專 |        148        6.95       67.23\n                 12. 三專 |         22        1.03       68.26\n         13. 軍警校專修班 |          5        0.23       68.50\n         14. 軍警校專科班 |          4        0.19       68.69\n        15. 空中行專/商專 |          7        0.33       69.01\n             16. 空中大學 |          9        0.42       69.44\n       17. 軍警官校或大學 |         16        0.75       70.19\n        18. 技術學院,科大 |        177        8.31       78.50\n                 19. 大學 |        316       14.84       93.33\n                 20. 碩士 |        131        6.15       99.48\n                 21. 博士 |         11        0.52      100.00\n--------------------------+-----------------------------------\n                    Total |      2,130      100.00\n\n. restore`} lang="output" />
@@ -71,13 +71,13 @@ class Content extends React.Component {
             <p>
               若codebook中已經標明遺漏值（通常為999），那也可以使用<code>mvdecode _all, mv(999)</code>來一次定義資料中所有變項的遺漏值，不過視需求而定，某些變項有可能需要個別調整。
             </p>
-          </div>
+          </>
         ),
       },
       {
         title: "重新編碼",
         content: (
-          <div>
+          <>
             <p>將各個選項重新編碼為教育年數，如：選項1.無/不識字=0年</p>
             <p>這裡有兩種不同的方式，各有其用處，會在不同地方派上用場</p>
             <div className="my-2">
@@ -100,13 +100,13 @@ class Content extends React.Component {
               <CodeChunk code={`cap drop edyear\ng edyear = .  /*g: generate的縮寫，建立變項，也能寫為gen。建立一個名為edyear，裡面沒有任何obs的變項*/\nreplace edyear = 0  if v11 == 1\nreplace edyear = 3  if v11 == 2\nreplace edyear = 6  if v11 == 3\nreplace edyear = 9  if v11 == 4 | v11 == 5\nreplace edyear = 12 if v11 >= 6 & v11 <= 9\nreplace edyear = 14 if v11 == 10 | v11 == 11 | v11 >= 13 & v11 <= 15\nreplace edyear = 15 if v11 == 12\nreplace edyear = 16 if v11 >= 16 & v11 <= 19\nreplace edyear = 18 if v11 == 20\nreplace edyear = 22 if v11 == 21\nreplace edyear = .  if v11 == 22\nta edyear`} lang="stata" />
               <CodeChunk code={`. cap drop edyear\n\n. g edyear = .  /*g: generate的縮寫，建立變項，也能寫為gen。建立一個名為edyear，裡面沒有任何obs的變項*/\n(2,134 missing values generated)\n\n. replace edyear = 0  if v11 == 1\n(101 real changes made)\n\n. replace edyear = 3  if v11 == 2\n(13 real changes made)\n\n. replace edyear = 6  if v11 == 3\n(305 real changes made)\n\n. replace edyear = 9  if v11 == 4 | v11 == 5\n(246 real changes made)\n\n. replace edyear = 12 if v11 >= 6 & v11 <= 9\n(549 real changes made)\n\n. replace edyear = 14 if v11 == 10 | v11 == 11 | v11 >= 13 & v11 <= 15\n(234 real changes made)\n\n. replace edyear = 15 if v11 == 12\n(22 real changes made)\n\n. replace edyear = 16 if v11 >= 16 & v11 <= 19\n(518 real changes made)\n\n. replace edyear = 18 if v11 == 20\n(131 real changes made)\n\n. replace edyear = 22 if v11 == 21\n(11 real changes made)\n\n. replace edyear = .  if v11 == 22\n(0 real changes made)\n\n. ta edyear\n\n     edyear |      Freq.     Percent        Cum.\n------------+-----------------------------------\n          0 |        101        4.74        4.74\n          3 |         13        0.61        5.35\n          6 |        305       14.32       19.67\n          9 |        246       11.55       31.22\n         12 |        549       25.77       57.00\n         14 |        234       10.99       67.98\n         15 |         22        1.03       69.01\n         16 |        518       24.32       93.33\n         18 |        131        6.15       99.48\n         22 |         11        0.52      100.00\n------------+-----------------------------------\n      Total |      2,130      100.00`} lang="output" />
             </div>
-          </div>
+          </>
         ),
       },
       {
         title: "職業地位計算（EGP Class Scheme）",
         content: (
-          <div>
+          <>
             <p>
               <a href="https://www.jstor.org/stable/589632?seq=1">EGP Class Scheme</a>是一種職業地位的分類方法，在STATA中可以利用<code>iscoegp</code>進行分類。
             </p>
@@ -146,13 +146,13 @@ class Content extends React.Component {
               <CodeChunk code={`table egpnow, c(mean edyear sd edyear n edyear) format(%9.2f) row`} lang="stata" />
               <CodeChunk code={`. table egpnow, c(mean edyear sd edyear n edyear) format(%9.2f) row\n\n----------------------------------------------------\n 職業地位 | mean(edyear)    sd(edyear)     N(edyear)\n----------+-----------------------------------------\nMangement |        16.83          2.79            71\n   whiteC |        13.88          3.16           940\n  PetitiB |        15.07          2.90            30\n   BWorer |        10.09          3.96           848\n   Farmer |         5.69          4.87           143\n          | \n    Total |        11.84          4.48         2,032\n----------------------------------------------------`} lang="output" />
             </div>
-          </div>
+          </>
         ),
       },
       {
         title: "其他技巧",
         content: (
-          <div>
+          <>
             <ol>
               <li>
                 <code>egen miny = min(y), by(x)</code>：
@@ -207,19 +207,19 @@ class Content extends React.Component {
               </li>
             </ol>
             <CodeChunk code={`local varType: type var  /*獲取變項類型*/if substr("\`varType'", 1, 3) == "str" {  如果變項類型為文字(str) do some stata code...} else {  some stata code...}`} lang="stata" />
-          </div>
+          </>
         ),
       },
     ];
   }
   render() {
     return (
-      <div>
+      <>
         <p>大多數剛匯入的資料並不適合直接分析，為了讓資料更符合符合我們的需求，需要對資料進行整理，以下介紹幾個整理資料經常用到的指令。</p>
         {this.section.map((section) => (
           <Block title={section.title} content={section.content} />
         ))}
-      </div>
+      </>
     );
   }
 }
