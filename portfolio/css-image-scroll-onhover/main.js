@@ -5,11 +5,9 @@ class Content extends React.Component {
       {
         title: "",
         content: (
-          <>
-            <div className="col-md-8 mx-auto shadow-sm">
-              <div className="scroll-on-hover"></div>
-            </div>
-          </>
+          <div className="col-md-8 mx-auto shadow-sm">
+            <div className="scroll-on-hover"></div>
+          </div>
         ),
       },
       {
