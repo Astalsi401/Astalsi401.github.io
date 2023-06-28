@@ -1,0 +1,33 @@
+.grid-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 120px);
+  grid-template-areas:
+    "a a a"
+    "b b b"
+    "c d e"
+    "f f g"
+    "f f h";
+}
+.grid-image {
+  padding: 2px;
+  grid-area: var(--grid-area);
+  img.grid-image-zoom {
+    --shadow: rgb(0, 0, 0);
+    cursor: zoom-in;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 0 0 var(--shadow);
+    transform-origin: 0 0;
+    transition: transform 0.8s, box-shadow 0.8s;
+    transition-timing-function: ease-in-out;
+    &.active {
+      cursor: zoom-out;
+      object-fit: contain;
+      height: auto;
+      box-shadow: 0 0 10px var(--shadow);
+    }
+  }
+}

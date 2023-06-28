@@ -1,19 +1,2 @@
-.image-zoom {
-  img {
-    cursor: pointer;
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    transform-origin: 0 0;
-    transition: transform 0.8s;
-    transition-timing-function: ease-in-out;
-  }
-  &.active {
-    img {
-      z-index: 10;
-      object-fit: contain;
-    }
-  }
-}
+@import "./image-zoom-normal.scss";
+@import "./image-zoom-grid.scss";
