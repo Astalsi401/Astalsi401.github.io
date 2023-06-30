@@ -6,6 +6,7 @@
   .prev,
   .next {
     position: absolute;
+    z-index: 2;
     top: 0;
     display: block;
     width: 25%;
@@ -45,6 +46,8 @@
   }
 }
 .images-container {
+  --play-state: paused;
+  --time: 0.4s;
   position: relative;
   width: 100%;
   height: 100%;
@@ -59,6 +62,16 @@
     left: 0;
     .img-cell {
       opacity: 0;
+      z-index: 0;
+    }
+  }
+  &.active {
+    .img-cell {
+      animation-name: float;
+      animation-fill-mode: forwards;
+      animation-duration: var(--time);
+      animation-delay: calc(var(--delay) * var(--i));
+      animation-play-state: var(--play-state);
     }
   }
 }
@@ -66,6 +79,19 @@
   position: absolute;
   display: block;
   background-repeat: no-repeat;
-  transition: opacity 0.4s ease-in-out;
+  z-index: 1;
+  transition: opacity var(--time) ease-in-out;
   transition-delay: calc(var(--delay) * var(--i));
+}
+
+@keyframes float {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

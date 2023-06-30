@@ -50,6 +50,7 @@ class ImageSwitch {
     this.images.forEach((image, index) => this.cells(width, height, image, index));
   };
   next = (next = true) => {
+    this.container.style.setProperty("--play-state", "running");
     this.active = (this.active + (next ? 1 : -1) + this.images.length) % this.images.length;
     this.container.querySelectorAll(".img-cells").forEach((cell, i) => cell.classList.toggle("active", i === this.active));
   };
