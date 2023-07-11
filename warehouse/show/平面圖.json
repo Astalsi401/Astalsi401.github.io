@@ -472,7 +472,7 @@
   { "type": "booth", "floor": 4, "w": 600, "h": 600, "x": 900, "y": 7110, "id": "L603a", "cat": { "tc": "精準醫療展區", "en": "Biotech" }, "text": { "tc": ["華廣"], "en": [""] }, "size": 0.8 },
   { "type": "booth", "floor": 4, "w": 1200, "h": 1500, "x": 1800, "y": 6210, "id": "L609a", "cat": { "tc": "精準醫療展區", "en": "Biotech" }, "text": { "tc": ["中研院"], "en": [""] }, "size": 1.0 },
   { "type": "booth", "floor": 4, "w": 1200, "h": 1500, "x": 3610, "y": 6210, "id": "L617a", "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" }, "text": { "tc": ["亞東遠傳"], "en": [""] }, "size": 1.0 },
-  { "type": "booth", "floor": 4, "w": 300, "h": 300, "x": 600, "y": 6810, "id": "L701", "cat": { "tc": "精準醫療展區", "en": "Biotech" }, "text": { "tc": ["血液基金會"], "en": [""] }, "size": 0.4 },
+  { "type": "booth", "floor": 4, "w": 300, "h": 300, "x": 600, "y": 6810, "id": "L701", "cat": { "tc": "精準醫療展區", "en": "Biotech" }, "text": { "tc": ["血液", "基金會"], "en": [""] }, "size": 0.35 },
   { "type": "booth", "floor": 4, "w": 900, "h": 600, "x": 600, "y": 6210, "id": "L701a", "cat": { "tc": "精準醫療展區", "en": "Biotech" }, "text": { "tc": ["圭克生技", "光電"], "en": [""] }, "size": 0.6 },
   { "type": "booth", "floor": 4, "w": 300, "h": 300, "x": 900, "y": 6810, "id": "L703", "cat": { "tc": "精準醫療展區", "en": "Biotech" }, "text": { "tc": [""], "en": [""] }, "size": 0.4 },
   { "type": "booth", "floor": 4, "w": 300, "h": 300, "x": 1200, "y": 6810, "id": "L705", "cat": { "tc": "精準醫療展區", "en": "Biotech" }, "text": { "tc": ["戴克"], "en": [""] }, "size": 0.4 },
