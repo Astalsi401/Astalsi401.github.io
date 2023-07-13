@@ -266,7 +266,7 @@
   { "type": "booth", "floor": 1, "w": 1200, "h": 300, "x": 9120, "y": 900, "id": "J1117", "cat": { "tc": "全齡健康展區", "en": "Health Tech" }, "text": { "tc": ["嘉易創"], "en": [""] }, "size": 0.6 },
   { "type": "booth", "floor": 1, "w": 300, "h": 300, "x": 10320, "y": 900, "id": "J1125", "cat": { "tc": "全齡健康展區", "en": "Health Tech" }, "text": { "tc": [""], "en": [""] }, "size": 0.4 },
   { "type": "booth", "floor": 1, "w": 300, "h": 300, "x": 10620, "y": 900, "id": "J1127", "cat": { "tc": "全齡健康展區", "en": "Health Tech" }, "text": { "tc": [""], "en": [""] }, "size": 0.4 },
-  { "type": "booth", "floor": 1, "w": 900, "h": 300, "x": 10920, "y": 900, "id": "J1129", "cat": { "tc": "全齡健康展區", "en": "Health Tech" }, "text": { "tc": ["2"], "en": ["2"] }, "size": 0.4 },
+  { "type": "booth", "floor": 1, "w": 900, "h": 300, "x": 10920, "y": 900, "id": "J1129", "cat": { "tc": "全齡健康展區", "en": "Health Tech" }, "text": { "tc": ["2(3)"], "en": ["2(3)"] }, "size": 0.4 },
   { "type": "booth", "floor": 1, "w": 2400, "h": 1500, "x": 9120, "y": 8110, "id": "J118", "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" }, "text": { "tc": ["新光醫院"], "en": [""] }, "size": 1.0 },
   { "type": "booth", "floor": 1, "w": 2400, "h": 600, "x": 6110, "y": 7210, "id": "J302", "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" }, "text": { "tc": ["馬偕醫院"], "en": [""] }, "size": 1 },
   { "type": "booth", "floor": 1, "w": 2400, "h": 600, "x": 9120, "y": 7210, "id": "J318", "cat": { "tc": "全齡健康展區", "en": "Health Tech" }, "text": { "tc": ["英華達"], "en": [""] }, "size": 1 },
