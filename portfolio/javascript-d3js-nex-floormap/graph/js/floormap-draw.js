@@ -1,4 +1,4 @@
-fetch("../../../../../warehouse/show/平面圖.json")
+fetch("https://astalsi401.github.io/warehouse/show/平面圖.json")
   // ../../../../../warehouse/show/平面圖.json
   // https://astalsi401.github.io/warehouse/show/平面圖.json
   .then((res) => res.json())
