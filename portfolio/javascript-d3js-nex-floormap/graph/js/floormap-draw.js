@@ -1,30 +1,22 @@
-const lang = document.querySelector("#lang");
-fetch("./graph/js/floormap.json")
+fetch("../../../../../warehouse/show/平面圖.json")
+  // ../../../../../warehouse/show/平面圖.json
+  // https://astalsi401.github.io/warehouse/show/平面圖.json
   .then((res) => res.json())
   .then((data) => {
-    const drawFloorMap = (lang) => {
-      document.querySelectorAll(".graph").forEach((d) => (d.innerHTML = ""));
-      const f1 = new Floor(
-        d3.select("#graph-1f"),
-        17930,
-        13410,
-        data.filter((d) => d.floor === 1),
-        lang
-      );
-      const f4 = new Floor(
-        d3.select("#graph-4f"),
-        18030,
-        17010,
-        data.filter((d) => d.floor === 4),
-        lang
-      );
-      f1.draw();
-      f4.draw();
-      window.addEventListener("resize", () => {
-        f1.draw();
-        f4.draw();
-      });
-    };
-    drawFloorMap(lang.value);
-    lang.addEventListener("change", (e) => drawFloorMap(e.target.value));
+    const f1 = new Floor(
+      "1F 民眾展區",
+      d3.select("#graph-1f"),
+      19730,
+      19010,
+      data.filter((d) => d.floor === 1),
+      "tc"
+    );
+    const f4 = new Floor(
+      "4F 專業展區",
+      d3.select("#graph-4f"),
+      19830,
+      21010,
+      data.filter((d) => d.floor === 4),
+      "tc"
+    );
   });
