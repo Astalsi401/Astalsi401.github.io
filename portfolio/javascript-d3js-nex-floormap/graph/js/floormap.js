@@ -88,7 +88,7 @@ class Floor {
       .text((d) => d.text)
       .attr("text-anchor", "middle")
       .attr("font-weight", "bold")
-      .attr("fill", "red");
+      .attr("fill", (d) => d.color);
     this.booth = new Box(this.addObj("booth", "g"), "booth", this.lang);
     this.booth.box
       .attr("stroke-width", "0.3px")
@@ -223,7 +223,7 @@ class Floor {
     this.mouseover_fuc(this.room.box, width);
     this.mouseover_fuc(this.booth.box, width);
     this.text
-      .attr("font-size", `${width * 0.022}`)
+      .attr("font-size", (d) => `${width * 0.022 * d.size}`)
       .attr("x", (d) => this.xScale(d.x))
       .attr("y", (d) => this.yScale(d.y));
     this.iconSet(this.icon);
