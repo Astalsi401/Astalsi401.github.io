@@ -43,7 +43,7 @@ function Content() {
     return (
       <div className="container-fluid px-2">
         <div className="row my-2">
-          <div class="col-sm-3">
+          <div className="col-sm-3">
             <select name="city" id="city" onChange={handleLocationChange}>
               {cities.map((c) => (
                 <option key={c.city} value={c.city}>
@@ -52,7 +52,7 @@ function Content() {
               ))}
             </select>
           </div>
-          <div class="col-sm-9">
+          <div className="col-sm-9">
             <div>
               <span className="text-bold">目前溫度</span>
               <br />

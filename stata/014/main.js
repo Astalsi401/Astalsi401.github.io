@@ -85,7 +85,7 @@ class Content extends React.Component {
                     碎石圖（scree plot）：主要查看在 1 以上有幾點，就代表有幾個潛在因子
                     <CodeChunk code={`screeplot, scheme(s1color) yline(1) ///\n           xaxis (1 2) yaxis (1 2)   ///\n           ylabel(, axis(1) nogrid)  ///\n           ylabel(, axis(2) nolabel) ///\n           xlabel(, axis(2) nolabel) ///\n           xsize(4) ///\n           xtitle("", axis(2)) ///\n           ytitle("", axis(2))`} lang="stata" />
                     <CodeChunk code={`. screeplot, scheme(s1color) yline(1) ///\n>          xaxis (1 2) yaxis (1 2)   ///\n>          ylabel(, axis(1) nogrid)  ///\n>          ylabel(, axis(2) nolabel) ///\n>          xlabel(, axis(2) nolabel) ///\n>          xsize(4) ///\n>          xtitle("", axis(2)) ///\n>          ytitle("", axis(2))`} lang="output" />
-                    <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/screePlot.png" />
+                    <ZoomImage className="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/screePlot.png" />
                   </li>
                   <li>
                     平行分析

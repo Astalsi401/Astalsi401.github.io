@@ -1,1 +1,1 @@
-ReactDOM.createRoot(document.getElementById("App")).render(<App category="Notes" title="Html & Css" class="container shadow-lg p-3" />);
+ReactDOM.createRoot(document.getElementById("App")).render(<App category="Notes" title="Html & Css" className="container shadow-lg p-3" />);

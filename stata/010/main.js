@@ -30,7 +30,7 @@ class Content extends React.Component {
               </li>
               <li>
                 非參數顯著性檢驗採用的是卡方分配（Chi Square distribution）
-                <ZoomImage class="mx-auto w-sm-75" src="https://astalsi401.github.io/assets/images/chi-square01.png" />
+                <ZoomImage className="mx-auto w-sm-75" src="https://astalsi401.github.io/assets/images/chi-square01.png" />
                 <ol type="i">
                   <li>是右偏的分配。</li>
                   <li>

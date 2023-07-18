@@ -45,7 +45,7 @@ class Content extends React.Component {
                 code={`. oneway interest type, sch  /*只有一個自變項才能用oneway*/\n\nAnalysis of Variance\nSource              SS         df      MS            F     Prob > F\n------------------------------------------------------------------------\nBetween groups        25.2      2         12.6      8.22     0.0056\nWithin groups         18.4     12   1.53333333\n------------------------------------------------------------------------\nTotal                 43.6     14   3.11428571\n                \nBartlett's test for equal variances:  chi2(2) =   1.1517  Prob>chi2 = 0.562\n                \nComparison of 感興趣程度 by 姓名性別感覺\n(Scheffe)\nRow Mean-|\nCol Mean |       男性       中性\n---------+----------------------\n    中性 |       -2.4\n         |      0.031\n         |\n    女性 |         -3        -.6\n         |      0.008      0.751\n                \n. anova interest type\n                \nNumber of obs =         15    R-squared     =  0.5780\nRoot MSE      =    1.23828    Adj R-squared =  0.5076\n                \n    Source | Partial SS         df         MS        F    Prob>F\n-----------+----------------------------------------------------\n     Model |       25.2          2        12.6      8.22  0.0056\n           |\n      type |       25.2          2        12.6      8.22  0.0056\n           |\n  Residual |       18.4         12   1.5333333  \n-----------+----------------------------------------------------\n     Total |       43.6         14   3.1142857  \n                \n. margins type\n                \nAdjusted predictions                            Number of obs     =         15\n                \nExpression   : Linear prediction, predict()\n                \n------------------------------------------------------------------------------\n             |            Delta-method\n             |     Margin   Std. Err.      t    P>|t|     [95% Conf. Interval]\n-------------+----------------------------------------------------------------\n        type |\n       男性  |        6.2   .5537749    11.20   0.000     4.993428    7.406572\n       中性  |        3.8   .5537749     6.86   0.000     2.593428    5.006572\n       女性  |        3.2   .5537749     5.78   0.000     1.993428    4.406572\n------------------------------------------------------------------------------\n                \n. marginsplot, ylabel(0(2)10, angle(0)) noci\n                \nVariables that uniquely identify margins: type\n                \n. *                   0(2)10  ylabel從0~10排列，每2為一距 \n. *                           angle調整文字傾斜角度\n. graph export "anova01.png", replace\n(file anova01.png written in PNG format)`}
                 lang="output"
               />
-              <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/anova01.png" />
+              <ZoomImage className="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/anova01.png" />
             </div>
           </>
         ),
@@ -70,23 +70,23 @@ class Content extends React.Component {
               <ol type="i">
                 <li>A和B因子均無效應：</li>
                 <p>顯示無論有沒有使用到A因子，心率⼀直停留在60bps(Beats per minutes) </p>
-                <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/twoway-anova01.png" />
+                <ZoomImage className="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/twoway-anova01.png" />
                 <li>只有A因子有效應：</li>
                 <p>顯示在無論有沒有使用到B因子的情況下，若使用到A因子，則心率會從60bps增加到80bps。</p>
-                <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/twoway-anova02.png" />
+                <ZoomImage className="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/twoway-anova02.png" />
                 <li>只有B因子有效應：</li>
                 <p>顯示在無論有沒有使用到A因子的情況下，若沒有使用到B因子，則心率會一直停留在60bps，但若使用了B因子時，則⼼率增加到70bps。</p>
-                <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/twoway-anova03.png" />
+                <ZoomImage className="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/twoway-anova03.png" />
                 <li>A因子和B因子之間不存在交互作用：</li>
                 <p>當沒使用到A因子時，若沒使用B因子，則心跳停留在60bps，而一旦使用到B因子時，則心率增加到70bps。換言之，在沒使用到A因子的狀況下，使用B因子，則心跳會增加10bps。</p>
                 <p>當沒使用到A因子時，若沒使用B因子，則⼼跳停留在80bps，而一旦使用到B因子時，則心率增加到90bps。換言之，即是使用了A因子，使用B因子與否的效應也僅是10bps。和前面沒使用A因⼦時一樣。</p>
                 <p>因此，A與B之間沒有交互影響。</p>
-                <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/twoway-anova04.png" />
+                <ZoomImage className="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/twoway-anova04.png" />
                 <li>A因子和B因子之間存在交互作用，但主要效應僅在B因子上：</li>
                 <p>這裡心率增加的15bps是A與B交互作用的效應。另外，我們也可以說A因子是沒有效應的，但⼀旦增加了B因⼦後，我們不但看到了B因子的效應，也看到了A和B合起來的效應。</p>
-                <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/twoway-anova05.png" />
+                <ZoomImage className="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/twoway-anova05.png" />
                 <li>A和B都存在著主效應，並且交互作用的效應也存在。</li>
-                <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/twoway-anova06.png" />
+                <ZoomImage className="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/twoway-anova06.png" />
               </ol>
             </ol>
             <div className="my-2">
@@ -96,7 +96,7 @@ class Content extends React.Component {
                 code={`. clear\n\n. input violent sexual score\n\nviolent sexual score\n 1. 0 0 8\n 2. 0 0 10\n 3. 0 0 7\n 4. 0 0 9\n 5. 0 1 9\n 6. 0 1 5\n 7. 0 1 7\n 8. 0 1 7\n 9. 1 0 6\n10. 1 0 4\n11. 1 0 8\n12. 1 0 6\n13. 1 1 2\n14. 1 1 1\n15. 1 1 1\n16. 1 1 2\n17. end\n\n. lab var violent "電影是否暴力"\n\n. lab var sexual "電影是否色情"\n\n. lab var score "Empathy Scores"\n\n. lab def violent 0 "無暴力" 1 "有暴力"\n\n. lab def sexual 0 "無色情" 1 "有色情"\n\n. lab val violent violent\n\n. lab val sexual sexual\n\n. anova score violent sexual violent#sexual\n\nNumber of obs =  16 R-squared = 0.8321\n Root MSE =  1.35401 Adj R-squared = 0.7901\n\n        Source | Partial SS    df          MS        F      Prob>F\n---------------+----------------------------------------------------\n         Model |        109     3   36.333333    19.82      0.0001\n               |\n       violent |         64     1          64    34.91      0.0001\n        sexual |         36     1          36    19.64      0.0008\nviolent#sexual |          9     1           9     4.91      0.0468\n               |\n      Residual |         22    12   1.8333333 \n---------------+----------------------------------------------------\n         Total |        131    15   8.7333333 \n\n. margins violent sexual violent#sexual\n\nPredictive margins Number of obs =  16\n\nExpression : Linear prediction, predict()\n\n--------------------------------------------------------------------------------\n               | Delta-method\n               | Margin Std.      Err.        t    P>|t|   [95% Conf. Interval]\n---------------+----------------------------------------------------------------\n       violent |\n        無暴力 |        7.75    .47871    16.19    0.000     6.706973 8.793027\n        有暴力 |        3.75  .4787136     7.83    0.000     2.706973 4.793027\n               |\n        sexual |\n        無色情 |        7.25  .4787136    15.14    0.000     6.206973 8.293027\n        有色情 |        4.25  .4787136     8.88    0.000     3.206973 5.293027\n               |\nviolent#sexual |\n 無暴力#無色情 |         8.5  .6770032    12.56    0.000     7.024937 9.975063\n 無暴力#有色情 |           7  .6770032    10.34    0.000     5.524937 8.475063\n 有暴力#無色情 |           6  .6770032     8.86    0.000     4.524937 7.475063\n 有暴力#有色情 |         1.5  .6770032     2.22    0.047     .0249367 2.975063\n--------------------------------------------------------------------------------\n\n. marginsplot, ylabel(0(2)10) noci\n\nVariables that uniquely identify margins: violent sexual\n\n. graph export "twoway anova07.png", replace\n(file twoway anova07.png written in PNG format)\n\n. table violent sexual, c(mean score n score) row col format(%8.2f)\n\n----------------------------------\n 電影是否 | 電影是否色情\n     暴力 | 無色情  有色情  Total\n----------+-----------------------\n   無暴力 |   8.50    7.00   7.75\n          |      4       4      8\n          |\n   有暴力 |   6.00    1.50   3.75\n          |      4       4      8\n          |\n    Total |   7.25    4.25   5.75\n          |      8       8     16\n----------------------------------`}
                 lang="output"
               />
-              <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/twoway-anova07.png" />
+              <ZoomImage className="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/twoway-anova07.png" />
             </div>
           </>
         ),

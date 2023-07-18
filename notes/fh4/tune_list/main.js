@@ -15,7 +15,7 @@ class TuneListRow extends React.Component {
         <td>{this.props.data.score}</td>
         <td>
           {this.props.data.carType}
-          <ZoomImage class={this.state.active ? "d-block" : "d-none"} src={this.props.data.pic} />
+          <ZoomImage className={this.state.active ? "d-block" : "d-none"} src={this.props.data.pic} />
         </td>
         <td>{this.props.data.preferance.join(" ")}</td>
         <td>{this.props.data.shareCode}</td>
@@ -65,7 +65,7 @@ class Content extends React.Component {
     return (
       <>
         <Block
-          class="py-2 bg-white tuneSearch"
+          className="py-2 bg-white tuneSearch"
           content={
             <div className="row">
               <input type="search" className="d-block col-md-6 mx-auto p-2" placeholder="請輸入關鍵字" onChange={this.search} />

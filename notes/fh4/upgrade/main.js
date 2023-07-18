@@ -32,13 +32,13 @@ class Calculator extends React.Component {
         </div>
         <div className="col-2 p-1 d-flex align-items-center text-bold">馬力重量比</div>
         <div className="col-5 p-1 d-flex align-items-center text-bold justify-content-center">
-          <output name="before" class={before > after ? "text-warn" : before < after ? "text-success" : ""}>
+          <output name="before" className={before > after ? "text-warn" : before < after ? "text-success" : ""}>
             {before}
           </output>
           kg/hp
         </div>
         <div className="col-5 p-1 d-flex align-items-center text-bold justify-content-center">
-          <output name="after" class={before > after ? "text-success" : before < after ? "text-warn" : ""}>
+          <output name="after" className={before > after ? "text-success" : before < after ? "text-warn" : ""}>
             {after}
           </output>
           kg/hp

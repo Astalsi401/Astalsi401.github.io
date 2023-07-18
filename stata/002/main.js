@@ -116,7 +116,7 @@ class Content extends React.Component {
           <>
             <p>在STATA中開啟圖表</p>
             <CodeChunk code={`graph use "1978auto.gph`} lang="stata" />
-            <ZoomImage class="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/1978auto_1.png" alt="1978auto_1.png" />
+            <ZoomImage className="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/1978auto_1.png" alt="1978auto_1.png" />
           </>
         ),
       },
@@ -161,7 +161,7 @@ class Content extends React.Component {
                 現在利用<code>append</code>將data1a與data1b合併，然後存檔為data1_all。
               </p>
               <p>
-                像這樣直接使用<span class="code">save 檔名</span>存檔，檔案格式為STATA專用的.dta，存檔位置為當前的工作目錄。
+                像這樣直接使用<span className="code">save 檔名</span>存檔，檔案格式為STATA專用的.dta，存檔位置為當前的工作目錄。
               </p>
               <CodeChunk code={`append using data1a\nsort id  /*以變項id來為合併後的資料排序*/\nsave data1_all, replace  /*replace: 如果存檔位置已存在同名的檔案，則取代它*/`} lang="stata" />
               <CodeChunk code={`. append using data1a\n(note: variable id was byte, now float to accommodate using data's values)\n(note: variable male was byte, now float to accommodate using data's values)\n(note: variable score1 was byte, now float to accommodate using data's values)\n\n. sort id  /*以變項id來為合併後的資料排序*/\n\n. save data1_all, replace  /*replace: 如果存檔位置已存在同名的檔案，則取代它*/\nfile data1_all.dta saved`} lang="output" />

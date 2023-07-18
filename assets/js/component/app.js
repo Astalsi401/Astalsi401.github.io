@@ -1,17 +1,14 @@
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    document.title = this.props.title;
-  }
-  render() {
-    return (
-      <>
-        <Header category={this.props.category} />
-        <main id="main-content" className={this.props.class}>
-          <h1 className="my-5 text-center">{this.props.title}</h1>
-          <Content />
-        </main>
-      </>
-    );
-  }
+function App({ category, className, title }) {
+  useEffect(() => {
+    document.title = title;
+  }, []);
+  return (
+    <>
+      <Header category={category} />
+      <main id="main-content" className={className}>
+        <h1 className="my-5 text-center">{title}</h1>
+        <Content />
+      </main>
+    </>
+  );
 }
