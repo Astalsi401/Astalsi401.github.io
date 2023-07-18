@@ -451,7 +451,7 @@
   { "type": "booth", "floor": 4, "w": 1800, "h": 600, "x": 4510, "y": 3200, "id": "L1018", "cat": { "tc": "智慧醫療展區", "en": "Medtech" }, "text": { "tc": ["緯創醫學科技"], "en": [""] }, "size": 1 },
   { "type": "booth", "floor": 4, "w": 600, "h": 600, "x": 1500, "y": 11310, "id": "L102", "cat": { "tc": "精準醫療展區", "en": "Biotech" }, "text": { "tc": ["台灣", "永生"], "en": [""] }, "size": 0.6 },
   { "type": "booth", "floor": 4, "w": 600, "h": 600, "x": 6310, "y": 3200, "id": "L1030", "cat": { "tc": "智慧醫療展區", "en": "Medtech" }, "text": { "tc": ["共振波"], "en": [""] }, "size": 0.7 },
-  { "type": "booth", "floor": 4, "w": 1800, "h": 1200, "x": 2100, "y": 10710, "id": "L106", "cat": { "tc": "智慧醫療展區", "en": "Medtech" }, "text": { "tc": ["Intel．Oracle"], "en": [""] }, "size": 1.0 },
+  { "type": "booth", "floor": 4, "w": 1800, "h": 1200, "x": 2100, "y": 10710, "id": "L106", "cat": { "tc": "智慧醫療展區", "en": "Medtech" }, "text": { "tc": ["Intel"], "en": [""] }, "size": 1.0 },
   { "type": "booth", "floor": 4, "w": 300, "h": 300, "x": 1500, "y": 3200, "id": "L1101", "cat": { "tc": "智慧醫療展區", "en": "Medtech" }, "text": { "tc": ["巨群"], "en": [""] }, "size": 0.4 },
   { "type": "booth", "floor": 4, "w": 600, "h": 300, "x": 1500, "y": 2600, "id": "L1102", "cat": { "tc": "智慧醫療展區", "en": "Medtech" }, "text": { "tc": ["永井"], "en": [""] }, "size": 0.6 },
   { "type": "booth", "floor": 4, "w": 600, "h": 300, "x": 1800, "y": 3200, "id": "L1103", "cat": { "tc": "智慧醫療展區", "en": "Medtech" }, "text": { "tc": ["比利時", "台北辦事處"], "en": [""] }, "size": 0.35 },
