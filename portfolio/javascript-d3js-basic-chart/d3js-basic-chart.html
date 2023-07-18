@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>D3.js Basic Chart</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F8SLV521P4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-F8SLV521P4');
+    </script>
+    <!-- prism -->
+    <script src=" https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js "></script>
+    <link href=" https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css " rel="stylesheet">
+    <!-- react -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <!-- babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- component -->
+    <script defer type="text/jsx" src="https://astalsi401.github.io/assets/js/component/components.js"></script>
+    <script defer type="text/jsx" src="https://astalsi401.github.io/assets/js/component/app.js"></script>
+    <script defer type="text/jsx" src="./render.js"></script>
+    <link rel="stylesheet" href="https://astalsi401.github.io/assets/style/main.min.css">
+</head>
+
+<body>
+    <div id="App-header"></div>
+    <div id="App">
+        <main id="main-content" class="container-xl shadow-lg p-3">
+            <h1 class="my-5 text-center">D3.js Basic Chart</h1>
+            <section class="my-4">
+                <h3 class="my-t text-center">Bar Chart 1</h3>
+                <div class="graph" id="graph-plot"></div>
+                <div class="graph" id="graph-bar1"></div>
+                <div class="graph" id="graph-bar2"></div>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <link rel="stylesheet" href="./graph/style/graph.min.css">
+        <!-- d3.js graph -->
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="./graph/js/非主管員工薪資-plot.js"></script>
+        <script src="./graph/js/非主管員工薪資-bar.js"></script>
+        <script src="./graph/js/非主管員工薪資-main.js"></script>
+    </footer>
+</body>
+
+</html>
