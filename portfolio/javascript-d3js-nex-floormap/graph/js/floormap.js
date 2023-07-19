@@ -30,7 +30,7 @@ class Box {
     this.text_box = this.box.append("g");
     this.text = this.text_box
       .selectAll(`${c}-text`)
-      .data((d) => (d.text ? d.text[this.lang] : []).map((t) => ({ text: t, size: d.size[this.lang] })))
+      .data((d) => (d.text ? d.text[this.lang] : []).map((t) => ({ w: d.w, text: t, size: d.size[this.lang] })))
       .enter()
       .append("text")
       .text((d) => d.text)
@@ -50,8 +50,8 @@ class Box {
 
 class Floor {
   constructor(title, graph, w, h, data, lang) {
-    this.title = title;
     this.lang = lang;
+    this.title = title[this.lang];
     this.colors = colors[this.lang];
     this.id_text = { en: "No.", tc: "編號:" };
     this.graph = graph;
@@ -85,7 +85,7 @@ class Floor {
     this.pillar_box = this.addObj("pillar", "g");
     this.pillar = this.pillar_box.append("rect").attr("fill", "rgba(0, 0, 0, 0.2)");
     this.text = this.addObj("text", "text")
-      .text((d) => d.text)
+      .text((d) => d.text[this.lang])
       .attr("text-anchor", "middle")
       .attr("font-weight", "bold")
       .attr("fill", (d) => d.color);
@@ -169,7 +169,7 @@ class Floor {
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.download = `${this.graph.attr("id")}.${format}`;
+    link.download = `${this.title}.${format}`;
     document.body.appendChild(link);
     link.click();
     URL.revokeObjectURL(url);
@@ -208,22 +208,37 @@ class Floor {
     return path.map((p) => (p.node === "L" ? `${p.node}${this.xScale(p.x)} ${this.yScale(p.y)}` : `${p.node}${this.xScale(p.x1)} ${this.yScale(p.y1)} ${this.xScale(p.x2)} ${this.yScale(p.y2)} ${this.xScale(p.x)} ${this.yScale(p.y)}`)).join("");
   };
 
+  wrap = (text) => {
+    const xScale = this.xScale;
+    text.each(function (d) {
+      let self = d3.select(this),
+        textLength = self.node().getComputedTextLength(),
+        text = self.text();
+      while (textLength > xScale(d.w) && text.length > 0) {
+        text = text.slice(0, -1);
+        self.text(text + "\u2026");
+        textLength = self.node().getComputedTextLength();
+      }
+    });
+  };
+
   draw = () => {
-    const width = parseInt(this.graph.style("width"), 10);
-    const height = (width / this.w) * this.h;
-    this.svg.attr("width", width).attr("height", height);
-    this.xScale.range([0, width]);
-    this.yScale.range([0, height]);
+    this.width = parseInt(this.graph.style("width"), 10);
+    this.height = (this.width / this.w) * this.h;
+    this.svg.attr("width", this.width).attr("height", this.height);
+    this.xScale.range([0, this.width]);
+    this.yScale.range([0, this.height]);
     this.wall.attr("d", (d) => `M${this.xScale(d.x)} ${this.yScale(d.y)}${this.draw_path(d.p)}`);
     this.pillar_box.attr("transform", (d) => `translate(${this.xScale(d.x)},${this.yScale(d.y)})`);
     this.pillar.attr("width", (d) => this.xScale(d.w)).attr("height", (d) => this.yScale(d.h));
-    this.room.draw(width, this.xScale, this.yScale, 0.011);
-    this.booth.draw(width, this.xScale, this.yScale, 0.014);
-    this.booth_id.attr("y", (d) => this.yScale(d.h) - 1).attr("font-size", width * 0.004);
-    this.mouseover_fuc(this.room.box, width);
-    this.mouseover_fuc(this.booth.box, width);
+    this.room.draw(this.width, this.xScale, this.yScale, 0.011);
+    this.booth.draw(this.width, this.xScale, this.yScale, 0.014);
+    this.booth_id.attr("y", (d) => this.yScale(d.h) - 1).attr("font-size", this.width * 0.004);
+    this.wrap(this.booth.text);
+    this.mouseover_fuc(this.room.box, this.width);
+    this.mouseover_fuc(this.booth.box, this.width);
     this.text
-      .attr("font-size", (d) => `${width * 0.022 * d.size}`)
+      .attr("font-size", (d) => `${this.width * 0.022 * d.size}`)
       .attr("x", (d) => this.xScale(d.x))
       .attr("y", (d) => this.yScale(d.y));
     this.iconSet(this.icon);
