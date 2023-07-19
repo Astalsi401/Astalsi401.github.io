@@ -7,7 +7,7 @@ fetch("https://astalsi401.github.io/warehouse/show/平面圖.json")
     const graphes = document.querySelectorAll(".graph");
     const drawFP = (lang) => {
       new Floor(
-        "1F 民眾展區",
+        { tc: "1F 民眾展區", en: "1F Community Area" },
         d3.select("#graph-1f"),
         19730,
         19010,
@@ -15,7 +15,7 @@ fetch("https://astalsi401.github.io/warehouse/show/平面圖.json")
         lang
       );
       new Floor(
-        "4F 專業展區",
+        { tc: "4F 專業展區", en: "4F Industrial Area" },
         d3.select("#graph-4f"),
         19830,
         21010,
