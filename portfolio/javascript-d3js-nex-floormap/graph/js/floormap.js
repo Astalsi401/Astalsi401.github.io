@@ -53,7 +53,7 @@ class Floor {
     this.lang = lang;
     this.title = title[this.lang];
     this.colors = colors[this.lang];
-    this.id_text = { en: "No.", tc: "編號:" };
+    this.id_text = { en: "No.", tc: "編號:" }[this.lang];
     this.graph = graph;
     this.download_container = this.graph.append("div").attr("class", "download c-mx-auto c-my-2");
     this.format_select = this.download_container.append("select").attr("class", "format-select");
@@ -69,6 +69,7 @@ class Floor {
     this.w = w;
     this.h = h;
     this.data = data;
+    console.log(data);
     this.xScale = d3.scaleLinear().domain([0, this.w]);
     this.yScale = d3.scaleLinear().domain([0, this.h]);
     this.legend = this.svg.append("g").attr("class", "legend");
@@ -94,7 +95,7 @@ class Floor {
       .attr("stroke-width", "0.3px")
       .attr("fill", (d) => this.colors(d.cat[this.lang]))
       .on("mouseover", (event, d) => {
-        this.tooltip.classed("active", true).html(`${d.cat[this.lang]}${d.id ? `<br>${this.id_text[this.lang]} ` + d.id : ""}<br>${d.text ? d.text[this.lang].join("") : ""}`);
+        this.tooltip.classed("active", true).html(`${d.cat[this.lang]}${d.id ? `<br>${this.id_text} ` + d.id : ""}<br>${d.text ? d.text[this.lang].join("") : ""}`);
       });
     this.booth_id = this.booth.box
       .append("text")
@@ -238,7 +239,7 @@ class Floor {
     this.mouseover_fuc(this.room.box, this.width);
     this.mouseover_fuc(this.booth.box, this.width);
     this.text
-      .attr("font-size", (d) => `${this.width * 0.022 * d.size}`)
+      .attr("font-size", (d) => `${this.width * 0.022 * d.size[this.lang]}`)
       .attr("x", (d) => this.xScale(d.x))
       .attr("y", (d) => this.yScale(d.y));
     this.iconSet(this.icon);
