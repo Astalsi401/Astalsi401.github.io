@@ -30,7 +30,7 @@ class Box {
     this.text_box = this.box.append("g");
     this.text = this.text_box
       .selectAll(`${c}-text`)
-      .data((d) => (d.text ? d.text[this.lang] : []).map((t) => ({ text: t, size: d.size })))
+      .data((d) => (d.text ? d.text[this.lang] : []).map((t) => ({ text: t, size: d.size[this.lang] })))
       .enter()
       .append("text")
       .text((d) => d.text)
@@ -43,7 +43,7 @@ class Box {
     this.text_padding = 0.001;
     this.box.attr("transform", (d) => `translate(${xScale(d.x)},${yScale(d.y)})`);
     this.item.attr("width", (d) => xScale(d.w)).attr("height", (d) => yScale(d.h));
-    this.text_box.attr("transform", (d) => `translate(${xScale(d.w / 2)},${yScale(d.h / 2) - ((d.text[this.lang].length - 1) * width * (size * d.size + this.text_padding)) / 2})`).attr("font-size", (d) => width * size * d.size);
+    this.text_box.attr("transform", (d) => `translate(${xScale(d.w / 2)},${yScale(d.h / 2) - ((d.text[this.lang].length - 1) * width * (size * d.size[this.lang] + this.text_padding)) / 2})`).attr("font-size", (d) => width * size * d.size[this.lang]);
     this.text.attr("y", (d, i) => i * width * (size * d.size + this.text_padding));
   };
 }
