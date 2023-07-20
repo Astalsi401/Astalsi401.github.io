@@ -482,7 +482,7 @@
   { "type": "booth", "floor": 4, "w": 300, "h": 300, "x": 6010, "y": 1700, "id": "L1228", "cat": { "tc": "智慧醫療展區", "en": "Medtech" }, "text": { "tc": [""], "en": [""] }, "size": { "tc": 0.4, "en": 0.4 } },
   { "type": "booth", "floor": 4, "w": 300, "h": 300, "x": 6310, "y": 1700, "id": "L1230", "cat": { "tc": "智慧醫療展區", "en": "Medtech" }, "text": { "tc": [""], "en": [""] }, "size": { "tc": 0.4, "en": 0.4 } },
   { "type": "booth", "floor": 4, "w": 300, "h": 300, "x": 6610, "y": 1700, "id": "L1232", "cat": { "tc": "智慧醫療展區", "en": "Medtech" }, "text": { "tc": ["亞提爾"], "en": ["Acura Tech Limited Taiwan Branch"] }, "size": { "tc": 0.4, "en": 0.4 } },
-  { "type": "booth", "floor": 4, "w": 600, "h": 1200, "x": 6310, "y": 10710, "id": "L130", "cat": { "tc": "精準醫療展區", "en": "Biotech" }, "text": { "tc": [""], "en": [""] }, "size": { "tc": 0.8, "en": 0.8 } },
+  { "type": "booth", "floor": 4, "w": 600, "h": 1200, "x": 6310, "y": 10710, "id": "L130", "cat": { "tc": "精準醫療展區", "en": "Biotech" }, "text": { "tc": ["普生"], "en": [""] }, "size": { "tc": 0.8, "en": 0.8 } },
   { "type": "booth", "floor": 4, "w": 300, "h": 300, "x": 1500, "y": 1400, "id": "L1301", "cat": { "tc": "智慧醫療展區", "en": "Medtech" }, "text": { "tc": [""], "en": [""] }, "size": { "tc": 0.4, "en": 0.4 } },
   { "type": "booth", "floor": 4, "w": 300, "h": 300, "x": 1500, "y": 800, "id": "L1302", "cat": { "tc": "智慧醫療展區", "en": "Medtech" }, "text": { "tc": [""], "en": [""] }, "size": { "tc": 0.4, "en": 0.4 } },
   { "type": "booth", "floor": 4, "w": 300, "h": 300, "x": 1800, "y": 1400, "id": "L1303", "cat": { "tc": "智慧醫療展區", "en": "Medtech" }, "text": { "tc": [""], "en": [""] }, "size": { "tc": 0.4, "en": 0.4 } },
