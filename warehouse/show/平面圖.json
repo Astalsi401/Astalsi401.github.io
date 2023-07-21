@@ -645,7 +645,7 @@
   { "type": "booth", "floor": 4, "w": 300, "h": 300, "x": 18630, "y": 4310, "id": "N018", "cat": { "tc": "智慧醫療展區", "en": "Medtech" }, "text": { "tc": [""], "en": [""] }, "size": { "tc": 0.4, "en": 0.4 } },
   { "type": "booth", "floor": 4, "w": 300, "h": 300, "x": 18630, "y": 4010, "id": "N019", "cat": { "tc": "智慧醫療展區", "en": "Medtech" }, "text": { "tc": [""], "en": [""] }, "size": { "tc": 0.4, "en": 0.4 } },
   { "type": "booth", "floor": 4, "w": 300, "h": 300, "x": 18630, "y": 3710, "id": "N020", "cat": { "tc": "智慧醫療展區", "en": "Medtech" }, "text": { "tc": [""], "en": [""] }, "size": { "tc": 0.4, "en": 0.4 } },
-  { "type": "booth", "floor": 4, "w": 300, "h": 300, "x": 18630, "y": 3410, "id": "N021", "cat": { "tc": "智慧醫療展區", "en": "Medtech" }, "text": { "tc": [""], "en": [""] }, "size": { "tc": 0.4, "en": 0.4 } },
+  { "type": "booth", "floor": 4, "w": 300, "h": 300, "x": 18630, "y": 3410, "id": "N021", "cat": { "tc": "智慧醫療展區", "en": "Medtech" }, "text": { "tc": ["AP ", "GLOBAL"], "en": ["AP ", "GLOBAL"] }, "size": { "tc": 0.25, "en": 0.25 } },
   { "type": "booth", "floor": 4, "w": 300, "h": 300, "x": 18630, "y": 2610, "id": "N022", "cat": { "tc": "智慧醫療展區", "en": "Medtech" }, "text": { "tc": ["尚偉"], "en": ["SUNWAY Scientific Corporation"] }, "size": { "tc": 0.4, "en": 0.4 } },
   { "type": "booth", "floor": 4, "w": 300, "h": 300, "x": 18630, "y": 2310, "id": "N023", "cat": { "tc": "智慧醫療展區", "en": "Medtech" }, "text": { "tc": [""], "en": [""] }, "size": { "tc": 0.4, "en": 0.4 } },
   { "type": "booth", "floor": 4, "w": 300, "h": 300, "x": 18630, "y": 2010, "id": "N024", "cat": { "tc": "智慧醫療展區", "en": "Medtech" }, "text": { "tc": [""], "en": [""] }, "size": { "tc": 0.4, "en": 0.4 } },
