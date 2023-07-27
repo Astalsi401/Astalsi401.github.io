@@ -55,7 +55,7 @@ class Floor {
     this.colors = colors[this.lang];
     this.id_text = { en: "No.", tc: "編號:" }[this.lang];
     this.graph = graph;
-    this.download_container = this.graph.append("div").attr("class", "download c-mx-auto c-my-2");
+    this.download_container = this.graph.append("div").attr("class", "download");
     this.format_select = this.download_container.append("select").attr("class", "format-select");
     this.format_select
       .selectAll("option")
@@ -95,7 +95,7 @@ class Floor {
       .attr("stroke-width", "0.3px")
       .attr("fill", (d) => this.colors(d.cat[this.lang]))
       .on("mouseover", (event, d) => {
-        this.tooltip.classed("active", true).html(`${d.cat[this.lang]}${d.id ? `<br>${this.id_text} ` + d.id : ""}<br>${d.text ? d.text[this.lang].join("") : ""}`);
+        this.tooltip.classed("active", true).html(`${d.cat[this.lang]}${d.id ? `<br>${this.id_text} ` + d.id : ""}<br>size: ${d.w / 300} x ${d.h / 300}<br>${d.text ? d.text[this.lang].join("") : ""}`);
       });
     this.booth_id = this.booth.box
       .append("text")
