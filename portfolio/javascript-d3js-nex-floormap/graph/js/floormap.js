@@ -69,7 +69,6 @@ class Floor {
     this.w = w;
     this.h = h;
     this.data = data;
-    console.log(data);
     this.xScale = d3.scaleLinear().domain([0, this.w]);
     this.yScale = d3.scaleLinear().domain([0, this.h]);
     this.legend = this.svg.append("g").attr("class", "legend");
