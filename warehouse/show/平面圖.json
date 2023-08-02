@@ -530,7 +530,7 @@
   { "type": "booth", "floor": 4, "w": 300, "h": 300, "x": 6310, "y": 500, "id": "L1429", "cat": { "tc": "智慧醫療展區", "en": "Medtech" }, "text": { "tc": [""], "en": [""] }, "size": { "tc": 0.4, "en": 0.4 } },
   { "type": "booth", "floor": 4, "w": 300, "h": 300, "x": 6610, "y": 500, "id": "L1431", "cat": { "tc": "智慧醫療展區", "en": "Medtech" }, "text": { "tc": [""], "en": [""] }, "size": { "tc": 0.4, "en": 0.4 } },
   { "type": "booth", "floor": 4, "w": 300, "h": 300, "x": 1500, "y": 11010, "id": "L201a", "cat": { "tc": "精準醫療展區", "en": "Biotech" }, "text": { "tc": [""], "en": [""] }, "size": { "tc": 0.4, "en": 0.4 } },
-  { "type": "booth", "floor": 4, "w": 600, "h": 300, "x": 1500, "y": 10710, "id": "L202", "cat": { "tc": "精準醫療展區", "en": "Biotech" }, "text": { "tc": ["Basler"], "en": ["Basler Asia Pte Ltd "] }, "size": { "tc": 0.6, "en": 0.6 } },
+  { "type": "booth", "floor": 4, "w": 600, "h": 300, "x": 1500, "y": 10710, "id": "L202", "cat": { "tc": "精準醫療展區", "en": "Biotech" }, "text": { "tc": [""], "en": [""] }, "size": { "tc": 0.6, "en": 0.6 } },
   { "type": "booth", "floor": 4, "w": 300, "h": 300, "x": 1800, "y": 11010, "id": "L203a", "cat": { "tc": "精準醫療展區", "en": "Biotech" }, "text": { "tc": [""], "en": [""] }, "size": { "tc": 0.4, "en": 0.4 } },
   { "type": "booth", "floor": 4, "w": 900, "h": 300, "x": 4510, "y": 10710, "id": "L218", "cat": { "tc": "智慧醫療展區", "en": "Medtech" }, "text": { "tc": ["西柏科技"], "en": [""] }, "size": { "tc": 0.6, "en": 0.6 } },
   { "type": "booth", "floor": 4, "w": 600, "h": 300, "x": 5410, "y": 10710, "id": "L224", "cat": { "tc": "智慧醫療展區", "en": "Medtech" }, "text": { "tc": ["慧誠智醫"], "en": [""] }, "size": { "tc": 0.4, "en": 0.4 } },
