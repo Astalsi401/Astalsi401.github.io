@@ -26,43 +26,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><!-- component -->
     <!-- main -->
     <script defer type="text/jsx" src="https://astalsi401.github.io/assets/js/component/components.js"></script>
+    <script defer type="text/jsx" src="./main.js"></script>
     <script defer type="text/jsx" src="https://astalsi401.github.io/assets/js/component/app.js"></script>
     <script defer type="text/jsx" src="./render.js"></script>
     <link rel="stylesheet" href="https://astalsi401.github.io/assets/style/main.min.css">
 </head>
 
 <body>
-    <div id="App-header"></div>
-    <div id="App">
-        <main id="main-content" class="container-xl shadow-lg p-3">
-            <h1 class="my-5 text-center">展會平面圖</h1>
-            <section class="my-4">
-                <h3 class="my-t text-center">南港展覽館醫療科技展平面圖</h3>
-                <div class="my-2">原圖發布於醫療科技展官網，請至<a href="https://expo.taiwan-healthcare.org/zh/exhibit.php" target="_blank">參展辦法</a>頁面查看最新版本。</div>
-                <div class="my-2"><label>
-                        切換平面圖語言：
-                        <select name="lang" id="lang">
-                            <option value="tc">中文</option>
-                            <option value="en">Eng</option>
-                        </select>
-                    </label></div>
-                <div class="graph" id="graph-1f"></div>
-                <div class="graph" id="graph-4f"></div>
-            </section>
-            <section class="my-4">
-                <div id="code-1"></div>
-            </section>
-            <section class="my-4">
-                <div id="code-2"></div>
-            </section>
-        </main>
-    </div>
+    <div id="App"></div>
     <footer>
         <!-- d3.js graph -->
         <script src="https://d3js.org/d3.v7.min.js"></script>
         <script src="./graph/js/floormap.js"></script>
-        <script src="./graph/js/floormap-draw.js"></script>
         <link rel="stylesheet" href="./graph/css/floormap.min.css">
+        <link rel="stylesheet" href="./graph/css/floormap-search.min.css">
     </footer>
 </body>
 

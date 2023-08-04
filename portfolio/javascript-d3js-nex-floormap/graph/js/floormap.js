@@ -19,8 +19,7 @@ const icon_base64 = {
 const icon_l = 500;
 
 class Box {
-  constructor(box, c, lang) {
-    this.lang = lang;
+  constructor(box, c) {
     this.box = box
       .attr("data-x", (d) => d.x)
       .attr("data-y", (d) => d.y)
@@ -30,7 +29,8 @@ class Box {
     this.text_box = this.box.append("g");
     this.text = this.text_box
       .selectAll(`${c}-text`)
-      .data((d) => (d.text ? d.text[this.lang] : []).map((t) => ({ w: d.w, text: t, size: d.size[this.lang] })))
+      .attr("test", (d) => console.log(d))
+      .data((d) => d.text.map((t) => ({ w: d.w, text: t, size: d.size })))
       .enter()
       .append("text")
       .text((d) => d.text)
@@ -43,7 +43,7 @@ class Box {
     this.text_padding = 0.001;
     this.box.attr("transform", (d) => `translate(${xScale(d.x)},${yScale(d.y)})`);
     this.item.attr("width", (d) => xScale(d.w)).attr("height", (d) => yScale(d.h));
-    this.text_box.attr("transform", (d) => `translate(${xScale(d.w / 2)},${yScale(d.h / 2) - ((d.text[this.lang].length - 1) * width * (size * d.size[this.lang] + this.text_padding)) / 2})`).attr("font-size", (d) => width * size * d.size[this.lang]);
+    this.text_box.attr("transform", (d) => `translate(${xScale(d.w / 2)},${yScale(d.h / 2) - ((d.text.length - 1) * width * (size * d.size + this.text_padding)) / 2})`).attr("font-size", (d) => width * size * d.size);
     this.text.attr("y", (d, i) => i * width * (size * d.size + this.text_padding));
   };
 }
@@ -51,7 +51,7 @@ class Box {
 class Floor {
   constructor(title, graph, w, h, data, lang) {
     this.lang = lang;
-    this.title = title[this.lang];
+    this.title = title;
     this.colors = colors[this.lang];
     this.id_text = { en: "No.", tc: "編號:" }[this.lang];
     this.graph = graph;
@@ -75,7 +75,7 @@ class Floor {
     this.legend_title = this.legend.append("text").text(this.title).attr("font-weight", "bold");
     this.legend_box = this.legend
       .selectAll("g")
-      .data(Array.from(new Set(this.data.filter((d) => d.type === "booth").map((d) => d.cat[this.lang]))))
+      .data(Array.from(new Set(this.data.filter((d) => d.type === "booth").map((d) => d.cat))))
       .enter()
       .append("g");
     this.wall = this.addObj("wall", "path")
@@ -85,16 +85,17 @@ class Floor {
     this.pillar_box = this.addObj("pillar", "g");
     this.pillar = this.pillar_box.append("rect").attr("fill", "rgba(0, 0, 0, 0.2)");
     this.text = this.addObj("text", "text")
-      .text((d) => d.text[this.lang])
+      .text((d) => d.text)
       .attr("text-anchor", "middle")
       .attr("font-weight", "bold")
       .attr("fill", (d) => d.color);
-    this.booth = new Box(this.addObj("booth", "g"), "booth", this.lang);
+    this.booth = new Box(this.addObj("booth", "g"), "booth");
     this.booth.box
       .attr("stroke-width", "0.3px")
-      .attr("fill", (d) => this.colors(d.cat[this.lang]))
+      .attr("fill", (d) => this.colors(d.cat))
+      .attr("opacity", (d) => d.opacity)
       .on("mouseover", (event, d) => {
-        this.tooltip.classed("active", true).html(`${d.cat[this.lang]}${d.id ? `<br>${this.id_text} ` + d.id : ""}<br>size: ${d.w / 300} x ${d.h / 300}<br>${d.text ? d.text[this.lang].join("") : ""}`);
+        this.tooltip.classed("active", true).html(`${d.cat}${d.id ? `<br>${this.id_text} ` + d.id : ""}<br>size: ${d.w / 300} x ${d.h / 300}<br>${d.text.join("")}`);
       });
     this.booth_id = this.booth.box
       .append("text")
@@ -102,12 +103,12 @@ class Floor {
       .attr("class", "booth-id")
       .attr("fill", "black")
       .attr("x", 2);
-    this.room = new Box(this.addObj("room", "g"), "room", this.lang);
+    this.room = new Box(this.addObj("room", "g"), "room");
     this.room.box
       .attr("stroke-width", (d) => (d.bd ? d.bd : 0))
       .attr("fill", "rgba(0,0,0,0)")
       .on("mouseover", (event, d) => {
-        if (d.note) this.tooltip.classed("active", true).html(d.note[this.lang]);
+        if (d.note) this.tooltip.classed("active", true).html(d.note);
       });
     this.icon = this.room.box
       .append("clipPath")
@@ -165,7 +166,6 @@ class Floor {
         blob = new Blob([svgString], { type: "image/svg+xml;charset=utf-8" });
         break;
     }
-
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
@@ -238,7 +238,7 @@ class Floor {
     this.mouseover_fuc(this.room.box, this.width);
     this.mouseover_fuc(this.booth.box, this.width);
     this.text
-      .attr("font-size", (d) => `${this.width * 0.022 * d.size[this.lang]}`)
+      .attr("font-size", (d) => `${this.width * 0.022 * d.size}`)
       .attr("x", (d) => this.xScale(d.x))
       .attr("y", (d) => this.yScale(d.y));
     this.iconSet(this.icon);
