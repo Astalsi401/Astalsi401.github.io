@@ -477,7 +477,7 @@
   { "type": "booth", "floor": 4, "w": 300, "h": 300, "x": 2700, "y": 1700, "id": "L1210", "cat": { "tc": "智慧醫療展區", "en": "Medtech" }, "text": { "tc": [""], "en": [""] }, "size": { "tc": 0.4, "en": 0.4 } },
   { "type": "booth", "floor": 4, "w": 300, "h": 300, "x": 3000, "y": 1700, "id": "L1212", "cat": { "tc": "智慧醫療展區", "en": "Medtech" }, "text": { "tc": [""], "en": [""] }, "size": { "tc": 0.4, "en": 0.4 } },
   { "type": "booth", "floor": 4, "w": 600, "h": 600, "x": 3300, "y": 1400, "id": "L1214", "cat": { "tc": "智慧醫療展區", "en": "Medtech" }, "text": { "tc": ["睿生", "光電"], "en": ["InnoCare Optoelectronics Corp."] }, "size": { "tc": 0.8, "en": 0.8 } },
-  { "type": "booth", "floor": 4, "w": 600, "h": 600, "x": 4510, "y": 1400, "id": "L1218", "cat": { "tc": "智慧醫療展區", "en": "Medtech" }, "text": { "tc": ["4"], "en": [""] }, "size": { "tc": 0.6, "en": 0.6 } },
+  { "type": "booth", "floor": 4, "w": 600, "h": 600, "x": 4510, "y": 1400, "id": "L1218", "cat": { "tc": "智慧醫療展區", "en": "Medtech" }, "text": { "tc": ["艾立斯", "科技"], "en": [""] }, "size": { "tc": 0.6, "en": 0.6 } },
   { "type": "booth", "floor": 4, "w": 300, "h": 300, "x": 5110, "y": 1700, "id": "L1222", "cat": { "tc": "智慧醫療展區", "en": "Medtech" }, "text": { "tc": ["和鑫"], "en": ["Nanoray Biotech Co., Ltd."] }, "size": { "tc": 0.4, "en": 0.4 } },
   { "type": "booth", "floor": 4, "w": 300, "h": 300, "x": 5410, "y": 2300, "id": "L1223", "cat": { "tc": "智慧醫療展區", "en": "Medtech" }, "text": { "tc": ["屏基"], "en": ["Pingtung Christian Hospital"] }, "size": { "tc": 0.4, "en": 0.4 } },
   { "type": "booth", "floor": 4, "w": 300, "h": 300, "x": 5410, "y": 1700, "id": "L1224", "cat": { "tc": "智慧醫療展區", "en": "Medtech" }, "text": { "tc": ["伯東"], "en": ["Hakuto Taiwan Ltd."] }, "size": { "tc": 0.4, "en": 0.4 } },
