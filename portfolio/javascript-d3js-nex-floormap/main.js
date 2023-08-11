@@ -78,7 +78,7 @@ const FloormapArea = () => {
         {/* <FloormapSearchResult data={filterFloorData} regexString={regexString} /> */}
       </div>
       <div className="my-2">
-        切換平面圖語言：
+        {{ tc: "切換平面圖語言", en: "Choose a language" }[lang]}：
         <select name="lang" className="lang my-2" value={lang} onChange={handleLangChange}>
           <option value="tc">中文</option>
           <option value="en">Eng</option>
