@@ -10,17 +10,35 @@ const Floormap = ({ data, width, height, lang, floor }) => {
   return <div className="graph" ref={graphRef}></div>;
 };
 
+const FloormapSearchResult = ({ data, regexString }) => {
+  if (regexString.source === /(?:)/i.source) return <div className="search-results"></div>;
+  const searcResult = useMemo(() => data.filter((d) => d.type === "booth" && d.opacity === 1), [regexString]);
+  return (
+    <div className="search-results py-2">
+      {searcResult.map((d) => (
+        <div className="bg-gray my-1">
+          <div>{d.id}</div>
+          <div>{d.text}</div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
 const FloormapArea = () => {
   const [floorData, setFloorData] = useState([]);
   const [regexString, setRegexString] = useState(new RegExp(""));
   const [searchString, setSearchString] = useState("");
-  const [lang, setLang] = useState("tc");
+  const [lang, setLang] = useState("en");
   useEffect(() => {
+    // https://astalsi401.github.io/warehouse/show/平面圖.json
+    // ../../../../../warehouse/show/平面圖.json
     fetch("https://astalsi401.github.io/warehouse/show/平面圖.json")
       .then((res) => res.json())
       .then((data) => {
         setFloorData(data);
       });
+    if (/^zh/i.test(navigator.language)) setLang("tc");
   }, []);
   const regexEscape = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const handleSearchChange = ({ target: { value } }) => {
@@ -57,10 +75,11 @@ const FloormapArea = () => {
             Search
           </button>
         </div>
+        {/* <FloormapSearchResult data={filterFloorData} regexString={regexString} /> */}
       </div>
       <div className="my-2">
         切換平面圖語言：
-        <select name="lang" className="lang my-2" onChange={handleLangChange}>
+        <select name="lang" className="lang my-2" value={lang} onChange={handleLangChange}>
           <option value="tc">中文</option>
           <option value="en">Eng</option>
         </select>
@@ -76,7 +95,7 @@ const Content = () => {
     <>
       <Block
         content={
-          <div class="my-2">
+          <div className="my-2">
             原圖發布於醫療科技展官網，請至
             <a href="https://expo.taiwan-healthcare.org/zh/exhibit.php" target="_blank">
               參展辦法
