@@ -29,7 +29,6 @@ class Box {
     this.text_box = this.box.append("g");
     this.text = this.text_box
       .selectAll(`${c}-text`)
-      .attr("test", (d) => console.log(d))
       .data((d) => d.text.map((t) => ({ w: d.w, text: t, size: d.size })))
       .enter()
       .append("text")
@@ -80,8 +79,7 @@ class Floor {
       .append("g");
     this.wall = this.addObj("wall", "path")
       .attr("stroke", "black")
-      .attr("fill", (d) => d.fill)
-      .attr("stroke-width", (d) => d.strokeWidth);
+      .attr("fill", (d) => d.fill);
     this.pillar_box = this.addObj("pillar", "g");
     this.pillar = this.pillar_box.append("rect").attr("fill", "rgba(0, 0, 0, 0.2)");
     this.text = this.addObj("text", "text")
@@ -105,7 +103,7 @@ class Floor {
       .attr("x", 2);
     this.room = new Box(this.addObj("room", "g"), "room");
     this.room.box
-      .attr("stroke-width", (d) => (d.bd ? d.bd : 0))
+      .attr("stroke-width", (d) => (d.bd ? "1px" : 0))
       .attr("fill", "rgba(0,0,0,0)")
       .on("mouseover", (event, d) => {
         if (d.note) this.tooltip.classed("active", true).html(d.note);
@@ -228,7 +226,7 @@ class Floor {
     this.svg.attr("width", this.width).attr("height", this.height);
     this.xScale.range([0, this.width]);
     this.yScale.range([0, this.height]);
-    this.wall.attr("d", (d) => `M${this.xScale(d.x)} ${this.yScale(d.y)}${this.draw_path(d.p)}`);
+    this.wall.attr("d", (d) => `M${this.xScale(d.x)} ${this.yScale(d.y)}${this.draw_path(d.p)}`).attr("stroke-width", (d) => this.xScale(d.strokeWidth));
     this.pillar_box.attr("transform", (d) => `translate(${this.xScale(d.x)},${this.yScale(d.y)})`);
     this.pillar.attr("width", (d) => this.xScale(d.w)).attr("height", (d) => this.yScale(d.h));
     this.room.draw(this.width, this.xScale, this.yScale, 0.011);
