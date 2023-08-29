@@ -1,6 +1,6 @@
 const colors = {
   tc: d3.scaleOrdinal().domain(["全齡健康展區", "年度主題館", "醫療機構展區", "農業生技食安健康主題展", "智慧醫療展區", "精準醫療展區"]).range(["rgba(237,125,49,0.6)", "rgba(153,204,255,1)", "rgba(255,255,0,0.6)", "rgba(153,204,0,1)", "rgba(0,112,192,0.6)", "rgba(112,48,160,0.6"]),
-  en: d3.scaleOrdinal().domain(["Health Tech", "Reserved", "Medical Institutes", "Consumer health technologies", "Medtech", "Biotech"]).range(["rgba(237,125,49,0.6)", "rgba(153,204,255,1)", "rgba(255,255,0,0.6)", "rgba(153,204,0,1)", "rgba(0,112,192,0.6)", "rgba(112,48,160,0.6"]),
+  en: d3.scaleOrdinal().domain(["Consumer health", "Reserved", "Medical Institutes", "Consumer health technologies", "Medtech", "Biotech"]).range(["rgba(237,125,49,0.6)", "rgba(153,204,255,1)", "rgba(255,255,0,0.6)", "rgba(153,204,0,1)", "rgba(0,112,192,0.6)", "rgba(112,48,160,0.6"]),
 };
 const icon_base64 = {
   escalator_up:
