@@ -321,12 +321,10 @@ body {
   min-height: var(--fp-search-box-height);
   background-color: var(--fp-search-bg);
 }
-.fp-search > div {
-  height: var(--fp-search-box-height);
-}
 
 .fp-input {
   width: calc(100% - var(--fp-icon-size) * 2);
+  height: var(--fp-search-box-height);
 }
 
 .fp-input-tag {
@@ -406,6 +404,9 @@ body {
   padding-left: var(--sidebar-width);
   width: 100%;
   height: 100dvh;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;
+       user-select: none; /* Standard syntax */
 }
 
 @media (max-width: 768px) {
@@ -414,6 +415,7 @@ body {
   }
 }
 .fp-filter {
+  cursor: pointer;
   width: var(--fp-icon-size);
   height: var(--fp-search-box-height);
   background-color: var(--fp-search-bg);
@@ -437,6 +439,7 @@ body {
 }
 
 .fp-toggle {
+  cursor: pointer;
   width: var(--fp-icon-size);
   height: var(--fp-search-box-height);
   padding: 5px;
@@ -446,31 +449,28 @@ body {
 .fp-toggle:hover {
   --color: var(--fp-black);
 }
-.fp-toggle:not(.active) {
-  --fp-icon-size: 40px;
-}
 .fp-toggle span {
   position: relative;
   width: 80%;
-}
-.fp-toggle span::before, .fp-toggle span::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  top: calc(var(--i) * 10px);
-}
-.fp-toggle span, .fp-toggle span::before, .fp-toggle span::after {
-  display: block;
-  height: 3px;
-  border-radius: 2px;
-  background-color: var(--color);
-  transition: background-color var(--fp-time), top var(--fp-time), transform var(--fp-time);
 }
 .fp-toggle span::before {
   --i: -1;
 }
 .fp-toggle span::after {
   --i: 1;
+}
+.fp-toggle span::before, .fp-toggle span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: calc(var(--i) * 5px);
+}
+.fp-toggle span, .fp-toggle span::before, .fp-toggle span::after {
+  display: block;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--color);
+  transition: background-color var(--fp-time), top var(--fp-time), transform var(--fp-time);
 }
 .fp-toggle.active span {
   background-color: var(--fp-search-bg);
@@ -609,6 +609,7 @@ body {
 }
 
 .fp-zoom {
+  transition: left var(--fp-time);
   left: calc(var(--sidebar-width) + 10px);
   gap: 10px;
 }

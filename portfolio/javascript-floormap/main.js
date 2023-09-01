@@ -1,4 +1,4 @@
-const { useCallback, useState, useEffect, useRef, useMemo } = React;
+const { useCallback, useState, useEffect, useLayoutEffect, useRef, useMemo, memo } = React;
 const icon_base64 = {
   escalator_up:
     "data:image/svg+xml;base64,PHN2ZyBpZD0i5ZyW5bGkXzEiIGRhdGEtbmFtZT0i5ZyW5bGkIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDQ4IDQzIj48cGF0aCBkPSJNNDIuMzksNDIuMTVINS4yQTQuNjIsNC42MiwwLDAsMSwuNTksMzcuNTRWNS43NkE0LjYxLDQuNjEsMCwwLDEsNS4yLDEuMTZINDIuMzlBNC42LDQuNiwwLDAsMSw0Nyw1Ljc2VjM3LjU0YTQuNjEsNC42MSwwLDAsMS00LjYxLDQuNjEiIHN0eWxlPSJmaWxsOiNlNTAwMTI7ZmlsbC1ydWxlOmV2ZW5vZGQiLz48cGF0aCBkPSJNMjMuNTgsMTQuODhjMS45LTEuOSwzLjgzLTMuNzYsNS42Ny01LjdBNi43Miw2LjcyLDAsMCwxLDM0LjM3LDdjMi4xMywwLDQuMjcsMCw2LjM5LDBhNS43NCw1Ljc0LDAsMCwxLDUuNTQsNC43OGMuMzgsMy4wNi0xLjQxLDYuMDUtNC4yMiw2LjYzYTE4LjYyLDE4LjYyLDAsMCwxLTQuNDIuMTNBMy4zMiwzLjMyLDAsMCwwLDM1LDE5LjY3Yy01LjU0LDUuNTktMTEuMTQsMTEuMTMtMTYuNzEsMTYuN2E3LDcsMCwwLDEtNS4zNywyLjIzYy0yLS4wNi0zLjg5LDAtNS44NCwwYTUuOTQsNS45NCwwLDAsMS01LjctNS44MUE1Ljc3LDUuNzcsMCwwLDEsNi44OSwyN2MxLjIsMCwyLjQxLjA1LDMuNjEsMEEyLjU2LDIuNTYsMCwwLDAsMTIsMjYuMzNjMS42OC0xLjU5LDMuMzEtMy4yNCw0LjkxLTQuOTFhMi4wNywyLjA3LDAsMCwwLC41My0xLjI3Yy4wNS0yLjIyLDAtNC40NSwwLTYuNjhzMS43MS0zLjY3LDMuNzQtMy4xN0EyLjcxLDIuNzEsMCwwLDEsMjMuMzcsMTNjMCwuNTcsMCwxLjE2LDAsMS43NGwuMi4xMk0xMC4yOSwzNS42M2MuNzcsMCwxLjU1LS4wNiwyLjMyLDBBNC44Miw0LjgyLDAsMCwwLDE2LjU2LDM0YzUuNTYtNS42NSwxMS4yMi0xMS4yMiwxNi44LTE2Ljg2YTQuNjgsNC42OCwwLDAsMSwzLjc3LTEuNTljMS4xMS4wNiwyLjIyLDAsMy4zNCwwYTIuNzUsMi43NSwwLDAsMCwyLjg4LTIuOTFBMi44NCwyLjg0LDAsMCwwLDQwLjQ1LDEwYy0yLDAtNCwwLTYsMGE0LjA4LDQuMDgsMCwwLDAtMy4xMiwxLjNDMjUuNSwxNy4xLDE5LjY1LDIyLjkxLDEzLjgzLDI4Ljc2YTMuOTIsMy45MiwwLDAsMS0zLDEuMjRjLTEuMiwwLTIuNDEsMC0zLjYxLDAtMS44MiwwLTIuODksMS0yLjg5LDIuNjRhMi44NSwyLjg1LDAsMCwwLDIuODcsM2MxLDAsMiwwLDMuMDYsMCIgc3R5bGU9ImZpbGw6I2ZmZjtmaWxsLXJ1bGU6ZXZlbm9kZCIvPjxwYXRoIGQ9Ik0yMC40OCwzLjczYTMuMDgsMy4wOCwwLDAsMSwzLDMuMDcsMywzLDAsMCwxLTMuMTEsMywzLDMsMCwwLDEtMi45MS0zLjA4LDMuMTIsMy4xMiwwLDAsMSwzLjA2LTMiIHN0eWxlPSJmaWxsOiNmZmY7ZmlsbC1ydWxlOmV2ZW5vZGQiLz48cGF0aCBkPSJNMzMuNDYsMjkuNzZjLTIsMS43Mi0zLjc4LDMuMjMtNS41NCw0Ljc1LS4yNi4yMi0uNTMuNDMtLjc4LjY3YTEuNDYsMS40NiwwLDAsMC0uMjQsMi4xMiwxLjQyLDEuNDIsMCwwLDAsMi4wNywwYzEuNzktMS41MSwzLjU2LTMsNS4zMy00LjU4QTYuMjMsNi4yMywwLDAsMCwzNSwzMmwuMzEuMTZjLS4wNy44OS0uMTYsMS43OS0uMiwyLjY4cy4zNCwxLjQ2LDEuMTgsMS41NGExLjIyLDEuMjIsMCwwLDAsMS40OC0xLjE2cS4zLTMuMTQuNDgtNi4yN2ExLjQsMS40LDAsMCwwLTEuNDItMS42MWMtMi4wNi0uMjEtNC4xMS0uMzYtNi4xNy0uNDhhMS4yMywxLjIzLDAsMCwwLTEuNDIsMS4yNCwxLjI5LDEuMjksMCwwLDAsMS4yOSwxLjQ4Yy44OC4xLDEuNzcuMTQsMi45NS4yMyIgc3R5bGU9ImZpbGw6I2ZmZjtmaWxsLXJ1bGU6ZXZlbm9kZCIvPjwvc3ZnPg==",
@@ -41,7 +41,7 @@ const Room = ({ d, i, size }) => {
       <clipPath id={`icon-${d.floor}-${i}`}>
         <rect className="icon" width={icon_l} height={icon_l} x={(d.w - icon_l) / 2} y={(d.h - icon_l) / 2} />
       </clipPath>
-      <image width={icon_l} height={icon_l} x={(d.w - icon_l) / 2} y={(d.h - icon_l) / 2} visibility={d.icon ? "visible" : "hidden"} clip-path={`url(#icon-${d.floor}-${i})`} xlinkHref={["escalator_up", "escalator_down", "escalator_up_down_black", "escalator_up_down_red", "elevator", "toilet", "arrow_up", "first_aid"].includes(d.icon) ? icon_base64[d.icon] : d.icon} />
+      <image width={icon_l} height={icon_l} x={(d.w - icon_l) / 2} y={(d.h - icon_l) / 2} visibility={d.icon ? "visible" : "hidden"} clipPath={`url(#icon-${d.floor}-${i})`} xlinkHref={["escalator_up", "escalator_down", "escalator_up_down_black", "escalator_up_down_red", "elevator", "toilet", "arrow_up", "first_aid"].includes(d.icon) ? icon_base64[d.icon] : d.icon ? d.icon : ""} />
     </g>
   );
 };
@@ -100,31 +100,82 @@ const Elements = ({ type, data, size, elementStatus, handleBoothInfo }) => {
   };
   return <g className={`${type}-g`}>{data.filter((d) => d.type == type).map((d, i) => elementActions[type](d, i))}</g>;
 };
-const Floormap = ({ data, sidebarWidth, realWidth, realHeight, tagsHeight, elementStatus, handleBoothInfo, searchCondition, handleSearchChange }) => {
-  const [width, setWidth] = useState(realWidth / 100);
-  const [height, setHeight] = useState(realHeight / 100);
-  const [viewBox, setViewBox] = useState({ x1: 0, y1: 0, x2: 0, y2: 0 });
-  const graphRef = useRef();
-  const svgRef = useRef();
+const Floormap = ({ data, sidebarWidth, tagsHeight, realSize, elementStatus, handleBoothInfo, searchCondition, handleSearchChange }) => {
+  const [containerSize, setContainerSize] = useState({ width: realSize.w / 100, height: realSize.h / 100 });
+  const [viewBox, setViewBox] = useState({ x1: 0, y1: 0, x2: realSize.w, y2: realSize.h });
+  const [drugStatus, setDrugStatus] = useState({ moving: false, previousTouch: null });
+  const [newSVGPoint, setNewSVGPoint] = useState(null);
+  const [startSVGPoint, setStartSVGPoint] = useState(null);
+  const graphRef = useRef(null);
+  const svgRef = useRef(null);
+  const handleStart = () => setDrugStatus((prev) => ({ ...prev, moving: true }));
+  const handleEnd = () => setDrugStatus({ moving: false, previousTouch: null });
   const handleResize = () => {
-    const graphWidth = graphRef.current.clientWidth - (elementStatus.isMobile ? 0 : sidebarWidth);
-    const graphHeight = graphRef.current.clientHeight;
-    const scale = Math.min(graphWidth / realWidth, (graphHeight - tagsHeight) / realHeight);
-    setWidth(realWidth * scale);
-    setHeight(realHeight * scale);
-    setViewBox({ x1: 0, y1: 0, x2: realWidth, y2: realHeight });
+    const width = graphRef.current.clientWidth - (elementStatus.isMobile ? 0 : sidebarWidth);
+    const height = graphRef.current.clientHeight - tagsHeight;
+    setContainerSize({ width: width, height: height });
   };
-  const handleZoom = ({ target: { value } }) => {};
+  const drugCalculator = (x1, y1, x2, y2) => {
+    if (!drugStatus.moving) return;
+    x1 -= sidebarWidth;
+    y1 -= tagsHeight;
+    let svgPoint = svgRef.current.createSVGPoint();
+    svgPoint.x = x1;
+    svgPoint.y = y1;
+    let CTM = svgRef.current.getScreenCTM();
+    setStartSVGPoint(svgPoint.matrixTransform(CTM.inverse()));
+    svgPoint = svgRef.current.createSVGPoint();
+    svgPoint.x = x1 + x2;
+    svgPoint.y = y1 + y2;
+    setNewSVGPoint(svgPoint);
+  };
+  const handleTouchDrugZoom = (e) => {
+    if (e.touches.length === 1) {
+      const touch = e.touches[0];
+      setDrugStatus((prev) => ({ ...prev, previousTouch: touch }));
+      if (!drugStatus.previousTouch) return;
+      drugCalculator(touch.clientX, touch.clientY, touch.clientX - drugStatus.previousTouch.clientX, touch.clientY - drugStatus.previousTouch.clientY);
+    } else {
+      const touch1 = e.touches[0];
+      const touch2 = e.touches[1];
+      const x = (touch1.clientX + touch2.clientX) / 2;
+      const y = (touch1.clientY + touch2.clientY) / 2;
+      const d = Math.hypot(touch1.clientX - touch2.clientX, touch1.clientY - touch2.clientY);
+      setDrugStatus((prev) => ({ ...prev, previousTouch: d }));
+      if (!drugStatus.previousTouch) return;
+      zoomCalculator(x, y, drugStatus.previousTouch / d);
+    }
+  };
+  const handleMouseDrug = ({ clientX, clientY, movementX, movementY }) => drugCalculator(clientX, clientY, movementX, movementY);
+  const zoomCalculator = (x, y, r) => {
+    let svgPoint = svgRef.current.createSVGPoint();
+    svgPoint.x = x;
+    svgPoint.y = y;
+    setNewSVGPoint(svgPoint);
+    let CTM = svgRef.current.getScreenCTM();
+    setStartSVGPoint(svgPoint.matrixTransform(CTM.inverse()));
+    setViewBox((prev) => ({ x1: prev.x1, y1: prev.y1, x2: prev.x2 * r, y2: prev.y2 * r }));
+  };
+  const handleWheelZoom = ({ clientX, clientY, deltaY }) => {
+    let r = deltaY > 0 ? 0.95 : deltaY < 0 ? 1.05 : 1;
+    zoomCalculator(clientX, clientY, r);
+  };
+  useLayoutEffect(() => {
+    if (!startSVGPoint) return;
+    let CTM = svgRef.current.getScreenCTM();
+    let moveToSVGPoint = newSVGPoint.matrixTransform(CTM.inverse());
+    let delta = { dx: startSVGPoint.x - moveToSVGPoint.x, dy: startSVGPoint.y - moveToSVGPoint.y };
+    setViewBox((prev) => ({ ...prev, x1: prev.x1 + delta.dx, y1: prev.y1 + delta.dy }));
+  }, [startSVGPoint]);
   useEffect(() => {
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, [realWidth, realHeight, sidebarWidth]);
-
+  }, [realSize, sidebarWidth]);
   return (
     <div className="fp-floormap d-flex align-items-center" ref={graphRef}>
-      <Selector searchCondition={searchCondition} handleSearchChange={handleSearchChange} handleResize={handleResize} handleZoom={handleZoom} />
-      <svg className="mx-auto" width={width} height={height} ref={svgRef} viewBox={`${viewBox.x1} ${viewBox.y1} ${viewBox.x2} ${viewBox.y2}`} style={{ backgroundColor: "white" }}>
+      <Selector searchCondition={searchCondition} handleSearchChange={handleSearchChange} setViewBox={setViewBox} realSize={realSize} zoomCalculator={zoomCalculator} />
+      <svg id="floormap" className={`mx-auto ${drugStatus.moving ? "moving" : ""}`} style={{ backgroundColor: "white" }} ref={svgRef} width={containerSize.width} height={containerSize.height} viewBox={`${viewBox.x1} ${viewBox.y1} ${viewBox.x2} ${viewBox.y2}`} onWheel={handleWheelZoom} onMouseDown={handleStart} onMouseUp={handleEnd} onMouseMove={handleMouseDrug} onTouchStart={handleStart} onTouchEnd={handleEnd} onTouchMove={handleTouchDrugZoom}>
         <Elements type="wall" data={data} />
         <Elements type="pillar" data={data} />
         <Elements type="text" data={data} />
@@ -209,7 +260,7 @@ const Category = ({ title, data, col, setSearchCondition, setElementStatus }) =>
 
 const Advanced = ({ data, elementStatus, setElementStatus, searchCondition, setSearchCondition }) => {
   const download = async () => {
-    const svgElement = document.querySelector(".fp-floormap svg");
+    const svgElement = document.querySelector("#floormap");
     const svgString = new XMLSerializer().serializeToString(svgElement);
     let blob;
     const canvas = document.createElement("canvas");
@@ -235,6 +286,7 @@ const Advanced = ({ data, elementStatus, setElementStatus, searchCondition, setS
     link.download = `Floor ${searchCondition.floor}.png`;
     document.body.appendChild(link);
     link.click();
+    link.remove();
     URL.revokeObjectURL(url);
   };
   return (
@@ -271,15 +323,15 @@ const Result = ({ data, elementStatus, handleBoothInfo }) => {
 
 const BoothInfo = ({ setSearchCondition, elementStatus, setElementStatus }) => {
   const {
-    boothInfoData: { text, id, floor, cat, topic },
+    boothInfoData: { text, id, floor, cat, topic, tag },
   } = elementStatus;
-  const tags = [cat, topic];
+  const tags = Object.keys(elementStatus.boothInfoData).length === 0 ? [] : [cat, topic, ...tag];
   const handleTagClick = (value) => {
     setSearchCondition((prev) => ({ ...prev, catTopicTag: value, string: "" }));
     setElementStatus((prev) => ({ ...prev, boothInfo: false }));
   };
   const handleNameClick = () => {
-    setSearchCondition((prev) => ({ ...prev, floor: floor, string: `${text.join("")} ${id}` }));
+    setSearchCondition((prev) => ({ ...prev, floor: floor, catTopicTag: "", string: `${text.join("")} ${id}` }));
     setElementStatus((prev) => ({ ...prev, boothInfo: false }));
   };
   return (
@@ -333,45 +385,56 @@ const Sidebar = ({ data, elementStatus, setElementStatus, searchCondition, setSe
   );
 };
 
-const Selector = ({ searchCondition, handleSearchChange, handleResize, handleZoom }) => {
+const Selector = ({ searchCondition, handleSearchChange, setViewBox, realSize, zoomCalculator }) => {
+  const defaultViewbox = () => setViewBox({ x1: 0, y1: 0, x2: realSize.w, y2: realSize.h });
+  const handleClickZoom = (r) => {
+    const { innerWidth: w, innerHeight: h } = window;
+    zoomCalculator(w / 2, h / 2, r);
+  };
   return (
     <>
       <div className="fp-select-floor shadow" onChange={handleSearchChange}>
         <label>
-          <input type="radio" name="floor" value="1" checked={searchCondition.floor == 1} />
+          <input type="radio" name="floor" value="1" checked={searchCondition.floor == 1} onChange={handleSearchChange} />
           <span className="d-flex justify-content-center align-items-center text-small">1F</span>
         </label>
         <label>
-          <input type="radio" name="floor" value="4" checked={searchCondition.floor == 4} />
+          <input type="radio" name="floor" value="4" checked={searchCondition.floor == 4} onChange={handleSearchChange} />
           <span className="d-flex justify-content-center align-items-center text-small">4F</span>
         </label>
       </div>
-      <div className="fp-select-lang shadow" onChange={handleSearchChange}>
+      <div className="fp-select-lang shadow">
         <label>
-          <input type="checkbox" name="lang" value={searchCondition.lang === "tc" ? "en" : "tc"} checked={searchCondition.lang === "tc"} />
+          <input type="checkbox" name="lang" value={searchCondition.lang === "tc" ? "en" : "tc"} checked={searchCondition.lang === "tc"} onChange={handleSearchChange} />
           <span className="d-flex justify-content-center align-items-center text-small">{searchCondition.lang === "tc" ? "EN" : "中"}</span>
         </label>
       </div>
-      <div className="fp-zoom" onChange={handleZoom}>
-        <label>
-          <input type="radio" name="zoom" value="1.2" checked={false} />
-          <span className="d-flex justify-content-center align-items-center text-xx-large shadow">+</span>
-        </label>
-        <span className="d-flex justify-content-center align-items-center text-xx-large shadow" onClick={handleResize}>
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4 9V5.6C4 5.03995 4 4.75992 4.10899 4.54601C4.20487 4.35785 4.35785 4.20487 4.54601 4.109C4.75992 4 5.03995 4 5.6 4L9 4M4 15V18.4C4 18.9601 4 19.2401 4.10899 19.454C4.20487 19.6422 4.35785 19.7951 4.54601 19.891C4.75992 20 5.03995 20 5.6 20L9 20M15 4H18.4C18.9601 4 19.2401 4 19.454 4.10899C19.6422 4.20487 19.7951 4.35785 19.891 4.54601C20 4.75992 20 5.03995 20 5.6V9M20 15V18.4C20 18.9601 20 19.2401 19.891 19.454C19.7951 19.6422 19.6422 19.7951 19.454 19.891C19.2401 20 18.9601 20 18.4 20H15" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      <div className="fp-zoom">
+        <span className="d-flex justify-content-center align-items-center text-xx-large shadow" onClick={() => handleClickZoom(0.7)}>
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 6V18M6 12H18" stroke="black" strokeWidth="2" />
           </svg>
         </span>
-        <label>
-          <input type="radio" name="zoom" value="0.8" checked={false} />
-          <span className="d-flex justify-content-center align-items-center text-xx-large shadow">-</span>
-        </label>
+        <span className="d-flex justify-content-center align-items-center text-xx-large shadow" onClick={defaultViewbox}>
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M4 9V5.6C4 5.03995 4 4.75992 4.10899 4.54601C4.20487 4.35785 4.35785 4.20487 4.54601 4.109C4.75992 4 5.03995 4 5.6 4L9 4M4 15V18.4C4 18.9601 4 19.2401 4.10899 19.454C4.20487 19.6422 4.35785 19.7951 4.54601 19.891C4.75992 20 5.03995 20 5.6 20L9 20M15 4H18.4C18.9601 4 19.2401 4 19.454 4.10899C19.6422 4.20487 19.7951 4.35785 19.891 4.54601C20 4.75992 20 5.03995 20 5.6V9M20 15V18.4C20 18.9601 20 19.2401 19.891 19.454C19.7951 19.6422 19.6422 19.7951 19.454 19.891C19.2401 20 18.9601 20 18.4 20H15" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </span>
+        <span className="d-flex justify-content-center align-items-center text-xx-large shadow" onClick={() => handleClickZoom(1.3)}>
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M6 12H18" stroke="black" strokeWidth="2" />
+          </svg>
+        </span>
       </div>
     </>
   );
 };
 
 const MainArea = () => {
+  const categories = {
+    tc: ["全齡健康展區", "年度主題館", "醫療機構展區", "智慧醫療展區", "精準醫療展區"],
+    en: ["Consumer health", "Reserved", "Medical Institutes", "Medtech", "Biotech"],
+  };
   const [floorData, setFloorData] = useState([]);
   const [sidebarWidth, setSidebarWidth] = useState(40);
   const [searchCondition, setSearchCondition] = useState({
@@ -382,21 +445,22 @@ const MainArea = () => {
     lang: "en",
   });
   const [elementStatus, setElementStatus] = useState({
-    colors: d3.scaleOrdinal().domain(["Health Tech", "Reserved", "Medical Institutes", "Consumer health technologies", "Medtech", "Biotech"]).range(["rgba(237,125,49,0.6)", "rgba(153,204,255,1)", "rgba(255,255,0,0.6)", "rgba(153,204,0,1)", "rgba(0,112,192,0.6)", "rgba(112,48,160,0.6)"]).unknown("rgba(255,255,255)"),
+    colors: d3.scaleOrdinal().domain(categories[searchCondition.lang]).range(["rgba(237,125,49,0.6)", "rgba(153,204,255,1)", "rgba(255,255,0,0.6)", "rgba(0,112,192,0.6)", "rgba(112,48,160,0.6)"]).unknown("rgba(255,255,255)"),
     boothInfoData: {},
     isMobile: false,
     sidebar: true,
     advanced: false,
     boothInfo: false,
   });
-  const memoFloorData = useMemo(() => floorData.map((d) => ({ ...d, cat: d.cat ? d.cat[searchCondition.lang] : false, topic: d.topic ? d.topic[searchCondition.lang] : false, text: d.text ? d.text[searchCondition.lang] : [], size: d.size ? d.size[searchCondition.lang] : 1, note: d.note ? d.note[searchCondition.lang] : false })), [searchCondition.lang, floorData]);
-  const filterFloorData = useMemo(() => memoFloorData.map((d) => ({ ...d, opacity: ["booth"].includes(d.type) && searchCondition.regex.test([d.id, d.text.join(""), d.cat, d.topic].join(" ")) && (searchCondition.catTopicTag === "" ? true : [d.cat, d.topic].includes(searchCondition.catTopicTag)) ? 0.8 : 0.1 })), [searchCondition, memoFloorData]);
+  const memoFloorData = useMemo(() => floorData.map((d) => ({ ...d, cat: d.cat ? d.cat[searchCondition.lang] : false, topic: d.topic ? d.topic[searchCondition.lang] : false, tag: d.tag ? d.tag[searchCondition.lang] : false, text: d.text ? d.text[searchCondition.lang] : [], size: d.size ? d.size[searchCondition.lang] : 1, note: d.note ? d.note[searchCondition.lang] : false })), [searchCondition.lang, floorData]);
+  const filterFloorData = useMemo(() => memoFloorData.map((d) => ({ ...d, opacity: ["booth"].includes(d.type) && searchCondition.regex.test([d.id, d.text.join(""), d.cat, d.topic, d.tag].join(" ")) && (searchCondition.catTopicTag === "" ? true : [d.cat, d.topic, ...d.tag].includes(searchCondition.catTopicTag)) ? 0.8 : 0.1 })), [searchCondition, memoFloorData]);
   const realSize = { 1: { w: 19730, h: 14610 }, 4: { w: 19830, h: 16950 } };
   const tagsHeight = 80;
   const searchActions = (name, value) => {
     switch (name) {
       case "search":
         setSearchCondition((prev) => ({ ...prev, string: value }));
+        setElementStatus((prev) => ({ ...prev, advanced: false }));
         break;
       default:
         setSearchCondition((prev) => ({ ...prev, [name]: value }));
@@ -409,8 +473,8 @@ const MainArea = () => {
     setElementStatus((prev) => ({ ...prev, sidebar: true, boothInfo: true, boothInfoData: d }));
     setSearchCondition((prev) => ({ ...prev, floor: d.floor }));
   };
-  useEffect(() => setSidebarWidth(elementStatus.isMobile ? (elementStatus.sidebar ? 117 : window.innerHeight - 117) : elementStatus.sidebar ? 300 : 40), [elementStatus.sidebar, elementStatus.isMobile]);
-  useEffect(() => setElementStatus((prev) => ({ ...prev, colors: prev.colors.domain(searchCondition.lang === "tc" ? ["全齡健康展區", "年度主題館", "醫療機構展區", "農業生技食安健康主題展", "智慧醫療展區", "精準醫療展區"] : ["Health Tech", "Reserved", "Medical Institutes", "Consumer health technologies", "Medtech", "Biotech"]) })), [searchCondition.lang]);
+  useEffect(() => setSidebarWidth(elementStatus.isMobile ? (elementStatus.sidebar ? 117 : window.innerHeight - 117) : elementStatus.sidebar ? 300 : 30), [elementStatus.sidebar, elementStatus.isMobile]);
+  useEffect(() => setElementStatus((prev) => ({ ...prev, colors: prev.colors.domain(categories[searchCondition.lang]) })), [searchCondition.lang]);
   useEffect(() => {
     setSearchCondition((prev) => ({
       ...prev,
@@ -425,7 +489,7 @@ const MainArea = () => {
     }));
   }, [searchCondition.string]);
   useEffect(() => {
-    fetch("https://astalsi401.github.io/warehouse/show/平面圖.json")
+    fetch("../../../../../warehouse/show/平面圖.json")
       .then((res) => res.json())
       .then((data) => {
         setFloorData(data);
@@ -439,8 +503,8 @@ const MainArea = () => {
     <div className="fp-main" style={{ "--sidebar-width": `${sidebarWidth}px`, "--tags-height": `${tagsHeight}px` }}>
       <Sidebar data={filterFloorData.filter((d) => ["booth"].includes(d.type))} elementStatus={elementStatus} setElementStatus={setElementStatus} searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} handleBoothInfo={handleBoothInfo} />
       <div className="fp-graph d-flex align-items-center">
-        <div className="fp-tags shadow">{{ tc: "年度重點必看：", en: "年度重點必看：" }[searchCondition.lang]}</div>
-        <Floormap data={filterFloorData.filter((d) => d.floor == searchCondition.floor)} sidebarWidth={sidebarWidth} realWidth={realSize[searchCondition.floor].w} realHeight={realSize[searchCondition.floor].h} tagsHeight={tagsHeight} elementStatus={elementStatus} handleBoothInfo={handleBoothInfo} searchCondition={searchCondition} handleSearchChange={handleSearchChange} />
+        <div className="fp-tags p-2 shadow">{{ tc: "年度重點必看：", en: "年度重點必看：" }[searchCondition.lang]}</div>
+        <Floormap data={filterFloorData.filter((d) => d.floor == searchCondition.floor)} sidebarWidth={sidebarWidth} realSize={realSize[searchCondition.floor]} tagsHeight={tagsHeight} elementStatus={elementStatus} handleBoothInfo={handleBoothInfo} searchCondition={searchCondition} handleSearchChange={handleSearchChange} />
       </div>
     </div>
   );

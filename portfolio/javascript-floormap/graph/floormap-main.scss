@@ -112,12 +112,10 @@ body {
   flex-wrap: nowrap;
   min-height: var(--fp-search-box-height);
   background-color: var(--fp-search-bg);
-  & > div {
-    height: var(--fp-search-box-height);
-  }
 }
 .fp-input {
   width: calc(100% - var(--fp-icon-size) * 2);
+  height: var(--fp-search-box-height);
 }
 .fp-input-tag {
   cursor: pointer;
@@ -195,6 +193,8 @@ body {
   padding-left: var(--sidebar-width);
   width: 100%;
   height: 100dvh;
+  -webkit-user-select: none; /* Safari */
+  user-select: none; /* Standard syntax */
 }
 
 @media (max-width: 768px) {
@@ -204,6 +204,7 @@ body {
 }
 
 .fp-filter {
+  cursor: pointer;
   width: var(--fp-icon-size);
   height: var(--fp-search-box-height);
   background-color: var(--fp-search-bg);
@@ -227,6 +228,7 @@ body {
 }
 
 .fp-toggle {
+  cursor: pointer;
   width: var(--fp-icon-size);
   height: var(--fp-search-box-height);
   padding: 5px;
@@ -235,33 +237,30 @@ body {
   &:hover {
     --color: var(--fp-black);
   }
-  &:not(.active) {
-    --fp-icon-size: 40px;
-  }
   span {
     position: relative;
     width: 80%;
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      top: calc(var(--i) * 10px);
-    }
-    &,
-    &::before,
-    &::after {
-      display: block;
-      height: 3px;
-      border-radius: 2px;
-      background-color: var(--color);
-      transition: background-color var(--fp-time), top var(--fp-time), transform var(--fp-time);
-    }
     &::before {
       --i: -1;
     }
     &::after {
       --i: 1;
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      top: calc(var(--i) * 5px);
+    }
+    &,
+    &::before,
+    &::after {
+      display: block;
+      height: 2px;
+      border-radius: 2px;
+      background-color: var(--color);
+      transition: background-color var(--fp-time), top var(--fp-time), transform var(--fp-time);
     }
   }
   &.active {
@@ -389,6 +388,7 @@ body {
   top: calc(var(--tags-height) + 20px + var(--fp-icon-size) * 2);
 }
 .fp-zoom {
+  transition: left var(--fp-time);
   left: calc(var(--sidebar-width) + 10px);
   gap: 10px;
 }
