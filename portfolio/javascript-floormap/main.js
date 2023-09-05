@@ -216,7 +216,7 @@ const Search = ({ searchCondition, setSearchCondition, elementStatus, setElement
       </div>
       <div className="fp-input d-flex flex-wrap align-items-center px-1">
         {searchCondition.catTopicTag !== "" && (
-          <div className="fp-input-tag shadow" onClick={() => setSearchCondition((prev) => ({ ...prev, catTopicTag: "" }))} style={{ "--cat": elementStatus.colors(searchCondition.catTopicTag) }}>
+          <div className="fp-input-tag shadow text-small" onClick={() => setSearchCondition((prev) => ({ ...prev, catTopicTag: "" }))} style={{ "--cat": elementStatus.colors(searchCondition.catTopicTag) }}>
             {searchCondition.catTopicTag}
           </div>
         )}
@@ -307,58 +307,60 @@ const Advanced = ({ data, elementStatus, setElementStatus, searchCondition, setS
 const Result = ({ data, elementStatus, handleBoothInfo }) => {
   return (
     <div className="fp-result">
-      {data
-        .filter((d) => ["booth"].includes(d.type) && d.opacity > 0.3)
-        .map((d) => (
-          <div key={d.id} className="fp-result-item d-flex align-items-center px-2 py-1" style={{ "--cat": elementStatus.colors(d.cat) }} onClick={() => handleBoothInfo(d)}>
-            <div className="fp-result-item-name text-large">{d.text.join("")}</div>
-            <div className="fp-result-item-loc text-small">
-              {d.id} / {d.floor}F
-            </div>
+      {data.map((d) => (
+        <div id={`${d.id}-${d.org}`} className="fp-result-item d-flex align-items-center px-2 py-1" style={{ "--cat": elementStatus.colors(d.cat) }} onClick={() => handleBoothInfo(d)}>
+          <div className="fp-result-item-name text-large">{d.org}</div>
+          <div className="fp-result-item-loc text-small">
+            {d.id} / {d.floor}F
           </div>
-        ))}
+        </div>
+      ))}
     </div>
   );
 };
 
 const BoothInfo = ({ setSearchCondition, elementStatus, setElementStatus }) => {
   const {
-    boothInfoData: { text, id, floor, cat, topic, tag },
+    boothInfoData: { text, org, id, floor, cat, topic, tag, info },
   } = elementStatus;
-  const tags = Object.keys(elementStatus.boothInfoData).length === 0 ? [] : [cat, topic, ...tag];
+  const tags = Object.keys(elementStatus.boothInfoData).length === 0 ? [] : [id, cat, topic, ...tag];
   const handleTagClick = (value) => {
     setSearchCondition((prev) => ({ ...prev, catTopicTag: value, string: "" }));
     setElementStatus((prev) => ({ ...prev, boothInfo: false }));
   };
   const handleNameClick = () => {
-    setSearchCondition((prev) => ({ ...prev, floor: floor, catTopicTag: "", string: `${text.join("")} ${id}` }));
+    setSearchCondition((prev) => ({ ...prev, floor: floor, catTopicTag: "", string: id }));
     setElementStatus((prev) => ({ ...prev, boothInfo: false }));
   };
   return (
     <div className={`fp-booth-info ${elementStatus.boothInfo ? "active" : ""}`}>
-      <div className="fp-toggle d-flex align-items-center justify-content-center active" onClick={() => setElementStatus((prev) => ({ ...prev, boothInfo: false }))}>
-        <span />
+      <div>
+        <div className="fp-toggle d-flex align-items-center justify-content-center active" onClick={() => setElementStatus((prev) => ({ ...prev, boothInfo: false }))}>
+          <span />
+        </div>
       </div>
       {elementStatus.boothInfo && (
-        <>
+        <div className="fp-info">
           <div className="fp-info-item d-flex align-items-center px-2 py-1" onClick={handleNameClick}>
             <div className="fp-result-item-name text-x-large">{text.join("")}</div>
             <div className="fp-result-item-loc text-small">
               {id} / {floor}F
             </div>
           </div>
-          <div className="fp-booth-tags d-flex flex-wrap px-2 py-3">
+          <div className="p-2 text-large">{org}</div>
+          <div className="fp-booth-tags d-flex flex-wrap p-2">
             {tags.map(
               (tag) =>
                 tag !== "" && (
-                  <div className="fp-input-tag shadow" style={{ "--cat": elementStatus.colors(tag) }} onClick={() => handleTagClick(tag)}>
+                  <div className="fp-input-tag shadow text-small" style={{ "--cat": elementStatus.colors(tag) }} onClick={() => handleTagClick(tag)}>
                     {tag}
                   </div>
                 )
             )}
           </div>
-          <div className="fp-booth-events px-2 py-3">相關活動</div>
-        </>
+          <div className="p-2">{info}</div>
+          <div className="fp-booth-events p-2">相關活動</div>
+        </div>
       )}
     </div>
   );
@@ -452,8 +454,8 @@ const MainArea = () => {
     advanced: false,
     boothInfo: false,
   });
-  const memoFloorData = useMemo(() => floorData.map((d) => ({ ...d, cat: d.cat ? d.cat[searchCondition.lang] : false, topic: d.topic ? d.topic[searchCondition.lang] : false, tag: d.tag ? d.tag[searchCondition.lang] : false, text: d.text ? d.text[searchCondition.lang] : [], size: d.size ? d.size[searchCondition.lang] : 1, note: d.note ? d.note[searchCondition.lang] : false })), [searchCondition.lang, floorData]);
-  const filterFloorData = useMemo(() => memoFloorData.map((d) => ({ ...d, opacity: ["booth"].includes(d.type) && searchCondition.regex.test([d.id, d.text.join(""), d.cat, d.topic, d.tag].join(" ")) && (searchCondition.catTopicTag === "" ? true : [d.cat, d.topic, ...d.tag].includes(searchCondition.catTopicTag)) ? 0.8 : 0.1 })), [searchCondition, memoFloorData]);
+  const memoFloorData = useMemo(() => floorData.map((d) => ({ ...d, cat: d.cat ? d.cat[searchCondition.lang] : false, topic: d.topic ? d.topic[searchCondition.lang] : false, tag: d.tag ? d.tag[searchCondition.lang] : false, text: d.text ? d.text[searchCondition.lang] : [], size: d.size ? d.size[searchCondition.lang] : 1, note: d.note ? d.note[searchCondition.lang] : false, org: d.org ? d.org[searchCondition.lang] : false, info: d.info ? d.info[searchCondition.lang] : false, draw: d.draw == 1 })), [searchCondition.lang, floorData]);
+  const filterFloorData = useMemo(() => memoFloorData.map((d) => ({ ...d, opacity: ["booth"].includes(d.type) && searchCondition.regex.test([d.id, d.text.join(""), d.org, d.cat, d.topic, d.tag].join(" ")) && (searchCondition.catTopicTag === "" ? true : [d.id, d.cat, d.topic, ...d.tag].includes(searchCondition.catTopicTag)) ? 0.8 : 0.1 })), [searchCondition, memoFloorData]);
   const realSize = { 1: { w: 19730, h: 14610 }, 4: { w: 19830, h: 16950 } };
   const tagsHeight = 80;
   const searchActions = (name, value) => {
@@ -501,10 +503,10 @@ const MainArea = () => {
   }, []);
   return (
     <div className="fp-main" style={{ "--sidebar-width": `${sidebarWidth}px`, "--tags-height": `${tagsHeight}px` }}>
-      <Sidebar data={filterFloorData.filter((d) => ["booth"].includes(d.type))} elementStatus={elementStatus} setElementStatus={setElementStatus} searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} handleBoothInfo={handleBoothInfo} />
+      <Sidebar data={filterFloorData.filter((d) => ["booth"].includes(d.type) && d.opacity > 0.1)} elementStatus={elementStatus} setElementStatus={setElementStatus} searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} handleBoothInfo={handleBoothInfo} />
       <div className="fp-graph d-flex align-items-center">
         <div className="fp-tags p-2 shadow">{{ tc: "年度重點必看：", en: "年度重點必看：" }[searchCondition.lang]}</div>
-        <Floormap data={filterFloorData.filter((d) => d.floor == searchCondition.floor)} sidebarWidth={sidebarWidth} realSize={realSize[searchCondition.floor]} tagsHeight={tagsHeight} elementStatus={elementStatus} handleBoothInfo={handleBoothInfo} searchCondition={searchCondition} handleSearchChange={handleSearchChange} />
+        <Floormap data={filterFloorData.filter((d) => d.floor == searchCondition.floor && d.draw)} sidebarWidth={sidebarWidth} realSize={realSize[searchCondition.floor]} tagsHeight={tagsHeight} elementStatus={elementStatus} handleBoothInfo={handleBoothInfo} searchCondition={searchCondition} handleSearchChange={handleSearchChange} />
       </div>
     </div>
   );
