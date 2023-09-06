@@ -14,8 +14,7 @@ const icon_base64 = {
   first_aid: "data:image/svg+xml;base64,PHN2ZyBpZD0i5ZyW5bGkXzEiIGRhdGEtbmFtZT0i5ZyW5bGkIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDkzIDk5Ij48cG9seWdvbiBwb2ludHM9IjY4Ljc2IDQxLjMgNTIuOSA0MS4zIDUyLjkgMjYuMzIgNDAuNjQgMjYuMzIgNDAuNjQgNDEuMyAyNC43OCA0MS4zIDI0Ljc4IDUzLjU0IDQwLjY0IDUzLjU0IDQwLjY0IDcwLjMgNTIuOSA3MC4zIDUyLjkgNTMuNTQgNjguNzYgNTMuNTQgNjguNzYgNDEuMyIgc3R5bGU9ImZpbGw6IzNlM2EzOSIvPjxyZWN0IHg9IjE2LjM0IiB5PSIxNS41OSIgd2lkdGg9IjYwLjUzIiBoZWlnaHQ9IjY3LjQxIiBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojM2UzYTM5O3N0cm9rZS1taXRlcmxpbWl0OjEwO3N0cm9rZS13aWR0aDowLjVweCIvPjwvc3ZnPg==",
 };
 
-const Wall = ({ d }) => {
-  const drawPath = (path) => path.map((p) => (p.node === "L" ? `${p.node}${p.x} ${p.y}` : `${p.node}${p.x1} ${p.y1} ${p.x2} ${p.y2} ${p.x} ${p.y}`)).join("");
+const Wall = ({ d, drawPath }) => {
   return <path stroke="black" fill={d.fill} strokeWidth={d.strokeWidth} d={`M${d.x} ${d.y}${drawPath(d.p)}`} />;
 };
 const Pillar = ({ d }) => <rect x={d.x} y={d.y} width={d.w} height={d.h} fill="rgba(0, 0, 0, 0.2)" />;
@@ -72,12 +71,12 @@ const BoothText = ({ t, j, lineHeight, opacity, boothWidth }) => {
   );
 };
 
-const Booth = ({ d, size, elementStatus, handleBoothInfo }) => {
+const Booth = ({ d, size, elementStatus, handleBoothInfo, drawPath }) => {
   const fontSize = size * d.size;
   const lineHeight = fontSize * 1.2;
   return (
     <g key={d.id} id={d.id} className="booth" transform={`translate(${d.x},${d.y})`} onClick={() => handleBoothInfo(d)}>
-      <rect stroke="black" strokeWidth={1} fill={elementStatus.colors(d.cat)} fillOpacity={d.opacity} width={d.w} height={d.h} />
+      <path stroke="black" fill={elementStatus.colors(d.cat)} strokeWidth={1} fillOpacity={d.opacity} d={`M0 0${drawPath(d.p)}`} />;
       <g transform={`translate(${d.w / 2},${d.h / 2 - ((d.text.length - 1) * lineHeight) / 2})`} fontSize={fontSize}>
         {d.text.map((t, j) => (
           <BoothText t={t} j={j} lineHeight={lineHeight} opacity={d.opacity} boothWidth={d.w} />
@@ -91,25 +90,32 @@ const Booth = ({ d, size, elementStatus, handleBoothInfo }) => {
 };
 
 const Elements = ({ type, data, size, elementStatus, handleBoothInfo }) => {
+  const drawPath = (path) => path.map((p) => (p.node === "L" ? `${p.node}${p.x} ${p.y}` : `${p.node}${p.x1} ${p.y1} ${p.x2} ${p.y2} ${p.x} ${p.y}`)).join("");
   const elementActions = {
-    wall: (d, i) => <Wall d={d} />,
+    wall: (d, i) => <Wall d={d} drawPath={drawPath} />,
     pillar: (d, i) => <Pillar d={d} />,
     text: (d, i) => <Text d={d} />,
     room: (d, i) => <Room d={d} i={i} size={size} />,
-    booth: (d, i) => <Booth d={d} size={size} elementStatus={elementStatus} handleBoothInfo={handleBoothInfo} />,
+    booth: (d, i) => <Booth d={d} size={size} elementStatus={elementStatus} handleBoothInfo={handleBoothInfo} drawPath={drawPath} />,
   };
   return <g className={`${type}-g`}>{data.filter((d) => d.type == type).map((d, i) => elementActions[type](d, i))}</g>;
 };
 const Floormap = ({ data, sidebarWidth, tagsHeight, realSize, elementStatus, handleBoothInfo, searchCondition, handleSearchChange }) => {
-  const [containerSize, setContainerSize] = useState({ width: realSize.w / 100, height: realSize.h / 100 });
+  const [containerSize, setContainerSize] = useState({ width: realSize.w / 100, height: realSize.h / 100, pageHeight: realSize.h / 100 });
   const [viewBox, setViewBox] = useState({ x1: 0, y1: 0, x2: realSize.w, y2: realSize.h });
-  const [drugStatus, setDrugStatus] = useState({ moving: false, previousTouch: null });
+  const [drugStatus, setDrugStatus] = useState({ moving: false, previousTouch: null, previousTouchLength: null });
   const [newSVGPoint, setNewSVGPoint] = useState(null);
   const [startSVGPoint, setStartSVGPoint] = useState(null);
   const graphRef = useRef(null);
   const svgRef = useRef(null);
-  const handleStart = () => setDrugStatus((prev) => ({ ...prev, moving: true }));
-  const handleEnd = () => setDrugStatus({ moving: false, previousTouch: null });
+  const handleStart = (e) => {
+    e.preventDefault();
+    setDrugStatus((prev) => ({ ...prev, moving: true }));
+  };
+  const handleEnd = (e) => {
+    e.preventDefault();
+    setDrugStatus({ moving: false, previousTouch: null, previousTouchLength: null });
+  };
   const handleResize = () => {
     const width = graphRef.current.clientWidth - (elementStatus.isMobile ? 0 : sidebarWidth);
     const height = graphRef.current.clientHeight - tagsHeight;
@@ -130,12 +136,17 @@ const Floormap = ({ data, sidebarWidth, tagsHeight, realSize, elementStatus, han
     setNewSVGPoint(svgPoint);
   };
   const handleTouchDrugZoom = (e) => {
+    e.preventDefault();
     if (e.touches.length === 1) {
       const touch = e.touches[0];
-      setDrugStatus((prev) => ({ ...prev, previousTouch: touch }));
+      setDrugStatus((prev) => ({ ...prev, previousTouch: touch, previousTouchLength: e.touches.length }));
       if (!drugStatus.previousTouch) return;
       drugCalculator(touch.clientX, touch.clientY, touch.clientX - drugStatus.previousTouch.clientX, touch.clientY - drugStatus.previousTouch.clientY);
     } else {
+      if (drugStatus.previousTouchLength && drugStatus.previousTouchLength != length) {
+        handleEnd();
+        return;
+      }
       const touch1 = e.touches[0];
       const touch2 = e.touches[1];
       const x = (touch1.clientX + touch2.clientX) / 2;
@@ -157,7 +168,7 @@ const Floormap = ({ data, sidebarWidth, tagsHeight, realSize, elementStatus, han
     setViewBox((prev) => ({ x1: prev.x1, y1: prev.y1, x2: prev.x2 * r, y2: prev.y2 * r }));
   };
   const handleWheelZoom = ({ clientX, clientY, deltaY }) => {
-    let r = deltaY > 0 ? 0.95 : deltaY < 0 ? 1.05 : 1;
+    let r = deltaY > 0 ? 1.05 : deltaY < 0 ? 0.95 : 1;
     zoomCalculator(clientX, clientY, r);
   };
   useLayoutEffect(() => {
@@ -307,23 +318,26 @@ const Advanced = ({ data, elementStatus, setElementStatus, searchCondition, setS
 const Result = ({ data, elementStatus, handleBoothInfo }) => {
   return (
     <div className="fp-result">
-      {data.map((d) => (
-        <div id={`${d.id}-${d.org}`} className="fp-result-item d-flex align-items-center px-2 py-1" style={{ "--cat": elementStatus.colors(d.cat) }} onClick={() => handleBoothInfo(d)}>
-          <div className="fp-result-item-name text-large">{d.org}</div>
-          <div className="fp-result-item-loc text-small">
-            {d.id} / {d.floor}F
+      {data
+        .filter((d) => d.opacity > 0.1)
+        .map((d) => (
+          <div id={`${d.id}-${d.org}`} className="fp-result-item d-flex align-items-center px-2 py-1" style={{ "--cat": elementStatus.colors(d.cat) }} onClick={() => handleBoothInfo(d)}>
+            <div className="fp-result-item-name text-large">{d.org}</div>
+            <div className="fp-result-item-loc text-small">
+              {d.id} / {d.floor}F
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
     </div>
   );
 };
 
-const BoothInfo = ({ setSearchCondition, elementStatus, setElementStatus }) => {
+const BoothInfo = ({ data, setSearchCondition, elementStatus, setElementStatus }) => {
   const {
     boothInfoData: { text, org, id, floor, cat, topic, tag, info },
   } = elementStatus;
-  const tags = Object.keys(elementStatus.boothInfoData).length === 0 ? [] : [id, cat, topic, ...tag];
+  const tags = Object.keys(elementStatus.boothInfoData).length === 0 ? [] : [id, cat, topic, ...tag].filter((d) => d !== "");
+  const corps = data.filter((d) => d.id == id && d.org != org);
   const handleTagClick = (value) => {
     setSearchCondition((prev) => ({ ...prev, catTopicTag: value, string: "" }));
     setElementStatus((prev) => ({ ...prev, boothInfo: false }));
@@ -331,6 +345,9 @@ const BoothInfo = ({ setSearchCondition, elementStatus, setElementStatus }) => {
   const handleNameClick = () => {
     setSearchCondition((prev) => ({ ...prev, floor: floor, catTopicTag: "", string: id }));
     setElementStatus((prev) => ({ ...prev, boothInfo: false }));
+  };
+  const handleCorpClick = (d) => {
+    setElementStatus((prev) => ({ ...prev, boothInfoData: d }));
   };
   return (
     <div className={`fp-booth-info ${elementStatus.boothInfo ? "active" : ""}`}>
@@ -349,17 +366,33 @@ const BoothInfo = ({ setSearchCondition, elementStatus, setElementStatus }) => {
           </div>
           <div className="p-2 text-large">{org}</div>
           <div className="fp-booth-tags d-flex flex-wrap p-2">
-            {tags.map(
-              (tag) =>
-                tag !== "" && (
-                  <div className="fp-input-tag shadow text-small" style={{ "--cat": elementStatus.colors(tag) }} onClick={() => handleTagClick(tag)}>
-                    {tag}
-                  </div>
-                )
-            )}
+            {tags.map((tag) => (
+              <div className="fp-input-tag shadow text-small" style={{ "--cat": elementStatus.colors(tag) }} onClick={() => handleTagClick(tag)}>
+                {tag}
+              </div>
+            ))}
           </div>
-          <div className="p-2">{info}</div>
-          <div className="fp-booth-events p-2">相關活動</div>
+          {corps.length > 0 && (
+            <div className="p-2">
+              <div className="my-1">聯展單位</div>
+              <div className="my-1 fp-booth-tags d-flex flex-wrap">
+                {corps.map((d) => (
+                  <div className="fp-input-tag shadow text-small" style={{ "--cat": elementStatus.colors("") }} onClick={() => handleCorpClick(d)}>
+                    {d.org}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+          <div className="p-2 text-small">
+            {info.split("\n").map((d) => (
+              <div>{d}</div>
+            ))}
+          </div>
+          <div className="p-2">
+            <div className="my-1">相關活動</div>
+            <div className="my-1"></div>
+          </div>
         </div>
       )}
     </div>
@@ -378,7 +411,7 @@ const Sidebar = ({ data, elementStatus, setElementStatus, searchCondition, setSe
         <>
           <Advanced data={data} searchCondition={searchCondition} setSearchCondition={setSearchCondition} elementStatus={elementStatus} setElementStatus={setElementStatus} />
           <Result data={data} elementStatus={elementStatus} handleBoothInfo={handleBoothInfo} />
-          <BoothInfo setSearchCondition={setSearchCondition} elementStatus={elementStatus} setElementStatus={setElementStatus} />
+          <BoothInfo data={data} setSearchCondition={setSearchCondition} elementStatus={elementStatus} setElementStatus={setElementStatus} />
         </>
       ) : (
         <></>
@@ -491,7 +524,7 @@ const MainArea = () => {
     }));
   }, [searchCondition.string]);
   useEffect(() => {
-    fetch("../../../../../warehouse/show/平面圖.json")
+    fetch("../../../../../warehouse/show/floormap.json")
       .then((res) => res.json())
       .then((data) => {
         setFloorData(data);
@@ -503,7 +536,7 @@ const MainArea = () => {
   }, []);
   return (
     <div className="fp-main" style={{ "--sidebar-width": `${sidebarWidth}px`, "--tags-height": `${tagsHeight}px` }}>
-      <Sidebar data={filterFloorData.filter((d) => ["booth"].includes(d.type) && d.opacity > 0.1)} elementStatus={elementStatus} setElementStatus={setElementStatus} searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} handleBoothInfo={handleBoothInfo} />
+      <Sidebar data={filterFloorData.filter((d) => ["booth"].includes(d.type))} elementStatus={elementStatus} setElementStatus={setElementStatus} searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} handleBoothInfo={handleBoothInfo} />
       <div className="fp-graph d-flex align-items-center">
         <div className="fp-tags p-2 shadow">{{ tc: "年度重點必看：", en: "年度重點必看：" }[searchCondition.lang]}</div>
         <Floormap data={filterFloorData.filter((d) => d.floor == searchCondition.floor && d.draw)} sidebarWidth={sidebarWidth} realSize={realSize[searchCondition.floor]} tagsHeight={tagsHeight} elementStatus={elementStatus} handleBoothInfo={handleBoothInfo} searchCondition={searchCondition} handleSearchChange={handleSearchChange} />

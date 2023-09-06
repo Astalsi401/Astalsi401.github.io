@@ -86,6 +86,11 @@ $index: (tools, tags, sidebar);
   line-height: 1.5;
 }
 
+html {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -149,9 +154,11 @@ body {
 @media (max-width: 768px) {
   .fp-sidebar {
     width: 100%;
-    transform: translate(0, var(--sidebar-width));
+    transform: translate(0, 0);
+    top: var(--sidebar-width);
+    transition: top var(--fp-time);
     &.active {
-      transform: translate(0, 20%);
+      top: var(--sidebar-width);
     }
   }
 }
@@ -193,7 +200,6 @@ body {
 
 .fp-graph {
   flex-grow: 1;
-  max-height: 100dvh;
   overflow: hidden;
   position: relative;
   text {
@@ -207,9 +213,13 @@ body {
   padding-top: var(--tags-height);
   padding-left: var(--sidebar-width);
   width: 100%;
-  height: 100dvh;
+  height: 100vh;
   -webkit-user-select: none; /* Safari */
   user-select: none; /* Standard syntax */
+}
+
+#floormap {
+  touch-action: manipulation;
 }
 
 @media (max-width: 768px) {
@@ -307,7 +317,7 @@ body {
 }
 
 .booth:hover {
-  rect,
+  path,
   text {
     fill-opacity: 1;
   }
@@ -327,7 +337,7 @@ body {
   width: 100%;
   min-height: var(--fp-search-box-height);
   position: relative;
-  --loc-width: 80px;
+  --loc-width: 90px;
   &::before {
     content: "";
     position: absolute;
