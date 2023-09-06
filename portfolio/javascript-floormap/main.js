@@ -524,7 +524,7 @@ const MainArea = () => {
     }));
   }, [searchCondition.string]);
   useEffect(() => {
-    fetch("../../../../../warehouse/show/floormap.json")
+    fetch("https://astalsi401.github.io/warehouse/show/floormap.json")
       .then((res) => res.json())
       .then((data) => {
         setFloorData(data);
