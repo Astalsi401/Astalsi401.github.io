@@ -305,6 +305,10 @@ body {
   position: relative;
 }
 
+p {
+  margin: 0;
+}
+
 .fp-main {
   width: 100%;
 }
