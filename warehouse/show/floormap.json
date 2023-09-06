@@ -287,8 +287,8 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["森", "博"], "en": ["森", "博"] },
-    "size": { "tc": 0.7, "en": 0.6 },
+    "text": { "tc": ["森", "博"], "en": ["Sen-bo"] },
+    "size": { "tc": 0.7, "en": 0.3 },
     "org": { "tc": "森博有限公司", "en": "Sen-bo co" },
     "info": { "tc": "產品項目：脊椎矯正坐墊\n產品特點：針對錯誤坐姿、久坐、脊椎病變問題調理、脊椎疾病預防矯正", "en": "Product Item: Chiropractic Cushion\nProduct features: For wrong sitting posture, sedentary, spinal disease conditioning, spinal disease prevention and correction" }
   },
@@ -310,8 +310,8 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "智慧健康", "en": "智慧健康" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["啟", "德"], "en": ["Charder Electronic Co., Ltd."] },
-    "size": { "tc": 0.7, "en": 0.6 },
+    "text": { "tc": ["啟", "德"], "en": ["Charder"] },
+    "size": { "tc": 0.7, "en": 0.3 },
     "org": { "tc": "啟德電子股份有限公司", "en": "Charder Electronic Co., Ltd." },
     "info": { "tc": "雲端智慧醫療系統DP4800是啟德電子的主推重點，可以將不同醫療儀器的量測結果同步串接起來，只要掃瞄病歷號碼，就可串接身高體重計、坐秤、扶手秤、嬰兒秤、身高尺等等設備，統一將量測資訊匯入病歷資料內。\n專業的人體組成分析儀也是本次展出的一大亮點，現場將會開放體驗使用，歡迎關注於健康的人士，一同前來體驗。\n", "en": "Wireless data integration saves time and ensures accurate transcription, which is absolutely vital in the field of medical measurement.\nCharder provides EMR-compatible body measurement solutions for all your needs, including Body Composition Analyzers, Baby Scales, Bed Scales, Column Scales, Chair Scales, Infant Scales, Wheelchair Scales, and more!" }
   },
@@ -474,8 +474,8 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "智慧健康", "en": "智慧健康" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["豪", "紳"], "en": ["Asiatic Fiber Corporation"] },
-    "size": { "tc": 0.7, "en": 0.6 },
+    "text": { "tc": ["豪", "紳"], "en": ["Asiatic Fiber"] },
+    "size": { "tc": 0.7, "en": 0.3 },
     "org": { "tc": "豪紳纖維科技股份有限公司", "en": "Asiatic Fiber Corporation" },
     "info": { "tc": "豪紳纖維科技股份有限公司\nAFC®Medical＆Healthcare是豪紳纖維科技四大產品領域之一，經營高質化的醫療紡織品及創新型醫療照護產品。超過四十年的經驗累積，我們通過EN13795，AAMI PB-70國際規範要求，取得ISO13485以及GMP品質系統認證，陸續推出AFCEasyCare®醫療紡織品，醫療用耗材以及照護緩痛等產品，致力提供醫療產業更良好，更安全的工作空間，同時提升醫病照護品質。\n此次將展出：\n1.創新型智能醫療照護產品：結合溫控與電療功能的創新型智慧照護緩痛產品，整合溫控，定位，跌倒偵測功能的智熱衣;溫控智能眼罩及智能面膜等創新產品\n邀請您一同體驗AFC專業 研發能力，完善的醫療級測試設備及嚴密的檢測管理能力。\n醫療紡織品：符合EN 13795標準的手術服與刷手服用布，包布，洞巾及各式醫療用耗材.\n2.無塵用紡織品：提供生技製藥業各種等級的潔淨紡織品，產品系列包含無塵衣帽鞋，無塵配件及各式無塵室清潔用品等.\n3.創新型智能醫療照護產品：結合溫控與電療功能的創新型智慧照護緩痛產品，整合溫控，定位，跌倒偵測功能的智熱衣;溫控智能眼罩及智能面膜等創新產品\n邀請您一同體驗AFC專業 研發能力，完善的醫療級測試設備及嚴密的檢測管理能力\nhttps://www.youtube.com/watch?time_continue=2&amp;v=R2gWj132Teg\n", "en": "1.Innovative intelligent medical care products: Innovative smart care products that combine temperature control and electrotherapy functions, intelligent heat control with temperature control, positioning and fall detection function; innovative products such as temperature-controlled intelligent eye mask and smart mask\n2. Medical textiles: surgical gowns and hand-washing cloths, cloths, cave towels and various medical consumables in accordance with EN 13795.\n3. Dust-free textiles: Provides all grades of clean textiles in the biotechnology pharmaceutical industry. The product range includes dust-free coat shoes, dust-free accessories and various clean room cleaning products.\n" }
   },
@@ -889,7 +889,7 @@
     "topic": { "tc": "智慧健康", "en": "智慧健康" },
     "tag": { "tc": [""], "en": [""] },
     "text": { "tc": ["綠壯"], "en": ["Green Strong Healthcare Co., Ltd."] },
-    "size": { "tc": 1.0, "en": 0.8 },
+    "size": { "tc": 0.8, "en": 0.8 },
     "org": { "tc": "綠壯健業股份有限公司", "en": "Green Strong Healthcare Co., Ltd." },
     "info": { "tc": "老年人肌力檢測\n馬拉松撞牆期預測\n運動營養完美解決方案", "en": "Muscle strength test\nMarathon Results Prediction\nThe perfect solution for sports nutrition" }
   },
@@ -1095,8 +1095,8 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["麗媚", "生化科技"], "en": ["麗媚", "生化科技"] },
-    "size": { "tc": 0.4, "en": 0.4 },
+    "text": { "tc": ["麗媚生化科技"], "en": ["REIBI"] },
+    "size": { "tc": 0.5, "en": 0.5 },
     "org": { "tc": "麗媚生化科技有限公司", "en": "REIBI BIO-TECHNOLOGY CO., LTD." },
     "info": { "tc": "麗媚生技結合健康技術和生活美學，展示了最新的舒曼波系列智慧傢俱，專為心腦牽引而設計。產品包括單人家庭休閒沙發和冥想墊等，外觀上看起來與普通傢俱無異，使用由工業技術研究院開發的專利腦波拽引裝置，產生", "en": "Reibi Bio-technology combines health technology and life aesthetics to display the latest Schumann series of smart furniture, products include single-person family leisure sofas and meditation cushions, etc., using the patented brain wave pulling device developed by ITRI to generate " }
   },
@@ -1279,7 +1279,7 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "預防醫學", "en": "預防醫學" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["大謙"], "en": ["大謙科技材料股份有限公司"] },
+    "text": { "tc": ["大謙"], "en": ["大謙"] },
     "size": { "tc": 0.6, "en": 0.6 },
     "org": { "tc": "大謙科技材料股份有限公司 ", "en": "大謙科技材料股份有限公司" },
     "info": { "tc": ":dc 克微粒-防油煙口罩\n:dc 克微粒-職業防護系列口罩\n:dc 克微粒PM2.5 防護口罩", "en": ":dc Microparticle Stopper Mask for Kitchen Smoke protection \n:dc Microparticle Stopper Mask for Industry Protection \n:dc Microparticle Stopper Mask for PM2.5 Protection " }
@@ -1858,7 +1858,7 @@
     "topic": { "tc": "智慧健康", "en": "智慧健康" },
     "tag": { "tc": [""], "en": [""] },
     "text": { "tc": ["銳陽"], "en": ["WINBEX"] },
-    "size": { "tc": 1.0, "en": 0.5 },
+    "size": { "tc": 0.8, "en": 0.5 },
     "org": { "tc": "銳陽科技股份有限公司", "en": "WINBEX CORPORATION" },
     "info": { "tc": "銳陽科技股份有限公司成立於1984年，專業生產製造人體工學椅、馬鞍椅、醫療椅、配合顯微手術用椅、醫療工作椅等，行銷遍及北美、加拿大、中南美洲、英國、德國、澳洲、荷蘭、瑞典等世界各國。\n全面導入與符合ISO9001：2015品質管理系統認證。\n持續不斷研發設計，擁有多項自有專利，擁有自有品牌WINBEX。\n歡迎國內外客戶洽談  品牌代理/ 經銷等業務。\n", "en": "Founded in 1984, Winbex Corporation, professionally manufacture various  kinds of high quality Medical equipment hardware and components, Dental chairs, Microsurgery armrests, and Medical working stools, etc..  We ship to US, Canada, South American, UK, Germany, Australia, Netherlands, Sweden, and lots of countries all over the world.  We are ISO 9001: 2015 certified.  We keep developing and designing new items with many self-owned patents, and own brand named WINBEX.  \nWelcome for Agent/ Distribution business.  \n" }
   },
@@ -3969,7 +3969,7 @@
     "topic": { "tc": "智慧健康", "en": "智慧健康" },
     "tag": { "tc": [""], "en": [""] },
     "text": { "tc": ["麗臺"], "en": ["Leadtek Research Inc."] },
-    "size": { "tc": 1.0, "en": 0.8 },
+    "size": { "tc": 0.8, "en": 0.8 },
     "org": { "tc": "麗臺科技股份有限公司", "en": "Leadtek Research Inc." },
     "info": { "tc": "【心血管遠距照護】   提供您最完善的心血管整合照護方案\n【智慧病房解決方案】 加速您建置智慧病房與數位化的照護系統\n【多元特色檢測方案】 豐富您的多元特色療程服務\n【專業血氧連續監測】疫情緊急政府採購首選No.1品牌\n【呼吸中止睡眠分析】體驗史上超輕量26克居家睡眠檢測儀器", "en": "Wireless Fingertip Pulse Oximeter\namor HRV Guard Portable ECG Recorder\nWearable ECG Recoder\namor physical and mental health management platform" }
   },
@@ -4359,7 +4359,7 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["極勁"], "en": ["極勁"] },
+    "text": { "tc": ["極勁"], "en": ["XPOWER"] },
     "size": { "tc": 0.4, "en": 0.4 },
     "org": { "tc": "極勁股份有限公司", "en": "XPOWER" },
     "info": { "tc": "家中的隱形敵人-室內空氣污染\n可能成為致命威脅！ \n您知道嗎？室內空氣中的污染物濃度，常常遠高於室外 ‼️\n根據世界衛生組織（WHO）的說法，室內空氣污染是一件非常真實和危險的事情。不但衍生出潛在的危險，還會嚴重影響您的生活品質 \nRitello，室內的守護者\n室內，不該是隱藏的污染場所。Ritello 堅守與大自然相似的原則，用最堅固的元素——水，捕捉每一絲灰塵、過敏源和污染物。清新的水洗循環，讓您的家重新呼吸 健康新風將至，從室內開始\nRitello 水濾式空氣清淨系統，為您的家增添一抹純凈。保護每個呼吸，讓您的家充滿健康，走向更美好的明天 ", "en": "The invisible enemy of the home - indoor air pollution\nCan become a mortal threat! \nDid you know? The concentration of pollutants in indoor air is often much higher than that in outdoor air !️\nAccording to the World Health Organization (WHO), indoor air pollution is a very real and dangerous thing. Not only are there potential dangers, but they can also seriously affect your quality of life \nRitello, the guardian of the interior\nIndoors should not be hidden polluted places. Ritello adheres to principles similar to nature, using the strongest element – water – to capture every trace of dust, allergens and pollutants. Fresh wash cycles to re-breathe your home \nHealthy fresh air is coming, starting indoors\nRitello Water Filter Air Purifier adds a touch of purity to your home. Protect every breath and fill your home with health towards a better tomorrow " }
@@ -4428,8 +4428,8 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "無齡長照", "en": "無齡長照" },
     "tag": { "tc": ["無齡健康生活主題館"], "en": ["無齡健康生活主題館"] },
-    "text": { "tc": ["華碩", "雲端"], "en": ["華碩", "雲端"] },
-    "size": { "tc": 0.7, "en": 0.8 },
+    "text": { "tc": ["華碩", "雲端"], "en": ["ASUS ", "Cloud"] },
+    "size": { "tc": 0.7, "en": 0.6 },
     "org": { "tc": "華碩雲端股份有限公司", "en": "ASUS Cloud Corporation" },
     "info": { "tc": "後續提供，華碩雲端攤位將合併華碩電腦攤位展出。", "en": "後續提供，華碩雲端攤位將合併華碩電腦攤位展出。" }
   },
@@ -5349,7 +5349,7 @@
     "topic": { "tc": "智慧健康", "en": "智慧健康" },
     "tag": { "tc": [""], "en": [""] },
     "text": { "tc": ["國賓"], "en": ["KUBIN international co.Ltd "] },
-    "size": { "tc": 1.0, "en": 0.8 },
+    "size": { "tc": 0.8, "en": 0.8 },
     "org": { "tc": "國賓國際股份有限公司", "en": "KUBIN international co.Ltd " },
     "info": { "tc": "遠紅外線產品/護目鏡/顯微鏡", "en": "Far infrared products/goggles/microscope" }
   },
@@ -6988,7 +6988,7 @@
     "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["艾索", "科技"], "en": ["艾索", "科技"] },
+    "text": { "tc": ["艾索", "科技"], "en": ["AISOL"] },
     "size": { "tc": 0.35, "en": 0.35 },
     "org": { "tc": "艾索科技股份有限公司", "en": "AISOL Technology Corporation" },
     "info": { "tc": "3D 醫學影像處理與模型生成軟體工具", "en": "3D medical image processing" }
@@ -7011,7 +7011,7 @@
     "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["彰信", "企業"], "en": ["彰信", "企業"] },
+    "text": { "tc": ["彰信", "企業"], "en": ["MULTICE"] },
     "size": { "tc": 0.35, "en": 0.35 },
     "org": { "tc": "彰信企業股份有限公司", "en": "MULTICE & CO., LTD." },
     "info": { "tc": "防跌落醫療墊/警報器/無線防跌落醫療墊/無線警報器/醫療護士鈕", "en": "Pressure Mat/Alarm/Wireless Pressure Mat/Wireless Alarm/Nurse Call Button…" }
@@ -8421,7 +8421,7 @@
     "topic": { "tc": "生技製藥", "en": "生技製藥" },
     "tag": { "tc": [""], "en": [""] },
     "text": { "tc": ["藥華"], "en": ["Pharmaessentia Corp."] },
-    "size": { "tc": 1.0, "en": 0.8 },
+    "size": { "tc": 0.8, "en": 0.8 },
     "org": { "tc": "藥華醫藥股份有限公司", "en": "Pharmaessentia Corp." },
     "info": { "tc": "Ropeginterferon alpha-2b\nRopeginterferon alpha-2b + anti PD-1\nKX01\nTCRT\nPEG-GCSF\nPEG-cytokine X, Y\nNovel checkpoint Abs", "en": "Ropeginterferon alpha-2b\nRopeginterferon alpha-2b + anti PD-1\nKX01\nTCRT\nPEG-GCSF\nPEG-cytokine X, Y\nNovel checkpoint Abs" }
   },
@@ -8559,7 +8559,7 @@
     "topic": { "tc": "精準檢測", "en": "精準檢測" },
     "tag": { "tc": [""], "en": [""] },
     "text": { "tc": ["華廣"], "en": ["Bionime"] },
-    "size": { "tc": 1.0, "en": 0.8 },
+    "size": { "tc": 0.8, "en": 0.8 },
     "org": { "tc": "華廣生技股份有限公司", "en": "Bionime" },
     "info": { "tc": "華廣生技擁有多年 BGM傳統血糖管理監測儀的研發製造實力與經驗，今年為創立 Rightest品牌 滿「20周年」並同步發布新品「Rightest ifree CGM—連續血糖監測系統」。\n \nRightest ifree CGM—連續血糖監測系統\n「Rightest ifree CGM」為臺灣首家 MIT 研發製造，相較於傳統式血糖機需要指尖採血斷點量測，「Rightest ifree CGM」，可24小時全時追蹤長達10天，能有效改善糖化血色素(HbA1c)控制，成為個人健康智能行動助理。\n血糖管理監測之精準度擁有國際認證之專利技術，產品全方面從研發至製造打造Ecosystem數位整合系統，具備工業4.0的技術。", "en": "Bionime—a total solution provider in glucose monitoring system with 20 years manufacture experience. \n*We provide one stop solution from patient to market:\nOur patient centered ecosystem for diabetes care connects all medical things and the market via IoT technology. We create an ecosystem includes self-monitoring devices (CGM, BGM), remote diabetes management system(DMS), circle of support(Care app), healthcare facilities and online service.  \n*We are 100% in-house manufacturer:\nExperienced in product development and \nmanufacturing. Comprehensive technologies are highly integrated into our manufacturing process. \n*Toward industry 4.0 :\nSelf-developed automatic production equipment could attain intelligent production goal." }
   },
@@ -8650,7 +8650,7 @@
     "cat": { "tc": "精準醫療展區", "en": "Biotech" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["血液", "基金會"], "en": ["血液", "基金會"] },
+    "text": { "tc": ["血液", "基金會"], "en": ["Taiwan Blood Services Foundation"] },
     "size": { "tc": 0.35, "en": 0.35 },
     "org": { "tc": "醫療財團法人臺灣血液基金會", "en": "Taiwan Blood Services Foundation" },
     "info": { "tc": "後補", "en": "後補" }
@@ -9042,7 +9042,7 @@
     "topic": { "tc": "智慧醫院", "en": "智慧醫院" },
     "tag": { "tc": [""], "en": [""] },
     "text": { "tc": ["益張"], "en": ["I JANG INDUSTRIAL CO.,LTD."] },
-    "size": { "tc": 1.0, "en": 0.8 },
+    "size": { "tc": 0.8, "en": 0.8 },
     "org": { "tc": "益張實業股份有限公司", "en": "I JANG INDUSTRIAL CO.,LTD." },
     "info": { "tc": "移動式倉儲可在有限的空間將空間利用率做到最大化，\n並且可搭配ESL方便庫房撿貨備料。", "en": "Turn aisles into usable space and increase storage up to 43%.\nChrome-plated steel units glide effortlessly on snap-together tracks.\nEasy assembly – No tools needed. Works on any smooth floor." }
   },
@@ -9341,7 +9341,7 @@
     "topic": { "tc": "智慧醫院", "en": "智慧醫院" },
     "tag": { "tc": [""], "en": [""] },
     "text": { "tc": ["包爾"], "en": ["Bauer Group Company"] },
-    "size": { "tc": 1.0, "en": 0.8 },
+    "size": { "tc": 0.8, "en": 0.8 },
     "org": { "tc": "包爾科技股份有限公司", "en": "Bauer Group Company" },
     "info": { "tc": "智慧型管理櫃/智慧型醫療櫃/智慧型醫療工具櫃", "en": "Smart Locker / Smart Cabinet /Smart Drawer " }
   },
@@ -9364,7 +9364,7 @@
     "topic": { "tc": "醫材設備", "en": "醫材設備" },
     "tag": { "tc": [""], "en": [""] },
     "text": { "tc": ["倍福"], "en": ["Beckhoff Automation"] },
-    "size": { "tc": 1.0, "en": 0.8 },
+    "size": { "tc": 0.8, "en": 0.8 },
     "org": { "tc": "倍福自動化有限公司", "en": "Beckhoff Automation" },
     "info": { "tc": "Beckhoff 倍福自動化是自動化技術的創新者，是國際標準的制定者和推動者。公司所生產的工業 PC、I/O 及現場總線元件、驅動技術、TwinCAT自動化軟體，構成一套完整的控制系統，提供開放式自動化系統和解決方案。倍福推出智能輸送系統 XTS &amp; XPlanar，顛覆輸送產業，倍福高性能的自動化產品，將在醫療科技領域樹立嶄新水準。\n工業電腦是PC-based 控制技術的硬體核心。Beckhoff為各種應用場合提供合適的工業PC，客製化選配能滿足各種控制需求。\nEtherCAT 是由倍福發明的高速即時乙太網解決方案，已獲得全球認可，具有出色的性能和簡單的操作。可以實現高精度的機器和工廠控制，同時顯著提高生產效率。\nXTS 磁懸浮輸送系統顛覆輸送革命，環狀路徑上的直線馬達用先進的機電解決方案取代傳統的機械部件，並以軟體為基礎，輕鬆進行功能修改。XTS系統讓每個產品輸送都有連續的物料流。\nXPlanar 平面磁懸浮輸送系統，提供零接觸式運動的自由浮動動子，動子具有六自由度，高度靈活的平面傳輸和軌道規劃，適用於醫藥產業。", "en": "Following the company’s establishment in 1980, Beckhoff pioneered a control principle that has since defined many of the established standards in automation technology such as PC-based control. The core idea is simple – bundling all automation processes on one CPU, with one universal software platform and one control system. The effect: a seamlessly integrated control platform that enables new application opportunities, thanks to the optimized utilization of increasingly powerful, standard hardware. In addition, users enjoy significant efficiency improvements and a competitive edge gained through their partnership with Beckhoff.\nThe success of the PC-based control philosophy speaks for itself: Today Beckhoff is represented in more than 75 countries. The company provides a product portfolio that covers all areas of PC-based control technology, and can be scaled to answer all engineering requirements from simple to complex: IPC, I/O, motion, automation software as well as control cabinet-free automation.\n" }
   },
@@ -10747,7 +10747,7 @@
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": ["LDTS產業聯盟"], "en": ["LDTS產業聯盟"] },
     "text": { "tc": ["世基"], "en": ["世基"] },
-    "size": { "tc": 1.0, "en": 1.0 },
+    "size": { "tc": 0.8, "en": 0.8 },
     "org": { "tc": "", "en": "" },
     "info": { "tc": "", "en": "" }
   },
@@ -11356,7 +11356,7 @@
     "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["臺中", "醫院"], "en": ["臺中", "醫院"] },
+    "text": { "tc": ["臺中", "醫院"], "en": ["Taichung Hospital"] },
     "size": { "tc": 0.3, "en": 0.3 },
     "org": { "tc": "衛⽣福利部臺中醫院", "en": "Taichung Hospital, Ministry of Health and Welfare" },
     "info": { "tc": "【長照新境界-科技與研究】\n本展位以長照新境界-科技與研究為展出主題，展示衛生福利部附屬醫療及社會福利機構管理會主辦之「建構衛政社政整合計畫、預防與延緩衰弱與失能、雲端智慧長者長照服務計畫」以及未來即將執行之「後疫時代醫療照護數位領航再造計畫-建構長照世代研究平臺，提供長者全人整合照護」，展示既往成果與應用和即將展開的數位科技領航時代性照護計畫。\n展示成果包括提供營養、保養、修養及安養之全責式日照中心、分析臺灣中老年世代長期研究計畫之成果與應用，以及導入數位科技之長照服務，象徵著我國長照2.0不但在照護對象和服務內容之擴大，也展示我國著意之資訊科技和創新研發相結合之優良典範。", "en": "【New Horizons in Long-term Care: Information Technology and Research】\nThis booth presents the theme of " }
@@ -11657,7 +11657,7 @@
     "tag": { "tc": [""], "en": [""] },
     "text": { "tc": ["臺灣數位健康大聯盟", "(HiMEDt)"], "en": ["臺灣數位健康大聯盟", "(HiMEDt)"] },
     "size": { "tc": 0.7, "en": 0.7 },
-    "org": { "tc": "", "en": "" },
+    "org": { "tc": "臺灣數位健康大聯盟(HiMEDt)", "en": "臺灣數位健康大聯盟(HiMEDt)" },
     "info": { "tc": "", "en": "" }
   },
   {
@@ -11678,7 +11678,7 @@
     "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["微軟"], "en": ["微軟"] },
+    "text": { "tc": ["微軟"], "en": ["Microsoft"] },
     "size": { "tc": 1.0, "en": 1.0 },
     "org": { "tc": "臺灣微軟股份有限公司", "en": "Microsoft Taiwan" },
     "info": { "tc": "微軟醫療產業生態系大聯盟", "en": "Microsoft Healthcare industry solution" }
@@ -11960,7 +11960,7 @@
     "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["海科生技"], "en": ["海科生技"] },
+    "text": { "tc": ["海科生技"], "en": ["HyGene Biotech"] },
     "size": { "tc": 0.5, "en": 0.5 },
     "org": { "tc": "海科生技股份有限公司", "en": "HyGene Biotech Company Ltd." },
     "info": { "tc": "海科生技股份有限公司成立於2007年，已有15年在軟體系統專業級客製化的熟悉程度，並且秉持積極熱誠的服務態度， 提供企業符合ISO與FDA規範的整合式電子化管理系統，促使產業能加速符合PIC/S GMP，以ISO及FDA的規範精神作為服務的依歸 ，為客戶打造全方位及多元化的卓越高品質服務。", "en": "hygene" }
@@ -12006,7 +12006,7 @@
     "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["洛科", "儀器"], "en": ["洛科", "儀器"] },
+    "text": { "tc": ["洛科", "儀器"], "en": ["Rocker ", "Scientific"] },
     "size": { "tc": 0.3, "en": 0.3 },
     "org": { "tc": "洛科儀器股份有限公司", "en": "Rocker Scientific Co., Ltd." },
     "info": { "tc": "Tanfil 100 切向流過濾系統，過濾濃縮一次到位", "en": "Tanfil 100 TFF(Tangential flow filtration) System" }
@@ -12029,7 +12029,7 @@
     "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["和特", "科技"], "en": ["和特", "科技"] },
+    "text": { "tc": ["和特", "科技"], "en": ["Ast ", "Scitech"] },
     "size": { "tc": 0.3, "en": 0.3 },
     "org": { "tc": "和特科技企業有限公司", "en": "Ast Scitech corp. " },
     "info": { "tc": "和航貿易/和特科技成立於1979年，40年來秉承不斷的引進新觀念及培養優秀的技術人才的信念，除了優異儀器的品質與性能外，對於售後維護/維修能力及客服品質也是考量的重要項目\n展出產品：VEOLIA總有機碳分析儀(TOC)；Labconco冷凍乾燥機、離心濃縮機、超純水製造機、實驗室型洗瓶機；LC有機溶劑純化系統；VAPOURTEC流動化學合成系統；TELEDYNE ISCO自全自動快速層析純化系統(MPLC/Perp HPLC)；TELEDYNE TEKMAR吹氣捕捉濃縮裝置；PAI線上型氨氮分析儀、Löser冰點滲透壓分析儀；SAIREM客製化微波量產型批次或連續式合成系統；Mageleka粒子特性快速分析儀(Low Field NMR)等\n代理產品深受學校及業界喜愛，應用於半導體業、石化業、生物醫學業、環保業、製藥業、學術研究單位，提供專業的售後維修服務及技術支持能力", "en": "Founded in 1979, AST Corporation focuses on innovation, talent development, quality instruments, and excellent post-sales service.\nProducts: VEOLIA, Labconco, LC, Vapourtec, ISCO, Löser, SAIREM, Mageleka" }
@@ -12191,7 +12191,7 @@
     "topic": { "tc": "數位醫療", "en": "數位醫療" },
     "tag": { "tc": [""], "en": [""] },
     "text": { "tc": ["聰泰"], "en": ["YUAN HIGH-TECH DEVELOPMENT CO., LTD."] },
-    "size": { "tc": 1.0, "en": 0.8 },
+    "size": { "tc": 0.8, "en": 0.8 },
     "org": { "tc": "聰泰科技開發股份有限公司", "en": "YUAN HIGH-TECH DEVELOPMENT CO., LTD." },
     "info": { "tc": "我们提供了一系列PCIe/Mini-PCIe/M.2视频采集卡、USB2.0/3.0采集盒/dongle系列，以及一系列视频转换器盒和流编码器盒，以满足不同市场的需求。 所有具有不同外形尺寸的視頻採集產品都由一個驅動程序和同一個 SDK 支持，該 SDK 遵循 Windows DirectShow 或 Linux v4l2 標準。\n我們的研發團隊設計和開發了廣泛的硬件、驅動程序、固件、FPGA 和 SDK 包，為我們的客戶提供最好的技術支持。", "en": "We provided a series of PCIe/Mini-PCIe/M.2 video capture cards, USB2.0/3.0 capture box/dongle series, as well as a range of video converter boxes and streaming encoder boxes to fulfill different markets’ needs. All video capture products with different form factors are all supported by one driver and the same SDK which follows Windows DirectShow or Linux v4l2 standards.\nOur RD teams design and develop a wide range of Hardware, Driver, Firmware, FPGA, and SDK packages to provide the best technical support to our customers." }
   },
@@ -12375,7 +12375,7 @@
     "topic": { "tc": "精準檢測", "en": "精準檢測" },
     "tag": { "tc": [""], "en": [""] },
     "text": { "tc": ["宏智"], "en": ["HippoScreen Neurotech Corp. (HNC)"] },
-    "size": { "tc": 1.0, "en": 0.8 },
+    "size": { "tc": 0.8, "en": 0.8 },
     "org": { "tc": "宏智生醫科技股份有限公司", "en": "HippoScreen Neurotech Corp. (HNC)" },
     "info": { "tc": "宏智生醫科技利用與國內三家醫學中心合作收集的憂鬱症腦波資料所開發出來的SEA腦波壓力評估系統，包含了負責訊號收集與處理的腦波儀、流程控制的使用者圖形介面、雲端分析的AI演算法，透過紀錄90秒腦波訊號(EEG)並加以分析，提供客觀、可量化的壓力評估指標以及直觀的壓力數據分布圖，輔助醫師提供更有效率、更精準的診斷，是專業醫療人員在心理健康篩檢及臨床上的得力AI幫手。", "en": "HippoScreen's Stress EEG Assessment (SEA) System developed using depression EEG data collected through collaboration with three major medical centers in Taiwan, includes an EEG amplifier for data collection and signal processing, a GUI for test process control, and an AI algorithm for data analysis. It records 90-second brainwave signals to analyze with AI algorithm, and then provides objective and quantifiable stress evaluation index and intuitive data distribution maps in the assessment report. With this report it can assist doctors to provide more efficient and accurate diagnosis. SEA system is designed to be a powerful AI tool for professional medical personnel in mental health screening." }
   },
