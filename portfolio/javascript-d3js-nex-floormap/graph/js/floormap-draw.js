@@ -1,6 +1,6 @@
-fetch("https://astalsi401.github.io/warehouse/show/平面圖.json")
-  // ../../../../../warehouse/show/平面圖.json
-  // https://astalsi401.github.io/warehouse/show/平面圖.json
+fetch("https://astalsi401.github.io/warehouse/show/floormap.json")
+  // ../../../../../warehouse/show/floormap.json
+  // https://astalsi401.github.io/warehouse/show/floormap.json
   .then((res) => res.json())
   .then((data) => {
     const langSelect = document.querySelector("#lang");
@@ -11,7 +11,7 @@ fetch("https://astalsi401.github.io/warehouse/show/平面圖.json")
         d3.select("#graph-1f"),
         19730,
         19010,
-        data.filter((d) => d.floor === 1),
+        data.filter((d) => d.floor === 1 && d.draw === 1),
         lang
       );
       new Floor(
@@ -19,7 +19,7 @@ fetch("https://astalsi401.github.io/warehouse/show/平面圖.json")
         d3.select("#graph-4f"),
         19830,
         21010,
-        data.filter((d) => d.floor === 4),
+        data.filter((d) => d.floor === 4 && d.draw === 1),
         lang
       );
     };

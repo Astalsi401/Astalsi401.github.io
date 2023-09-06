@@ -1,7 +1,7 @@
 const Floormap = ({ data, width, height, lang, floor }) => {
   const title = { 1: { tc: "1F 民眾展區", en: "1F Community Area" }, 4: { tc: "4F 專業展區", en: "4F Industrial Area" } }[floor][lang];
   const graphRef = useRef();
-  const floorData = useMemo(() => data.filter((d) => d.floor === floor), [data, floor]);
+  const floorData = useMemo(() => data.filter((d) => d.floor === floor && d.draw === 1), [data, floor]);
   useEffect(() => {
     if (floorData.length === 0) return;
     graphRef.current.innerHTML = "";
@@ -31,9 +31,9 @@ const FloormapArea = () => {
   const [searchString, setSearchString] = useState("");
   const [lang, setLang] = useState("en");
   useEffect(() => {
-    // https://astalsi401.github.io/warehouse/show/平面圖.json
-    // ../../../../../warehouse/show/平面圖.json
-    fetch("https://astalsi401.github.io/warehouse/show/平面圖.json")
+    // https://astalsi401.github.io/warehouse/show/floormap.json
+    // ../../../../../warehouse/show/floormap.json
+    fetch("https://astalsi401.github.io/warehouse/show/floormap.json")
       .then((res) => res.json())
       .then((data) => {
         setFloorData(data);
@@ -75,7 +75,7 @@ const FloormapArea = () => {
             Search
           </button>
         </div>
-        {/* <FloormapSearchResult data={filterFloorData} regexString={regexString} /> */}
+        <FloormapSearchResult data={filterFloorData} regexString={regexString} />
       </div>
       <div className="my-2">
         {{ tc: "切換平面圖語言", en: "Choose a language" }[lang]}：
