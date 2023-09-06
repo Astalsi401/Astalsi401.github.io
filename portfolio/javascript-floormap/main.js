@@ -490,7 +490,7 @@ const MainArea = () => {
   const memoFloorData = useMemo(() => floorData.map((d) => ({ ...d, cat: d.cat ? d.cat[searchCondition.lang] : false, topic: d.topic ? d.topic[searchCondition.lang] : false, tag: d.tag ? d.tag[searchCondition.lang] : false, text: d.text ? d.text[searchCondition.lang] : [], size: d.size ? d.size[searchCondition.lang] : 1, note: d.note ? d.note[searchCondition.lang] : false, org: d.org ? d.org[searchCondition.lang] : false, info: d.info ? d.info[searchCondition.lang] : false, draw: d.draw == 1 })), [searchCondition.lang, floorData]);
   const filterFloorData = useMemo(() => memoFloorData.map((d) => ({ ...d, opacity: ["booth"].includes(d.type) && searchCondition.regex.test([d.id, d.text.join(""), d.org, d.cat, d.topic, d.tag].join(" ")) && (searchCondition.catTopicTag === "" ? true : [d.id, d.cat, d.topic, ...d.tag].includes(searchCondition.catTopicTag)) ? 0.8 : 0.1 })), [searchCondition, memoFloorData]);
   const realSize = { 1: { w: 19730, h: 14610 }, 4: { w: 19830, h: 16950 } };
-  const title = { tc: "展場平面圖", en: "" };
+  const title = { tc: "展場平面圖", en: "Floor Plan" };
   const tagsHeight = 80;
   const searchActions = (name, value) => {
     switch (name) {
