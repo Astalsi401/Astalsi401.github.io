@@ -564,12 +564,12 @@
     ],
     "id": "I1001",
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
-    "topic": { "tc": "預防醫學", "en": "預防醫學" },
+    "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["GM"], "en": ["GMAX BIOTECH. CO., LTD."] },
+    "text": { "tc": [""], "en": [""] },
     "size": { "tc": 0.4, "en": 0.4 },
-    "org": { "tc": "集美生技有限公司", "en": "GMAX BIOTECH. CO., LTD." },
-    "info": { "tc": "單方精油、有機精油、植物油／基底油、純露花水、香水原精\n", "en": "Essential oil, Organic essential oil, Base oil, Carrier oil, Hydrolates, Flower water, Fragrance.\n" }
+    "org": { "tc": "", "en": "" },
+    "info": { "tc": "", "en": "" }
   },
   {
     "type": "booth",
@@ -981,7 +981,7 @@
     "topic": { "tc": "無齡長照", "en": "無齡長照" },
     "tag": { "tc": [""], "en": [""] },
     "text": { "tc": ["睡眠", "撲滿"], "en": ["Sandalphon International Inc."] },
-    "size": { "tc": 0.4, "en": 0.4 },
+    "size": { "tc": 0.35, "en": 0.4 },
     "org": { "tc": "勝得棻國際股份有限公司", "en": "Sandalphon International Inc." },
     "info": { "tc": "自然睡眠、原生科技、共同創造生命品質\n睡眠，佔每個人生命時間的三分之一，透過充分的休息能使身體修復與自癒。聽起來很自然的睡眠行為，卻成為現代人夢寐以求的精神奢侈品，入睡或睡好變得不容易。2015年8月睡眠撲滿正式上市，全臺灣首創〝獨家SFT頻率晶片＋舒曼波原生頻率〞結合，以高科技、零接觸、零干擾的方式，協助改善人們的睡眠困擾，運用物理方式活化自身修復機制，透過導引頻率共振的機轉，導正身體原本偏差的狀態，協助人們於睡眠時延長深睡期，提升睡眠品質，進而恢復內外在的平衡。\n睡眠撲滿專為現代人所設計，當人們越仰賴科技所帶來的方便，無形中3C、WiFi也深深影響使睡眠下降。睡眠撲滿是用科技的方式來處理科技所帶來的問題，讓人們在紛亂的大環境當中，也能得到自然放鬆、安穩睡眠。\n", "en": "SleepBank is an exclusive sleeping chip designed for in-depth sleep, SFT(Sleep  Frequency Technology) assisting the prolongation of natural in-depth sleep and allowing the body to initiate the self-curing and repairing mechanisms. \nThe current sleep products are mostly measuring sleep environment, turn over, breathing, etc., cannot solve the sleep problem. SleepBank is an innovation solution, after product launched in Taiwan, many media attention and reports.\nThe SleepBank does not use chemical adjustment of immediate effect. Through SFT, the body and environment are slightly adjusted with harmonic physical resonance. This will increase the in-depth sleeping time, and enhance the sleep quality, allowing you to re-experience the original environment of the Earth. Your body will lie in such cozy environment, achieving natural repair, a self-curing bridge that re-connects the land and the body.\n" }
   },
@@ -5185,12 +5185,12 @@
     ],
     "id": "K528",
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
-    "topic": { "tc": "", "en": "" },
+    "topic": { "tc": "預防醫學", "en": "預防醫學" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": [""], "en": [""] },
+    "text": { "tc": ["GM"], "en": ["GMAX BIOTECH. CO., LTD."] },
     "size": { "tc": 0.4, "en": 0.4 },
-    "org": { "tc": "", "en": "" },
-    "info": { "tc": "", "en": "" }
+    "org": { "tc": "集美生技有限公司", "en": "GMAX BIOTECH. CO., LTD." },
+    "info": { "tc": "單方精油、有機精油、植物油／基底油、純露花水、香水原精\n", "en": "Essential oil, Organic essential oil, Base oil, Carrier oil, Hydrolates, Flower water, Fragrance.\n" }
   },
   {
     "type": "booth",
@@ -5441,7 +5441,7 @@
     "topic": { "tc": "精準檢測", "en": "精準檢測" },
     "tag": { "tc": [""], "en": [""] },
     "text": { "tc": ["晶神", "醫創"], "en": ["A-NEURON ELECTRONIC CORP."] },
-    "size": { "tc": 0.4, "en": 0.4 },
+    "size": { "tc": 0.35, "en": 0.4 },
     "org": { "tc": "晶神醫創股份有限公司", "en": "A-NEURON ELECTRONIC CORP." },
     "info": { "tc": "資料後補", "en": "資料後補" }
   },
@@ -5601,9 +5601,9 @@
     "cat": { "tc": "精準醫療展區", "en": "Biotech" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": [""], "en": [""] },
-    "size": { "tc": 0.4, "en": 0.4 },
-    "org": { "tc": "", "en": "" },
+    "text": { "tc": ["如海", "光電"], "en": ["Oceanhood Taiwan Opto-Electronics"] },
+    "size": { "tc": 0.35, "en": 0.4 },
+    "org": { "tc": "臺灣如海光電股份有限公司", "en": "Oceanhood Taiwan Opto-Electronics CO.,LTD" },
     "info": { "tc": "", "en": "" }
   },
   {
@@ -8004,7 +8004,7 @@
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
     "text": { "tc": ["矽響", "先創"], "en": ["Decentralized Biotechnology Intelligence Co., Ltd."] },
-    "size": { "tc": 0.3, "en": 0.3 },
+    "size": { "tc": 0.35, "en": 0.3 },
     "org": { "tc": "矽響先創科技股份有限公司", "en": "Decentralized Biotechnology Intelligence Co., Ltd." },
     "info": { "tc": "矽響先創 (DBIO) 致力於研發、整合創新的智慧物聯網(AIoT)技術，該技術結合了「人工智慧 (AI)」 與「物聯網 (IoT)」，整合及設計出最先進的智慧物聯網及感測技術的多樣化產品服務 —物聯網穿戴式聽診器 、物聯網感測鞋墊兩項產品，為人們帶來更加便利的生活模式。\n創新的整合技術讓使用者能夠獲得最舒適的無感穿戴，再透過靈活應用AI演算法的運算後，使用者將取得實用的健康數據，並且可以協助使用者用來管理自身的健康狀態與趨勢!", "en": "dBio is committed to using the latest technology AIoT and various micro-sensory devices to integrate people's external movement and internal sensory information and provide integrated information after AI analysis. We strive to build wearable and portable products as a platform for telemedicine, preventive medicine, and exercise management. Through our products ''AIoT Wearable Stethoscope'' and '' AIoT Smart Insole'',  we are able to satisfy all health and exercise management needs and provide the most comfortable and senseless device to produce the most practical health data. We aim to protect the health of you and your family anytime and anywhere!" }
   },
@@ -8073,7 +8073,7 @@
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
     "text": { "tc": ["慧誠智醫"], "en": ["慧誠智醫"] },
-    "size": { "tc": 0.4, "en": 0.4 },
+    "size": { "tc": 0.5, "en": 0.4 },
     "org": { "tc": "", "en": "" },
     "info": { "tc": "", "en": "" }
   },
@@ -8116,12 +8116,12 @@
     ],
     "id": "L305a",
     "cat": { "tc": "精準醫療展區", "en": "Biotech" },
-    "topic": { "tc": "精準檢測", "en": "精準檢測" },
+    "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": [""], "en": [""] },
+    "text": { "tc": ["Intel"], "en": ["Intel"] },
     "size": { "tc": 0.4, "en": 0.4 },
-    "org": { "tc": "", "en": "" },
-    "info": { "tc": "", "en": "" }
+    "org": { "tc": "美商英特爾亞太科技有限公司臺灣分公司", "en": "Intel" },
+    "info": { "tc": "-Demonstrate top Value:  4th Gen Xeon, AMX, OpenVino, 13th Gen Core, OpenFL, Intel GPU, Altera, Gaudi/Habana\n-Enable T1 Partners and use cases on Intel’s latest product lines \n-Implementation of Use cases both on Premise and to the Cloud – Edge ", "en": "-Demonstrate top Value:  4th Gen Xeon, AMX, OpenVino, 13th Gen Core, OpenFL, Intel GPU, Altera, Gaudi/Habana\n-Enable T1 Partners and use cases on Intel’s latest product lines \n-Implementation of Use cases both on Premise and to the Cloud – Edge " }
   },
   {
     "type": "booth",
@@ -8188,7 +8188,7 @@
     "topic": { "tc": "精準檢測", "en": "精準檢測" },
     "tag": { "tc": [""], "en": [""] },
     "text": { "tc": ["世基生", "醫健康", "基因"], "en": ["PharmiGENE, Inc."] },
-    "size": { "tc": 0.6, "en": 0.6 },
+    "size": { "tc": 0.55, "en": 0.6 },
     "org": { "tc": "世基生物醫學股份有限公司", "en": "PharmiGENE, Inc." },
     "info": {
       "tc": "世基生醫專注於藥物基因體學，提供個人化的藥物基因檢測，幫助人們找到最佳藥物並避免副作用的發生。\n《專利藥物基因檢測試劑》\n我們擁有carbamazepine、allopurinol和Warfarin基因檢測的專利。\n並開發成醫療器材IVD，擁有多國許可證，銷往中國、美國、歐洲、韓國、東南亞等。\n《專業IVD CDMO服務》\n我們的製造工廠已通過 ISO 13485 和 QMS 認證。\n此外，我們也利用專業經驗提供IVD CDMO服務。\n擅長多種技術平臺、彈性的生產量，無需長時間等待。\n《LDTs 藥物基因檢測服務》\n世基生醫提供常用藥物基因檢測、心血管疾病藥物基因檢測、\n氯吡格雷藥物基因檢測和Baktar基因檢測等。\n《代理銷售解決方案》\n世基生醫代理國際知名科研儀器與試劑，運用專業經驗與知識，提供多樣化整體服務及解决方案。除了產品的銷售，亦提供完善的使用培訓、實驗流程建議與規劃、技術支援服務、生物資訊分析建議、問題解決等整合性的一條龍式服務，讓客戶使用高階技術平臺更安心，有效率的取得研究內涵。代理銷售的科研設備平臺，著重於基因體學與遺傳學領域，整合次世代定序工作流程各個不同階段的高階產品，滿足對應產業應用與轉譯醫療的需求。世基生醫為10x genomics連續兩年金牌代理商，提供單細胞定序與空間轉錄組的解決方案，其他代理品牌還有S2 Genomics自動化組織解離儀、Immudex免疫細胞精準標定、Abiosciences單細胞與空間轉錄組數據分析軟體、以及Varsome全基因組精準註解平臺。",
@@ -8314,13 +8314,13 @@
     "type": "booth",
     "draw": 1,
     "floor": 4,
-    "w": 600,
+    "w": 300,
     "h": 600,
     "x": 1500,
     "y": 8310,
     "p": [
-      { "node": "L", "x": 600, "y": 0 },
-      { "node": "L", "x": 600, "y": 600 },
+      { "node": "L", "x": 300, "y": 0 },
+      { "node": "L", "x": 300, "y": 600 },
       { "node": "L", "x": 0, "y": 600 },
       { "node": "L", "x": 0, "y": 0 }
     ],
@@ -8331,6 +8331,29 @@
     "text": { "tc": [""], "en": [""] },
     "size": { "tc": 0.6, "en": 0.6 },
     "org": { "tc": "", "en": "" },
+    "info": { "tc": "", "en": "" }
+  },
+  {
+    "type": "booth",
+    "draw": 1,
+    "floor": 4,
+    "w": 300,
+    "h": 600,
+    "x": 1800,
+    "y": 8310,
+    "p": [
+      { "node": "L", "x": 300, "y": 0 },
+      { "node": "L", "x": 300, "y": 600 },
+      { "node": "L", "x": 0, "y": 600 },
+      { "node": "L", "x": 0, "y": 0 }
+    ],
+    "id": "L503",
+    "cat": { "tc": "精準醫療展區", "en": "Biotech" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["超", "極", "生", "技"], "en": ["UltraE"] },
+    "size": { "tc": 0.4, "en": 0.4 },
+    "org": { "tc": "超極生技股份有限公司", "en": "UltraE Co., Ltd." },
     "info": { "tc": "", "en": "" }
   },
   {
@@ -10471,7 +10494,7 @@
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": ["LDTS產業聯盟"], "en": ["LDTS產業聯盟"] },
     "text": { "tc": ["亞洲準譯、圖爾思", "、橫河、大昌"], "en": ["亞洲準譯、圖爾思", "、橫河、大昌"] },
-    "size": { "tc": 0.8, "en": 0.8 },
+    "size": { "tc": 0.7, "en": 0.8 },
     "org": { "tc": "亞洲準譯股份有限公司", "en": "Asia Pathogenomics Co.,Ltd" },
     "info": { "tc": "近年來精準醫療與新興科技的不斷發展與進步，已經有許多臨床應用落實在常規醫療之中，目前衛福部已將精準檢驗全面納管，需要通過LDTS(實驗室自行研發檢驗技術)認證方可在醫院施行，目前已有許多不同領域的精準檢驗臨床應用已經落實在國內外醫療院所。希望能透過這個平臺呈現已取得LDTS許可的廠商，其商品與服務可以大幅改善1)優於傳統檢驗技術的臨床價值，2)相關檢驗產業的合作生態系，以及3)未來研發的精準檢驗。希望與各國內外領域專家交流如何將現有的精準檢驗新科技進行整合。期能及時提供臨床端更精準且具臨床價值的檢驗資訊，協助醫師診斷，進而改善病人預後。", "en": "With the continuous development and progress of precision medicine and emerging technology, many clinical applications have been implemented in standard medical care. At present, all precision medical technology companies need the Laboratory Developed Tests (LDTs) certification of TFDA to be able to provide service in hospitals in Taiwan. These LDTs medical techniques of various clinical fields already implemented in many hospitals by different companies.  We hope we can present the strength of LDTs companies. how their products and services can greatly improve 1) the clinical value better than traditional techniques, 2) the ecosystem of collaborative industries, and 3) new developing product and business model. We hope that we can exchange experience with all experts of precision medicine in this integrated platform to provide more valuable, accurate, immediate clinical service for physicians to improve patients' prognosis.\n" }
   },
@@ -10563,7 +10586,7 @@
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": ["LDTS產業聯盟"], "en": ["LDTS產業聯盟"] },
     "text": { "tc": ["慧智基因、", "宜蘊、禾馨"], "en": ["慧智基因、", "宜蘊、禾馨"] },
-    "size": { "tc": 0.8, "en": 0.8 },
+    "size": { "tc": 0.7, "en": 0.8 },
     "org": { "tc": "", "en": "" },
     "info": { "tc": "", "en": "" }
   },
@@ -10586,7 +10609,7 @@
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": ["LDTS產業聯盟"], "en": ["LDTS產業聯盟"] },
     "text": { "tc": ["LDTS", "產業聯盟形象區"], "en": ["LDTS", "產業聯盟形象區"] },
-    "size": { "tc": 0.8, "en": 0.8 },
+    "size": { "tc": 0.7, "en": 0.8 },
     "org": { "tc": "", "en": "" },
     "info": { "tc": "", "en": "" }
   },
@@ -11219,7 +11242,7 @@
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
     "text": { "tc": ["臺中", "醫院"], "en": ["Taichung Hospital"] },
-    "size": { "tc": 0.3, "en": 0.3 },
+    "size": { "tc": 0.35, "en": 0.3 },
     "org": { "tc": "衛⽣福利部臺中醫院", "en": "Taichung Hospital, Ministry of Health and Welfare" },
     "info": { "tc": "【長照新境界-科技與研究】\n本展位以長照新境界-科技與研究為展出主題，展示衛生福利部附屬醫療及社會福利機構管理會主辦之「建構衛政社政整合計畫、預防與延緩衰弱與失能、雲端智慧長者長照服務計畫」以及未來即將執行之「後疫時代醫療照護數位領航再造計畫-建構長照世代研究平臺，提供長者全人整合照護」，展示既往成果與應用和即將展開的數位科技領航時代性照護計畫。\n展示成果包括提供營養、保養、修養及安養之全責式日照中心、分析臺灣中老年世代長期研究計畫之成果與應用，以及導入數位科技之長照服務，象徵著我國長照2.0不但在照護對象和服務內容之擴大，也展示我國著意之資訊科技和創新研發相結合之優良典範。", "en": "【New Horizons in Long-term Care: Information Technology and Research】\nThis booth presents the theme of " }
   },
@@ -11869,7 +11892,7 @@
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
     "text": { "tc": ["洛科", "儀器"], "en": ["Rocker ", "Scientific"] },
-    "size": { "tc": 0.3, "en": 0.3 },
+    "size": { "tc": 0.35, "en": 0.3 },
     "org": { "tc": "洛科儀器股份有限公司", "en": "Rocker Scientific Co., Ltd." },
     "info": { "tc": "Tanfil 100 切向流過濾系統，過濾濃縮一次到位", "en": "Tanfil 100 TFF(Tangential flow filtration) System" }
   },
@@ -11892,7 +11915,7 @@
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
     "text": { "tc": ["和特", "科技"], "en": ["Ast ", "Scitech"] },
-    "size": { "tc": 0.3, "en": 0.3 },
+    "size": { "tc": 0.35, "en": 0.3 },
     "org": { "tc": "和特科技企業有限公司", "en": "Ast Scitech corp. " },
     "info": { "tc": "和航貿易/和特科技成立於1979年，40年來秉承不斷的引進新觀念及培養優秀的技術人才的信念，除了優異儀器的品質與性能外，對於售後維護/維修能力及客服品質也是考量的重要項目\n展出產品：VEOLIA總有機碳分析儀(TOC)；Labconco冷凍乾燥機、離心濃縮機、超純水製造機、實驗室型洗瓶機；LC有機溶劑純化系統；VAPOURTEC流動化學合成系統；TELEDYNE ISCO自全自動快速層析純化系統(MPLC/Perp HPLC)；TELEDYNE TEKMAR吹氣捕捉濃縮裝置；PAI線上型氨氮分析儀、Löser冰點滲透壓分析儀；SAIREM客製化微波量產型批次或連續式合成系統；Mageleka粒子特性快速分析儀(Low Field NMR)等\n代理產品深受學校及業界喜愛，應用於半導體業、石化業、生物醫學業、環保業、製藥業、學術研究單位，提供專業的售後維修服務及技術支持能力", "en": "Founded in 1979, AST Corporation focuses on innovation, talent development, quality instruments, and excellent post-sales service.\nProducts: VEOLIA, Labconco, LC, Vapourtec, ISCO, Löser, SAIREM, Mageleka" }
   },
@@ -12697,7 +12720,7 @@
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": ["LDTS產業聯盟"], "en": ["LDTS產業聯盟"] },
     "text": { "tc": ["臺灣", "牙醫通"], "en": ["臺灣", "牙醫通"] },
-    "size": { "tc": 0.8, "en": 0.8 },
+    "size": { "tc": 0.7, "en": 0.8 },
     "org": { "tc": "臺灣牙易通股份有限公司", "en": "dentall Co., Ltd." },
     "info": { "tc": "(後續補上)", "en": "(後續補上)" }
   },
