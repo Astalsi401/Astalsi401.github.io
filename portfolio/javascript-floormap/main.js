@@ -512,12 +512,14 @@ const MainArea = () => {
   const memoFloorData = useMemo(
     () =>
       floorData.map((d) => {
-        let tags = d.topic[searchCondition.lang];
+        let tags = [];
         if (d.event) {
           const now = new Date();
           const eventTime = d.event[searchCondition.lang].map((e) => ({ start: new Date(e.start), end: new Date(e.end) }));
+
+          console.log(eventTime);
         }
-        return { ...d, cat: d.cat ? d.cat[searchCondition.lang] : false, topic: d.topic ? tags : false, tag: d.tag ? [...d.tag[searchCondition.lang]] : false, text: d.text ? d.text[searchCondition.lang] : [], size: d.size ? d.size[searchCondition.lang] : 1, note: d.note ? d.note[searchCondition.lang] : false, org: d.org ? d.org[searchCondition.lang] : false, info: d.info ? d.info[searchCondition.lang] : false, draw: d.draw == 1, event: d.event ? d.event[searchCondition.lang].map((e) => ({ start: new Date(e.start), end: new Date(e.end), title: e.title })) : [] };
+        return { ...d, cat: d.cat ? d.cat[searchCondition.lang] : false, topic: d.topic ? d.topic[searchCondition.lang] : false, tag: d.tag ? tags : false, text: d.text ? d.text[searchCondition.lang] : [], size: d.size ? d.size[searchCondition.lang] : 1, note: d.note ? d.note[searchCondition.lang] : false, org: d.org ? d.org[searchCondition.lang] : false, info: d.info ? d.info[searchCondition.lang] : false, draw: d.draw == 1, event: d.event ? d.event[searchCondition.lang].map((e) => ({ start: new Date(e.start), end: new Date(e.end), title: e.title })) : [] };
       }),
     [searchCondition.lang, floorData]
   );
@@ -563,7 +565,6 @@ const MainArea = () => {
   }, [searchCondition.string]);
   useEffect(() => {
     fetch("https://astalsi401.github.io/warehouse/show/floormap.json")
-      // https://astalsi401.github.io/warehouse/show/floormap.json
       .then((res) => res.json())
       .then((data) => {
         setFloorData(data);
