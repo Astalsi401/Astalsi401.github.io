@@ -104,9 +104,8 @@ const Elements = ({ type, data, size, elementStatus, handleBoothInfo }) => {
   };
   return <g className={`${type}-g`}>{data.filter((d) => d.type == type).map((d, i) => elementActions[type](d, i))}</g>;
 };
-const Floormap = ({ data, sidebarWidth, tagsHeight, realSize, elementStatus, handleBoothInfo, searchCondition, handleSearchChange }) => {
+const Floormap = ({ data, viewBox, setViewBox, sidebarWidth, tagsHeight, realSize, elementStatus, handleBoothInfo, searchCondition, handleSearchChange }) => {
   const [containerSize, setContainerSize] = useState({ width: realSize.w / 100, height: realSize.h / 100, pageHeight: realSize.h / 100 });
-  const [viewBox, setViewBox] = useState({ x1: 0, y1: 0, x2: realSize.w, y2: realSize.h });
   const [drugStatus, setDrugStatus] = useState({ moving: false, previousTouch: null, previousTouchLength: null });
   const [newSVGPoint, setNewSVGPoint] = useState(null);
   const [startSVGPoint, setStartSVGPoint] = useState(null);
@@ -190,7 +189,7 @@ const Floormap = ({ data, sidebarWidth, tagsHeight, realSize, elementStatus, han
   return (
     <div className="fp-floormap d-flex align-items-center" ref={graphRef}>
       <Selector searchCondition={searchCondition} handleSearchChange={handleSearchChange} setViewBox={setViewBox} realSize={realSize} zoomCalculator={zoomCalculator} />
-      <svg id="floormap" className={`mx-auto ${drugStatus.moving ? "moving" : ""}`} style={{ backgroundColor: "white" }} ref={svgRef} width={containerSize.width} height={containerSize.height} viewBox={`${viewBox.x1} ${viewBox.y1} ${viewBox.x2} ${viewBox.y2}`} onWheel={handleWheelZoom} onMouseDown={handleStart} onMouseUp={handleEnd} onMouseMove={handleMouseDrug} onTouchStart={handleStart} onTouchEnd={handleEnd} onTouchMove={handleTouchDrugZoom}>
+      <svg id="floormap" className={`mx-auto ${drugStatus.moving ? "moving" : ""}`} style={{ backgroundColor: "white" }} ref={svgRef} width={containerSize.width} height={containerSize.height} viewBox={`${viewBox.x1} ${viewBox.y1} ${viewBox.x2} ${viewBox.y2}`} onWheel={handleWheelZoom} onMouseDown={handleStart} onMouseUp={handleEnd} onMouseLeave={handleEnd} onMouseMove={handleMouseDrug} onTouchStart={handleStart} onTouchEnd={handleEnd} onTouchMove={handleTouchDrugZoom}>
         <Elements type="wall" data={data} />
         <Elements type="pillar" data={data} />
         <Elements type="text" data={data} />
@@ -273,8 +272,9 @@ const Category = ({ title, data, col, setSearchCondition, setElementStatus }) =>
   );
 };
 
-const Advanced = ({ data, elementStatus, setElementStatus, searchCondition, setSearchCondition }) => {
+const Advanced = ({ data, elementStatus, setElementStatus, searchCondition, setSearchCondition, defaultViewbox }) => {
   const download = async () => {
+    defaultViewbox();
     const svgElement = document.querySelector("#floormap");
     const svgString = new XMLSerializer().serializeToString(svgElement);
     let blob;
@@ -336,12 +336,23 @@ const Result = ({ data, elementStatus, handleBoothInfo }) => {
   );
 };
 
+const Event = ({ start, end, title }) => {
+  const format = (datetime) => (Array(2).join("0") + datetime).slice(-2);
+  return (
+    <div className="fp-event my-1 p-1">
+      <div className="text-small">{`${format(start.getMonth() + 1)}/${format(start.getDate())} ${format(start.getHours())}:${format(start.getMinutes())}-${format(end.getHours())}:${format(end.getMinutes())}`}</div>
+      <div>{title}</div>
+    </div>
+  );
+};
+
 const BoothInfo = ({ data, setSearchCondition, elementStatus, setElementStatus }) => {
   const {
-    boothInfoData: { text, org, id, floor, cat, topic, tag, info },
+    boothInfoData: { text, org, id, floor, cat, topic, tag, info, event },
   } = elementStatus;
   const tags = Object.keys(elementStatus.boothInfoData).length === 0 ? [] : [id, cat, topic, ...tag].filter((d) => d !== "");
   const corps = data.filter((d) => d.id == id && d.org != org);
+
   const handleTagClick = (value) => {
     setSearchCondition((prev) => ({ ...prev, catTopicTag: value, string: "" }));
     setElementStatus((prev) => ({ ...prev, boothInfo: false }));
@@ -378,7 +389,7 @@ const BoothInfo = ({ data, setSearchCondition, elementStatus, setElementStatus }
           </div>
           {corps.length > 0 && (
             <div className="p-2">
-              <div className="my-1">聯展單位</div>
+              <div className="my-1 text-large">聯展單位</div>
               <div className="my-1 fp-booth-tags d-flex flex-wrap">
                 {corps.map((d) => (
                   <div className="fp-input-tag shadow text-small" style={{ "--cat": elementStatus.colors("") }} onClick={() => handleCorpClick(d)}>
@@ -393,17 +404,23 @@ const BoothInfo = ({ data, setSearchCondition, elementStatus, setElementStatus }
               <div>{d}</div>
             ))}
           </div>
-          <div className="p-2">
-            <div className="my-1">相關活動</div>
-            <div className="my-1"></div>
-          </div>
+          {event.length > 0 && (
+            <div className="p-2">
+              <div className="my-1 text-large">相關活動</div>
+              <div className="my-1">
+                {event.map((d) => (
+                  <Event {...d} />
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       )}
     </div>
   );
 };
 
-const Sidebar = ({ data, elementStatus, setElementStatus, searchCondition, setSearchCondition, handleSearchChange, handleBoothInfo }) => {
+const Sidebar = ({ data, elementStatus, setElementStatus, searchCondition, setSearchCondition, handleSearchChange, handleBoothInfo, defaultViewbox }) => {
   const handleSidear = ({ currentTarget }) => {
     if (elementStatus.sidebar && currentTarget.classList.contains("fp-sidebar")) return;
     setElementStatus((prev) => ({ ...prev, sidebar: !prev.sidebar }));
@@ -413,7 +430,7 @@ const Sidebar = ({ data, elementStatus, setElementStatus, searchCondition, setSe
       <Search searchCondition={searchCondition} setSearchCondition={setSearchCondition} elementStatus={elementStatus} setElementStatus={setElementStatus} handleSearchChange={handleSearchChange} />
       {elementStatus.sidebar || elementStatus.isMobile ? (
         <>
-          <Advanced data={data} searchCondition={searchCondition} setSearchCondition={setSearchCondition} elementStatus={elementStatus} setElementStatus={setElementStatus} />
+          <Advanced data={data} searchCondition={searchCondition} setSearchCondition={setSearchCondition} elementStatus={elementStatus} setElementStatus={setElementStatus} defaultViewbox={defaultViewbox} />
           <Result data={data} elementStatus={elementStatus} handleBoothInfo={handleBoothInfo} />
           <BoothInfo data={data} setSearchCondition={setSearchCondition} elementStatus={elementStatus} setElementStatus={setElementStatus} />
         </>
@@ -480,7 +497,7 @@ const MainArea = () => {
     string: "",
     regex: new RegExp(""),
     catTopicTag: "",
-    floor: 1,
+    floor: 4,
     lang: "en",
   });
   const [elementStatus, setElementStatus] = useState({
@@ -491,7 +508,19 @@ const MainArea = () => {
     advanced: false,
     boothInfo: false,
   });
-  const memoFloorData = useMemo(() => floorData.map((d) => ({ ...d, cat: d.cat ? d.cat[searchCondition.lang] : false, topic: d.topic ? d.topic[searchCondition.lang] : false, tag: d.tag ? d.tag[searchCondition.lang] : false, text: d.text ? d.text[searchCondition.lang] : [], size: d.size ? d.size[searchCondition.lang] : 1, note: d.note ? d.note[searchCondition.lang] : false, org: d.org ? d.org[searchCondition.lang] : false, info: d.info ? d.info[searchCondition.lang] : false, draw: d.draw == 1 })), [searchCondition.lang, floorData]);
+  const [viewBox, setViewBox] = useState({ x1: 0, y1: 0, x2: 0, y2: 0 });
+  const memoFloorData = useMemo(
+    () =>
+      floorData.map((d) => {
+        let tags = d.topic[searchCondition.lang];
+        if (d.event) {
+          const now = new Date();
+          const eventTime = d.event[searchCondition.lang].map((e) => ({ start: new Date(e.start), end: new Date(e.end) }));
+        }
+        return { ...d, cat: d.cat ? d.cat[searchCondition.lang] : false, topic: d.topic ? tags : false, tag: d.tag ? [...d.tag[searchCondition.lang]] : false, text: d.text ? d.text[searchCondition.lang] : [], size: d.size ? d.size[searchCondition.lang] : 1, note: d.note ? d.note[searchCondition.lang] : false, org: d.org ? d.org[searchCondition.lang] : false, info: d.info ? d.info[searchCondition.lang] : false, draw: d.draw == 1, event: d.event ? d.event[searchCondition.lang].map((e) => ({ start: new Date(e.start), end: new Date(e.end), title: e.title })) : [] };
+      }),
+    [searchCondition.lang, floorData]
+  );
   const filterFloorData = useMemo(() => memoFloorData.map((d) => ({ ...d, opacity: ["booth"].includes(d.type) && searchCondition.regex.test([d.id, d.text.join(""), d.org, d.cat, d.topic, d.tag].join(" ")) && (searchCondition.catTopicTag === "" ? true : [d.id, d.cat, d.topic, ...d.tag].includes(searchCondition.catTopicTag)) ? 0.8 : 0.1 })), [searchCondition, memoFloorData]);
   const realSize = { 1: { w: 19730, h: 14610 }, 4: { w: 19830, h: 16950 } };
   const title = { tc: "展場平面圖", en: "Floor Plan" };
@@ -513,6 +542,7 @@ const MainArea = () => {
     setElementStatus((prev) => ({ ...prev, sidebar: true, boothInfo: true, boothInfoData: d }));
     setSearchCondition((prev) => ({ ...prev, floor: d.floor }));
   };
+  const defaultViewbox = () => setViewBox({ x1: 0, y1: 0, x2: realSize[searchCondition.floor].w, y2: realSize[searchCondition.floor].h });
   useEffect(() => setSidebarWidth(elementStatus.isMobile ? (elementStatus.sidebar ? 117 : window.innerHeight - 117) : elementStatus.sidebar ? 300 : 30), [elementStatus.sidebar, elementStatus.isMobile]);
   useEffect(() => {
     setElementStatus((prev) => ({ ...prev, colors: prev.colors.domain(categories[searchCondition.lang]) }));
@@ -539,16 +569,18 @@ const MainArea = () => {
         setFloorData(data);
       });
     if (/^zh/i.test(navigator.language)) setSearchCondition((prev) => ({ ...prev, lang: "tc" }));
+    setViewBox({ x1: 0, y1: 0, x2: realSize[searchCondition.floor].w, y2: realSize[searchCondition.floor].h });
     handleResize();
+    defaultViewbox();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   return (
     <div className="fp-main" style={{ "--sidebar-width": `${sidebarWidth}px`, "--tags-height": `${tagsHeight}px` }}>
-      <Sidebar data={filterFloorData.filter((d) => ["booth"].includes(d.type))} elementStatus={elementStatus} setElementStatus={setElementStatus} searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} handleBoothInfo={handleBoothInfo} />
+      <Sidebar data={filterFloorData.filter((d) => ["booth"].includes(d.type))} elementStatus={elementStatus} setElementStatus={setElementStatus} searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} handleBoothInfo={handleBoothInfo} defaultViewbox={defaultViewbox} />
       <div className="fp-graph d-flex align-items-center">
         <div className="fp-tags p-2 shadow">{{ tc: "年度重點必看：", en: "年度重點必看：" }[searchCondition.lang]}</div>
-        <Floormap data={filterFloorData.filter((d) => d.floor == searchCondition.floor && d.draw)} sidebarWidth={sidebarWidth} realSize={realSize[searchCondition.floor]} tagsHeight={tagsHeight} elementStatus={elementStatus} handleBoothInfo={handleBoothInfo} searchCondition={searchCondition} handleSearchChange={handleSearchChange} />
+        <Floormap data={filterFloorData.filter((d) => d.floor == searchCondition.floor && d.draw)} viewBox={viewBox} setViewBox={setViewBox} sidebarWidth={sidebarWidth} realSize={realSize[searchCondition.floor]} tagsHeight={tagsHeight} elementStatus={elementStatus} handleBoothInfo={handleBoothInfo} searchCondition={searchCondition} handleSearchChange={handleSearchChange} />
       </div>
     </div>
   );
