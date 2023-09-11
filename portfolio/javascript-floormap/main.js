@@ -18,6 +18,20 @@ meta.setAttribute("name", "viewport");
 meta.setAttribute("content", "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no");
 document.head.appendChild(meta);
 
+const Header = ({ searchCondition, setSearchCondition }) => {
+  const tags = ["活動進行中"];
+  return (
+    <div className="fp-tags p-2 d-flex flex-wrap align-items-center shadow">
+      <div>{{ tc: "年度重點必看：", en: "年度重點必看：" }[searchCondition.lang]}</div>
+      {tags.map((d) => (
+        <div className="fp-input-tag shadow" onClick={() => setSearchCondition((prev) => ({ ...prev, catTopicTag: d }))}>
+          {d}
+        </div>
+      ))}
+    </div>
+  );
+};
+
 const Wall = ({ d, drawPath }) => {
   return <path stroke="black" fill={d.fill} strokeWidth={d.strokeWidth} d={`M${d.x} ${d.y}${drawPath(d.p)}`} />;
 };
@@ -336,10 +350,10 @@ const Result = ({ data, elementStatus, handleBoothInfo }) => {
   );
 };
 
-const Event = ({ start, end, title }) => {
+const Event = ({ start, end, title, active }) => {
   const format = (datetime) => (Array(2).join("0") + datetime).slice(-2);
   return (
-    <div className="fp-event my-1 p-1">
+    <div className={`fp-event my-1 p-1 ${active ? "active" : ""}`}>
       <div className="text-small">{`${format(start.getMonth() + 1)}/${format(start.getDate())} ${format(start.getHours())}:${format(start.getMinutes())}-${format(end.getHours())}:${format(end.getMinutes())}`}</div>
       <div>{title}</div>
     </div>
@@ -352,7 +366,6 @@ const BoothInfo = ({ data, setSearchCondition, elementStatus, setElementStatus }
   } = elementStatus;
   const tags = Object.keys(elementStatus.boothInfoData).length === 0 ? [] : [id, cat, topic, ...tag].filter((d) => d !== "");
   const corps = data.filter((d) => d.id == id && d.org != org);
-
   const handleTagClick = (value) => {
     setSearchCondition((prev) => ({ ...prev, catTopicTag: value, string: "" }));
     setElementStatus((prev) => ({ ...prev, boothInfo: false }));
@@ -361,9 +374,7 @@ const BoothInfo = ({ data, setSearchCondition, elementStatus, setElementStatus }
     setSearchCondition((prev) => ({ ...prev, floor: floor, catTopicTag: "", string: id }));
     setElementStatus((prev) => ({ ...prev, boothInfo: false }));
   };
-  const handleCorpClick = (d) => {
-    setElementStatus((prev) => ({ ...prev, boothInfoData: d }));
-  };
+  const handleCorpClick = (d) => setElementStatus((prev) => ({ ...prev, boothInfoData: d }));
   return (
     <div className={`fp-booth-info ${elementStatus.boothInfo ? "active" : ""}`}>
       <div>
@@ -512,14 +523,14 @@ const MainArea = () => {
   const memoFloorData = useMemo(
     () =>
       floorData.map((d) => {
-        let tags = [];
+        let tags = d.tag ? d.tag[searchCondition.lang] : [],
+          eventTime = [];
         if (d.event) {
           const now = new Date();
-          const eventTime = d.event[searchCondition.lang].map((e) => ({ start: new Date(e.start), end: new Date(e.end) }));
-
-          console.log(eventTime);
+          eventTime = d.event[searchCondition.lang].map((e) => ({ start: new Date(e.start), end: new Date(e.end), title: e.title, active: new Date(e.start) < now && new Date(e.end) > now }));
+          tags = eventTime.some((e) => e.active) ? tags.concat(["活動進行中"]) : tags;
         }
-        return { ...d, cat: d.cat ? d.cat[searchCondition.lang] : false, topic: d.topic ? d.topic[searchCondition.lang] : false, tag: d.tag ? tags : false, text: d.text ? d.text[searchCondition.lang] : [], size: d.size ? d.size[searchCondition.lang] : 1, note: d.note ? d.note[searchCondition.lang] : false, org: d.org ? d.org[searchCondition.lang] : false, info: d.info ? d.info[searchCondition.lang] : false, draw: d.draw == 1, event: d.event ? d.event[searchCondition.lang].map((e) => ({ start: new Date(e.start), end: new Date(e.end), title: e.title })) : [] };
+        return { ...d, cat: d.cat ? d.cat[searchCondition.lang] : false, topic: d.topic ? d.topic[searchCondition.lang] : false, tag: tags, text: d.text ? d.text[searchCondition.lang] : [], size: d.size ? d.size[searchCondition.lang] : 1, note: d.note ? d.note[searchCondition.lang] : false, org: d.org ? d.org[searchCondition.lang] : false, info: d.info ? d.info[searchCondition.lang] : false, draw: d.draw == 1, event: eventTime };
       }),
     [searchCondition.lang, floorData]
   );
@@ -580,7 +591,7 @@ const MainArea = () => {
     <div className="fp-main" style={{ "--sidebar-width": `${sidebarWidth}px`, "--tags-height": `${tagsHeight}px` }}>
       <Sidebar data={filterFloorData.filter((d) => ["booth"].includes(d.type))} elementStatus={elementStatus} setElementStatus={setElementStatus} searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} handleBoothInfo={handleBoothInfo} defaultViewbox={defaultViewbox} />
       <div className="fp-graph d-flex align-items-center">
-        <div className="fp-tags p-2 shadow">{{ tc: "年度重點必看：", en: "年度重點必看：" }[searchCondition.lang]}</div>
+        <Header searchCondition={searchCondition} setSearchCondition={setSearchCondition} />
         <Floormap data={filterFloorData.filter((d) => d.floor == searchCondition.floor && d.draw)} viewBox={viewBox} setViewBox={setViewBox} sidebarWidth={sidebarWidth} realSize={realSize[searchCondition.floor]} tagsHeight={tagsHeight} elementStatus={elementStatus} handleBoothInfo={handleBoothInfo} searchCondition={searchCondition} handleSearchChange={handleSearchChange} />
       </div>
     </div>

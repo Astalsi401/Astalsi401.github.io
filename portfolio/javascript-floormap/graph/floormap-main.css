@@ -4,6 +4,8 @@
   --fp-hover-bg: #e5e5e5;
   --fp-black: #000000;
   --fp-unactive: #acacac;
+  --fp-active: rgb(128, 0, 75, 0.2);
+  --fp-over: #acacac;
   --fp-main: #000080;
   --fp-time: 0.4s;
   --fp-search-box-height: 56px;
@@ -650,5 +652,12 @@ p {
   }
 }
 .fp-event {
-  background-color: var(--fp-sidebar-bg);
+  --event: var(--fp-sidebar-bg);
+  background-color: var(--event);
+}
+.fp-event.active {
+  --event: var(--fp-active);
+}
+.fp-event.over {
+  --event: var(--fp-over);
 }/*# sourceMappingURL=floormap-main.css.map */
