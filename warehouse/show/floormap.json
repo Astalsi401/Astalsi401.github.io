@@ -4171,10 +4171,10 @@
     "id": "K116",
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "", "en": "" },
-    "tag": { "tc": ["行政院農業委員會農業健康館"], "en": ["行政院農業委員會農業健康館"] },
-    "text": { "tc": ["行政院農業委員會", "農業健康館"], "en": ["Council of Agriculture, Executive Yuan, R.O.C."] },
+    "tag": { "tc": ["行政院農業部農業健康館"], "en": ["行政院農業部農業健康館"] },
+    "text": { "tc": ["行政院農業部", "農業健康館"], "en": ["Ministry of Agriculture, Executive Yuan, R.O.C."] },
     "size": { "tc": 1.0, "en": 1.0 },
-    "org": { "tc": "行政院農業委員會", "en": "Council of Agriculture, Executive Yuan, R.O.C." },
+    "org": { "tc": "行政院農業部", "en": "Ministry of Agriculture, Executive Yuan, R.O.C." },
     "info": { "tc": "為達到農業科技促進國⼈⾝⼼健康的⽬的，⾏政院農業委員會設置「農業健康館」，以「新農⽣技、幸福世紀」為主軸，規劃農業與醫療相關的主題區，藉由推動農業⽣物科技研發及產業化成果展出，加深國⼈對與醫藥產業相關之農業科技的瞭解與⽀持。", "en": "To enhance people's physical and mental health, the Council of Agriculture (COA) establish &quot;Agricultural Healthcare Technology Pavilion,&quot; including four themes to highlight current research and development of agri-biotechnology, and to strengthen people's understanding of medical-related agricultural technology." }
   },
   {
@@ -4184,8 +4184,8 @@
     "id": "K116",
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "", "en": "" },
-    "tag": { "tc": ["行政院農業委員會農業健康館"], "en": ["行政院農業委員會農業健康館"] },
-    "text": { "tc": ["行政院農業委員會", "農業健康館"], "en": ["Council of Agriculture, Executive Yuan, R.O.C."] },
+    "tag": { "tc": ["行政院農業部農業健康館"], "en": ["行政院農業部農業健康館"] },
+    "text": { "tc": ["行政院農業部", "農業健康館"], "en": ["Ministry of Agriculture, Executive Yuan, R.O.C."] },
     "org": { "tc": "臺萃生技", "en": "臺萃生技" },
     "info": { "tc": "", "en": "" }
   },
@@ -4196,8 +4196,8 @@
     "id": "K116",
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "", "en": "" },
-    "tag": { "tc": ["行政院農業委員會農業健康館"], "en": ["行政院農業委員會農業健康館"] },
-    "text": { "tc": ["行政院農業委員會", "農業健康館"], "en": ["Council of Agriculture, Executive Yuan, R.O.C."] },
+    "tag": { "tc": ["行政院農業部農業健康館"], "en": ["行政院農業部農業健康館"] },
+    "text": { "tc": ["行政院農業部", "農業健康館"], "en": ["Ministry of Agriculture, Executive Yuan, R.O.C."] },
     "org": { "tc": "那米亞發酵", "en": "那米亞發酵" },
     "info": { "tc": "", "en": "" }
   },
@@ -4208,8 +4208,8 @@
     "id": "K116",
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "", "en": "" },
-    "tag": { "tc": ["行政院農業委員會農業健康館"], "en": ["行政院農業委員會農業健康館"] },
-    "text": { "tc": ["行政院農業委員會", "農業健康館"], "en": ["Council of Agriculture, Executive Yuan, R.O.C."] },
+    "tag": { "tc": ["行政院農業部農業健康館"], "en": ["行政院農業部農業健康館"] },
+    "text": { "tc": ["行政院農業部", "農業健康館"], "en": ["Ministry of Agriculture, Executive Yuan, R.O.C."] },
     "org": { "tc": "源鮮農業生技", "en": "源鮮農業生技" },
     "info": { "tc": "", "en": "" }
   },
@@ -4220,8 +4220,8 @@
     "id": "K116",
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "", "en": "" },
-    "tag": { "tc": ["行政院農業委員會農業健康館"], "en": ["行政院農業委員會農業健康館"] },
-    "text": { "tc": ["行政院農業委員會", "農業健康館"], "en": ["Council of Agriculture, Executive Yuan, R.O.C."] },
+    "tag": { "tc": ["行政院農業部農業健康館"], "en": ["行政院農業部農業健康館"] },
+    "text": { "tc": ["行政院農業部", "農業健康館"], "en": ["Ministry of Agriculture, Executive Yuan, R.O.C."] },
     "org": { "tc": "達觀國際", "en": "達觀國際" },
     "info": { "tc": "", "en": "" }
   },
@@ -4232,8 +4232,8 @@
     "id": "K116",
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "", "en": "" },
-    "tag": { "tc": ["行政院農業委員會農業健康館"], "en": ["行政院農業委員會農業健康館"] },
-    "text": { "tc": ["行政院農業委員會", "農業健康館"], "en": ["Council of Agriculture, Executive Yuan, R.O.C."] },
+    "tag": { "tc": ["行政院農業部農業健康館"], "en": ["行政院農業部農業健康館"] },
+    "text": { "tc": ["行政院農業部", "農業健康館"], "en": ["Ministry of Agriculture, Executive Yuan, R.O.C."] },
     "org": { "tc": "奇來生技", "en": "奇來生技" },
     "info": { "tc": "", "en": "" }
   },
@@ -4244,8 +4244,8 @@
     "id": "K116",
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "", "en": "" },
-    "tag": { "tc": ["行政院農業委員會農業健康館"], "en": ["行政院農業委員會農業健康館"] },
-    "text": { "tc": ["行政院農業委員會", "農業健康館"], "en": ["Council of Agriculture, Executive Yuan, R.O.C."] },
+    "tag": { "tc": ["行政院農業部農業健康館"], "en": ["行政院農業部農業健康館"] },
+    "text": { "tc": ["行政院農業部", "農業健康館"], "en": ["Ministry of Agriculture, Executive Yuan, R.O.C."] },
     "org": { "tc": "森康食品", "en": "森康食品" },
     "info": { "tc": "", "en": "" }
   },
@@ -4256,8 +4256,8 @@
     "id": "K116",
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "", "en": "" },
-    "tag": { "tc": ["行政院農業委員會農業健康館"], "en": ["行政院農業委員會農業健康館"] },
-    "text": { "tc": ["行政院農業委員會", "農業健康館"], "en": ["Council of Agriculture, Executive Yuan, R.O.C."] },
+    "tag": { "tc": ["行政院農業部農業健康館"], "en": ["行政院農業部農業健康館"] },
+    "text": { "tc": ["行政院農業部", "農業健康館"], "en": ["Ministry of Agriculture, Executive Yuan, R.O.C."] },
     "org": { "tc": "鈜景食品", "en": "鈜景食品" },
     "info": { "tc": "", "en": "" }
   },
@@ -4268,8 +4268,8 @@
     "id": "K116",
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "", "en": "" },
-    "tag": { "tc": ["行政院農業委員會農業健康館"], "en": ["行政院農業委員會農業健康館"] },
-    "text": { "tc": ["行政院農業委員會", "農業健康館"], "en": ["Council of Agriculture, Executive Yuan, R.O.C."] },
+    "tag": { "tc": ["行政院農業部農業健康館"], "en": ["行政院農業部農業健康館"] },
+    "text": { "tc": ["行政院農業部", "農業健康館"], "en": ["Ministry of Agriculture, Executive Yuan, R.O.C."] },
     "org": { "tc": "澄交生技", "en": "澄交生技" },
     "info": { "tc": "", "en": "" }
   },
@@ -4280,8 +4280,8 @@
     "id": "K116",
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "", "en": "" },
-    "tag": { "tc": ["行政院農業委員會農業健康館"], "en": ["行政院農業委員會農業健康館"] },
-    "text": { "tc": ["行政院農業委員會", "農業健康館"], "en": ["Council of Agriculture, Executive Yuan, R.O.C."] },
+    "tag": { "tc": ["行政院農業部農業健康館"], "en": ["行政院農業部農業健康館"] },
+    "text": { "tc": ["行政院農業部", "農業健康館"], "en": ["Ministry of Agriculture, Executive Yuan, R.O.C."] },
     "org": { "tc": "薑黃王", "en": "薑黃王" },
     "info": { "tc": "", "en": "" }
   },
@@ -4292,8 +4292,8 @@
     "id": "K116",
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "", "en": "" },
-    "tag": { "tc": ["行政院農業委員會農業健康館"], "en": ["行政院農業委員會農業健康館"] },
-    "text": { "tc": ["行政院農業委員會", "農業健康館"], "en": ["Council of Agriculture, Executive Yuan, R.O.C."] },
+    "tag": { "tc": ["行政院農業部農業健康館"], "en": ["行政院農業部農業健康館"] },
+    "text": { "tc": ["行政院農業部", "農業健康館"], "en": ["Ministry of Agriculture, Executive Yuan, R.O.C."] },
     "org": { "tc": "田榮", "en": "田榮" },
     "info": { "tc": "", "en": "" }
   },
@@ -4304,8 +4304,8 @@
     "id": "K116",
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "", "en": "" },
-    "tag": { "tc": ["行政院農業委員會農業健康館"], "en": ["行政院農業委員會農業健康館"] },
-    "text": { "tc": ["行政院農業委員會", "農業健康館"], "en": ["Council of Agriculture, Executive Yuan, R.O.C."] },
+    "tag": { "tc": ["行政院農業部農業健康館"], "en": ["行政院農業部農業健康館"] },
+    "text": { "tc": ["行政院農業部", "農業健康館"], "en": ["Ministry of Agriculture, Executive Yuan, R.O.C."] },
     "org": { "tc": "蓁愛養生食品", "en": "蓁愛養生食品" },
     "info": { "tc": "", "en": "" }
   },
@@ -4316,8 +4316,8 @@
     "id": "K116",
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "", "en": "" },
-    "tag": { "tc": ["行政院農業委員會農業健康館"], "en": ["行政院農業委員會農業健康館"] },
-    "text": { "tc": ["行政院農業委員會", "農業健康館"], "en": ["Council of Agriculture, Executive Yuan, R.O.C."] },
+    "tag": { "tc": ["行政院農業部農業健康館"], "en": ["行政院農業部農業健康館"] },
+    "text": { "tc": ["行政院農業部", "農業健康館"], "en": ["Ministry of Agriculture, Executive Yuan, R.O.C."] },
     "org": { "tc": "正鴻農業生技", "en": "正鴻農業生技" },
     "info": { "tc": "", "en": "" }
   },
@@ -4328,8 +4328,8 @@
     "id": "K116",
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "", "en": "" },
-    "tag": { "tc": ["行政院農業委員會農業健康館"], "en": ["行政院農業委員會農業健康館"] },
-    "text": { "tc": ["行政院農業委員會", "農業健康館"], "en": ["Council of Agriculture, Executive Yuan, R.O.C."] },
+    "tag": { "tc": ["行政院農業部農業健康館"], "en": ["行政院農業部農業健康館"] },
+    "text": { "tc": ["行政院農業部", "農業健康館"], "en": ["Ministry of Agriculture, Executive Yuan, R.O.C."] },
     "org": { "tc": "大花農場", "en": "大花農場" },
     "info": { "tc": "", "en": "" }
   },
@@ -4340,8 +4340,8 @@
     "id": "K116",
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "", "en": "" },
-    "tag": { "tc": ["行政院農業委員會農業健康館"], "en": ["行政院農業委員會農業健康館"] },
-    "text": { "tc": ["行政院農業委員會", "農業健康館"], "en": ["Council of Agriculture, Executive Yuan, R.O.C."] },
+    "tag": { "tc": ["行政院農業部農業健康館"], "en": ["行政院農業部農業健康館"] },
+    "text": { "tc": ["行政院農業部", "農業健康館"], "en": ["Ministry of Agriculture, Executive Yuan, R.O.C."] },
     "org": { "tc": "睿嘉生物科技", "en": "睿嘉生物科技" },
     "info": { "tc": "", "en": "" }
   },
@@ -4352,8 +4352,8 @@
     "id": "K116",
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "", "en": "" },
-    "tag": { "tc": ["行政院農業委員會農業健康館"], "en": ["行政院農業委員會農業健康館"] },
-    "text": { "tc": ["行政院農業委員會", "農業健康館"], "en": ["Council of Agriculture, Executive Yuan, R.O.C."] },
+    "tag": { "tc": ["行政院農業部農業健康館"], "en": ["行政院農業部農業健康館"] },
+    "text": { "tc": ["行政院農業部", "農業健康館"], "en": ["Ministry of Agriculture, Executive Yuan, R.O.C."] },
     "org": { "tc": "智耕創新", "en": "智耕創新" },
     "info": { "tc": "", "en": "" }
   },
@@ -4364,8 +4364,8 @@
     "id": "K116",
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "", "en": "" },
-    "tag": { "tc": ["行政院農業委員會農業健康館"], "en": ["行政院農業委員會農業健康館"] },
-    "text": { "tc": ["行政院農業委員會", "農業健康館"], "en": ["Council of Agriculture, Executive Yuan, R.O.C."] },
+    "tag": { "tc": ["行政院農業部農業健康館"], "en": ["行政院農業部農業健康館"] },
+    "text": { "tc": ["行政院農業部", "農業健康館"], "en": ["Ministry of Agriculture, Executive Yuan, R.O.C."] },
     "org": { "tc": "山果", "en": "山果" },
     "info": { "tc": "", "en": "" }
   },
@@ -4376,8 +4376,8 @@
     "id": "K116",
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "", "en": "" },
-    "tag": { "tc": ["行政院農業委員會農業健康館"], "en": ["行政院農業委員會農業健康館"] },
-    "text": { "tc": ["行政院農業委員會", "農業健康館"], "en": ["Council of Agriculture, Executive Yuan, R.O.C."] },
+    "tag": { "tc": ["行政院農業部農業健康館"], "en": ["行政院農業部農業健康館"] },
+    "text": { "tc": ["行政院農業部", "農業健康館"], "en": ["Ministry of Agriculture, Executive Yuan, R.O.C."] },
     "org": { "tc": "伊豆創意開發", "en": "伊豆創意開發" },
     "info": { "tc": "", "en": "" }
   },
@@ -4388,8 +4388,8 @@
     "id": "K116",
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "", "en": "" },
-    "tag": { "tc": ["行政院農業委員會農業健康館"], "en": ["行政院農業委員會農業健康館"] },
-    "text": { "tc": ["行政院農業委員會", "農業健康館"], "en": ["Council of Agriculture, Executive Yuan, R.O.C."] },
+    "tag": { "tc": ["行政院農業部農業健康館"], "en": ["行政院農業部農業健康館"] },
+    "text": { "tc": ["行政院農業部", "農業健康館"], "en": ["Ministry of Agriculture, Executive Yuan, R.O.C."] },
     "org": { "tc": "大盛生技", "en": "大盛生技" },
     "info": { "tc": "", "en": "" }
   },
@@ -4400,8 +4400,8 @@
     "id": "K116",
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "", "en": "" },
-    "tag": { "tc": ["行政院農業委員會農業健康館"], "en": ["行政院農業委員會農業健康館"] },
-    "text": { "tc": ["行政院農業委員會", "農業健康館"], "en": ["Council of Agriculture, Executive Yuan, R.O.C."] },
+    "tag": { "tc": ["行政院農業部農業健康館"], "en": ["行政院農業部農業健康館"] },
+    "text": { "tc": ["行政院農業部", "農業健康館"], "en": ["Ministry of Agriculture, Executive Yuan, R.O.C."] },
     "org": { "tc": "潤泉國際", "en": "潤泉國際" },
     "info": { "tc": "", "en": "" }
   },
@@ -4412,8 +4412,8 @@
     "id": "K116",
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "", "en": "" },
-    "tag": { "tc": ["行政院農業委員會農業健康館"], "en": ["行政院農業委員會農業健康館"] },
-    "text": { "tc": ["行政院農業委員會", "農業健康館"], "en": ["Council of Agriculture, Executive Yuan, R.O.C."] },
+    "tag": { "tc": ["行政院農業部農業健康館"], "en": ["行政院農業部農業健康館"] },
+    "text": { "tc": ["行政院農業部", "農業健康館"], "en": ["Ministry of Agriculture, Executive Yuan, R.O.C."] },
     "org": { "tc": "威和企業", "en": "威和企業" },
     "info": { "tc": "", "en": "" }
   },
@@ -4424,8 +4424,8 @@
     "id": "K116",
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "", "en": "" },
-    "tag": { "tc": ["行政院農業委員會農業健康館"], "en": ["行政院農業委員會農業健康館"] },
-    "text": { "tc": ["行政院農業委員會", "農業健康館"], "en": ["Council of Agriculture, Executive Yuan, R.O.C."] },
+    "tag": { "tc": ["行政院農業部農業健康館"], "en": ["行政院農業部農業健康館"] },
+    "text": { "tc": ["行政院農業部", "農業健康館"], "en": ["Ministry of Agriculture, Executive Yuan, R.O.C."] },
     "org": { "tc": "自然主義農園", "en": "自然主義農園" },
     "info": { "tc": "", "en": "" }
   },
@@ -4436,8 +4436,8 @@
     "id": "K116",
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "", "en": "" },
-    "tag": { "tc": ["行政院農業委員會農業健康館"], "en": ["行政院農業委員會農業健康館"] },
-    "text": { "tc": ["行政院農業委員會", "農業健康館"], "en": ["Council of Agriculture, Executive Yuan, R.O.C."] },
+    "tag": { "tc": ["行政院農業部農業健康館"], "en": ["行政院農業部農業健康館"] },
+    "text": { "tc": ["行政院農業部", "農業健康館"], "en": ["Ministry of Agriculture, Executive Yuan, R.O.C."] },
     "org": { "tc": "松輝茶園", "en": "松輝茶園" },
     "info": { "tc": "", "en": "" }
   },
@@ -10043,7 +10043,17 @@
         { "start": "2023-12-03 10:00+08:00", "end": "2023-12-03 10:20+08:00", "title": "個人化精準手術麻醉風險預測儀表板" },
         { "start": "2023-12-03 14:00+08:00", "end": "2023-12-03 14:20+08:00", "title": "智能艾灸盒" }
       ],
-      "en": []
+      "en": [
+        { "start": "2023-09-11 09:00+08:00", "end": "2023-09-11 18:00+08:00", "title": "test" },
+        { "start": "2023-11-30 10:00+08:00", "end": "2023-11-30 10:20+08:00", "title": "智能化療藥物調配機器手臂" },
+        { "start": "2023-11-30 14:00+08:00", "end": "2023-11-30 14:20+08:00", "title": "虛擬診間" },
+        { "start": "2023-12-01 10:00+08:00", "end": "2023-12-01 10:20+08:00", "title": "全方位基因和微營養素檢測，跨體學精準治療" },
+        { "start": "2023-12-01 14:00+08:00", "end": "2023-12-01 14:20+08:00", "title": "全方位導管零點偵測儀" },
+        { "start": "2023-12-02 10:00+08:00", "end": "2023-12-02 10:20+08:00", "title": "減壓墊" },
+        { "start": "2023-12-02 14:00+08:00", "end": "2023-12-02 14:20+08:00", "title": "全方位基因和微營養素檢測，跨體學精準治療" },
+        { "start": "2023-12-03 10:00+08:00", "end": "2023-12-03 10:20+08:00", "title": "個人化精準手術麻醉風險預測儀表板" },
+        { "start": "2023-12-03 14:00+08:00", "end": "2023-12-03 14:20+08:00", "title": "智能艾灸盒" }
+      ]
     }
   },
   {
