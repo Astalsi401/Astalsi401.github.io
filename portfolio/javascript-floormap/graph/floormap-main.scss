@@ -61,18 +61,18 @@ $index: (tools, tags, sidebar);
       #{$value}: calc($i * var(--fp-sidebar-px));
     }
     .#{$key}x-#{$i} {
-      padding-left: calc($i * var(--fp-sidebar-px));
-      padding-right: calc($i * var(--fp-sidebar-px));
+      #{$value}-left: calc($i * var(--fp-sidebar-px));
+      #{$value}-right: calc($i * var(--fp-sidebar-px));
     }
     .#{$key}y-#{$i} {
-      padding-top: calc($i * var(--fp-sidebar-px));
-      padding-bottom: calc($i * var(--fp-sidebar-px));
+      #{$value}-top: calc($i * var(--fp-sidebar-px));
+      #{$value}-bottom: calc($i * var(--fp-sidebar-px));
     }
     .#{$key}t-#{$i} {
-      padding-top: calc($i * var(--fp-sidebar-px));
+      #{$value}-top: calc($i * var(--fp-sidebar-px));
     }
     .#{$key}b-#{$i} {
-      padding-bottom: calc($i * var(--fp-sidebar-px));
+      #{$value}-bottom: calc($i * var(--fp-sidebar-px));
     }
   }
 }
@@ -426,4 +426,7 @@ p {
   .fp-zoom {
     left: 10px;
   }
+}
+.fp-event {
+  background-color: var(--fp-sidebar-bg);
 }
