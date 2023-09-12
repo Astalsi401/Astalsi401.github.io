@@ -657,7 +657,4 @@ p {
 }
 .fp-event.active {
   --event: var(--fp-active);
-}
-.fp-event.over {
-  --event: var(--fp-over);
 }/*# sourceMappingURL=floormap-main.css.map */

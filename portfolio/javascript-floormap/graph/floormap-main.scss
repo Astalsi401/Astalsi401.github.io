@@ -323,10 +323,12 @@ p {
   }
 }
 
-.booth:hover {
-  path,
-  text {
-    fill-opacity: 1;
+.booth {
+  &:hover {
+    path,
+    text {
+      fill-opacity: 1;
+    }
   }
 }
 .fp-result {
