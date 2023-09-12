@@ -119,14 +119,17 @@ const Elements = ({ type, data, size, elementStatus, handleBoothInfo }) => {
   };
   return <g className={`${type}-g`}>{data.filter((d) => d.type == type).map((d, i) => elementActions[type](d, i))}</g>;
 };
-const Floormap = ({ data, viewBox, setViewBox, sidebarWidth, tagsHeight, realSize, elementStatus, handleBoothInfo, searchCondition, handleSearchChange }) => {
+const Floormap = ({ data, viewBox, setViewBox, sidebarWidth, tagsHeight, realSize, elementStatus, setElementStatus, handleBoothInfo, searchCondition, handleSearchChange }) => {
   const [containerSize, setContainerSize] = useState({ width: realSize.w / 100, height: realSize.h / 100, pageHeight: realSize.h / 100 });
   const [drugStatus, setDrugStatus] = useState({ moving: false, previousTouch: null, previousTouchLength: null });
   const [newSVGPoint, setNewSVGPoint] = useState(null);
   const [startSVGPoint, setStartSVGPoint] = useState(null);
   const graphRef = useRef(null);
   const svgRef = useRef(null);
-  const handleStart = () => setDrugStatus((prev) => ({ ...prev, moving: true }));
+  const handleStart = () => {
+    if (elementStatus.isMobile) setElementStatus((prev) => ({ ...prev, sidebar: false }));
+    setDrugStatus((prev) => ({ ...prev, moving: true }));
+  };
   const handleEnd = () => setDrugStatus({ moving: false, previousTouch: null, previousTouchLength: null });
   const handleResize = () => {
     const width = graphRef.current.clientWidth - (elementStatus.isMobile ? 0 : sidebarWidth);
@@ -437,8 +440,8 @@ const BoothInfo = ({ data, setSearchCondition, elementStatus, setElementStatus }
 };
 
 const Sidebar = ({ data, elementStatus, setElementStatus, searchCondition, setSearchCondition, handleSearchChange, handleBoothInfo, defaultViewbox }) => {
-  const handleSidear = ({ currentTarget }) => {
-    if (elementStatus.sidebar && currentTarget.classList.contains("fp-sidebar")) return;
+  const handleSidear = () => {
+    if (elementStatus.sidebar) return;
     setElementStatus((prev) => ({ ...prev, sidebar: !prev.sidebar }));
   };
   return (
@@ -563,7 +566,7 @@ const MainArea = () => {
     setSearchCondition((prev) => ({ ...prev, floor: d.floor }));
   };
   const defaultViewbox = () => setViewBox({ x1: 0, y1: 0, x2: realSize[searchCondition.floor].w, y2: realSize[searchCondition.floor].h });
-  useEffect(() => setSidebarWidth(elementStatus.isMobile ? (elementStatus.sidebar ? 117 : window.innerHeight - 117) : elementStatus.sidebar ? 300 : 30), [elementStatus.sidebar, elementStatus.isMobile]);
+  useEffect(() => setSidebarWidth(elementStatus.isMobile ? (elementStatus.sidebar ? window.innerHeight * 0.3 : window.innerHeight - 117) : elementStatus.sidebar ? 300 : 30), [elementStatus.sidebar, elementStatus.isMobile]);
   useEffect(() => {
     setElementStatus((prev) => ({ ...prev, colors: prev.colors.domain(categories[searchCondition.lang]) }));
     document.title = title[searchCondition.lang];
@@ -599,7 +602,7 @@ const MainArea = () => {
       <Sidebar data={filterFloorData.filter((d) => types.includes(d.type))} elementStatus={elementStatus} setElementStatus={setElementStatus} searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} handleBoothInfo={handleBoothInfo} defaultViewbox={defaultViewbox} />
       <div className="fp-graph d-flex align-items-center">
         <Header searchCondition={searchCondition} setSearchCondition={setSearchCondition} />
-        <Floormap data={filterFloorData.filter((d) => d.floor == searchCondition.floor && d.draw)} viewBox={viewBox} setViewBox={setViewBox} sidebarWidth={sidebarWidth} realSize={realSize[searchCondition.floor]} tagsHeight={tagsHeight} elementStatus={elementStatus} handleBoothInfo={handleBoothInfo} searchCondition={searchCondition} handleSearchChange={handleSearchChange} />
+        <Floormap data={filterFloorData.filter((d) => d.floor == searchCondition.floor && d.draw)} viewBox={viewBox} setViewBox={setViewBox} sidebarWidth={sidebarWidth} realSize={realSize[searchCondition.floor]} tagsHeight={tagsHeight} elementStatus={elementStatus} setElementStatus={setElementStatus} handleBoothInfo={handleBoothInfo} searchCondition={searchCondition} handleSearchChange={handleSearchChange} />
       </div>
     </div>
   );
