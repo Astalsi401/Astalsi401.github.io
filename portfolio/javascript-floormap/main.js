@@ -47,7 +47,7 @@ const Room = ({ d, i, size }) => {
   const icon_l = 500;
   return (
     <g transform={`translate(${d.x},${d.y})`}>
-      <rect stroke="black" strokeWidth={d.bd ? 10 : 0} fill={d.text.length === 0 ? "none" : "#f1f1f1"} fillOpacity={d.opacity} width={d.w} height={d.h} />
+      <rect stroke="black" strokeWidth={d.bd ? 10 : 0} fill={d.text.length === 0 || d.type === "icon" ? "none" : "#f1f1f1"} fillOpacity={d.opacity} width={d.w} height={d.h} />
       <g transform={`translate(${d.w / 2},${d.h / 2 - ((d.text.length - 1) * lineHeight) / 2})`} fontSize={fontSize}>
         {d.text.map((t, j) => (
           <text key={`text-${i}-${j}`} textAnchor="middle" fontWeight="bold" fill="black" fillOpacity={d.opacity} y={j * lineHeight}>
@@ -270,7 +270,7 @@ const Category = ({ title, data, col, setSearchCondition, setElementStatus }) =>
     <div className="py-3 my-3">
       <div className="text-x-large text-bold px-2">{title}</div>
       {Object.keys(sum)
-        .filter((d) => d !== "")
+        .filter((d) => !["false", ""].includes(d))
         .map((d) => (
           <div className="fp-category px-4 py-1" onClick={() => handleClick(d)}>
             {d} ({sum[d]})
@@ -376,7 +376,7 @@ const BoothInfo = ({ data, setSearchCondition, elementStatus, setElementStatus }
     setElementStatus((prev) => ({ ...prev, boothInfo: false }));
   };
   const handleNameClick = () => {
-    setSearchCondition((prev) => ({ ...prev, floor: floor, catTopicTag: "", string: id }));
+    setSearchCondition((prev) => ({ ...prev, floor: floor, catTopicTag: "", string: id ? id : note }));
     setElementStatus((prev) => ({ ...prev, boothInfo: false }));
   };
   const handleCorpClick = (d) => setElementStatus((prev) => ({ ...prev, boothInfoData: d }));
@@ -543,7 +543,7 @@ const MainArea = () => {
       }),
     [searchCondition.lang, floorData]
   );
-  const filterFloorData = useMemo(() => memoFloorData.map((d) => ({ ...d, opacity: types.includes(d.type) && searchCondition.regex.test([d.id, d.text.join(""), d.note, d.org, d.cat, d.topic, d.tag].join(" ")) && (searchCondition.catTopicTag === "" ? true : [d.id, d.cat, d.topic, d.note, ...d.tag].includes(searchCondition.catTopicTag)) ? 0.8 : 0.1 })), [searchCondition, memoFloorData]);
+  const filterFloorData = useMemo(() => memoFloorData.map((d) => ({ ...d, opacity: (types.includes(d.type) && searchCondition.regex.test([d.id, d.text.join(""), d.note, d.org, d.cat, d.topic, d.tag].join(" ")) && (searchCondition.catTopicTag === "" ? true : [d.id, d.cat, d.topic, d.note, ...d.tag].includes(searchCondition.catTopicTag))) || d.type === "icon" ? 0.8 : 0.1 })), [searchCondition, memoFloorData]);
 
   const searchActions = (name, value) => {
     switch (name) {
