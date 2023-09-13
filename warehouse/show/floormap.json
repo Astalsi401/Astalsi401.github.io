@@ -10325,9 +10325,9 @@
     "cat": { "tc": "精準醫療展區", "en": "Biotech" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": [""], "en": [""] },
+    "text": { "tc": ["司麥德"], "en": ["SMMC"] },
     "size": { "tc": 0.4, "en": 0.4 },
-    "org": { "tc": "", "en": "" },
+    "org": { "tc": "司麥德國際股份有限公司", "en": "Smart Motion Control Co.,Ltd" },
     "info": { "tc": "", "en": "" }
   },
   {
