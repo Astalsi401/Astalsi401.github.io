@@ -1,6 +1,6 @@
 const observerHeader = new IntersectionObserver((entries) => entries.forEach((entry) => document.querySelector(".header").classList.toggle("show", !entry.isIntersecting), { threshold: 1 }));
 const url = window.location.href;
-const dialog = document.querySelector("#dialog");
+const dialog = document.createElement("dialog");
 const shareUrl = () => {
   navigator.clipboard.writeText(url);
   dialog.showModal();
@@ -13,8 +13,15 @@ const textZoom = () => {
   const newSize = (size + 5) / rootSize;
   content.style.fontSize = `${newSize > 1.8 ? 1 : newSize}rem`;
 };
-document.querySelector(".share-line").href = `https://social-plugins.line.me/lineit/share?url=${url}`;
-document.querySelector(".share-fb").href = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
-document.querySelector(".share-url").addEventListener("click", shareUrl);
-document.querySelector(".text-zoom").addEventListener("click", textZoom);
-observerHeader.observe(document.querySelector(".article-main .article-header"));
+const loaded = () => {
+  dialog.setAttribute("id", "dialog");
+  dialog.setAttribute("class", "px-5 py-3");
+  dialog.innerText = "已複製文章連結";
+  document.body.appendChild(dialog);
+  document.querySelector(".share-line").href = `https://social-plugins.line.me/lineit/share?url=${url}`;
+  document.querySelector(".share-fb").href = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+  document.querySelector(".share-url").addEventListener("click", shareUrl);
+  document.querySelector(".text-zoom").addEventListener("click", textZoom);
+  observerHeader.observe(document.querySelector(".article-main .article-header"));
+};
+loaded();
