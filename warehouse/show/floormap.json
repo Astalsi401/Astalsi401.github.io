@@ -2199,9 +2199,9 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": [""], "en": [""] },
+    "text": { "tc": ["復御"], "en": ["Fuyu wang"] },
     "size": { "tc": 0.4, "en": 0.4 },
-    "org": { "tc": "", "en": "" },
+    "org": { "tc": "復御有限公司", "en": "Fuyu wang Limited Company" },
     "info": { "tc": "", "en": "" }
   },
   {
@@ -7623,23 +7623,48 @@
     "draw": 1,
     "floor": 4,
     "w": 1500,
-    "h": 1500,
+    "h": 900,
     "x": 2400,
     "y": 8010,
     "p": [
       { "node": "L", "x": 1500, "y": 0 },
-      { "node": "L", "x": 1500, "y": 1500 },
-      { "node": "L", "x": 0, "y": 1500 },
-      { "node": "L", "x": 0, "y": 0 }
+      { "node": "L", "x": 1500, "y": 600 },
+      { "node": "L", "x": 600, "y": 600 },
+      { "node": "L", "x": 600, "y": 900 },
+      { "node": "L", "x": 0, "y": 900 }
+    ],
+    "id": "L507",
+    "cat": { "tc": "精準醫療展區", "en": "Biotech" },
+    "topic": { "tc": "再生醫療", "en": "再生醫療" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["三顧樂迦"], "en": ["Locus Cell Co., Ltd."] },
+    "size": { "tc": 1.0, "en": 1.0 },
+    "org": { "tc": "樂迦再生科技股份有限公司", "en": "Locus Cell Co., Ltd." },
+    "info": { "tc": "樂迦再生科技股份有限公司為三顧集團之子公司，致力於細胞和基因治療產品的委託開發暨製造服務 (CDMO)，目前可提供製造至少15種以上不同的細胞技術、製程開發與產品製造的服務，如各式細胞層片的開發(軟骨細胞、纖維母細胞、上皮細胞、iPSC衍生心肌細胞層片及各式的衍生細胞層片等)，以及免疫細胞、CAR-T、iPSCs衍生心肌細胞，與持續開發其他衍生細胞的技術平臺等細胞相關產品；且同時也會與母公司三顧提供客戶所需的臨床申請與規畫的CRO服務，給予合作單位所需相對應的服務項目。座落於扶植生醫產業發展並提供研發及試量產等豐富資源的臺灣新竹生物醫藥科技園區，樂迦、三顧、日生與日立 (Hitachi) 集團合作，引進尖端細胞的 GMP 生產場域，包含超過 24 間的細胞操作室，提供先進的生產技術。樂迦提供客戶滿足全球先進再生醫學產品生產及臨床開發服務的需求。", "en": "Locus Cell Co., Ltd. is a subsidiary of Metatech group company which is a contract development and manufacturing organization (CDMO) that focuses on the manufacturing of cell and gene therapy products, providing at least 15 different cell technologies, manufacture, and development services, such as chondrocyte, fibroblast, epithelial cell, iPSC-derived cell sheets, immune cell, and CAR-T, etc. Locus Cell keeps developing other derived cell technology platforms and other related products. While, Locus Cell with parent company Metatech also supply CRO services such as clinical application, program, and other corresponding services for customers or cooperative company. Located in Hsinchu Biomedical Science Park, Taiwan, where ample resources are available to foster the development of the biomedical industry such as R&D and pilot production, Locus Cell is partnered with Hitachi Group to introduce the state-of-the-art GMP manufacturing facility with more than 24 cleanrooms and advanced technology. Locus Cell aims to render services to fulfill the medical needs of advanced regenerative medicinal products worldwide." }
+  },
+  {
+    "type": "booth",
+    "draw": 1,
+    "floor": 4,
+    "w": 1500,
+    "h": 600,
+    "x": 2400,
+    "y": 8910,
+    "p": [
+      { "node": "L", "x": 600, "y": 0 },
+      { "node": "L", "x": 600, "y": -300 },
+      { "node": "L", "x": 1500, "y": -300 },
+      { "node": "L", "x": 1500, "y": 600 },
+      { "node": "L", "x": 0, "y": 600 }
     ],
     "id": "L407a",
     "cat": { "tc": "精準醫療展區", "en": "Biotech" },
     "topic": { "tc": "再生醫療", "en": "再生醫療" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["三顧樂迦", "敏盛醫療"], "en": ["Locus Cell Co., Ltd."] },
+    "text": { "tc": ["敏盛醫療"], "en": ["Missioncare"] },
     "size": { "tc": 1.0, "en": 1.0 },
-    "org": { "tc": "樂迦再生科技股份有限公司", "en": "Locus Cell Co., Ltd." },
-    "info": { "tc": "樂迦再生科技股份有限公司為三顧集團之子公司，致力於細胞和基因治療產品的委託開發暨製造服務 (CDMO)，目前可提供製造至少15種以上不同的細胞技術、製程開發與產品製造的服務，如各式細胞層片的開發(軟骨細胞、纖維母細胞、上皮細胞、iPSC衍生心肌細胞層片及各式的衍生細胞層片等)，以及免疫細胞、CAR-T、iPSCs衍生心肌細胞，與持續開發其他衍生細胞的技術平臺等細胞相關產品；且同時也會與母公司三顧提供客戶所需的臨床申請與規畫的CRO服務，給予合作單位所需相對應的服務項目。座落於扶植生醫產業發展並提供研發及試量產等豐富資源的臺灣新竹生物醫藥科技園區，樂迦、三顧、日生與日立 (Hitachi) 集團合作，引進尖端細胞的 GMP 生產場域，包含超過 24 間的細胞操作室，提供先進的生產技術。樂迦提供客戶滿足全球先進再生醫學產品生產及臨床開發服務的需求。", "en": "Locus Cell Co., Ltd. is a subsidiary of Metatech group company which is a contract development and manufacturing organization (CDMO) that focuses on the manufacturing of cell and gene therapy products, providing at least 15 different cell technologies, manufacture, and development services, such as chondrocyte, fibroblast, epithelial cell, iPSC-derived cell sheets, immune cell, and CAR-T, etc. Locus Cell keeps developing other derived cell technology platforms and other related products. While, Locus Cell with parent company Metatech also supply CRO services such as clinical application, program, and other corresponding services for customers or cooperative company. Located in Hsinchu Biomedical Science Park, Taiwan, where ample resources are available to foster the development of the biomedical industry such as R&D and pilot production, Locus Cell is partnered with Hitachi Group to introduce the state-of-the-art GMP manufacturing facility with more than 24 cleanrooms and advanced technology. Locus Cell aims to render services to fulfill the medical needs of advanced regenerative medicinal products worldwide." }
+    "org": { "tc": "敏盛醫療", "en": "Missioncare" },
+    "info": { "tc": "", "en": "" }
   },
   {
     "type": "booth",
