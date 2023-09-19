@@ -104,8 +104,7 @@ function Header({ category }) {
 
 function CodeChunk({ code, lang }) {
   const [active, setActive] = useState(false);
-  const copy = (e) => {
-    e.preventDefault();
+  const copy = () => {
     navigator.clipboard.writeText(code);
     setActive(true);
     setTimeout(() => {
