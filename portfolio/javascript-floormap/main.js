@@ -560,7 +560,11 @@ const MainArea = () => {
   };
   const regexEscape = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const handleSearchChange = ({ target: { name, value } }) => searchActions(name, value);
-  const handleResize = () => setElementStatus((prev) => ({ ...prev, isMobile: window.innerWidth < 768 }));
+  const handleResize = () =>
+    setElementStatus((prev) => {
+      const isMobile = window.innerWidth < 768;
+      return { ...prev, isMobile: isMobile, sidebar: !isMobile };
+    });
   const handleBoothInfo = (d) => {
     setElementStatus((prev) => ({ ...prev, sidebar: true, boothInfo: true, boothInfoData: d }));
     setSearchCondition((prev) => ({ ...prev, floor: d.floor }));
