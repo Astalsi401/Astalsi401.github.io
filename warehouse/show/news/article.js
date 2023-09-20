@@ -25,3 +25,4 @@ const loaded = () => {
   observerHeader.observe(document.querySelector(".article-main .article-header"));
 };
 loaded();
+document.querySelectorAll(".annotation").forEach((elem) => elem.addEventListener("click", () => elem.classList.toggle("active")));
