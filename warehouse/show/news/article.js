@@ -29,7 +29,7 @@ const loaded = () => {
   document.querySelector(".share-fb").href = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
   document.querySelector(".share-url").addEventListener("click", shareUrl);
   document.querySelector(".text-zoom").addEventListener("click", textZoom);
-  observerHeader.observe(document.querySelector("#header"));
+  //   observerHeader.observe(document.querySelector("#header"));
   document.querySelectorAll(".annotation").forEach((elem) => elem.addEventListener("click", () => elem.classList.toggle("active")));
   window.addEventListener("scroll", progress);
 };
