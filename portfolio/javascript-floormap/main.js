@@ -379,7 +379,7 @@ const BoothInfo = ({ data, setSearchCondition, elementStatus, setElementStatus }
     setElementStatus((prev) => ({ ...prev, boothInfo: false }));
   };
   const handleNameClick = () => {
-    setSearchCondition((prev) => ({ ...prev, floor: floor, tag: "", string: id ? id : note }));
+    setSearchCondition((prev) => ({ ...prev, floor: floor, tag: "", string: `${id ? id : note} ${org}` }));
     setElementStatus((prev) => ({ ...prev, boothInfo: false }));
   };
   const handleCorpClick = (d) => setElementStatus((prev) => ({ ...prev, boothInfoData: d }));
@@ -566,13 +566,25 @@ const MainArea = () => {
   const handleResize = () =>
     setElementStatus((prev) => {
       const isMobile = window.innerWidth < 768;
-      return { ...prev, isMobile: isMobile, sidebar: !isMobile };
+      return { ...prev, isMobile: isMobile, sidebar: prev.isMobile ? prev.sidebar : !isMobile };
     });
   const handleBoothInfo = (d) => {
     setElementStatus((prev) => ({ ...prev, sidebar: true, boothInfo: true, boothInfoData: d }));
     setSearchCondition((prev) => ({ ...prev, floor: d.floor }));
   };
   const defaultViewbox = () => setViewBox({ x1: 0, y1: 0, x2: realSize[searchCondition.floor].w, y2: realSize[searchCondition.floor].h });
+  useEffect(() => {
+    fetch("https://astalsi401.github.io/warehouse/show/floormap.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setFloorData(data);
+      });
+    setViewBox({ x1: 0, y1: 0, x2: realSize[searchCondition.floor].w, y2: realSize[searchCondition.floor].h });
+    handleResize();
+    defaultViewbox();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   useEffect(() => setSidebarWidth(elementStatus.isMobile ? (elementStatus.sidebar ? window.innerHeight * 0.3 : window.innerHeight - 117) : elementStatus.sidebar ? 300 : 30), [elementStatus.sidebar, elementStatus.isMobile]);
   useEffect(() => {
     const url = new URL(window.location.href);
@@ -600,18 +612,6 @@ const MainArea = () => {
       ),
     }));
   }, [searchCondition.string]);
-  useEffect(() => {
-    fetch("https://astalsi401.github.io/warehouse/show/floormap.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setFloorData(data);
-      });
-    setViewBox({ x1: 0, y1: 0, x2: realSize[searchCondition.floor].w, y2: realSize[searchCondition.floor].h });
-    handleResize();
-    defaultViewbox();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
   return (
     <div className="fp-main" style={{ "--sidebar-width": `${sidebarWidth}px`, "--tags-height": `${tagsHeight}px` }}>
       <Sidebar data={filterFloorData.filter((d) => types.includes(d.type))} elementStatus={elementStatus} setElementStatus={setElementStatus} searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} handleBoothInfo={handleBoothInfo} defaultViewbox={defaultViewbox} />
