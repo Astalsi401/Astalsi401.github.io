@@ -24,7 +24,7 @@ const Header = ({ searchCondition, setSearchCondition }) => {
     <div className="fp-tags p-2 d-flex flex-wrap align-items-center shadow">
       <div>{{ tc: "年度重點必看：", en: "年度重點必看：" }[searchCondition.lang]}</div>
       {tags.map((d) => (
-        <div className="fp-input-tag shadow" onClick={() => setSearchCondition((prev) => ({ ...prev, catTopicTag: d }))}>
+        <div className="fp-input-tag shadow" onClick={() => setSearchCondition((prev) => ({ ...prev, tag: d }))}>
           {d}
         </div>
       ))}
@@ -240,9 +240,9 @@ const Search = ({ searchCondition, setSearchCondition, elementStatus, setElement
         <FilterIcon />
       </div>
       <div className="fp-input d-flex flex-wrap align-items-center px-1">
-        {searchCondition.catTopicTag !== "" && (
-          <div className="fp-input-tag shadow text-small" onClick={() => setSearchCondition((prev) => ({ ...prev, catTopicTag: "" }))} style={{ "--cat": elementStatus.colors(searchCondition.catTopicTag) }}>
-            {searchCondition.catTopicTag}
+        {searchCondition.tag !== "" && (
+          <div className="fp-input-tag shadow text-small" onClick={() => setSearchCondition((prev) => ({ ...prev, tag: "" }))} style={{ "--cat": elementStatus.colors(searchCondition.tag) }}>
+            {searchCondition.tag}
           </div>
         )}
         <input className="fp-input-text d-block text-large" name="search" type="text" value={searchCondition.string} onChange={handleSearchChange} placeholder={{ tc: "搜索攤位名稱、攤位編號", en: "Search" }[searchCondition.lang]} />
@@ -266,7 +266,7 @@ const Category = ({ title, data, col, setSearchCondition, setElementStatus }) =>
     return acc;
   }, {});
   const handleClick = (d) => {
-    setSearchCondition((prev) => ({ ...prev, catTopicTag: d }));
+    setSearchCondition((prev) => ({ ...prev, tag: d }));
     setElementStatus((prev) => ({ ...prev, advanced: false }));
   };
   return (
@@ -371,15 +371,15 @@ const BoothInfo = ({ data, setSearchCondition, elementStatus, setElementStatus }
     boothInfoData: { type, text, org, id, floor, cat, topic, tag, info, event, note },
   } = elementStatus;
   const isBooth = type === "booth";
-  const loc = isBooth ? [id, cat, topic] : [note];
+  const loc = isBooth ? [cat, topic] : [note];
   const tags = Object.keys(elementStatus.boothInfoData).length === 0 ? [] : [...loc, ...tag].filter((d) => d !== "");
   const corps = data.filter((d) => d.id == id && d.org != org);
   const handleTagClick = (value) => {
-    setSearchCondition((prev) => ({ ...prev, catTopicTag: value, string: "" }));
+    setSearchCondition((prev) => ({ ...prev, tag: value, string: "" }));
     setElementStatus((prev) => ({ ...prev, boothInfo: false }));
   };
   const handleNameClick = () => {
-    setSearchCondition((prev) => ({ ...prev, floor: floor, catTopicTag: "", string: id ? id : note }));
+    setSearchCondition((prev) => ({ ...prev, floor: floor, tag: "", string: id ? id : note }));
     setElementStatus((prev) => ({ ...prev, boothInfo: false }));
   };
   const handleCorpClick = (d) => setElementStatus((prev) => ({ ...prev, boothInfoData: d }));
@@ -516,12 +516,15 @@ const MainArea = () => {
   const types = ["booth", "room"];
   const [floorData, setFloorData] = useState([]);
   const [sidebarWidth, setSidebarWidth] = useState(40);
-  const [searchCondition, setSearchCondition] = useState({
-    string: "",
-    regex: new RegExp(""),
-    catTopicTag: "",
-    floor: 1,
-    lang: "en",
+  const [searchCondition, setSearchCondition] = useState(() => {
+    const params = new URLSearchParams(window.location.search);
+    return {
+      string: params.get("string") || "",
+      regex: params.get("regex") || new RegExp("", "i"),
+      tag: params.get("tag") || "",
+      floor: parseInt(params.get("floor")) || 1,
+      lang: params.get("lang") || (/^zh/i.test(navigator.language) ? "tc" : "en"),
+    };
   });
   const [elementStatus, setElementStatus] = useState({
     colors: d3.scaleOrdinal().domain(categories[searchCondition.lang]).range(["rgba(237,125,49,0.6)", "rgba(153,204,255,1)", "rgba(255,255,0,0.6)", "rgba(0,112,192,0.6)", "rgba(112,48,160,0.6)"]).unknown("rgba(255,255,255)"),
@@ -546,7 +549,7 @@ const MainArea = () => {
       }),
     [searchCondition.lang, floorData]
   );
-  const filterFloorData = useMemo(() => memoFloorData.map((d) => ({ ...d, opacity: (types.includes(d.type) && searchCondition.regex.test([d.id, d.text.join(""), d.note, d.org, d.cat, d.topic, d.tag].join(" ")) && (searchCondition.catTopicTag === "" ? true : [d.id, d.cat, d.topic, d.note, ...d.tag].includes(searchCondition.catTopicTag))) || d.type === "icon" ? 0.8 : 0.1 })), [searchCondition, memoFloorData]);
+  const filterFloorData = useMemo(() => memoFloorData.map((d) => ({ ...d, opacity: (types.includes(d.type) && searchCondition.regex.test([d.id, d.text.join(""), d.note, d.org, d.cat, d.topic, d.tag].join(" ")) && (searchCondition.tag === "" ? true : [d.id, d.cat, d.topic, d.note, ...d.tag].includes(searchCondition.tag))) || d.type === "icon" ? 0.8 : 0.1 })), [searchCondition, memoFloorData]);
 
   const searchActions = (name, value) => {
     switch (name) {
@@ -572,6 +575,15 @@ const MainArea = () => {
   const defaultViewbox = () => setViewBox({ x1: 0, y1: 0, x2: realSize[searchCondition.floor].w, y2: realSize[searchCondition.floor].h });
   useEffect(() => setSidebarWidth(elementStatus.isMobile ? (elementStatus.sidebar ? window.innerHeight * 0.3 : window.innerHeight - 117) : elementStatus.sidebar ? 300 : 30), [elementStatus.sidebar, elementStatus.isMobile]);
   useEffect(() => {
+    const url = new URL(window.location.href);
+    const searchParams = new URLSearchParams(url.search);
+    for (const [k, v] of Object.entries(searchCondition)) {
+      if (k !== "regex") v.length === 0 ? searchParams.delete(k) : searchParams.set(k, v);
+    }
+    url.search = searchParams.toString();
+    history.pushState(null, "", url.href);
+  }, [searchCondition]);
+  useEffect(() => {
     setElementStatus((prev) => ({ ...prev, colors: prev.colors.domain(categories[searchCondition.lang]) }));
     document.title = title[searchCondition.lang];
   }, [searchCondition.lang]);
@@ -594,7 +606,6 @@ const MainArea = () => {
       .then((data) => {
         setFloorData(data);
       });
-    if (/^zh/i.test(navigator.language)) setSearchCondition((prev) => ({ ...prev, lang: "tc" }));
     setViewBox({ x1: 0, y1: 0, x2: realSize[searchCondition.floor].w, y2: realSize[searchCondition.floor].h });
     handleResize();
     defaultViewbox();
