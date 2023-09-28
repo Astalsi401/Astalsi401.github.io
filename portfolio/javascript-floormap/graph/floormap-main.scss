@@ -106,6 +106,7 @@ p {
 
 .fp-main {
   width: 100%;
+  background-color: var(--fp-sidebar-bg);
 }
 
 .fp-sidebar {
@@ -124,6 +125,10 @@ p {
   flex-wrap: nowrap;
   min-height: var(--fp-search-box-height);
   background-color: var(--fp-search-bg);
+  .fp-toggle:not(.active) {
+    opacity: 0;
+    cursor: default;
+  }
 }
 .fp-input {
   width: calc(100% - var(--fp-icon-size) * 2);
@@ -163,9 +168,6 @@ p {
     transform: translate(0, 0);
     top: var(--sidebar-width);
     transition: top var(--fp-time);
-    &.active {
-      top: var(--sidebar-width);
-    }
   }
 }
 .fp-advanced {
@@ -283,6 +285,7 @@ p {
       position: absolute;
       width: 100%;
       top: calc(var(--i) * 5px);
+      transition: background-color var(--fp-time);
     }
     &,
     &::before,
@@ -291,7 +294,6 @@ p {
       height: 2px;
       border-radius: 2px;
       background-color: var(--color);
-      transition: background-color var(--fp-time), top var(--fp-time), transform var(--fp-time);
     }
   }
   &.active {

@@ -92,15 +92,16 @@ const BoothText = ({ t, j, lineHeight, opacity, boothWidth }) => {
 const Booth = ({ d, size, elementStatus, handleBoothInfo, drawPath }) => {
   const fontSize = size * d.size;
   const lineHeight = fontSize * 1.2;
+  const opacity = elementStatus.boothInfo && elementStatus.boothInfoData.id == d.id ? 0.8 : d.opacity;
   return (
     <g key={d.id} id={d.id} className="booth" transform={`translate(${d.x},${d.y})`} onClick={() => handleBoothInfo(d)}>
-      <path stroke="black" fill={elementStatus.colors(d.cat)} strokeWidth={1} fillOpacity={d.opacity} d={`M0 0${drawPath(d.p)}`} />;
+      <path stroke="black" fill={elementStatus.colors(d.cat)} strokeWidth={1} fillOpacity={opacity} d={`M0 0${drawPath(d.p)}`} />;
       <g transform={`translate(${d.w / 2},${d.h / 2 - ((d.text.length - 1) * lineHeight) / 2})`} fontSize={fontSize}>
         {d.text.map((t, j) => (
-          <BoothText t={t} j={j} lineHeight={lineHeight} opacity={d.opacity} boothWidth={d.w} />
+          <BoothText t={t} j={j} lineHeight={lineHeight} opacity={opacity} boothWidth={d.w} />
         ))}
       </g>
-      <text className="booth-id" fill="black" fillOpacity={d.opacity} fontSize={size * 0.3} x={20} y={d.h - 20}>
+      <text className="booth-id" fill="black" fillOpacity={opacity} fontSize={size * 0.3} x={20} y={d.h - 20}>
         {d.id}
       </text>
     </g>
@@ -127,12 +128,12 @@ const Floormap = ({ data, viewBox, setViewBox, sidebarWidth, tagsHeight, realSiz
   const graphRef = useRef(null);
   const svgRef = useRef(null);
   const handleStart = () => {
-    if (elementStatus.isMobile) setElementStatus((prev) => ({ ...prev, sidebar: false }));
+    if (elementStatus.smallScreen) setElementStatus((prev) => ({ ...prev, sidebar: false }));
     setDrugStatus((prev) => ({ ...prev, moving: true }));
   };
   const handleEnd = () => setDrugStatus({ moving: false, previousTouch: null, previousTouchLength: null });
   const handleResize = () => {
-    const width = graphRef.current.clientWidth - (elementStatus.isMobile ? 0 : sidebarWidth);
+    const width = graphRef.current.clientWidth - (elementStatus.smallScreen ? 0 : sidebarWidth);
     const height = graphRef.current.clientHeight - tagsHeight;
     setContainerSize({ width: width, height: height });
   };
@@ -197,7 +198,7 @@ const Floormap = ({ data, viewBox, setViewBox, sidebarWidth, tagsHeight, realSiz
     return () => window.removeEventListener("resize", handleResize);
   }, [realSize, sidebarWidth]);
   return (
-    <div className="fp-floormap d-flex align-items-center" ref={graphRef}>
+    <div className="fp-floormap d-flex align-items-center" style={{ minHeight: elementStatus.minHeight }} ref={graphRef}>
       <Selector searchCondition={searchCondition} handleSearchChange={handleSearchChange} setViewBox={setViewBox} realSize={realSize} zoomCalculator={zoomCalculator} />
       <svg id="floormap" className={`mx-auto ${drugStatus.moving ? "moving" : ""}`} style={{ backgroundColor: "var(--fp-sidebar-bg)" }} ref={svgRef} width={containerSize.width} height={containerSize.height} viewBox={`${viewBox.x1} ${viewBox.y1} ${viewBox.x2} ${viewBox.y2}`} onWheel={handleWheelZoom} onMouseDown={handleStart} onMouseUp={handleEnd} onMouseLeave={handleEnd} onMouseMove={handleMouseDrug} onTouchStart={handleStart} onTouchEnd={handleEnd} onTouchMove={handleTouchDrugZoom}>
         <Elements type="wall" data={data} />
@@ -248,9 +249,9 @@ const Search = ({ searchCondition, setSearchCondition, elementStatus, setElement
         <input className="fp-input-text d-block text-large" name="search" type="text" value={searchCondition.string} onChange={handleSearchChange} placeholder={{ tc: "搜索攤位名稱、攤位編號", en: "Search" }[searchCondition.lang]} />
       </div>
       <div
-        className={`fp-toggle d-flex align-items-center justify-content-center ${elementStatus.sidebar ? "active" : ""}`}
+        className={`fp-toggle d-flex align-items-center justify-content-center ${searchCondition.string.length === 0 ? "" : "active"}`}
         onClick={() => {
-          if (elementStatus.sidebar) setElementStatus((prev) => ({ ...prev, sidebar: false }));
+          if (elementStatus.sidebar) setSearchCondition((prev) => ({ ...prev, string: "", tag: "" }));
         }}
       >
         <span />
@@ -378,10 +379,7 @@ const BoothInfo = ({ data, setSearchCondition, elementStatus, setElementStatus }
     setSearchCondition((prev) => ({ ...prev, tag: value, string: "" }));
     setElementStatus((prev) => ({ ...prev, boothInfo: false }));
   };
-  const handleNameClick = () => {
-    setSearchCondition((prev) => ({ ...prev, floor: floor, tag: "", string: `${id ? id : note} ${org}` }));
-    setElementStatus((prev) => ({ ...prev, boothInfo: false }));
-  };
+  const handleNameClick = () => setSearchCondition((prev) => ({ ...prev, floor: floor, tag: "", string: `${id ? id : note} ${org}` }));
   const handleCorpClick = (d) => setElementStatus((prev) => ({ ...prev, boothInfoData: d }));
   return (
     <div className={`fp-booth-info ${elementStatus.boothInfo ? "active" : ""}`}>
@@ -447,7 +445,7 @@ const Sidebar = ({ data, elementStatus, setElementStatus, searchCondition, setSe
   return (
     <div className={`fp-sidebar shadow ${elementStatus.sidebar ? "active" : ""}`} onClick={handleSidear}>
       <Search searchCondition={searchCondition} setSearchCondition={setSearchCondition} elementStatus={elementStatus} setElementStatus={setElementStatus} handleSearchChange={handleSearchChange} />
-      {elementStatus.sidebar || elementStatus.isMobile ? (
+      {elementStatus.sidebar || elementStatus.smallScreen ? (
         <>
           <Advanced data={data} searchCondition={searchCondition} setSearchCondition={setSearchCondition} elementStatus={elementStatus} setElementStatus={setElementStatus} defaultViewbox={defaultViewbox} />
           <ResultList data={data} elementStatus={elementStatus} handleBoothInfo={handleBoothInfo} />
@@ -526,13 +524,18 @@ const MainArea = () => {
       lang: params.get("lang") || (/^zh/i.test(navigator.language) ? "tc" : "en"),
     };
   });
-  const [elementStatus, setElementStatus] = useState({
-    colors: d3.scaleOrdinal().domain(categories[searchCondition.lang]).range(["rgba(237,125,49,0.6)", "rgba(153,204,255,1)", "rgba(255,255,0,0.6)", "rgba(0,112,192,0.6)", "rgba(112,48,160,0.6)"]).unknown("rgba(255,255,255)"),
-    boothInfoData: {},
-    isMobile: false,
-    sidebar: true,
-    advanced: false,
-    boothInfo: false,
+  const [elementStatus, setElementStatus] = useState(() => {
+    const isMobile = /windows phone|android|iPad|iPhone|iPod/i.test(navigator.userAgent || window.opera);
+    return {
+      isMobile: isMobile,
+      minHeight: isMobile ? window.innerHeight : 0,
+      colors: d3.scaleOrdinal().domain(categories[searchCondition.lang]).range(["rgba(237,125,49,0.6)", "rgba(153,204,255,1)", "rgba(255,255,0,0.6)", "rgba(0,112,192,0.6)", "rgba(112,48,160,0.6)"]).unknown("rgba(255,255,255)"),
+      boothInfoData: {},
+      smallScreen: false,
+      sidebar: true,
+      advanced: false,
+      boothInfo: false,
+    };
   });
   const [viewBox, setViewBox] = useState({ x1: 0, y1: 0, x2: 0, y2: 0 });
   const memoFloorData = useMemo(
@@ -565,11 +568,11 @@ const MainArea = () => {
   const handleSearchChange = ({ target: { name, value } }) => searchActions(name, value);
   const handleResize = () =>
     setElementStatus((prev) => {
-      const isMobile = window.innerWidth < 768;
-      return { ...prev, isMobile: isMobile, sidebar: prev.isMobile ? prev.sidebar : !isMobile };
+      const smallScreen = window.innerWidth < 768;
+      return { ...prev, smallScreen: smallScreen, sidebar: prev.smallScreen ? prev.sidebar : !smallScreen };
     });
   const handleBoothInfo = (d) => {
-    setElementStatus((prev) => ({ ...prev, sidebar: true, boothInfo: true, boothInfoData: d }));
+    setElementStatus((prev) => ({ ...prev, boothInfo: true, boothInfoData: d }));
     setSearchCondition((prev) => ({ ...prev, floor: d.floor }));
   };
   const defaultViewbox = () => setViewBox({ x1: 0, y1: 0, x2: realSize[searchCondition.floor].w, y2: realSize[searchCondition.floor].h });
@@ -585,7 +588,10 @@ const MainArea = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  useEffect(() => setSidebarWidth(elementStatus.isMobile ? (elementStatus.sidebar ? window.innerHeight * 0.3 : window.innerHeight - 117) : elementStatus.sidebar ? 300 : 30), [elementStatus.sidebar, elementStatus.isMobile]);
+  useEffect(() => {
+    const height = elementStatus.isMobile ? elementStatus.minHeight : window.innerHeight;
+    setSidebarWidth(elementStatus.smallScreen ? (elementStatus.sidebar ? height * 0.3 : height - 117) : elementStatus.sidebar ? 300 : 30);
+  }, [elementStatus.sidebar, elementStatus.smallScreen]);
   useEffect(() => {
     const url = new URL(window.location.href);
     const searchParams = new URLSearchParams(url.search);
