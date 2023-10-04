@@ -17,11 +17,11 @@ const swiperAction = ({ currentTarget }) => {
   getSiblings(newActive.nextElementSibling, container.firstElementChild).classList.add("next");
 };
 const autoSwiper = () => swipers.forEach((swiper) => swiper.classList.contains("show") && swiper.querySelector(".swiper-next").click());
-let swiperTimer = setInterval(autoSwiper, 7000);
+let swiperTimer = setInterval(autoSwiper, 10000);
 swipers.forEach((swiper) => {
   swiper.querySelectorAll(".swiper-next, .swiper-prev").forEach((btn) => btn.addEventListener("click", swiperAction));
   swiper.addEventListener("mouseenter", () => clearInterval(swiperTimer));
-  swiper.addEventListener("mouseleave", () => (swiperTimer = setInterval(autoSwiper, 7000)));
+  swiper.addEventListener("mouseleave", () => (swiperTimer = setInterval(autoSwiper, 10000)));
 });
 document.querySelectorAll(".intersection").forEach((elem) => observer.observe(elem));
 document.querySelectorAll(".intersection2").forEach((elem) => observer2.observe(elem));
