@@ -13337,7 +13337,7 @@
     "id": "N913a",
     "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
     "topic": { "tc": "醫材設備", "en": "醫材設備" },
-    "tag": { "tc": [""], "en": [""] },
+    "tag": { "tc": ["科學園區聯展"], "en": ["科學園區聯展"] },
     "text": { "tc": ["中科"], "en": ["Central Taiwan Science Park"] },
     "org": { "tc": "開啟基因股份有限公司", "en": "CatchGene Co., Ltd. " },
     "info": { "tc": "市面上現有的自動化核酸純化系統無法產出符合”精準醫療應用”的高濃度、高純度核酸。因缺點有:1.濃度太低 2.洗脫液中含有過多抑制物 3.易產生交叉汙染。開啟基因突破既有的自動化純化機臺磁珠技術，iCatcher 12 自動化循環游離核酸純化儀將膜柱技術引入自動化純化系統。\n優點是：\n1.\t大體積樣本上機 \n2.\t產出適合下游分析系統的高純度核酸 \n3.\t一個樣本以一直線方向進行純化，減少交叉汙染的機會 \n4.\t上機程序簡單\n", "en": "Existing automated nucleic acid purification systems cannot produce high-quality Eluate fit for Precision Medicine market.\nDisadvantage:\n•\tLow Concentration \n•\tToo Much Inhibitors inside\n•\tCross-Contamination \nBreaking through the existing beads technology, iCatcher 12 uses membrane column technology instead. \n•\tLarge Sample Input \n•\tHigh Purity for Downstream Analysis \n•\tOne Sample in One Line\n•\tEasy Set Up \n" }
@@ -13405,7 +13405,7 @@
     "id": "N814",
     "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
     "topic": { "tc": "醫材設備", "en": "醫材設備" },
-    "tag": { "tc": [""], "en": [""] },
+    "tag": { "tc": ["科學園區聯展"], "en": ["科學園區聯展"] },
     "text": { "tc": ["南科"], "en": ["Southern Taiwan Science Park"] },
     "size": { "tc": 0.7, "en": 0.7 },
     "org": { "tc": "國家科學及技術委員會南部科學園區管理局", "en": "Southern Taiwan Science Park Bureau, National Science and Technology Council" },
@@ -13418,7 +13418,7 @@
     "id": "N814",
     "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
     "topic": { "tc": "醫材設備", "en": "醫材設備" },
-    "tag": { "tc": [""], "en": [""] },
+    "tag": { "tc": ["科學園區聯展"], "en": ["科學園區聯展"] },
     "text": { "tc": ["南科"], "en": ["Southern Taiwan Science Park"] },
     "org": { "tc": "財團法人塑膠工業技術發展中心", "en": "Plastics Industry Development Center" },
     "info": { "tc": "創新「一站式」整合服務  塑膠中心展現高分子醫材研發製作能量\n近年來隨著人口老化及創新醫療技術日新月異，醫療器材產業已成為國家重點發展的推動項目。財團法人塑膠工業技術發展中心(PIDC)成立於1993年，從2000年開始，在醫材領域耕耘多年，扮演臺灣高分子醫材領域發展的重要推手，已逐步建構完整專業的服務平臺。\n為輔導協助國內塑膠加工業改善設備，提高生產技術及產品品質，改良製造方法，開發新產品，並推動國際合作技術交流，以增強競爭能力，2018年12月11日高分子醫材大樓正式啟用，同時成立「生醫部」，建置專門的平臺服務，提供醫療器材業者從產品設計開發、製程技術、供應鏈整合、檢測驗證、品質系統輔導至產品上市，提供國內生醫業者涵蓋產品全生命週期的「一站式」整合性服務。\n服務內容包括，\n◆ 醫材產品設計開發\n◆ 專利檢索與產業調查分析\n◆ 製程技術及供應鏈整合\n◆ 檢測驗證服務\n◆ 品質系統輔導\n◆ 上市許可證輔導", "en": "One-Step Shop of Medical Devices \nPlastics Industry Development Center Show the development of polymeric medical devices in Taiwan\nIn order to assist plastics industry and accelerate the advancement of the plastics technology, Plastics Industry Development Center (PIDC) was established in 1993 and funded by the government and plastics industry.\nSince 2000, PIDC has been working in the field of medical devices for many years, playing an important role in the development of polymeric medical devices in Taiwan. To accelerate medical devices innovation, we deliver below services:\n◆ Medical device design and development\n◆ Patent and industry analysis\n◆ Process technology and supply chain integration\n◆ Test verification service\n◆ Quality system counseling\n◆ License application counseling" }
@@ -13430,7 +13430,7 @@
     "id": "N814",
     "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
     "topic": { "tc": "醫材設備", "en": "醫材設備" },
-    "tag": { "tc": [""], "en": [""] },
+    "tag": { "tc": ["科學園區聯展"], "en": ["科學園區聯展"] },
     "text": { "tc": ["南科"], "en": ["Southern Taiwan Science Park"] },
     "org": { "tc": "巨量移動科技有限公司", "en": "Big Data Mobile Company" },
     "info": { "tc": "", "en": "" }
@@ -13442,7 +13442,7 @@
     "id": "N814",
     "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
     "topic": { "tc": "醫材設備", "en": "醫材設備" },
-    "tag": { "tc": [""], "en": [""] },
+    "tag": { "tc": ["科學園區聯展"], "en": ["科學園區聯展"] },
     "text": { "tc": ["南科"], "en": ["Southern Taiwan Science Park"] },
     "org": { "tc": "瑞基海洋生物科技股份有限公司", "en": "GeneReach Biotechnology Corp." },
     "info": { "tc": "SATLite從樣本到文庫製備，一站式自動化體驗。\n靈活自動化吸取系統，可同時處裡1-8個樣本，整合核酸萃取及文庫建構。\n", "en": "SATLite\nCLICK-N-GO, From sample to library\nOptimize vaccine program\nEnhance biosecurity\nReduce antibiotics usage" }
@@ -13454,7 +13454,7 @@
     "id": "N814",
     "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
     "topic": { "tc": "醫材設備", "en": "醫材設備" },
-    "tag": { "tc": [""], "en": [""] },
+    "tag": { "tc": ["科學園區聯展"], "en": ["科學園區聯展"] },
     "text": { "tc": ["南科"], "en": ["Southern Taiwan Science Park"] },
     "org": { "tc": "臺灣骨王生技股份有限公司", "en": "Taiwan Mian Orthopaedic Biotechnology Co., Ltd." },
     "info": { "tc": "為減少對正常組織的傷害，醫師需在狹小視野及有限的操作空間進行複雜的脊椎手術，因此更需要利用導航系統的引導直接到達病灶處，導航畫面即時 AR 投影呈現病患體內資訊在醫師眼前，讓醫師專注在患者身上的手術區域，提升微創手術的安全性和精準度。", "en": "In order to reduce damage to normal tissues, doctors need to perform complex spinal surgery in a narrow field of view and limited operating space. Therefore, it is even more necessary to use the guidance of the navigation system to directly reach the lesion. The real-time AR projection of the navigation screen presents the information in the patient's body in front of the doctor's eyes allowing doctors to focus on the surgical area of the patient, improving the safety and accuracy of minimally invasive surgery." }
@@ -13466,7 +13466,7 @@
     "id": "N814",
     "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
     "topic": { "tc": "醫材設備", "en": "醫材設備" },
-    "tag": { "tc": [""], "en": [""] },
+    "tag": { "tc": ["科學園區聯展"], "en": ["科學園區聯展"] },
     "text": { "tc": ["南科"], "en": ["Southern Taiwan Science Park"] },
     "org": { "tc": "全微精密股份有限公司", "en": "Microware Precision Co., Ltd." },
     "info": { "tc": "後補", "en": "後補" }
