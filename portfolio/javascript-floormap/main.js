@@ -120,11 +120,12 @@ const Elements = ({ type, data, size, elementStatus, handleBoothInfo }) => {
   };
   return <g className={`${type}-g`}>{data.filter((d) => d.type == type).map((d, i) => elementActions[type](d, i))}</g>;
 };
-const Floormap = ({ data, viewBox, setViewBox, sidebarWidth, tagsHeight, realSize, elementStatus, setElementStatus, handleBoothInfo, searchCondition, handleSearchChange }) => {
+const Floormap = ({ data, realSize, elementStatus, setElementStatus, handleBoothInfo, searchCondition, handleSearchChange }) => {
   const [containerSize, setContainerSize] = useState({ width: realSize.w / 100, height: realSize.h / 100, pageHeight: realSize.h / 100 });
   const [drugStatus, setDrugStatus] = useState({ moving: false, previousTouch: null, previousTouchLength: null });
-  const [newSVGPoint, setNewSVGPoint] = useState(null);
-  const [startSVGPoint, setStartSVGPoint] = useState(null);
+  const [translate, setTranslate] = useState({ x: 0, y: 0 });
+  const [zoom, setZoom] = useState({ scale: 1, x: 0, y: 0 });
+  const [viewBox, setViewBox] = useState({ x1: 0, y1: 0, x2: 0, y2: 0 });
   const graphRef = useRef(null);
   const svgRef = useRef(null);
   const handleStart = () => {
@@ -133,30 +134,18 @@ const Floormap = ({ data, viewBox, setViewBox, sidebarWidth, tagsHeight, realSiz
   };
   const handleEnd = () => setDrugStatus({ moving: false, previousTouch: null, previousTouchLength: null });
   const handleResize = () => {
-    const width = graphRef.current.clientWidth - (elementStatus.smallScreen ? 0 : sidebarWidth);
-    const height = graphRef.current.clientHeight - tagsHeight;
-    setContainerSize({ width: width, height: height });
+    const { clientWidth, clientHeight } = graphRef.current;
+    setContainerSize({ width: clientWidth, height: clientHeight });
   };
-  const drugCalculator = (x1, y1, x2, y2) => {
-    if (!drugStatus.moving) return;
-    x1 -= sidebarWidth;
-    y1 -= tagsHeight;
-    let svgPoint = svgRef.current.createSVGPoint();
-    svgPoint.x = x1;
-    svgPoint.y = y1;
-    let CTM = svgRef.current.getScreenCTM();
-    setStartSVGPoint(svgPoint.matrixTransform(CTM.inverse()));
-    svgPoint = svgRef.current.createSVGPoint();
-    svgPoint.x = x1 + x2;
-    svgPoint.y = y1 + y2;
-    setNewSVGPoint(svgPoint);
+  const drugCalculator = (x, y) => {
+    if (drugStatus.moving) setTranslate((prev) => ({ x: prev.x + x, y: prev.y + y }));
   };
   const handleTouchDrugZoom = (e) => {
     e.preventDefault();
     if (e.touches.length === 1) {
       const touch = e.touches[0];
       setDrugStatus((prev) => ({ ...prev, previousTouch: touch, previousTouchLength: e.touches.length }));
-      if (drugStatus.previousTouch) drugCalculator(touch.clientX, touch.clientY, touch.clientX - drugStatus.previousTouch.clientX, touch.clientY - drugStatus.previousTouch.clientY);
+      if (drugStatus.previousTouch) drugCalculator(touch.clientX - drugStatus.previousTouch.clientX, touch.clientY - drugStatus.previousTouch.clientY);
     } else {
       if (drugStatus.previousTouchLength && drugStatus.previousTouchLength != length) {
         handleEnd();
@@ -168,46 +157,49 @@ const Floormap = ({ data, viewBox, setViewBox, sidebarWidth, tagsHeight, realSiz
       const y = (touch1.clientY + touch2.clientY) / 2;
       const d = Math.hypot(touch1.clientX - touch2.clientX, touch1.clientY - touch2.clientY);
       setDrugStatus((prev) => ({ ...prev, previousTouch: d }));
-      if (drugStatus.previousTouch) zoomCalculator(x, y, drugStatus.previousTouch / d);
+      if (drugStatus.previousTouch) zoomCalculator(x, y, d / drugStatus.previousTouch);
     }
   };
-  const handleMouseDrug = ({ clientX, clientY, movementX, movementY }) => drugCalculator(clientX, clientY, movementX, movementY);
-  const zoomCalculator = (x, y, r) => {
-    let svgPoint = svgRef.current.createSVGPoint();
-    svgPoint.x = x;
-    svgPoint.y = y;
-    setNewSVGPoint(svgPoint);
-    let CTM = svgRef.current.getScreenCTM();
-    setStartSVGPoint(svgPoint.matrixTransform(CTM.inverse()));
-    setViewBox((prev) => ({ x1: prev.x1, y1: prev.y1, x2: prev.x2 * r, y2: prev.y2 * r }));
+  const handleMouseDrug = ({ movementX, movementY }) => drugCalculator(movementX, movementY);
+  const zoomCalculator = (clientX, clientY, r) => {
+    const box = graphRef.current.getBoundingClientRect();
+    setZoom((prev) => {
+      let scale = prev.scale * r;
+      scale = scale < 1 ? 1 : scale > 7 ? 7 : scale;
+      let w = svgRef.current.clientWidth * prev.scale;
+      let h = svgRef.current.clientHeight * prev.scale;
+      let x = (graphRef.current.clientWidth - w) / 2 + prev.x + translate.x;
+      let y = (graphRef.current.clientHeight - h) / 2 + prev.y + translate.y;
+      let originX = clientX - box.x - x - w / 2;
+      let originY = clientY - box.y - y - h / 2;
+      let xNew = originX - (originX / prev.scale) * scale + prev.x;
+      let yNew = originY - (originY / prev.scale) * scale + prev.y;
+      return { scale: scale, x: xNew, y: yNew };
+    });
   };
   const handleWheelZoom = ({ clientX, clientY, deltaY }) => {
-    let r = deltaY > 0 ? 1.05 : deltaY < 0 ? 0.95 : 1;
+    let r = deltaY > 0 ? 0.95 : deltaY < 0 ? 1.05 : 1;
     zoomCalculator(clientX, clientY, r);
   };
-  useLayoutEffect(() => {
-    if (!startSVGPoint) return;
-    let CTM = svgRef.current.getScreenCTM();
-    let moveToSVGPoint = newSVGPoint.matrixTransform(CTM.inverse());
-    let delta = { dx: startSVGPoint.x - moveToSVGPoint.x, dy: startSVGPoint.y - moveToSVGPoint.y };
-    setViewBox((prev) => ({ ...prev, x1: prev.x1 + delta.dx, y1: prev.y1 + delta.dy }));
-  }, [startSVGPoint]);
   useEffect(() => {
+    setViewBox({ x1: 0, y1: 0, x2: realSize.w, y2: realSize.h });
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, [realSize, sidebarWidth]);
+  }, [realSize]);
   return (
-    <div className="fp-floormap d-flex align-items-center" style={{ minHeight: elementStatus.minHeight }} ref={graphRef}>
-      <Selector searchCondition={searchCondition} handleSearchChange={handleSearchChange} setViewBox={setViewBox} realSize={realSize} zoomCalculator={zoomCalculator} />
-      <svg id="floormap" className={`mx-auto ${drugStatus.moving ? "moving" : ""}`} style={{ backgroundColor: "var(--fp-sidebar-bg)" }} ref={svgRef} width={containerSize.width} height={containerSize.height} viewBox={`${viewBox.x1} ${viewBox.y1} ${viewBox.x2} ${viewBox.y2}`} onWheel={handleWheelZoom} onMouseDown={handleStart} onMouseUp={handleEnd} onMouseLeave={handleEnd} onMouseMove={handleMouseDrug} onTouchStart={handleStart} onTouchEnd={handleEnd} onTouchMove={handleTouchDrugZoom}>
-        <Elements type="wall" data={data} />
-        <Elements type="pillar" data={data} />
-        <Elements type="text" data={data} />
-        <Elements type="room" data={data} size={200} />
-        <Elements type="icon" data={data} size={200} />
-        <Elements type="booth" data={data} size={250} elementStatus={elementStatus} handleBoothInfo={handleBoothInfo} />
-      </svg>
+    <div className="fp-floormap d-flex align-items-center" style={{ minHeight: elementStatus.minHeight }}>
+      <Selector searchCondition={searchCondition} handleSearchChange={handleSearchChange} setTranslate={setTranslate} setZoom={setZoom} graphRef={graphRef} zoomCalculator={zoomCalculator} />
+      <div class="fp-viewBox" ref={graphRef} onWheel={handleWheelZoom} onMouseDown={handleStart} onMouseUp={handleEnd} onMouseLeave={handleEnd} onMouseMove={handleMouseDrug} onTouchStart={handleStart} onTouchEnd={handleEnd} onTouchMove={handleTouchDrugZoom}>
+        <svg id="floormap" className={drugStatus.moving ? "moving" : ""} style={{ translate: `${zoom.x + translate.x}px ${zoom.y + translate.y}px`, scale: `${zoom.scale}` }} ref={svgRef} width={containerSize.width} height={containerSize.height} viewBox={`${viewBox.x1} ${viewBox.y1} ${viewBox.x2} ${viewBox.y2}`}>
+          <Elements type="wall" data={data} />
+          <Elements type="pillar" data={data} />
+          <Elements type="text" data={data} />
+          <Elements type="room" data={data} size={200} />
+          <Elements type="icon" data={data} size={200} />
+          <Elements type="booth" data={data} size={250} elementStatus={elementStatus} handleBoothInfo={handleBoothInfo} />
+        </svg>
+      </div>
     </div>
   );
 };
@@ -458,11 +450,14 @@ const Sidebar = ({ data, elementStatus, setElementStatus, searchCondition, setSe
   );
 };
 
-const Selector = ({ searchCondition, handleSearchChange, setViewBox, realSize, zoomCalculator }) => {
-  const defaultViewbox = () => setViewBox({ x1: 0, y1: 0, x2: realSize.w, y2: realSize.h });
+const Selector = ({ searchCondition, handleSearchChange, setTranslate, setZoom, graphRef, zoomCalculator }) => {
+  const defaultViewbox = () => {
+    setTranslate({ x: 0, y: 0 });
+    setZoom({ scale: 1, x: 0, y: 0 });
+  };
   const handleClickZoom = (r) => {
-    const { innerWidth: w, innerHeight: h } = window;
-    zoomCalculator(w / 2, h / 2, r);
+    const { offsetLeft: x, offsetTop: y, offsetWidth: w, offsetHeight: h } = graphRef.current;
+    zoomCalculator(w / 2 + x, h / 2 + y, r);
   };
   return (
     <>
@@ -483,7 +478,7 @@ const Selector = ({ searchCondition, handleSearchChange, setViewBox, realSize, z
         </label>
       </div>
       <div className="fp-zoom">
-        <span className="d-flex justify-content-center align-items-center text-xx-large shadow" onClick={() => handleClickZoom(0.7)}>
+        <span className="d-flex justify-content-center align-items-center text-xx-large shadow" onClick={() => handleClickZoom(1.3)}>
           <svg viewBox="0 0 24 24" fill="none">
             <path d="M12 6V18M6 12H18" stroke="black" strokeWidth="2" />
           </svg>
@@ -493,7 +488,7 @@ const Selector = ({ searchCondition, handleSearchChange, setViewBox, realSize, z
             <path d="M4 9V5.6C4 5.03995 4 4.75992 4.10899 4.54601C4.20487 4.35785 4.35785 4.20487 4.54601 4.109C4.75992 4 5.03995 4 5.6 4L9 4M4 15V18.4C4 18.9601 4 19.2401 4.10899 19.454C4.20487 19.6422 4.35785 19.7951 4.54601 19.891C4.75992 20 5.03995 20 5.6 20L9 20M15 4H18.4C18.9601 4 19.2401 4 19.454 4.10899C19.6422 4.20487 19.7951 4.35785 19.891 4.54601C20 4.75992 20 5.03995 20 5.6V9M20 15V18.4C20 18.9601 20 19.2401 19.891 19.454C19.7951 19.6422 19.6422 19.7951 19.454 19.891C19.2401 20 18.9601 20 18.4 20H15" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </span>
-        <span className="d-flex justify-content-center align-items-center text-xx-large shadow" onClick={() => handleClickZoom(1.3)}>
+        <span className="d-flex justify-content-center align-items-center text-xx-large shadow" onClick={() => handleClickZoom(0.7)}>
           <svg viewBox="0 0 24 24" fill="none">
             <path d="M6 12H18" stroke="black" strokeWidth="2" />
           </svg>
@@ -537,7 +532,6 @@ const MainArea = () => {
       boothInfo: false,
     };
   });
-  const [viewBox, setViewBox] = useState({ x1: 0, y1: 0, x2: 0, y2: 0 });
   const memoFloorData = useMemo(
     () =>
       floorData.map((d) => {
@@ -575,16 +569,13 @@ const MainArea = () => {
     setElementStatus((prev) => ({ ...prev, boothInfo: true, boothInfoData: d }));
     setSearchCondition((prev) => ({ ...prev, floor: d.floor }));
   };
-  const defaultViewbox = () => setViewBox({ x1: 0, y1: 0, x2: realSize[searchCondition.floor].w, y2: realSize[searchCondition.floor].h });
   useEffect(() => {
     fetch("https://astalsi401.github.io/warehouse/show/floormap.json")
       .then((res) => res.json())
       .then((data) => {
         setFloorData(data);
       });
-    setViewBox({ x1: 0, y1: 0, x2: realSize[searchCondition.floor].w, y2: realSize[searchCondition.floor].h });
     handleResize();
-    defaultViewbox();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -620,10 +611,10 @@ const MainArea = () => {
   }, [searchCondition.string]);
   return (
     <div className="fp-main" style={{ "--sidebar-width": `${sidebarWidth}px`, "--tags-height": `${tagsHeight}px` }}>
-      <Sidebar data={filterFloorData.filter((d) => types.includes(d.type))} elementStatus={elementStatus} setElementStatus={setElementStatus} searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} handleBoothInfo={handleBoothInfo} defaultViewbox={defaultViewbox} />
+      <Sidebar data={filterFloorData.filter((d) => types.includes(d.type))} elementStatus={elementStatus} setElementStatus={setElementStatus} searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} handleBoothInfo={handleBoothInfo} />
       <div className="fp-graph d-flex align-items-center">
         <Header searchCondition={searchCondition} setSearchCondition={setSearchCondition} />
-        <Floormap data={filterFloorData.filter((d) => d.floor == searchCondition.floor && d.draw)} viewBox={viewBox} setViewBox={setViewBox} sidebarWidth={sidebarWidth} realSize={realSize[searchCondition.floor]} tagsHeight={tagsHeight} elementStatus={elementStatus} setElementStatus={setElementStatus} handleBoothInfo={handleBoothInfo} searchCondition={searchCondition} handleSearchChange={handleSearchChange} />
+        <Floormap data={filterFloorData.filter((d) => d.floor == searchCondition.floor && d.draw)} realSize={realSize[searchCondition.floor]} elementStatus={elementStatus} setElementStatus={setElementStatus} handleBoothInfo={handleBoothInfo} searchCondition={searchCondition} handleSearchChange={handleSearchChange} />
       </div>
     </div>
   );
