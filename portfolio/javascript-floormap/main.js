@@ -92,7 +92,7 @@ const BoothText = ({ t, j, lineHeight, opacity, boothWidth }) => {
 const Booth = ({ d, size, elementStatus, handleBoothInfo, drawPath }) => {
   const fontSize = size * d.size;
   const lineHeight = fontSize * 1.2;
-  const opacity = elementStatus.boothInfo && elementStatus.boothInfoData.id == d.id ? 0.8 : d.opacity;
+  const opacity = elementStatus.boothInfo && elementStatus.boothInfoData.id == d.id ? 1 : d.opacity;
   return (
     <g key={d.id} id={d.id} className="booth" transform={`translate(${d.x},${d.y})`} onClick={() => handleBoothInfo(d)}>
       <path stroke="black" fill={elementStatus.colors(d.cat)} strokeWidth={1} fillOpacity={opacity} d={`M0 0${drawPath(d.p)}`} />;
@@ -542,11 +542,29 @@ const MainArea = () => {
           eventTime = d.event[searchCondition.lang].map((e) => ({ start: new Date(e.start), end: new Date(e.end), title: e.title, active: new Date(e.start) < now && new Date(e.end) > now }));
           tags = eventTime.some((e) => e.active) ? tags.concat(["活動進行中"]) : tags;
         }
-        return { ...d, cat: d.cat ? d.cat[searchCondition.lang] : false, topic: d.topic ? d.topic[searchCondition.lang] : false, tag: tags, text: d.text ? d.text[searchCondition.lang] : [], size: d.size ? d.size[searchCondition.lang] : 1, note: d.note ? d.note[searchCondition.lang] : false, org: d.org ? d.org[searchCondition.lang] : false, info: d.info ? d.info[searchCondition.lang] : false, draw: d.draw == 1, event: eventTime };
+        return { ...d, cat: d.cat ? d.cat[searchCondition.lang] : false, topic: d.topic ? d.topic[searchCondition.lang] : false, tag: tags, text: d.text ? d.text[searchCondition.lang] : [], size: d.size ? d.size[searchCondition.lang] : 1, note: d.note ? d.note[searchCondition.lang] : false, event: eventTime, corps: d.corps ? d.corps.map((corp) => ({ org: corp.org[searchCondition.lang], info: corp.info[searchCondition.lang] })) : false, draw: true };
       }),
     [searchCondition.lang, floorData]
   );
-  const filterFloorData = useMemo(() => memoFloorData.map((d) => ({ ...d, opacity: (types.includes(d.type) && searchCondition.regex.test([d.id, d.text.join(""), d.note, d.org, d.cat, d.topic, d.tag].join(" ")) && (searchCondition.tag === "" ? true : [d.id, d.cat, d.topic, d.note, ...d.tag].includes(searchCondition.tag))) || d.type === "icon" ? 0.8 : 0.1 })), [searchCondition, memoFloorData]);
+  const filterFloorData = useMemo(() => {
+    const res = [];
+    memoFloorData.forEach((d) => {
+      const corps = d.corps ? d.corps.map((corp) => corp.org) : [];
+      const isType = types.includes(d.type);
+      const hasTag = isType && searchCondition.tag === "" ? true : [d.id, d.cat, d.topic, d.note, ...d.tag].includes(searchCondition.tag);
+      let hasText = isType && searchCondition.regex.test([d.id, d.text.join(""), d.note, d.cat, d.topic, d.tag, ...corps].join(" "));
+      const opacity = (hasText && hasTag) || d.type === "icon" ? 0.8 : 0.1;
+      if (d.corps) {
+        d.corps.forEach((corp, i) => {
+          hasText = searchCondition.regex.test([d.id, d.text.join(""), d.note, d.cat, d.topic, d.tag, corp.org].join(" "));
+          res.push({ ...d, ...corp, opacity: opacity, draw: i === 0, sidebar: hasText && hasTag });
+        });
+      } else {
+        res.push({ ...d, opacity: opacity, draw: true, sidebar: false });
+      }
+    });
+    return res;
+  }, [searchCondition, memoFloorData]);
 
   const searchActions = (name, value) => {
     switch (name) {
@@ -611,7 +629,7 @@ const MainArea = () => {
   }, [searchCondition.string]);
   return (
     <div className="fp-main" style={{ "--sidebar-width": `${sidebarWidth}px`, "--tags-height": `${tagsHeight}px` }}>
-      <Sidebar data={filterFloorData.filter((d) => types.includes(d.type))} elementStatus={elementStatus} setElementStatus={setElementStatus} searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} handleBoothInfo={handleBoothInfo} />
+      <Sidebar data={filterFloorData.filter((d) => types.includes(d.type) && d.sidebar)} elementStatus={elementStatus} setElementStatus={setElementStatus} searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} handleBoothInfo={handleBoothInfo} />
       <div className="fp-graph d-flex align-items-center">
         <Header searchCondition={searchCondition} setSearchCondition={setSearchCondition} />
         <Floormap data={filterFloorData.filter((d) => d.floor == searchCondition.floor && d.draw)} realSize={realSize[searchCondition.floor]} elementStatus={elementStatus} setElementStatus={setElementStatus} handleBoothInfo={handleBoothInfo} searchCondition={searchCondition} handleSearchChange={handleSearchChange} />
