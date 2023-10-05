@@ -226,6 +226,12 @@ p {
   user-select: none; /* Standard syntax */
 }
 
+.fp-viewBox {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 #floormap {
   transition: viewBox var(--fp-time);
   touch-action: manipulation;
