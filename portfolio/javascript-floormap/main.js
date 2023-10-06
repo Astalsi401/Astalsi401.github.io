@@ -122,8 +122,7 @@ const Elements = ({ type, data, size, elementStatus, handleBoothInfo }) => {
 };
 const Floormap = ({ data, realSize, elementStatus, setElementStatus, handleBoothInfo, searchCondition, handleSearchChange }) => {
   const [containerSize, setContainerSize] = useState({ width: realSize.w / 100, height: realSize.h / 100, pageHeight: realSize.h / 100 });
-  const [dragStatus, setDragStatus] = useState({ moving: false, previousTouch: null, previousTouchLength: null });
-  const [translate, setTranslate] = useState({ x: 0, y: 0 });
+  const [dragStatus, setDragStatus] = useState({ moving: false, previousTouch: null, previousTouchLength: null, x: 0, y: 0 });
   const [zoom, setZoom] = useState({ scale: 1, x: 0, y: 0 });
   const [viewBox, setViewBox] = useState({ x1: 0, y1: 0, x2: 0, y2: 0 });
   const graphRef = useRef(null);
@@ -132,13 +131,13 @@ const Floormap = ({ data, realSize, elementStatus, setElementStatus, handleBooth
     if (elementStatus.smallScreen) setElementStatus((prev) => ({ ...prev, sidebar: false }));
     setDragStatus((prev) => ({ ...prev, moving: true }));
   };
-  const handleEnd = () => setDragStatus({ moving: false, previousTouch: null, previousTouchLength: null });
+  const handleEnd = () => setDragStatus((prev) => ({ ...prev, moving: false, previousTouch: null, previousTouchLength: null }));
   const handleResize = () => {
     const { clientWidth, clientHeight } = graphRef.current;
     setContainerSize({ width: clientWidth, height: clientHeight });
   };
   const dragCalculator = (x, y) => {
-    if (dragStatus.moving) setTranslate((prev) => ({ x: prev.x + x, y: prev.y + y }));
+    if (dragStatus.moving) setDragStatus((prev) => ({ ...prev, x: prev.x + x, y: prev.y + y }));
   };
   const handleTouchDragZoom = (e) => {
     e.preventDefault();
@@ -165,11 +164,11 @@ const Floormap = ({ data, realSize, elementStatus, setElementStatus, handleBooth
     const box = graphRef.current.getBoundingClientRect();
     setZoom((prev) => {
       let scale = prev.scale * r;
-      scale = scale < 1 ? 1 : scale > 7 ? 7 : scale;
+      scale = scale < 1 ? 1 : scale > 10 ? 10 : scale;
       let w = svgRef.current.clientWidth * prev.scale;
       let h = svgRef.current.clientHeight * prev.scale;
-      let x = (graphRef.current.clientWidth - w) / 2 + prev.x + translate.x;
-      let y = (graphRef.current.clientHeight - h) / 2 + prev.y + translate.y;
+      let x = (graphRef.current.clientWidth - w) / 2 + prev.x + dragStatus.x;
+      let y = (graphRef.current.clientHeight - h) / 2 + prev.y + dragStatus.y;
       let originX = clientX - box.x - x - w / 2;
       let originY = clientY - box.y - y - h / 2;
       let xNew = originX - (originX / prev.scale) * scale + prev.x;
@@ -189,9 +188,9 @@ const Floormap = ({ data, realSize, elementStatus, setElementStatus, handleBooth
   }, [realSize]);
   return (
     <div className="fp-floormap d-flex align-items-center" style={{ minHeight: elementStatus.minHeight }}>
-      <Selector searchCondition={searchCondition} handleSearchChange={handleSearchChange} setTranslate={setTranslate} setZoom={setZoom} graphRef={graphRef} zoomCalculator={zoomCalculator} />
+      <Selector searchCondition={searchCondition} handleSearchChange={handleSearchChange} setDragStatus={setDragStatus} setZoom={setZoom} graphRef={graphRef} svgRef={svgRef} zoomCalculator={zoomCalculator} />
       <div class="fp-viewBox" ref={graphRef} onWheel={handleWheelZoom} onMouseDown={handleStart} onMouseUp={handleEnd} onMouseLeave={handleEnd} onMouseMove={handleMouseDrag} onTouchStart={handleStart} onTouchEnd={handleEnd} onTouchMove={handleTouchDragZoom}>
-        <svg id="floormap" className={dragStatus.moving ? "moving" : ""} style={{ translate: `${zoom.x + translate.x}px ${zoom.y + translate.y}px`, scale: `${zoom.scale}` }} ref={svgRef} width={containerSize.width} height={containerSize.height} viewBox={`${viewBox.x1} ${viewBox.y1} ${viewBox.x2} ${viewBox.y2}`}>
+        <svg id="floormap" className={dragStatus.moving ? "moving" : ""} ref={svgRef} style={{ translate: `${zoom.x + dragStatus.x}px ${zoom.y + dragStatus.y}px`, scale: `${zoom.scale}` }} width={containerSize.width} height={containerSize.height} viewBox={`${viewBox.x1} ${viewBox.y1} ${viewBox.x2} ${viewBox.y2}`}>
           <Elements type="wall" data={data} />
           <Elements type="pillar" data={data} />
           <Elements type="text" data={data} />
@@ -440,8 +439,8 @@ const Sidebar = ({ data, elementStatus, setElementStatus, searchCondition, setSe
       {elementStatus.sidebar || elementStatus.smallScreen ? (
         <>
           <Advanced data={data} searchCondition={searchCondition} setSearchCondition={setSearchCondition} elementStatus={elementStatus} setElementStatus={setElementStatus} defaultViewbox={defaultViewbox} />
-          <ResultList data={data} elementStatus={elementStatus} handleBoothInfo={handleBoothInfo} />
-          <BoothInfo data={data} setSearchCondition={setSearchCondition} elementStatus={elementStatus} setElementStatus={setElementStatus} />
+          <ResultList data={data.filter((d) => d.sidebar)} elementStatus={elementStatus} handleBoothInfo={handleBoothInfo} />
+          <BoothInfo data={data.filter((d) => d.sidebar)} setSearchCondition={setSearchCondition} elementStatus={elementStatus} setElementStatus={setElementStatus} />
         </>
       ) : (
         <></>
@@ -450,12 +449,18 @@ const Sidebar = ({ data, elementStatus, setElementStatus, searchCondition, setSe
   );
 };
 
-const Selector = ({ searchCondition, handleSearchChange, setTranslate, setZoom, graphRef, zoomCalculator }) => {
+const Selector = ({ searchCondition, handleSearchChange, setDragStatus, setZoom, graphRef, svgRef, zoomCalculator }) => {
+  const animation = () => {
+    svgRef.current.style.transition = "0.2s";
+    setTimeout(() => (svgRef.current.style.transition = null), 200);
+  };
   const defaultViewbox = () => {
-    setTranslate({ x: 0, y: 0 });
+    animation();
+    setDragStatus((prev) => ({ ...prev, x: 0, y: 0 }));
     setZoom({ scale: 1, x: 0, y: 0 });
   };
   const handleClickZoom = (r) => {
+    animation();
     const { offsetLeft: x, offsetTop: y, offsetWidth: w, offsetHeight: h } = graphRef.current;
     zoomCalculator(w / 2 + x, h / 2 + y, r);
   };
@@ -560,7 +565,7 @@ const MainArea = () => {
           res.push({ ...d, ...corp, opacity: opacity, draw: i === 0, sidebar: hasText && hasTag });
         });
       } else {
-        res.push({ ...d, opacity: opacity, draw: true, sidebar: false });
+        res.push({ ...d, opacity: opacity, draw: true, sidebar: isType });
       }
     });
     return res;
@@ -629,7 +634,7 @@ const MainArea = () => {
   }, [searchCondition.string]);
   return (
     <div className="fp-main" style={{ "--sidebar-width": `${sidebarWidth}px`, "--tags-height": `${tagsHeight}px` }}>
-      <Sidebar data={filterFloorData.filter((d) => types.includes(d.type) && d.sidebar)} elementStatus={elementStatus} setElementStatus={setElementStatus} searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} handleBoothInfo={handleBoothInfo} />
+      <Sidebar data={filterFloorData.filter((d) => types.includes(d.type))} elementStatus={elementStatus} setElementStatus={setElementStatus} searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} handleBoothInfo={handleBoothInfo} />
       <div className="fp-graph d-flex align-items-center">
         <Header searchCondition={searchCondition} setSearchCondition={setSearchCondition} />
         <Floormap data={filterFloorData.filter((d) => d.floor == searchCondition.floor && d.draw)} realSize={realSize[searchCondition.floor]} elementStatus={elementStatus} setElementStatus={setElementStatus} handleBoothInfo={handleBoothInfo} searchCondition={searchCondition} handleSearchChange={handleSearchChange} />
