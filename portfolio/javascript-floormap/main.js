@@ -122,7 +122,7 @@ const Elements = ({ type, data, size, elementStatus, handleBoothInfo }) => {
 };
 const Floormap = ({ data, realSize, elementStatus, setElementStatus, handleBoothInfo, searchCondition, handleSearchChange }) => {
   const [containerSize, setContainerSize] = useState({ width: realSize.w / 100, height: realSize.h / 100, pageHeight: realSize.h / 100 });
-  const [drugStatus, setDrugStatus] = useState({ moving: false, previousTouch: null, previousTouchLength: null });
+  const [dragStatus, setDragStatus] = useState({ moving: false, previousTouch: null, previousTouchLength: null });
   const [translate, setTranslate] = useState({ x: 0, y: 0 });
   const [zoom, setZoom] = useState({ scale: 1, x: 0, y: 0 });
   const [viewBox, setViewBox] = useState({ x1: 0, y1: 0, x2: 0, y2: 0 });
@@ -130,24 +130,24 @@ const Floormap = ({ data, realSize, elementStatus, setElementStatus, handleBooth
   const svgRef = useRef(null);
   const handleStart = () => {
     if (elementStatus.smallScreen) setElementStatus((prev) => ({ ...prev, sidebar: false }));
-    setDrugStatus((prev) => ({ ...prev, moving: true }));
+    setDragStatus((prev) => ({ ...prev, moving: true }));
   };
-  const handleEnd = () => setDrugStatus({ moving: false, previousTouch: null, previousTouchLength: null });
+  const handleEnd = () => setDragStatus({ moving: false, previousTouch: null, previousTouchLength: null });
   const handleResize = () => {
     const { clientWidth, clientHeight } = graphRef.current;
     setContainerSize({ width: clientWidth, height: clientHeight });
   };
-  const drugCalculator = (x, y) => {
-    if (drugStatus.moving) setTranslate((prev) => ({ x: prev.x + x, y: prev.y + y }));
+  const dragCalculator = (x, y) => {
+    if (dragStatus.moving) setTranslate((prev) => ({ x: prev.x + x, y: prev.y + y }));
   };
-  const handleTouchDrugZoom = (e) => {
+  const handleTouchDragZoom = (e) => {
     e.preventDefault();
     if (e.touches.length === 1) {
       const touch = e.touches[0];
-      setDrugStatus((prev) => ({ ...prev, previousTouch: touch, previousTouchLength: e.touches.length }));
-      if (drugStatus.previousTouch) drugCalculator(touch.clientX - drugStatus.previousTouch.clientX, touch.clientY - drugStatus.previousTouch.clientY);
+      setDragStatus((prev) => ({ ...prev, previousTouch: touch, previousTouchLength: e.touches.length }));
+      if (dragStatus.previousTouch) dragCalculator(touch.clientX - dragStatus.previousTouch.clientX, touch.clientY - dragStatus.previousTouch.clientY);
     } else {
-      if (drugStatus.previousTouchLength && drugStatus.previousTouchLength != length) {
+      if (dragStatus.previousTouchLength && dragStatus.previousTouchLength != length) {
         handleEnd();
         return;
       }
@@ -156,11 +156,11 @@ const Floormap = ({ data, realSize, elementStatus, setElementStatus, handleBooth
       const x = (touch1.clientX + touch2.clientX) / 2;
       const y = (touch1.clientY + touch2.clientY) / 2;
       const d = Math.hypot(touch1.clientX - touch2.clientX, touch1.clientY - touch2.clientY);
-      setDrugStatus((prev) => ({ ...prev, previousTouch: d }));
-      if (drugStatus.previousTouch) zoomCalculator(x, y, d / drugStatus.previousTouch);
+      setDragStatus((prev) => ({ ...prev, previousTouch: d }));
+      if (dragStatus.previousTouch) zoomCalculator(x, y, d / dragStatus.previousTouch);
     }
   };
-  const handleMouseDrug = ({ movementX, movementY }) => drugCalculator(movementX, movementY);
+  const handleMouseDrag = ({ movementX, movementY }) => dragCalculator(movementX, movementY);
   const zoomCalculator = (clientX, clientY, r) => {
     const box = graphRef.current.getBoundingClientRect();
     setZoom((prev) => {
@@ -190,8 +190,8 @@ const Floormap = ({ data, realSize, elementStatus, setElementStatus, handleBooth
   return (
     <div className="fp-floormap d-flex align-items-center" style={{ minHeight: elementStatus.minHeight }}>
       <Selector searchCondition={searchCondition} handleSearchChange={handleSearchChange} setTranslate={setTranslate} setZoom={setZoom} graphRef={graphRef} zoomCalculator={zoomCalculator} />
-      <div class="fp-viewBox" ref={graphRef} onWheel={handleWheelZoom} onMouseDown={handleStart} onMouseUp={handleEnd} onMouseLeave={handleEnd} onMouseMove={handleMouseDrug} onTouchStart={handleStart} onTouchEnd={handleEnd} onTouchMove={handleTouchDrugZoom}>
-        <svg id="floormap" className={drugStatus.moving ? "moving" : ""} style={{ translate: `${zoom.x + translate.x}px ${zoom.y + translate.y}px`, scale: `${zoom.scale}` }} ref={svgRef} width={containerSize.width} height={containerSize.height} viewBox={`${viewBox.x1} ${viewBox.y1} ${viewBox.x2} ${viewBox.y2}`}>
+      <div class="fp-viewBox" ref={graphRef} onWheel={handleWheelZoom} onMouseDown={handleStart} onMouseUp={handleEnd} onMouseLeave={handleEnd} onMouseMove={handleMouseDrag} onTouchStart={handleStart} onTouchEnd={handleEnd} onTouchMove={handleTouchDragZoom}>
+        <svg id="floormap" className={dragStatus.moving ? "moving" : ""} style={{ translate: `${zoom.x + translate.x}px ${zoom.y + translate.y}px`, scale: `${zoom.scale}` }} ref={svgRef} width={containerSize.width} height={containerSize.height} viewBox={`${viewBox.x1} ${viewBox.y1} ${viewBox.x2} ${viewBox.y2}`}>
           <Elements type="wall" data={data} />
           <Elements type="pillar" data={data} />
           <Elements type="text" data={data} />
