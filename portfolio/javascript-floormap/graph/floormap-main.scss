@@ -235,6 +235,9 @@ p {
 #floormap {
   transition: viewBox var(--fp-time);
   touch-action: manipulation;
+  &.moving {
+    cursor: move;
+  }
 }
 
 @media (max-width: 768px) {
