@@ -7,7 +7,6 @@ const swiperAction = ({ currentTarget }) => {
   let w = container.getPropertyValue("--w");
   let min = -(container.getPropertyValue("--n") - w),
     max = 0;
-  console.log(currentTarget.parentElement.querySelector(".swiper-container"));
   i += currentTarget.classList.contains("swiper-next") ? -1 : 1;
   i = i < min ? max : i > max ? min : i;
   container.setProperty("--i", i);
