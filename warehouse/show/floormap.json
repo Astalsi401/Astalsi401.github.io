@@ -114,6 +114,7 @@
   { "type": "text", "floor": 1, "x": 15125, "y": 3650, "text": { "tc": "K", "en": "K" }, "size": { "tc": 1, "en": 1 }, "color": "red" },
   { "type": "text", "floor": 1, "x": 13770, "y": 9780, "text": { "tc": "無齡健康生活主題館", "en": "無齡健康生活主題館" }, "size": { "tc": 0.4, "en": 0.4 }, "color": "black" },
   { "type": "text", "floor": 1, "x": 5510, "y": 7080, "text": { "tc": "臺灣體育用品工業同業公會", "en": "臺灣體育用品工業同業公會" }, "size": { "tc": 0.4, "en": 0.4 }, "color": "black" },
+  { "type": "text", "floor": 1, "x": 5210, "y": 8830, "text": { "tc": "臺北市生物技術服務商業同業公會", "en": "臺北市生物技術服務商業同業公會" }, "size": { "tc": 0.3, "en": 0.3 }, "color": "black" },
   { "type": "text", "floor": 4, "x": 4205, "y": 5905, "text": { "tc": "L", "en": "L" }, "size": { "tc": 1, "en": 1 }, "color": "red" },
   { "type": "text", "floor": 4, "x": 9915, "y": 5905, "text": { "tc": "M", "en": "M" }, "size": { "tc": 1, "en": 1 }, "color": "red" },
   { "type": "text", "floor": 4, "x": 15025, "y": 5905, "text": { "tc": "N", "en": "N" }, "size": { "tc": 1, "en": 1 }, "color": "red" },
@@ -1459,38 +1460,242 @@
   {
     "type": "booth",
     "floor": 1,
-    "w": 1800,
-    "h": 600,
+    "w": 600,
+    "h": 300,
     "x": 4310,
-    "y": 8110,
+    "y": 8410,
     "p": [
-      { "node": "L", "x": 1800, "y": 0 },
-      { "node": "L", "x": 1800, "y": 600 },
-      { "node": "L", "x": 0, "y": 600 },
+      { "node": "L", "x": 600, "y": 0 },
+      { "node": "L", "x": 600, "y": 300 },
+      { "node": "L", "x": 0, "y": 300 },
       { "node": "L", "x": 0, "y": 0 }
     ],
     "id": "I216",
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "預防醫學", "en": "預防醫學" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["臺北市生物技術", "服務商業同業公會"], "en": ["Taipei Biotechnology Service and Business Trade Association"] },
+    "tag": { "tc": ["臺北市生物技術服務商業同業公會"], "en": ["臺北市生物技術服務商業同業公會"] },
+    "text": { "tc": ["艾康"], "en": ["艾康"] },
     "size": { "tc": 0.6, "en": 0.6 },
+    "corps": [
+      {
+        "org": { "tc": "艾康企業股份有限公司", "en": "ICON INC." },
+        "info": { "tc": "為美國普立頓醫療器材亞洲總代理。普立頓為拭子產品全球領導製造者，美國百年大廠，供應各種需求包含診斷、鑑識、基因識別、醫療、環境檢驗、無塵工業...等所需的拭子產品及傳送系統。\n其 PurFlock Ultra 超細淨絨拭子及 HydraFlock 開纖植絨拭子具全球專利。可提供多國註冊及各式認證包含 TFDA, CFDA, CE, FDA, PMDA, MDSAP, ISO … 。\n", "en": "ICON INC. is representative of Puritan Medical Products for whole Asia market. Puritan, as a leading manufacturer for swab products globally, can offer a variety of swab and transport system for different kind of fields including diagnostic, forensic, genetics, medical, environmental inspection, critical environment...etc. and Puritan is an over 100 years USA manufacturer. \nPurFlock Ultra and HydraFlock are worldwide patented. And the registrations and certificates on TFDA, CFDA, CE, FDA, PMDA, MDSAP, ISO … are available." }
+      }
+    ]
+  },
+  {
+    "type": "booth",
+    "floor": 1,
+    "w": 300,
+    "h": 300,
+    "x": 4910,
+    "y": 8410,
+    "p": [
+      { "node": "L", "x": 300, "y": 0 },
+      { "node": "L", "x": 300, "y": 300 },
+      { "node": "L", "x": 0, "y": 300 },
+      { "node": "L", "x": 0, "y": 0 }
+    ],
+    "id": "I220",
+    "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
+    "topic": { "tc": "預防醫學", "en": "預防醫學" },
+    "tag": { "tc": ["臺北市生物技術服務商業同業公會"], "en": ["臺北市生物技術服務商業同業公會"] },
+    "text": { "tc": ["蘭卉"], "en": ["蘭卉"] },
+    "size": { "tc": 0.4, "en": 0.4 },
+    "corps": [
+      {
+        "org": { "tc": "蘭卉生物科技股份有限公司", "en": "蘭卉生物科技股份有限公司" },
+        "info": { "tc": "", "en": "" }
+      }
+    ]
+  },
+  {
+    "type": "booth",
+    "floor": 1,
+    "w": 300,
+    "h": 300,
+    "x": 5510,
+    "y": 8410,
+    "p": [
+      { "node": "L", "x": 300, "y": 0 },
+      { "node": "L", "x": 300, "y": 300 },
+      { "node": "L", "x": 0, "y": 300 },
+      { "node": "L", "x": 0, "y": 0 }
+    ],
+    "id": "I224",
+    "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
+    "topic": { "tc": "預防醫學", "en": "預防醫學" },
+    "tag": { "tc": ["臺北市生物技術服務商業同業公會"], "en": ["臺北市生物技術服務商業同業公會"] },
+    "text": { "tc": ["澄風"], "en": ["澄風"] },
+    "size": { "tc": 0.4, "en": 0.4 },
+    "corps": [
+      {
+        "org": { "tc": "澄風科技有限公司", "en": "澄風科技有限公司" },
+        "info": { "tc": "", "en": "" }
+      }
+    ]
+  },
+  {
+    "type": "booth",
+    "floor": 1,
+    "w": 300,
+    "h": 300,
+    "x": 5810,
+    "y": 8410,
+    "p": [
+      { "node": "L", "x": 300, "y": 0 },
+      { "node": "L", "x": 300, "y": 300 },
+      { "node": "L", "x": 0, "y": 300 },
+      { "node": "L", "x": 0, "y": 0 }
+    ],
+    "id": "I226",
+    "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
+    "topic": { "tc": "預防醫學", "en": "預防醫學" },
+    "tag": { "tc": ["臺北市生物技術服務商業同業公會"], "en": ["臺北市生物技術服務商業同業公會"] },
+    "text": { "tc": ["生技", "公會"], "en": ["生技", "公會"] },
+    "size": { "tc": 0.35, "en": 0.35 },
     "corps": [
       {
         "org": { "tc": "臺北市生物技術服務商業同業公會", "en": "Taipei Biotechnology Service and Business Trade Association" },
         "info": { "tc": "基因工程、生物晶片、生物資訊及生物醫材", "en": "Genetic Engineering、biochip、bioinformatics、biomaterial" }
       },
       {
-        "org": { "tc": "艾康企業股份有限公司", "en": "ICON INC." },
-        "info": { "tc": "為美國普立頓醫療器材亞洲總代理。普立頓為拭子產品全球領導製造者，美國百年大廠，供應各種需求包含診斷、鑑識、基因識別、醫療、環境檢驗、無塵工業...等所需的拭子產品及傳送系統。\n其 PurFlock Ultra 超細淨絨拭子及 HydraFlock 開纖植絨拭子具全球專利。可提供多國註冊及各式認證包含 TFDA, CFDA, CE, FDA, PMDA, MDSAP, ISO … 。\n", "en": "ICON INC. is representative of Puritan Medical Products for whole Asia market. Puritan, as a leading manufacturer for swab products globally, can offer a variety of swab and transport system for different kind of fields including diagnostic, forensic, genetics, medical, environmental inspection, critical environment...etc. and Puritan is an over 100 years USA manufacturer. \nPurFlock Ultra and HydraFlock are worldwide patented. And the registrations and certificates on TFDA, CFDA, CE, FDA, PMDA, MDSAP, ISO … are available." }
+        "org": { "tc": "普生股份有限公司", "en": "普生股份有限公司" },
+        "info": { "tc": "", "en": "" }
       },
       {
-        "org": { "tc": "景岳生物科技股份有限公司", "en": "GenMont Biotech Inc." },
-        "info": { "tc": "國內股票上市公司景岳生技以臺灣景岳為營運總部，專注研究和製造對人類健康有益處的好細菌，並於中國成立「景岳生物科技（中國）有限公司」，全力拓展兩岸乳酸菌飲品、人體保健乳酸菌粉的推廣與銷售，廠房座落臺灣南部科學園區，擁有優秀專業的研發人才、專精成熟的技術、頂尖完善的生產設備，豐富多元之專業菌種庫，多年來專注研究新功能性菌種，提供優質益生菌粉與客製化保健品代工服務。", "en": "Constant evolution with the spirit of “Providing innovative service, healing people by advanced biotechnology”, GenMont Biotech owns many experienced professionals from across various fields such as nutrition, food science, and microbiology in our research team and focus on developing new functional strains, investigated the comprehensive applications of probiotics (e.g. dietary supplements, beverages with lactic acid, toothpaste, cream etc.) that efficacious functions were scientifically proven by academics institutes and clinical trials. Under strict quality control standards and professional R&D, we can provide all-rounded OEM/ODM service and high quality finished products to satisfy our customers’ demand." }
-      },
+        "org": { "tc": "純真山苦瓜生技商行", "en": "純真山苦瓜生技商行" },
+        "info": { "tc": "", "en": "" }
+      }
+    ]
+  },
+  {
+    "type": "booth",
+    "floor": 1,
+    "w": 300,
+    "h": 300,
+    "x": 4310,
+    "y": 8110,
+    "p": [
+      { "node": "L", "x": 300, "y": 0 },
+      { "node": "L", "x": 300, "y": 300 },
+      { "node": "L", "x": 0, "y": 300 },
+      { "node": "L", "x": 0, "y": 0 }
+    ],
+    "id": "I315",
+    "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
+    "topic": { "tc": "預防醫學", "en": "預防醫學" },
+    "tag": { "tc": ["臺北市生物技術服務商業同業公會"], "en": ["臺北市生物技術服務商業同業公會"] },
+    "text": { "tc": ["伊達"], "en": ["伊達"] },
+    "size": { "tc": 0.4, "en": 0.4 },
+    "corps": [
       {
         "org": { "tc": "伊達醫療器材科技股份有限公司", "en": "EDA Medical Devices Technology Inc." },
         "info": { "tc": "以創新、專業、敬業為品質政策，提供最尖端的醫療器材產品為方向，朝向提升健康的目標，點亮健康之光。\n主要研發新的醫療光電雷射設備: \n1.非藥物之生理反應原理作為輔助治療儀器，以減低藥物的依賴、因而減少使用 藥物時所產生的副作用，以及預防慢性病的發病率。\n2.微型探針光譜檢測,運用於新藥開發及臨床微創即時檢測。\n", "en": "Taking innovation, professionalism and dedication as the quality policy, providing the most cutting-edge medical equipment products as the direction, aiming at the goal of improving health, and lighting up the light of health.\nMainly develop new medical photoelectric laser equipment:\n1. The principle of non-drug physiological response is used as an auxiliary treatment device to reduce drug dependence, thereby reducing the side effects of drug use, and preventing the incidence of chronic diseases.\n2. Micro-probe spectral detection, used in the development of new drugs and clinical minimally invasive real-time detection." }
+      }
+    ]
+  },
+  {
+    "type": "booth",
+    "floor": 1,
+    "w": 300,
+    "h": 300,
+    "x": 4610,
+    "y": 8110,
+    "p": [
+      { "node": "L", "x": 300, "y": 0 },
+      { "node": "L", "x": 300, "y": 300 },
+      { "node": "L", "x": 0, "y": 300 },
+      { "node": "L", "x": 0, "y": 0 }
+    ],
+    "id": "I317",
+    "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
+    "topic": { "tc": "預防醫學", "en": "預防醫學" },
+    "tag": { "tc": ["臺北市生物技術服務商業同業公會"], "en": ["臺北市生物技術服務商業同業公會"] },
+    "text": { "tc": ["艾爾威"], "en": ["艾爾威"] },
+    "size": { "tc": 0.3, "en": 0.3 },
+    "corps": [
+      {
+        "org": { "tc": "艾爾威生物科技有限公司", "en": "艾爾威生物科技有限公司" },
+        "info": { "tc": "", "en": "" }
+      }
+    ]
+  },
+  {
+    "type": "booth",
+    "floor": 1,
+    "w": 300,
+    "h": 300,
+    "x": 4910,
+    "y": 8110,
+    "p": [
+      { "node": "L", "x": 300, "y": 0 },
+      { "node": "L", "x": 300, "y": 300 },
+      { "node": "L", "x": 0, "y": 300 },
+      { "node": "L", "x": 0, "y": 0 }
+    ],
+    "id": "I319",
+    "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
+    "topic": { "tc": "預防醫學", "en": "預防醫學" },
+    "tag": { "tc": ["臺北市生物技術服務商業同業公會"], "en": ["臺北市生物技術服務商業同業公會"] },
+    "text": { "tc": ["景岳"], "en": ["景岳"] },
+    "size": { "tc": 0.4, "en": 0.4 },
+    "corps": [
+      {
+        "org": { "tc": "景岳生物科技股份有限公司", "en": "GenMont Biotech Inc." },
+        "info": { "tc": "國內股票上市公司景岳生技以臺灣景岳為營運總部，專注研究和製造對人類健康有益處的好細菌，並於中國成立「景岳生物科技（中國）有限公司」，全力拓展兩岸乳酸菌飲品、人體保健乳酸菌粉的推廣與銷售，廠房座落臺灣南部科學園區，擁有優秀專業的研發人才、專精成熟的技術、頂尖完善的生產設備，豐富多元之專業菌種庫，多年來專注研究新功能性菌種，提供優質益生菌粉與客製化保健品代工服務。", "en": "Constant evolution with the spirit of “Providing innovative service, healing people by advanced biotechnology”, GenMont Biotech owns many experienced professionals from across various fields such as nutrition, food science, and microbiology in our research team and focus on developing new functional strains, investigated the comprehensive applications of probiotics (e.g. dietary supplements, beverages with lactic acid, toothpaste, cream etc.) that efficacious functions were scientifically proven by academics institutes and clinical trials. Under strict quality control standards and professional R&D, we can provide all-rounded OEM/ODM service and high quality finished products to satisfy our customers’ demand." }
+      }
+    ]
+  },
+  {
+    "type": "booth",
+    "floor": 1,
+    "w": 300,
+    "h": 300,
+    "x": 5510,
+    "y": 8110,
+    "p": [
+      { "node": "L", "x": 300, "y": 0 },
+      { "node": "L", "x": 300, "y": 300 },
+      { "node": "L", "x": 0, "y": 300 },
+      { "node": "L", "x": 0, "y": 0 }
+    ],
+    "id": "I323",
+    "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
+    "topic": { "tc": "預防醫學", "en": "預防醫學" },
+    "tag": { "tc": ["臺北市生物技術服務商業同業公會"], "en": ["臺北市生物技術服務商業同業公會"] },
+    "text": { "tc": ["純真"], "en": ["純真"] },
+    "size": { "tc": 0.4, "en": 0.4 },
+    "corps": [
+      {
+        "org": { "tc": "純真", "en": "純真" },
+        "info": { "tc": "", "en": "" }
+      }
+    ]
+  },
+  {
+    "type": "booth",
+    "floor": 1,
+    "w": 300,
+    "h": 300,
+    "x": 5810,
+    "y": 8110,
+    "p": [
+      { "node": "L", "x": 300, "y": 0 },
+      { "node": "L", "x": 300, "y": 300 },
+      { "node": "L", "x": 0, "y": 300 },
+      { "node": "L", "x": 0, "y": 0 }
+    ],
+    "id": "I325",
+    "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
+    "topic": { "tc": "預防醫學", "en": "預防醫學" },
+    "tag": { "tc": ["臺北市生物技術服務商業同業公會"], "en": ["臺北市生物技術服務商業同業公會"] },
+    "text": { "tc": ["同心"], "en": ["同心"] },
+    "size": { "tc": 0.4, "en": 0.4 },
+    "corps": [
+      {
+        "org": { "tc": "同心生物科技股份有限公司 ", "en": "同心生物科技股份有限公司 " },
+        "info": { "tc": "", "en": "" }
       }
     ]
   },
@@ -2050,24 +2255,50 @@
     "type": "booth",
     "floor": 1,
     "w": 600,
-    "h": 1200,
+    "h": 600,
     "x": 6110,
     "y": 3910,
     "p": [
       { "node": "L", "x": 600, "y": 0 },
-      { "node": "L", "x": 600, "y": 1200 },
-      { "node": "L", "x": 0, "y": 1200 },
+      { "node": "L", "x": 600, "y": 600 },
+      { "node": "L", "x": 0, "y": 600 },
+      { "node": "L", "x": 0, "y": 0 }
+    ],
+    "id": "I727a",
+    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["臺安", "醫院"], "en": ["臺安", "醫院"] },
+    "size": { "tc": 0.7, "en": 0.7 },
+    "corps": [
+      {
+        "org": { "tc": "臺安醫院", "en": "臺安醫院" },
+        "info": { "tc": "", "en": "" }
+      }
+    ]
+  },
+  {
+    "type": "booth",
+    "floor": 1,
+    "w": 600,
+    "h": 600,
+    "x": 6110,
+    "y": 4510,
+    "p": [
+      { "node": "L", "x": 600, "y": 0 },
+      { "node": "L", "x": 600, "y": 600 },
+      { "node": "L", "x": 0, "y": 600 },
       { "node": "L", "x": 0, "y": 0 }
     ],
     "id": "I628",
     "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["臺", "安", "醫", "院"], "en": ["臺", "安", "醫", "院"] },
-    "size": { "tc": 0.8, "en": 0.8 },
+    "text": { "tc": ["4"], "en": ["4"] },
+    "size": { "tc": 0.7, "en": 0.7 },
     "corps": [
       {
-        "org": { "tc": "臺安醫院", "en": "臺安醫院" },
+        "org": { "tc": "", "en": "" },
         "info": { "tc": "", "en": "" }
       }
     ]
@@ -3820,7 +4051,7 @@
     "floor": 1,
     "w": 1500,
     "h": 600,
-    "x": 12720,
+    "x": 13320,
     "y": 9010,
     "p": [
       { "node": "L", "x": 1500, "y": 0 },
@@ -3828,7 +4059,7 @@
       { "node": "L", "x": 0, "y": 600 },
       { "node": "L", "x": 0, "y": 0 }
     ],
-    "id": "K102",
+    "id": "K106",
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "無齡長照", "en": "無齡長照" },
     "tag": { "tc": ["無齡健康生活主題館"], "en": ["無齡健康生活主題館"] },
@@ -4262,7 +4493,7 @@
     "floor": 1,
     "w": 600,
     "h": 600,
-    "x": 14220,
+    "x": 12720,
     "y": 9010,
     "p": [
       { "node": "L", "x": 600, "y": 0 },
@@ -4270,7 +4501,7 @@
       { "node": "L", "x": 0, "y": 600 },
       { "node": "L", "x": 0, "y": 0 }
     ],
-    "id": "K112",
+    "id": "K102",
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "無齡長照", "en": "無齡長照" },
     "tag": { "tc": ["無齡健康生活主題館"], "en": ["無齡健康生活主題館"] },
@@ -4946,13 +5177,13 @@
   {
     "type": "booth",
     "floor": 1,
-    "w": 900,
+    "w": 600,
     "h": 900,
     "x": 17230,
     "y": 3910,
     "p": [
-      { "node": "L", "x": 900, "y": 0 },
-      { "node": "L", "x": 900, "y": 900 },
+      { "node": "L", "x": 600, "y": 0 },
+      { "node": "L", "x": 600, "y": 900 },
       { "node": "L", "x": 0, "y": 900 },
       { "node": "L", "x": 0, "y": 0 }
     ],
@@ -4961,11 +5192,37 @@
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
     "text": { "tc": ["佳銘", "節能"], "en": ["CARVING ENERGY CONTROL"] },
-    "size": { "tc": 1.0, "en": 1.0 },
+    "size": { "tc": 0.7, "en": 0.7 },
     "corps": [
       {
         "org": { "tc": "佳銘節能股份有限公司", "en": "CARVING ENERGY CONTROL CO., LTD." },
         "info": { "tc": "EECP", "en": "EECP" }
+      }
+    ]
+  },
+  {
+    "type": "booth",
+    "floor": 1,
+    "w": 300,
+    "h": 900,
+    "x": 17830,
+    "y": 3910,
+    "p": [
+      { "node": "L", "x": 300, "y": 0 },
+      { "node": "L", "x": 300, "y": 900 },
+      { "node": "L", "x": 0, "y": 900 },
+      { "node": "L", "x": 0, "y": 0 }
+    ],
+    "id": "K731",
+    "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["2", "(3)"], "en": ["2", "(3)"] },
+    "size": { "tc": 0.7, "en": 0.7 },
+    "corps": [
+      {
+        "org": { "tc": "", "en": "" },
+        "info": { "tc": "", "en": "" }
       }
     ]
   },
@@ -8991,25 +9248,25 @@
     "type": "booth",
     "floor": 4,
     "w": 900,
-    "h": 900,
+    "h": 600,
     "x": 1500,
-    "y": 4700,
+    "y": 5000,
     "p": [
       { "node": "L", "x": 900, "y": 0 },
-      { "node": "L", "x": 900, "y": 900 },
-      { "node": "L", "x": 0, "y": 900 },
+      { "node": "L", "x": 900, "y": 600 },
+      { "node": "L", "x": 0, "y": 600 },
       { "node": "L", "x": 0, "y": 0 }
     ],
     "id": "L802",
     "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
-    "topic": { "tc": "", "en": "" },
+    "topic": { "tc": "數位醫療", "en": "數位醫療" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["9"], "en": ["9"] },
-    "size": { "tc": 1.0, "en": 1.0 },
+    "text": { "tc": ["資策會"], "en": ["Institute for Information Industry"] },
+    "size": { "tc": 1, "en": 0.7 },
     "corps": [
       {
-        "org": { "tc": "", "en": "" },
-        "info": { "tc": "", "en": "" }
+        "org": { "tc": "財團法人資訊工業策進會", "en": "Institute for Information Industry" },
+        "info": { "tc": "胸部X光肺結核病變偵測辨識技術、手腕X光骨折偵測辨識技術、乳房X光病變偵測辨識技術、乳攝品質AI輔助評量系統", "en": "待補充" }
       }
     ]
   },
@@ -9092,13 +9349,13 @@
   {
     "type": "booth",
     "floor": 4,
-    "w": 900,
+    "w": 300,
     "h": 600,
     "x": 1500,
     "y": 4100,
     "p": [
-      { "node": "L", "x": 900, "y": 0 },
-      { "node": "L", "x": 900, "y": 600 },
+      { "node": "L", "x": 300, "y": 0 },
+      { "node": "L", "x": 300, "y": 600 },
       { "node": "L", "x": 0, "y": 600 },
       { "node": "L", "x": 0, "y": 0 }
     ],
@@ -9106,7 +9363,59 @@
     "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["6"], "en": ["6"] },
+    "text": { "tc": [""], "en": [""] },
+    "size": { "tc": 1.0, "en": 1.0 },
+    "corps": [
+      {
+        "org": { "tc": "", "en": "" },
+        "info": { "tc": "", "en": "" }
+      }
+    ]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 600,
+    "h": 600,
+    "x": 1800,
+    "y": 4100,
+    "p": [
+      { "node": "L", "x": 600, "y": 0 },
+      { "node": "L", "x": 600, "y": 600 },
+      { "node": "L", "x": 0, "y": 600 },
+      { "node": "L", "x": 0, "y": 0 }
+    ],
+    "id": "L904",
+    "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": [""], "en": [""] },
+    "size": { "tc": 1.0, "en": 1.0 },
+    "corps": [
+      {
+        "org": { "tc": "", "en": "" },
+        "info": { "tc": "", "en": "" }
+      }
+    ]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 900,
+    "h": 300,
+    "x": 1500,
+    "y": 4700,
+    "p": [
+      { "node": "L", "x": 900, "y": 0 },
+      { "node": "L", "x": 900, "y": 300 },
+      { "node": "L", "x": 0, "y": 300 },
+      { "node": "L", "x": 0, "y": 0 }
+    ],
+    "id": "L901a",
+    "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": [""], "en": [""] },
     "size": { "tc": 1.0, "en": 1.0 },
     "corps": [
       {
@@ -9443,25 +9752,77 @@
     "type": "booth",
     "floor": 4,
     "w": 600,
-    "h": 600,
+    "h": 300,
     "x": 12320,
-    "y": 2300,
+    "y": 2600,
     "p": [
       { "node": "L", "x": 600, "y": 0 },
-      { "node": "L", "x": 600, "y": 600 },
-      { "node": "L", "x": 0, "y": 600 },
+      { "node": "L", "x": 600, "y": 300 },
+      { "node": "L", "x": 0, "y": 300 },
       { "node": "L", "x": 0, "y": 0 }
     ],
     "id": "M1134",
     "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
-    "topic": { "tc": "數位醫療", "en": "數位醫療" },
+    "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["資策會"], "en": ["Institute for Information Industry"] },
-    "size": { "tc": 0.7, "en": 0.7 },
+    "text": { "tc": ["台灣易格斯"], "en": ["台灣易格斯"] },
+    "size": { "tc": 0.4, "en": 0.4 },
     "corps": [
       {
-        "org": { "tc": "財團法人資訊工業策進會", "en": "Institute for Information Industry" },
-        "info": { "tc": "胸部X光肺結核病變偵測辨識技術、手腕X光骨折偵測辨識技術、乳房X光病變偵測辨識技術、乳攝品質AI輔助評量系統", "en": "待補充" }
+        "org": { "tc": "台灣易格斯", "en": "台灣易格斯" },
+        "info": { "tc": "", "en": "" }
+      }
+    ]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 300,
+    "h": 300,
+    "x": 12320,
+    "y": 2300,
+    "p": [
+      { "node": "L", "x": 300, "y": 0 },
+      { "node": "L", "x": 300, "y": 300 },
+      { "node": "L", "x": 0, "y": 300 },
+      { "node": "L", "x": 0, "y": 0 }
+    ],
+    "id": "M1233",
+    "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": [""], "en": [""] },
+    "size": { "tc": 0.4, "en": 0.4 },
+    "corps": [
+      {
+        "org": { "tc": "", "en": "" },
+        "info": { "tc": "", "en": "" }
+      }
+    ]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 300,
+    "h": 300,
+    "x": 12620,
+    "y": 2300,
+    "p": [
+      { "node": "L", "x": 300, "y": 0 },
+      { "node": "L", "x": 300, "y": 300 },
+      { "node": "L", "x": 0, "y": 300 },
+      { "node": "L", "x": 0, "y": 0 }
+    ],
+    "id": "M1235",
+    "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": [""], "en": [""] },
+    "size": { "tc": 0.4, "en": 0.4 },
+    "corps": [
+      {
+        "org": { "tc": "", "en": "" },
+        "info": { "tc": "", "en": "" }
       }
     ]
   },
@@ -10136,11 +10497,11 @@
     "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": [""], "en": [""] },
+    "text": { "tc": ["BRELYON, INC."], "en": ["BRELYON, INC."] },
     "size": { "tc": 0.4, "en": 0.4 },
     "corps": [
       {
-        "org": { "tc": "", "en": "" },
+        "org": { "tc": "BRELYON, INC.", "en": "BRELYON, INC." },
         "info": { "tc": "", "en": "" }
       }
     ]
@@ -11461,11 +11822,11 @@
     "cat": { "tc": "年度主題館", "en": "Reserved" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["2023", "頂尖醫療主題館"], "en": ["2023", "頂尖醫療主題館"] },
+    "text": { "tc": ["TOP醫療在臺灣", "-頂尖醫療主題館"], "en": ["TOP醫療在臺灣", "-頂尖醫療主題館"] },
     "size": { "tc": 1.0, "en": 1.0 },
     "corps": [
       {
-        "org": { "tc": "2023頂尖醫療主題館", "en": "2023頂尖醫療主題館" },
+        "org": { "tc": "TOP醫療在臺灣-頂尖醫療主題館", "en": "TOP醫療在臺灣-頂尖醫療主題館" },
         "info": { "tc": "", "en": "" }
       }
     ]
@@ -13339,11 +13700,11 @@
     "cat": { "tc": "精準醫療展區", "en": "Biotech" },
     "topic": { "tc": "精準檢測", "en": "精準檢測" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["4"], "en": ["4"] },
-    "size": { "tc": 0.7, "en": 0.7 },
+    "text": { "tc": ["基龍米克斯", "生物科技"], "en": ["基龍米克斯", "生物科技"] },
+    "size": { "tc": 0.4, "en": 0.4 },
     "corps": [
       {
-        "org": { "tc": "", "en": "" },
+        "org": { "tc": "基龍米克斯生物科技", "en": "基龍米克斯生物科技" },
         "info": { "tc": "", "en": "" }
       }
     ]
@@ -14001,11 +14362,11 @@
     "cat": { "tc": "精準醫療展區", "en": "Biotech" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["經濟部", "工業局"], "en": ["經濟部", "工業局"] },
+    "text": { "tc": ["經濟部", "產業", "發展署"], "en": ["經濟部", "產業", "發展署"] },
     "size": { "tc": 0.6, "en": 0.6 },
     "corps": [
       {
-        "org": { "tc": "", "en": "" },
+        "org": { "tc": "經濟部產業發展署", "en": "經濟部產業發展署" },
         "info": { "tc": "", "en": "" }
       }
     ]
@@ -14076,66 +14437,23 @@
         "org": { "tc": "國璽幹細胞應用技術股份有限公司", "en": "Gwo Xi Stem Cell Applied Technology Co., Ltd." },
         "info": { "tc": "國璽幹細胞應用技術股份有限公司於2011年進駐新竹生醫園區，投入幹細胞應用技術開發及幹細胞製劑，克服目前尚未獲得滿足的醫療需求。透過整合醫藥級幹細胞製劑生產技術平臺與諸多核心技術，我們已開發多項專有製程技術，並且已將四支幹細胞新藥推動進入臨床試驗。為擴大幹細胞製劑量產規模及提升品質穩定度，國璽除了從製造開始就採用模組製程的思維外，於園區內打造【PIC/S GMP幹細胞製劑藥廠】，穩健地走向規模化量產，同時持續拓展細胞治療領域的開發，與強化細胞治療產業鏈上、中、下游的佈局。", "en": "Gwo Xi Stem Cell Company has established the R&D center for cell therapy development since 2011. We are committed to developing stem cell medicines that have the potential to help patients with unmet medical needs. Our production platform fully comply with medical regulations (Good Tissue Practice, GTP) in Taiwan. We have three clinical trials are ongoing in Taiwan, and one clinical trial is ongoing in Vietnam by now. In the future, we will have established the PIC/S GMP grade stem cell preparation factory (15,225 m2 built-out space) in Hsinchu Biomedical Science Park in Taiwan to put stem cell-based medicinal products into practice." }
       },
-      {
-        "org": { "tc": "茂士榮", "en": "茂士榮" },
-        "info": { "tc": "", "en": "" }
-      },
-      {
-        "org": { "tc": "遠傳電信", "en": "遠傳電信" },
-        "info": { "tc": "", "en": "" }
-      },
-      {
-        "org": { "tc": "宏潤", "en": "宏潤" },
-        "info": { "tc": "", "en": "" }
-      },
-      {
-        "org": { "tc": "遠東醫電", "en": "遠東醫電" },
-        "info": { "tc": "", "en": "" }
-      },
-      {
-        "org": { "tc": "尖端", "en": "尖端" },
-        "info": { "tc": "", "en": "" }
-      },
-      {
-        "org": { "tc": "商之器", "en": "商之器" },
-        "info": { "tc": "", "en": "" }
-      },
-      {
-        "org": { "tc": "台灣粒線體", "en": "台灣粒線體" },
-        "info": { "tc": "", "en": "" }
-      },
-      {
-        "org": { "tc": "雅培", "en": "雅培" },
-        "info": { "tc": "", "en": "" }
-      },
-      {
-        "org": { "tc": "雄鷹", "en": "雄鷹" },
-        "info": { "tc": "", "en": "" }
-      },
-      {
-        "org": { "tc": "宏騏", "en": "宏騏" },
-        "info": { "tc": "", "en": "" }
-      },
-      {
-        "org": { "tc": "長弘", "en": "長弘" },
-        "info": { "tc": "", "en": "" }
-      },
-      {
-        "org": { "tc": "鈦隼", "en": "鈦隼" },
-        "info": { "tc": "", "en": "" }
-      },
-      {
-        "org": { "tc": "慈濟大學", "en": "慈濟大學" },
-        "info": { "tc": "", "en": "" }
-      },
-      {
-        "org": { "tc": "慈濟科技大學", "en": "慈濟科技大學" },
-        "info": { "tc": "", "en": "" }
-      },
-      {
-        "org": { "tc": "大林慈濟醫院", "en": "大林慈濟醫院" },
-        "info": { "tc": "", "en": "" }
-      }
+      { "org": { "tc": "茂士榮(生醫)", "en": "茂士榮(生醫)" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "遠傳電信", "en": "遠傳電信" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "宏潤", "en": "宏潤" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "通用幹細胞", "en": "通用幹細胞" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "遠東醫電", "en": "遠東醫電" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "尖端(醫)", "en": "尖端(醫)" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "商之器", "en": "商之器" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "台灣粒線體", "en": "台灣粒線體" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "雅培", "en": "雅培" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "雄鷹", "en": "雄鷹" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "宏騏", "en": "宏騏" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "長弘", "en": "長弘" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "鈦隼", "en": "鈦隼" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "慈濟大學", "en": "慈濟大學" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "慈濟科技大學", "en": "慈濟科技大學" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "大林慈濟醫院", "en": "大林慈濟醫院" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "衛生福利部", "en": "衛生福利部" }, "info": { "tc": "", "en": "" } }
     ]
   },
   {
@@ -14165,7 +14483,25 @@
       {
         "org": { "tc": "開啟基因股份有限公司", "en": "CatchGene Co., Ltd. " },
         "info": { "tc": "市面上現有的自動化核酸純化系統無法產出符合”精準醫療應用”的高濃度、高純度核酸。因缺點有:1.濃度太低 2.洗脫液中含有過多抑制物 3.易產生交叉汙染。開啟基因突破既有的自動化純化機臺磁珠技術，iCatcher 12 自動化循環游離核酸純化儀將膜柱技術引入自動化純化系統。\n優點是：\n1.\t大體積樣本上機 \n2.\t產出適合下游分析系統的高純度核酸 \n3.\t一個樣本以一直線方向進行純化，減少交叉汙染的機會 \n4.\t上機程序簡單\n", "en": "Existing automated nucleic acid purification systems cannot produce high-quality Eluate fit for Precision Medicine market.\nDisadvantage:\n•\tLow Concentration \n•\tToo Much Inhibitors inside\n•\tCross-Contamination \nBreaking through the existing beads technology, iCatcher 12 uses membrane column technology instead. \n•\tLarge Sample Input \n•\tHigh Purity for Downstream Analysis \n•\tOne Sample in One Line\n•\tEasy Set Up \n" }
-      }
+      },
+      {
+        "org": { "tc": "巨量移動科技有限公司", "en": "Big Data Mobile Company" },
+        "info": { "tc": "", "en": "" }
+      },
+      {
+        "org": { "tc": "瑞基海洋生物科技股份有限公司", "en": "GeneReach Biotechnology Corp." },
+        "info": { "tc": "SATLite從樣本到文庫製備，一站式自動化體驗。\n靈活自動化吸取系統，可同時處裡1-8個樣本，整合核酸萃取及文庫建構。\n", "en": "SATLite\nCLICK-N-GO, From sample to library\nOptimize vaccine program\nEnhance biosecurity\nReduce antibiotics usage" }
+      },
+      {
+        "org": { "tc": "臺灣骨王生技股份有限公司", "en": "Taiwan Mian Orthopaedic Biotechnology Co., Ltd." },
+        "info": { "tc": "為減少對正常組織的傷害，醫師需在狹小視野及有限的操作空間進行複雜的脊椎手術，因此更需要利用導航系統的引導直接到達病灶處，導航畫面即時 AR 投影呈現病患體內資訊在醫師眼前，讓醫師專注在患者身上的手術區域，提升微創手術的安全性和精準度。", "en": "In order to reduce damage to normal tissues, doctors need to perform complex spinal surgery in a narrow field of view and limited operating space. Therefore, it is even more necessary to use the guidance of the navigation system to directly reach the lesion. The real-time AR projection of the navigation screen presents the information in the patient's body in front of the doctor's eyes allowing doctors to focus on the surgical area of the patient, improving the safety and accuracy of minimally invasive surgery." }
+      },
+      {
+        "org": { "tc": "全微精密股份有限公司", "en": "Microware Precision Co., Ltd." },
+        "info": { "tc": "後補", "en": "後補" }
+      },
+      { "org": { "tc": "長聖國際", "en": "長聖國際" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "醫乘智慧", "en": "醫乘智慧" }, "info": { "tc": "", "en": "" } }
     ]
   },
   {
@@ -14191,7 +14527,19 @@
       {
         "org": { "tc": "國家科學及技術委員會新竹科學園區管理局", "en": "Hsinchu Science Park Bureau National Science Technology Council" },
         "info": { "tc": "參展的竹科宜蘭園區新創公司包含有針對需要農村場域試驗及地方轉型工作之農民，提供農村場域及客戶媒合及銀柳提煉醫材的蘭陽美人智農生技有限公司、針對有簡化採購流程及高度耐用性聲學產品之客戶提供高階耳機、耳麥等音頻產品/醫療服務的亞立田股份有限公司、提供感測、雲端AI智能控制系統的一站式空氣治理服務的翔聿安科技股份有限公司等九家新創廠家，各家公司均於展會中竹科宜蘭園區專區展出其特色產品與服務。", "en": "The exhibiting startups at the Zhubei-Yilan Park in the Hsinchu Science Park include nine companies that cater to the needs of farmers requiring rural field testing and local transformation initiatives. These companies showcase their distinctive products and services at the exhibition. The featured startups are:\nLanyang Beauty Intelligent Agriculture Biotechnology Co., Ltd.:\nLanyang Beauty focuses on providing rural field resources and customer matchmaking for farmers, as well as extracting medical materials from silver willow.\nArlatian Co., Ltd.:\nArlatian specializes in delivering high-end audio products/medical services such as advanced headphones and earphones with simplified procurement processes and high durability for customers.\nXiangyu An Technology Co., Ltd.:\nXiangyu An offers a comprehensive air treatment service, integrating sensors, cloud-based AI intelligent control systems, and delivering solutions for air quality management.\nThese companies, along with six others, showcase their distinctive products and services within the dedicated Zhubei-Yilan Park section of the exhibition." }
-      }
+      },
+      { "org": { "tc": "宏森生醫", "en": "宏森生醫" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "德膚", "en": "德膚" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "美落佳", "en": "美落佳" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "亞立田", "en": "亞立田" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "翔聿安", "en": "翔聿安" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "元健大和", "en": "元健大和" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "和曜生技", "en": "和曜生技" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "台灣基康", "en": "台灣基康" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "瀚源生醫", "en": "瀚源生醫" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "瀚生醫電", "en": "瀚生醫電" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "捷絡", "en": "捷絡" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "群曜醫電", "en": "群曜醫電" }, "info": { "tc": "", "en": "" } }
     ]
   },
   {
@@ -14244,26 +14592,23 @@
         "org": { "tc": "國家科學及技術委員會南部科學園區管理局", "en": "Southern Taiwan Science Park Bureau, National Science and Technology Council" },
         "info": { "tc": "南科生醫產業聚落目前共有87家廠商，為臺灣尖端生醫研發技術之產業聚落，每年創造近百億產值，年成長率達15%以上。", "en": "There are over 87 tenant companies in the iBioMed Cluster of the Southern Taiwan Science Park (STSP), one of the largest research and development sites of advanced biomedical technologies in Taiwan, creating billions (NT$) of production values each year, with an annual growth rate over 15%." }
       },
-      {
-        "org": { "tc": "財團法人塑膠工業技術發展中心", "en": "Plastics Industry Development Center" },
-        "info": { "tc": "創新「一站式」整合服務  塑膠中心展現高分子醫材研發製作能量\n近年來隨著人口老化及創新醫療技術日新月異，醫療器材產業已成為國家重點發展的推動項目。財團法人塑膠工業技術發展中心(PIDC)成立於1993年，從2000年開始，在醫材領域耕耘多年，扮演臺灣高分子醫材領域發展的重要推手，已逐步建構完整專業的服務平臺。\n為輔導協助國內塑膠加工業改善設備，提高生產技術及產品品質，改良製造方法，開發新產品，並推動國際合作技術交流，以增強競爭能力，2018年12月11日高分子醫材大樓正式啟用，同時成立「生醫部」，建置專門的平臺服務，提供醫療器材業者從產品設計開發、製程技術、供應鏈整合、檢測驗證、品質系統輔導至產品上市，提供國內生醫業者涵蓋產品全生命週期的「一站式」整合性服務。\n服務內容包括，\n◆ 醫材產品設計開發\n◆ 專利檢索與產業調查分析\n◆ 製程技術及供應鏈整合\n◆ 檢測驗證服務\n◆ 品質系統輔導\n◆ 上市許可證輔導", "en": "One-Step Shop of Medical Devices \nPlastics Industry Development Center Show the development of polymeric medical devices in Taiwan\nIn order to assist plastics industry and accelerate the advancement of the plastics technology, Plastics Industry Development Center (PIDC) was established in 1993 and funded by the government and plastics industry.\nSince 2000, PIDC has been working in the field of medical devices for many years, playing an important role in the development of polymeric medical devices in Taiwan. To accelerate medical devices innovation, we deliver below services:\n◆ Medical device design and development\n◆ Patent and industry analysis\n◆ Process technology and supply chain integration\n◆ Test verification service\n◆ Quality system counseling\n◆ License application counseling" }
-      },
-      {
-        "org": { "tc": "巨量移動科技有限公司", "en": "Big Data Mobile Company" },
-        "info": { "tc": "", "en": "" }
-      },
-      {
-        "org": { "tc": "瑞基海洋生物科技股份有限公司", "en": "GeneReach Biotechnology Corp." },
-        "info": { "tc": "SATLite從樣本到文庫製備，一站式自動化體驗。\n靈活自動化吸取系統，可同時處裡1-8個樣本，整合核酸萃取及文庫建構。\n", "en": "SATLite\nCLICK-N-GO, From sample to library\nOptimize vaccine program\nEnhance biosecurity\nReduce antibiotics usage" }
-      },
-      {
-        "org": { "tc": "臺灣骨王生技股份有限公司", "en": "Taiwan Mian Orthopaedic Biotechnology Co., Ltd." },
-        "info": { "tc": "為減少對正常組織的傷害，醫師需在狹小視野及有限的操作空間進行複雜的脊椎手術，因此更需要利用導航系統的引導直接到達病灶處，導航畫面即時 AR 投影呈現病患體內資訊在醫師眼前，讓醫師專注在患者身上的手術區域，提升微創手術的安全性和精準度。", "en": "In order to reduce damage to normal tissues, doctors need to perform complex spinal surgery in a narrow field of view and limited operating space. Therefore, it is even more necessary to use the guidance of the navigation system to directly reach the lesion. The real-time AR projection of the navigation screen presents the information in the patient's body in front of the doctor's eyes allowing doctors to focus on the surgical area of the patient, improving the safety and accuracy of minimally invasive surgery." }
-      },
-      {
-        "org": { "tc": "全微精密股份有限公司", "en": "Microware Precision Co., Ltd." },
-        "info": { "tc": "後補", "en": "後補" }
-      }
+      { "org": { "tc": "太冠瑪", "en": "太冠瑪" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "亞果", "en": "亞果" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "俊質生醫", "en": "俊質生醫" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "柏瑞醫", "en": "柏瑞醫" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "泉沂", "en": "泉沂" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "泰陞", "en": "泰陞" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "訊聯生技", "en": "訊聯生技" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "創甡生技", "en": "創甡生技" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "惠合再生", "en": "惠合再生" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "開物科技", "en": "開物科技" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "微體生醫", "en": "微體生醫" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "儕陞", "en": "儕陞" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "霖揚", "en": "霖揚" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "聯華生技", "en": "聯華生技" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "醫百", "en": "醫百" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "瀧儀", "en": "瀧儀" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "鐳鼎", "en": "鐳鼎" }, "info": { "tc": "", "en": "" } }
     ]
   },
   {
