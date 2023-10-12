@@ -20,6 +20,18 @@ const swiperSetting = () => {
     containerStyle.setProperty("--n", swiper.querySelector(".swiper-container").childElementCount);
   });
 };
+const topics = document.querySelectorAll(".topic-item");
+const topicToggle = () => {
+  topics.forEach((topic) => {
+    console.log(topic);
+    topic.addEventListener("click", ({ currentTarget }) => {
+      Array.from(topics)
+        .filter((item) => item !== currentTarget)
+        .forEach((item) => item.classList.remove("active"));
+      currentTarget.classList.toggle("active");
+    });
+  });
+};
 let swiperTimer = setInterval(autoSwiper, 10000);
 swipers.forEach((swiper) => {
   swiper.querySelectorAll(".swiper-next, .swiper-prev").forEach((btn) => btn.addEventListener("click", swiperAction));
@@ -28,5 +40,6 @@ swipers.forEach((swiper) => {
 });
 document.querySelectorAll(".intersection").forEach((elem) => observer.observe(elem));
 document.querySelectorAll(".intersection2").forEach((elem) => observer2.observe(elem));
+topicToggle();
 swiperSetting();
 window.addEventListener("resize", swiperSetting);
