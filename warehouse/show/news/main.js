@@ -21,14 +21,21 @@ const swiperSetting = () => {
   });
 };
 const topics = document.querySelectorAll(".topic-item");
+const topicsImg = document.querySelectorAll(".topic-img img");
 const topicToggle = () => {
   topics.forEach((topic) => {
     console.log(topic);
     topic.addEventListener("click", ({ currentTarget }) => {
+      const topicsArray = Array.from(topics);
+      const index = topicsArray.indexOf(currentTarget);
       Array.from(topics)
         .filter((item) => item !== currentTarget)
         .forEach((item) => item.classList.remove("active"));
+      Array.from(topicsImg)
+        .filter((item, i) => i !== index)
+        .forEach((item) => item.classList.remove("active"));
       currentTarget.classList.toggle("active");
+      topicsImg[index].classList.toggle("active");
     });
   });
 };
