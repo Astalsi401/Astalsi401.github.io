@@ -31,7 +31,7 @@
     "year": 2023,
     "season": 3,
     "data": [
-      { "category": "健康器材及預防保健品", "category_en": "Workout Equipment & Health Supplement", "thisYear": 496.61, "lastYear": 299.6 },
+      { "category": "健康器材及預防保健品", "category_en": "Workout Equipment & Health Supplement", "thisYear": 181.51, "lastYear": 299.6 },
       { "category": "原料藥", "category_en": "APIs", "thisYear": 97.39, "lastYear": 59.9 },
       { "category": "生技服務/基因檢測服務", "category_en": "Genetic Testing & Wellness Check", "thisYear": 57.75, "lastYear": 37.2 },
       { "category": "藥品製造/新藥研發", "category_en": "Bio-Pharmaceuticals", "thisYear": 745.36, "lastYear": 396.9 },
