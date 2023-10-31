@@ -109,7 +109,7 @@ const Booth = ({ d, size, elementStatus, handleBoothInfo, drawPath }) => {
 };
 
 const Elements = ({ type, data, size, elementStatus, handleBoothInfo }) => {
-  const drawPath = (path) => path.map((p) => (p.node === "L" ? `${p.node}${p.x} ${p.y}` : `${p.node}${p.x1} ${p.y1} ${p.x2} ${p.y2} ${p.x} ${p.y}`)).join("");
+  const drawPath = (path) => path.map((p) => (p.node === "L" ? `${p.node}${p.x} ${p.y}` : `${p.node}${p.x1} ${p.y1} ${p.x2} ${p.y2} ${p.x} ${p.y}`)).join("") + "Z";
   const elementActions = {
     wall: (d, i) => <Wall d={d} drawPath={drawPath} />,
     pillar: (d, i) => <Pillar d={d} />,

@@ -424,7 +424,7 @@ p {
   position: relative;
 }
 .fp-graph text {
-  cursor: default;
+  cursor: inherit;
 }
 
 .fp-floormap {
