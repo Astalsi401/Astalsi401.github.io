@@ -544,7 +544,7 @@ const MainArea = () => {
           eventTime = [];
         if (d.event) {
           const now = new Date();
-          eventTime = d.event[searchCondition.lang].map((e) => ({ start: new Date(e.start), end: new Date(e.end), title: e.title, active: new Date(e.start) < now && new Date(e.end) > now }));
+          eventTime = d.event.map((e) => ({ start: new Date(e.start), end: new Date(e.end), title: e.title[searchCondition.lang], active: new Date(e.start) < now && new Date(e.end) > now }));
           tags = eventTime.some((e) => e.active) ? tags.concat(["活動進行中"]) : tags;
         }
         return { ...d, cat: d.cat ? d.cat[searchCondition.lang] : false, topic: d.topic ? d.topic[searchCondition.lang] : false, tag: tags, text: d.text ? d.text[searchCondition.lang] : [], size: d.size ? d.size[searchCondition.lang] : 1, note: d.note ? d.note[searchCondition.lang] : false, event: eventTime, corps: d.corps ? d.corps.map((corp) => ({ org: corp.org[searchCondition.lang], info: corp.info[searchCondition.lang] })) : false, draw: true };
