@@ -4255,7 +4255,7 @@
     "topic": { "tc": "醫材設備", "en": "醫材設備" },
     "tag": { "tc": [""], "en": [""] },
     "text": { "tc": ["瑞吉實"], "en": ["RIGIFORCE CO., LTD."] },
-    "size": { "tc": 0.4, "en": 0.4 },
+    "size": { "tc": 0.35, "en": 0.35 },
     "corps": [{ "org": { "tc": "瑞吉實有限公司", "en": "RIGIFORCE CO., LTD." }, "info": { "tc": "瑞吉實有限公司是由李洽源先生在1997年成立，李先生有31年Esco自動車床上的維修/應用/銷售經驗，他在2011年被瑞士Esco公司委任為大中華地區的業務經理。 瑞吉實有限公司的刀具耗材部門成立於2008年，所有的製造生產技術來自於瑞士Esco公司的轉移及授權。 瑞吉實有限公司的臺灣服務團隊支援所有亞洲的Escomatic型自動車床，我們可以提供Esco車床使用者全面性服務，包括凸輪設計, 刀具耗材製造銷售, 零件庫存, 維修諮詢, CNC程式編寫及機臺銷售。", "en": "Rigiforce Co., Ltd. was found by Mr. John Lee in 1997. Mr. Lee has 31 years working experience on Escomatic maintenance/application/sales. Mr. Lee was authorized to be Esco sales manager of The Greater China maket in 2011. Rigiforce built up his tooling room to make all Esco tooling in Taiwan in 2008, all tooling manufacturing technology offered and authorized by Esco SA. Rigiforce is now Esco’s service center for Asian clients in Taiwan. We can offer all Escomatic users total solution from traditional cam calculation, tooling, spare parts, maintenance consultant, CNC programing and machine sales." } }]
   },
   {
@@ -4355,7 +4355,7 @@
     "topic": { "tc": "醫材設備", "en": "醫材設備" },
     "tag": { "tc": [""], "en": [""] },
     "text": { "tc": ["新元鋒"], "en": ["New YF Precision Co."] },
-    "size": { "tc": 0.4, "en": 0.4 },
+    "size": { "tc": 0.35, "en": 0.35 },
     "corps": [{ "org": { "tc": "新元鋒精密股份有限公司", "en": "New YF Precision Co." }, "info": { "tc": "新元鋒精密股份有限公司(New YF Precision Co.)為一間專精於薄膜及表面處理技術服務的半導體設備代理商，專業客服團隊可因應不同產業需求提供客製化改機服務。\n新元鋒精密為Picosun ALD在臺授權代理商，更為Picosun在臺唯一授權Picosun機臺維修或保養之合作廠商。新元鋒精密成功開發TEM樣品處理技術，獲12吋晶圓廠廣泛採用，市占率達九成；Mini LED背光模組方面也獲得國際大廠指定採用，打入供應鏈。並在氮化鎵、砷化鎵和碳化矽等化合物半導體及雷射半導體攻下灘頭堡，並且投入生醫材料、Micro LED及Micro OLED等先進顯示產業的應用開發。\n產品：\n1. Applied Materials Picosun 原子層沉積鍍膜設備：ALD鍍膜功能從晶片、元件製程、玻璃、元件保護、3D封裝技術、3D構件鍍膜到粉體加工等都有相對應的技術，近年來更運用在醫療器材的薄膜coating，為具生物相容性且能長期侵入特性的膜層。\n2. 電漿表面處理設備：電漿處理可用於多種材料表面特性改質，使它們更容易接合、黏合和上漆，通過電漿清潔及活化表面來改善表面的粘附特性。此應用在生醫領域已是成熟技術，例如微流道製程(PDMS與玻璃接合)。\n3.  超小體積微流道控制模組：此技術實現微流道閥件微型化，提供了適用於生醫微流道的閥件、控制器及應用系統。目前已能做到內損耗4uL的閥件，對於珍貴的生醫試劑或一次性檢體操作頗具價值。", "en": "1. Applied Materials Picosun 原子層沉積鍍膜設備：ALD鍍膜功能從晶片、元件製程、玻璃、元件保護、3D封裝技術、3D構件鍍膜到粉體加工等都有相對應的技術，近年來更運用在醫療器材的薄膜coating，為具生物相容性且能長期侵入特性的膜層。\n2. 電漿表面處理設備：電漿處理可用於多種材料表面特性改質，使它們更容易接合、黏合和上漆，通過電漿清潔及活化表面來改善表面的粘附特性。此應用在生醫領域已是成熟技術，例如微流道製程(PDMS與玻璃接合)。\n3.  超小體積微流道控制模組：此技術實現微流道閥件微型化，提供了適用於生醫微流道的閥件、控制器及應用系統。目前已能做到內損耗4uL的閥件，對於珍貴的生醫試劑或一次性檢體操作頗具價值。" } }]
   },
   {

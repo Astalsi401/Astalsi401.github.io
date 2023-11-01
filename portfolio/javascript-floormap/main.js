@@ -452,7 +452,7 @@ const Sidebar = ({ data, elementStatus, setElementStatus, searchCondition, setSe
 const Selector = ({ searchCondition, handleSearchChange, setDragStatus, setZoom, graphRef, svgRef, zoomCalculator }) => {
   const animation = () => {
     svgRef.current.style.transition = "0.4s";
-    setTimeout(() => (svgRef.current.style.transition = null), 200);
+    setTimeout(() => (svgRef.current.style.transition = null), 400);
   };
   const defaultViewbox = () => {
     animation();
