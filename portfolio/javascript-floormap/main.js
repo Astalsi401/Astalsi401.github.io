@@ -519,7 +519,7 @@ const MainArea = () => {
   const title = { tc: "展場平面圖", en: "Floor Plan" };
   const tagsHeight = 80;
   const types = ["booth", "room"];
-  const [floorData, setFloorData] = useState([]);
+  const [floorData, setFloorData] = useState({ loaded: false, data: [] });
   const [sidebarWidth, setSidebarWidth] = useState(40);
   const [searchCondition, setSearchCondition] = useState(() => {
     const params = new URLSearchParams(window.location.search);
@@ -546,7 +546,7 @@ const MainArea = () => {
   });
   const memoFloorData = useMemo(
     () =>
-      floorData.map((d) => {
+      floorData.data.map((d) => {
         let tags = d.tag ? d.tag[searchCondition.lang] : [],
           eventTime = [];
         if (d.event) {
@@ -556,7 +556,7 @@ const MainArea = () => {
         }
         return { ...d, cat: d.cat ? d.cat[searchCondition.lang] : false, topic: d.topic ? d.topic[searchCondition.lang] : false, tag: tags, text: d.text ? d.text[searchCondition.lang] : [], size: d.size ? d.size[searchCondition.lang] : 1, note: d.note ? d.note[searchCondition.lang] : false, event: eventTime, corps: d.corps ? d.corps.map((corp) => ({ org: corp.org[searchCondition.lang], info: corp.info[searchCondition.lang] })) : false, draw: true };
       }),
-    [searchCondition.lang, floorData]
+    [searchCondition.lang, floorData.data]
   );
   const filterFloorData = useMemo(() => {
     const res = [];
@@ -603,7 +603,7 @@ const MainArea = () => {
     fetch("https://astalsi401.github.io/warehouse/show/floormap.json")
       .then((res) => res.json())
       .then((data) => {
-        setFloorData(data);
+        setFloorData((prev) => ({ data: data, loaded: !prev.loaded }));
       });
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -639,6 +639,22 @@ const MainArea = () => {
       ),
     }));
   }, [searchCondition.string]);
+  if (!floorData.loaded)
+    return (
+      <div className="fp-loading">
+        <div className="loading">
+          <span>
+            <span style={{ "--i": 0 }}>L</span>
+            <span style={{ "--i": 1 }}>o</span>
+            <span style={{ "--i": 2 }}>a</span>
+            <span style={{ "--i": 3 }}>d</span>
+            <span style={{ "--i": 4 }}>i</span>
+            <span style={{ "--i": 5 }}>n</span>
+            <span style={{ "--i": 6 }}>g</span>
+          </span>
+        </div>
+      </div>
+    );
   return (
     <div className="fp-main" style={{ "--sidebar-width": `${sidebarWidth}px`, "--tags-height": `${tagsHeight}px` }}>
       <Sidebar data={filterFloorData.filter((d) => types.includes(d.type))} elementStatus={elementStatus} setElementStatus={setElementStatus} searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} handleBoothInfo={handleBoothInfo} />
