@@ -201,6 +201,7 @@ p {
   background-color: var(--fp-search-bg);
   transition: transform var(--fp-time);
   transform: translateX(-100%);
+  box-shadow: 1px 0 0 var(--fp-over);
   &.active {
     transform: translateX(0);
   }

@@ -89,12 +89,19 @@ const BoothText = ({ t, j, lineHeight, opacity, boothWidth }) => {
   );
 };
 
-const Booth = ({ d, size, elementStatus, handleBoothInfo, drawPath }) => {
+const Booth = ({ d, size, elementStatus, setElementStatus, handleBoothInfo, drawPath }) => {
   const fontSize = size * d.size;
   const lineHeight = fontSize * 1.2;
   const opacity = elementStatus.boothInfo && elementStatus.boothInfoData.id == d.id ? 1 : d.opacity;
+  const handleBoothClick = (d) => {
+    if (elementStatus.boothInfo && elementStatus.boothInfoData.id == d.id) {
+      setElementStatus((prev) => ({ ...prev, boothInfo: false }));
+    } else {
+      handleBoothInfo(d);
+    }
+  };
   return (
-    <g key={d.id} id={d.id} className="booth" transform={`translate(${d.x},${d.y})`} onClick={() => handleBoothInfo(d)}>
+    <g key={d.id} id={d.id} className="booth" transform={`translate(${d.x},${d.y})`} onClick={() => handleBoothClick(d)}>
       <path stroke="black" fill={elementStatus.colors(d.cat)} strokeWidth={1} fillOpacity={opacity} d={`M0 0${drawPath(d.p)}`} />;
       <g transform={`translate(${d.w / 2},${d.h / 2 - ((d.text.length - 1) * lineHeight) / 2})`} fontSize={fontSize}>
         {d.text.map((t, j) => (
@@ -108,7 +115,7 @@ const Booth = ({ d, size, elementStatus, handleBoothInfo, drawPath }) => {
   );
 };
 
-const Elements = ({ type, data, size, elementStatus, handleBoothInfo }) => {
+const Elements = ({ type, data, size, elementStatus, setElementStatus, handleBoothInfo }) => {
   const drawPath = (path) => path.map((p) => (p.node === "L" ? `${p.node}${p.x} ${p.y}` : `${p.node}${p.x1} ${p.y1} ${p.x2} ${p.y2} ${p.x} ${p.y}`)).join("") + "Z";
   const elementActions = {
     wall: (d, i) => <Wall d={d} drawPath={drawPath} />,
@@ -116,7 +123,7 @@ const Elements = ({ type, data, size, elementStatus, handleBoothInfo }) => {
     text: (d, i) => <Text d={d} />,
     room: (d, i) => <Room d={d} i={i} size={size} />,
     icon: (d, i) => <Room d={d} i={i} size={size} />,
-    booth: (d, i) => <Booth d={d} size={size} elementStatus={elementStatus} handleBoothInfo={handleBoothInfo} drawPath={drawPath} />,
+    booth: (d, i) => <Booth d={d} size={size} elementStatus={elementStatus} setElementStatus={setElementStatus} handleBoothInfo={handleBoothInfo} drawPath={drawPath} />,
   };
   return <g className={`${type}-g`}>{data.filter((d) => d.type == type).map((d, i) => elementActions[type](d, i))}</g>;
 };
@@ -196,7 +203,7 @@ const Floormap = ({ data, realSize, elementStatus, setElementStatus, handleBooth
           <Elements type="text" data={data} />
           <Elements type="room" data={data} size={200} />
           <Elements type="icon" data={data} size={200} />
-          <Elements type="booth" data={data} size={250} elementStatus={elementStatus} handleBoothInfo={handleBoothInfo} />
+          <Elements type="booth" data={data} size={250} elementStatus={elementStatus} setElementStatus={setElementStatus} handleBoothInfo={handleBoothInfo} />
         </svg>
       </div>
     </div>
@@ -589,7 +596,7 @@ const MainArea = () => {
       return { ...prev, smallScreen: smallScreen, sidebar: prev.smallScreen ? prev.sidebar : !smallScreen };
     });
   const handleBoothInfo = (d) => {
-    setElementStatus((prev) => ({ ...prev, boothInfo: !prev.boothInfo, boothInfoData: d }));
+    setElementStatus((prev) => ({ ...prev, boothInfo: true, boothInfoData: d }));
     setSearchCondition((prev) => ({ ...prev, floor: d.floor }));
   };
   useEffect(() => {
