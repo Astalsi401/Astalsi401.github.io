@@ -446,7 +446,6 @@ p {
 }
 
 #floormap {
-  transition: viewBox var(--fp-time);
   touch-action: manipulation;
 }
 #floormap.moving {

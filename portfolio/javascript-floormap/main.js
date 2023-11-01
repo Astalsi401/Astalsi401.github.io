@@ -451,7 +451,7 @@ const Sidebar = ({ data, elementStatus, setElementStatus, searchCondition, setSe
 
 const Selector = ({ searchCondition, handleSearchChange, setDragStatus, setZoom, graphRef, svgRef, zoomCalculator }) => {
   const animation = () => {
-    svgRef.current.style.transition = "0.2s";
+    svgRef.current.style.transition = "0.4s";
     setTimeout(() => (svgRef.current.style.transition = null), 200);
   };
   const defaultViewbox = () => {
@@ -589,7 +589,7 @@ const MainArea = () => {
       return { ...prev, smallScreen: smallScreen, sidebar: prev.smallScreen ? prev.sidebar : !smallScreen };
     });
   const handleBoothInfo = (d) => {
-    setElementStatus((prev) => ({ ...prev, boothInfo: true, boothInfoData: d }));
+    setElementStatus((prev) => ({ ...prev, boothInfo: !prev.boothInfo, boothInfoData: d }));
     setSearchCondition((prev) => ({ ...prev, floor: d.floor }));
   };
   useEffect(() => {
