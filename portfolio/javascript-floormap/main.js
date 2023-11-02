@@ -127,10 +127,8 @@ const Elements = ({ type, data, size, elementStatus, setElementStatus, handleBoo
   };
   return <g className={`${type}-g`}>{data.filter((d) => d.type == type).map((d, i) => elementActions[type](d, i))}</g>;
 };
-const Floormap = ({ data, realSize, elementStatus, setElementStatus, handleBoothInfo, searchCondition, handleSearchChange }) => {
+const Floormap = ({ data, realSize, elementStatus, setElementStatus, dragStatus, setDragStatus, zoom, setZoom, handleBoothInfo, searchCondition, handleSearchChange }) => {
   const [containerSize, setContainerSize] = useState({ width: realSize.w / 100, height: realSize.h / 100, pageHeight: realSize.h / 100 });
-  const [dragStatus, setDragStatus] = useState({ moving: false, previousTouch: null, previousTouchLength: null, x: 0, y: 0 });
-  const [zoom, setZoom] = useState({ scale: 1, x: 0, y: 0 });
   const [viewBox, setViewBox] = useState({ x1: 0, y1: 0, x2: 0, y2: 0 });
   const graphRef = useRef(null);
   const svgRef = useRef(null);
@@ -197,7 +195,7 @@ const Floormap = ({ data, realSize, elementStatus, setElementStatus, handleBooth
     <div className="fp-floormap d-flex align-items-center" style={{ minHeight: elementStatus.minHeight }}>
       <Selector searchCondition={searchCondition} handleSearchChange={handleSearchChange} setDragStatus={setDragStatus} setZoom={setZoom} graphRef={graphRef} svgRef={svgRef} zoomCalculator={zoomCalculator} />
       <div class="fp-viewBox" ref={graphRef} onWheel={handleWheelZoom} onMouseDown={handleStart} onMouseUp={handleEnd} onMouseLeave={handleEnd} onMouseMove={handleMouseDrag} onTouchStart={handleStart} onTouchEnd={handleEnd} onTouchMove={handleTouchDragZoom}>
-        <svg id="floormap" className={dragStatus.moving ? "moving" : ""} ref={svgRef} style={{ translate: `${zoom.x + dragStatus.x}px ${zoom.y + dragStatus.y}px`, scale: `${zoom.scale}` }} width={containerSize.width} height={containerSize.height} viewBox={`${viewBox.x1} ${viewBox.y1} ${viewBox.x2} ${viewBox.y2}`}>
+        <svg id="floormap" className={dragStatus.moving ? "moving" : ""} ref={svgRef} style={{ translate: `${zoom.x + dragStatus.x}px ${zoom.y + dragStatus.y}px`, scale: `${zoom.scale}`, backgroundColor: "#f1f1f1" }} width={containerSize.width} height={containerSize.height} viewBox={`${viewBox.x1} ${viewBox.y1} ${viewBox.x2} ${viewBox.y2}`}>
           <Elements type="wall" data={data} />
           <Elements type="pillar" data={data} />
           <Elements type="text" data={data} />
@@ -510,6 +508,22 @@ const Selector = ({ searchCondition, handleSearchChange, setDragStatus, setZoom,
   );
 };
 
+const Loading = () => (
+  <div className="fp-loading">
+    <div className="loading">
+      <span>
+        <span style={{ "--i": 0 }}>L</span>
+        <span style={{ "--i": 1 }}>o</span>
+        <span style={{ "--i": 2 }}>a</span>
+        <span style={{ "--i": 3 }}>d</span>
+        <span style={{ "--i": 4 }}>i</span>
+        <span style={{ "--i": 5 }}>n</span>
+        <span style={{ "--i": 6 }}>g</span>
+      </span>
+    </div>
+  </div>
+);
+
 const MainArea = () => {
   const categories = {
     tc: ["全齡健康展區", "年度主題館", "醫療機構展區", "智慧醫療展區", "精準醫療展區"],
@@ -519,6 +533,8 @@ const MainArea = () => {
   const title = { tc: "展場平面圖", en: "Floor Plan" };
   const tagsHeight = 80;
   const types = ["booth", "room"];
+  const [dragStatus, setDragStatus] = useState({ moving: false, previousTouch: null, previousTouchLength: null, x: 0, y: 0 });
+  const [zoom, setZoom] = useState({ scale: 1, x: 0, y: 0 });
   const [floorData, setFloorData] = useState({ loaded: false, data: [] });
   const [sidebarWidth, setSidebarWidth] = useState(40);
   const [searchCondition, setSearchCondition] = useState(() => {
@@ -599,6 +615,10 @@ const MainArea = () => {
     setElementStatus((prev) => ({ ...prev, boothInfo: true, boothInfoData: d }));
     setSearchCondition((prev) => ({ ...prev, floor: d.floor }));
   };
+  const defaultViewbox = () => {
+    setDragStatus((prev) => ({ ...prev, x: 0, y: 0 }));
+    setZoom({ scale: 1, x: 0, y: 0 });
+  };
   useEffect(() => {
     fetch("https://astalsi401.github.io/warehouse/show/floormap.json")
       .then((res) => res.json())
@@ -639,28 +659,13 @@ const MainArea = () => {
       ),
     }));
   }, [searchCondition.string]);
-  if (!floorData.loaded)
-    return (
-      <div className="fp-loading">
-        <div className="loading">
-          <span>
-            <span style={{ "--i": 0 }}>L</span>
-            <span style={{ "--i": 1 }}>o</span>
-            <span style={{ "--i": 2 }}>a</span>
-            <span style={{ "--i": 3 }}>d</span>
-            <span style={{ "--i": 4 }}>i</span>
-            <span style={{ "--i": 5 }}>n</span>
-            <span style={{ "--i": 6 }}>g</span>
-          </span>
-        </div>
-      </div>
-    );
+  if (!floorData.loaded) return <Loading />;
   return (
     <div className="fp-main" style={{ "--sidebar-width": `${sidebarWidth}px`, "--tags-height": `${tagsHeight}px` }}>
-      <Sidebar data={filterFloorData.filter((d) => types.includes(d.type))} elementStatus={elementStatus} setElementStatus={setElementStatus} searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} handleBoothInfo={handleBoothInfo} />
+      <Sidebar data={filterFloorData.filter((d) => types.includes(d.type))} elementStatus={elementStatus} setElementStatus={setElementStatus} searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} handleBoothInfo={handleBoothInfo} defaultViewbox={defaultViewbox} />
       <div className="fp-graph d-flex align-items-center">
         <Header searchCondition={searchCondition} setSearchCondition={setSearchCondition} />
-        <Floormap data={filterFloorData.filter((d) => d.floor == searchCondition.floor && d.draw)} realSize={realSize[searchCondition.floor]} elementStatus={elementStatus} setElementStatus={setElementStatus} handleBoothInfo={handleBoothInfo} searchCondition={searchCondition} handleSearchChange={handleSearchChange} />
+        <Floormap data={filterFloorData.filter((d) => d.floor == searchCondition.floor && d.draw)} realSize={realSize[searchCondition.floor]} elementStatus={elementStatus} setElementStatus={setElementStatus} dragStatus={dragStatus} setDragStatus={setDragStatus} zoom={zoom} setZoom={setZoom} handleBoothInfo={handleBoothInfo} searchCondition={searchCondition} handleSearchChange={handleSearchChange} />
       </div>
     </div>
   );
