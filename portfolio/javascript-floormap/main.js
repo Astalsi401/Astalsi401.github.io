@@ -688,7 +688,6 @@ const MainArea = () => {
       ),
     }));
   }, [searchCondition.string]);
-  console.log(1);
   if (!floorData.loaded) return <Loading />;
   return (
     <div className="fp-main" style={{ "--sidebar-width": `${floormapSetting.sidebarWidth}px`, "--tags-height": `${floormapSetting.tagsHeight}px` }}>
