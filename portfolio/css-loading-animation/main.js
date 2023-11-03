@@ -8,7 +8,15 @@ class Content extends React.Component {
           <>
             <div className="py-5">
               <div className="loading1">
-                <span>Loading</span>
+                <span>
+                  <span style={{ "--i": 0 }}>L</span>
+                  <span style={{ "--i": 1 }}>o</span>
+                  <span style={{ "--i": 2 }}>a</span>
+                  <span style={{ "--i": 3 }}>d</span>
+                  <span style={{ "--i": 4 }}>i</span>
+                  <span style={{ "--i": 5 }}>n</span>
+                  <span style={{ "--i": 6 }}>g</span>
+                </span>
               </div>
             </div>
             <div className="my-2">

@@ -1,6 +1,7 @@
 .loading1 {
   --rotate: 1;
   --bg: rgb(55, 67, 121);
+  --bg-alpha: rgb(196, 205, 247);
   --text: white;
   margin: 0 auto;
   padding: 5px;
@@ -10,11 +11,23 @@
   aspect-ratio: 1;
   background: var(--bg);
   box-shadow: 0 0 5px var(--bg);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   & > span {
     --rotate: -1;
     display: block;
     color: var(--text);
     font-weight: bolder;
+    display: flex;
+    flex-wrap: nowrap;
+    & > span {
+      display: block;
+      animation-name: loading-text;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-delay: calc(var(--i) * 0.1s);
+    }
   }
   &,
   & > span {
@@ -37,5 +50,21 @@
   100% {
     border-radius: 5%;
     transform: rotate(calc(365deg * var(--rotate)));
+  }
+}
+
+@keyframes loading-text {
+  0%,
+  100% {
+    transform: scale(1);
+    color: var(--bg-alpha);
+  }
+  25%,
+  75% {
+    transform: scale(1.3);
+  }
+  50% {
+    transform: scale(1);
+    color: var(--text);
   }
 }
