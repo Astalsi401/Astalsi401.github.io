@@ -2540,9 +2540,9 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": [""], "en": [""] },
+    "text": { "tc": ["護心"], "en": ["護心"] },
     "size": { "tc": 0.4, "en": 0.4 },
-    "corps": [{ "org": { "tc": "", "en": "" }, "info": { "tc": "", "en": "" } }]
+    "corps": [{ "org": { "tc": "護心", "en": "護心" }, "info": { "tc": "", "en": "" } }]
   },
   {
     "type": "booth",
@@ -3954,9 +3954,9 @@
     "cat": { "tc": "精準醫療展區", "en": "Biotech" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": [""], "en": [""] },
+    "text": { "tc": ["源星"], "en": ["源星"] },
     "size": { "tc": 0.4, "en": 0.4 },
-    "corps": [{ "org": { "tc": "", "en": "" }, "info": { "tc": "", "en": "" } }]
+    "corps": [{ "org": { "tc": "源星", "en": "源星" }, "info": { "tc": "", "en": "" } }]
   },
   {
     "type": "booth",
@@ -4054,7 +4054,7 @@
     "cat": { "tc": "精準醫療展區", "en": "Biotech" },
     "topic": { "tc": "精準檢測", "en": "精準檢測" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["鴻海", "新酶"], "en": ["HZYMES BIOTECHNOLOGY CO.,LTD"] },
+    "text": { "tc": ["瀚海", "新酶"], "en": ["HZYMES BIOTECHNOLOGY CO.,LTD"] },
     "size": { "tc": 0.35, "en": 0.35 },
     "corps": [{ "org": { "tc": "武汉瀚海新酶生物科技有限公司", "en": "HZYMES BIOTECHNOLOGY CO.,LTD" }, "info": { "tc": "武汉瀚海新酶生物科技 有限公司成立于2015年，是一家专业从事生物医药、体外诊断核心原料研发、生产、应用和技术服务的高新技术企业，在上海、武汉、苏州、青岛、宜昌等五地分别设立研发生产中心。公司拥有酶基因挖掘与性能表征、酶分子优化与改造、酶基因高通量筛选、有机合成、合成生物学、抗原抗体研发制备等技术平臺。\n瀚海新酶始终秉承创新，致力突破，坚持从技术源头开始研发，依托自主核心技术，搭建自主可控的关键技术平臺，可快速、高效、规模化地进行产品开发，体外诊断产品线主要产品超过300种，涵盖分子、生化、免疫等领域，生物制药原料产品目前主要有40余种，还在不断开发增加中。\n1 IVD 原料酶和底物\n2 血糖试纸用酶和底物\n3 生物药mRNA药物用酶和底物，质控试剂盒", "en": "Founded in 2015, Hzymes Biotechnology Co., Ltd. is a high-tech enterprise specializing in the research and development, production, application, and technical services of core raw materials for bio-medicine and in vitro diagnostics. R & D and production centers have been set up in Shanghai, Wuhan, Suzhou, Qingdao, and Yichang. Based on the above technology platforms, hundreds of raw materials related to bio-medicine, vaccine production, and in vitro diagnosis have been developed. We also have a pharmaceutical-grade special enzyme production system with a super-large production scale and super-high equipment standards. It has provided products and services to more than 100 domestic manufacturers of bio-pharmaceuticals, vaccine preparations, and in vitro diagnostic reagents. Meanwhile, our products have been exported to 25 overseas countries and regions. The company will continue to expand product fields, enrich product varieties, and make unremitting efforts to build Hzymes into a “world-class supplier of special enzyme products and services”!" } }]
   },
@@ -4132,11 +4132,11 @@
     ],
     "id": "L018",
     "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
-    "topic": { "tc": "", "en": "" },
+    "topic": { "tc": "智慧醫院", "en": "智慧醫院" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": [""], "en": [""] },
+    "text": { "tc": ["億宣"], "en": ["Vertex System Corporation"] },
     "size": { "tc": 0.4, "en": 0.4 },
-    "corps": [{ "org": { "tc": "", "en": "" }, "info": { "tc": "", "en": "" } }]
+    "corps": [{ "org": { "tc": "億宣應用科技股份有限公司", "en": "Vertex System Corporation" }, "info": { "tc": "億宣應用科技股份有限公司成立於2020年，擁有堅強的5G行動通訊網路技術團隊、其團隊透過5G專網的佈建，以無線行動通訊技術訊號涵蓋 know-how 結合物聯網、5G 垂直整合應用、雲端管理平臺及大數據資料採集，建立各項應用，例如物件跟蹤、視頻監控和分析、生產線維護檢查、無人運車、室內導航、工業機器人等，達到企業智慧聯網、資訊安全共享、藉以推動工廠數位化轉型。5G網路雖然具備高等級的安全防護，針對企業自建5G專網，我們提供一套完整的企業專網資安解決方案，以提供至少多層防護：網路防護、終端裝置防護、多點監控、事先預防。", "en": "Through the deployment of 5G private networks, Vertex can establish various applications, such as object tracking, video surveillance and analysis, production line inspection, AMR, positon, robots, to promote the digital transformation of factories. Assist factories or enterprises to conduct demand assessment, responsible for planning and deploying the required 5G private network, and utilize 5G terminals to integrate vertical applications in factories, such as AGV cars, imaging equipment, etc." } }]
   },
   {
     "type": "booth",
@@ -6392,11 +6392,11 @@
     ],
     "id": "M1233",
     "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
-    "topic": { "tc": "", "en": "" },
+    "topic": { "tc": "數位醫療", "en": "數位醫療" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": [""], "en": [""] },
+    "text": { "tc": ["菘毅"], "en": ["Song Yi System Corp., Ltd."] },
     "size": { "tc": 0.4, "en": 0.4 },
-    "corps": [{ "org": { "tc": "", "en": "" }, "info": { "tc": "", "en": "" } }]
+    "corps": [{ "org": { "tc": "菘毅系統股份有限公司", "en": "Song Yi System Corp., Ltd." }, "info": { "tc": "數位病理玻片自動掃瞄儀及線上閱片系統。\n支援細胞抹片及組織切片掃瞄,及支援不同染色方式的玻片，\n高速多層掃描清晰影像並且儲存在雲端系統，支援標準影像規格。\n雲端閱片及標註軟體提供並且提供軟體介面進行支援不同AI 模型支援。", "en": "Automatic digital pathology slide scanner and web image viewer. \nCell and tissue slides with various staining are supported.\nThe system scans slide with high speed for clear images and automatically cloudy storge, and supports standard image format.\nThe web image viewer provides labeling function and multi AI models are supported.  " } }]
   },
   {
     "type": "booth",
@@ -6684,141 +6684,21 @@
   {
     "type": "booth",
     "floor": 4,
-    "w": 300,
+    "w": 3300,
     "h": 300,
     "x": 10820,
     "y": 1400,
     "p": [
-      { "node": "L", "x": 300, "y": 0 },
-      { "node": "L", "x": 300, "y": 300 },
+      { "node": "L", "x": 3300, "y": 0 },
+      { "node": "L", "x": 3300, "y": 300 },
       { "node": "L", "x": 0, "y": 300 }
     ],
     "id": "M1323",
     "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
-    "topic": { "tc": "數位醫療", "en": "數位醫療" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["菘毅"], "en": ["Song Yi System Corp., Ltd."] },
-    "size": { "tc": 0.4, "en": 0.4 },
-    "corps": [{ "org": { "tc": "菘毅系統股份有限公司", "en": "Song Yi System Corp., Ltd." }, "info": { "tc": "數位病理玻片自動掃瞄儀及線上閱片系統。\n支援細胞抹片及組織切片掃瞄,及支援不同染色方式的玻片，\n高速多層掃描清晰影像並且儲存在雲端系統，支援標準影像規格。\n雲端閱片及標註軟體提供並且提供軟體介面進行支援不同AI 模型支援。", "en": "Automatic digital pathology slide scanner and web image viewer. \nCell and tissue slides with various staining are supported.\nThe system scans slide with high speed for clear images and automatically cloudy storge, and supports standard image format.\nThe web image viewer provides labeling function and multi AI models are supported.  " } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 300,
-    "h": 300,
-    "x": 11120,
-    "y": 1400,
-    "p": [
-      { "node": "L", "x": 300, "y": 0 },
-      { "node": "L", "x": 300, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "M1325",
-    "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": [""], "en": [""] },
-    "size": { "tc": 0.4, "en": 0.4 },
-    "corps": [{ "org": { "tc": "", "en": "" }, "info": { "tc": "", "en": "" } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 300,
-    "h": 300,
-    "x": 11420,
-    "y": 1400,
-    "p": [
-      { "node": "L", "x": 300, "y": 0 },
-      { "node": "L", "x": 300, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "M1327",
-    "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": [""], "en": [""] },
-    "size": { "tc": 0.4, "en": 0.4 },
-    "corps": [{ "org": { "tc": "", "en": "" }, "info": { "tc": "", "en": "" } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 300,
-    "h": 300,
-    "x": 11720,
-    "y": 1400,
-    "p": [
-      { "node": "L", "x": 300, "y": 0 },
-      { "node": "L", "x": 300, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "M1329",
-    "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": [""], "en": [""] },
-    "size": { "tc": 0.4, "en": 0.4 },
-    "corps": [{ "org": { "tc": "", "en": "" }, "info": { "tc": "", "en": "" } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 300,
-    "h": 300,
-    "x": 12020,
-    "y": 1400,
-    "p": [
-      { "node": "L", "x": 300, "y": 0 },
-      { "node": "L", "x": 300, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "M1331",
-    "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": [""], "en": [""] },
-    "size": { "tc": 0.4, "en": 0.4 },
-    "corps": [{ "org": { "tc": "", "en": "" }, "info": { "tc": "", "en": "" } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 300,
-    "h": 300,
-    "x": 12320,
-    "y": 1400,
-    "p": [
-      { "node": "L", "x": 300, "y": 0 },
-      { "node": "L", "x": 300, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "M1333",
-    "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": [""], "en": [""] },
-    "size": { "tc": 0.4, "en": 0.4 },
-    "corps": [{ "org": { "tc": "", "en": "" }, "info": { "tc": "", "en": "" } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 300,
-    "h": 300,
-    "x": 12620,
-    "y": 1400,
-    "p": [
-      { "node": "L", "x": 300, "y": 0 },
-      { "node": "L", "x": 300, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "M1337",
-    "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": [""], "en": [""] },
-    "size": { "tc": 0.4, "en": 0.4 },
+    "text": { "tc": ["智慧醫療展區"], "en": ["智慧醫療展區"] },
+    "size": { "tc": 0.6, "en": 0.6 },
     "corps": [{ "org": { "tc": "", "en": "" }, "info": { "tc": "", "en": "" } }]
   },
   {
@@ -6905,7 +6785,7 @@
     "cat": { "tc": "精準醫療展區", "en": "Biotech" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": ["LDTS產業聯盟"], "en": ["LDTS產業聯盟"] },
-    "text": { "tc": ["亞洲準譯、圖爾思", "、橫河、大昌"], "en": ["亞洲準譯、圖爾思", "、橫河、大昌"] },
+    "text": { "tc": ["亞洲準譯、圖爾思", "、橫河、大昌華嘉"], "en": ["亞洲準譯、圖爾思", "、橫河、大昌華嘉"] },
     "size": { "tc": 0.7, "en": 0.8 },
     "corps": [
       { "org": { "tc": "亞洲準譯股份有限公司", "en": "Asia Pathogenomics Co.,Ltd" }, "info": { "tc": "近年來精準醫療與新興科技的不斷發展與進步，已經有許多臨床應用落實在常規醫療之中，目前衛福部已將精準檢驗全面納管，需要通過LDTS(實驗室自行研發檢驗技術)認證方可在醫院施行，目前已有許多不同領域的精準檢驗臨床應用已經落實在國內外醫療院所。希望能透過這個平臺呈現已取得LDTS許可的廠商，其商品與服務可以大幅改善1)優於傳統檢驗技術的臨床價值，2)相關檢驗產業的合作生態系，以及3)未來研發的精準檢驗。希望與各國內外領域專家交流如何將現有的精準檢驗新科技進行整合。期能及時提供臨床端更精準且具臨床價值的檢驗資訊，協助醫師診斷，進而改善病人預後。", "en": "With the continuous development and progress of precision medicine and emerging technology, many clinical applications have been implemented in standard medical care. At present, all precision medical technology companies need the Laboratory Developed Tests (LDTs) certification of TFDA to be able to provide service in hospitals in Taiwan. These LDTs medical techniques of various clinical fields already implemented in many hospitals by different companies.  We hope we can present the strength of LDTs companies. how their products and services can greatly improve 1) the clinical value better than traditional techniques, 2) the ecosystem of collaborative industries, and 3) new developing product and business model. We hope that we can exchange experience with all experts of precision medicine in this integrated platform to provide more valuable, accurate, immediate clinical service for physicians to improve patients' prognosis.\n" } },
@@ -8213,142 +8093,22 @@
   {
     "type": "booth",
     "floor": 4,
-    "w": 300,
+    "w": 2100,
     "h": 300,
     "x": 16230,
     "y": 2300,
     "p": [
-      { "node": "L", "x": 300, "y": 0 },
-      { "node": "L", "x": 300, "y": 300 },
+      { "node": "L", "x": 2100, "y": 0 },
+      { "node": "L", "x": 2100, "y": 300 },
       { "node": "L", "x": 0, "y": 300 }
     ],
     "id": "N1219",
     "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["基因", "線上"], "en": ["基因", "線上"] },
+    "text": { "tc": ["全球醫療採購網-", "經銷代理與企業媒合會"], "en": ["全球醫療採購網-", "經銷代理與企業媒合會"] },
     "size": { "tc": 0.35, "en": 0.35 },
-    "corps": [{ "org": { "tc": "基因線上", "en": "基因線上" }, "info": { "tc": "", "en": "" } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 300,
-    "h": 300,
-    "x": 16530,
-    "y": 2300,
-    "p": [
-      { "node": "L", "x": 300, "y": 0 },
-      { "node": "L", "x": 300, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "N1221",
-    "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": [""], "en": [""] },
-    "size": { "tc": 0.4, "en": 0.4 },
     "corps": [{ "org": { "tc": "", "en": "" }, "info": { "tc": "", "en": "" } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 300,
-    "h": 300,
-    "x": 16830,
-    "y": 2300,
-    "p": [
-      { "node": "L", "x": 300, "y": 0 },
-      { "node": "L", "x": 300, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "N1223",
-    "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": [""], "en": [""] },
-    "size": { "tc": 0.4, "en": 0.4 },
-    "corps": [{ "org": { "tc": "", "en": "" }, "info": { "tc": "", "en": "" } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 300,
-    "h": 300,
-    "x": 17130,
-    "y": 2300,
-    "p": [
-      { "node": "L", "x": 300, "y": 0 },
-      { "node": "L", "x": 300, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "N1225",
-    "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": [""], "en": [""] },
-    "size": { "tc": 0.4, "en": 0.4 },
-    "corps": [{ "org": { "tc": "", "en": "" }, "info": { "tc": "", "en": "" } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 300,
-    "h": 300,
-    "x": 17430,
-    "y": 2300,
-    "p": [
-      { "node": "L", "x": 300, "y": 0 },
-      { "node": "L", "x": 300, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "N1227",
-    "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": [""], "en": [""] },
-    "size": { "tc": 0.4, "en": 0.4 },
-    "corps": [{ "org": { "tc": "", "en": "" }, "info": { "tc": "", "en": "" } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 300,
-    "h": 300,
-    "x": 17730,
-    "y": 2300,
-    "p": [
-      { "node": "L", "x": 300, "y": 0 },
-      { "node": "L", "x": 300, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "N1229",
-    "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": [""], "en": [""] },
-    "size": { "tc": 0.4, "en": 0.4 },
-    "corps": [{ "org": { "tc": "", "en": "" }, "info": { "tc": "", "en": "" } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 300,
-    "h": 300,
-    "x": 18030,
-    "y": 2300,
-    "p": [
-      { "node": "L", "x": 300, "y": 0 },
-      { "node": "L", "x": 300, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "N1231",
-    "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
-    "topic": { "tc": "智慧醫院", "en": "智慧醫院" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["億宣"], "en": ["Vertex System Corporation"] },
-    "size": { "tc": 0.4, "en": 0.4 },
-    "corps": [{ "org": { "tc": "億宣應用科技股份有限公司", "en": "Vertex System Corporation" }, "info": { "tc": "億宣應用科技股份有限公司成立於2020年，擁有堅強的5G行動通訊網路技術團隊、其團隊透過5G專網的佈建，以無線行動通訊技術訊號涵蓋 know-how 結合物聯網、5G 垂直整合應用、雲端管理平臺及大數據資料採集，建立各項應用，例如物件跟蹤、視頻監控和分析、生產線維護檢查、無人運車、室內導航、工業機器人等，達到企業智慧聯網、資訊安全共享、藉以推動工廠數位化轉型。5G網路雖然具備高等級的安全防護，針對企業自建5G專網，我們提供一套完整的企業專網資安解決方案，以提供至少多層防護：網路防護、終端裝置防護、多點監控、事先預防。", "en": "Through the deployment of 5G private networks, Vertex can establish various applications, such as object tracking, video surveillance and analysis, production line inspection, AMR, positon, robots, to promote the digital transformation of factories. Assist factories or enterprises to conduct demand assessment, responsible for planning and deploying the required 5G private network, and utilize 5G terminals to integrate vertical applications in factories, such as AGV cars, imaging equipment, etc." } }]
   },
   {
     "type": "booth",
@@ -8369,86 +8129,6 @@
     "text": { "tc": ["宏智"], "en": ["HippoScreen Neurotech Corp. (HNC)"] },
     "size": { "tc": 0.8, "en": 0.8 },
     "corps": [{ "org": { "tc": "宏智生醫科技股份有限公司", "en": "HippoScreen Neurotech Corp. (HNC)" }, "info": { "tc": "宏智生醫科技利用與國內三家醫學中心合作收集的憂鬱症腦波資料所開發出來的SEA腦波壓力評估系統，包含了負責訊號收集與處理的腦波儀、流程控制的使用者圖形介面、雲端分析的AI演算法，透過紀錄90秒腦波訊號(EEG)並加以分析，提供客觀、可量化的壓力評估指標以及直觀的壓力數據分布圖，輔助醫師提供更有效率、更精準的診斷，是專業醫療人員在心理健康篩檢及臨床上的得力AI幫手。", "en": "HippoScreen's Stress EEG Assessment (SEA) System developed using depression EEG data collected through collaboration with three major medical centers in Taiwan, includes an EEG amplifier for data collection and signal processing, a GUI for test process control, and an AI algorithm for data analysis. It records 90-second brainwave signals to analyze with AI algorithm, and then provides objective and quantifiable stress evaluation index and intuitive data distribution maps in the assessment report. With this report it can assist doctors to provide more efficient and accurate diagnosis. SEA system is designed to be a powerful AI tool for professional medical personnel in mental health screening." } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 300,
-    "h": 300,
-    "x": 12920,
-    "y": 1400,
-    "p": [
-      { "node": "L", "x": 300, "y": 0 },
-      { "node": "L", "x": 300, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "N1301",
-    "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": [""], "en": [""] },
-    "size": { "tc": 0.4, "en": 0.4 },
-    "corps": [{ "org": { "tc": "", "en": "" }, "info": { "tc": "", "en": "" } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 300,
-    "h": 300,
-    "x": 13220,
-    "y": 1400,
-    "p": [
-      { "node": "L", "x": 300, "y": 0 },
-      { "node": "L", "x": 300, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "N1303",
-    "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": [""], "en": [""] },
-    "size": { "tc": 0.4, "en": 0.4 },
-    "corps": [{ "org": { "tc": "", "en": "" }, "info": { "tc": "", "en": "" } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 300,
-    "h": 300,
-    "x": 13520,
-    "y": 1400,
-    "p": [
-      { "node": "L", "x": 300, "y": 0 },
-      { "node": "L", "x": 300, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "N1305",
-    "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": [""], "en": [""] },
-    "size": { "tc": 0.4, "en": 0.4 },
-    "corps": [{ "org": { "tc": "", "en": "" }, "info": { "tc": "", "en": "" } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 300,
-    "h": 300,
-    "x": 13820,
-    "y": 1400,
-    "p": [
-      { "node": "L", "x": 300, "y": 0 },
-      { "node": "L", "x": 300, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "N1307",
-    "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": [""], "en": [""] },
-    "size": { "tc": 0.4, "en": 0.4 },
-    "corps": [{ "org": { "tc": "", "en": "" }, "info": { "tc": "", "en": "" } }]
   },
   {
     "type": "booth",
@@ -8626,9 +8306,9 @@
     "cat": { "tc": "精準醫療展區", "en": "Biotech" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": ["LDTS產業聯盟"], "en": ["LDTS產業聯盟"] },
-    "text": { "tc": ["臺大"], "en": ["臺大"] },
-    "size": { "tc": 0.4, "en": 0.4 },
-    "corps": [{ "org": { "tc": "臺大", "en": "臺大" }, "info": { "tc": "", "en": "" } }]
+    "text": { "tc": ["臺大TR6", "核心"], "en": ["臺大TR6", "核心"] },
+    "size": { "tc": 0.3, "en": 0.3 },
+    "corps": [{ "org": { "tc": "臺大TR6核心", "en": "臺大TR6核心" }, "info": { "tc": "", "en": "" } }]
   },
   {
     "type": "booth",
