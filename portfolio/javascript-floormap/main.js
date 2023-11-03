@@ -127,14 +127,14 @@ const Elements = ({ type, data, size, elementStatus, setElementStatus, handleBoo
   };
   return <g className={`${type}-g`}>{data.filter((d) => d.type == type).map((d, i) => elementActions[type](d, i))}</g>;
 };
-const Floormap = ({ data, realSize, elementStatus, setElementStatus, dragStatus, setDragStatus, zoom, setZoom, handleBoothInfo, searchCondition, handleSearchChange, graphRef, svgRef, zoomCalculator, dragCalculator, animation }) => {
-  const [containerSize, setContainerSize] = useState({ width: realSize.w / 100, height: realSize.h / 100, pageHeight: realSize.h / 100 });
+const Floormap = ({ data, floormapSetting, setFloormapSetting, elementStatus, setElementStatus, handleBoothInfo, searchCondition, handleSearchChange, graphRef, svgRef, zoomCalculator, dragCalculator, defaultViewbox, animation }) => {
+  const [containerSize, setContainerSize] = useState({ width: floormapSetting.realSize.w / 100, height: floormapSetting.realSize.h / 100, pageHeight: floormapSetting.realSize.h / 100 });
   const [viewBox, setViewBox] = useState({ x1: 0, y1: 0, x2: 0, y2: 0 });
   const handleStart = () => {
     if (elementStatus.smallScreen) setElementStatus((prev) => ({ ...prev, sidebar: false }));
-    setDragStatus((prev) => ({ ...prev, moving: true }));
+    setFloormapSetting((prev) => ({ ...prev, dragStatus: { ...prev.dragStatus, moving: true } }));
   };
-  const handleEnd = () => setDragStatus((prev) => ({ ...prev, moving: false, previousTouch: null, previousTouchLength: null }));
+  const handleEnd = () => setFloormapSetting((prev) => ({ ...prev, dragStatus: { ...prev.dragStatus, moving: false, previousTouch: null, previousTouchLength: null } }));
   const handleResize = () => {
     const { clientWidth, clientHeight } = graphRef.current;
     setContainerSize({ width: clientWidth, height: clientHeight });
@@ -143,10 +143,10 @@ const Floormap = ({ data, realSize, elementStatus, setElementStatus, dragStatus,
     e.preventDefault();
     if (e.touches.length === 1) {
       const touch = e.touches[0];
-      setDragStatus((prev) => ({ ...prev, previousTouch: touch, previousTouchLength: e.touches.length }));
-      if (dragStatus.previousTouch) dragCalculator(touch.clientX - dragStatus.previousTouch.clientX, touch.clientY - dragStatus.previousTouch.clientY);
+      setFloormapSetting((prev) => ({ ...prev, dragStatus: { ...prev.dragStatus, previousTouch: touch, previousTouchLength: e.touches.length } }));
+      if (floormapSetting.dragStatus.previousTouch) dragCalculator(touch.clientX - floormapSetting.dragStatus.previousTouch.clientX, touch.clientY - floormapSetting.dragStatus.previousTouch.clientY);
     } else {
-      if (dragStatus.previousTouchLength && dragStatus.previousTouchLength != length) {
+      if (floormapSetting.dragStatus.previousTouchLength && floormapSetting.dragStatus.previousTouchLength != length) {
         handleEnd();
         return;
       }
@@ -155,8 +155,8 @@ const Floormap = ({ data, realSize, elementStatus, setElementStatus, dragStatus,
       const x = (touch1.clientX + touch2.clientX) / 2;
       const y = (touch1.clientY + touch2.clientY) / 2;
       const d = Math.hypot(touch1.clientX - touch2.clientX, touch1.clientY - touch2.clientY);
-      setDragStatus((prev) => ({ ...prev, previousTouch: d }));
-      if (dragStatus.previousTouch) zoomCalculator(x, y, d / dragStatus.previousTouch);
+      setFloormapSetting((prev) => ({ ...prev, dragStatus: { ...prev.dragStatus, previousTouch: d } }));
+      if (floormapSetting.dragStatus.previousTouch) zoomCalculator(x, y, d / floormapSetting.dragStatus.previousTouch);
     }
   };
   const handleMouseDrag = ({ movementX, movementY }) => dragCalculator(movementX, movementY);
@@ -165,16 +165,16 @@ const Floormap = ({ data, realSize, elementStatus, setElementStatus, dragStatus,
     zoomCalculator(clientX, clientY, r);
   };
   useEffect(() => {
-    setViewBox({ x1: 0, y1: 0, x2: realSize.w, y2: realSize.h });
+    setViewBox({ x1: 0, y1: 0, x2: floormapSetting.realSize.w, y2: floormapSetting.realSize.h });
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, [realSize]);
+  }, [floormapSetting.realSize]);
   return (
     <div className="fp-floormap d-flex align-items-center" style={{ minHeight: elementStatus.minHeight }}>
-      <Selector searchCondition={searchCondition} handleSearchChange={handleSearchChange} setDragStatus={setDragStatus} setZoom={setZoom} graphRef={graphRef} svgRef={svgRef} zoomCalculator={zoomCalculator} animation={animation} />
-      <div class={`fp-viewBox ${dragStatus.moving ? "moving" : ""}`} ref={graphRef} onWheel={handleWheelZoom} onMouseDown={handleStart} onMouseUp={handleEnd} onMouseLeave={handleEnd} onMouseMove={handleMouseDrag} onTouchStart={handleStart} onTouchEnd={handleEnd} onTouchMove={handleTouchDragZoom}>
-        <svg id="floormap" ref={svgRef} style={{ translate: `${zoom.x + dragStatus.x}px ${zoom.y + dragStatus.y}px`, scale: `${zoom.scale}`, backgroundColor: "#f1f1f1" }} width={containerSize.width} height={containerSize.height} viewBox={`${viewBox.x1} ${viewBox.y1} ${viewBox.x2} ${viewBox.y2}`}>
+      <Selector searchCondition={searchCondition} handleSearchChange={handleSearchChange} graphRef={graphRef} zoomCalculator={zoomCalculator} defaultViewbox={defaultViewbox} animation={animation} />
+      <div class={`fp-viewBox ${floormapSetting.dragStatus.moving ? "moving" : ""}`} ref={graphRef} onWheel={handleWheelZoom} onMouseDown={handleStart} onMouseUp={handleEnd} onMouseLeave={handleEnd} onMouseMove={handleMouseDrag} onTouchStart={handleStart} onTouchEnd={handleEnd} onTouchMove={handleTouchDragZoom}>
+        <svg id="floormap" ref={svgRef} style={{ translate: `${floormapSetting.zoom.x + floormapSetting.dragStatus.x}px ${floormapSetting.zoom.y + floormapSetting.dragStatus.y}px`, scale: `${floormapSetting.zoom.scale}`, backgroundColor: "#f1f1f1" }} width={containerSize.width} height={containerSize.height} viewBox={`${viewBox.x1} ${viewBox.y1} ${viewBox.x2} ${viewBox.y2}`}>
           <Elements type="wall" data={data} />
           <Elements type="pillar" data={data} />
           <Elements type="text" data={data} />
@@ -261,7 +261,7 @@ const Category = ({ title, data, col, setSearchCondition, setElementStatus }) =>
 
 const Advanced = ({ data, elementStatus, setElementStatus, searchCondition, setSearchCondition, defaultViewbox }) => {
   const download = async () => {
-    defaultViewbox();
+    defaultViewbox(false);
     const svgElement = document.querySelector("#floormap");
     const svgString = new XMLSerializer().serializeToString(svgElement);
     let blob;
@@ -293,7 +293,13 @@ const Advanced = ({ data, elementStatus, setElementStatus, searchCondition, setS
   };
   return (
     <div className={`fp-advanced py-5 ${elementStatus.advanced ? "active" : ""}`}>
-      <div className="fp-download py-3 px-2 mx-auto text-center text-bold shadow" onClick={download}>
+      <div
+        className="fp-download py-3 px-2 mx-auto text-center text-bold shadow"
+        onClick={() => {
+          defaultViewbox(false);
+          setTimeout(download, 50);
+        }}
+      >
         Download PNG
       </div>
       {[
@@ -328,7 +334,7 @@ const Result = ({ d, elementStatus, handleBoothInfo, svgRef, graphRef, zoomCalcu
     zoomCalculator(transformedPoint.x, transformedPoint.y, 10);
     // 獲取攤位中心與地圖中心的距離
     const { offsetLeft: x, offsetTop: y, offsetWidth: w, offsetHeight: h } = graphRef.current;
-    const center = { x: w / 2 + x, y: h / 2 + y };
+    const center = { x: w / 2 + x, y: elementStatus.smallScreen ? d.h / 2 + y : h / 2 + y };
     dragCalculator(center.x - transformedPoint.x, center.y - transformedPoint.y, true);
   };
   return (
@@ -456,16 +462,7 @@ const Sidebar = ({ data, elementStatus, setElementStatus, searchCondition, setSe
   );
 };
 
-const Selector = ({ searchCondition, handleSearchChange, setDragStatus, setZoom, graphRef, svgRef, zoomCalculator }) => {
-  const animation = () => {
-    svgRef.current.style.transition = "0.4s";
-    setTimeout(() => (svgRef.current.style.transition = null), 400);
-  };
-  const defaultViewbox = () => {
-    animation();
-    setDragStatus((prev) => ({ ...prev, x: 0, y: 0 }));
-    setZoom({ scale: 1, x: 0, y: 0 });
-  };
+const Selector = ({ searchCondition, handleSearchChange, graphRef, zoomCalculator, defaultViewbox, animation }) => {
   const handleClickZoom = (r) => {
     animation();
     const { offsetLeft: x, offsetTop: y, offsetWidth: w, offsetHeight: h } = graphRef.current;
@@ -531,16 +528,18 @@ const MainArea = () => {
     tc: ["全齡健康展區", "年度主題館", "醫療機構展區", "智慧醫療展區", "精準醫療展區"],
     en: ["Consumer health", "Reserved", "Medical Institutes", "Medtech", "Biotech"],
   };
-  const realSize = { w: 19830, h: 16950 };
   const title = { tc: "展場平面圖", en: "Floor Plan" };
-  const tagsHeight = 80;
   const types = ["booth", "room"];
   const graphRef = useRef(null);
   const svgRef = useRef(null);
-  const [dragStatus, setDragStatus] = useState({ moving: false, previousTouch: null, previousTouchLength: null, x: 0, y: 0 });
-  const [zoom, setZoom] = useState({ scale: 1, x: 0, y: 0 });
+  const [floormapSetting, setFloormapSetting] = useState({
+    realSize: { w: 19830, h: 16950 },
+    tagsHeight: 80,
+    sidebarWidth: 40,
+    dragStatus: { moving: false, previousTouch: null, previousTouchLength: null, x: 0, y: 0 },
+    zoom: { scale: 1, x: 0, y: 0 },
+  });
   const [floorData, setFloorData] = useState({ loaded: false, data: [] });
-  const [sidebarWidth, setSidebarWidth] = useState(40);
   const [searchCondition, setSearchCondition] = useState(() => {
     const params = new URLSearchParams(window.location.search);
     return {
@@ -622,28 +621,28 @@ const MainArea = () => {
     setElementStatus((prev) => ({ ...prev, boothInfo: true, boothInfoData: d }));
     setSearchCondition((prev) => ({ ...prev, floor: d.floor }));
   };
-  const defaultViewbox = () => {
-    setDragStatus((prev) => ({ ...prev, x: 0, y: 0 }));
-    setZoom({ scale: 1, x: 0, y: 0 });
+  const defaultViewbox = (animate = true) => {
+    if (animate) animation();
+    setFloormapSetting((prev) => ({ ...prev, dragStatus: { ...prev.dragStatus, x: 0, y: 0 }, zoom: { scale: 1, x: 0, y: 0 } }));
   };
   const zoomCalculator = (clientX, clientY, r) => {
     const box = graphRef.current.getBoundingClientRect();
-    setZoom((prev) => {
-      let scale = prev.scale * r;
+    setFloormapSetting((prev) => {
+      let scale = prev.zoom.scale * r;
       scale = scale < 1 ? 1 : scale > 10 ? 10 : scale;
-      let w = svgRef.current.clientWidth * prev.scale;
-      let h = svgRef.current.clientHeight * prev.scale;
-      let x = (graphRef.current.clientWidth - w) / 2 + prev.x + dragStatus.x;
-      let y = (graphRef.current.clientHeight - h) / 2 + prev.y + dragStatus.y;
+      let w = svgRef.current.clientWidth * prev.zoom.scale;
+      let h = svgRef.current.clientHeight * prev.zoom.scale;
+      let x = (graphRef.current.clientWidth - w) / 2 + prev.zoom.x + floormapSetting.dragStatus.x;
+      let y = (graphRef.current.clientHeight - h) / 2 + prev.zoom.y + floormapSetting.dragStatus.y;
       let originX = clientX - box.x - x - w / 2;
       let originY = clientY - box.y - y - h / 2;
-      let xNew = originX - (originX / prev.scale) * scale + prev.x;
-      let yNew = originY - (originY / prev.scale) * scale + prev.y;
-      return { scale: scale, x: xNew, y: yNew };
+      let xNew = originX - (originX / prev.zoom.scale) * scale + prev.zoom.x;
+      let yNew = originY - (originY / prev.zoom.scale) * scale + prev.zoom.y;
+      return { ...prev, zoom: { scale: scale, x: xNew, y: yNew } };
     });
   };
   const dragCalculator = (x, y, force = false) => {
-    if (dragStatus.moving || force) setDragStatus((prev) => ({ ...prev, x: prev.x + x, y: prev.y + y }));
+    if (floormapSetting.dragStatus.moving || force) setFloormapSetting((prev) => ({ ...prev, dragStatus: { ...prev.dragStatus, x: prev.dragStatus.x + x, y: prev.dragStatus.y + y } }));
   };
   const animation = () => {
     svgRef.current.style.transition = "0.4s";
@@ -661,7 +660,7 @@ const MainArea = () => {
   }, []);
   useEffect(() => {
     const height = elementStatus.isMobile ? elementStatus.minHeight : window.innerHeight;
-    setSidebarWidth(elementStatus.smallScreen ? (elementStatus.sidebar ? height * 0.3 : height - 117) : elementStatus.sidebar ? 300 : 30);
+    setFloormapSetting((prev) => ({ ...prev, sidebarWidth: elementStatus.smallScreen ? (elementStatus.sidebar ? height * 0.3 : height - 117) : elementStatus.sidebar ? 300 : 30 }));
   }, [elementStatus.sidebar, elementStatus.smallScreen]);
   useEffect(() => {
     const url = new URL(window.location.href);
@@ -673,9 +672,7 @@ const MainArea = () => {
     history.pushState(null, "", url.href);
   }, [searchCondition]);
   useEffect(() => {
-    setElementStatus((prev) => {
-      return { ...prev, boothInfoData: filterFloorData.find((d) => d.id == prev.boothInfoData.id && d.corpId == prev.boothInfoData.corpId), colors: prev.colors.domain(categories[searchCondition.lang]) };
-    });
+    setElementStatus((prev) => ({ ...prev, boothInfoData: Object.keys(prev.boothInfoData).length === 0 ? {} : filterFloorData.find((d) => d.id == prev.boothInfoData.id && d.corpId == prev.boothInfoData.corpId), colors: prev.colors.domain(categories[searchCondition.lang]) }));
     document.title = title[searchCondition.lang];
   }, [searchCondition.lang]);
   useEffect(() => {
@@ -691,13 +688,14 @@ const MainArea = () => {
       ),
     }));
   }, [searchCondition.string]);
+  console.log(1);
   if (!floorData.loaded) return <Loading />;
   return (
-    <div className="fp-main" style={{ "--sidebar-width": `${sidebarWidth}px`, "--tags-height": `${tagsHeight}px` }}>
+    <div className="fp-main" style={{ "--sidebar-width": `${floormapSetting.sidebarWidth}px`, "--tags-height": `${floormapSetting.tagsHeight}px` }}>
       <Sidebar data={filterFloorData.filter((d) => types.includes(d.type))} elementStatus={elementStatus} setElementStatus={setElementStatus} searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} handleBoothInfo={handleBoothInfo} svgRef={svgRef} graphRef={graphRef} zoomCalculator={zoomCalculator} dragCalculator={dragCalculator} defaultViewbox={defaultViewbox} animation={animation} />
       <div className="fp-graph d-flex align-items-center">
         <Header searchCondition={searchCondition} setSearchCondition={setSearchCondition} />
-        <Floormap data={filterFloorData.filter((d) => d.floor == searchCondition.floor && d.draw)} realSize={realSize} elementStatus={elementStatus} setElementStatus={setElementStatus} dragStatus={dragStatus} setDragStatus={setDragStatus} zoom={zoom} setZoom={setZoom} handleBoothInfo={handleBoothInfo} searchCondition={searchCondition} handleSearchChange={handleSearchChange} graphRef={graphRef} svgRef={svgRef} zoomCalculator={zoomCalculator} dragCalculator={dragCalculator} animation={animation} />
+        <Floormap data={filterFloorData.filter((d) => d.floor == searchCondition.floor && d.draw)} floormapSetting={floormapSetting} setFloormapSetting={setFloormapSetting} elementStatus={elementStatus} setElementStatus={setElementStatus} handleBoothInfo={handleBoothInfo} searchCondition={searchCondition} handleSearchChange={handleSearchChange} graphRef={graphRef} svgRef={svgRef} zoomCalculator={zoomCalculator} dragCalculator={dragCalculator} defaultViewbox={defaultViewbox} animation={animation} />
       </div>
     </div>
   );

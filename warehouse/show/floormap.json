@@ -636,20 +636,22 @@
   {
     "type": "booth",
     "floor": 1,
-    "w": 900,
+    "w": 600,
     "h": 300,
     "x": 5810,
     "y": 1800,
     "p": [
-      { "node": "L", "x": 900, "y": 0 },
-      { "node": "L", "x": 900, "y": 300 },
+      { "node": "L", "x": 300, "y": 0 },
+      { "node": "L", "x": 300, "y": -300 },
+      { "node": "L", "x": 600, "y": -300 },
+      { "node": "L", "x": 600, "y": 300 },
       { "node": "L", "x": 0, "y": 300 }
     ],
     "id": "I1025",
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["麗媚生化科技"], "en": ["REIBI"] },
+    "text": { "tc": ["麗媚生化"], "en": ["REIBI"] },
     "size": { "tc": 0.5, "en": 0.5 },
     "corps": [{ "org": { "tc": "麗媚生化科技有限公司", "en": "REIBI BIO-TECHNOLOGY CO., LTD." }, "info": { "tc": "麗媚生技結合健康技術和生活美學，展示了最新的舒曼波系列智慧傢俱，專為心腦牽引而設計。產品包括單人家庭休閒沙發和冥想墊等，外觀上看起來與普通傢俱無異，使用由工業技術研究院開發的專利腦波拽引裝置，產生", "en": "Reibi Bio-technology combines health technology and life aesthetics to display the latest Schumann series of smart furniture, products include single-person family leisure sofas and meditation cushions, etc., using the patented brain wave pulling device developed by ITRI to generate " } }]
   },
@@ -666,46 +668,6 @@
       { "node": "L", "x": 0, "y": 300 }
     ],
     "id": "I1025a",
-    "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": [""], "en": [""] },
-    "size": { "tc": 0.4, "en": 0.4 },
-    "corps": [{ "org": { "tc": "", "en": "" }, "info": { "tc": "", "en": "" } }]
-  },
-  {
-    "type": "booth",
-    "floor": 1,
-    "w": 300,
-    "h": 300,
-    "x": 6110,
-    "y": 1500,
-    "p": [
-      { "node": "L", "x": 300, "y": 0 },
-      { "node": "L", "x": 300, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "I1027a",
-    "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": [""], "en": [""] },
-    "size": { "tc": 0.4, "en": 0.4 },
-    "corps": [{ "org": { "tc": "", "en": "" }, "info": { "tc": "", "en": "" } }]
-  },
-  {
-    "type": "booth",
-    "floor": 1,
-    "w": 300,
-    "h": 300,
-    "x": 6410,
-    "y": 1500,
-    "p": [
-      { "node": "L", "x": 300, "y": 0 },
-      { "node": "L", "x": 300, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "I1029a",
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
