@@ -368,7 +368,7 @@ const BoothInfoDetail = ({ data, setSearchCondition, elementStatus, setElementSt
   const isBooth = type === "booth";
   const loc = isBooth ? [cat, topic] : [note];
   const tags = Object.keys(elementStatus.boothInfoData).length === 0 ? [] : [...loc, ...tag].filter((d) => d !== "");
-  const corps = data.filter((d) => d.id == id && d.corpId != corpId);
+  const corps = data.find((d) => d.id == id).corps.filter((d) => d.corpId != corpId);
   const handleTagClick = (value) => {
     setSearchCondition((prev) => ({ ...prev, tag: value, string: "" }));
     setElementStatus((prev) => ({ ...prev, boothInfo: false }));
@@ -430,7 +430,7 @@ const BoothInfo = ({ data, setSearchCondition, elementStatus, setElementStatus }
           <span />
         </div>
       </div>
-      {elementStatus.boothInfoData && <BoothInfoDetail data={data} setSearchCondition={setSearchCondition} elementStatus={elementStatus} setElementStatus={setElementStatus} />}
+      {elementStatus.boothInfo && elementStatus.boothInfoData && <BoothInfoDetail data={data} setSearchCondition={setSearchCondition} elementStatus={elementStatus} setElementStatus={setElementStatus} />}
     </div>
   );
 };
@@ -582,13 +582,14 @@ const MainArea = () => {
     const res = [];
     memoFloorData.forEach((d) => {
       const corps = d.corps ? d.corps.map((corp) => corp.org) : [];
+      const infos = d.corps ? d.corps.map((corp) => corp.info) : [];
       const isType = types.includes(d.type);
       const hasTag = isType && searchCondition.tag === "" ? true : [d.id, d.cat, d.topic, d.note, ...d.tag].includes(searchCondition.tag);
-      let hasText = isType && searchCondition.regex.test([d.id, d.text.join(""), d.note, d.cat, d.topic, d.tag, ...corps].join(" "));
+      let hasText = isType && searchCondition.regex.test([d.id, d.text.join(""), d.note, d.cat, d.topic, d.tag, ...infos, ...corps].join(" "));
       const opacity = (hasText && hasTag) || d.type === "icon" ? 0.8 : 0.1;
       if (d.corps) {
         d.corps.forEach((corp, i) => {
-          hasText = searchCondition.regex.test([d.id, d.text.join(""), d.note, d.cat, d.topic, d.tag, corp.org].join(" "));
+          hasText = searchCondition.regex.test([d.id, d.text.join(""), d.note, d.cat, d.topic, d.tag, corp.info, corp.org].join(" "));
           res.push({ ...d, ...corp, opacity: opacity, draw: i === 0, sidebar: hasText && hasTag });
         });
       } else {
