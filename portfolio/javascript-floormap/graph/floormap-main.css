@@ -674,7 +674,12 @@ p {
 }
 .booth:hover path,
 .booth:hover text {
-  fill-opacity: 1;
+  fill-opacity: 1 !important;
+}
+
+#floormap.active .booth:not(.active) path,
+#floormap.active .booth:not(.active) text {
+  fill-opacity: 0.2;
 }
 
 .fp-zoom,

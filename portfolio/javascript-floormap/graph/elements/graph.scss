@@ -38,7 +38,16 @@
   &:hover {
     path,
     text {
-      fill-opacity: 1;
+      fill-opacity: 1 !important;
+    }
+  }
+}
+
+#floormap.active {
+  .booth:not(.active) {
+    path,
+    text {
+      fill-opacity: 0.2;
     }
   }
 }

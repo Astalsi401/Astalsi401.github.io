@@ -101,8 +101,8 @@ const Booth = ({ d, size, elementStatus, setElementStatus, handleBoothInfo, draw
     }
   };
   return (
-    <g key={d.id} id={d.id} className="booth" transform={`translate(${d.x},${d.y})`} onClick={() => handleBoothClick(d)}>
-      <path stroke="black" fill={elementStatus.colors(d.cat)} strokeWidth={1} fillOpacity={opacity} d={`M0 0${drawPath(d.p)}`} />;
+    <g key={d.id} id={d.id} className={`booth ${opacity === 1 ? "active" : ""}`} transform={`translate(${d.x},${d.y})`} onClick={() => handleBoothClick(d)}>
+      <path stroke={"black"} fill={elementStatus.colors(d.cat)} strokeWidth={1} fillOpacity={opacity} d={`M0 0${drawPath(d.p)}`} />;
       <g transform={`translate(${d.w / 2},${d.h / 2 - ((d.text.length - 1) * lineHeight) / 2})`} fontSize={fontSize}>
         {d.text.map((t, j) => (
           <BoothText t={t} j={j} lineHeight={lineHeight} opacity={opacity} boothWidth={d.w} />
@@ -174,7 +174,7 @@ const Floormap = ({ data, floormapSetting, setFloormapSetting, elementStatus, se
     <div className="fp-floormap d-flex align-items-center" style={{ minHeight: elementStatus.minHeight }}>
       <Selector searchCondition={searchCondition} handleSearchChange={handleSearchChange} graphRef={graphRef} zoomCalculator={zoomCalculator} defaultViewbox={defaultViewbox} animation={animation} />
       <div class={`fp-viewBox ${floormapSetting.dragStatus.moving ? "moving" : ""}`} ref={graphRef} onWheel={handleWheelZoom} onMouseDown={handleStart} onMouseUp={handleEnd} onMouseLeave={handleEnd} onMouseMove={handleMouseDrag} onTouchStart={handleStart} onTouchEnd={handleEnd} onTouchMove={handleTouchDragZoom}>
-        <svg id="floormap" ref={svgRef} style={{ translate: `${floormapSetting.zoom.x + floormapSetting.dragStatus.x}px ${floormapSetting.zoom.y + floormapSetting.dragStatus.y}px`, scale: `${floormapSetting.zoom.scale}`, backgroundColor: "#f1f1f1" }} width={containerSize.width} height={containerSize.height} viewBox={`${viewBox.x1} ${viewBox.y1} ${viewBox.x2} ${viewBox.y2}`}>
+        <svg id="floormap" className={elementStatus.boothInfo && "active"} ref={svgRef} style={{ translate: `${floormapSetting.zoom.x + floormapSetting.dragStatus.x}px ${floormapSetting.zoom.y + floormapSetting.dragStatus.y}px`, scale: `${floormapSetting.zoom.scale}`, backgroundColor: "#f1f1f1" }} width={containerSize.width} height={containerSize.height} viewBox={`${viewBox.x1} ${viewBox.y1} ${viewBox.x2} ${viewBox.y2}`}>
           <Elements type="wall" data={data} />
           <Elements type="pillar" data={data} />
           <Elements type="text" data={data} />
@@ -331,7 +331,7 @@ const Result = ({ d, elementStatus, handleBoothInfo, svgRef, graphRef, zoomCalcu
     // 將座標點應用到CTM矩陣
     const transformedPoint = svgPoint.matrixTransform(CTM);
     // 獲取轉換後的clientX和clientY值
-    zoomCalculator(transformedPoint.x, transformedPoint.y, 10);
+    zoomCalculator(transformedPoint.x, transformedPoint.y, 1.5, 1.5);
     // 獲取攤位中心與地圖中心的距離
     const { offsetLeft: x, offsetTop: y, offsetWidth: w, offsetHeight: h } = graphRef.current;
     const center = { x: w / 2 + x, y: elementStatus.smallScreen ? d.h / 2 + y : h / 2 + y };
@@ -374,7 +374,8 @@ const BoothInfoDetail = ({ data, setSearchCondition, elementStatus, setElementSt
   const isBooth = type === "booth";
   const loc = isBooth ? [cat, topic] : [note];
   const tags = Object.keys(elementStatus.boothInfoData).length === 0 ? [] : [...loc, ...tag].filter((d) => d !== "");
-  const corps = data.find((d) => d.id == id).corps.filter((d) => d.corpId != corpId);
+  const booth = data.find((d) => d.id == id);
+  const corps = booth ? booth.corps.filter((d) => d.corpId != corpId) : [];
   const handleTagClick = (value) => {
     setSearchCondition((prev) => ({ ...prev, tag: value, string: "" }));
     setElementStatus((prev) => ({ ...prev, boothInfo: false }));
@@ -523,11 +524,13 @@ const Loading = () => (
 );
 
 const MainArea = () => {
-  const categories = {
-    tc: ["全齡健康展區", "年度主題館", "醫療機構展區", "智慧醫療展區", "精準醫療展區"],
-    en: ["Consumer health", "Reserved", "Medical Institutes", "Medtech", "Biotech"],
+  const mapText = {
+    categories: {
+      tc: ["全齡健康展區", "年度主題館", "醫療機構展區", "智慧醫療展區", "精準醫療展區"],
+      en: ["Consumer health", "Reserved", "Medical Institutes", "Medtech", "Biotech"],
+    },
+    title: { tc: "展場平面圖", en: "Floor Plan" },
   };
-  const title = { tc: "展場平面圖", en: "Floor Plan" };
   const types = ["booth", "room"];
   const graphRef = useRef(null);
   const svgRef = useRef(null);
@@ -554,7 +557,7 @@ const MainArea = () => {
     return {
       isMobile: isMobile,
       minHeight: isMobile ? window.innerHeight : 0,
-      colors: d3.scaleOrdinal().domain(categories[searchCondition.lang]).range(["rgba(237,125,49,0.6)", "rgba(153,204,255,1)", "rgba(255,255,0,0.6)", "rgba(0,112,192,0.6)", "rgba(112,48,160,0.6)"]).unknown("rgba(255,255,255)"),
+      colors: d3.scaleOrdinal().domain(mapText.categories[searchCondition.lang]).range(["rgba(237,125,49,0.6)", "rgba(153,204,255,1)", "rgba(255,255,0,0.6)", "rgba(0,112,192,0.6)", "rgba(112,48,160,0.6)"]).unknown("rgba(255,255,255)"),
       boothInfoData: {},
       smallScreen: false,
       sidebar: true,
@@ -583,11 +586,13 @@ const MainArea = () => {
       const infos = d.corps ? d.corps.map((corp) => corp.info) : [];
       const isType = types.includes(d.type);
       const hasTag = isType && searchCondition.tag === "" ? true : [d.id, d.cat, d.topic, d.note, ...d.tag].includes(searchCondition.tag);
-      let hasText = isType && searchCondition.regex.test([d.id, d.text.join(""), d.note, d.cat, d.topic, d.tag, ...infos, ...corps].join(" ").replace(/\r|\n/g, ""));
+      //   let hasText = isType && searchCondition.regex.test([d.id, d.text.join(""), d.note, d.cat, d.topic, d.tag, ...infos, ...corps].join(" ").replace(/\r|\n/g, ""));
+      let hasText = isType && searchCondition.regex.test([d.id, d.text.join(""), d.note, d.cat, d.topic, d.tag, ...corps].join(" ").replace(/\r|\n/g, ""));
       const opacity = (hasText && hasTag) || d.type === "icon" ? 0.8 : 0.1;
       if (d.corps) {
         d.corps.forEach((corp, i) => {
-          hasText = searchCondition.regex.test([d.id, d.text.join(""), d.note, d.cat, d.topic, d.tag, corp.info, corp.org].join(" ").replace(/\r|\n/g, ""));
+          //   hasText = searchCondition.regex.test([d.id, d.text.join(""), d.note, d.cat, d.topic, d.tag, corp.info, corp.org].join(" ").replace(/\r|\n/g, ""));
+          hasText = searchCondition.regex.test([d.id, d.text.join(""), d.note, d.cat, d.topic, d.tag, corp.org].join(" ").replace(/\r|\n/g, ""));
           res.push({ ...d, ...corp, opacity: opacity, draw: i === 0, sidebar: hasText && hasTag });
         });
       } else {
@@ -624,11 +629,11 @@ const MainArea = () => {
     if (animate) animation();
     setFloormapSetting((prev) => ({ ...prev, dragStatus: { ...prev.dragStatus, x: 0, y: 0 }, zoom: { scale: 1, x: 0, y: 0 } }));
   };
-  const zoomCalculator = (clientX, clientY, r) => {
+  const zoomCalculator = (clientX, clientY, r, rMax = 10) => {
     const box = graphRef.current.getBoundingClientRect();
     setFloormapSetting((prev) => {
       let scale = prev.zoom.scale * r;
-      scale = scale < 1 ? 1 : scale > 10 ? 10 : scale;
+      scale = scale < 1 ? 1 : scale > rMax ? rMax : scale;
       let w = svgRef.current.clientWidth * prev.zoom.scale;
       let h = svgRef.current.clientHeight * prev.zoom.scale;
       let x = (graphRef.current.clientWidth - w) / 2 + prev.zoom.x + floormapSetting.dragStatus.x;
@@ -671,8 +676,9 @@ const MainArea = () => {
     history.pushState(null, "", url.href);
   }, [searchCondition]);
   useEffect(() => {
-    setElementStatus((prev) => ({ ...prev, boothInfoData: Object.keys(prev.boothInfoData).length === 0 ? {} : filterFloorData.find((d) => d.id == prev.boothInfoData.id && d.corpId == prev.boothInfoData.corpId), colors: prev.colors.domain(categories[searchCondition.lang]) }));
-    document.title = title[searchCondition.lang];
+    setSearchCondition((prev) => ({ ...prev, tag: "" }));
+    setElementStatus((prev) => ({ ...prev, boothInfoData: Object.keys(prev.boothInfoData).length === 0 ? {} : filterFloorData.find((d) => d.id == prev.boothInfoData.id && d.corpId == prev.boothInfoData.corpId), colors: prev.colors.domain(mapText.categories[searchCondition.lang]) }));
+    document.title = mapText.title[searchCondition.lang];
   }, [searchCondition.lang]);
   useEffect(() => {
     setSearchCondition((prev) => ({
