@@ -379,11 +379,10 @@ const BoothInfoDetail = ({ data, setSearchCondition, elementStatus, setElementSt
     setSearchCondition((prev) => ({ ...prev, tag: value, string: "" }));
     setElementStatus((prev) => ({ ...prev, boothInfo: false }));
   };
-  const handleNameClick = () => setSearchCondition((prev) => ({ ...prev, floor: floor, tag: "", string: `${id ? id : note} ${org}` }));
   const handleCorpClick = (d) => setElementStatus((prev) => ({ ...prev, boothInfoData: d }));
   return (
     <div className="fp-info">
-      <div className="fp-info-item d-flex align-items-center px-2 py-1" onClick={handleNameClick}>
+      <div className="fp-info-item d-flex align-items-center px-2 py-1">
         <div className="fp-result-item-name text-x-large">{text.join("")}</div>
         <div className="fp-result-item-loc text-small">{isBooth ? `${id} / ${floor}F` : `${floor}F`}</div>
       </div>
@@ -584,11 +583,11 @@ const MainArea = () => {
       const infos = d.corps ? d.corps.map((corp) => corp.info) : [];
       const isType = types.includes(d.type);
       const hasTag = isType && searchCondition.tag === "" ? true : [d.id, d.cat, d.topic, d.note, ...d.tag].includes(searchCondition.tag);
-      let hasText = isType && searchCondition.regex.test([d.id, d.text.join(""), d.note, d.cat, d.topic, d.tag, ...infos, ...corps].join(" "));
+      let hasText = isType && searchCondition.regex.test([d.id, d.text.join(""), d.note, d.cat, d.topic, d.tag, ...infos, ...corps].join(" ").replace(/\r|\n/g, ""));
       const opacity = (hasText && hasTag) || d.type === "icon" ? 0.8 : 0.1;
       if (d.corps) {
         d.corps.forEach((corp, i) => {
-          hasText = searchCondition.regex.test([d.id, d.text.join(""), d.note, d.cat, d.topic, d.tag, corp.info, corp.org].join(" "));
+          hasText = searchCondition.regex.test([d.id, d.text.join(""), d.note, d.cat, d.topic, d.tag, corp.info, corp.org].join(" ").replace(/\r|\n/g, ""));
           res.push({ ...d, ...corp, opacity: opacity, draw: i === 0, sidebar: hasText && hasTag });
         });
       } else {
