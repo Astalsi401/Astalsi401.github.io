@@ -17,8 +17,9 @@
       height: var(--fp-icon-size);
       transition: background-color var(--fp-time);
     }
-    &:checked + span {
-      background-color: var(--fp-sidebar-bg);
+    &:not([name="lang"]):checked + span {
+      background-color: var(--fp-black);
+      color: var(--fp-search-bg);
     }
   }
 }

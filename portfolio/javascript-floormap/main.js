@@ -38,15 +38,16 @@ const Wall = ({ d, drawPath }) => {
 const Pillar = ({ d }) => <rect x={d.x} y={d.y} width={d.w} height={d.h} fill="rgba(0, 0, 0, 0.2)" />;
 const Text = ({ d }) => (
   <text textAnchor="middle" fontWeight="bold" fill={d.color} fontSize={400 * d.size} x={d.x} y={d.y}>
-    {d.text}
+    {d.mapText}
   </text>
 );
-const Room = ({ d, i, size }) => {
+const Room = ({ d, i, size, elementStatus, handleBoothClick }) => {
   const fontSize = size * d.size;
   const lineHeight = fontSize * 1.2;
   const icon_l = 500;
+  const opacity = d.type === "room" && elementStatus.boothInfo && elementStatus.boothInfoData.id == d.id ? 1 : d.opacity;
   return (
-    <g transform={`translate(${d.x},${d.y})`}>
+    <g className={`${d.type} ${opacity === 1 ? "active" : ""}`} transform={`translate(${d.x},${d.y})`} onClick={() => handleBoothClick(d)}>
       <rect stroke="black" strokeWidth={d.bd ? 10 : 0} fill={d.text.length === 0 || d.type === "icon" ? "none" : "#f1f1f1"} fillOpacity={d.opacity} width={d.w} height={d.h} />
       <g transform={`translate(${d.w / 2},${d.h / 2 - ((d.text.length - 1) * lineHeight) / 2})`} fontSize={fontSize}>
         {d.text.map((t, j) => (
@@ -89,17 +90,10 @@ const BoothText = ({ t, j, lineHeight, opacity, boothWidth }) => {
   );
 };
 
-const Booth = ({ d, size, elementStatus, setElementStatus, handleBoothInfo, drawPath }) => {
+const Booth = ({ d, size, elementStatus, handleBoothClick, drawPath }) => {
   const fontSize = size * d.size;
   const lineHeight = fontSize * 1.2;
   const opacity = elementStatus.boothInfo && elementStatus.boothInfoData.id == d.id ? 1 : d.opacity;
-  const handleBoothClick = (d) => {
-    if (elementStatus.boothInfo && elementStatus.boothInfoData.id == d.id) {
-      setElementStatus((prev) => ({ ...prev, boothInfo: false }));
-    } else {
-      handleBoothInfo(d);
-    }
-  };
   return (
     <g key={d.id} id={d.id} className={`booth ${opacity === 1 ? "active" : ""}`} transform={`translate(${d.x},${d.y})`} onClick={() => handleBoothClick(d)}>
       <path stroke={"black"} fill={elementStatus.colors(d.cat)} strokeWidth={1} fillOpacity={opacity} d={`M0 0${drawPath(d.p)}`} />;
@@ -115,26 +109,26 @@ const Booth = ({ d, size, elementStatus, setElementStatus, handleBoothInfo, draw
   );
 };
 
-const Elements = ({ type, data, size, elementStatus, setElementStatus, handleBoothInfo }) => {
+const Elements = ({ type, data, size, elementStatus, handleBoothClick }) => {
   const drawPath = (path) => path.map((p) => (p.node === "L" ? `${p.node}${p.x} ${p.y}` : `${p.node}${p.x1} ${p.y1} ${p.x2} ${p.y2} ${p.x} ${p.y}`)).join("") + "Z";
   const elementActions = {
     wall: (d, i) => <Wall d={d} drawPath={drawPath} />,
     pillar: (d, i) => <Pillar d={d} />,
     text: (d, i) => <Text d={d} />,
-    room: (d, i) => <Room d={d} i={i} size={size} />,
+    room: (d, i) => <Room d={d} i={i} size={size} elementStatus={elementStatus} handleBoothClick={handleBoothClick} />,
     icon: (d, i) => <Room d={d} i={i} size={size} />,
-    booth: (d, i) => <Booth d={d} size={size} elementStatus={elementStatus} setElementStatus={setElementStatus} handleBoothInfo={handleBoothInfo} drawPath={drawPath} />,
+    booth: (d, i) => <Booth d={d} size={size} elementStatus={elementStatus} handleBoothClick={handleBoothClick} drawPath={drawPath} />,
   };
   return <g className={`${type}-g`}>{data.filter((d) => d.type == type).map((d, i) => elementActions[type](d, i))}</g>;
 };
-const Floormap = ({ data, floormapSetting, setFloormapSetting, elementStatus, setElementStatus, handleBoothInfo, searchCondition, handleSearchChange, graphRef, svgRef, zoomCalculator, dragCalculator, defaultViewbox, animation }) => {
-  const [containerSize, setContainerSize] = useState({ width: floormapSetting.realSize.w / 100, height: floormapSetting.realSize.h / 100, pageHeight: floormapSetting.realSize.h / 100 });
+const Floormap = ({ data, elementStatus, setElementStatus, handleBoothInfo, searchCondition, handleSearchChange, graphRef, svgRef, zoomCalculator, dragCalculator, defaultViewbox, animation }) => {
+  const [containerSize, setContainerSize] = useState({ width: elementStatus.realSize.w / 100, height: elementStatus.realSize.h / 100, pageHeight: elementStatus.realSize.h / 100 });
   const [viewBox, setViewBox] = useState({ x1: 0, y1: 0, x2: 0, y2: 0 });
   const handleStart = () => {
     if (elementStatus.smallScreen) setElementStatus((prev) => ({ ...prev, sidebar: false }));
-    setFloormapSetting((prev) => ({ ...prev, dragStatus: { ...prev.dragStatus, moving: true } }));
+    setElementStatus((prev) => ({ ...prev, dragStatus: { ...prev.dragStatus, moving: true } }));
   };
-  const handleEnd = () => setFloormapSetting((prev) => ({ ...prev, dragStatus: { ...prev.dragStatus, moving: false, previousTouch: null, previousTouchLength: null } }));
+  const handleEnd = () => setElementStatus((prev) => ({ ...prev, dragStatus: { ...prev.dragStatus, moving: false, previousTouch: null, previousTouchLength: null } }));
   const handleResize = () => {
     const { clientWidth, clientHeight } = graphRef.current;
     setContainerSize({ width: clientWidth, height: clientHeight });
@@ -143,10 +137,10 @@ const Floormap = ({ data, floormapSetting, setFloormapSetting, elementStatus, se
     e.preventDefault();
     if (e.touches.length === 1) {
       const touch = e.touches[0];
-      setFloormapSetting((prev) => ({ ...prev, dragStatus: { ...prev.dragStatus, previousTouch: touch, previousTouchLength: e.touches.length } }));
-      if (floormapSetting.dragStatus.previousTouch) dragCalculator(touch.clientX - floormapSetting.dragStatus.previousTouch.clientX, touch.clientY - floormapSetting.dragStatus.previousTouch.clientY);
+      setElementStatus((prev) => ({ ...prev, dragStatus: { ...prev.dragStatus, previousTouch: touch, previousTouchLength: e.touches.length } }));
+      if (elementStatus.dragStatus.previousTouch) dragCalculator(touch.clientX - elementStatus.dragStatus.previousTouch.clientX, touch.clientY - elementStatus.dragStatus.previousTouch.clientY);
     } else {
-      if (floormapSetting.dragStatus.previousTouchLength && floormapSetting.dragStatus.previousTouchLength != length) {
+      if (elementStatus.dragStatus.previousTouchLength && elementStatus.dragStatus.previousTouchLength != length) {
         handleEnd();
         return;
       }
@@ -155,8 +149,8 @@ const Floormap = ({ data, floormapSetting, setFloormapSetting, elementStatus, se
       const x = (touch1.clientX + touch2.clientX) / 2;
       const y = (touch1.clientY + touch2.clientY) / 2;
       const d = Math.hypot(touch1.clientX - touch2.clientX, touch1.clientY - touch2.clientY);
-      setFloormapSetting((prev) => ({ ...prev, dragStatus: { ...prev.dragStatus, previousTouch: d } }));
-      if (floormapSetting.dragStatus.previousTouch) zoomCalculator(x, y, d / floormapSetting.dragStatus.previousTouch);
+      setElementStatus((prev) => ({ ...prev, dragStatus: { ...prev.dragStatus, previousTouch: d } }));
+      if (elementStatus.dragStatus.previousTouch) zoomCalculator(x, y, d / elementStatus.dragStatus.previousTouch);
     }
   };
   const handleMouseDrag = ({ movementX, movementY }) => dragCalculator(movementX, movementY);
@@ -164,23 +158,30 @@ const Floormap = ({ data, floormapSetting, setFloormapSetting, elementStatus, se
     let r = deltaY > 0 ? 0.95 : deltaY < 0 ? 1.05 : 1;
     zoomCalculator(clientX, clientY, r);
   };
+  const handleBoothClick = (d) => {
+    if (elementStatus.boothInfo && elementStatus.boothInfoData.id == d.id) {
+      setElementStatus((prev) => ({ ...prev, boothInfo: false }));
+    } else {
+      handleBoothInfo(d);
+    }
+  };
   useEffect(() => {
-    setViewBox({ x1: 0, y1: 0, x2: floormapSetting.realSize.w, y2: floormapSetting.realSize.h });
+    setViewBox({ x1: 0, y1: 0, x2: elementStatus.realSize.w, y2: elementStatus.realSize.h });
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, [floormapSetting.realSize]);
+  }, [elementStatus.realSize]);
   return (
     <div className="fp-floormap d-flex align-items-center" style={{ minHeight: elementStatus.minHeight }}>
       <Selector searchCondition={searchCondition} handleSearchChange={handleSearchChange} graphRef={graphRef} zoomCalculator={zoomCalculator} defaultViewbox={defaultViewbox} animation={animation} />
-      <div class={`fp-viewBox ${floormapSetting.dragStatus.moving ? "moving" : ""}`} ref={graphRef} onWheel={handleWheelZoom} onMouseDown={handleStart} onMouseUp={handleEnd} onMouseLeave={handleEnd} onMouseMove={handleMouseDrag} onTouchStart={handleStart} onTouchEnd={handleEnd} onTouchMove={handleTouchDragZoom}>
-        <svg id="floormap" className={elementStatus.boothInfo && "active"} ref={svgRef} style={{ translate: `${floormapSetting.zoom.x + floormapSetting.dragStatus.x}px ${floormapSetting.zoom.y + floormapSetting.dragStatus.y}px`, scale: `${floormapSetting.zoom.scale}`, backgroundColor: "#f1f1f1" }} width={containerSize.width} height={containerSize.height} viewBox={`${viewBox.x1} ${viewBox.y1} ${viewBox.x2} ${viewBox.y2}`}>
+      <div class={`fp-viewBox ${elementStatus.dragStatus.moving ? "moving" : ""}`} ref={graphRef} onWheel={handleWheelZoom} onMouseDown={handleStart} onMouseUp={handleEnd} onMouseLeave={handleEnd} onMouseMove={handleMouseDrag} onTouchStart={handleStart} onTouchEnd={handleEnd} onTouchMove={handleTouchDragZoom}>
+        <svg id="floormap" className={elementStatus.boothInfo && "active"} ref={svgRef} style={{ translate: `${elementStatus.zoom.x + elementStatus.dragStatus.x}px ${elementStatus.zoom.y + elementStatus.dragStatus.y}px`, scale: `${elementStatus.zoom.scale}`, backgroundColor: "#f1f1f1" }} width={containerSize.width} height={containerSize.height} viewBox={`${viewBox.x1} ${viewBox.y1} ${viewBox.x2} ${viewBox.y2}`}>
           <Elements type="wall" data={data} />
           <Elements type="pillar" data={data} />
           <Elements type="text" data={data} />
-          <Elements type="room" data={data} size={200} />
+          <Elements type="room" data={data} size={200} elementStatus={elementStatus} handleBoothClick={handleBoothClick} />
           <Elements type="icon" data={data} size={200} />
-          <Elements type="booth" data={data} size={250} elementStatus={elementStatus} setElementStatus={setElementStatus} handleBoothInfo={handleBoothInfo} />
+          <Elements type="booth" data={data} size={250} elementStatus={elementStatus} handleBoothClick={handleBoothClick} />
         </svg>
       </div>
     </div>
@@ -334,7 +335,7 @@ const Result = ({ d, elementStatus, handleBoothInfo, svgRef, graphRef, zoomCalcu
     zoomCalculator(transformedPoint.x, transformedPoint.y, 1.5, 1.5);
     // 獲取攤位中心與地圖中心的距離
     const { offsetLeft: x, offsetTop: y, offsetWidth: w, offsetHeight: h } = graphRef.current;
-    const center = { x: w / 2 + x, y: elementStatus.smallScreen ? d.h / 2 + y : h / 2 + y };
+    const center = { x: w / 2 + x, y: h / 2 + y };
     dragCalculator(center.x - transformedPoint.x, center.y - transformedPoint.y, true);
   };
   return (
@@ -375,7 +376,7 @@ const BoothInfoDetail = ({ data, setSearchCondition, elementStatus, setElementSt
   const loc = isBooth ? [cat, topic] : [note];
   const tags = Object.keys(elementStatus.boothInfoData).length === 0 ? [] : [...loc, ...tag].filter((d) => d !== "");
   const booth = data.find((d) => d.id == id);
-  const corps = booth ? booth.corps.filter((d) => d.corpId != corpId) : [];
+  const corps = booth && booth.corps ? booth.corps.filter((d) => d.corpId != corpId) : [];
   const handleTagClick = (value) => {
     setSearchCondition((prev) => ({ ...prev, tag: value, string: "" }));
     setElementStatus((prev) => ({ ...prev, boothInfo: false }));
@@ -563,11 +564,16 @@ const MainArea = () => {
       sidebar: true,
       advanced: false,
       boothInfo: false,
+      realSize: { w: 19830, h: 16950 },
+      tagsHeight: 80,
+      sidebarWidth: 40,
+      dragStatus: { moving: false, previousTouch: null, previousTouchLength: null, x: 0, y: 0 },
+      zoom: { scale: 1, x: 0, y: 0 },
     };
   });
   const memoFloorData = useMemo(
     () =>
-      floorData.data.map((d) => {
+      floorData.data.map((d, i) => {
         let tags = d.tag ? d.tag[searchCondition.lang] : [],
           eventTime = [];
         if (d.event) {
@@ -575,7 +581,7 @@ const MainArea = () => {
           eventTime = d.event.map((e) => ({ start: new Date(e.start), end: new Date(e.end), title: e.title[searchCondition.lang], active: new Date(e.start) < now && new Date(e.end) > now }));
           tags = eventTime.some((e) => e.active) ? tags.concat(["活動進行中"]) : tags;
         }
-        return { ...d, cat: d.cat ? d.cat[searchCondition.lang] : false, topic: d.topic ? d.topic[searchCondition.lang] : false, tag: tags, text: d.text ? d.text[searchCondition.lang] : [], size: d.size ? d.size[searchCondition.lang] : 1, note: d.note ? d.note[searchCondition.lang] : false, event: eventTime, corps: d.corps ? d.corps.map((corp, i) => ({ corpId: `${d.id}-${i}`, org: corp.org[searchCondition.lang], info: corp.info[searchCondition.lang] })) : false, draw: true };
+        return { ...d, id: d.id ? d.id : `${d.type}-${d.floor}-${i}`, cat: d.cat ? d.cat[searchCondition.lang] : false, topic: d.topic ? d.topic[searchCondition.lang] : false, tag: tags, mapText: d.mapText ? d.mapText[searchCondition.lang] : false, text: d.text ? d.text[searchCondition.lang] : [], size: d.size ? d.size[searchCondition.lang] : 1, note: d.note ? d.note[searchCondition.lang] : false, event: eventTime, corps: d.corps ? d.corps.map((corp, i) => ({ corpId: `${d.id}-${i}`, org: corp.org[searchCondition.lang], info: corp.info[searchCondition.lang] })) : false, draw: true };
       }),
     [searchCondition.lang, floorData.data]
   );
@@ -584,15 +590,16 @@ const MainArea = () => {
     memoFloorData.forEach((d) => {
       const corps = d.corps ? d.corps.map((corp) => corp.org) : [];
       const infos = d.corps ? d.corps.map((corp) => corp.info) : [];
+      const targets = [d.id, d.text.join(""), d.note, d.cat, d.topic, d.tag];
       const isType = types.includes(d.type);
       const hasTag = isType && searchCondition.tag === "" ? true : [d.id, d.cat, d.topic, d.note, ...d.tag].includes(searchCondition.tag);
-      //   let hasText = isType && searchCondition.regex.test([d.id, d.text.join(""), d.note, d.cat, d.topic, d.tag, ...infos, ...corps].join(" ").replace(/\r|\n/g, ""));
-      let hasText = isType && searchCondition.regex.test([d.id, d.text.join(""), d.note, d.cat, d.topic, d.tag, ...corps].join(" ").replace(/\r|\n/g, ""));
+      //   let hasText = isType && searchCondition.regex.test([...targets, ...infos, ...corps].join(" ").replace(/\r|\n/g, ""));
+      let hasText = isType && searchCondition.regex.test([...targets, ...corps].join(" ").replace(/\r|\n/g, ""));
       const opacity = (hasText && hasTag) || d.type === "icon" ? 0.8 : 0.1;
       if (d.corps) {
         d.corps.forEach((corp, i) => {
-          //   hasText = searchCondition.regex.test([d.id, d.text.join(""), d.note, d.cat, d.topic, d.tag, corp.info, corp.org].join(" ").replace(/\r|\n/g, ""));
-          hasText = searchCondition.regex.test([d.id, d.text.join(""), d.note, d.cat, d.topic, d.tag, corp.org].join(" ").replace(/\r|\n/g, ""));
+          //   hasText = searchCondition.regex.test([...targets, corp.info, corp.org].join(" ").replace(/\r|\n/g, ""));
+          hasText = searchCondition.regex.test([...targets, corp.org].join(" ").replace(/\r|\n/g, ""));
           res.push({ ...d, ...corp, opacity: opacity, draw: i === 0, sidebar: hasText && hasTag });
         });
       } else {
@@ -627,17 +634,17 @@ const MainArea = () => {
   };
   const defaultViewbox = (animate = true) => {
     if (animate) animation();
-    setFloormapSetting((prev) => ({ ...prev, dragStatus: { ...prev.dragStatus, x: 0, y: 0 }, zoom: { scale: 1, x: 0, y: 0 } }));
+    setElementStatus((prev) => ({ ...prev, dragStatus: { ...prev.dragStatus, x: 0, y: 0 }, zoom: { scale: 1, x: 0, y: 0 } }));
   };
   const zoomCalculator = (clientX, clientY, r, rMax = 10) => {
     const box = graphRef.current.getBoundingClientRect();
-    setFloormapSetting((prev) => {
+    setElementStatus((prev) => {
       let scale = prev.zoom.scale * r;
       scale = scale < 1 ? 1 : scale > rMax ? rMax : scale;
       let w = svgRef.current.clientWidth * prev.zoom.scale;
       let h = svgRef.current.clientHeight * prev.zoom.scale;
-      let x = (graphRef.current.clientWidth - w) / 2 + prev.zoom.x + floormapSetting.dragStatus.x;
-      let y = (graphRef.current.clientHeight - h) / 2 + prev.zoom.y + floormapSetting.dragStatus.y;
+      let x = (graphRef.current.clientWidth - w) / 2 + prev.zoom.x + prev.dragStatus.x;
+      let y = (graphRef.current.clientHeight - h) / 2 + prev.zoom.y + prev.dragStatus.y;
       let originX = clientX - box.x - x - w / 2;
       let originY = clientY - box.y - y - h / 2;
       let xNew = originX - (originX / prev.zoom.scale) * scale + prev.zoom.x;
@@ -646,7 +653,7 @@ const MainArea = () => {
     });
   };
   const dragCalculator = (x, y, force = false) => {
-    if (floormapSetting.dragStatus.moving || force) setFloormapSetting((prev) => ({ ...prev, dragStatus: { ...prev.dragStatus, x: prev.dragStatus.x + x, y: prev.dragStatus.y + y } }));
+    if (elementStatus.dragStatus.moving || force) setElementStatus((prev) => ({ ...prev, dragStatus: { ...prev.dragStatus, x: prev.dragStatus.x + x, y: prev.dragStatus.y + y } }));
   };
   const animation = () => {
     svgRef.current.style.transition = "0.4s";
@@ -664,7 +671,7 @@ const MainArea = () => {
   }, []);
   useEffect(() => {
     const height = elementStatus.isMobile ? elementStatus.minHeight : window.innerHeight;
-    setFloormapSetting((prev) => ({ ...prev, sidebarWidth: elementStatus.smallScreen ? (elementStatus.sidebar ? height * 0.3 : height - 117) : elementStatus.sidebar ? 300 : 30 }));
+    setElementStatus((prev) => ({ ...prev, sidebarWidth: elementStatus.smallScreen ? (elementStatus.sidebar ? height * 0.3 : height - 117) : elementStatus.sidebar ? 300 : 30 }));
   }, [elementStatus.sidebar, elementStatus.smallScreen]);
   useEffect(() => {
     const url = new URL(window.location.href);
@@ -694,12 +701,13 @@ const MainArea = () => {
     }));
   }, [searchCondition.string]);
   if (!floorData.loaded) return <Loading />;
+  console.log(1);
   return (
-    <div className="fp-main" style={{ "--sidebar-width": `${floormapSetting.sidebarWidth}px`, "--tags-height": `${floormapSetting.tagsHeight}px` }}>
+    <div className="fp-main" style={{ "--sidebar-width": `${elementStatus.sidebarWidth}px`, "--tags-height": `${elementStatus.tagsHeight}px` }}>
       <Sidebar data={filterFloorData.filter((d) => types.includes(d.type))} elementStatus={elementStatus} setElementStatus={setElementStatus} searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} handleBoothInfo={handleBoothInfo} svgRef={svgRef} graphRef={graphRef} zoomCalculator={zoomCalculator} dragCalculator={dragCalculator} defaultViewbox={defaultViewbox} animation={animation} />
       <div className="fp-graph d-flex align-items-center">
         <Header searchCondition={searchCondition} setSearchCondition={setSearchCondition} />
-        <Floormap data={filterFloorData.filter((d) => d.floor == searchCondition.floor && d.draw)} floormapSetting={floormapSetting} setFloormapSetting={setFloormapSetting} elementStatus={elementStatus} setElementStatus={setElementStatus} handleBoothInfo={handleBoothInfo} searchCondition={searchCondition} handleSearchChange={handleSearchChange} graphRef={graphRef} svgRef={svgRef} zoomCalculator={zoomCalculator} dragCalculator={dragCalculator} defaultViewbox={defaultViewbox} animation={animation} />
+        <Floormap data={filterFloorData.filter((d) => d.floor == searchCondition.floor && d.draw)} elementStatus={elementStatus} setElementStatus={setElementStatus} handleBoothInfo={handleBoothInfo} searchCondition={searchCondition} handleSearchChange={handleSearchChange} graphRef={graphRef} svgRef={svgRef} zoomCalculator={zoomCalculator} dragCalculator={dragCalculator} defaultViewbox={defaultViewbox} animation={animation} />
       </div>
     </div>
   );
