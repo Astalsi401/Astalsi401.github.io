@@ -26,6 +26,12 @@
   align-items: flex-start;
   padding-top: 2px;
   padding-bottom: 2px;
+  .fp-input-tag {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 .fp-input-tag {
   cursor: pointer;

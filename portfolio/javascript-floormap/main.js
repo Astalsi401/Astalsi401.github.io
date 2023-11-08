@@ -470,14 +470,12 @@ const Selector = ({ searchCondition, handleSearchChange, graphRef, zoomCalculato
   return (
     <>
       <div className="fp-select-floor shadow" onChange={handleSearchChange}>
-        <label>
-          <input type="radio" name="floor" value="1" checked={searchCondition.floor == 1} onChange={handleSearchChange} />
-          <span className="d-flex justify-content-center align-items-center text-small">1F</span>
-        </label>
-        <label>
-          <input type="radio" name="floor" value="4" checked={searchCondition.floor == 4} onChange={handleSearchChange} />
-          <span className="d-flex justify-content-center align-items-center text-small">4F</span>
-        </label>
+        {[4, 1].map((d) => (
+          <label key={`floor-${d}`}>
+            <input type="radio" name="floor" value={d} checked={searchCondition.floor == d} onChange={handleSearchChange} />
+            <span className="d-flex justify-content-center align-items-center text-small">{d}F</span>
+          </label>
+        ))}
       </div>
       <div className="fp-select-lang shadow">
         <label>
