@@ -209,9 +209,9 @@
     height: 100%;
     background-color: var(--cat);
   }
-  &:hover {
-    background-color: var(--fp-hover-bg);
-  }
+}
+.fp-result-item:hover {
+  background-color: var(--fp-hover-bg);
 }
 
 .fp-result-item-name {

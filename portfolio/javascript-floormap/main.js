@@ -18,11 +18,11 @@ meta.setAttribute("name", "viewport");
 meta.setAttribute("content", "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no");
 document.head.appendChild(meta);
 
-const Header = ({ searchCondition, setSearchCondition }) => {
-  const tags = ["活動進行中"];
+const Header = ({ elementStatus, setSearchCondition }) => {
+  const tags = [elementStatus.mapText.event];
   return (
     <div className="fp-tags p-2 d-flex flex-wrap align-items-center shadow">
-      <div>{{ tc: "年度重點必看：", en: "年度重點必看：" }[searchCondition.lang]}</div>
+      <div>{elementStatus.mapText.header}：</div>
       {tags.map((d) => (
         <div className="fp-input-tag shadow" onClick={() => setSearchCondition((prev) => ({ ...prev, tag: d }))}>
           {d}
@@ -47,7 +47,7 @@ const Room = ({ d, i, size, elementStatus, handleBoothClick }) => {
   const icon_l = 500;
   const opacity = d.type === "room" && elementStatus.boothInfo && elementStatus.boothInfoData.id == d.id ? 1 : d.opacity;
   return (
-    <g className={`${d.type} ${opacity === 1 ? "active" : ""}`} transform={`translate(${d.x},${d.y})`} onClick={() => handleBoothClick(d)}>
+    <g className={`${d.type} ${opacity === 1 ? "active" : ""}`} transform={`translate(${d.x},${d.y})`} onClick={d.type === "room" ? () => handleBoothClick(d) : null}>
       <rect stroke="black" strokeWidth={d.bd ? 10 : 0} fill={d.text.length === 0 || d.type === "icon" ? "none" : "#f1f1f1"} fillOpacity={d.opacity} width={d.w} height={d.h} />
       <g transform={`translate(${d.w / 2},${d.h / 2 - ((d.text.length - 1) * lineHeight) / 2})`} fontSize={fontSize}>
         {d.text.map((t, j) => (
@@ -320,22 +320,18 @@ const Result = ({ d, elementStatus, handleBoothInfo, svgRef, graphRef, zoomCalcu
   const name = isBooth ? d.org : d.note;
   const loc = isBooth ? `${d.id} / ${d.floor}F` : `${d.floor}F`;
   const handleResultClick = () => {
+    // 定位選取攤位中心點至地圖中心點
+    if (!elementStatus.sidebar) return;
     animation();
     handleBoothInfo(d);
-    // 定位至選取攤位(開發中)
     const svgPoint = svgRef.current.createSVGPoint();
-    // 攤位中心點
     svgPoint.x = d.x + d.w / 2;
     svgPoint.y = d.y + d.h / 2;
-    // 獲取SVG元素的CTM矩陣
     const CTM = svgRef.current.getScreenCTM();
-    // 將座標點應用到CTM矩陣
     const transformedPoint = svgPoint.matrixTransform(CTM);
-    // 獲取轉換後的clientX和clientY值
-    zoomCalculator(transformedPoint.x, transformedPoint.y, 1.5, 1.5);
-    // 獲取攤位中心與地圖中心的距離
     const { offsetLeft: x, offsetTop: y, offsetWidth: w, offsetHeight: h } = graphRef.current;
-    const center = { x: w / 2 + x, y: h / 2 + y };
+    const center = { x: w / 2 + x, y: elementStatus.smallScreen ? (elementStatus.sidebarWidth + elementStatus.tagsHeight) / 2 : h / 2 + y };
+    zoomCalculator(transformedPoint.x, transformedPoint.y, 1.5, 1.5);
     dragCalculator(center.x - transformedPoint.x, center.y - transformedPoint.y, true);
   };
   return (
@@ -376,7 +372,7 @@ const BoothInfoDetail = ({ data, setSearchCondition, elementStatus, setElementSt
   const loc = isBooth ? [cat, topic] : [note];
   const tags = Object.keys(elementStatus.boothInfoData).length === 0 ? [] : [...loc, ...tag].filter((d) => d !== "");
   const booth = data.find((d) => d.id == id);
-  const corps = booth && booth.corps ? booth.corps.filter((d) => d.corpId != corpId) : [];
+  const corps = booth && booth.corps ? booth.corps : [];
   const handleTagClick = (value) => {
     setSearchCondition((prev) => ({ ...prev, tag: value, string: "" }));
     setElementStatus((prev) => ({ ...prev, boothInfo: false }));
@@ -387,7 +383,7 @@ const BoothInfoDetail = ({ data, setSearchCondition, elementStatus, setElementSt
   return (
     <div className="fp-info">
       <div className="fp-info-item d-flex align-items-center px-2 py-1">
-        <div className="fp-result-item-name text-x-large">{text.join("")}</div>
+        <div className="fp-result-item-name text-x-large text-bold">{text.join("")}</div>
         <div className="fp-result-item-loc text-small">{isBooth ? `${id} / ${floor}F` : `${floor}F`}</div>
       </div>
       <div className="p-2 text-large">{org}</div>
@@ -398,12 +394,12 @@ const BoothInfoDetail = ({ data, setSearchCondition, elementStatus, setElementSt
           </div>
         ))}
       </div>
-      {corps.length > 0 && (
+      {corps.length > 1 && (
         <div className="p-2">
           <div className="my-1 text-large">聯展單位</div>
           <div className="my-1 fp-booth-tags d-flex flex-wrap">
             {corps.map((d) => (
-              <div className="fp-input-tag shadow text-small" style={{ "--cat": elementStatus.colors("") }} onClick={() => handleCorpClick(d.corpId)}>
+              <div className="fp-input-tag shadow text-small" style={{ "--cat": d.corpId == corpId ? "rgb(0, 0, 128, 0.3)" : elementStatus.colors("") }} onClick={() => handleCorpClick(d.corpId)}>
                 {d.org}
               </div>
             ))}
@@ -533,6 +529,8 @@ const MainArea = () => {
       en: ["Consumer health", "Reserved", "Medical Institutes", "Medtech", "Biotech"],
     },
     title: { tc: "展場平面圖", en: "Floor Plan" },
+    event: { tc: "活動進行中", en: "Activity in progress" },
+    header: { tc: "年度重點必看", en: "Annual Highlights" },
   };
   const types = ["booth", "room"];
   const graphRef = useRef(null);
@@ -564,6 +562,11 @@ const MainArea = () => {
       sidebarWidth: 40,
       dragStatus: { moving: false, previousTouch: null, previousTouchLength: null, x: 0, y: 0 },
       zoom: { scale: 1, x: 0, y: 0 },
+      mapText: {
+        title: mapText.title[searchCondition.lang],
+        event: mapText.event[searchCondition.lang],
+        header: mapText.header[searchCondition.lang],
+      },
     };
   });
   const memoFloorData = useMemo(
@@ -574,7 +577,7 @@ const MainArea = () => {
         if (d.event) {
           const now = new Date();
           eventTime = d.event.map((e) => ({ start: new Date(e.start), end: new Date(e.end), title: e.title[searchCondition.lang], active: new Date(e.start) < now && new Date(e.end) > now }));
-          tags = eventTime.some((e) => e.active) ? tags.concat(["活動進行中"]) : tags;
+          tags = eventTime.some((e) => e.active) ? tags.concat([mapText.event[searchCondition.lang]]) : tags;
         }
         return { ...d, id: d.id ? d.id : `${d.type}-${d.floor}-${i}`, cat: d.cat ? d.cat[searchCondition.lang] : false, topic: d.topic ? d.topic[searchCondition.lang] : false, tag: tags, mapText: d.mapText ? d.mapText[searchCondition.lang] : false, text: d.text ? d.text[searchCondition.lang] : [], size: d.size ? d.size[searchCondition.lang] : 1, note: d.note ? d.note[searchCondition.lang] : false, event: eventTime, corps: d.corps ? d.corps.map((corp, i) => ({ corpId: `${d.id}-${i}`, org: corp.org[searchCondition.lang], info: corp.info[searchCondition.lang] })) : false, draw: true };
       }),
@@ -621,7 +624,9 @@ const MainArea = () => {
   const handleResize = () =>
     setElementStatus((prev) => {
       const smallScreen = window.innerWidth < 768;
-      return { ...prev, smallScreen: smallScreen, sidebar: prev.smallScreen ? prev.sidebar : !smallScreen };
+      const sidebar = smallScreen ? prev.sidebar : !smallScreen;
+      const height = prev.isMobile ? prev.minHeight : window.innerHeight;
+      return { ...prev, smallScreen: smallScreen, sidebar: sidebar, sidebarWidth: smallScreen ? (sidebar ? height * 0.3 : height - 117) : sidebar ? 300 : 30 };
     });
   const handleBoothInfo = (d) => {
     setElementStatus((prev) => ({ ...prev, boothInfo: true, boothInfoData: d }));
@@ -664,10 +669,7 @@ const MainArea = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  useEffect(() => {
-    const height = elementStatus.isMobile ? elementStatus.minHeight : window.innerHeight;
-    setElementStatus((prev) => ({ ...prev, sidebarWidth: elementStatus.smallScreen ? (elementStatus.sidebar ? height * 0.3 : height - 117) : elementStatus.sidebar ? 300 : 30 }));
-  }, [elementStatus.sidebar, elementStatus.smallScreen]);
+  useEffect(() => handleResize, [elementStatus.sidebar, elementStatus.smallScreen]);
   useEffect(() => {
     const url = new URL(window.location.href);
     const searchParams = new URLSearchParams(url.search);
@@ -679,7 +681,16 @@ const MainArea = () => {
   }, [searchCondition]);
   useEffect(() => {
     setSearchCondition((prev) => ({ ...prev, tag: "" }));
-    setElementStatus((prev) => ({ ...prev, boothInfoData: Object.keys(prev.boothInfoData).length === 0 ? {} : filterFloorData.find((d) => d.id == prev.boothInfoData.id && d.corpId == prev.boothInfoData.corpId), colors: prev.colors.domain(mapText.categories[searchCondition.lang]) }));
+    setElementStatus((prev) => ({
+      ...prev,
+      boothInfoData: Object.keys(prev.boothInfoData).length === 0 ? {} : filterFloorData.find((d) => d.id == prev.boothInfoData.id && d.corpId == prev.boothInfoData.corpId),
+      colors: prev.colors.domain(mapText.categories[searchCondition.lang]),
+      mapText: {
+        title: mapText.title[searchCondition.lang],
+        event: mapText.event[searchCondition.lang],
+        header: mapText.header[searchCondition.lang],
+      },
+    }));
     document.title = mapText.title[searchCondition.lang];
   }, [searchCondition.lang]);
   useEffect(() => {
@@ -701,7 +712,7 @@ const MainArea = () => {
       <div className="fp-main" style={{ "--sidebar-width": `${elementStatus.sidebarWidth}px`, "--tags-height": `${elementStatus.tagsHeight}px` }}>
         <Sidebar data={filterFloorData.filter((d) => types.includes(d.type))} elementStatus={elementStatus} setElementStatus={setElementStatus} searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} handleBoothInfo={handleBoothInfo} svgRef={svgRef} graphRef={graphRef} zoomCalculator={zoomCalculator} dragCalculator={dragCalculator} defaultViewbox={defaultViewbox} animation={animation} />
         <div className="fp-graph d-flex align-items-center">
-          <Header searchCondition={searchCondition} setSearchCondition={setSearchCondition} />
+          <Header elementStatus={elementStatus} setSearchCondition={setSearchCondition} />
           <Floormap data={filterFloorData.filter((d) => d.floor == searchCondition.floor && d.draw)} elementStatus={elementStatus} setElementStatus={setElementStatus} handleBoothInfo={handleBoothInfo} searchCondition={searchCondition} handleSearchChange={handleSearchChange} graphRef={graphRef} svgRef={svgRef} zoomCalculator={zoomCalculator} dragCalculator={dragCalculator} defaultViewbox={defaultViewbox} animation={animation} />
         </div>
       </div>

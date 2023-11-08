@@ -600,8 +600,8 @@ p {
   height: 100%;
   background-color: var(--cat);
 }
-.fp-result-item:hover,
-.fp-info-item:hover {
+
+.fp-result-item:hover {
   background-color: var(--fp-hover-bg);
 }
 
