@@ -4034,11 +4034,11 @@
     ],
     "id": "L017",
     "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
-    "topic": { "tc": "", "en": "" },
+    "topic": { "tc": "智慧醫院", "en": "智慧醫院" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": [""], "en": [""] },
+    "text": { "tc": ["五鈴"], "en": ["ISUZU OPTICS CORP."] },
     "size": { "tc": 0.4, "en": 0.4 },
-    "corps": [{ "org": { "tc": "", "en": "" }, "info": { "tc": "", "en": "" } }]
+    "corps": [{ "org": { "tc": "五鈴光學股份有限公司", "en": "ISUZU OPTICS CORP." }, "info": { "tc": "★內置推掃螢光高光譜\n★IOC-ONE 二合一顯微高光譜\n★小動物螢光\n★仿生膜溶出儀\n★藥品分類", "en": "★Built-in push-broom fluorescent hyperspectral\n★IOC-ONE 2-in-1 Microscopic Hyperspectral\n★Small animal fluorescent\n★Bionic Membrane Dissolution Apparatus\n★Drug Classification" } }]
   },
   {
     "type": "booth",
@@ -4099,46 +4099,6 @@
     "text": { "tc": ["新元鋒"], "en": ["New YF Precision Co."] },
     "size": { "tc": 0.35, "en": 0.35 },
     "corps": [{ "org": { "tc": "新元鋒精密股份有限公司", "en": "New YF Precision Co." }, "info": { "tc": "新元鋒精密股份有限公司(New YF Precision Co.)為一間專精於薄膜及表面處理技術服務的半導體設備代理商，專業客服團隊可因應不同產業需求提供客製化改機服務。\n新元鋒精密為Picosun ALD在臺授權代理商，更為Picosun在臺唯一授權Picosun機臺維修或保養之合作廠商。新元鋒精密成功開發TEM樣品處理技術，獲12吋晶圓廠廣泛採用，市占率達九成；Mini LED背光模組方面也獲得國際大廠指定採用，打入供應鏈。並在氮化鎵、砷化鎵和碳化矽等化合物半導體及雷射半導體攻下灘頭堡，並且投入生醫材料、Micro LED及Micro OLED等先進顯示產業的應用開發。\n產品：\n1. Applied Materials Picosun 原子層沉積鍍膜設備：ALD鍍膜功能從晶片、元件製程、玻璃、元件保護、3D封裝技術、3D構件鍍膜到粉體加工等都有相對應的技術，近年來更運用在醫療器材的薄膜coating，為具生物相容性且能長期侵入特性的膜層。\n2. 電漿表面處理設備：電漿處理可用於多種材料表面特性改質，使它們更容易接合、黏合和上漆，通過電漿清潔及活化表面來改善表面的粘附特性。此應用在生醫領域已是成熟技術，例如微流道製程(PDMS與玻璃接合)。\n3.  超小體積微流道控制模組：此技術實現微流道閥件微型化，提供了適用於生醫微流道的閥件、控制器及應用系統。目前已能做到內損耗4uL的閥件，對於珍貴的生醫試劑或一次性檢體操作頗具價值。", "en": "1. Applied Materials Picosun 原子層沉積鍍膜設備：ALD鍍膜功能從晶片、元件製程、玻璃、元件保護、3D封裝技術、3D構件鍍膜到粉體加工等都有相對應的技術，近年來更運用在醫療器材的薄膜coating，為具生物相容性且能長期侵入特性的膜層。\n2. 電漿表面處理設備：電漿處理可用於多種材料表面特性改質，使它們更容易接合、黏合和上漆，通過電漿清潔及活化表面來改善表面的粘附特性。此應用在生醫領域已是成熟技術，例如微流道製程(PDMS與玻璃接合)。\n3.  超小體積微流道控制模組：此技術實現微流道閥件微型化，提供了適用於生醫微流道的閥件、控制器及應用系統。目前已能做到內損耗4uL的閥件，對於珍貴的生醫試劑或一次性檢體操作頗具價值。" } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 300,
-    "h": 300,
-    "x": 900,
-    "y": 2610,
-    "p": [
-      { "node": "L", "x": 300, "y": 0 },
-      { "node": "L", "x": 300, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "L022",
-    "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
-    "topic": { "tc": "智慧醫院", "en": "智慧醫院" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["五鈴"], "en": ["ISUZU OPTICS CORP."] },
-    "size": { "tc": 0.4, "en": 0.4 },
-    "corps": [{ "org": { "tc": "五鈴光學股份有限公司", "en": "ISUZU OPTICS CORP." }, "info": { "tc": "★內置推掃螢光高光譜\n★IOC-ONE 二合一顯微高光譜\n★小動物螢光\n★仿生膜溶出儀\n★藥品分類", "en": "★Built-in push-broom fluorescent hyperspectral\n★IOC-ONE 2-in-1 Microscopic Hyperspectral\n★Small animal fluorescent\n★Bionic Membrane Dissolution Apparatus\n★Drug Classification" } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 300,
-    "h": 300,
-    "x": 900,
-    "y": 2310,
-    "p": [
-      { "node": "L", "x": 300, "y": 0 },
-      { "node": "L", "x": 300, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "L023",
-    "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": [""], "en": [""] },
-    "size": { "tc": 0.4, "en": 0.4 },
-    "corps": [{ "org": { "tc": "", "en": "" }, "info": { "tc": "", "en": "" } }]
   },
   {
     "type": "booth",
@@ -6030,10 +5990,10 @@
     "id": "M201a",
     "cat": { "tc": "精準醫療展區", "en": "Biotech" },
     "topic": { "tc": "", "en": "" },
-    "tag": { "tc": ["精準檢測大健康主題館", "臺灣微生物學會", "臺灣醫事檢驗學會"], "en": ["精準檢測大健康主題館", "臺灣微生物學會", "臺灣醫事檢驗學會"] },
-    "text": { "tc": ["微生物學會"], "en": ["微生物學會"] },
-    "size": { "tc": 0.4, "en": 0.4 },
-    "corps": [{ "org": { "tc": "臺灣微生物學會", "en": "臺灣微生物學會" }, "info": { "tc": "", "en": "" } }]
+    "tag": { "tc": [], "en": [] },
+    "text": { "tc": ["精準醫療展區"], "en": ["Biotech"] },
+    "size": { "tc": 0.35, "en": 0.4 },
+    "corps": [{ "org": { "tc": "", "en": "" }, "info": { "tc": "", "en": "" } }]
   },
   {
     "type": "booth",
