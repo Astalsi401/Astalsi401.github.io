@@ -31,14 +31,14 @@
     "year": 2023,
     "season": 3,
     "data": [
-      { "category": "健康器材及預防保健品", "category_en": "Workout Equipment & Health Supplement", "thisYear": 181.51, "lastYear": 299.6 },
-      { "category": "原料藥", "category_en": "APIs", "thisYear": 97.39, "lastYear": 59.9 },
-      { "category": "生技服務/基因檢測服務", "category_en": "Genetic Testing & Wellness Check", "thisYear": 57.75, "lastYear": 37.2 },
-      { "category": "藥品製造/新藥研發", "category_en": "Bio-Pharmaceuticals", "thisYear": 745.36, "lastYear": 396.9 },
-      { "category": "農業生技/農科健康", "category_en": "Agriculture & Agricultural Science", "thisYear": 89.76, "lastYear": 71.4 },
-      { "category": "醫學美容/藥妝保健", "category_en": "Aesthetic Medicine & Beauty Care", "thisYear": 182.85, "lastYear": 104.5 },
-      { "category": "醫材製造/研發", "category_en": "Medical Device R&D, Manufacturing", "thisYear": 520.89, "lastYear": 371.8 },
-      { "category": "醫療通路/產品經銷", "category_en": "Pharmacy & Distributor", "thisYear": 444.27, "lastYear": 276.2 }
+      { "category": "健康器材及預防保健品", "category_en": "Workout Equipment & Health Supplement", "thisYear": 181.51, "lastYear": 460.2 },
+      { "category": "原料藥", "category_en": "APIs", "thisYear": 97.39, "lastYear": 92.4 },
+      { "category": "生技服務/基因檢測服務", "category_en": "Genetic Testing & Wellness Check", "thisYear": 57.75, "lastYear": 52.5 },
+      { "category": "藥品製造/新藥研發", "category_en": "Bio-Pharmaceuticals", "thisYear": 745.36, "lastYear": 637.8 },
+      { "category": "農業生技/農科健康", "category_en": "Agriculture & Agricultural Science", "thisYear": 89.76, "lastYear": 105.2 },
+      { "category": "醫學美容/藥妝保健", "category_en": "Aesthetic Medicine & Beauty Care", "thisYear": 182.85, "lastYear": 157.5 },
+      { "category": "醫材製造/研發", "category_en": "Medical Device R&D, Manufacturing", "thisYear": 520.89, "lastYear": 568.2 },
+      { "category": "醫療通路/產品經銷", "category_en": "Pharmacy & Distributor", "thisYear": 444.27, "lastYear": 413.5 }
     ]
   }
 ]
