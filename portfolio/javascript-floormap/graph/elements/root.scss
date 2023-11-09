@@ -76,6 +76,12 @@ $index: (tools, tags, sidebar);
     .#{$key}b-#{$i} {
       #{$value}-bottom: calc($i * var(--fp-sidebar-px));
     }
+    .#{$key}s-#{$i} {
+      #{$value}-left: calc($i * var(--fp-sidebar-px));
+    }
+    .#{$key}e-#{$i} {
+      #{$value}-right: calc($i * var(--fp-sidebar-px));
+    }
   }
 }
 

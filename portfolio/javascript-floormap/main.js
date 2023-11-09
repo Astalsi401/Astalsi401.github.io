@@ -211,6 +211,7 @@ const FilterIcon = () => {
 };
 
 const Search = ({ searchCondition, setSearchCondition, elementStatus, setElementStatus, handleSearchChange }) => {
+  const searched = searchCondition.string.length === 0 && searchCondition.tag === "";
   return (
     <div className="fp-search d-flex align-items-center justify-content-center">
       <div className={`fp-filter px-1 ${elementStatus.advanced ? "active" : ""}`} onClick={() => setElementStatus((prev) => ({ ...prev, advanced: !prev.advanced }))}>
@@ -218,14 +219,15 @@ const Search = ({ searchCondition, setSearchCondition, elementStatus, setElement
       </div>
       <div className="fp-input d-flex flex-wrap align-items-center px-1">
         {searchCondition.tag !== "" && (
-          <div className="fp-input-tag shadow text-small" onClick={() => setSearchCondition((prev) => ({ ...prev, tag: "" }))} style={{ "--cat": elementStatus.colors(searchCondition.tag) }}>
+          <div className="fp-input-tag shadow text-small" title="清除標籤" onClick={() => setSearchCondition((prev) => ({ ...prev, tag: "" }))} style={{ "--cat": elementStatus.colors(searchCondition.tag) }}>
             {searchCondition.tag}
           </div>
         )}
         <input className="fp-input-text d-block text-large" name="search" type="text" value={searchCondition.string} onChange={handleSearchChange} placeholder={{ tc: "搜索攤位名稱、攤位編號", en: "Search" }[searchCondition.lang]} />
       </div>
       <div
-        className={`fp-toggle d-flex align-items-center justify-content-center ${searchCondition.string.length === 0 ? "" : "active"}`}
+        className={`fp-toggle d-flex align-items-center justify-content-center ${searched ? "" : "active"}`}
+        title={searched ? "" : "清除搜尋條件"}
         onClick={() => {
           if (elementStatus.sidebar) setSearchCondition((prev) => ({ ...prev, string: "", tag: "" }));
         }}
@@ -320,10 +322,11 @@ const Result = ({ d, elementStatus, handleBoothInfo, svgRef, graphRef, zoomCalcu
   const name = isBooth ? d.org : d.note;
   const loc = isBooth ? `${d.id} / ${d.floor}F` : `${d.floor}F`;
   const handleResultClick = () => {
-    // 定位選取攤位中心點至地圖中心點
     if (!elementStatus.sidebar) return;
-    animation();
     handleBoothInfo(d);
+    return;
+    animation();
+    // 定位選取攤位中心點至地圖中心點
     const svgPoint = svgRef.current.createSVGPoint();
     svgPoint.x = d.x + d.w / 2;
     svgPoint.y = d.y + d.h / 2;
@@ -354,12 +357,20 @@ const ResultList = ({ data, elementStatus, handleBoothInfo, svgRef, graphRef, zo
   );
 };
 
-const Event = ({ start, end, title, active }) => {
+const Event = ({ timeList, title, active }) => {
+  const [showEventInfo, setShowEventInfo] = useState(false);
   const format = (datetime) => (Array(2).join("0") + datetime).slice(-2);
   return (
-    <div className={`fp-event my-1 p-1 ${active ? "active" : ""}`}>
-      <div className="text-small">{`${format(start.getMonth() + 1)}/${format(start.getDate())} ${format(start.getHours())}:${format(start.getMinutes())}-${format(end.getHours())}:${format(end.getMinutes())}`}</div>
-      <div>{title}</div>
+    <div className={`fp-event my-1 p-1 ${active ? "active" : ""}`} onClick={() => setShowEventInfo(!showEventInfo)}>
+      <div className="me-4">{title}</div>
+      <div className={`${timeList.length > 1 ? "time-list" : ""} ${showEventInfo ? "active" : ""}`}>
+        {timeList.map((time) => {
+          const startDate = `${format(time.start.getMonth() + 1)}/${format(time.start.getDate())}`;
+          const endDate = `${format(time.end.getMonth() + 1)}/${format(time.end.getDate())}`;
+          const endTime = `${startDate == endDate ? "" : `${endDate} `}${format(time.end.getHours())}:${format(time.end.getMinutes())}`;
+          return <div className="text-small">{`${startDate} ${format(time.start.getHours())}:${format(time.start.getMinutes())}-${endTime}`}</div>;
+        })}
+      </div>
     </div>
   );
 };
@@ -574,7 +585,7 @@ const MainArea = () => {
           eventTime = [];
         if (d.event) {
           const now = new Date();
-          eventTime = d.event.map((e) => ({ start: new Date(e.start), end: new Date(e.end), title: e.title[searchCondition.lang], active: new Date(e.start) < now && new Date(e.end) > now }));
+          eventTime = d.event.map((e) => ({ timeList: e.timeList.map((time) => ({ start: new Date(time.start), end: new Date(time.end) })), title: e.title[searchCondition.lang], active: e.timeList.some((time) => new Date(time.start) < now && new Date(time.end) > now) }));
           tags = eventTime.some((e) => e.active) ? tags.concat([mapText.event[searchCondition.lang]]) : tags;
         }
         return { ...d, id: d.id ? d.id : `${d.type}-${d.floor}-${i}`, cat: d.cat ? d.cat[searchCondition.lang] : false, topic: d.topic ? d.topic[searchCondition.lang] : false, tag: tags, mapText: d.mapText ? d.mapText[searchCondition.lang] : false, text: d.text ? d.text[searchCondition.lang] : [], size: d.size ? d.size[searchCondition.lang] : 1, note: d.note ? d.note[searchCondition.lang] : false, event: eventTime, corps: d.corps ? d.corps.map((corp, i) => ({ corpId: `${d.id}-${i}`, org: corp.org[searchCondition.lang], info: corp.info[searchCondition.lang] })) : false, draw: true };
@@ -585,7 +596,7 @@ const MainArea = () => {
     const res = [];
     memoFloorData.forEach((d) => {
       const corps = d.corps ? d.corps.map((corp) => corp.org) : [];
-      const infos = d.corps ? d.corps.map((corp) => corp.info) : [];
+      //   const infos = d.corps ? d.corps.map((corp) => corp.info) : [];
       const targets = [d.id, d.text.join(""), d.note, d.cat, d.topic, d.tag];
       const isType = types.includes(d.type);
       const hasTag = isType && searchCondition.tag === "" ? true : [d.id, d.cat, d.topic, d.note, ...d.tag].includes(searchCondition.tag);
@@ -678,7 +689,7 @@ const MainArea = () => {
     history.pushState(null, "", url.href);
   }, [searchCondition]);
   useEffect(() => {
-    setSearchCondition((prev) => ({ ...prev, tag: "" }));
+    // setSearchCondition((prev) => ({ ...prev, tag: "" }));
     setElementStatus((prev) => ({
       ...prev,
       boothInfoData: Object.keys(prev.boothInfoData).length === 0 ? {} : filterFloorData.find((d) => d.id == prev.boothInfoData.id && d.corpId == prev.boothInfoData.corpId),

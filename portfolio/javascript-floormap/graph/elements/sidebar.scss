@@ -29,8 +29,30 @@
   .fp-input-tag {
     max-width: 100%;
     white-space: nowrap;
-    overflow: hidden;
     text-overflow: ellipsis;
+    position: relative;
+    --x-bg: var(--fp-unactive);
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 8px;
+      height: 1px;
+      right: 0;
+      top: 10%;
+      border-radius: 1px;
+      background-color: var(--x-bg);
+    }
+    &::before {
+      rotate: 45deg;
+    }
+    &::after {
+      rotate: -45deg;
+    }
+    &:hover {
+      --x-bg: var(--fp-black);
+    }
   }
 }
 .fp-input-tag {
@@ -243,8 +265,42 @@
 
 .fp-event {
   --event: var(--fp-sidebar-bg);
-  background-color: var(--event);
+  --bg: var(--fp-unactive);
+  &:hover {
+    --bg: var(--fp-black);
+  }
   &.active {
     --event: var(--fp-active);
+  }
+  background-color: var(--event);
+  position: relative;
+  cursor: pointer;
+  .time-list {
+    max-height: 20px;
+    overflow: hidden;
+    transition: max-height var(--fp-time);
+    --deg: 0deg;
+    &.active {
+      max-height: 300px;
+      --deg: 45deg;
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 2px;
+      border-radius: 1px;
+      background-color: var(--bg);
+      right: 5px;
+      top: 20px;
+      transition: rotate var(--fp-time);
+    }
+    &::before {
+      rotate: var(--deg);
+    }
+    &::after {
+      rotate: calc(90deg + var(--deg));
+    }
   }
 }
