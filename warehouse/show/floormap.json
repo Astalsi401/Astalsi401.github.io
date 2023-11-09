@@ -811,9 +811,9 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer health" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": [""], "en": [""] },
+    "text": { "tc": ["風尚國際"], "en": ["風尚國際"] },
     "size": { "tc": 0.4, "en": 0.4 },
-    "corps": [{ "org": { "tc": "", "en": "" }, "info": { "tc": "", "en": "" } }]
+    "corps": [{ "org": { "tc": "風尚國際", "en": "風尚國際" }, "info": { "tc": "", "en": "" } }]
   },
   {
     "type": "booth",
