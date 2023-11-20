@@ -540,7 +540,7 @@ const MainArea = () => {
   const mapText = {
     categories: {
       tc: ["全齡健康展區", "年度主題館", "醫療機構展區", "智慧醫療展區", "精準醫療展區", "活動進行中"],
-      en: ["Consumer health", "Reserved", "Medical Institutes", "Medtech", "Biotech", "Activity in progress"],
+      en: ["Consumer Health Products", "Featured Pavilions", "Medical Institutes & Hospitals", "Medical Devices & Equipment", "Diagnostics, Laboratory Equipment & Services", "Activity in progress"],
     },
     title: { tc: "展場平面圖", en: "Floor Plan" },
     event: { tc: "活動進行中", en: "Activity in progress" },
