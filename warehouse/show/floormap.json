@@ -1,6 +1,1027 @@
 [
   {
     "type": "booth",
+    "floor": 1,
+    "w": 600,
+    "h": 600,
+    "x": 6110,
+    "y": 8110,
+    "p": [
+      { "node": "L", "x": 600, "y": 0 },
+      { "node": "L", "x": 600, "y": 600 },
+      { "node": "L", "x": 0, "y": 600 }
+    ],
+    "id": "I228",
+    "size": { "tc": 0.7, "en": 0.4 },
+    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["員榮", "醫院"], "en": ["Yuan Rung", "Hospital"] },
+    "corps": [{ "org": { "tc": "員榮醫療社團法人員榮醫院", "en": "Yuan Rung Hospital" }, "info": { "tc": "-", "en": "-" } }],
+    "event": []
+  },
+  {
+    "type": "booth",
+    "floor": 1,
+    "w": 900,
+    "h": 600,
+    "x": 5810,
+    "y": 7210,
+    "p": [
+      { "node": "L", "x": 900, "y": 0 },
+      { "node": "L", "x": 900, "y": 600 },
+      { "node": "L", "x": 0, "y": 600 }
+    ],
+    "id": "I326",
+    "size": { "tc": 0.8, "en": 0.8 },
+    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["德威醫院"], "en": ["Dentway"] },
+    "corps": [
+      {
+        "org": { "tc": "德威生物科技股份有限公司", "en": "Dentway Co.,Ltd" },
+        "info": {
+          "tc": "德威國際口腔醫療體系是一個完整的垂直及平水整合的口腔醫療體系，其中包含牙醫醫院、牙科診群、牙體技術所、牙材事業、醫務管理、數位醫學影像整合及教育中心。\n\n自西元1989年德威第一家院所在台北成立，至今院所群遍布北(大台北、桃園、新竹) 中 (台中) 、南 (嘉義、台南、高雄、屏東) 、花東(花蓮、台東) 、離島(金門) 、偏鄉地區(南投信義鄉)及海外地區有中國、日本、馬來西亞及美國等近40家院所。以” 一家看診，海內外服務”的精神，提供優質、專業的口腔醫療服務。\n\n\n2021年成立全台灣第一家牙醫口腔醫院，具有全台最完整的牙醫專科團業，擁有最先進的牙醫設備及對病患最好的醫療照顧。醫院裡有五大中心: 植牙中心、矯正中心、顎顏面中心、精準呼吸中止治療中心及美容牙醫中心。整合牙醫10個專科(家庭牙醫、兒童牙科、牙體復形、贋復補綴、牙髓病、牙周病、齒顎矯正、口腔顎面外科、口腔病理及特殊需求者口腔醫學) 提供個人化精準醫療服務，並以成為口腔醫療照護的領導者為使命。",
+          "en": "Dentway international dental group is a complete vertical and horizontal oral medical system, including dental hospital, dental clinics, dental laboratory, dental business, medical management, digital medical imaging integration and education center.\nFirst Dentway Dental clinic was established in 1989. There are nearly 40 clinics in Taiwan (the northern, central, southern, eastern, remote islands ), and overseas areas including China, Japan, Malaysia, and the United States and. Provide high-quality and professional dental services in the spirit of \\\\\\\"service at home and abroad\\\\\\\".\nIn 2021, the first dental hospital in Taiwan is established. It has the most complete dental specialty group in Taiwan, with the most advanced dental equipment and the best dental care for patients. There are five centers in the hospital: Dental Implant Center, Orthodontics Center, Maxillofacial Center, Precision Breath Abort Treatment Center, and Beauty Dentistry Center. Integrate 10 specialties of dentistry (Family Dentistry, Pediatric dentistry, Dental Reconstruction, Prosthetics, Endodontics, Periodontology, Orthodontics, Oral and Maxillofacial Surgery, Oral Pathology, and Oral Medicine for Special Needs) to provide personalization precision dental services, and its mission is to become a leader in dental care."
+        }
+      }
+    ],
+    "event": [
+      {
+        "timeList": [
+          { "start": "2023-11-30 10:30+08:00", "end": "2023-12-02 17:30+08:00" },
+          { "start": "2023-12-03 10:30+08:00", "end": "2023-12-03 15:30+08:00" }
+        ],
+        "title": { "tc": "口腔衛生很重要！口腔大檢查！", "en": "" },
+        "topic": { "tc": "健康大檢測", "en": "健康大檢測" }
+      }
+    ]
+  },
+  {
+    "type": "booth",
+    "floor": 1,
+    "w": 2400,
+    "h": 600,
+    "x": 4310,
+    "y": 5410,
+    "p": [
+      { "node": "L", "x": 2400, "y": 0 },
+      { "node": "L", "x": 2400, "y": 600 },
+      { "node": "L", "x": 0, "y": 600 }
+    ],
+    "id": "I516",
+    "size": { "tc": 1.0, "en": 0.7 },
+    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["彰基醫療體系"], "en": ["Changhua Christian", "Hospital"] },
+    "corps": [
+      {
+        "org": { "tc": "彰化基督教醫院", "en": "Changhua Christian Hospital" },
+        "info": {
+          "tc": "彰化基督教醫院擁有128年歷史，是一所信靠上帝的愛所建造的醫院，從早期醫療宣教士、蘭醫師父子蓽路藍縷的開創，引進西方醫學，經歷屆院長與全體同工的努力，彰基成為彰化、南投、雲林唯一的醫學中心，長期守護著中部地區民眾的健康。彰基擁有九家體系醫院，員工超過8500位，總床數超過4000千床，提供60餘種以上之專科服務。彰基並建構全台第一家全院智慧綠能的員林基督教醫院，目前正在興建的「癌症質子治療中心」，未來將提供中部地區的癌症患者便利且精準的治療與照護。\n隨著資訊科技進步與人工智慧演進，彰基致力成為一家「卓越創新實踐」的智能醫院，並已通過HMISS Level-7的認證。透過大數據、人工智慧和物聯網等先進科技，導入智慧醫療和臨床決策輔助系統及個人化精準治療策略，提供患者安全且高品質之醫療服務。彰基以「未來醫院」之願景，結合智慧、綠能與乾淨醫院的理念，打造醫療機構ESG運營新策略，致力推動醫療環保、醫院治理及企業社會責任，為全球永續發展目標共同努力。",
+          "en": "Changhua Christian Hospital (CCH) was founded in 1896; for over a century, CCH has been inspired by the love and saving grace of Jesus Christ. CCH is central Taiwan's most historical medical center, with over 4,000 ward beds and 8,500 employees in 9 healthcare systems. CCH built the first intelligent and green hospital in Taiwan to uplift workflow efficiency and an integrated healthcare system to deliver advanced but safe health services. CCH is constructing the 「Proton Therapy Center」 and anticipates providing the best service for cancer patients in the center of Taiwan.  \n\nIn the face of sweeping changes in medical information technology and artificial intelligence (AI) evolution, CCH is committed to being a smart and green hospital with \"excellent, innovative, and practice.\"CCH has been validated by HMISS Level-7, through advanced technologies, such as big data, AI, and IoT, to introduce the clinical decision support system (CDSS) and personalized precision medicine to provide safe and high-quality services for patients. With the vision of \"Future Hospital,\"CCH integrated intelligent, green, and clean into the hospital operation to facilitate the ESG management strategy and promote environmental protection, hospital governance, and corporate social responsibility to achieve the sustainable development goals (SDGs) of global medical societies."
+        }
+      }
+    ],
+    "event": []
+  },
+  {
+    "type": "booth",
+    "floor": 1,
+    "w": 1800,
+    "h": 1200,
+    "x": 4310,
+    "y": 3910,
+    "p": [
+      { "node": "L", "x": 1800, "y": 0 },
+      { "node": "L", "x": 1800, "y": 1200 },
+      { "node": "L", "x": 0, "y": 1200 }
+    ],
+    "id": "I616",
+    "size": { "tc": 1.0, "en": 0.8 },
+    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["國泰醫院"], "en": ["Cathay General", "Hospital"] },
+    "corps": [{ "org": { "tc": "國泰醫療財團法人國泰綜合醫院", "en": "Cathay General Hospital" }, "info": { "tc": "1.\t全方位新生兒外接轉送E化服務待討論\n2.\t主動脈AI篩檢及通報、肺結節AI偵測系統\n3.\t用構音障礙診斷與矯正之深度學習APP\n4.\t放射檢查智能流程e路通\n5.\t國泰醫學團隊創新研發-精準益生菌\n雲端電子病歷平台「iFHIR Center」骨折Ｘ光影像平台 i禮賀(介入照護)", "en": "Wait" } }],
+    "event": []
+  },
+  {
+    "type": "booth",
+    "floor": 1,
+    "w": 600,
+    "h": 600,
+    "x": 6110,
+    "y": 3910,
+    "p": [
+      { "node": "L", "x": 600, "y": 0 },
+      { "node": "L", "x": 600, "y": 600 },
+      { "node": "L", "x": 0, "y": 600 }
+    ],
+    "id": "I727a",
+    "size": { "tc": 0.7, "en": 0.4 },
+    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["臺安", "醫院"], "en": ["Taiwan", "Adeventist", "Hospital"] },
+    "corps": [{ "org": { "tc": "基督復臨安息日會醫療財團法人臺安醫院", "en": "Taiwan Adeventist Hospital" }, "info": { "tc": "臺安醫院展細胞治療,精準醫療,包含:AI影像細胞辨識及CDC自動循環腫瘤細胞系統，醫療相關,包含:單孔微創3D內視鏡手術,脊椎微創手術,婦科及泌尿海扶刀。", "en": "tah" } }],
+    "event": []
+  },
+  {
+    "type": "booth",
+    "floor": 1,
+    "w": 2400,
+    "h": 1500,
+    "x": 7010,
+    "y": 8110,
+    "p": [
+      { "node": "L", "x": 2400, "y": 0 },
+      { "node": "L", "x": 2400, "y": 1500 },
+      { "node": "L", "x": 0, "y": 1500 }
+    ],
+    "id": "J102",
+    "size": { "tc": 1.0, "en": 1.0 },
+    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["長庚醫療體系"], "en": ["Chang Gung", "Medical", "Foundation"] },
+    "corps": [
+      {
+        "org": { "tc": "長庚醫療財團法人", "en": "Chang Gung Medical Foundation" },
+        "info": {
+          "tc": "長庚醫療財團法人創辦於1976年，先後在台北、林口、基隆、高雄、嘉義、桃園與雲林設立了7所長庚醫院，並受政府委託經營鳳山與土城醫院，每日診治病患32,800人次以上，擁有病床數10,000床，落實「人本濟世，病人優先」是本院的經營理念。長庚具急重難症病患照護能力，長久以來持續進行醫療品質優化改善，多次榮獲SNQ國家生技醫療品質金獎的醫院，持續創新提升品質達國際醫療水準，以維護及促進病人健康是長庚非常重視及在乎的事。\n本次展覽長庚醫療財團法人以「特色醫療、智慧醫院、創新研發、公益榮耀」四大主軸呈現，含括癌症診斷、精準定位與治療、照護品質、醫療創新的成果與運用等，參展主題豐富，充份展現醫療照護的軟實力，現場並提供主題互動及體驗，歡迎民眾共同參與以了解科技治療的魅力！\n長庚醫療財團法人本次參展主題包括：\n一、特色醫療\n1.  細胞治療\n2. 尖端質子治療\n3. 運動醫學\n4. 微創手術\n二、智慧醫院\n1. 物聯網\n2. 遠距醫療\n3. 智能照護輔助\n三、創新研發\n精選創新且具臨床應用性之專利成果\n四、公益榮耀\n醫者仁心，全方位社會關懷＊獲獎榮耀肯定",
+          "en": "The Chang Gung Medical Foundation was established in 1976 by the founder of the Formosa Plastics Group (FPG).The Foundation has since established seven Chang Gung Memorial Hospitals in Taipei, Linkou, Keelung, Kaohsiung, Chiayi, Taoyuan. and Yunlin. The Foundation has also been entrusted by the government to operate Feng-Shan Hospital and Tucheng Hospital, as well as to assist in the operation of Dali Jen-Ai Hospital in Taichung. With more than 32,800 patients treated daily and 10,000 beds, the hospital\\\\\\'s management philosophy is \\\\\\\"Benefit mankind with sincerity and diligence.\\\\\\\".\nChang Gung Hospital has the ability to care for patients with acute and critical illnesses and has a long history of quality improvement. As a multiple-time SNQ National Gold Award winner, Chang Gung Hospital is committed to maintaining and promoting the health of patients by continuing to innovate and improve quality to meet international standards.\nThe exhibition will be presented under the four main axes of \\\\\\\"Specialty Medical Treatments, Smart Hospital, Innovative R&D, and Public Welfare Glory\\\\\\\", including cancer diagnosis, precise targeting treatment, quality of care, and the achievements and applications of medical innovation. The exhibition will showcase the soft power of medical care with a variety of themes and will provide interactive and hands-on experience for the public to learn about the charm of technological treatment.\nChang Gung Medical Foundation\\\\\\'s exhibit topics include:\nSpecialty Medical Treatments\n1. Cell therapy\n2. Cutting-edge- Proton Therapy\n3. Sports Medicine\n4. Minimally invasive surgery\n5. IoT\n6. Telemedicine\n7. Intelligent healthcare assistance\nSelected thirteen innovative, clinically applicable patent achievements and Automated dispensing cabinets.\nPublic Welfare Glory\nAward-winning recognition of comprehensive medical and social care."
+        }
+      }
+    ],
+    "event": [
+      { "timeList": [{ "start": "2023-11-30 13:00+08:00", "end": "2023-11-30 17:00+08:00" }], "title": { "tc": "三高慢病總評估！\n風險檢測早發現！", "en": "" }, "topic": { "tc": "健康大檢測", "en": "健康大檢測" } },
+      { "timeList": [{ "start": "2023-12-02 11:00+08:00", "end": "2023-12-03 15:00+08:00" }], "title": { "tc": "你是泡芙人？\n解析你的體脂率、肌肉量、基礎代謝率！", "en": "" }, "topic": { "tc": "健康大檢測", "en": "健康大檢測" } },
+      { "timeList": [{ "start": "2023-11-30 13:00+08:00", "end": "2023-11-30 13:30+08:00" }], "title": { "tc": "台灣之光守護者-智能化競技運動醫學整合照護", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-11-30 14:00+08:00", "end": "2023-11-30 14:30+08:00" }], "title": { "tc": "髖關節運動傷害的救星：髖關節鏡微創手術", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-11-30 15:00+08:00", "end": "2023-11-30 15:30+08:00" }], "title": { "tc": "達文西胸腔手術新進展", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-01 10:30+08:00", "end": "2023-12-01 11:00+08:00" }], "title": { "tc": "無痛無疤無網片的疝氣修補術", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-01 10:30+08:00", "end": "2023-12-01 11:00+08:00" }], "title": { "tc": "無網片的疝氣修補術", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-03 11:30+08:00", "end": "2023-12-03 12:00+08:00" }], "title": { "tc": "重建造口幸福人生--內置式人工造口裝置", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-11-30 15:00+08:00", "end": "2023-11-30 15:30+08:00" }], "title": { "tc": "達文西胸腔手術新進展", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 13:00+08:00", "end": "2023-12-02 13:30+08:00" }], "title": { "tc": "化不可能為可能：質子治療跨專科整合治療成效分享", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-03 10:30+08:00", "end": "2023-12-03 11:00+08:00" }], "title": { "tc": "肝癌細胞免疫治療", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-01 10:00+08:00", "end": "2023-12-01 10:30+08:00" }], "title": { "tc": "新冠後遺症知多少？中醫教你茶飲與食療", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-01 14:00+08:00", "end": "2023-12-01 14:30+08:00" }], "title": { "tc": "勞工健康檢查巡迴體檢簡介及未來願景", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 10:00+08:00", "end": "2023-12-02 10:30+08:00" }], "title": { "tc": "勞工健康保護知多少-淺談醫師臨場健康服務內容及未來趨勢", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-11-30 14:30+08:00", "end": "2023-11-30 15:00+08:00" }], "title": { "tc": "尖端甲狀腺治療技術-微創熱消融", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-01 11:00+08:00", "end": "2023-12-01 11:30+08:00" }], "title": { "tc": "新興內分泌干擾物：有機磷系阻燃劑與塑化劑的健康效應與檢測", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 11:30+08:00", "end": "2023-12-02 12:00+08:00" }], "title": { "tc": "副甲狀腺機能亢進 消融手術新治療", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-03 10:00+08:00", "end": "2023-12-03 10:30+08:00" }], "title": { "tc": "精準減重-解讀體型與代謝密碼", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-11-30 13:30+08:00", "end": "2023-11-30 14:00+08:00" }], "title": { "tc": "跟死神賽跑_兒童暨新生兒重難罕病童轉送-5G救護車轉送系統", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-11-30 13:30+08:00", "end": "2023-11-30 14:00+08:00" }], "title": { "tc": "跟死神賽跑_兒童暨新生兒重難罕病童轉送-5G救護車轉送系統", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-11-30 11:30+08:00", "end": "2023-11-30 12:00+08:00" }], "title": { "tc": "心血管疾病病患居家參與式的深度照護", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-01 11:30+08:00", "end": "2023-12-01 12:00+08:00" }], "title": { "tc": "更優質的無傷口腦部病灶治療/腦部質子刀放射手術", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 11:00+08:00", "end": "2023-12-02 11:30+08:00" }], "title": { "tc": "心房顫動的最新治療趨勢", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 14:00+08:00", "end": "2023-12-02 14:30+08:00" }], "title": { "tc": "精準麻醉-符合國際水準,手術安康作伙來", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 14:00+08:00", "end": "2023-12-02 14:30+08:00" }], "title": { "tc": "符合國際水準之精準麻醉-恢復快，手術安康作伙來", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-11-30 10:30+08:00", "end": "2023-11-30 11:00+08:00" }], "title": { "tc": "數位牙科新紀元，一日美齒不是夢", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-11-30 11:00+08:00", "end": "2023-11-30 11:30+08:00" }], "title": { "tc": "智能守護-多重抗藥性菌株管理", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-01 11:00+08:00", "end": "2023-12-01 12:00+08:00" }], "title": { "tc": "腦人的蟹足腫治療", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-01 14:00+08:00", "end": "2023-12-01 14:30+08:00" }], "title": { "tc": "利用口咽罩來防止在口腔治療/清潔中意外吸入/吞入異物", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-01 14:30+08:00", "end": "2023-12-01 15:30+08:00" }], "title": { "tc": "精準用藥：一機在手，隨時掌握", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 11:00+08:00", "end": "2023-12-02 11:30+08:00" }], "title": { "tc": "眼角膜移植手術", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 11:00+08:00", "end": "2023-12-02 12:00+08:00" }], "title": { "tc": "全方位AI智能客服", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 15:30+08:00", "end": "2023-12-02 16:00+08:00" }], "title": { "tc": "乾癬性關節炎的診斷生物標記及潛在治療標的", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-03 15:30+08:00", "end": "2023-12-03 16:00+08:00" }], "title": { "tc": "藥物引起皮膚過敏之檢測", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } }
+    ]
+  },
+  {
+    "type": "booth",
+    "floor": 1,
+    "w": 2400,
+    "h": 1500,
+    "x": 10020,
+    "y": 8110,
+    "p": [
+      { "node": "L", "x": 2400, "y": 0 },
+      { "node": "L", "x": 2400, "y": 1500 },
+      { "node": "L", "x": 0, "y": 1500 }
+    ],
+    "id": "J118",
+    "size": { "tc": 1.0, "en": 0.9 },
+    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["新光醫院"], "en": ["Shin Kong Wu Ho-Su", "Memorial Hospital"] },
+    "corps": [{ "org": { "tc": "新光醫療財團法人新光吳火獅紀念醫院", "en": "Shin Kong Wu Ho-Su Memorial Hospital" }, "info": { "tc": "智慧醫療、精準醫療等", "en": "health information technology、precision medicine, etc." } }],
+    "event": []
+  },
+  {
+    "type": "booth",
+    "floor": 1,
+    "w": 2400,
+    "h": 600,
+    "x": 7010,
+    "y": 7210,
+    "p": [
+      { "node": "L", "x": 2400, "y": 0 },
+      { "node": "L", "x": 2400, "y": 600 },
+      { "node": "L", "x": 0, "y": 600 }
+    ],
+    "id": "J302",
+    "size": { "tc": 1.0, "en": 0.6 },
+    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["馬偕醫院"], "en": ["MacKay Memorial Hospital"] },
+    "corps": [
+      { "org": { "tc": "馬偕紀念醫院", "en": "MacKay Medical Foundation The Presbyterian Church in Taiwan MacKay Memorial Hospital" }, "info": { "tc": "1. 腦部惡性腫瘤局部藥物釋放載體\n2. 表面拉曼光譜用於腦脊髓液藥物監測\n3. 短合成胜肽及其治療視網膜退化性疾病和/或組織損傷的用途\n4. 馬偕醇樟芝\n5. 整合性藍芽定位智慧醫療系統\n6. 智慧兒童發展評估平台\n7. 顯示螢幕之圖形化使用者介面(三)\n8. 牙齒控制器用於操作電腦相關裝置\n9. 由乳房X 光攝影影像運用機器學習進行自動偵測乳癌病灶之方法\n10. 建立運用人工智慧預測成人加護病房敗血症之儀表板\n11. 前哨淋巴結AI開發\n12. 人工智慧與電子病歷整合 AI心衰竭預防照護", "en": "1. 腦部惡性腫瘤局部藥物釋放載體\n2. 表面拉曼光譜用於腦脊髓液藥物監測\n3. 短合成胜肽及其治療視網膜退化性疾病和/或組織損傷的用途\n4. 馬偕醇樟芝\n5. 整合性藍芽定位智慧醫療系統\n6. 智慧兒童發展評估平台\n7. 顯示螢幕之圖形化使用者介面(三)\n8. 牙齒控制器用於操作電腦相關裝置\n9. 由乳房X 光攝影影像運用機器學習進行自動偵測乳癌病灶之方法\n10. 建立運用人工智慧預測成人加護病房敗血症之儀表板\n11. 前哨淋巴結AI開發\n12. 人工智慧與電子病歷整合 AI心衰竭預防照護" } },
+      {
+        "org": { "tc": "群邁通訊股份有限公司", "en": "Chiun Mai Communication Systems, Inc." },
+        "info": {
+          "tc": "1. 室內環境淨化系統：結合環境感知器、環境淨化器及AI雲平台，有效在室內環境持續去除有害病菌、異味、甲醛、TVOC，降低密閉空間感染風險，讓機構管理者即時掌握環境品質及淨化狀態。\n2. 定位求救系統: 以藍牙按鈕讓醫護人員隨身佩帶或放在口袋中，當醫護人員發現可能遭受暴力攻擊時，立刻按下隨身按鈕求救，同時把自己的位置資訊傳送到警衛室。\n3. 醫療器材追蹤: 可為醫療儀器、急診設備、輪椅等醫療器材提供即時定位訊息，掌握設備及器材的位置與使用狀態，以利於人員進行調配及使用，並減輕醫護人員交班盤點負擔。\n4. 嬰兒防盜: 在新生兒身上佩掛藍牙發報器，當嬰兒被異常帶離嬰兒室時系統即刻發出告警。護理系統顯示嬰兒位置，護理師及警衛可即時處理，防止嬰兒被外人擄盜\n5. 安全圍籬: 病患隨身佩掛藍牙定位按鈕，當有身體不適或緊急狀況即刻按鈕求救。系統能即時顯示求救位置，讓照顧者快速趕往事發地點進行救助。並可設定安全區域，若病患離開安全區域發出告警，防止走失。",
+          "en": "1. Indoor Purification System – integrate Indoor Air Sensor, Indoor Air Purifier, and AI Cloud Platform to monitor indoor air quality and destroy indoor pollutants such as odors, viruses, bacteria, molds, and volatile organic compounds 24/7.\n2. Indoor Positioning - When the medical staff feels threatened, he/she can press the tag to transmit an emergency alarm with in-door positioning information. The emergency message will be delivered to the security station to alert safety guards.\n3. Medical Equipment Tracking - track, find, and access important medical equipment much easier with indoor positioning technology. The system updates the real-time locations of hospital assets, so the valuable equipment can be clearly located and visualized.\n4. Smart baby Care - Attach a Tag to the newborn, and the system will send an alarm when the baby is abnormally taken out of the baby room. The nursing system shows the location of the baby to prevent the baby from being kidnapped by outsiders.\n5. Patient Tracking - Locate patients and send alerts when they leave safe areas or press the button to call for help. The system alerts caregivers and shows the location on a map in real time, allowing the caregiver to quickly rush to the location of the accident for assistance."
+        }
+      },
+      { "org": { "tc": "陽明生醫股份有限公司", "en": "Yang Ming Biomedical Co.,Ltd" }, "info": { "tc": "馬偕醫院自有品牌保健品 2023年度新品上市", "en": "Mackay Hospital\\\\\\'s own-brand health care products will have new releases in the year 2023." } },
+      { "org": { "tc": "帆宣系統科技股份有限公司", "en": "Marketech International Corp." }, "info": { "tc": "前哨淋巴結AI開發", "en": "-" } }
+    ],
+    "event": [
+      { "timeList": [{ "start": "2023-11-30 11:00+08:00", "end": "2023-12-03 15:00+08:00" }], "title": { "tc": "大雞慢啼還是發展遲緩？\n篩檢早療莫耽擱！", "en": "" }, "topic": { "tc": "健康大檢測", "en": "健康大檢測" } },
+      { "timeList": [{ "start": "2023-11-30 16:30+08:00", "end": "2023-11-30 16:50+08:00" }], "title": { "tc": "智能居家兒童神經發展檢測 – 『ONE線上兒童發展智慧評估系統』", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 13:30+08:00", "end": "2023-12-02 13:50+08:00" }], "title": { "tc": "智能居家兒童神經發展檢測 – 『ONE線上兒童發展智慧評估系統』", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      {
+        "timeList": [
+          { "start": "2023-11-30 10:00+08:00", "end": "2023-12-02 18:00+08:00" },
+          { "start": "2023-12-03 10:00+08:00", "end": "2023-12-03 16:00+08:00" }
+        ],
+        "title": { "tc": "", "en": "" },
+        "topic": { "tc": "健康振興券", "en": "健康振興券" }
+      }
+    ]
+  },
+  {
+    "type": "booth",
+    "floor": 1,
+    "w": 2400,
+    "h": 600,
+    "x": 7010,
+    "y": 6310,
+    "p": [
+      { "node": "L", "x": 2400, "y": 0 },
+      { "node": "L", "x": 2400, "y": 600 },
+      { "node": "L", "x": 0, "y": 600 }
+    ],
+    "id": "J402",
+    "size": { "tc": 1.0, "en": 0.6 },
+    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["部立臺北醫院"], "en": ["Taipei Hospital Ministry of", " Health and Welfare"] },
+    "corps": [{ "org": { "tc": "衛生福利部臺北醫院", "en": "Taipei Hospital, Ministry of Health and Welfare" }, "info": { "tc": "整合式創新智慧科技便民醫療，結合智慧病房及智慧藥局等各項智慧醫療方案，提供民眾整合式的創新醫療服務。", "en": "Integrated innovative smart technology to facilitate medical care for the people, combined with various smart medical solutions such as smart wards and smart pharmacies, to provide integrated innovative medical services for the public." } }],
+    "event": []
+  },
+  {
+    "type": "booth",
+    "floor": 1,
+    "w": 2400,
+    "h": 600,
+    "x": 10020,
+    "y": 6310,
+    "p": [
+      { "node": "L", "x": 2400, "y": 0 },
+      { "node": "L", "x": 2400, "y": 600 },
+      { "node": "L", "x": 0, "y": 600 }
+    ],
+    "id": "J418",
+    "size": { "tc": 1.0, "en": 0.9 },
+    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["北市聯合醫院"], "en": ["Taipei City Hospital"] },
+    "corps": [{ "org": { "tc": "臺北市立聯合醫院", "en": "Taipei City Hospital" }, "info": { "tc": "本次展覽以呈現本院「人文科技、全人關懷、智慧醫\n療」三大方向為主軸", "en": "本次展覽以呈現本院「人文科技、全人關懷、智慧醫\n療」三大方向為主軸" } }],
+    "event": []
+  },
+  {
+    "type": "booth",
+    "floor": 1,
+    "w": 2400,
+    "h": 600,
+    "x": 7010,
+    "y": 5410,
+    "p": [
+      { "node": "L", "x": 2400, "y": 0 },
+      { "node": "L", "x": 2400, "y": 600 },
+      { "node": "L", "x": 0, "y": 600 }
+    ],
+    "id": "J502",
+    "size": { "tc": 1.0, "en": 1.0 },
+    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["義大醫院"], "en": ["E-Da Hospital"] },
+    "corps": [
+      { "org": { "tc": "義大醫療財團法人義大醫院", "en": "E-Da Hospital" }, "info": { "tc": "細胞治療、智慧醫療", "en": "cell therapy, Medical AI" } },
+      {
+        "org": { "tc": "向榮生醫科技股份有限公司", "en": "UnicoCell Biomed Co., Ltd." },
+        "info": {
+          "tc": "向榮生技專精於幹細胞治療的研發與應用已十餘年。本公司幹細胞新藥『ELIXCYTE®』正進行第III期膝骨關節炎收案與第I/II期慢性腎臟病的臨床試驗解盲，希望為全球人口老化所伴隨之疾病，提供一個嶄新的治療契機。\n\n在新藥研發過程中，本公司依循國際醫藥法規協和會（ICH）規範建立異體脂肪幹細胞庫，於2022年取得美國FDA主檔案(Master File, MF)備案，可作為良好的幹細胞新藥開發原料。\n\n此外，向榮生技更擴大幹細胞科技應用，成功開發兩項專利產品：1. 幹細胞分泌物，以專利製程生產高品質、高產量及高有效成分之幹細胞分泌物，亦獲得美國FDA主檔案備案，已應用於退化性眼部疾病及其他再生醫學的應用開發，更可提供作為外泌體研究開發原料。2.細胞超低溫儲存容器『優易保® UnicoVial®』，取得衛福部第二等級醫療器材核可，獲得美國FDA主檔案備案，不僅適用於細胞產品也適用於其他生物製劑，提升製劑品質規格並彌補細胞製劑產業的缺口。\n\n向榮生技期待以幹細胞新藥開發及幹細胞技術應用，促進幹細胞技術在全球高齡社會之再生醫學以及退化性疾病的運用，追求生命更好的生活品質。",
+          "en": "For a decade, UnicoCell pioneered stem cell therapy R&D. UnicoCell's Gold Award-winning new stem cell product, ELIXCYTE®, has advanced to the case enrollment phase of Phase III clinical trials for knee osteoarthritis and has reached the unblinding process of Phase II clinical trials for chronic kidney disease, promising innovative treatments for aging-related diseases. The company follows ICH guidelines, holds a 2022 US FDA Master File (MF) for an adipose-derived stem cell bank, a vital raw material for stem cell drug development. UnicoCell has innovated two patented products: 1. Stem Cell Secretome, which is FDA MF-recognized, and is applied for degenerative eye diseases, regenerative medicine, and exosome research. 2. UnicoVial® ultra-low temperature storage, obtained TFDA Class II medical device approval and FDA MF-recognized, applied for cell therapy and biological product storage. UnicoCell aspires to globalize stem cell technology, promote regenerative medicine for aging-related conditions, and ultimately enhance the quality of human life."
+        }
+      }
+    ],
+    "event": [{ "timeList": [{ "start": "2023-12-02 13:30+08:00", "end": "2023-12-02 14:30+08:00" }], "title": { "tc": "痔不在，好自在~", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } }]
+  },
+  {
+    "type": "booth",
+    "floor": 1,
+    "w": 2400,
+    "h": 600,
+    "x": 10020,
+    "y": 5410,
+    "p": [
+      { "node": "L", "x": 2400, "y": 0 },
+      { "node": "L", "x": 2400, "y": 600 },
+      { "node": "L", "x": 0, "y": 600 }
+    ],
+    "id": "J518",
+    "size": { "tc": 1.0, "en": 0.7 },
+    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["中正脊椎骨科醫院"], "en": ["Jhong Jheng Spine &", "Orthopedic Hospital"] },
+    "corps": [{ "org": { "tc": "中正脊椎骨科醫院", "en": "Jhong Jheng Spine & Orthopedic Hospital" }, "info": { "tc": "．骨科專業醫療：關節微創重建手術、腰椎關節治療及手術、腕隧道症候群、退化性關節炎、關節病變、骨質疏鬆症、人工膝關節置換等\n．脊椎專業醫療：微創脊椎手術、頸神經病變、脫位、畸形、頸椎間盤突出症、慢性頸部疼痛、胸椎病變、腰椎椎間盤突出症等\n．ＡＩ尖端科技：ROSA KNEE機器手臂、MRI、最高級手術室HEPA無塵設施、手術神經安全監測儀等\n．特色再生醫療：PRP、EECP體外反博治療、高壓氧保健等\n", "en": ". Orthopedic professional medical treatment: minimally invasive joint reconstruction surgery, lumbar joint treatment and surgery, carpal tunnel syndrome, degenerative arthritis, joint disease, osteoporosis, total knee replacement, etc.\n. Spine  professional medical treatment: minimally invasive spine surgery, cervical neuropathy, dislocation, deformity, cervical disc herniation, chronic neck pain, thoracic spine disease, herniated Intervertebral Disc, etc.\n. AI technology: ROSA KNEE robotic arm, MRI, HEPA dust-free facilities in the most advanced operating room, surgical nerve safety monitor, etc.\n. Featured regenerative medicine: PRP, Enhanced External CounterPulsation,Hyperbaric oxygen therapy (HBOT) , etc.\n" } }],
+    "event": [
+      {
+        "timeList": [
+          { "start": "2023-11-30 10:00+08:00", "end": "2023-12-02 18:00+08:00" },
+          { "start": "2023-12-03 10:00+08:00", "end": "2023-12-03 16:00+08:00" }
+        ],
+        "title": { "tc": "骨鬆不要來！\n40熟齡骨密度健檢找答案！", "en": "" },
+        "topic": { "tc": "健康大檢測", "en": "健康大檢測" }
+      }
+    ]
+  },
+  {
+    "type": "booth",
+    "floor": 1,
+    "w": 300,
+    "h": 1200,
+    "x": 7010,
+    "y": 3910,
+    "p": [
+      { "node": "L", "x": 300, "y": 0 },
+      { "node": "L", "x": 300, "y": 1200 },
+      { "node": "L", "x": 0, "y": 1200 }
+    ],
+    "id": "J602",
+    "size": { "tc": 0.4, "en": 0.2 },
+    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["生優", "物治", "所", "/", "生動", "理療", "所"], "en": ["Meco", "Technology"] },
+    "corps": [{ "org": { "tc": "梅科科技股份有限公司", "en": "Meco Technology Co., LTD." }, "info": { "tc": "梅科科技成立於2019年，以專業化和個人化的客戶服務體驗為優勢，致力於整合資訊科技和醫療產業，提供優質的醫療資訊服務。專注於經營連鎖智能物理治療所、拓展居家物理治療數位療法及自費醫療服務–生生優動運動物理治療所。自主開發手機應用程式–Youdon 優動-智能物理治療平台，透過AI處方和主動復健運動治療，協助患者快速恢復身體功能。", "en": "MecoTech Technology, established in 2019, is dedicated to integrating information technology and the healthcare industry. We provide high-quality healthcare information services with a focus on professional and personalized customer experience. Our core offerings include managing smart physical therapy centers, expanding digital therapy for home-based treatment, and providing self-paid medical services. We have developed Youdon, an intelligent physical therapy cellphone app, which utilizes AI prescriptions and active rehabilitation exercises to help patients recover their physical functions rapidly." } }],
+    "event": [
+      {
+        "timeList": [
+          { "start": "2023-11-30 10:00+08:00", "end": "2023-12-02 18:00+08:00" },
+          { "start": "2023-12-03 10:00+08:00", "end": "2023-12-03 16:00+08:00" }
+        ],
+        "title": { "tc": "肌肉骨骼疼痛好不了?!\n復健師一測便知道！", "en": "" },
+        "topic": { "tc": "健康大檢測", "en": "健康大檢測" }
+      }
+    ]
+  },
+  {
+    "type": "booth",
+    "floor": 1,
+    "w": 2100,
+    "h": 1200,
+    "x": 7310,
+    "y": 3910,
+    "p": [
+      { "node": "L", "x": 2100, "y": 0 },
+      { "node": "L", "x": 2100, "y": 1200 },
+      { "node": "L", "x": 0, "y": 1200 }
+    ],
+    "id": "J604",
+    "size": { "tc": 1.0, "en": 0.5 },
+    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["高醫醫療體系"], "en": ["Kaohsiung Medical University", " Chung-Ho Memorial Hospital"] },
+    "corps": [
+      { "org": { "tc": "高雄醫學大學附設中和紀念醫院", "en": "Kaohsiung Medical University Chung-Ho Memorial Hospital" }, "info": { "tc": "本年度高醫體系以打造南台灣最重要健康照護生態系為主題，以AI+IoT、急性醫療、無齡照護及新南向醫衛合作及產業發展專區為主，全展區以雙語化進行展出，以期將高醫體系健康照護生態系分享給參展的所有單位及人員。\n", "en": "With the theme of building the KMU is the Healthcare Ecosystem in Southern Taiwan , this year\\\\\\'s KMU Healthcare Ecosystem features AI+IoT, Acute Care, Ageless Care, and New Southward Health Care Cooperation and Industry Development zones, and the entire exhibition area is bilingual in order to share the KMU Healthcare Ecosystem  with all exhibitors." } },
+      { "org": { "tc": "英屬維京群島商禾寶醫療器材股份有限公司", "en": "PRECIOUS MOUNTAIN ENTERPRISE CORPORATION TAIWAN BRANCH (BVI)" }, "info": { "tc": "高醫聯合展覽", "en": "高醫聯合展覽" } }
+    ],
+    "event": []
+  },
+  {
+    "type": "booth",
+    "floor": 1,
+    "w": 2400,
+    "h": 1200,
+    "x": 10020,
+    "y": 3910,
+    "p": [
+      { "node": "L", "x": 2400, "y": 0 },
+      { "node": "L", "x": 2400, "y": 1200 },
+      { "node": "L", "x": 0, "y": 1200 }
+    ],
+    "id": "J618",
+    "size": { "tc": 1.0, "en": 1.0 },
+    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["國軍醫療體系"], "en": ["Tri-Service", "General Hospital"] },
+    "corps": [
+      { "org": { "tc": "三軍總醫院", "en": "Tri-Service General Hospital" }, "info": { "tc": "本院展出項目如下：\n胃腸科/膽胰疾病的新「視」界與新「鏡」「介」\n放射診斷部/彈無虛發之多發性肺結節術電腦斷層導引同步穿刺定位術\n復健醫學部/肌痙攣的救星- 「針」是神奇量身訂作的肉毒桿菌雙重導引注射治療\n新陳代謝科/數位優化 即時雲端血糖監測\n精神醫學部/閾值下腦刺激：思覺失調的新治療技術\n神經外科部/創新術中神經功能監測之脊椎手術訓練擬真系統\n臨床藥學部/人工智慧辦藥服務系統\n護理部/空氣濾淨嬰兒床罩/口袋式尿袋\n急診醫學部/『智慧急診‧綠能照護』電子紙整合人工智慧再創急診照護巔峰\nAIOT中心/建置AI胸腔X光檢測平台\n3D列印中心/應用3D列印推行戰術戰傷救護技術\n澎湖分院/3D列印輔助複雜性骨科手術落實澎湖地區醫療在地化\n松山分院/耳掛式持續生理健康監測穿戴裝置", "en": "innovative medical technology" } },
+      { "org": { "tc": "國防醫學院", "en": "National Defense Medical Center" }, "info": { "tc": "1. 藥物釋放組合物、其製造方法及其用途\n2. 後循環缺血性中風預後系統\n3. 極高靈敏度及價廉之新穎多孔膜類 SERS基質的開發與應用\n4. 鑼蛋白加速新興傳染病藥物篩選技術開發與應用", "en": "1. Drug Delivery Composition, Method Forming The Same And Use Thereof\n2. A Deep Learning Model for assisting Diagnosis of Posterior Circulation Ischemic Stroke\n3. The development and applications of novel ultra-low-priced _x000b_and extremely sensitive porous membrane-based SERS substrate\n4. Application of Rho-protein technology to improve drug screening efficiency of emerging infectious diseases" } },
+      { "org": { "tc": "國軍桃園總醫院暨新竹分院", "en": "Taoyuan Armed Forces General Hospital and Hsinchu Branch" }, "info": { "tc": "關節鏡下腕舟月韌帶以飹釘縫合之微創手術，相較於傳統開放式手術常造成關節僵硬、活動受限，微創手術可避免關節僵硬，更可早期發現早期治療，並發覺腕部其他損傷合併治療，此技術於2022年受邀至歐洲手外科年會演講說明並發表於學術期刊，目前正推廣其他醫院指導使用", "en": "Arthroscopic on the scapholunate ligament can reduce stiffness and would promote to other orthopedic hospital" } },
+      { "org": { "tc": "三軍總醫院松山分院", "en": "Songshan Armed Forces General Hospital" }, "info": { "tc": "耳掛式持續生理監測穿戴裝置", "en": "Ear-hook Continuous Physiological Monitoring Wearable Device" } },
+      { "org": { "tc": "國軍高雄總醫院", "en": "KAOHSIUNG ARMED FORCES GENERAL HOSPITAL" }, "info": { "tc": "(一)智慧內視鏡醫療影像分析系統\n(二)智慧高光譜影像預測小腸出血位置之分析系統\n(三)尖端光纖AI科技睡眠檢測\n", "en": "(1)Smart Endoscopy Display\n(2)Prediction of the location of small intestinal bleeding using smart hyperspectral imaging technology\n(3)nFOPT Smart Polysomnography" } },
+      { "org": { "tc": "國軍花蓮總醫院", "en": "Hualien Armed Forces General Hospital" }, "info": { "tc": "本院參展主題有4項\n1.智慧調劑台應用：藥品更換時，無須重新換標籤，只需透過電腦更新藥檔資料即可同步更新標籤訊息，亦可依需求隨時於藥盒呈現藥品相關資訊。調劑時刷領藥清單QR CODE，可於欲調劑藥品儲位閃燈提示，避免調劑錯誤。可提升藥師的調劑效率和準確性，保障患者的用藥安全。\n2.AI藥品圖像辨識系統：藥局調劑階段與給藥階段中，藉由比對AI辨識所拍攝之藥袋內藥品與讀取藥袋處方條碼資訊之機制，輔助藥事人員核對藥袋內藥品名稱、劑量、數量等是否與藥袋處方一致。可有效降低人工檢查的錯誤率，提高調劑核對效率，改善醫院給藥過程於末端環節可能造成危及病患健康之風險。\n3.院部決策AI動態即時戰情：即時呈現本院各項醫療指標及收入，使院部主官可即時掌握業績成長及指標達成率等，使其可即時管制及分配資源。\n4.護理資源決策系統：即時呈現本院護理各項護理資源分配，使護理部可即時掌握護理資源及指標達成率等，使其可即時管制及分配資源。", "en": "There are 4 exhibiting themes in our hospital to participate in the exhibition, the first item: the application of smart dispensing table, the second item: AI drug image recognition system, the third item: AI dynamic real-time battle situation for hospital decision-making, and the fourth item: nursing resource decision-making system。" } },
+      { "org": { "tc": "國軍高雄總醫院岡山分院", "en": "Kaohsiung Armed Forces General Hospital Gangshan Branch" }, "info": { "tc": "1.國軍空勤人員須定期於本院航空生理訓練中心接受低壓艙航訓練，以瞭解高空缺氧對生理、心智與動作技能之影響。因訓練流程實際暴露低壓環境，存在氣壓傷害之風險，且為避免誘發減壓症之可能，須限制訓後24小時的飛行任務。\n2.本院與國家中山科學研究院共同開發「新式缺氧訓練模組」，結合飛行模擬與缺氧裝置，於海平面的正常壓力環境中，提供模擬動態飛行的缺氧事件，並透過認知功能測試，強化飛行員對缺氧警覺之風險意識，同時降低人員暴露減壓環境之風險，有效提升訓練安全。", "en": "Aircrew members are required to attend hypoxia awareness training regularly to strengthen their memory of their personal hypoxia symptoms by undergoing training inside a hypobaric chamber. But there is a risk of decompression sickness in trainees during hypobaric hypoxia training. The flight missions are forbidden in 24 hours after the training.\nNational Chung-Shan Institute of Science and Technology (NCSIST) and our hospital jointly developed a new hypoxia training module. It combines the flight simulator, the cognitive functions test, and can be used for hypoxia training under normal pressure. The new hypoxia training module can enhance the training safety by strengthening pilots\\\\\\' risk awareness of hypoxia and reducing the risk of personnel exposure to the high-altitude, low-pressure environments." } },
+      { "org": { "tc": "國軍桃園總醫院新竹分院", "en": "Taoyuan Armed Forces General Hospital Hsinchu Branch" }, "info": { "tc": "ECG心電圖是臨床檢查病患心臟疾病常用的工具之一。目前台灣大多數醫院都使用DICOM-ECG儲存在PACS系統供醫師判讀。而QRS檢測一般通常採用的XQRS-WFDB演算法，需要較高的電腦計算成本，並且我們發現市面一些心電圖分析軟體對於心搏過速心電圖的辨識效果不會很高，故與學者共同研究改進方法。\n", "en": "The ECG (Electrocardiogram) is a commonly used tool in clinical examinations for diagnosing cardiovascular diseases in patients. Currently, the majority of hospitals in Taiwan store DICOM-ECG data in PACS systems for physician interpretation. The QRS detection is typically performed using the XQRS-WFDB algorithm, which demands higher computational costs. Additionally, we have observed that some ECG analysis software available in the market do not perform well in recognizing ECGs with rapid heartbeats. Therefore, we are collaborating with scholars to research and develop improved methods." } },
+      { "org": { "tc": "國軍高雄總醫院左營分院", "en": "Zipping Branch of Kaohsiung Armed Forces General Hospital" }, "info": { "tc": "\n「智慧化中醫AI骨齡自動判讀平台」\n特色說明\n1.建置一套可攜式的X光判讀系統，可在診間快速進行兒童手掌骨AI照相判讀兒童生長曲線\n2.搭配門診自動身高體重量測，精準提供兒童中醫門診兒童生長建議\n\n\n「海上醫療結合MR及AI會診服務平台」\n特色說明\n1.建置一套快速緊急醫療救護會診平台(現場即時生命徵象進行AI判讀)\n2.生命徵象資料、AI判讀、多方數位視訊會診、急診戰情指揮整合在同一介面上", "en": "Smart Chinese Medicine AI Bone Age Automatic Interpretation Platform”\nFeatures\n1. Build a portable X-ray interpretation system, which can quickly interpret children\\\\\\'s growth curves by taking AI photos of children\\\\\\'s palm bones in the clinic\n2. With outpatient automatic height and weight measurement, it can accurately provide children\\\\\\'s growth suggestions in children\\\\\\'s TCM outpatient clinics\n\n\n\\\\" } },
+      {
+        "org": { "tc": "國防醫學院衛勤訓練中心", "en": "Health Service Training Center of National Defense Medical Center" },
+        "info": {
+          "tc": "1.為使戰場傷患救護訓練多元化，國防醫學院衛勤訓練中心於107年至112年止，委託中科院研發營造戰場視覺模擬訓練系統，藉複合投影(VR)產生敵攻擊模擬效果，營造訓練者於戰場上(城鎮、灘岸及限制空間)與敵駁火之模擬訓練景況，訓練方式主要是透過結合高階擬真假人多變化擬真傷情及生命徵象訊息回饋，藉以模擬戰場傷患負傷情況，後續並將其救護訓練評核系統導入AI模型架構，藉由機器學習產出，完成人員分析及精進建議以有效降低人為訓練誤差，並能強化救護模擬訓練效能。\n2. 智能救助模擬系統部分，則是運用智能眼鏡實施救護遠端醫囑賦予，精確提升衛勤與緊急救護之救護能力，縮短傷患到院前之救護期程並可完整調度醫療量能，有效提升官兵傷患之救治率。",
+          "en": "1.To diversify the training of battlefield casualty evacuation, the Health Service Training Center of the National Defense Medical Center commissioned the NCSIST to develop a battlefield visual simulation training system from the year 2018 to 2023. This system utilizes virtual reality (VR) technology to generate simulated enemy attack effects, creating training scenarios for trainees to simulate engagements with enemies in battlefield settings such as urban areas, beaches, and confined spaces. The training approach primarily involves the incorporation of highly realistic synthetic human models with varying injuries and vital sign feedback, simulating battlefield casualty situations. Subsequently, an AI-based evaluation system is integrated into the framework, utilizing machine learning to provide personnel analysis and improvement suggestions, effectively reducing human training errors, and enhancing the effectiveness of medical simulation training.\n\n2.Regarding the intelligent rescue simulation system, intelligent eyewear is employed to implement remote medical instructions, enhancing the accuracy of medical care and emergency rescue capabilities. This approach shortens the time of casualty care before arrival at a medical facility, allowing for efficient allocation of medical resources and significantly improving the treatment rate of injured personnel."
+        }
+      },
+      { "org": { "tc": "國防醫學院三軍總醫院澎湖分院", "en": "N.D.M.C. Tri-Service General Hospital Penghu Branch." }, "info": { "tc": "醫學中心等級之3D列印技術，引進三軍總醫院澎湖分院，特別應用於術前規劃及治療複雜性骨折手術，尤其是骨盆、髖臼或是粉碎性骨折，讓以往只能往台灣後送的病人，能留在島上接受同等的治療。在本院放射科同仁的協助下，能以最快速的方式獲得細切的電腦斷層影像檔案，並透過內湖總院雲端軟體3D影像建模。我們再用3D列印機將術前需要的模型印出，進行手術說明及臨床規畫。此醫學中心等級的流程以成功治癒了數十位受傷的澎湖鄉親，效果著見。", "en": "The 3D printing technology of the medical center level has been introduced to the Penghu Branch of the Tri-Service General Hospital, which is specially applied to preoperative planning and treatment of complex fracture surgery, especially for pelvic, acetabular or comminuted fractures. This allows patients who previously had to be sent to Taiwan to stay on the island for the same treatment. With the assistance of the colleagues in the radiology department, we can quickly obtain finely sliced computer tomography image files and create 3D images through the cloud software of the TSGH. We then use a 3D printer to print out the necessary models for preoperative surgery instructions and clinical planning. This medical center level process has successfully healed dozens of injured Penghu residents with visible effects." } }
+    ],
+    "event": [
+      {
+        "timeList": [
+          { "start": "2023-11-30 10:00+08:00", "end": "2023-12-02 18:00+08:00" },
+          { "start": "2023-12-03 10:00+08:00", "end": "2023-12-03 16:00+08:00" }
+        ],
+        "title": { "tc": "健康「脈」動 智慧篩檢\n血氧血壓\n血流心率", "en": "" },
+        "topic": { "tc": "健康大檢測", "en": "健康大檢測" }
+      },
+      { "timeList": [{ "start": "2023-12-01 11:00+08:00", "end": "2023-12-01 11:50+08:00" }], "title": { "tc": "耳清目明新利器 - 微創耳咽管氣球擴張術", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 11:00+08:00", "end": "2023-12-02 11:30+08:00" }], "title": { "tc": "您是鼻子氣象台嗎?鼻過敏及鼻竇炎治療的新進展", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-03 13:00+08:00", "end": "2023-12-03 13:30+08:00" }], "title": { "tc": "彈無虛發之多發性肺結節術電腦斷層導引同步穿刺定位術", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 10:00+08:00", "end": "2023-12-02 10:30+08:00" }], "title": { "tc": "漫漫腸路 膠囊內視鏡全都錄", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-03 13:00+08:00", "end": "2023-12-03 13:30+08:00" }], "title": { "tc": "高光譜內視鏡建構食道疾病智慧偵測與影像收集", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-03 13:00+08:00", "end": "2023-12-03 13:30+08:00" }], "title": { "tc": "彈無虛發之多發性肺結節術電腦斷層導引同步穿刺定位術", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-01 10:00+08:00", "end": "2023-12-01 10:30+08:00" }], "title": { "tc": "提升血液透析糖尿病患者足部自我照護行為執行率", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 15:30+08:00", "end": "2023-12-02 16:00+08:00" }], "title": { "tc": "數位優化 即時雲端血糖監測", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-03 14:30+08:00", "end": "2023-12-03 15:00+08:00" }], "title": { "tc": "閾值下腦刺激：思覺失調的新治療技術", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-11-30 13:30+08:00", "end": "2023-11-30 14:00+08:00" }], "title": { "tc": "創新術中神經功能監測之脊椎手術訓練擬真系統", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-11-30 14:30+08:00", "end": "2023-11-30 15:00+08:00" }], "title": { "tc": "應用3D列印推行戰術戰傷救護技術", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-01 14:30+08:00", "end": "2023-12-01 15:00+08:00" }], "title": { "tc": "耳掛式持續生理監測裝置", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-03 10:00+08:00", "end": "2023-12-03 10:30+08:00" }], "title": { "tc": "人工智慧影像辨識導引輔助插管", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } }
+    ]
+  },
+  {
+    "type": "booth",
+    "floor": 1,
+    "w": 2100,
+    "h": 600,
+    "x": 12720,
+    "y": 5410,
+    "p": [
+      { "node": "L", "x": 2100, "y": 0 },
+      { "node": "L", "x": 2100, "y": 600 },
+      { "node": "L", "x": 0, "y": 600 }
+    ],
+    "id": "K502",
+    "size": { "tc": 1.0, "en": 0.7 },
+    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["光田醫院"], "en": ["Kuang Tien", "General Hospital"] },
+    "corps": [{ "org": { "tc": "光田醫療社團法人光田綜合醫院", "en": "Kuang Tien General Hospital" }, "info": { "tc": "1.脊髓損傷幹細胞治療\n2.婦科海扶刀精準醫療\n3.腦中風智慧全人醫療照護\n4.運動醫學\n5.向上院區智慧醫院與服務特色\n", "en": "1. NS spinal \n2. HIFU Noninvasive\n3. Neuro\n4.Sports Medicine" } }],
+    "event": [
+      {
+        "timeList": [
+          { "start": "2023-11-30 10:00+08:00", "end": "2023-12-02 18:00+08:00" },
+          { "start": "2023-12-03 10:00+08:00", "end": "2023-12-03 16:00+08:00" }
+        ],
+        "title": { "tc": "身手愛矯健！\n手部/下肢 靈敏度檢測", "en": "" },
+        "topic": { "tc": "健康大檢測", "en": "健康大檢測" }
+      },
+      { "timeList": [{ "start": "2023-12-03 10:30+08:00", "end": "2023-12-03 11:00+08:00" }], "title": { "tc": "五十肩治療方式大解密", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-01 14:15+08:00", "end": "2023-12-01 14:45+08:00" }], "title": { "tc": "嗅覺與健康", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 14:15+08:00", "end": "2023-12-02 14:45+08:00" }], "title": { "tc": "耳鳴的標靶治療", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-11-30 10:30+08:00", "end": "2023-11-30 11:00+08:00" }], "title": { "tc": "腦中風血管內治療：拆彈專家 解鎖腦袋裡的不定時炸彈", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 10:15+08:00", "end": "2023-12-02 10:45+08:00" }], "title": { "tc": "大腦神經迴路調節神器：重複經顱磁刺激", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 10:45+08:00", "end": "2023-12-02 11:15+08:00" }], "title": { "tc": "腦傷症候群?不再傷腦筋", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-11-30 14:00+08:00", "end": "2023-11-30 14:30+08:00" }], "title": { "tc": "解放護理師雙手，ChatGPT也可以寫護理記錄", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-01 14:30+08:00", "end": "2023-12-01 15:30+08:00" }], "title": { "tc": "MRI與超音波精準定位海扶治療", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 14:00+08:00", "end": "2023-12-02 15:00+08:00" }], "title": { "tc": "海扶刀超聲聚焦治療原理", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } }
+    ]
+  },
+  {
+    "type": "booth",
+    "floor": 1,
+    "w": 2100,
+    "h": 1200,
+    "x": 12720,
+    "y": 3910,
+    "p": [
+      { "node": "L", "x": 2100, "y": 0 },
+      { "node": "L", "x": 2100, "y": 1200 },
+      { "node": "L", "x": 0, "y": 1200 }
+    ],
+    "id": "K602",
+    "size": { "tc": 1.0, "en": 1.0 },
+    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["聯新國際醫院"], "en": ["Landseed ", "International", " Hospital"] },
+    "corps": [
+      {
+        "org": { "tc": "聯新國際醫院", "en": "Landseed International Hospital" },
+        "info": {
+          "tc": "參展定位主題:以智慧醫療為基礎的無圍牆照護\n運用雲平台為基礎，提供各神醫的醫療照護服務。\n【止鼾神醫】：利用居家鼾聲錄製，以AI分類睡眠問題，進而做睡眠暨慢病照護管理。\n【精準腸神醫】：利用標籤平台創造30%點擊率, 精準地讓民眾得到篩檢訊息，並利用大腸鏡AI影像辨識進行篩檢。\n【AI腦神醫】：利用LINE@智慧轉診，串連各醫院緊急連繫，提升流程時效性，減少病人等待時間；並利用MRI AI自動判讀軟體快速、精準判斷梗塞區，搶救病人黃金治療時間。\n【照護脊神醫】：利用LINE@智慧照護平台，提供脊椎微創手術的術前諮詢與術後追蹤完整服務，使其達到全期護理服務。\n【解痛運神醫】：「如何讓企業3週有感，員工病假少7成」提供專業運動測檢分析，安排團隊課程及運動管理，透由APP輔助員工達成健促目標。\n【風險神算醫】：結合智慧病房服務，整合住院病人相關數據，臨床警示系統(CAS)，早期警訊系統(EWS)，並提供病危與入ICU未來六小時預測風險, 提高醫護照護品質。",
+          "en": "Exhibition Theme: “Hospital Without Out Boundaries”-Establish Smart Healthcare-Based Integrated Care\n1.Use home snoring recordings to classify sleep problems with AI, and then provide sleep and chronic disease care and management.\n2.Use the label platform to create 30% click-through rate, accurately let the public get screening information, and use colonoscopy AI image recognition for screening.\n3.Use LINE@ smart referral to connect emergency contacts of various hospitals, improve the timeliness of the process, and reduce patient waiting time; and use MRI AI automatic interpretation software to quickly and accurately determine the infarction area.\n4.Using the LINE@ smart care platform, we provide complete pre-operative consultation and post-operative follow-up services for minimally invasive spine surgeries\n5.Provides professional exercise testing and analysis, arranges team courses and exercise management, and uses the APP to assist employees in achieving their health promotion goals.\n6.Combined with smart ward services, it integrates inpatient-related data, clinical alert system (CAS), and early warning system (EWS), and provides risk predictions for critical illness and ICU admission in the next six hours to improve the quality of medical care."
+        }
+      }
+    ],
+    "event": [
+      {
+        "timeList": [
+          { "start": "2023-11-30 10:00+08:00", "end": "2023-11-30 12:00+08:00" },
+          { "start": "2023-11-30 13:00+08:00", "end": "2023-11-30 15:00+08:00" },
+          { "start": "2023-12-01 10:00+08:00", "end": "2023-12-01 12:00+08:00" },
+          { "start": "2023-12-01 13:00+08:00", "end": "2023-12-01 15:00+08:00" },
+          { "start": "2023-12-02 10:00+08:00", "end": "2023-12-02 12:00+08:00" },
+          { "start": "2023-12-02 13:00+08:00", "end": "2023-12-02 15:00+08:00" },
+          { "start": "2023-12-03 10:00+08:00", "end": "2023-12-03 12:00+08:00" },
+          { "start": "2023-12-03 13:00+08:00", "end": "2023-12-03 15:00+08:00" }
+        ],
+        "title": { "tc": "睡醒還是累？\n打呼聲檢測睡眠呼吸中止！", "en": "" },
+        "topic": { "tc": "健康大檢測", "en": "健康大檢測" }
+      },
+      { "timeList": [{ "start": "2023-11-30 14:00+08:00", "end": "2023-11-30 15:00+08:00" }], "title": { "tc": "三週有感，改善慢性疼痛", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-03 11:00+08:00", "end": "2023-12-03 12:00+08:00" }], "title": { "tc": "以管窺豹，方寸之間別有洞天", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-01 11:00+08:00", "end": "2023-12-01 12:00+08:00" }], "title": { "tc": "無接觸AI分析檢測與睡眠追蹤照護應用", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 14:00+08:00", "end": "2023-12-02 15:00+08:00" }], "title": { "tc": "大腸癌檢測推播與AI大腸鏡檢查輔助", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-11-30 11:00+08:00", "end": "2023-11-30 12:00+08:00" }], "title": { "tc": "神經科醫師的類神經網路", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-01 14:30+08:00", "end": "2023-12-01 15:30+08:00" }], "title": { "tc": "進入AI時代，臨床警示系統的智慧升級", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 13:30+08:00", "end": "2023-12-02 14:00+08:00" }], "title": { "tc": "無圍牆醫院新時代，改變未來醫療模式", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } }
+    ]
+  },
+  {
+    "type": "booth",
+    "floor": 1,
+    "w": 1500,
+    "h": 1200,
+    "x": 15430,
+    "y": 3910,
+    "p": [
+      { "node": "L", "x": 1500, "y": 0 },
+      { "node": "L", "x": 1500, "y": 1200 },
+      { "node": "L", "x": 0, "y": 1200 }
+    ],
+    "id": "K616",
+    "size": { "tc": 1.0, "en": 0.8 },
+    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["成大醫院"], "en": ["National ", "Cheng Kung", " University", " Hospital"] },
+    "corps": [{ "org": { "tc": "國立成功大學醫學院附設醫院", "en": "National Cheng Kung University Hospital" }, "info": { "tc": "待訂", "en": "pending" } }],
+    "event": [
+      {
+        "timeList": [
+          { "start": "2023-11-30 10:00+08:00", "end": "2023-12-02 18:00+08:00" },
+          { "start": "2023-12-03 10:00+08:00", "end": "2023-12-03 16:00+08:00" }
+        ],
+        "title": { "tc": "AI學習無邊界  中風評估一把罩", "en": "" },
+        "topic": { "tc": "醫師力大挑戰", "en": "醫師力大挑戰" }
+      },
+      {
+        "timeList": [
+          { "start": "2023-11-30 10:00+08:00", "end": "2023-12-02 18:00+08:00" },
+          { "start": "2023-12-03 10:00+08:00", "end": "2023-12-03 16:00+08:00" }
+        ],
+        "title": { "tc": "智慧眼鏡@未來醫療 ", "en": "" },
+        "topic": { "tc": "醫師力大挑戰", "en": "醫師力大挑戰" }
+      },
+      {
+        "timeList": [
+          { "start": "2023-11-30 10:00+08:00", "end": "2023-12-02 18:00+08:00" },
+          { "start": "2023-12-03 10:00+08:00", "end": "2023-12-03 16:00+08:00" }
+        ],
+        "title": { "tc": "精準給藥新方法-藥物去哪裡，你看得到!", "en": "" },
+        "topic": { "tc": "醫師力大挑戰", "en": "醫師力大挑戰" }
+      },
+      {
+        "timeList": [
+          { "start": "2023-11-30 10:00+08:00", "end": "2023-12-02 18:00+08:00" },
+          { "start": "2023-12-03 10:00+08:00", "end": "2023-12-03 16:00+08:00" }
+        ],
+        "title": { "tc": "在虛擬世界中學習  現實中發揮專業", "en": "" },
+        "topic": { "tc": "醫師力大挑戰", "en": "醫師力大挑戰" }
+      },
+      { "timeList": [{ "start": "2023-11-30 14:00+08:00", "end": "2023-11-30 14:30+08:00" }], "title": { "tc": "高齡新健康創新復健模式", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-01 14:00+08:00", "end": "2023-12-01 14:30+08:00" }], "title": { "tc": "腸胃精準給藥新方法—藥物去哪裡，你看得到!", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 14:00+08:00", "end": "2023-12-02 14:30+08:00" }], "title": { "tc": "DogKnows 早期癌症風險評估", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-03 11:30+08:00", "end": "2023-12-03 12:00+08:00" }], "title": { "tc": "誰的心臟血管有問題?基因告訴你!", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } }
+    ]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 2700,
+    "h": 600,
+    "x": 4510,
+    "y": 8010,
+    "p": [
+      { "node": "L", "x": 2700, "y": 0 },
+      { "node": "L", "x": 2700, "y": 600 },
+      { "node": "L", "x": 0, "y": 600 }
+    ],
+    "id": "L517a",
+    "size": { "tc": 1.0, "en": 0.75 },
+    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["醫策會"], "en": ["Joint Commission of Taiwan"] },
+    "corps": [{ "org": { "tc": "財團法人醫院評鑑暨醫療品質策進會", "en": "Joint Commission of Taiwan" }, "info": { "tc": "財團法人醫院評鑑暨醫療品質策進會為促進醫療及科技的跨領域整合與醫產鏈結，帶動醫療創新服務，創造醫療科技產業價值，於2019年成立「Health Smart Taiwan (HST) 台灣智慧醫療創新整合平台」。此平台彙集了超過170件臺灣優質且實用的智慧醫療解決方案，供機構間標竿學習，並透過成功案例彙編、專業論壇、專案支持等資源協助科技產業理解醫療實務的樣貌，促成雙方的交流。\n\nHST今年度以「創新科技於醫事人員訓練之應用成果」作為主軸，邀集運用七家醫療機構進行聯合策展。展出結合虛擬實境的沉浸式訓練、遊戲式學習、擬真訓練等，提供互動式體驗，並推廣臺灣品牌的智慧化臨床訓練解決方案。展現臺灣醫事人員培訓之知名度及創新形象。", "en": "Joint Commission of Taiwan (JCT) is an independent, non-profit exclusive external accreditation body accredited by the International Society for Quality in Health Care (ISQua). JCT provides a resource-sharing platform for healthcare partners through accreditation, quality improvement activities, and medical education.\n\nJCT established the Health Smart Taiwan (HST), a one-stop portal designed catalyze the existing digital solutions scalable through offering a wide range of consultations, workshops, campaign, acceleration services and piloting projects in hospitals. It provides integrated services for healthcare institutions to achieve digital transformation, shaping a quality, safe, and efficient healthcare environment.\n\nIn this exhibition, HST will show the special theme-\"Innovative Technology in Medical Professional Training\". You will learn more immersive training combined with virtual reality, and interactive training such as game-based learning, simulation training, etc." } }],
+    "event": []
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 1200,
+    "h": 1500,
+    "x": 4510,
+    "y": 6210,
+    "p": [
+      { "node": "L", "x": 1200, "y": 0 },
+      { "node": "L", "x": 1200, "y": 1500 },
+      { "node": "L", "x": 0, "y": 1500 }
+    ],
+    "id": "L617a",
+    "size": { "tc": 1.0, "en": 0.45 },
+    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["亞東遠傳"], "en": ["Far Eas Tone ", "Telecommunications"] },
+    "corps": [
+      { "org": { "tc": "遠傳電信股份有限公司", "en": "Far Eas Tone Telecommunications Co., Ltd." }, "info": { "tc": "遠傳將展出透過5G網路與IoT技術的新解方，同時優化客戶資通訊環境，讓資料流落地並可助垂直整合應用，提供兼具安全與隱私性的遠距診療服務相關服務，實現客戶的遠距診療新願景", "en": "Far Eas Tone exhibit a new solution through 5G network and IoT technology, optimize the customer information and communication environment,  can vertically integrate applications, and provide security and privacy related remote medical services. Realize the new vision of telemedicine for our customers. " } },
+      { "org": { "tc": "醫療財團法人徐元智先生醫藥基金會亞東紀念醫院", "en": "Far Eastern Memorial Hospital" }, "info": { "tc": "細胞治療、精準治療、創新醫療技術、AI輔助解決方案、5G遠距診療、智慧病房", "en": "Cell Therapy, Precision Medicine, Innovative Medicine, AI Technology in Healthcare, 5G Telemedicine, Telehealth,\nSmart Hospital, Smart Ward" } }
+    ],
+    "event": []
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 2400,
+    "h": 1500,
+    "x": 4510,
+    "y": 4100,
+    "p": [
+      { "node": "L", "x": 2400, "y": 0 },
+      { "node": "L", "x": 2400, "y": 1500 },
+      { "node": "L", "x": 0, "y": 1500 }
+    ],
+    "id": "L818",
+    "size": { "tc": 1.0, "en": 1.0 },
+    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["臺北醫學大學", "暨醫療體系"], "en": ["TAIPEI MEDICAL", " UNIVERSITY"] },
+    "corps": [
+      { "org": { "tc": "臺北醫學大學", "en": "TAIPEI MEDICAL UNIVERSITY" }, "info": { "tc": "臺北醫學大學創立於1960年，歷經60餘年努力耕耘，在不斷的擴展、蛻變創新下，發展至今共有11學院、1通識教育中心，在校學生人數逾6,000名，已培育超過47,000名畢業校友，分佈海內外各醫療機構、學術單位及產業界。本校擁有臺北醫學大學附設醫院、市立萬芳醫院、部立雙和醫院及新國民醫院，2013年整合三院癌症醫療系統成立「臺北癌症中心」；2017年成立「臺北神經醫學中心」以臨床為主軸，發展整合性神經醫學，共有六所優質附屬醫院。\n本校秉持「人文關懷、誠信正直、創新卓越、團隊合作、社會服務」之核心價值，近年來致力於教學卓越、研究拔尖、產學績優、接軌國際與服務社會等發展面向，奠定本校以「醫學教育為本，生醫臨床為用，具社會影響力之創新型大學」為定位，以創新轉譯醫學為主軸，致力於厚實基礎研究、整合六附屬醫院臨床資源及推動生技醫療產業為目標。", "en": "Established in 1960, over the past century, Taipei Medical University underwent the process of continuous expansion, transformation and innovation. Today, TMU has expanded into a world-class university with 11 Colleges and 1 General Education Center, 6000 students per year, 47,000 alumni around Medical Academic Institute, Medical Industry and six affiliated hospitals which are TMU hospital, Wan Fang Hospital, Shuang Ho Hospital, Hsin Kuo Min Hospital, Tapei Cancer Center and Taipei Neuroscience Institute.\nBased on the core value of humanistic empathy, honesty and integrity, innovation, teamwork and social service, TMU is dedicated to excellent teaching, outstanding research, industry-academia collaboration, international participation and social service, in order to integrate clinical resource of affiliated hospitals and meet the visions of translation medicine innovation, biomedical industry development, research advancement and positive social influence. 3 main strategies of future development are below." } },
+      { "org": { "tc": "臺北醫學大學附設醫院", "en": "TAIPEI MEDICAL UNIVERSITY HOSPITAL" }, "info": { "tc": "臺北醫學大學附設醫院創立於 1976 年，為臺北醫學大學第一間附屬醫院，奠定北醫體系臨床服務與教學研究雙向交流的基礎。為提供優質的醫療服務，北醫附設醫院持續提升醫療品質、強化軟硬體設備，2018 年起陸續完成三棟醫療大樓的整建，導入智慧醫療，蛻變新貌。目前全院病床增至近 800 床，同仁人數逾 2000 人，躍升國內外中型醫院的標竿。\n\n邁向個人化精準醫療時代，北醫附設醫院積極發展癌症尖端醫療，2022年啟用蔡萬才癌症大樓及北醫質子中心，躋身世界百大質子中心，兩項重要建設將帶領北醫體系的癌症醫學晉升世界級場域，邁向全新里程碑。 \n\n2023台灣醫療科技展展出項目如下\n1. 多模人工智慧個人化4D高齡健康失智預測模組\n2. 應用擴增實境於神經復健\n3. 衛星X光檢查中心\n4. 微創遠端橈骨骨折復位鉗 3D 列印輔助器材", "en": "Taipei Medical University Hospital (TMUH), the first affiliated hospital of Taipei Medical University (TMU), was founded in 1976 and has built up the basis between clinical service and medical research education. TMUH continues enhancing medical care quality and reinforcing the hardware and software equipment to provide high-grade medical services. Since 2018, three medical buildings have been renovated; moreover, TMUH introduced an intelligent medical system that gives the hospital a whole new look. The number of hospital beds has increased to nearly 800 beds so far, and the number of faculty and staff has exceeded 2,000 people, making TMUH the benchmark of domestic and international medium-sized hospital.\n\nExhibited items\n1. DeepBrain-Cognito\n2. Satellite X-ray inspection center strengthens disease prevention and disease diagnosis capabilities\n3. \"G-Maple\"Orthopedic Manual Surgical Instrument  (Non-Sterile)" } },
+      { "org": { "tc": "臺北市立萬芳醫院", "en": "TAIPEI MUNICIPAL WANFANG HOSPITAL" }, "info": { "tc": "萬芳醫院具有急重症病患醫療能力與品質，自開院以來通過多項品質認證，包括五次高分通過JCI 國際醫院評鑑認證、癌症診療品質認證、國家級重度急救責任醫院，且不斷積極延攬醫療精英，強化醫療陣容，設立結核病中心、癌症中心、癌熱療中心、中風中心、中西整合疼痛、燒傷及困難傷口全人照護中心、雷射美容中心…等發展多元具有特色的醫療發展中心，提供的不只是專業的醫療服務，更是以病人為中心的全人照護，享譽國際的醫療水準只是附加價值，協助病人恢復健康、進而維護健康、促進健康才是萬芳醫院最重視的事。\n萬芳醫院始終以”人”為出發點，透過萬芳生技創新中心”來培育醫療創新人才、組建醫療創新團隊，迎接未來醫療之新篇章。", "en": "Wanfang Hospital Continue to actively recruit medical elites, strengthen the medical level, establish tuberculosis centers, cancer centers, cancer hyperthermia centers, stroke centers, integrated Chinese and Western integrated care centers for pain, burns and difficult wounds, laser cosmetology centers, ... and other developments with unique characteristics.\nWanfang Hospital provides not only professional medical services, but also patient-centered holistic care. Helping patient to recover their health、maintain their health, and promote their health is the most important thing to you." } },
+      {
+        "org": { "tc": "衛生福利部雙和醫院", "en": "TAIPEI MEDICAL UNIVERSITY-SHUANG HO HOSPITAL, MINISTRY OF HEALTH AND WELFARE" },
+        "info": {
+          "tc": "雙和醫院於2008年7月1日開幕，由衛生福利部委託臺北醫學大學興建經營，為全國首家BOT醫院，總床數近 1,600 床的準醫學中心。除急性治療外，更深入長期慢性照護服務，引進先進儀器設備，提供全方位醫療服務，為新北市具規模的醫院，與臺北醫學大學附設醫院、萬芳醫院形成大臺北的醫療金三角。\n雙和醫院致力於整合跨科別醫療團隊，建置完整的急重症醫療系統，為新北高級救護技術員實習訓練醫院、北區緊急醫療災難應變指揮中心 (EOC) 網絡醫院，是北部地區不可或缺的急重症醫療據點。\n雙和醫院為民眾的健康與幸福努力不懈，在服務、教學、研究等各方面不斷突破，並與世界各國之醫療機構合作，拓展台灣醫療專業之深度及廣度。2023年6月1日啟用臺北醫學大學教學研究及生醫科技大樓，建立生技研究園區，提供更完備的教學、研究環境，持續精進，成為高品質、高績效的國際一流大學醫院。\n\n2023台灣醫療科技展展出項目如下：\n1.全方位腎力精準數位醫療系統\n2.腦血管醫學影像人工智慧平台\n3.軟式消化道內視鏡機器輔具\n4.好好翻身墊\n5.鎂基金屬玻璃複合物縫合錨釘\n6.肺癌藥篩與肝臟晶片:癌症藥毐測試",
+          "en": "Shuang-Ho Hospital was opened on July 1, 2008, and it was commissioned by the Ministry of Health and Welfare and was the first Build-Operate-Transfer (BOT) hospital in Taiwan, with a total of nearly 1,600 beds. In addition to acute care, the hospital also provides long-term chronic care services and has introduced advanced equipment to provide a full range of medical services, not only making it the largest hospital but also forming a network of best medical care with Taipei Medical University Hospital and Taipei Municipal Wanfang Hospital in New Taipei City.\nThis medical institution is committed to combine all the best teams from different disciplines to provide the public with the most complete medical system for acute and critical conditions. It is also a training hospital for senior ambulance technicians in New Taipei City and the city’s Emergency Operations Center (EOC) to coordinate a network of hospitals as response in time of medical disaster.\nShuang-Ho Hospital strives for the health and well-being of the public and continues to make breakthroughs in service, teaching, and research, and cooperates with medical institutions around the world to expand the depth and breadth of the medical profession in Taiwan. On June 1, 2023, we opened the Biomedical Technology Building of Taipei Medical University for teaching and research, for which this serves as a biotechnology research park to provide a comprehensive environment for teaching and research, as we continue to refine and set a high-quality, high-performing standard of international university hospital.\n\nExhibited items\n1. ACE: A digital solution for taking care of patients with AKI, CKD and ESKD \n2. An Artificial Intelligence Platform for Medical Imaging of Cerebrovascular Disease\n3. Robotic-Assisted Flexible Digestive Endoscopy\n4. low-tension rollover sheet.\n5. Magnesium-based metallic glass composite absorbable suture anchor \n6. Lung Tumor and Liver Lab Chip: Cancer Drug Toxicology Tests"
+        }
+      },
+      { "org": { "tc": "新國民醫院", "en": "HSIN KUO MIN HOSPITAL" }, "info": { "tc": "內視鏡脊椎融合術保留了內視鏡最小軟組織破壞的優點，相對於傳統或脊椎微創融合，藉由內視鏡自由活動及放大的視角，可以直接確認椎間盤切除以及上下終板的刮除是否有達到最適脊椎融合的程度。在1.8公分直徑大小的傷口下，可以置入如同傳統手術大小的椎籠及椎弓釘。脊椎內視鏡融合在保留了內視鏡的優勢下，擴大了脊椎內視鏡的臨床應用。", "en": "Advantages of endoscopic fusion surgery over traditional forms of surgery, or even minimal invasive fusion surgery, include the ability of the endoscope to visualize different angles under higher levels of magnification, ensuring the complete removal of the intervertebral disc and endplate preparation for the subsequent fusion procedure. Through a surgical wound of only 18 mm, endoscopic fusion surgery is able to implant the same cage and pedicle screws that are implanted in traditional spine surgery. With the use of endoscope in spine surgery, the application of endoscope has broadened to include fusion surgery for further clinical benefits." } },
+      { "org": { "tc": "臺北癌症中心", "en": "TMU TAIPEI CANCER CENTER" }, "info": { "tc": "臺北癌症中心", "en": "TMU TAIPEI CANCER CENTER" } },
+      { "org": { "tc": "臺北神經醫學中心", "en": "TAIPEI NEUROSCIENCE INSTITUTE" }, "info": { "tc": "原發性顫抖與巴金森氏症會導致手部不自主顫抖，若無法靠藥物緩解便會大大影響生活，但現在透過神波刀，不用開顱、不用全身麻醉，使用高強度的聚焦超音波搭配磁振造影就能精準治療，有效緩解顫抖，重拾生活品質！", "en": "Exablate Neuro, the Magnetic Resonance-guided Focused Ultrasound (MRgFUS) is a Focused Ultrasound platform for treating Essential Tremor and Tremor-dominant Parkinson’s disease. It can deliver up to 1,024 ultrasound waves across the skull to precisely ablate a target deep in the brain. The result for many patients is immediate improvement of tremor with no overnight hospital stay." } }
+    ],
+    "event": [
+      { "timeList": [{ "start": "2023-12-02 14:00+08:00", "end": "2023-12-02 14:30+08:00" }], "title": { "tc": "你的跌倒風險有幾%？", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 16:00+08:00", "end": "2023-12-02 16:30+08:00" }], "title": { "tc": "磁控上消化道膠囊內視鏡", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-11-30 16:00+08:00", "end": "2023-11-30 16:30+08:00" }], "title": { "tc": "肺癌數位快篩", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-01 11:00+08:00", "end": "2023-12-01 11:30+08:00" }], "title": { "tc": "打造腫瘤替身：從循環腫瘤細胞談起", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-01 16:00+08:00", "end": "2023-12-01 16:30+08:00" }], "title": { "tc": "器官晶片/替身醫療", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-03 11:00+08:00", "end": "2023-12-03 11:30+08:00" }], "title": { "tc": "健康的免疫是超能力", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-03 13:00+08:00", "end": "2023-12-03 13:30+08:00" }], "title": { "tc": "在家復能，簡單又輕鬆", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-11-30 13:00+08:00", "end": "2023-11-30 13:30+08:00" }], "title": { "tc": "腎臟照護：急性腎臟病與慢性腎臟病的關係", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 11:00+08:00", "end": "2023-12-02 11:30+08:00" }], "title": { "tc": "人工智慧失智症認知復健系統", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-01 13:00+08:00", "end": "2023-12-01 13:30+08:00" }], "title": { "tc": "治療手抖的利器-「神波刀」", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-01 14:00+08:00", "end": "2023-12-01 14:30+08:00" }], "title": { "tc": "AI智慧診斷醫療器材", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } }
+    ]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 2400,
+    "h": 600,
+    "x": 7210,
+    "y": 8010,
+    "p": [
+      { "node": "L", "x": 2400, "y": 0 },
+      { "node": "L", "x": 2400, "y": 600 },
+      { "node": "L", "x": 0, "y": 600 }
+    ],
+    "id": "M503a",
+    "size": { "tc": 1.0, "en": 1.0 },
+    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["奇美醫院"], "en": ["Chi Mei Hospital"] },
+    "corps": [{ "org": { "tc": "奇美醫療財團法人奇美醫院", "en": "Chi Mei Hospital" }, "info": { "tc": "1.智能化療調配機器手臂\n2.智能開刀房（IOR）\n3.智慧藥櫃\n4.基於醫療大數據之個人化精準手術麻醉風險預測儀表板\n5.智能艾炙盒\n6.全方位基因和微營養素檢測，跨體學精準治療\n7.虛擬診間（VR）\n8.手術紗布多功能計數裝置\n9.全方位導管零點偵測儀\n10.減壓墊\n", "en": "1.The Smart Chemotherapy Compounding Robot\n2.The Smart Surgery Room Dashboard\n3.Automatic Drug Dispensing\n4.A Personalized Precision Surgical Anesthesia Risk Prediction System Based on Healthcare Big Data\n5.The Intelligent Moxibustion Box\n6.The comprehensive genomic profiling for liquid biopsy\n7.The virtual consultation room\n8.urgical gauze multi-function (counting, weighing) automatic counting barrels\n9.A Multi-line Holder with Built-in Angle Alignment Features\n10.Various decompression devices" } }],
+    "event": []
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 1800,
+    "h": 600,
+    "x": 10220,
+    "y": 8010,
+    "p": [
+      { "node": "L", "x": 1800, "y": 0 },
+      { "node": "L", "x": 1800, "y": 600 },
+      { "node": "L", "x": 0, "y": 600 }
+    ],
+    "id": "M519a",
+    "size": { "tc": 1.0, "en": 0.7 },
+    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["輔大醫院"], "en": ["Fu Jen Catholic ", "University"] },
+    "corps": [{ "org": { "tc": "輔仁大學學校財團法人輔仁大學", "en": "Fu Jen Catholic University" }, "info": { "tc": "輔仁大學及輔仁大學附設醫院以醫療角度出發，展現「醫療X健康照護X智慧防疫X創新研發」等多面向的發展，並於跨領域技術研發與產學合作上，呈現豐碩之研發及技術成果。", "en": "Fu Jen Catholic University and Fu Jen Catholic University Hospital" } }],
+    "event": [
+      { "timeList": [{ "start": "2023-11-30 16:00+08:00", "end": "2023-11-30 16:30+08:00" }], "title": { "tc": "共享決策(SDM)在前十字韌帶重建手術的應用", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 11:00+08:00", "end": "2023-12-02 11:30+08:00" }], "title": { "tc": "泡泡頭盔一把罩、呼吸照護好全面", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-03 11:00+08:00", "end": "2023-12-03 11:30+08:00" }], "title": { "tc": "神經調節通氣輔助 革命性的技術", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 13:30+08:00", "end": "2023-12-02 14:00+08:00" }], "title": { "tc": "機器的時代，人性的醫療", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 15:00+08:00", "end": "2023-12-02 15:30+08:00" }], "title": { "tc": "胃食道逆流不僅依賴胃鏡，高解析度食道食道壓力檢測（HRM）、食道酸鹼值阻抗測定（MII-pH）可提升治療成效", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-01 11:00+08:00", "end": "2023-12-01 11:30+08:00" }], "title": { "tc": "小兒包皮手術的新選擇 : 一槍搞定及小兒微創腹腔手術", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-01 13:30+08:00", "end": "2023-12-01 14:00+08:00" }], "title": { "tc": "醫療科技的進展如何改變了心臟的治療?", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 13:30+08:00", "end": "2023-12-02 14:00+08:00" }], "title": { "tc": "復甦照顧寒冰訣~淺談目標體溫控制治療", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-01 10:30+08:00", "end": "2023-12-01 11:00+08:00" }], "title": { "tc": "近視控制新趨勢", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-01 13:30+08:00", "end": "2023-12-01 14:00+08:00" }], "title": { "tc": "近視控制新趨勢", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } }
+    ]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 1200,
+    "h": 600,
+    "x": 12020,
+    "y": 8010,
+    "p": [
+      { "node": "L", "x": 1200, "y": 0 },
+      { "node": "L", "x": 1200, "y": 600 },
+      { "node": "L", "x": 0, "y": 600 }
+    ],
+    "id": "M531a",
+    "size": { "tc": 1.0, "en": 1.0 },
+    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["宸曜診所"], "en": ["G CLINIC"] },
+    "corps": [{ "org": { "tc": "臺灣光麗實業股份有限公司", "en": "TAIWANKUANGLI CO., LTD." }, "info": { "tc": "「G CLINIC」醫療品牌起源於日本，日本是全世界細胞治療臨床運用領先的國家，也帶動台灣的相關再生醫療執行及法規制定。\nG-clinic承襲日本細胞治療實證，結合台灣醫療團隊的豐富臨床經驗，串連東亞醫療連線，搭配最新的醫療智慧科技與全人照護配套，提供客人最完善的醫療品質與健康照護，提供個性化、專注的醫療服務和健康管理，打造精準的客戶醫療體驗，並強調高品質、個人隱私和健康領航的價值。\nG CLINIC 打造世界級的個人醫療旅程-5G Advanced Medical Process  \n1.營養保健處方簽GOODWILL JOURNEY（客製化營養建議）\n2.智慧細胞療程GLOBAL JOURNEY（細胞因子補充、抗發炎調理）\n3.專項儀器 輔助療程GENIUS JOURNEY（新興儀器治療）\n4.運動處方簽GLAMOUR JOURNEY（運動專業教練訓練方案）\n5.東方醫養學配方GENEROUS JOURNEY（東方醫養概論）", "en": "5G Advanced Medical Process\nGOODWILL JOURNEY\nGLOBAL JOURNEY\nGENIUS JOURNEY\nGLAMOUR JOURNEY\nGENEROUS JOURNEY\n" } }],
+    "event": [
+      { "timeList": [{ "start": "2023-12-01 11:00+08:00", "end": "2023-12-01 12:00+08:00" }], "title": { "tc": "擁抱無痛快樂生活", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 11:00+08:00", "end": "2023-12-02 12:00+08:00" }], "title": { "tc": "癌後照顧", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-11-30 11:00+08:00", "end": "2023-11-30 12:00+08:00" }], "title": { "tc": "創新細胞治療：重塑健康微環境！", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } }
+    ]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 3600,
+    "h": 1500,
+    "x": 6010,
+    "y": 6210,
+    "p": [
+      { "node": "L", "x": 3600, "y": 0 },
+      { "node": "L", "x": 3600, "y": 1500 },
+      { "node": "L", "x": 0, "y": 1500 }
+    ],
+    "id": "M601a",
+    "size": { "tc": 1.0, "en": 1.0 },
+    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["北榮．中榮．高榮．屏榮", "輔導會"], "en": ["Veterans General Hospital"] },
+    "corps": [{ "org": { "tc": "高雄榮民總醫院", "en": "Kaohsiung Veterans General Hospital" }, "info": { "tc": "智慧醫療", "en": "smart medication" } }],
+    "event": []
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 2400,
+    "h": 1500,
+    "x": 10220,
+    "y": 6210,
+    "p": [
+      { "node": "L", "x": 2400, "y": 0 },
+      { "node": "L", "x": 2400, "y": 1500 },
+      { "node": "L", "x": 0, "y": 1500 }
+    ],
+    "id": "M619a",
+    "size": { "tc": 1.0, "en": 1.0 },
+    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["中國醫藥大學", "暨醫療體系"], "en": ["China Medical ", "University Hospital"] },
+    "corps": [
+      {
+        "org": { "tc": "中國醫藥大學附設醫院", "en": "China Medical University Hospital" },
+        "info": {
+          "tc": "中國醫藥大學，為教學與研究並重之頂尖大學，並積極與世界一流大學、醫學中心及研究機構合作與交流，更榮獲英國泰晤士「2019亞洲大學排名」臺灣第3名、私校第1。\n中國醫藥大學暨醫療體系，目前有中國醫藥大學附設醫院、兒童醫院、北港附設醫院、台南市市立安南醫院、新竹附設醫院等，從醫學中心到診所共16家體系院所。\n為提供更高品質的醫療服務，我們積極發展尖端醫學如幹細胞療法、免疫細胞療法、基因療法，並且積極建構人工智慧醫院，發展人工智慧、精準醫學、3D列印醫療、醫材輔具等，並設立「新竹健康產學園區」及「中國醫藥大學水湳校區」。\n我們以「急、重、難症為基礎」、「以企業社會責任為使命」，將以此精神服務全體國民，提供最好的「教學、研究、服務」品質，並且發展卓越的生醫產業，以實現成為「卓越優秀的世界一流的中、西醫學中心」及「全球聞名的高科技生醫園區」之願景。",
+          "en": "China Medical University Hospital works in close collaboration with the world’s top universities, medical centers, and research institutes. The remarkable accomplishments of China Medical University have been well recognized by the world: ranks 60th in Asia University Rankings 2019, the first among private universities in Taiwan.\n  CMU Healthcare System strives for excellence in healthcare. We invest our efforts in developing top-notch medical technologies, such as stem cell therapy, gene therapy, and AI Hospital. Meanwhile, our projects on “Hsinchu International Health Science Park” and the “Shuinan International Health Science Campus” together create an environment for developing cutting edge biomedical research, industry-academia collaboration platforms and startups.\n  As frontline in central Taiwan, CMUH continues to build on a strong basis for acute and critical disease healthcare. The faculty are committed to permanent objectives of instruction, research, and medical services. Above all, we also put great emphasis on social responsibility. Moreover, we envision to be an “excellent world-class medical center with the best integration of western and Chinese medical” and “world-renowned high-tech biomedical park.”"
+        }
+      },
+      { "org": { "tc": "長聖國際生技股份有限公司", "en": "Ever Supreme Bio Technology Co.,Ltd." }, "info": { "tc": "臍帶間質幹細胞研發培養特定分子表現族群之間質幹細胞進行相對應治療，發揮並維持間質幹細胞本身抗發炎緩解組織惡化及促進組織再生修復特色，依據其細胞具備功能特色，目前的細胞治療幾乎都是自體治療。然而自體細胞治療價格昂貴，無法大量生產，長聖開發中的新藥UMSC01（異體臍帶間質幹細胞），其臍帶間質幹細胞是很好的異體細胞治療來源，可事先製造保存並於需要時取用(Off-the-Shelf)，因此可實現「大規模生產並放在貨架上銷售的細胞產品」，大幅度降低細胞培養成本，除此之外並不會影響原本間質幹細胞本身抗發炎緩解組織惡化及促進組織再生修復特色，具備市場潛力與產品開發價值。", "en": "The development of umbilical cord mesenchymal stem cells, cultured to express specific molecular profiles, provides a promising avenue for targeted therapy. These cells harness and maintain their inherent anti-inflammatory properties, mitigating tissue deterioration and promoting tissue regeneration and repair. Due to the high cost and logistical challenges associated with autologous cell therapy production, our company is developing a novel drug, UMSC01 (allogeneic umbilical cord mesenchymal stem cells), which serves as an excellent source for allogeneic cell therapy. These umbilical cord mesenchymal stem cells can be pre-manufactured and stored for off-the-shelf use, allowing us to realize the concept of 'mass production and shelf-ready sale of cell products.' This significantly reduces cell culture costs while preserving the inherent anti-inflammatory properties and tissue regeneration capabilities of mesenchymal stem cells. This approach holds great market potential and product development value." } },
+      { "org": { "tc": "長佳智能股份有限公司", "en": "EVER FORTUNE.AI CO., LTD." }, "info": { "tc": "● 本系統提供臨床放射腫瘤治療一套自動化問題解決方案\n● 提供臨床標準化及自動化的器官描繪流程，節省治療計畫設計時間\n● 衛部醫器製字第007449號\n● 美國FDA 510(k)上市前許可通知 K220264", "en": "● This product helps conduct auto contouring for radiation oncology treatment planning.\n● The product automatically delineates head-and-neck organs-at-risk (OARs) on CT images. This auto-contouring of OARs is intended to facilitate radiation therapy workflows and help reduce the time of treatment planning.\n● TFDA medical equipment license ,DOH-MD-No. 007449\n● USFDA Premarket Notification, 510(k), No. K220264" } },
+      {
+        "org": { "tc": "聖安生醫股份有限公司", "en": "Shine-On BioMedical Co.,Ltd." },
+        "info": {
+          "tc": "1.\tSOA101奈米三特異性雙免疫檢查點抗體\n•\t亞洲領先，唯一靶向癌症細胞上雙免疫檢查點之三特異性抗體。\n•\t具專一度高之癌症靶點HLA-G及PD-L1/HLA-G雙免疫檢查點抗體，克服癌細胞免疫逃脫，減少抗藥性及提升治療有效性。\n•\t為治療多種實體癌之廣效性新藥。\n2.\tSOA201 EphA10三特異性T細胞銜接抗體 \n•\t三特異性抗體靶向雙免疫細胞。\n•\tEphA10腫瘤抗原在三陰性乳癌高度表現(正常細胞幾乎不表現)，安全性高，解決三陰性乳癌無標靶藥物治療之困境。\n•\t可活化且增生T cells and NK cells，增加抗癌療效。\n•\t為治療多種實體癌之廣效性新藥。\n3.\tSOB101工程化外泌體搭載藥物 \n•\t亞洲領先，唯一具有HLA-G靶點之外泌體抗癌藥。\n•\t基因工程改質其具備anti-HLAG功能之外泌體，專一結合於腫瘤細胞，有效降低化療藥物用量。\n•\t可搭載多種藥物。\n•\t為治療多種實體癌之廣效性新藥。\n4.\tSOB102新穎抗癌外泌體核酸藥物\n•\t具備HLA-G靶點，有效及安全的將搭載的核酸藥物及化療藥物送到腫瘤處。\n•\t可穿過腦血屏障，解決多形性膠質母細胞瘤(GBM)具抗藥性之臨床治療困境。",
+          "en": "SOA101 Nano Tri-specific Dual Immune Checkpoint Antibody\n•\tThe only triple-specific antibody targeting dual immune checkpoints on cancer cells in Asia.\n•\tHighly specific cancer-targeting PD-L1 & HLA-G dual immune checkpoint antibodies can overcome the tumor heterogeneity, reduce drug resistance, and improve therapeutic effectiveness.\n•\tThe “Next generation” drug for various solid tumors therapy.\nSOA201 EphA10 Tri-specific T cell Engager\n•\tTri-specific antibody targets dual immune cells.\n•\tThe EphA10 tumor antigen is highly expressed in TNBC (almost negligible expression in normal cells), providing high safety and provides the solution for unmet medical need of TNBC about lacking targeted drug therapy.\n•\tEnhancing anti-cancer efficacy by T cells and NK cells activation.\n•\tThe “Next generation” drug for various solid tumors therapy.\nSOB101 Drug Payloads Engineered Exosomes\n•\tThe only anti-cancer exosome drug targeting HLA-G in Asia.\n•\tEngineering exosomes with anti-HLA-G bind to tumor cells specifically, effectively reducing the dosage of chemotherapy drugs. \n•\tMultiple drug payloads for cancer therapy.\n•\tThe “Next generation” drug for various solid tumors therapy.\nSOB102 Novel Anti-Cancer Exosomal Nucleic Acid Drug \n•\tTargeting HLA-G, deliver the carried nucleic acid and chemotherapy drugs to the tumor  effectively and safely.\n•\tBlood-brain barrier (BBB) crossable and solve the clinical treatment dilemma of drug-resistant glioblastoma multiforme (GBM)."
+        }
+      }
+    ],
+    "event": [
+      {
+        "timeList": [
+          { "start": "2023-11-30 10:00+08:00", "end": "2023-12-02 18:00+08:00" },
+          { "start": "2023-12-03 10:00+08:00", "end": "2023-12-03 16:00+08:00" }
+        ],
+        "title": { "tc": "喝水也會胖？\n口腔黏膜採檢肥胖基因", "en": "" },
+        "topic": { "tc": "健康大檢測", "en": "健康大檢測" }
+      }
+    ]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 1500,
+    "h": 600,
+    "x": 13220,
+    "y": 8010,
+    "p": [
+      { "node": "L", "x": 1500, "y": 0 },
+      { "node": "L", "x": 1500, "y": 600 },
+      { "node": "L", "x": 0, "y": 600 }
+    ],
+    "id": "N503a",
+    "size": { "tc": 1.0, "en": 0.5 },
+    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["童綜合"], "en": ["Tung's Taichung", " MetroHabor Hospital"] },
+    "corps": [
+      { "org": { "tc": "童綜合醫療社團法人童綜合醫院", "en": "Tung's Taichung MetroHabor Hospital" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "合錦科技股份有限公司", "en": "H.P.B. HI-TECH CORP." }, "info": { "tc": "Ezcaring P1 是非穿戴式、高隱私的 AI 智能照護系統，結合 AI 影像辨識技術以及 PPS (privacy protection system) 隱私保護感測技術，給予長輩更高品質的生活，提供居家照護、長照機構、安養中心及醫療院所等敏感場域，最安全、經濟、有效與便利的照護方案。\n1. 行為分析：AI 分析統計起床、離床、站立、行走及無動作等行為，提出建議以改善生活習慣。\n2. 睡眠分析：偵測平躺、側躺、趴睡等姿勢及睡眠時間統計，分析改善睡眠品質。\n3. 跌倒示警：AI識別跌倒行為，即時訊息或通話照護者並警示救護人員。\n4. 環境監控：偵測室內溫度與自動感應夜燈，避免夜晚起床時跌倒。\n5. 意外通知：長輩長時間無動作、跌倒及闖空門等狀況時緊急示警。\n\n是關心，不是監視。\nPPS 技術僅偵測物體移動時所產生之光影變化， 裝設於臥室甚至浴廁，皆無須擔心侵犯長輩隱私的問題，是全球首創連浴室都可以安裝的照護系統。", "en": "Combining AI image recognition and PPS (privacy protection system) technology, Ezcaring P1 provides the elderly with a high-quality life. It offers the safest, and effective care plan for sensitive areas such as home care, long-term care institutions, and medical institutions.\nIt has 5 main functions: Behavior analysis/ Sleep analysis/ Fall prevention/ Residence monitoring/ Emergency notification.\nCaring for the Elderly with Dignity and Privacy.\nPPS technology only detects changes in light and shadow generated by the movement of objects. It can be installed in the bedroom or bathroom without concern for invasion of privacy." } }
+    ],
+    "event": [
+      { "timeList": [{ "start": "2023-12-03 11:00+08:00", "end": "2023-12-03 12:00+08:00" }], "title": { "tc": "關於睡眠呼吸中止症，您知道多少??", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 11:00+08:00", "end": "2023-12-02 12:00+08:00" }], "title": { "tc": "攝護腺癌無所遁形-更精準的新世代PSMA正子影像及Lu177 PSMA標靶治療", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-11-30 11:00+08:00", "end": "2023-11-30 12:00+08:00" }], "title": { "tc": "Ezcaring B1 AI 智能嬰兒照護系統，每分每秒守護您的寶貝", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-11-30 13:30+08:00", "end": "2023-11-30 14:00+08:00" }], "title": { "tc": "智慧醫療：醫療機構的新數位信任", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-01 10:30+08:00", "end": "2023-12-01 11:00+08:00" }], "title": { "tc": "遊戲化的急救教學：一童動手指，玩家變專家", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-01 10:30+08:00", "end": "2023-12-01 11:00+08:00" }], "title": { "tc": "淨零排放、ESG與醫療機構的未來策略", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } }
+    ]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 1800,
+    "h": 1500,
+    "x": 12920,
+    "y": 6210,
+    "p": [
+      { "node": "L", "x": 1800, "y": 0 },
+      { "node": "L", "x": 1800, "y": 1500 },
+      { "node": "L", "x": 0, "y": 1500 }
+    ],
+    "id": "N601a",
+    "size": { "tc": 1.0, "en": 0.7 },
+    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["臺大醫院", "臺灣大學"], "en": ["National Taiwan ", "University Hospital"] },
+    "corps": [
+      { "org": { "tc": "國立臺灣⼤學醫學院附設醫院", "en": "National Taiwan University Hospital" }, "info": { "tc": "臺大醫院成果展示", "en": "  " } },
+      { "org": { "tc": "國立臺灣大學", "en": "National Taiwan University" }, "info": { "tc": "國立臺灣大學與國立臺灣大學醫學院附設醫院將於此展現學校及醫院之技術研究、亮點成果。", "en": "National Taiwan University and National Taiwan University Hospital will exhibit the advanced technique and solutions." } }
+    ],
+    "event": [
+      {
+        "timeList": [
+          { "start": "2023-11-30 10:00+08:00", "end": "2023-12-02 18:00+08:00" },
+          { "start": "2023-12-03 10:00+08:00", "end": "2023-12-03 16:00+08:00" }
+        ],
+        "title": { "tc": "三高慢病總評估！\n風險檢測早發現！", "en": "" },
+        "topic": { "tc": "健康大檢測", "en": "健康大檢測" }
+      }
+    ]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 1800,
+    "h": 1500,
+    "x": 12920,
+    "y": 4100,
+    "p": [
+      { "node": "L", "x": 1800, "y": 0 },
+      { "node": "L", "x": 1800, "y": 1500 },
+      { "node": "L", "x": 0, "y": 1500 }
+    ],
+    "id": "N802",
+    "size": { "tc": 1.0, "en": 0.8 },
+    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["慈濟醫院"], "en": ["Hualien Tzu Chi", " Medical Center"] },
+    "corps": [
+      { "org": { "tc": "花蓮慈濟醫學中心", "en": "Hualien Tzu Chi Medical Center" }, "info": { "tc": "慈濟慈善足跡遍布全球122個國家地區，花蓮慈濟醫院已為國際化醫學中心，37年來在醫療領域中累積的豐碩成果，受到醫界、產官學界以及眾多媒體關注，多年來結合慈善、教育、人文志業，持續為台灣醫療體系帶來創新與希望。\n2023年本院攜手各合作機構共同參展主題包含遠距醫療、智慧醫療、細胞治療、特色醫療、創新研發、國際醫療等主題，現場亦提供名醫講座、體驗活動等，敬邀醫療及生技醫藥產業之專業人士、創業投資者、病友及家屬、媒體先進蒞臨。\n", "en": "Tzu Chi Charity Foundation had set foot around the world in over 122 countries. Therefore, Hualien Tzu Chi Hospital already became an internationalized medical center, which has accumulated many fruitful accomplishments over 37 years in medical aspects. For many years, it collaborated with charity, education, culture main missions and continued to provide innovation and hope within the Taiwan medical systems. Hence, our hospital participates in this exhibition with co-development firms. Our central theme this year is ”Stem cell innovative therapy” followed with other hot issues, including cell therapy, cancer immune treatment, development of new drugs and innovative medical appliances, smart healthcare, preventive medicine, international healthcare, and New Southbound Projects. We hope to share our accomplishments with society. Through this exhibition, our hospital wishes to enhance international links and achieve the initial intention of innovative development with people-oriented thoughts in the end." } },
+      { "org": { "tc": "國璽幹細胞應用技術股份有限公司", "en": "Gwo Xi Stem Cell Applied Technology Co., Ltd." }, "info": { "tc": "國璽幹細胞應用技術股份有限公司於2011年進駐新竹生醫園區，投入幹細胞應用技術開發及幹細胞製劑，克服目前尚未獲得滿足的醫療需求。透過整合醫藥級幹細胞製劑生產技術平台與諸多核心技術，我們已開發多項專有製程技術，並且已將四支幹細胞新藥推動進入臨床試驗。為擴大幹細胞製劑量產規模及提升品質穩定度，國璽除了從製造開始就採用模組製程的思維外，於園區內打造【PIC/S GMP幹細胞製劑藥廠】，穩健地走向規模化量產，同時持續拓展細胞治療領域的開發，與強化細胞治療產業鏈上、中、下游的佈局。", "en": "Gwo Xi Stem Cell Company has established the R&D center for cell therapy development since 2011. We are committed to developing stem cell medicines that have the potential to help patients with unmet medical needs. Our production platform fully comply with medical regulations (Good Tissue Practice, GTP) in Taiwan. We have three clinical trials are ongoing in Taiwan, and one clinical trial is ongoing in Vietnam by now. In the future, we will have established the PIC/S GMP grade stem cell preparation factory (15,225 m2 built-out space) in Hsinchu Biomedical Science Park in Taiwan to put stem cell-based medicinal products into practice." } },
+      { "org": { "tc": "茂士榮生醫", "en": "" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "遠傳電信", "en": "" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "宏潤", "en": "" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "通用幹細胞", "en": "" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "遠東醫電", "en": "" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "尖端醫", "en": "" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "商之器", "en": "" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "臺灣粒線體", "en": "" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "雅培", "en": "" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "宏騏", "en": "" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "長弘", "en": "" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "裕隆", "en": "" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "鈦隼", "en": "" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "慈濟大學", "en": "" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "慈濟科技大學", "en": "" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "大林慈濟醫院", "en": "" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "靜思書軒", "en": "" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "衛生福利部", "en": "" }, "info": { "tc": "", "en": "" } }
+    ],
+    "event": [
+      {
+        "timeList": [
+          { "start": "2023-11-30 10:00+08:00", "end": "2023-11-30 12:00+08:00" },
+          { "start": "2023-11-30 14:00+08:00", "end": "2023-11-30 16:00+08:00" },
+          { "start": "2023-12-01 10:00+08:00", "end": "2023-12-01 12:00+08:00" },
+          { "start": "2023-12-01 14:00+08:00", "end": "2023-12-01 16:00+08:00" },
+          { "start": "2023-12-02 10:00+08:00", "end": "2023-12-02 12:00+08:00" },
+          { "start": "2023-12-02 14:00+08:00", "end": "2023-12-02 16:00+08:00" },
+          { "start": "2023-12-03 10:00+08:00", "end": "2023-12-03 12:00+08:00" },
+          { "start": "2023-12-03 14:00+08:00", "end": "2023-12-03 16:00+08:00" }
+        ],
+        "title": { "tc": "中醫耳穴看健康！\n氣場能量檢測", "en": "" },
+        "topic": { "tc": "健康大檢測", "en": "健康大檢測" }
+      },
+      { "timeList": [{ "start": "2023-11-30 10:00+08:00", "end": "2023-11-30 11:30+08:00" }], "title": { "tc": "重回尊嚴-脊髓損傷細胞治療", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-11-30 13:00+08:00", "end": "2023-11-30 13:30+08:00" }], "title": { "tc": "間質幹細胞暨外泌體對治療退化性關節炎的效果", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 10:30+08:00", "end": "2023-12-02 11:10+08:00" }], "title": { "tc": "促「膝」淺談膝關節治療", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 11:20+08:00", "end": "2023-12-02 11:50+08:00" }], "title": { "tc": "晶脊奇蹟-神經幹細胞再生與BurstDR晶片刺激治療", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 16:00+08:00", "end": "2023-12-02 16:30+08:00" }], "title": { "tc": "應用人工智慧輔助胃食道逆流症之精準診斷及個人化治療", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-11-30 12:00+08:00", "end": "2023-11-30 12:30+08:00" }], "title": { "tc": "淨斯本草系列：活芯智濃縮液穩醣活血護腦", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 14:00+08:00", "end": "2023-12-02 14:40+08:00" }], "title": { "tc": "脂肪幹細胞應用於疾病治療-以慢性腦中風幹細胞新藥思益優® (GXNPC1) 為例", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-11-30 14:00+08:00", "end": "2023-11-30 14:40+08:00" }], "title": { "tc": "細胞製造智能時代", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-11-30 17:00+08:00", "end": "2023-11-30 17:30+08:00" }], "title": { "tc": "台灣首創：以脂肪幹細胞重塑臉部輪廓/鄧守成主任", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-01 11:00+08:00", "end": "2023-12-01 11:30+08:00" }], "title": { "tc": "智慧下鄉 藥您健康合作記者會", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-01 13:00+08:00", "end": "2023-12-01 13:30+08:00" }], "title": { "tc": "AI醫療雲世代：智能透析微服務", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-01 14:00+08:00", "end": "2023-12-01 14:40+08:00" }], "title": { "tc": "優化幹細胞研究與技轉成果發表", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-01 15:00+08:00", "end": "2023-12-01 15:40+08:00" }], "title": { "tc": "以網路取代馬路，實現醫療零偏鄉", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 13:00+08:00", "end": "2023-12-02 13:40+08:00" }], "title": { "tc": "Cerebraca ®  wafer邁向國際之路", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-02 14:50+08:00", "end": "2023-12-02 15:20+08:00" }], "title": { "tc": "疫後解封-國際醫療重新出發", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-03 11:00+08:00", "end": "2023-12-03 11:30+08:00" }], "title": { "tc": "「非一槍斃命、需聯合作戰：CAR-T新挑戰」", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
+      { "timeList": [{ "start": "2023-12-03 13:30+08:00", "end": "2023-12-03 14:00+08:00" }], "title": { "tc": "抗鎖鏈蛇蛇毒(RVV-X)單株抗體藥物對血栓形成之預防應用", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } }
+    ]
+  },
+  {
+    "type": "booth",
+    "floor": 1,
+    "w": 600,
+    "h": 600,
+    "x": 6110,
+    "y": 4510,
+    "p": [
+      { "node": "L", "x": 600, "y": 0 },
+      { "node": "L", "x": 600, "y": 600 },
+      { "node": "L", "x": 0, "y": 600 }
+    ],
+    "id": "I628",
+    "size": { "tc": 0.7, "en": 0.7 },
+    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
+    "topic": { "tc": "", "en": "" },
+    "tag": { "tc": [""], "en": [""] },
+    "text": { "tc": ["4"], "en": [""] },
+    "corps": [{ "org": { "tc": "", "en": "" }, "info": { "tc": "", "en": "" } }],
+    "event": []
+  },
+  {
+    "type": "booth",
     "floor": 4,
     "w": 300,
     "h": 300,
@@ -1244,27 +2265,6 @@
     "type": "booth",
     "floor": 1,
     "w": 600,
-    "h": 600,
-    "x": 6110,
-    "y": 8110,
-    "p": [
-      { "node": "L", "x": 600, "y": 0 },
-      { "node": "L", "x": 600, "y": 600 },
-      { "node": "L", "x": 0, "y": 600 }
-    ],
-    "id": "I228",
-    "size": { "tc": 0.7, "en": 0.4 },
-    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["員榮", "醫院"], "en": ["Yuan Rung", "Hospital"] },
-    "corps": [{ "org": { "tc": "員榮醫療社團法人員榮醫院", "en": "Yuan Rung Hospital" }, "info": { "tc": "-", "en": "-" } }],
-    "event": []
-  },
-  {
-    "type": "booth",
-    "floor": 1,
-    "w": 600,
     "h": 300,
     "x": 1600,
     "y": 7510,
@@ -1436,44 +2436,6 @@
       }
     ],
     "event": []
-  },
-  {
-    "type": "booth",
-    "floor": 1,
-    "w": 900,
-    "h": 600,
-    "x": 5810,
-    "y": 7210,
-    "p": [
-      { "node": "L", "x": 900, "y": 0 },
-      { "node": "L", "x": 900, "y": 600 },
-      { "node": "L", "x": 0, "y": 600 }
-    ],
-    "id": "I326",
-    "size": { "tc": 0.8, "en": 0.8 },
-    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["德威醫院"], "en": ["Dentway"] },
-    "corps": [
-      {
-        "org": { "tc": "德威生物科技股份有限公司", "en": "Dentway Co.,Ltd" },
-        "info": {
-          "tc": "德威國際口腔醫療體系是一個完整的垂直及平水整合的口腔醫療體系，其中包含牙醫醫院、牙科診群、牙體技術所、牙材事業、醫務管理、數位醫學影像整合及教育中心。\n\n自西元1989年德威第一家院所在台北成立，至今院所群遍布北(大台北、桃園、新竹) 中 (台中) 、南 (嘉義、台南、高雄、屏東) 、花東(花蓮、台東) 、離島(金門) 、偏鄉地區(南投信義鄉)及海外地區有中國、日本、馬來西亞及美國等近40家院所。以” 一家看診，海內外服務”的精神，提供優質、專業的口腔醫療服務。\n\n\n2021年成立全台灣第一家牙醫口腔醫院，具有全台最完整的牙醫專科團業，擁有最先進的牙醫設備及對病患最好的醫療照顧。醫院裡有五大中心: 植牙中心、矯正中心、顎顏面中心、精準呼吸中止治療中心及美容牙醫中心。整合牙醫10個專科(家庭牙醫、兒童牙科、牙體復形、贋復補綴、牙髓病、牙周病、齒顎矯正、口腔顎面外科、口腔病理及特殊需求者口腔醫學) 提供個人化精準醫療服務，並以成為口腔醫療照護的領導者為使命。",
-          "en": "Dentway international dental group is a complete vertical and horizontal oral medical system, including dental hospital, dental clinics, dental laboratory, dental business, medical management, digital medical imaging integration and education center.\nFirst Dentway Dental clinic was established in 1989. There are nearly 40 clinics in Taiwan (the northern, central, southern, eastern, remote islands ), and overseas areas including China, Japan, Malaysia, and the United States and. Provide high-quality and professional dental services in the spirit of \\\\\\\"service at home and abroad\\\\\\\".\nIn 2021, the first dental hospital in Taiwan is established. It has the most complete dental specialty group in Taiwan, with the most advanced dental equipment and the best dental care for patients. There are five centers in the hospital: Dental Implant Center, Orthodontics Center, Maxillofacial Center, Precision Breath Abort Treatment Center, and Beauty Dentistry Center. Integrate 10 specialties of dentistry (Family Dentistry, Pediatric dentistry, Dental Reconstruction, Prosthetics, Endodontics, Periodontology, Orthodontics, Oral and Maxillofacial Surgery, Oral Pathology, and Oral Medicine for Special Needs) to provide personalization precision dental services, and its mission is to become a leader in dental care."
-        }
-      }
-    ],
-    "event": [
-      {
-        "timeList": [
-          { "start": "2023-11-30 10:30+08:00", "end": "2023-12-02 17:30+08:00" },
-          { "start": "2023-12-03 10:30+08:00", "end": "2023-12-03 15:30+08:00" }
-        ],
-        "title": { "tc": "口腔衛生很重要！口腔大檢查！", "en": "" },
-        "topic": { "tc": "健康大檢測", "en": "健康大檢測" }
-      }
-    ]
   },
   {
     "type": "booth",
@@ -1711,35 +2673,6 @@
   {
     "type": "booth",
     "floor": 1,
-    "w": 2400,
-    "h": 600,
-    "x": 4310,
-    "y": 5410,
-    "p": [
-      { "node": "L", "x": 2400, "y": 0 },
-      { "node": "L", "x": 2400, "y": 600 },
-      { "node": "L", "x": 0, "y": 600 }
-    ],
-    "id": "I516",
-    "size": { "tc": 1.0, "en": 0.7 },
-    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["彰基醫療體系"], "en": ["Changhua Christian", "Hospital"] },
-    "corps": [
-      {
-        "org": { "tc": "彰化基督教醫院", "en": "Changhua Christian Hospital" },
-        "info": {
-          "tc": "彰化基督教醫院擁有128年歷史，是一所信靠上帝的愛所建造的醫院，從早期醫療宣教士、蘭醫師父子蓽路藍縷的開創，引進西方醫學，經歷屆院長與全體同工的努力，彰基成為彰化、南投、雲林唯一的醫學中心，長期守護著中部地區民眾的健康。彰基擁有九家體系醫院，員工超過8500位，總床數超過4000千床，提供60餘種以上之專科服務。彰基並建構全台第一家全院智慧綠能的員林基督教醫院，目前正在興建的「癌症質子治療中心」，未來將提供中部地區的癌症患者便利且精準的治療與照護。\n隨著資訊科技進步與人工智慧演進，彰基致力成為一家「卓越創新實踐」的智能醫院，並已通過HMISS Level-7的認證。透過大數據、人工智慧和物聯網等先進科技，導入智慧醫療和臨床決策輔助系統及個人化精準治療策略，提供患者安全且高品質之醫療服務。彰基以「未來醫院」之願景，結合智慧、綠能與乾淨醫院的理念，打造醫療機構ESG運營新策略，致力推動醫療環保、醫院治理及企業社會責任，為全球永續發展目標共同努力。",
-          "en": "Changhua Christian Hospital (CCH) was founded in 1896; for over a century, CCH has been inspired by the love and saving grace of Jesus Christ. CCH is central Taiwan's most historical medical center, with over 4,000 ward beds and 8,500 employees in 9 healthcare systems. CCH built the first intelligent and green hospital in Taiwan to uplift workflow efficiency and an integrated healthcare system to deliver advanced but safe health services. CCH is constructing the 「Proton Therapy Center」 and anticipates providing the best service for cancer patients in the center of Taiwan.  \n\nIn the face of sweeping changes in medical information technology and artificial intelligence (AI) evolution, CCH is committed to being a smart and green hospital with \"excellent, innovative, and practice.\"CCH has been validated by HMISS Level-7, through advanced technologies, such as big data, AI, and IoT, to introduce the clinical decision support system (CDSS) and personalized precision medicine to provide safe and high-quality services for patients. With the vision of \"Future Hospital,\"CCH integrated intelligent, green, and clean into the hospital operation to facilitate the ESG management strategy and promote environmental protection, hospital governance, and corporate social responsibility to achieve the sustainable development goals (SDGs) of global medical societies."
-        }
-      }
-    ],
-    "event": []
-  },
-  {
-    "type": "booth",
-    "floor": 1,
     "w": 600,
     "h": 300,
     "x": 5510,
@@ -1834,48 +2767,6 @@
     "tag": { "tc": [""], "en": [""] },
     "text": { "tc": ["政華"], "en": ["CHIROTECH"] },
     "corps": [{ "org": { "tc": "政華科技展業有限公司", "en": "CHIROTECH INNOVATION CO.,LTD." }, "info": { "tc": "候補", "en": "make up" } }],
-    "event": []
-  },
-  {
-    "type": "booth",
-    "floor": 1,
-    "w": 1800,
-    "h": 1200,
-    "x": 4310,
-    "y": 3910,
-    "p": [
-      { "node": "L", "x": 1800, "y": 0 },
-      { "node": "L", "x": 1800, "y": 1200 },
-      { "node": "L", "x": 0, "y": 1200 }
-    ],
-    "id": "I616",
-    "size": { "tc": 1.0, "en": 0.8 },
-    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["國泰醫院"], "en": ["Cathay General", "Hospital"] },
-    "corps": [{ "org": { "tc": "國泰醫療財團法人國泰綜合醫院", "en": "Cathay General Hospital" }, "info": { "tc": "1.\t全方位新生兒外接轉送E化服務待討論\n2.\t主動脈AI篩檢及通報、肺結節AI偵測系統\n3.\t用構音障礙診斷與矯正之深度學習APP\n4.\t放射檢查智能流程e路通\n5.\t國泰醫學團隊創新研發-精準益生菌\n雲端電子病歷平台「iFHIR Center」骨折Ｘ光影像平台 i禮賀(介入照護)", "en": "Wait" } }],
-    "event": []
-  },
-  {
-    "type": "booth",
-    "floor": 1,
-    "w": 600,
-    "h": 600,
-    "x": 6110,
-    "y": 3910,
-    "p": [
-      { "node": "L", "x": 600, "y": 0 },
-      { "node": "L", "x": 600, "y": 600 },
-      { "node": "L", "x": 0, "y": 600 }
-    ],
-    "id": "I727a",
-    "size": { "tc": 0.7, "en": 0.4 },
-    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["臺安", "醫院"], "en": ["Taiwan", "Adeventist", "Hospital"] },
-    "corps": [{ "org": { "tc": "基督復臨安息日會醫療財團法人臺安醫院", "en": "Taiwan Adeventist Hospital" }, "info": { "tc": "臺安醫院展細胞治療,精準醫療,包含:AI影像細胞辨識及CDC自動循環腫瘤細胞系統，醫療相關,包含:單孔微創3D內視鏡手術,脊椎微創手術,婦科及泌尿海扶刀。", "en": "tah" } }],
     "event": []
   },
   {
@@ -2365,70 +3256,6 @@
   {
     "type": "booth",
     "floor": 1,
-    "w": 2400,
-    "h": 1500,
-    "x": 7010,
-    "y": 8110,
-    "p": [
-      { "node": "L", "x": 2400, "y": 0 },
-      { "node": "L", "x": 2400, "y": 1500 },
-      { "node": "L", "x": 0, "y": 1500 }
-    ],
-    "id": "J102",
-    "size": { "tc": 1.0, "en": 1.0 },
-    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["長庚醫療體系"], "en": ["Chang Gung", "Medical", "Foundation"] },
-    "corps": [
-      {
-        "org": { "tc": "長庚醫療財團法人", "en": "Chang Gung Medical Foundation" },
-        "info": {
-          "tc": "長庚醫療財團法人創辦於1976年，先後在台北、林口、基隆、高雄、嘉義、桃園與雲林設立了7所長庚醫院，並受政府委託經營鳳山與土城醫院，每日診治病患32,800人次以上，擁有病床數10,000床，落實「人本濟世，病人優先」是本院的經營理念。長庚具急重難症病患照護能力，長久以來持續進行醫療品質優化改善，多次榮獲SNQ國家生技醫療品質金獎的醫院，持續創新提升品質達國際醫療水準，以維護及促進病人健康是長庚非常重視及在乎的事。\n本次展覽長庚醫療財團法人以「特色醫療、智慧醫院、創新研發、公益榮耀」四大主軸呈現，含括癌症診斷、精準定位與治療、照護品質、醫療創新的成果與運用等，參展主題豐富，充份展現醫療照護的軟實力，現場並提供主題互動及體驗，歡迎民眾共同參與以了解科技治療的魅力！\n長庚醫療財團法人本次參展主題包括：\n一、特色醫療\n1.  細胞治療\n2. 尖端質子治療\n3. 運動醫學\n4. 微創手術\n二、智慧醫院\n1. 物聯網\n2. 遠距醫療\n3. 智能照護輔助\n三、創新研發\n精選創新且具臨床應用性之專利成果\n四、公益榮耀\n醫者仁心，全方位社會關懷＊獲獎榮耀肯定",
-          "en": "The Chang Gung Medical Foundation was established in 1976 by the founder of the Formosa Plastics Group (FPG).The Foundation has since established seven Chang Gung Memorial Hospitals in Taipei, Linkou, Keelung, Kaohsiung, Chiayi, Taoyuan. and Yunlin. The Foundation has also been entrusted by the government to operate Feng-Shan Hospital and Tucheng Hospital, as well as to assist in the operation of Dali Jen-Ai Hospital in Taichung. With more than 32,800 patients treated daily and 10,000 beds, the hospital\\\\\\'s management philosophy is \\\\\\\"Benefit mankind with sincerity and diligence.\\\\\\\".\nChang Gung Hospital has the ability to care for patients with acute and critical illnesses and has a long history of quality improvement. As a multiple-time SNQ National Gold Award winner, Chang Gung Hospital is committed to maintaining and promoting the health of patients by continuing to innovate and improve quality to meet international standards.\nThe exhibition will be presented under the four main axes of \\\\\\\"Specialty Medical Treatments, Smart Hospital, Innovative R&D, and Public Welfare Glory\\\\\\\", including cancer diagnosis, precise targeting treatment, quality of care, and the achievements and applications of medical innovation. The exhibition will showcase the soft power of medical care with a variety of themes and will provide interactive and hands-on experience for the public to learn about the charm of technological treatment.\nChang Gung Medical Foundation\\\\\\'s exhibit topics include:\nSpecialty Medical Treatments\n1. Cell therapy\n2. Cutting-edge- Proton Therapy\n3. Sports Medicine\n4. Minimally invasive surgery\n5. IoT\n6. Telemedicine\n7. Intelligent healthcare assistance\nSelected thirteen innovative, clinically applicable patent achievements and Automated dispensing cabinets.\nPublic Welfare Glory\nAward-winning recognition of comprehensive medical and social care."
-        }
-      }
-    ],
-    "event": [
-      { "timeList": [{ "start": "2023-11-30 13:00+08:00", "end": "2023-11-30 17:00+08:00" }], "title": { "tc": "三高慢病總評估！\n風險檢測早發現！", "en": "" }, "topic": { "tc": "健康大檢測", "en": "健康大檢測" } },
-      { "timeList": [{ "start": "2023-12-02 11:00+08:00", "end": "2023-12-03 15:00+08:00" }], "title": { "tc": "你是泡芙人？\n解析你的體脂率、肌肉量、基礎代謝率！", "en": "" }, "topic": { "tc": "健康大檢測", "en": "健康大檢測" } },
-      { "timeList": [{ "start": "2023-11-30 13:00+08:00", "end": "2023-11-30 13:30+08:00" }], "title": { "tc": "台灣之光守護者-智能化競技運動醫學整合照護", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-11-30 14:00+08:00", "end": "2023-11-30 14:30+08:00" }], "title": { "tc": "髖關節運動傷害的救星：髖關節鏡微創手術", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-11-30 15:00+08:00", "end": "2023-11-30 15:30+08:00" }], "title": { "tc": "達文西胸腔手術新進展", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-01 10:30+08:00", "end": "2023-12-01 11:00+08:00" }], "title": { "tc": "無痛無疤無網片的疝氣修補術", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-01 10:30+08:00", "end": "2023-12-01 11:00+08:00" }], "title": { "tc": "無網片的疝氣修補術", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-03 11:30+08:00", "end": "2023-12-03 12:00+08:00" }], "title": { "tc": "重建造口幸福人生--內置式人工造口裝置", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-11-30 15:00+08:00", "end": "2023-11-30 15:30+08:00" }], "title": { "tc": "達文西胸腔手術新進展", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 13:00+08:00", "end": "2023-12-02 13:30+08:00" }], "title": { "tc": "化不可能為可能：質子治療跨專科整合治療成效分享", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-03 10:30+08:00", "end": "2023-12-03 11:00+08:00" }], "title": { "tc": "肝癌細胞免疫治療", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-01 10:00+08:00", "end": "2023-12-01 10:30+08:00" }], "title": { "tc": "新冠後遺症知多少？中醫教你茶飲與食療", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-01 14:00+08:00", "end": "2023-12-01 14:30+08:00" }], "title": { "tc": "勞工健康檢查巡迴體檢簡介及未來願景", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 10:00+08:00", "end": "2023-12-02 10:30+08:00" }], "title": { "tc": "勞工健康保護知多少-淺談醫師臨場健康服務內容及未來趨勢", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-11-30 14:30+08:00", "end": "2023-11-30 15:00+08:00" }], "title": { "tc": "尖端甲狀腺治療技術-微創熱消融", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-01 11:00+08:00", "end": "2023-12-01 11:30+08:00" }], "title": { "tc": "新興內分泌干擾物：有機磷系阻燃劑與塑化劑的健康效應與檢測", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 11:30+08:00", "end": "2023-12-02 12:00+08:00" }], "title": { "tc": "副甲狀腺機能亢進 消融手術新治療", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-03 10:00+08:00", "end": "2023-12-03 10:30+08:00" }], "title": { "tc": "精準減重-解讀體型與代謝密碼", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-11-30 13:30+08:00", "end": "2023-11-30 14:00+08:00" }], "title": { "tc": "跟死神賽跑_兒童暨新生兒重難罕病童轉送-5G救護車轉送系統", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-11-30 13:30+08:00", "end": "2023-11-30 14:00+08:00" }], "title": { "tc": "跟死神賽跑_兒童暨新生兒重難罕病童轉送-5G救護車轉送系統", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-11-30 11:30+08:00", "end": "2023-11-30 12:00+08:00" }], "title": { "tc": "心血管疾病病患居家參與式的深度照護", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-01 11:30+08:00", "end": "2023-12-01 12:00+08:00" }], "title": { "tc": "更優質的無傷口腦部病灶治療/腦部質子刀放射手術", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 11:00+08:00", "end": "2023-12-02 11:30+08:00" }], "title": { "tc": "心房顫動的最新治療趨勢", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 14:00+08:00", "end": "2023-12-02 14:30+08:00" }], "title": { "tc": "精準麻醉-符合國際水準,手術安康作伙來", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 14:00+08:00", "end": "2023-12-02 14:30+08:00" }], "title": { "tc": "符合國際水準之精準麻醉-恢復快，手術安康作伙來", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-11-30 10:30+08:00", "end": "2023-11-30 11:00+08:00" }], "title": { "tc": "數位牙科新紀元，一日美齒不是夢", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-11-30 11:00+08:00", "end": "2023-11-30 11:30+08:00" }], "title": { "tc": "智能守護-多重抗藥性菌株管理", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-01 11:00+08:00", "end": "2023-12-01 12:00+08:00" }], "title": { "tc": "腦人的蟹足腫治療", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-01 14:00+08:00", "end": "2023-12-01 14:30+08:00" }], "title": { "tc": "利用口咽罩來防止在口腔治療/清潔中意外吸入/吞入異物", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-01 14:30+08:00", "end": "2023-12-01 15:30+08:00" }], "title": { "tc": "精準用藥：一機在手，隨時掌握", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 11:00+08:00", "end": "2023-12-02 11:30+08:00" }], "title": { "tc": "眼角膜移植手術", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 11:00+08:00", "end": "2023-12-02 12:00+08:00" }], "title": { "tc": "全方位AI智能客服", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 15:30+08:00", "end": "2023-12-02 16:00+08:00" }], "title": { "tc": "乾癬性關節炎的診斷生物標記及潛在治療標的", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-03 15:30+08:00", "end": "2023-12-03 16:00+08:00" }], "title": { "tc": "藥物引起皮膚過敏之檢測", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } }
-    ]
-  },
-  {
-    "type": "booth",
-    "floor": 1,
     "w": 600,
     "h": 300,
     "x": 10920,
@@ -2651,71 +3478,6 @@
     "type": "booth",
     "floor": 1,
     "w": 2400,
-    "h": 1500,
-    "x": 10020,
-    "y": 8110,
-    "p": [
-      { "node": "L", "x": 2400, "y": 0 },
-      { "node": "L", "x": 2400, "y": 1500 },
-      { "node": "L", "x": 0, "y": 1500 }
-    ],
-    "id": "J118",
-    "size": { "tc": 1.0, "en": 0.9 },
-    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["新光醫院"], "en": ["Shin Kong Wu Ho-Su", "Memorial Hospital"] },
-    "corps": [{ "org": { "tc": "新光醫療財團法人新光吳火獅紀念醫院", "en": "Shin Kong Wu Ho-Su Memorial Hospital" }, "info": { "tc": "智慧醫療、精準醫療等", "en": "health information technology、precision medicine, etc." } }],
-    "event": []
-  },
-  {
-    "type": "booth",
-    "floor": 1,
-    "w": 2400,
-    "h": 600,
-    "x": 7010,
-    "y": 7210,
-    "p": [
-      { "node": "L", "x": 2400, "y": 0 },
-      { "node": "L", "x": 2400, "y": 600 },
-      { "node": "L", "x": 0, "y": 600 }
-    ],
-    "id": "J302",
-    "size": { "tc": 1.0, "en": 0.6 },
-    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["馬偕醫院"], "en": ["MacKay Memorial Hospital"] },
-    "corps": [
-      { "org": { "tc": "馬偕紀念醫院", "en": "MacKay Medical Foundation The Presbyterian Church in Taiwan MacKay Memorial Hospital" }, "info": { "tc": "1. 腦部惡性腫瘤局部藥物釋放載體\n2. 表面拉曼光譜用於腦脊髓液藥物監測\n3. 短合成胜肽及其治療視網膜退化性疾病和/或組織損傷的用途\n4. 馬偕醇樟芝\n5. 整合性藍芽定位智慧醫療系統\n6. 智慧兒童發展評估平台\n7. 顯示螢幕之圖形化使用者介面(三)\n8. 牙齒控制器用於操作電腦相關裝置\n9. 由乳房X 光攝影影像運用機器學習進行自動偵測乳癌病灶之方法\n10. 建立運用人工智慧預測成人加護病房敗血症之儀表板\n11. 前哨淋巴結AI開發\n12. 人工智慧與電子病歷整合 AI心衰竭預防照護", "en": "1. 腦部惡性腫瘤局部藥物釋放載體\n2. 表面拉曼光譜用於腦脊髓液藥物監測\n3. 短合成胜肽及其治療視網膜退化性疾病和/或組織損傷的用途\n4. 馬偕醇樟芝\n5. 整合性藍芽定位智慧醫療系統\n6. 智慧兒童發展評估平台\n7. 顯示螢幕之圖形化使用者介面(三)\n8. 牙齒控制器用於操作電腦相關裝置\n9. 由乳房X 光攝影影像運用機器學習進行自動偵測乳癌病灶之方法\n10. 建立運用人工智慧預測成人加護病房敗血症之儀表板\n11. 前哨淋巴結AI開發\n12. 人工智慧與電子病歷整合 AI心衰竭預防照護" } },
-      {
-        "org": { "tc": "群邁通訊股份有限公司", "en": "Chiun Mai Communication Systems, Inc." },
-        "info": {
-          "tc": "1. 室內環境淨化系統：結合環境感知器、環境淨化器及AI雲平台，有效在室內環境持續去除有害病菌、異味、甲醛、TVOC，降低密閉空間感染風險，讓機構管理者即時掌握環境品質及淨化狀態。\n2. 定位求救系統: 以藍牙按鈕讓醫護人員隨身佩帶或放在口袋中，當醫護人員發現可能遭受暴力攻擊時，立刻按下隨身按鈕求救，同時把自己的位置資訊傳送到警衛室。\n3. 醫療器材追蹤: 可為醫療儀器、急診設備、輪椅等醫療器材提供即時定位訊息，掌握設備及器材的位置與使用狀態，以利於人員進行調配及使用，並減輕醫護人員交班盤點負擔。\n4. 嬰兒防盜: 在新生兒身上佩掛藍牙發報器，當嬰兒被異常帶離嬰兒室時系統即刻發出告警。護理系統顯示嬰兒位置，護理師及警衛可即時處理，防止嬰兒被外人擄盜\n5. 安全圍籬: 病患隨身佩掛藍牙定位按鈕，當有身體不適或緊急狀況即刻按鈕求救。系統能即時顯示求救位置，讓照顧者快速趕往事發地點進行救助。並可設定安全區域，若病患離開安全區域發出告警，防止走失。",
-          "en": "1. Indoor Purification System – integrate Indoor Air Sensor, Indoor Air Purifier, and AI Cloud Platform to monitor indoor air quality and destroy indoor pollutants such as odors, viruses, bacteria, molds, and volatile organic compounds 24/7.\n2. Indoor Positioning - When the medical staff feels threatened, he/she can press the tag to transmit an emergency alarm with in-door positioning information. The emergency message will be delivered to the security station to alert safety guards.\n3. Medical Equipment Tracking - track, find, and access important medical equipment much easier with indoor positioning technology. The system updates the real-time locations of hospital assets, so the valuable equipment can be clearly located and visualized.\n4. Smart baby Care - Attach a Tag to the newborn, and the system will send an alarm when the baby is abnormally taken out of the baby room. The nursing system shows the location of the baby to prevent the baby from being kidnapped by outsiders.\n5. Patient Tracking - Locate patients and send alerts when they leave safe areas or press the button to call for help. The system alerts caregivers and shows the location on a map in real time, allowing the caregiver to quickly rush to the location of the accident for assistance."
-        }
-      },
-      { "org": { "tc": "陽明生醫股份有限公司", "en": "Yang Ming Biomedical Co.,Ltd" }, "info": { "tc": "馬偕醫院自有品牌保健品 2023年度新品上市", "en": "Mackay Hospital\\\\\\'s own-brand health care products will have new releases in the year 2023." } },
-      { "org": { "tc": "帆宣系統科技股份有限公司", "en": "Marketech International Corp." }, "info": { "tc": "前哨淋巴結AI開發", "en": "-" } }
-    ],
-    "event": [
-      { "timeList": [{ "start": "2023-11-30 11:00+08:00", "end": "2023-12-03 15:00+08:00" }], "title": { "tc": "大雞慢啼還是發展遲緩？\n篩檢早療莫耽擱！", "en": "" }, "topic": { "tc": "健康大檢測", "en": "健康大檢測" } },
-      { "timeList": [{ "start": "2023-11-30 16:30+08:00", "end": "2023-11-30 16:50+08:00" }], "title": { "tc": "智能居家兒童神經發展檢測 – 『ONE線上兒童發展智慧評估系統』", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 13:30+08:00", "end": "2023-12-02 13:50+08:00" }], "title": { "tc": "智能居家兒童神經發展檢測 – 『ONE線上兒童發展智慧評估系統』", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      {
-        "timeList": [
-          { "start": "2023-11-30 10:00+08:00", "end": "2023-12-02 18:00+08:00" },
-          { "start": "2023-12-03 10:00+08:00", "end": "2023-12-03 16:00+08:00" }
-        ],
-        "title": { "tc": "", "en": "" },
-        "topic": { "tc": "健康振興券", "en": "健康振興券" }
-      }
-    ]
-  },
-  {
-    "type": "booth",
-    "floor": 1,
-    "w": 2400,
     "h": 600,
     "x": 10020,
     "y": 7210,
@@ -2740,223 +3502,6 @@
         "title": { "tc": "你知道你的健康指數嗎！\n關鍵生理量測不可少！", "en": "" },
         "topic": { "tc": "健康大檢測", "en": "健康大檢測" }
       }
-    ]
-  },
-  {
-    "type": "booth",
-    "floor": 1,
-    "w": 2400,
-    "h": 600,
-    "x": 7010,
-    "y": 6310,
-    "p": [
-      { "node": "L", "x": 2400, "y": 0 },
-      { "node": "L", "x": 2400, "y": 600 },
-      { "node": "L", "x": 0, "y": 600 }
-    ],
-    "id": "J402",
-    "size": { "tc": 1.0, "en": 0.6 },
-    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["部立臺北醫院"], "en": ["Taipei Hospital Ministry of", " Health and Welfare"] },
-    "corps": [{ "org": { "tc": "衛生福利部臺北醫院", "en": "Taipei Hospital, Ministry of Health and Welfare" }, "info": { "tc": "整合式創新智慧科技便民醫療，結合智慧病房及智慧藥局等各項智慧醫療方案，提供民眾整合式的創新醫療服務。", "en": "Integrated innovative smart technology to facilitate medical care for the people, combined with various smart medical solutions such as smart wards and smart pharmacies, to provide integrated innovative medical services for the public." } }],
-    "event": []
-  },
-  {
-    "type": "booth",
-    "floor": 1,
-    "w": 2400,
-    "h": 600,
-    "x": 10020,
-    "y": 6310,
-    "p": [
-      { "node": "L", "x": 2400, "y": 0 },
-      { "node": "L", "x": 2400, "y": 600 },
-      { "node": "L", "x": 0, "y": 600 }
-    ],
-    "id": "J418",
-    "size": { "tc": 1.0, "en": 0.9 },
-    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["北市聯合醫院"], "en": ["Taipei City Hospital"] },
-    "corps": [{ "org": { "tc": "臺北市立聯合醫院", "en": "Taipei City Hospital" }, "info": { "tc": "本次展覽以呈現本院「人文科技、全人關懷、智慧醫\n療」三大方向為主軸", "en": "本次展覽以呈現本院「人文科技、全人關懷、智慧醫\n療」三大方向為主軸" } }],
-    "event": []
-  },
-  {
-    "type": "booth",
-    "floor": 1,
-    "w": 2400,
-    "h": 600,
-    "x": 7010,
-    "y": 5410,
-    "p": [
-      { "node": "L", "x": 2400, "y": 0 },
-      { "node": "L", "x": 2400, "y": 600 },
-      { "node": "L", "x": 0, "y": 600 }
-    ],
-    "id": "J502",
-    "size": { "tc": 1.0, "en": 1.0 },
-    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["義大醫院"], "en": ["E-Da Hospital"] },
-    "corps": [
-      { "org": { "tc": "義大醫療財團法人義大醫院", "en": "E-Da Hospital" }, "info": { "tc": "細胞治療、智慧醫療", "en": "cell therapy, Medical AI" } },
-      {
-        "org": { "tc": "向榮生醫科技股份有限公司", "en": "UnicoCell Biomed Co., Ltd." },
-        "info": {
-          "tc": "向榮生技專精於幹細胞治療的研發與應用已十餘年。本公司幹細胞新藥『ELIXCYTE®』正進行第III期膝骨關節炎收案與第I/II期慢性腎臟病的臨床試驗解盲，希望為全球人口老化所伴隨之疾病，提供一個嶄新的治療契機。\n\n在新藥研發過程中，本公司依循國際醫藥法規協和會（ICH）規範建立異體脂肪幹細胞庫，於2022年取得美國FDA主檔案(Master File, MF)備案，可作為良好的幹細胞新藥開發原料。\n\n此外，向榮生技更擴大幹細胞科技應用，成功開發兩項專利產品：1. 幹細胞分泌物，以專利製程生產高品質、高產量及高有效成分之幹細胞分泌物，亦獲得美國FDA主檔案備案，已應用於退化性眼部疾病及其他再生醫學的應用開發，更可提供作為外泌體研究開發原料。2.細胞超低溫儲存容器『優易保® UnicoVial®』，取得衛福部第二等級醫療器材核可，獲得美國FDA主檔案備案，不僅適用於細胞產品也適用於其他生物製劑，提升製劑品質規格並彌補細胞製劑產業的缺口。\n\n向榮生技期待以幹細胞新藥開發及幹細胞技術應用，促進幹細胞技術在全球高齡社會之再生醫學以及退化性疾病的運用，追求生命更好的生活品質。",
-          "en": "For a decade, UnicoCell pioneered stem cell therapy R&D. UnicoCell's Gold Award-winning new stem cell product, ELIXCYTE®, has advanced to the case enrollment phase of Phase III clinical trials for knee osteoarthritis and has reached the unblinding process of Phase II clinical trials for chronic kidney disease, promising innovative treatments for aging-related diseases. The company follows ICH guidelines, holds a 2022 US FDA Master File (MF) for an adipose-derived stem cell bank, a vital raw material for stem cell drug development. UnicoCell has innovated two patented products: 1. Stem Cell Secretome, which is FDA MF-recognized, and is applied for degenerative eye diseases, regenerative medicine, and exosome research. 2. UnicoVial® ultra-low temperature storage, obtained TFDA Class II medical device approval and FDA MF-recognized, applied for cell therapy and biological product storage. UnicoCell aspires to globalize stem cell technology, promote regenerative medicine for aging-related conditions, and ultimately enhance the quality of human life."
-        }
-      }
-    ],
-    "event": [{ "timeList": [{ "start": "2023-12-02 13:30+08:00", "end": "2023-12-02 14:30+08:00" }], "title": { "tc": "痔不在，好自在~", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } }]
-  },
-  {
-    "type": "booth",
-    "floor": 1,
-    "w": 2400,
-    "h": 600,
-    "x": 10020,
-    "y": 5410,
-    "p": [
-      { "node": "L", "x": 2400, "y": 0 },
-      { "node": "L", "x": 2400, "y": 600 },
-      { "node": "L", "x": 0, "y": 600 }
-    ],
-    "id": "J518",
-    "size": { "tc": 1.0, "en": 0.7 },
-    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["中正脊椎骨科醫院"], "en": ["Jhong Jheng Spine &", "Orthopedic Hospital"] },
-    "corps": [{ "org": { "tc": "中正脊椎骨科醫院", "en": "Jhong Jheng Spine & Orthopedic Hospital" }, "info": { "tc": "．骨科專業醫療：關節微創重建手術、腰椎關節治療及手術、腕隧道症候群、退化性關節炎、關節病變、骨質疏鬆症、人工膝關節置換等\n．脊椎專業醫療：微創脊椎手術、頸神經病變、脫位、畸形、頸椎間盤突出症、慢性頸部疼痛、胸椎病變、腰椎椎間盤突出症等\n．ＡＩ尖端科技：ROSA KNEE機器手臂、MRI、最高級手術室HEPA無塵設施、手術神經安全監測儀等\n．特色再生醫療：PRP、EECP體外反博治療、高壓氧保健等\n", "en": ". Orthopedic professional medical treatment: minimally invasive joint reconstruction surgery, lumbar joint treatment and surgery, carpal tunnel syndrome, degenerative arthritis, joint disease, osteoporosis, total knee replacement, etc.\n. Spine  professional medical treatment: minimally invasive spine surgery, cervical neuropathy, dislocation, deformity, cervical disc herniation, chronic neck pain, thoracic spine disease, herniated Intervertebral Disc, etc.\n. AI technology: ROSA KNEE robotic arm, MRI, HEPA dust-free facilities in the most advanced operating room, surgical nerve safety monitor, etc.\n. Featured regenerative medicine: PRP, Enhanced External CounterPulsation,Hyperbaric oxygen therapy (HBOT) , etc.\n" } }],
-    "event": [
-      {
-        "timeList": [
-          { "start": "2023-11-30 10:00+08:00", "end": "2023-12-02 18:00+08:00" },
-          { "start": "2023-12-03 10:00+08:00", "end": "2023-12-03 16:00+08:00" }
-        ],
-        "title": { "tc": "骨鬆不要來！\n40熟齡骨密度健檢找答案！", "en": "" },
-        "topic": { "tc": "健康大檢測", "en": "健康大檢測" }
-      }
-    ]
-  },
-  {
-    "type": "booth",
-    "floor": 1,
-    "w": 300,
-    "h": 1200,
-    "x": 7010,
-    "y": 3910,
-    "p": [
-      { "node": "L", "x": 300, "y": 0 },
-      { "node": "L", "x": 300, "y": 1200 },
-      { "node": "L", "x": 0, "y": 1200 }
-    ],
-    "id": "J602",
-    "size": { "tc": 0.4, "en": 0.2 },
-    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["生優", "物治", "所", "/", "生動", "理療", "所"], "en": ["Meco", "Technology"] },
-    "corps": [{ "org": { "tc": "梅科科技股份有限公司", "en": "Meco Technology Co., LTD." }, "info": { "tc": "梅科科技成立於2019年，以專業化和個人化的客戶服務體驗為優勢，致力於整合資訊科技和醫療產業，提供優質的醫療資訊服務。專注於經營連鎖智能物理治療所、拓展居家物理治療數位療法及自費醫療服務–生生優動運動物理治療所。自主開發手機應用程式–Youdon 優動-智能物理治療平台，透過AI處方和主動復健運動治療，協助患者快速恢復身體功能。", "en": "MecoTech Technology, established in 2019, is dedicated to integrating information technology and the healthcare industry. We provide high-quality healthcare information services with a focus on professional and personalized customer experience. Our core offerings include managing smart physical therapy centers, expanding digital therapy for home-based treatment, and providing self-paid medical services. We have developed Youdon, an intelligent physical therapy cellphone app, which utilizes AI prescriptions and active rehabilitation exercises to help patients recover their physical functions rapidly." } }],
-    "event": [
-      {
-        "timeList": [
-          { "start": "2023-11-30 10:00+08:00", "end": "2023-12-02 18:00+08:00" },
-          { "start": "2023-12-03 10:00+08:00", "end": "2023-12-03 16:00+08:00" }
-        ],
-        "title": { "tc": "肌肉骨骼疼痛好不了?!\n復健師一測便知道！", "en": "" },
-        "topic": { "tc": "健康大檢測", "en": "健康大檢測" }
-      }
-    ]
-  },
-  {
-    "type": "booth",
-    "floor": 1,
-    "w": 2100,
-    "h": 1200,
-    "x": 7310,
-    "y": 3910,
-    "p": [
-      { "node": "L", "x": 2100, "y": 0 },
-      { "node": "L", "x": 2100, "y": 1200 },
-      { "node": "L", "x": 0, "y": 1200 }
-    ],
-    "id": "J604",
-    "size": { "tc": 1.0, "en": 0.5 },
-    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["高醫醫療體系"], "en": ["Kaohsiung Medical University", " Chung-Ho Memorial Hospital"] },
-    "corps": [
-      { "org": { "tc": "高雄醫學大學附設中和紀念醫院", "en": "Kaohsiung Medical University Chung-Ho Memorial Hospital" }, "info": { "tc": "本年度高醫體系以打造南台灣最重要健康照護生態系為主題，以AI+IoT、急性醫療、無齡照護及新南向醫衛合作及產業發展專區為主，全展區以雙語化進行展出，以期將高醫體系健康照護生態系分享給參展的所有單位及人員。\n", "en": "With the theme of building the KMU is the Healthcare Ecosystem in Southern Taiwan , this year\\\\\\'s KMU Healthcare Ecosystem features AI+IoT, Acute Care, Ageless Care, and New Southward Health Care Cooperation and Industry Development zones, and the entire exhibition area is bilingual in order to share the KMU Healthcare Ecosystem  with all exhibitors." } },
-      { "org": { "tc": "英屬維京群島商禾寶醫療器材股份有限公司", "en": "PRECIOUS MOUNTAIN ENTERPRISE CORPORATION TAIWAN BRANCH (BVI)" }, "info": { "tc": "高醫聯合展覽", "en": "高醫聯合展覽" } }
-    ],
-    "event": []
-  },
-  {
-    "type": "booth",
-    "floor": 1,
-    "w": 2400,
-    "h": 1200,
-    "x": 10020,
-    "y": 3910,
-    "p": [
-      { "node": "L", "x": 2400, "y": 0 },
-      { "node": "L", "x": 2400, "y": 1200 },
-      { "node": "L", "x": 0, "y": 1200 }
-    ],
-    "id": "J618",
-    "size": { "tc": 1.0, "en": 1.0 },
-    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["國軍醫療體系"], "en": ["Tri-Service", "General Hospital"] },
-    "corps": [
-      { "org": { "tc": "三軍總醫院", "en": "Tri-Service General Hospital" }, "info": { "tc": "本院展出項目如下：\n胃腸科/膽胰疾病的新「視」界與新「鏡」「介」\n放射診斷部/彈無虛發之多發性肺結節術電腦斷層導引同步穿刺定位術\n復健醫學部/肌痙攣的救星- 「針」是神奇量身訂作的肉毒桿菌雙重導引注射治療\n新陳代謝科/數位優化 即時雲端血糖監測\n精神醫學部/閾值下腦刺激：思覺失調的新治療技術\n神經外科部/創新術中神經功能監測之脊椎手術訓練擬真系統\n臨床藥學部/人工智慧辦藥服務系統\n護理部/空氣濾淨嬰兒床罩/口袋式尿袋\n急診醫學部/『智慧急診‧綠能照護』電子紙整合人工智慧再創急診照護巔峰\nAIOT中心/建置AI胸腔X光檢測平台\n3D列印中心/應用3D列印推行戰術戰傷救護技術\n澎湖分院/3D列印輔助複雜性骨科手術落實澎湖地區醫療在地化\n松山分院/耳掛式持續生理健康監測穿戴裝置", "en": "innovative medical technology" } },
-      { "org": { "tc": "國防醫學院", "en": "National Defense Medical Center" }, "info": { "tc": "1. 藥物釋放組合物、其製造方法及其用途\n2. 後循環缺血性中風預後系統\n3. 極高靈敏度及價廉之新穎多孔膜類 SERS基質的開發與應用\n4. 鑼蛋白加速新興傳染病藥物篩選技術開發與應用", "en": "1. Drug Delivery Composition, Method Forming The Same And Use Thereof\n2. A Deep Learning Model for assisting Diagnosis of Posterior Circulation Ischemic Stroke\n3. The development and applications of novel ultra-low-priced _x000b_and extremely sensitive porous membrane-based SERS substrate\n4. Application of Rho-protein technology to improve drug screening efficiency of emerging infectious diseases" } },
-      { "org": { "tc": "國軍桃園總醫院暨新竹分院", "en": "Taoyuan Armed Forces General Hospital and Hsinchu Branch" }, "info": { "tc": "關節鏡下腕舟月韌帶以飹釘縫合之微創手術，相較於傳統開放式手術常造成關節僵硬、活動受限，微創手術可避免關節僵硬，更可早期發現早期治療，並發覺腕部其他損傷合併治療，此技術於2022年受邀至歐洲手外科年會演講說明並發表於學術期刊，目前正推廣其他醫院指導使用", "en": "Arthroscopic on the scapholunate ligament can reduce stiffness and would promote to other orthopedic hospital" } },
-      { "org": { "tc": "三軍總醫院松山分院", "en": "Songshan Armed Forces General Hospital" }, "info": { "tc": "耳掛式持續生理監測穿戴裝置", "en": "Ear-hook Continuous Physiological Monitoring Wearable Device" } },
-      { "org": { "tc": "國軍高雄總醫院", "en": "KAOHSIUNG ARMED FORCES GENERAL HOSPITAL" }, "info": { "tc": "(一)智慧內視鏡醫療影像分析系統\n(二)智慧高光譜影像預測小腸出血位置之分析系統\n(三)尖端光纖AI科技睡眠檢測\n", "en": "(1)Smart Endoscopy Display\n(2)Prediction of the location of small intestinal bleeding using smart hyperspectral imaging technology\n(3)nFOPT Smart Polysomnography" } },
-      { "org": { "tc": "國軍花蓮總醫院", "en": "Hualien Armed Forces General Hospital" }, "info": { "tc": "本院參展主題有4項\n1.智慧調劑台應用：藥品更換時，無須重新換標籤，只需透過電腦更新藥檔資料即可同步更新標籤訊息，亦可依需求隨時於藥盒呈現藥品相關資訊。調劑時刷領藥清單QR CODE，可於欲調劑藥品儲位閃燈提示，避免調劑錯誤。可提升藥師的調劑效率和準確性，保障患者的用藥安全。\n2.AI藥品圖像辨識系統：藥局調劑階段與給藥階段中，藉由比對AI辨識所拍攝之藥袋內藥品與讀取藥袋處方條碼資訊之機制，輔助藥事人員核對藥袋內藥品名稱、劑量、數量等是否與藥袋處方一致。可有效降低人工檢查的錯誤率，提高調劑核對效率，改善醫院給藥過程於末端環節可能造成危及病患健康之風險。\n3.院部決策AI動態即時戰情：即時呈現本院各項醫療指標及收入，使院部主官可即時掌握業績成長及指標達成率等，使其可即時管制及分配資源。\n4.護理資源決策系統：即時呈現本院護理各項護理資源分配，使護理部可即時掌握護理資源及指標達成率等，使其可即時管制及分配資源。", "en": "There are 4 exhibiting themes in our hospital to participate in the exhibition, the first item: the application of smart dispensing table, the second item: AI drug image recognition system, the third item: AI dynamic real-time battle situation for hospital decision-making, and the fourth item: nursing resource decision-making system。" } },
-      { "org": { "tc": "國軍高雄總醫院岡山分院", "en": "Kaohsiung Armed Forces General Hospital Gangshan Branch" }, "info": { "tc": "1.國軍空勤人員須定期於本院航空生理訓練中心接受低壓艙航訓練，以瞭解高空缺氧對生理、心智與動作技能之影響。因訓練流程實際暴露低壓環境，存在氣壓傷害之風險，且為避免誘發減壓症之可能，須限制訓後24小時的飛行任務。\n2.本院與國家中山科學研究院共同開發「新式缺氧訓練模組」，結合飛行模擬與缺氧裝置，於海平面的正常壓力環境中，提供模擬動態飛行的缺氧事件，並透過認知功能測試，強化飛行員對缺氧警覺之風險意識，同時降低人員暴露減壓環境之風險，有效提升訓練安全。", "en": "Aircrew members are required to attend hypoxia awareness training regularly to strengthen their memory of their personal hypoxia symptoms by undergoing training inside a hypobaric chamber. But there is a risk of decompression sickness in trainees during hypobaric hypoxia training. The flight missions are forbidden in 24 hours after the training.\nNational Chung-Shan Institute of Science and Technology (NCSIST) and our hospital jointly developed a new hypoxia training module. It combines the flight simulator, the cognitive functions test, and can be used for hypoxia training under normal pressure. The new hypoxia training module can enhance the training safety by strengthening pilots\\\\\\' risk awareness of hypoxia and reducing the risk of personnel exposure to the high-altitude, low-pressure environments." } },
-      { "org": { "tc": "國軍桃園總醫院新竹分院", "en": "Taoyuan Armed Forces General Hospital Hsinchu Branch" }, "info": { "tc": "ECG心電圖是臨床檢查病患心臟疾病常用的工具之一。目前台灣大多數醫院都使用DICOM-ECG儲存在PACS系統供醫師判讀。而QRS檢測一般通常採用的XQRS-WFDB演算法，需要較高的電腦計算成本，並且我們發現市面一些心電圖分析軟體對於心搏過速心電圖的辨識效果不會很高，故與學者共同研究改進方法。\n", "en": "The ECG (Electrocardiogram) is a commonly used tool in clinical examinations for diagnosing cardiovascular diseases in patients. Currently, the majority of hospitals in Taiwan store DICOM-ECG data in PACS systems for physician interpretation. The QRS detection is typically performed using the XQRS-WFDB algorithm, which demands higher computational costs. Additionally, we have observed that some ECG analysis software available in the market do not perform well in recognizing ECGs with rapid heartbeats. Therefore, we are collaborating with scholars to research and develop improved methods." } },
-      { "org": { "tc": "國軍高雄總醫院左營分院", "en": "Zipping Branch of Kaohsiung Armed Forces General Hospital" }, "info": { "tc": "\n「智慧化中醫AI骨齡自動判讀平台」\n特色說明\n1.建置一套可攜式的X光判讀系統，可在診間快速進行兒童手掌骨AI照相判讀兒童生長曲線\n2.搭配門診自動身高體重量測，精準提供兒童中醫門診兒童生長建議\n\n\n「海上醫療結合MR及AI會診服務平台」\n特色說明\n1.建置一套快速緊急醫療救護會診平台(現場即時生命徵象進行AI判讀)\n2.生命徵象資料、AI判讀、多方數位視訊會診、急診戰情指揮整合在同一介面上", "en": "Smart Chinese Medicine AI Bone Age Automatic Interpretation Platform”\nFeatures\n1. Build a portable X-ray interpretation system, which can quickly interpret children\\\\\\'s growth curves by taking AI photos of children\\\\\\'s palm bones in the clinic\n2. With outpatient automatic height and weight measurement, it can accurately provide children\\\\\\'s growth suggestions in children\\\\\\'s TCM outpatient clinics\n\n\n\\\\" } },
-      {
-        "org": { "tc": "國防醫學院衛勤訓練中心", "en": "Health Service Training Center of National Defense Medical Center" },
-        "info": {
-          "tc": "1.為使戰場傷患救護訓練多元化，國防醫學院衛勤訓練中心於107年至112年止，委託中科院研發營造戰場視覺模擬訓練系統，藉複合投影(VR)產生敵攻擊模擬效果，營造訓練者於戰場上(城鎮、灘岸及限制空間)與敵駁火之模擬訓練景況，訓練方式主要是透過結合高階擬真假人多變化擬真傷情及生命徵象訊息回饋，藉以模擬戰場傷患負傷情況，後續並將其救護訓練評核系統導入AI模型架構，藉由機器學習產出，完成人員分析及精進建議以有效降低人為訓練誤差，並能強化救護模擬訓練效能。\n2. 智能救助模擬系統部分，則是運用智能眼鏡實施救護遠端醫囑賦予，精確提升衛勤與緊急救護之救護能力，縮短傷患到院前之救護期程並可完整調度醫療量能，有效提升官兵傷患之救治率。",
-          "en": "1.To diversify the training of battlefield casualty evacuation, the Health Service Training Center of the National Defense Medical Center commissioned the NCSIST to develop a battlefield visual simulation training system from the year 2018 to 2023. This system utilizes virtual reality (VR) technology to generate simulated enemy attack effects, creating training scenarios for trainees to simulate engagements with enemies in battlefield settings such as urban areas, beaches, and confined spaces. The training approach primarily involves the incorporation of highly realistic synthetic human models with varying injuries and vital sign feedback, simulating battlefield casualty situations. Subsequently, an AI-based evaluation system is integrated into the framework, utilizing machine learning to provide personnel analysis and improvement suggestions, effectively reducing human training errors, and enhancing the effectiveness of medical simulation training.\n\n2.Regarding the intelligent rescue simulation system, intelligent eyewear is employed to implement remote medical instructions, enhancing the accuracy of medical care and emergency rescue capabilities. This approach shortens the time of casualty care before arrival at a medical facility, allowing for efficient allocation of medical resources and significantly improving the treatment rate of injured personnel."
-        }
-      },
-      { "org": { "tc": "國防醫學院三軍總醫院澎湖分院", "en": "N.D.M.C. Tri-Service General Hospital Penghu Branch." }, "info": { "tc": "醫學中心等級之3D列印技術，引進三軍總醫院澎湖分院，特別應用於術前規劃及治療複雜性骨折手術，尤其是骨盆、髖臼或是粉碎性骨折，讓以往只能往台灣後送的病人，能留在島上接受同等的治療。在本院放射科同仁的協助下，能以最快速的方式獲得細切的電腦斷層影像檔案，並透過內湖總院雲端軟體3D影像建模。我們再用3D列印機將術前需要的模型印出，進行手術說明及臨床規畫。此醫學中心等級的流程以成功治癒了數十位受傷的澎湖鄉親，效果著見。", "en": "The 3D printing technology of the medical center level has been introduced to the Penghu Branch of the Tri-Service General Hospital, which is specially applied to preoperative planning and treatment of complex fracture surgery, especially for pelvic, acetabular or comminuted fractures. This allows patients who previously had to be sent to Taiwan to stay on the island for the same treatment. With the assistance of the colleagues in the radiology department, we can quickly obtain finely sliced computer tomography image files and create 3D images through the cloud software of the TSGH. We then use a 3D printer to print out the necessary models for preoperative surgery instructions and clinical planning. This medical center level process has successfully healed dozens of injured Penghu residents with visible effects." } }
-    ],
-    "event": [
-      {
-        "timeList": [
-          { "start": "2023-11-30 10:00+08:00", "end": "2023-12-02 18:00+08:00" },
-          { "start": "2023-12-03 10:00+08:00", "end": "2023-12-03 16:00+08:00" }
-        ],
-        "title": { "tc": "健康「脈」動 智慧篩檢\n血氧血壓\n血流心率", "en": "" },
-        "topic": { "tc": "健康大檢測", "en": "健康大檢測" }
-      },
-      { "timeList": [{ "start": "2023-12-01 11:00+08:00", "end": "2023-12-01 11:50+08:00" }], "title": { "tc": "耳清目明新利器 - 微創耳咽管氣球擴張術", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 11:00+08:00", "end": "2023-12-02 11:30+08:00" }], "title": { "tc": "您是鼻子氣象台嗎?鼻過敏及鼻竇炎治療的新進展", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-03 13:00+08:00", "end": "2023-12-03 13:30+08:00" }], "title": { "tc": "彈無虛發之多發性肺結節術電腦斷層導引同步穿刺定位術", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 10:00+08:00", "end": "2023-12-02 10:30+08:00" }], "title": { "tc": "漫漫腸路 膠囊內視鏡全都錄", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-03 13:00+08:00", "end": "2023-12-03 13:30+08:00" }], "title": { "tc": "高光譜內視鏡建構食道疾病智慧偵測與影像收集", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-03 13:00+08:00", "end": "2023-12-03 13:30+08:00" }], "title": { "tc": "彈無虛發之多發性肺結節術電腦斷層導引同步穿刺定位術", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-01 10:00+08:00", "end": "2023-12-01 10:30+08:00" }], "title": { "tc": "提升血液透析糖尿病患者足部自我照護行為執行率", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 15:30+08:00", "end": "2023-12-02 16:00+08:00" }], "title": { "tc": "數位優化 即時雲端血糖監測", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-03 14:30+08:00", "end": "2023-12-03 15:00+08:00" }], "title": { "tc": "閾值下腦刺激：思覺失調的新治療技術", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-11-30 13:30+08:00", "end": "2023-11-30 14:00+08:00" }], "title": { "tc": "創新術中神經功能監測之脊椎手術訓練擬真系統", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-11-30 14:30+08:00", "end": "2023-11-30 15:00+08:00" }], "title": { "tc": "應用3D列印推行戰術戰傷救護技術", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-01 14:30+08:00", "end": "2023-12-01 15:00+08:00" }], "title": { "tc": "耳掛式持續生理監測裝置", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-03 10:00+08:00", "end": "2023-12-03 10:30+08:00" }], "title": { "tc": "人工智慧影像辨識導引輔助插管", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } }
     ]
   },
   {
@@ -3972,45 +4517,6 @@
   {
     "type": "booth",
     "floor": 1,
-    "w": 2100,
-    "h": 600,
-    "x": 12720,
-    "y": 5410,
-    "p": [
-      { "node": "L", "x": 2100, "y": 0 },
-      { "node": "L", "x": 2100, "y": 600 },
-      { "node": "L", "x": 0, "y": 600 }
-    ],
-    "id": "K502",
-    "size": { "tc": 1.0, "en": 0.7 },
-    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["光田醫院"], "en": ["Kuang Tien", "General Hospital"] },
-    "corps": [{ "org": { "tc": "光田醫療社團法人光田綜合醫院", "en": "Kuang Tien General Hospital" }, "info": { "tc": "1.脊髓損傷幹細胞治療\n2.婦科海扶刀精準醫療\n3.腦中風智慧全人醫療照護\n4.運動醫學\n5.向上院區智慧醫院與服務特色\n", "en": "1. NS spinal \n2. HIFU Noninvasive\n3. Neuro\n4.Sports Medicine" } }],
-    "event": [
-      {
-        "timeList": [
-          { "start": "2023-11-30 10:00+08:00", "end": "2023-12-02 18:00+08:00" },
-          { "start": "2023-12-03 10:00+08:00", "end": "2023-12-03 16:00+08:00" }
-        ],
-        "title": { "tc": "身手愛矯健！\n手部/下肢 靈敏度檢測", "en": "" },
-        "topic": { "tc": "健康大檢測", "en": "健康大檢測" }
-      },
-      { "timeList": [{ "start": "2023-12-03 10:30+08:00", "end": "2023-12-03 11:00+08:00" }], "title": { "tc": "五十肩治療方式大解密", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-01 14:15+08:00", "end": "2023-12-01 14:45+08:00" }], "title": { "tc": "嗅覺與健康", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 14:15+08:00", "end": "2023-12-02 14:45+08:00" }], "title": { "tc": "耳鳴的標靶治療", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-11-30 10:30+08:00", "end": "2023-11-30 11:00+08:00" }], "title": { "tc": "腦中風血管內治療：拆彈專家 解鎖腦袋裡的不定時炸彈", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 10:15+08:00", "end": "2023-12-02 10:45+08:00" }], "title": { "tc": "大腦神經迴路調節神器：重複經顱磁刺激", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 10:45+08:00", "end": "2023-12-02 11:15+08:00" }], "title": { "tc": "腦傷症候群?不再傷腦筋", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-11-30 14:00+08:00", "end": "2023-11-30 14:30+08:00" }], "title": { "tc": "解放護理師雙手，ChatGPT也可以寫護理記錄", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-01 14:30+08:00", "end": "2023-12-01 15:30+08:00" }], "title": { "tc": "MRI與超音波精準定位海扶治療", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 14:00+08:00", "end": "2023-12-02 15:00+08:00" }], "title": { "tc": "海扶刀超聲聚焦治療原理", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } }
-    ]
-  },
-  {
-    "type": "booth",
-    "floor": 1,
     "w": 1200,
     "h": 600,
     "x": 15430,
@@ -4091,115 +4597,6 @@
     "text": { "tc": ["國賓"], "en": ["KUBIN"] },
     "corps": [{ "org": { "tc": "國賓國際股份有限公司", "en": "KUBIN international co.Ltd" }, "info": { "tc": "遠紅外線產品/護目鏡/顯微鏡", "en": "Far infrared products/goggles/microscope" } }],
     "event": []
-  },
-  {
-    "type": "booth",
-    "floor": 1,
-    "w": 2100,
-    "h": 1200,
-    "x": 12720,
-    "y": 3910,
-    "p": [
-      { "node": "L", "x": 2100, "y": 0 },
-      { "node": "L", "x": 2100, "y": 1200 },
-      { "node": "L", "x": 0, "y": 1200 }
-    ],
-    "id": "K602",
-    "size": { "tc": 1.0, "en": 1.0 },
-    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["聯新國際醫院"], "en": ["Landseed ", "International", " Hospital"] },
-    "corps": [
-      {
-        "org": { "tc": "聯新國際醫院", "en": "Landseed International Hospital" },
-        "info": {
-          "tc": "參展定位主題:以智慧醫療為基礎的無圍牆照護\n運用雲平台為基礎，提供各神醫的醫療照護服務。\n【止鼾神醫】：利用居家鼾聲錄製，以AI分類睡眠問題，進而做睡眠暨慢病照護管理。\n【精準腸神醫】：利用標籤平台創造30%點擊率, 精準地讓民眾得到篩檢訊息，並利用大腸鏡AI影像辨識進行篩檢。\n【AI腦神醫】：利用LINE@智慧轉診，串連各醫院緊急連繫，提升流程時效性，減少病人等待時間；並利用MRI AI自動判讀軟體快速、精準判斷梗塞區，搶救病人黃金治療時間。\n【照護脊神醫】：利用LINE@智慧照護平台，提供脊椎微創手術的術前諮詢與術後追蹤完整服務，使其達到全期護理服務。\n【解痛運神醫】：「如何讓企業3週有感，員工病假少7成」提供專業運動測檢分析，安排團隊課程及運動管理，透由APP輔助員工達成健促目標。\n【風險神算醫】：結合智慧病房服務，整合住院病人相關數據，臨床警示系統(CAS)，早期警訊系統(EWS)，並提供病危與入ICU未來六小時預測風險, 提高醫護照護品質。",
-          "en": "Exhibition Theme: “Hospital Without Out Boundaries”-Establish Smart Healthcare-Based Integrated Care\n1.Use home snoring recordings to classify sleep problems with AI, and then provide sleep and chronic disease care and management.\n2.Use the label platform to create 30% click-through rate, accurately let the public get screening information, and use colonoscopy AI image recognition for screening.\n3.Use LINE@ smart referral to connect emergency contacts of various hospitals, improve the timeliness of the process, and reduce patient waiting time; and use MRI AI automatic interpretation software to quickly and accurately determine the infarction area.\n4.Using the LINE@ smart care platform, we provide complete pre-operative consultation and post-operative follow-up services for minimally invasive spine surgeries\n5.Provides professional exercise testing and analysis, arranges team courses and exercise management, and uses the APP to assist employees in achieving their health promotion goals.\n6.Combined with smart ward services, it integrates inpatient-related data, clinical alert system (CAS), and early warning system (EWS), and provides risk predictions for critical illness and ICU admission in the next six hours to improve the quality of medical care."
-        }
-      }
-    ],
-    "event": [
-      {
-        "timeList": [
-          { "start": "2023-11-30 10:00+08:00", "end": "2023-11-30 12:00+08:00" },
-          { "start": "2023-11-30 13:00+08:00", "end": "2023-11-30 15:00+08:00" },
-          { "start": "2023-12-01 10:00+08:00", "end": "2023-12-01 12:00+08:00" },
-          { "start": "2023-12-01 13:00+08:00", "end": "2023-12-01 15:00+08:00" },
-          { "start": "2023-12-02 10:00+08:00", "end": "2023-12-02 12:00+08:00" },
-          { "start": "2023-12-02 13:00+08:00", "end": "2023-12-02 15:00+08:00" },
-          { "start": "2023-12-03 10:00+08:00", "end": "2023-12-03 12:00+08:00" },
-          { "start": "2023-12-03 13:00+08:00", "end": "2023-12-03 15:00+08:00" }
-        ],
-        "title": { "tc": "睡醒還是累？\n打呼聲檢測睡眠呼吸中止！", "en": "" },
-        "topic": { "tc": "健康大檢測", "en": "健康大檢測" }
-      },
-      { "timeList": [{ "start": "2023-11-30 14:00+08:00", "end": "2023-11-30 15:00+08:00" }], "title": { "tc": "三週有感，改善慢性疼痛", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-03 11:00+08:00", "end": "2023-12-03 12:00+08:00" }], "title": { "tc": "以管窺豹，方寸之間別有洞天", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-01 11:00+08:00", "end": "2023-12-01 12:00+08:00" }], "title": { "tc": "無接觸AI分析檢測與睡眠追蹤照護應用", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 14:00+08:00", "end": "2023-12-02 15:00+08:00" }], "title": { "tc": "大腸癌檢測推播與AI大腸鏡檢查輔助", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-11-30 11:00+08:00", "end": "2023-11-30 12:00+08:00" }], "title": { "tc": "神經科醫師的類神經網路", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-01 14:30+08:00", "end": "2023-12-01 15:30+08:00" }], "title": { "tc": "進入AI時代，臨床警示系統的智慧升級", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 13:30+08:00", "end": "2023-12-02 14:00+08:00" }], "title": { "tc": "無圍牆醫院新時代，改變未來醫療模式", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } }
-    ]
-  },
-  {
-    "type": "booth",
-    "floor": 1,
-    "w": 1500,
-    "h": 1200,
-    "x": 15430,
-    "y": 3910,
-    "p": [
-      { "node": "L", "x": 1500, "y": 0 },
-      { "node": "L", "x": 1500, "y": 1200 },
-      { "node": "L", "x": 0, "y": 1200 }
-    ],
-    "id": "K616",
-    "size": { "tc": 1.0, "en": 0.8 },
-    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["成大醫院"], "en": ["National ", "Cheng Kung", " University", " Hospital"] },
-    "corps": [{ "org": { "tc": "國立成功大學醫學院附設醫院", "en": "National Cheng Kung University Hospital" }, "info": { "tc": "待訂", "en": "pending" } }],
-    "event": [
-      {
-        "timeList": [
-          { "start": "2023-11-30 10:00+08:00", "end": "2023-12-02 18:00+08:00" },
-          { "start": "2023-12-03 10:00+08:00", "end": "2023-12-03 16:00+08:00" }
-        ],
-        "title": { "tc": "AI學習無邊界  中風評估一把罩", "en": "" },
-        "topic": { "tc": "醫師力大挑戰", "en": "醫師力大挑戰" }
-      },
-      {
-        "timeList": [
-          { "start": "2023-11-30 10:00+08:00", "end": "2023-12-02 18:00+08:00" },
-          { "start": "2023-12-03 10:00+08:00", "end": "2023-12-03 16:00+08:00" }
-        ],
-        "title": { "tc": "智慧眼鏡@未來醫療 ", "en": "" },
-        "topic": { "tc": "醫師力大挑戰", "en": "醫師力大挑戰" }
-      },
-      {
-        "timeList": [
-          { "start": "2023-11-30 10:00+08:00", "end": "2023-12-02 18:00+08:00" },
-          { "start": "2023-12-03 10:00+08:00", "end": "2023-12-03 16:00+08:00" }
-        ],
-        "title": { "tc": "精準給藥新方法-藥物去哪裡，你看得到!", "en": "" },
-        "topic": { "tc": "醫師力大挑戰", "en": "醫師力大挑戰" }
-      },
-      {
-        "timeList": [
-          { "start": "2023-11-30 10:00+08:00", "end": "2023-12-02 18:00+08:00" },
-          { "start": "2023-12-03 10:00+08:00", "end": "2023-12-03 16:00+08:00" }
-        ],
-        "title": { "tc": "在虛擬世界中學習  現實中發揮專業", "en": "" },
-        "topic": { "tc": "醫師力大挑戰", "en": "醫師力大挑戰" }
-      },
-      { "timeList": [{ "start": "2023-11-30 14:00+08:00", "end": "2023-11-30 14:30+08:00" }], "title": { "tc": "高齡新健康創新復健模式", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-01 14:00+08:00", "end": "2023-12-01 14:30+08:00" }], "title": { "tc": "腸胃精準給藥新方法—藥物去哪裡，你看得到!", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 14:00+08:00", "end": "2023-12-02 14:30+08:00" }], "title": { "tc": "DogKnows 早期癌症風險評估", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-03 11:30+08:00", "end": "2023-12-03 12:00+08:00" }], "title": { "tc": "誰的心臟血管有問題?基因告訴你!", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } }
-    ]
   },
   {
     "type": "booth",
@@ -5635,27 +6032,6 @@
   {
     "type": "booth",
     "floor": 4,
-    "w": 2700,
-    "h": 600,
-    "x": 4510,
-    "y": 8010,
-    "p": [
-      { "node": "L", "x": 2700, "y": 0 },
-      { "node": "L", "x": 2700, "y": 600 },
-      { "node": "L", "x": 0, "y": 600 }
-    ],
-    "id": "L517a",
-    "size": { "tc": 1.0, "en": 0.75 },
-    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["醫策會"], "en": ["Joint Commission of Taiwan"] },
-    "corps": [{ "org": { "tc": "財團法人醫院評鑑暨醫療品質策進會", "en": "Joint Commission of Taiwan" }, "info": { "tc": "財團法人醫院評鑑暨醫療品質策進會為促進醫療及科技的跨領域整合與醫產鏈結，帶動醫療創新服務，創造醫療科技產業價值，於2019年成立「Health Smart Taiwan (HST) 台灣智慧醫療創新整合平台」。此平台彙集了超過170件臺灣優質且實用的智慧醫療解決方案，供機構間標竿學習，並透過成功案例彙編、專業論壇、專案支持等資源協助科技產業理解醫療實務的樣貌，促成雙方的交流。\n\nHST今年度以「創新科技於醫事人員訓練之應用成果」作為主軸，邀集運用七家醫療機構進行聯合策展。展出結合虛擬實境的沉浸式訓練、遊戲式學習、擬真訓練等，提供互動式體驗，並推廣臺灣品牌的智慧化臨床訓練解決方案。展現臺灣醫事人員培訓之知名度及創新形象。", "en": "Joint Commission of Taiwan (JCT) is an independent, non-profit exclusive external accreditation body accredited by the International Society for Quality in Health Care (ISQua). JCT provides a resource-sharing platform for healthcare partners through accreditation, quality improvement activities, and medical education.\n\nJCT established the Health Smart Taiwan (HST), a one-stop portal designed catalyze the existing digital solutions scalable through offering a wide range of consultations, workshops, campaign, acceleration services and piloting projects in hospitals. It provides integrated services for healthcare institutions to achieve digital transformation, shaping a quality, safe, and efficient healthcare environment.\n\nIn this exhibition, HST will show the special theme-\"Innovative Technology in Medical Professional Training\". You will learn more immersive training combined with virtual reality, and interactive training such as game-based learning, simulation training, etc." } }],
-    "event": []
-  },
-  {
-    "type": "booth",
-    "floor": 4,
     "w": 300,
     "h": 600,
     "x": 1500,
@@ -5723,30 +6099,6 @@
       { "org": { "tc": "諾倫科技", "en": "" }, "info": { "tc": "", "en": "" } },
       { "org": { "tc": "藥華醫藥股份有限公司", "en": "" }, "info": { "tc": "", "en": "" } },
       { "org": { "tc": "研生生醫", "en": "" }, "info": { "tc": "", "en": "" } }
-    ],
-    "event": []
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 1200,
-    "h": 1500,
-    "x": 4510,
-    "y": 6210,
-    "p": [
-      { "node": "L", "x": 1200, "y": 0 },
-      { "node": "L", "x": 1200, "y": 1500 },
-      { "node": "L", "x": 0, "y": 1500 }
-    ],
-    "id": "L617a",
-    "size": { "tc": 1.0, "en": 0.45 },
-    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["亞東遠傳"], "en": ["Far Eas Tone ", "Telecommunications"] },
-    "corps": [
-      { "org": { "tc": "遠傳電信股份有限公司", "en": "Far Eas Tone Telecommunications Co., Ltd." }, "info": { "tc": "遠傳將展出透過5G網路與IoT技術的新解方，同時優化客戶資通訊環境，讓資料流落地並可助垂直整合應用，提供兼具安全與隱私性的遠距診療服務相關服務，實現客戶的遠距診療新願景", "en": "Far Eas Tone exhibit a new solution through 5G network and IoT technology, optimize the customer information and communication environment,  can vertically integrate applications, and provide security and privacy related remote medical services. Realize the new vision of telemedicine for our customers. " } },
-      { "org": { "tc": "醫療財團法人徐元智先生醫藥基金會亞東紀念醫院", "en": "Far Eastern Memorial Hospital" }, "info": { "tc": "細胞治療、精準治療、創新醫療技術、AI輔助解決方案、5G遠距診療、智慧病房", "en": "Cell Therapy, Precision Medicine, Innovative Medicine, AI Technology in Healthcare, 5G Telemedicine, Telehealth,\nSmart Hospital, Smart Ward" } }
     ],
     "event": []
   },
@@ -5862,53 +6214,6 @@
     "text": { "tc": ["承業集團"], "en": ["CHC ", "Healthcare", " Group"] },
     "corps": [{ "org": { "tc": "承業生醫企業集團", "en": "CHC Healthcare Group" }, "info": { "tc": "輻照服務、醫療設備", "en": "Sterilization Services and Medical equipment" } }],
     "event": []
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 2400,
-    "h": 1500,
-    "x": 4510,
-    "y": 4100,
-    "p": [
-      { "node": "L", "x": 2400, "y": 0 },
-      { "node": "L", "x": 2400, "y": 1500 },
-      { "node": "L", "x": 0, "y": 1500 }
-    ],
-    "id": "L818",
-    "size": { "tc": 1.0, "en": 1.0 },
-    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["臺北醫學大學", "暨醫療體系"], "en": ["TAIPEI MEDICAL", " UNIVERSITY"] },
-    "corps": [
-      { "org": { "tc": "臺北醫學大學", "en": "TAIPEI MEDICAL UNIVERSITY" }, "info": { "tc": "臺北醫學大學創立於1960年，歷經60餘年努力耕耘，在不斷的擴展、蛻變創新下，發展至今共有11學院、1通識教育中心，在校學生人數逾6,000名，已培育超過47,000名畢業校友，分佈海內外各醫療機構、學術單位及產業界。本校擁有臺北醫學大學附設醫院、市立萬芳醫院、部立雙和醫院及新國民醫院，2013年整合三院癌症醫療系統成立「臺北癌症中心」；2017年成立「臺北神經醫學中心」以臨床為主軸，發展整合性神經醫學，共有六所優質附屬醫院。\n本校秉持「人文關懷、誠信正直、創新卓越、團隊合作、社會服務」之核心價值，近年來致力於教學卓越、研究拔尖、產學績優、接軌國際與服務社會等發展面向，奠定本校以「醫學教育為本，生醫臨床為用，具社會影響力之創新型大學」為定位，以創新轉譯醫學為主軸，致力於厚實基礎研究、整合六附屬醫院臨床資源及推動生技醫療產業為目標。", "en": "Established in 1960, over the past century, Taipei Medical University underwent the process of continuous expansion, transformation and innovation. Today, TMU has expanded into a world-class university with 11 Colleges and 1 General Education Center, 6000 students per year, 47,000 alumni around Medical Academic Institute, Medical Industry and six affiliated hospitals which are TMU hospital, Wan Fang Hospital, Shuang Ho Hospital, Hsin Kuo Min Hospital, Tapei Cancer Center and Taipei Neuroscience Institute.\nBased on the core value of humanistic empathy, honesty and integrity, innovation, teamwork and social service, TMU is dedicated to excellent teaching, outstanding research, industry-academia collaboration, international participation and social service, in order to integrate clinical resource of affiliated hospitals and meet the visions of translation medicine innovation, biomedical industry development, research advancement and positive social influence. 3 main strategies of future development are below." } },
-      { "org": { "tc": "臺北醫學大學附設醫院", "en": "TAIPEI MEDICAL UNIVERSITY HOSPITAL" }, "info": { "tc": "臺北醫學大學附設醫院創立於 1976 年，為臺北醫學大學第一間附屬醫院，奠定北醫體系臨床服務與教學研究雙向交流的基礎。為提供優質的醫療服務，北醫附設醫院持續提升醫療品質、強化軟硬體設備，2018 年起陸續完成三棟醫療大樓的整建，導入智慧醫療，蛻變新貌。目前全院病床增至近 800 床，同仁人數逾 2000 人，躍升國內外中型醫院的標竿。\n\n邁向個人化精準醫療時代，北醫附設醫院積極發展癌症尖端醫療，2022年啟用蔡萬才癌症大樓及北醫質子中心，躋身世界百大質子中心，兩項重要建設將帶領北醫體系的癌症醫學晉升世界級場域，邁向全新里程碑。 \n\n2023台灣醫療科技展展出項目如下\n1. 多模人工智慧個人化4D高齡健康失智預測模組\n2. 應用擴增實境於神經復健\n3. 衛星X光檢查中心\n4. 微創遠端橈骨骨折復位鉗 3D 列印輔助器材", "en": "Taipei Medical University Hospital (TMUH), the first affiliated hospital of Taipei Medical University (TMU), was founded in 1976 and has built up the basis between clinical service and medical research education. TMUH continues enhancing medical care quality and reinforcing the hardware and software equipment to provide high-grade medical services. Since 2018, three medical buildings have been renovated; moreover, TMUH introduced an intelligent medical system that gives the hospital a whole new look. The number of hospital beds has increased to nearly 800 beds so far, and the number of faculty and staff has exceeded 2,000 people, making TMUH the benchmark of domestic and international medium-sized hospital.\n\nExhibited items\n1. DeepBrain-Cognito\n2. Satellite X-ray inspection center strengthens disease prevention and disease diagnosis capabilities\n3. \"G-Maple\"Orthopedic Manual Surgical Instrument  (Non-Sterile)" } },
-      { "org": { "tc": "臺北市立萬芳醫院", "en": "TAIPEI MUNICIPAL WANFANG HOSPITAL" }, "info": { "tc": "萬芳醫院具有急重症病患醫療能力與品質，自開院以來通過多項品質認證，包括五次高分通過JCI 國際醫院評鑑認證、癌症診療品質認證、國家級重度急救責任醫院，且不斷積極延攬醫療精英，強化醫療陣容，設立結核病中心、癌症中心、癌熱療中心、中風中心、中西整合疼痛、燒傷及困難傷口全人照護中心、雷射美容中心…等發展多元具有特色的醫療發展中心，提供的不只是專業的醫療服務，更是以病人為中心的全人照護，享譽國際的醫療水準只是附加價值，協助病人恢復健康、進而維護健康、促進健康才是萬芳醫院最重視的事。\n萬芳醫院始終以”人”為出發點，透過萬芳生技創新中心”來培育醫療創新人才、組建醫療創新團隊，迎接未來醫療之新篇章。", "en": "Wanfang Hospital Continue to actively recruit medical elites, strengthen the medical level, establish tuberculosis centers, cancer centers, cancer hyperthermia centers, stroke centers, integrated Chinese and Western integrated care centers for pain, burns and difficult wounds, laser cosmetology centers, ... and other developments with unique characteristics.\nWanfang Hospital provides not only professional medical services, but also patient-centered holistic care. Helping patient to recover their health、maintain their health, and promote their health is the most important thing to you." } },
-      {
-        "org": { "tc": "衛生福利部雙和醫院", "en": "TAIPEI MEDICAL UNIVERSITY-SHUANG HO HOSPITAL, MINISTRY OF HEALTH AND WELFARE" },
-        "info": {
-          "tc": "雙和醫院於2008年7月1日開幕，由衛生福利部委託臺北醫學大學興建經營，為全國首家BOT醫院，總床數近 1,600 床的準醫學中心。除急性治療外，更深入長期慢性照護服務，引進先進儀器設備，提供全方位醫療服務，為新北市具規模的醫院，與臺北醫學大學附設醫院、萬芳醫院形成大臺北的醫療金三角。\n雙和醫院致力於整合跨科別醫療團隊，建置完整的急重症醫療系統，為新北高級救護技術員實習訓練醫院、北區緊急醫療災難應變指揮中心 (EOC) 網絡醫院，是北部地區不可或缺的急重症醫療據點。\n雙和醫院為民眾的健康與幸福努力不懈，在服務、教學、研究等各方面不斷突破，並與世界各國之醫療機構合作，拓展台灣醫療專業之深度及廣度。2023年6月1日啟用臺北醫學大學教學研究及生醫科技大樓，建立生技研究園區，提供更完備的教學、研究環境，持續精進，成為高品質、高績效的國際一流大學醫院。\n\n2023台灣醫療科技展展出項目如下：\n1.全方位腎力精準數位醫療系統\n2.腦血管醫學影像人工智慧平台\n3.軟式消化道內視鏡機器輔具\n4.好好翻身墊\n5.鎂基金屬玻璃複合物縫合錨釘\n6.肺癌藥篩與肝臟晶片:癌症藥毐測試",
-          "en": "Shuang-Ho Hospital was opened on July 1, 2008, and it was commissioned by the Ministry of Health and Welfare and was the first Build-Operate-Transfer (BOT) hospital in Taiwan, with a total of nearly 1,600 beds. In addition to acute care, the hospital also provides long-term chronic care services and has introduced advanced equipment to provide a full range of medical services, not only making it the largest hospital but also forming a network of best medical care with Taipei Medical University Hospital and Taipei Municipal Wanfang Hospital in New Taipei City.\nThis medical institution is committed to combine all the best teams from different disciplines to provide the public with the most complete medical system for acute and critical conditions. It is also a training hospital for senior ambulance technicians in New Taipei City and the city’s Emergency Operations Center (EOC) to coordinate a network of hospitals as response in time of medical disaster.\nShuang-Ho Hospital strives for the health and well-being of the public and continues to make breakthroughs in service, teaching, and research, and cooperates with medical institutions around the world to expand the depth and breadth of the medical profession in Taiwan. On June 1, 2023, we opened the Biomedical Technology Building of Taipei Medical University for teaching and research, for which this serves as a biotechnology research park to provide a comprehensive environment for teaching and research, as we continue to refine and set a high-quality, high-performing standard of international university hospital.\n\nExhibited items\n1. ACE: A digital solution for taking care of patients with AKI, CKD and ESKD \n2. An Artificial Intelligence Platform for Medical Imaging of Cerebrovascular Disease\n3. Robotic-Assisted Flexible Digestive Endoscopy\n4. low-tension rollover sheet.\n5. Magnesium-based metallic glass composite absorbable suture anchor \n6. Lung Tumor and Liver Lab Chip: Cancer Drug Toxicology Tests"
-        }
-      },
-      { "org": { "tc": "新國民醫院", "en": "HSIN KUO MIN HOSPITAL" }, "info": { "tc": "內視鏡脊椎融合術保留了內視鏡最小軟組織破壞的優點，相對於傳統或脊椎微創融合，藉由內視鏡自由活動及放大的視角，可以直接確認椎間盤切除以及上下終板的刮除是否有達到最適脊椎融合的程度。在1.8公分直徑大小的傷口下，可以置入如同傳統手術大小的椎籠及椎弓釘。脊椎內視鏡融合在保留了內視鏡的優勢下，擴大了脊椎內視鏡的臨床應用。", "en": "Advantages of endoscopic fusion surgery over traditional forms of surgery, or even minimal invasive fusion surgery, include the ability of the endoscope to visualize different angles under higher levels of magnification, ensuring the complete removal of the intervertebral disc and endplate preparation for the subsequent fusion procedure. Through a surgical wound of only 18 mm, endoscopic fusion surgery is able to implant the same cage and pedicle screws that are implanted in traditional spine surgery. With the use of endoscope in spine surgery, the application of endoscope has broadened to include fusion surgery for further clinical benefits." } },
-      { "org": { "tc": "臺北癌症中心", "en": "TMU TAIPEI CANCER CENTER" }, "info": { "tc": "臺北癌症中心", "en": "TMU TAIPEI CANCER CENTER" } },
-      { "org": { "tc": "臺北神經醫學中心", "en": "TAIPEI NEUROSCIENCE INSTITUTE" }, "info": { "tc": "原發性顫抖與巴金森氏症會導致手部不自主顫抖，若無法靠藥物緩解便會大大影響生活，但現在透過神波刀，不用開顱、不用全身麻醉，使用高強度的聚焦超音波搭配磁振造影就能精準治療，有效緩解顫抖，重拾生活品質！", "en": "Exablate Neuro, the Magnetic Resonance-guided Focused Ultrasound (MRgFUS) is a Focused Ultrasound platform for treating Essential Tremor and Tremor-dominant Parkinson’s disease. It can deliver up to 1,024 ultrasound waves across the skull to precisely ablate a target deep in the brain. The result for many patients is immediate improvement of tremor with no overnight hospital stay." } }
-    ],
-    "event": [
-      { "timeList": [{ "start": "2023-12-02 14:00+08:00", "end": "2023-12-02 14:30+08:00" }], "title": { "tc": "你的跌倒風險有幾%？", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 16:00+08:00", "end": "2023-12-02 16:30+08:00" }], "title": { "tc": "磁控上消化道膠囊內視鏡", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-11-30 16:00+08:00", "end": "2023-11-30 16:30+08:00" }], "title": { "tc": "肺癌數位快篩", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-01 11:00+08:00", "end": "2023-12-01 11:30+08:00" }], "title": { "tc": "打造腫瘤替身：從循環腫瘤細胞談起", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-01 16:00+08:00", "end": "2023-12-01 16:30+08:00" }], "title": { "tc": "器官晶片/替身醫療", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-03 11:00+08:00", "end": "2023-12-03 11:30+08:00" }], "title": { "tc": "健康的免疫是超能力", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-03 13:00+08:00", "end": "2023-12-03 13:30+08:00" }], "title": { "tc": "在家復能，簡單又輕鬆", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-11-30 13:00+08:00", "end": "2023-11-30 13:30+08:00" }], "title": { "tc": "腎臟照護：急性腎臟病與慢性腎臟病的關係", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 11:00+08:00", "end": "2023-12-02 11:30+08:00" }], "title": { "tc": "人工智慧失智症認知復健系統", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-01 13:00+08:00", "end": "2023-12-01 13:30+08:00" }], "title": { "tc": "治療手抖的利器-「神波刀」", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-01 14:00+08:00", "end": "2023-12-01 14:30+08:00" }], "title": { "tc": "AI智慧診斷醫療器材", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } }
-    ]
   },
   {
     "type": "booth",
@@ -6919,152 +7224,6 @@
     "type": "booth",
     "floor": 4,
     "w": 2400,
-    "h": 600,
-    "x": 7210,
-    "y": 8010,
-    "p": [
-      { "node": "L", "x": 2400, "y": 0 },
-      { "node": "L", "x": 2400, "y": 600 },
-      { "node": "L", "x": 0, "y": 600 }
-    ],
-    "id": "M503a",
-    "size": { "tc": 1.0, "en": 1.0 },
-    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["奇美醫院"], "en": ["Chi Mei Hospital"] },
-    "corps": [{ "org": { "tc": "奇美醫療財團法人奇美醫院", "en": "Chi Mei Hospital" }, "info": { "tc": "1.智能化療調配機器手臂\n2.智能開刀房（IOR）\n3.智慧藥櫃\n4.基於醫療大數據之個人化精準手術麻醉風險預測儀表板\n5.智能艾炙盒\n6.全方位基因和微營養素檢測，跨體學精準治療\n7.虛擬診間（VR）\n8.手術紗布多功能計數裝置\n9.全方位導管零點偵測儀\n10.減壓墊\n", "en": "1.The Smart Chemotherapy Compounding Robot\n2.The Smart Surgery Room Dashboard\n3.Automatic Drug Dispensing\n4.A Personalized Precision Surgical Anesthesia Risk Prediction System Based on Healthcare Big Data\n5.The Intelligent Moxibustion Box\n6.The comprehensive genomic profiling for liquid biopsy\n7.The virtual consultation room\n8.urgical gauze multi-function (counting, weighing) automatic counting barrels\n9.A Multi-line Holder with Built-in Angle Alignment Features\n10.Various decompression devices" } }],
-    "event": []
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 1800,
-    "h": 600,
-    "x": 10220,
-    "y": 8010,
-    "p": [
-      { "node": "L", "x": 1800, "y": 0 },
-      { "node": "L", "x": 1800, "y": 600 },
-      { "node": "L", "x": 0, "y": 600 }
-    ],
-    "id": "M519a",
-    "size": { "tc": 1.0, "en": 0.7 },
-    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["輔大醫院"], "en": ["Fu Jen Catholic ", "University"] },
-    "corps": [{ "org": { "tc": "輔仁大學學校財團法人輔仁大學", "en": "Fu Jen Catholic University" }, "info": { "tc": "輔仁大學及輔仁大學附設醫院以醫療角度出發，展現「醫療X健康照護X智慧防疫X創新研發」等多面向的發展，並於跨領域技術研發與產學合作上，呈現豐碩之研發及技術成果。", "en": "Fu Jen Catholic University and Fu Jen Catholic University Hospital" } }],
-    "event": [
-      { "timeList": [{ "start": "2023-11-30 16:00+08:00", "end": "2023-11-30 16:30+08:00" }], "title": { "tc": "共享決策(SDM)在前十字韌帶重建手術的應用", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 11:00+08:00", "end": "2023-12-02 11:30+08:00" }], "title": { "tc": "泡泡頭盔一把罩、呼吸照護好全面", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-03 11:00+08:00", "end": "2023-12-03 11:30+08:00" }], "title": { "tc": "神經調節通氣輔助 革命性的技術", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 13:30+08:00", "end": "2023-12-02 14:00+08:00" }], "title": { "tc": "機器的時代，人性的醫療", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 15:00+08:00", "end": "2023-12-02 15:30+08:00" }], "title": { "tc": "胃食道逆流不僅依賴胃鏡，高解析度食道食道壓力檢測（HRM）、食道酸鹼值阻抗測定（MII-pH）可提升治療成效", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-01 11:00+08:00", "end": "2023-12-01 11:30+08:00" }], "title": { "tc": "小兒包皮手術的新選擇 : 一槍搞定及小兒微創腹腔手術", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-01 13:30+08:00", "end": "2023-12-01 14:00+08:00" }], "title": { "tc": "醫療科技的進展如何改變了心臟的治療?", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 13:30+08:00", "end": "2023-12-02 14:00+08:00" }], "title": { "tc": "復甦照顧寒冰訣~淺談目標體溫控制治療", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-01 10:30+08:00", "end": "2023-12-01 11:00+08:00" }], "title": { "tc": "近視控制新趨勢", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-01 13:30+08:00", "end": "2023-12-01 14:00+08:00" }], "title": { "tc": "近視控制新趨勢", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } }
-    ]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 1200,
-    "h": 600,
-    "x": 12020,
-    "y": 8010,
-    "p": [
-      { "node": "L", "x": 1200, "y": 0 },
-      { "node": "L", "x": 1200, "y": 600 },
-      { "node": "L", "x": 0, "y": 600 }
-    ],
-    "id": "M531a",
-    "size": { "tc": 1.0, "en": 1.0 },
-    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["宸曜診所"], "en": ["G CLINIC"] },
-    "corps": [{ "org": { "tc": "臺灣光麗實業股份有限公司", "en": "TAIWANKUANGLI CO., LTD." }, "info": { "tc": "「G CLINIC」醫療品牌起源於日本，日本是全世界細胞治療臨床運用領先的國家，也帶動台灣的相關再生醫療執行及法規制定。\nG-clinic承襲日本細胞治療實證，結合台灣醫療團隊的豐富臨床經驗，串連東亞醫療連線，搭配最新的醫療智慧科技與全人照護配套，提供客人最完善的醫療品質與健康照護，提供個性化、專注的醫療服務和健康管理，打造精準的客戶醫療體驗，並強調高品質、個人隱私和健康領航的價值。\nG CLINIC 打造世界級的個人醫療旅程-5G Advanced Medical Process  \n1.營養保健處方簽GOODWILL JOURNEY（客製化營養建議）\n2.智慧細胞療程GLOBAL JOURNEY（細胞因子補充、抗發炎調理）\n3.專項儀器 輔助療程GENIUS JOURNEY（新興儀器治療）\n4.運動處方簽GLAMOUR JOURNEY（運動專業教練訓練方案）\n5.東方醫養學配方GENEROUS JOURNEY（東方醫養概論）", "en": "5G Advanced Medical Process\nGOODWILL JOURNEY\nGLOBAL JOURNEY\nGENIUS JOURNEY\nGLAMOUR JOURNEY\nGENEROUS JOURNEY\n" } }],
-    "event": [
-      { "timeList": [{ "start": "2023-12-01 11:00+08:00", "end": "2023-12-01 12:00+08:00" }], "title": { "tc": "擁抱無痛快樂生活", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 11:00+08:00", "end": "2023-12-02 12:00+08:00" }], "title": { "tc": "癌後照顧", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-11-30 11:00+08:00", "end": "2023-11-30 12:00+08:00" }], "title": { "tc": "創新細胞治療：重塑健康微環境！", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } }
-    ]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 3600,
-    "h": 1500,
-    "x": 6010,
-    "y": 6210,
-    "p": [
-      { "node": "L", "x": 3600, "y": 0 },
-      { "node": "L", "x": 3600, "y": 1500 },
-      { "node": "L", "x": 0, "y": 1500 }
-    ],
-    "id": "M601a",
-    "size": { "tc": 1.0, "en": 1.0 },
-    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["北榮．中榮．高榮．屏榮", "輔導會"], "en": ["Veterans General Hospital"] },
-    "corps": [{ "org": { "tc": "高雄榮民總醫院", "en": "Kaohsiung Veterans General Hospital" }, "info": { "tc": "智慧醫療", "en": "smart medication" } }],
-    "event": []
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 2400,
-    "h": 1500,
-    "x": 10220,
-    "y": 6210,
-    "p": [
-      { "node": "L", "x": 2400, "y": 0 },
-      { "node": "L", "x": 2400, "y": 1500 },
-      { "node": "L", "x": 0, "y": 1500 }
-    ],
-    "id": "M619a",
-    "size": { "tc": 1.0, "en": 1.0 },
-    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["中國醫藥大學", "暨醫療體系"], "en": ["China Medical ", "University Hospital"] },
-    "corps": [
-      {
-        "org": { "tc": "中國醫藥大學附設醫院", "en": "China Medical University Hospital" },
-        "info": {
-          "tc": "中國醫藥大學，為教學與研究並重之頂尖大學，並積極與世界一流大學、醫學中心及研究機構合作與交流，更榮獲英國泰晤士「2019亞洲大學排名」臺灣第3名、私校第1。\n中國醫藥大學暨醫療體系，目前有中國醫藥大學附設醫院、兒童醫院、北港附設醫院、台南市市立安南醫院、新竹附設醫院等，從醫學中心到診所共16家體系院所。\n為提供更高品質的醫療服務，我們積極發展尖端醫學如幹細胞療法、免疫細胞療法、基因療法，並且積極建構人工智慧醫院，發展人工智慧、精準醫學、3D列印醫療、醫材輔具等，並設立「新竹健康產學園區」及「中國醫藥大學水湳校區」。\n我們以「急、重、難症為基礎」、「以企業社會責任為使命」，將以此精神服務全體國民，提供最好的「教學、研究、服務」品質，並且發展卓越的生醫產業，以實現成為「卓越優秀的世界一流的中、西醫學中心」及「全球聞名的高科技生醫園區」之願景。",
-          "en": "China Medical University Hospital works in close collaboration with the world’s top universities, medical centers, and research institutes. The remarkable accomplishments of China Medical University have been well recognized by the world: ranks 60th in Asia University Rankings 2019, the first among private universities in Taiwan.\n  CMU Healthcare System strives for excellence in healthcare. We invest our efforts in developing top-notch medical technologies, such as stem cell therapy, gene therapy, and AI Hospital. Meanwhile, our projects on “Hsinchu International Health Science Park” and the “Shuinan International Health Science Campus” together create an environment for developing cutting edge biomedical research, industry-academia collaboration platforms and startups.\n  As frontline in central Taiwan, CMUH continues to build on a strong basis for acute and critical disease healthcare. The faculty are committed to permanent objectives of instruction, research, and medical services. Above all, we also put great emphasis on social responsibility. Moreover, we envision to be an “excellent world-class medical center with the best integration of western and Chinese medical” and “world-renowned high-tech biomedical park.”"
-        }
-      },
-      { "org": { "tc": "長聖國際生技股份有限公司", "en": "Ever Supreme Bio Technology Co.,Ltd." }, "info": { "tc": "臍帶間質幹細胞研發培養特定分子表現族群之間質幹細胞進行相對應治療，發揮並維持間質幹細胞本身抗發炎緩解組織惡化及促進組織再生修復特色，依據其細胞具備功能特色，目前的細胞治療幾乎都是自體治療。然而自體細胞治療價格昂貴，無法大量生產，長聖開發中的新藥UMSC01（異體臍帶間質幹細胞），其臍帶間質幹細胞是很好的異體細胞治療來源，可事先製造保存並於需要時取用(Off-the-Shelf)，因此可實現「大規模生產並放在貨架上銷售的細胞產品」，大幅度降低細胞培養成本，除此之外並不會影響原本間質幹細胞本身抗發炎緩解組織惡化及促進組織再生修復特色，具備市場潛力與產品開發價值。", "en": "The development of umbilical cord mesenchymal stem cells, cultured to express specific molecular profiles, provides a promising avenue for targeted therapy. These cells harness and maintain their inherent anti-inflammatory properties, mitigating tissue deterioration and promoting tissue regeneration and repair. Due to the high cost and logistical challenges associated with autologous cell therapy production, our company is developing a novel drug, UMSC01 (allogeneic umbilical cord mesenchymal stem cells), which serves as an excellent source for allogeneic cell therapy. These umbilical cord mesenchymal stem cells can be pre-manufactured and stored for off-the-shelf use, allowing us to realize the concept of 'mass production and shelf-ready sale of cell products.' This significantly reduces cell culture costs while preserving the inherent anti-inflammatory properties and tissue regeneration capabilities of mesenchymal stem cells. This approach holds great market potential and product development value." } },
-      { "org": { "tc": "長佳智能股份有限公司", "en": "EVER FORTUNE.AI CO., LTD." }, "info": { "tc": "● 本系統提供臨床放射腫瘤治療一套自動化問題解決方案\n● 提供臨床標準化及自動化的器官描繪流程，節省治療計畫設計時間\n● 衛部醫器製字第007449號\n● 美國FDA 510(k)上市前許可通知 K220264", "en": "● This product helps conduct auto contouring for radiation oncology treatment planning.\n● The product automatically delineates head-and-neck organs-at-risk (OARs) on CT images. This auto-contouring of OARs is intended to facilitate radiation therapy workflows and help reduce the time of treatment planning.\n● TFDA medical equipment license ,DOH-MD-No. 007449\n● USFDA Premarket Notification, 510(k), No. K220264" } },
-      {
-        "org": { "tc": "聖安生醫股份有限公司", "en": "Shine-On BioMedical Co.,Ltd." },
-        "info": {
-          "tc": "1.\tSOA101奈米三特異性雙免疫檢查點抗體\n•\t亞洲領先，唯一靶向癌症細胞上雙免疫檢查點之三特異性抗體。\n•\t具專一度高之癌症靶點HLA-G及PD-L1/HLA-G雙免疫檢查點抗體，克服癌細胞免疫逃脫，減少抗藥性及提升治療有效性。\n•\t為治療多種實體癌之廣效性新藥。\n2.\tSOA201 EphA10三特異性T細胞銜接抗體 \n•\t三特異性抗體靶向雙免疫細胞。\n•\tEphA10腫瘤抗原在三陰性乳癌高度表現(正常細胞幾乎不表現)，安全性高，解決三陰性乳癌無標靶藥物治療之困境。\n•\t可活化且增生T cells and NK cells，增加抗癌療效。\n•\t為治療多種實體癌之廣效性新藥。\n3.\tSOB101工程化外泌體搭載藥物 \n•\t亞洲領先，唯一具有HLA-G靶點之外泌體抗癌藥。\n•\t基因工程改質其具備anti-HLAG功能之外泌體，專一結合於腫瘤細胞，有效降低化療藥物用量。\n•\t可搭載多種藥物。\n•\t為治療多種實體癌之廣效性新藥。\n4.\tSOB102新穎抗癌外泌體核酸藥物\n•\t具備HLA-G靶點，有效及安全的將搭載的核酸藥物及化療藥物送到腫瘤處。\n•\t可穿過腦血屏障，解決多形性膠質母細胞瘤(GBM)具抗藥性之臨床治療困境。",
-          "en": "SOA101 Nano Tri-specific Dual Immune Checkpoint Antibody\n•\tThe only triple-specific antibody targeting dual immune checkpoints on cancer cells in Asia.\n•\tHighly specific cancer-targeting PD-L1 & HLA-G dual immune checkpoint antibodies can overcome the tumor heterogeneity, reduce drug resistance, and improve therapeutic effectiveness.\n•\tThe “Next generation” drug for various solid tumors therapy.\nSOA201 EphA10 Tri-specific T cell Engager\n•\tTri-specific antibody targets dual immune cells.\n•\tThe EphA10 tumor antigen is highly expressed in TNBC (almost negligible expression in normal cells), providing high safety and provides the solution for unmet medical need of TNBC about lacking targeted drug therapy.\n•\tEnhancing anti-cancer efficacy by T cells and NK cells activation.\n•\tThe “Next generation” drug for various solid tumors therapy.\nSOB101 Drug Payloads Engineered Exosomes\n•\tThe only anti-cancer exosome drug targeting HLA-G in Asia.\n•\tEngineering exosomes with anti-HLA-G bind to tumor cells specifically, effectively reducing the dosage of chemotherapy drugs. \n•\tMultiple drug payloads for cancer therapy.\n•\tThe “Next generation” drug for various solid tumors therapy.\nSOB102 Novel Anti-Cancer Exosomal Nucleic Acid Drug \n•\tTargeting HLA-G, deliver the carried nucleic acid and chemotherapy drugs to the tumor  effectively and safely.\n•\tBlood-brain barrier (BBB) crossable and solve the clinical treatment dilemma of drug-resistant glioblastoma multiforme (GBM)."
-        }
-      }
-    ],
-    "event": [
-      {
-        "timeList": [
-          { "start": "2023-11-30 10:00+08:00", "end": "2023-12-02 18:00+08:00" },
-          { "start": "2023-12-03 10:00+08:00", "end": "2023-12-03 16:00+08:00" }
-        ],
-        "title": { "tc": "喝水也會胖？\n口腔黏膜採檢肥胖基因", "en": "" },
-        "topic": { "tc": "健康大檢測", "en": "健康大檢測" }
-      }
-    ]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 2400,
     "h": 3300,
     "x": 7210,
     "y": 2300,
@@ -7798,12 +7957,12 @@
       { "node": "L", "x": 0, "y": 300 }
     ],
     "id": "N118",
-    "size": { "tc": 0.35, "en": 0.2 },
+    "size": { "tc": 0.4, "en": 0.2 },
     "cat": { "tc": "智慧醫療展區", "en": "Medtech" },
     "topic": { "tc": "醫材設備", "en": "Medical devices & equipment" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["今可", "生物"], "en": ["今可", "生物"] },
-    "corps": [{ "org": { "tc": "今可生物", "en": "今可生物" }, "info": { "tc": "", "en": "" } }],
+    "text": { "tc": ["宏明"], "en": ["Gene Code", " Biotech"] },
+    "corps": [{ "org": { "tc": "宏明科技有限公司", "en": "Gene Code Biotech Inc." }, "info": { "tc": "1. 外泌體(Exosome)純化暨分析服務\n客製化細胞培養基\n外泌體純化\n外泌體奈米顆粒追蹤分析技術(Nanoparticle Tracking Analysis，NTA)\n外泌體流式細胞儀特性分析(CD9/CD63/CD81)\n蛋白晶片成分分析\n2. 角質細胞生長加速50%\n無血清角質細胞培養基: KeraGo SFM\n3. 間質幹細胞培養好輕鬆\n無異種源間質幹細胞培養基: mscGo XF medium", "en": "1. Exosome amplification and service\nMammalian cell culture specification customized \nExosome purification\nExosome Nanoparticle Tracking Analysis\nFlow Cytometry CD9/CD63/CD81 biomarker analysis \nExosome components protein array analysis \n2. KeraGo SFM: \nHigh efficiency Keratinocyte serum free culture system, proceed cell growth and time-saving\n3. mscGo XF medium:\nMesenchymal stem cell (MSC) cell culture system - maintain MSC properties and specificity" } }],
     "event": []
   },
   {
@@ -8528,37 +8687,6 @@
   {
     "type": "booth",
     "floor": 4,
-    "w": 1500,
-    "h": 600,
-    "x": 13220,
-    "y": 8010,
-    "p": [
-      { "node": "L", "x": 1500, "y": 0 },
-      { "node": "L", "x": 1500, "y": 600 },
-      { "node": "L", "x": 0, "y": 600 }
-    ],
-    "id": "N503a",
-    "size": { "tc": 1.0, "en": 0.5 },
-    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["童綜合"], "en": ["Tung's Taichung", " MetroHabor Hospital"] },
-    "corps": [
-      { "org": { "tc": "童綜合醫療社團法人童綜合醫院", "en": "Tung's Taichung MetroHabor Hospital" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "合錦科技股份有限公司", "en": "H.P.B. HI-TECH CORP." }, "info": { "tc": "Ezcaring P1 是非穿戴式、高隱私的 AI 智能照護系統，結合 AI 影像辨識技術以及 PPS (privacy protection system) 隱私保護感測技術，給予長輩更高品質的生活，提供居家照護、長照機構、安養中心及醫療院所等敏感場域，最安全、經濟、有效與便利的照護方案。\n1. 行為分析：AI 分析統計起床、離床、站立、行走及無動作等行為，提出建議以改善生活習慣。\n2. 睡眠分析：偵測平躺、側躺、趴睡等姿勢及睡眠時間統計，分析改善睡眠品質。\n3. 跌倒示警：AI識別跌倒行為，即時訊息或通話照護者並警示救護人員。\n4. 環境監控：偵測室內溫度與自動感應夜燈，避免夜晚起床時跌倒。\n5. 意外通知：長輩長時間無動作、跌倒及闖空門等狀況時緊急示警。\n\n是關心，不是監視。\nPPS 技術僅偵測物體移動時所產生之光影變化， 裝設於臥室甚至浴廁，皆無須擔心侵犯長輩隱私的問題，是全球首創連浴室都可以安裝的照護系統。", "en": "Combining AI image recognition and PPS (privacy protection system) technology, Ezcaring P1 provides the elderly with a high-quality life. It offers the safest, and effective care plan for sensitive areas such as home care, long-term care institutions, and medical institutions.\nIt has 5 main functions: Behavior analysis/ Sleep analysis/ Fall prevention/ Residence monitoring/ Emergency notification.\nCaring for the Elderly with Dignity and Privacy.\nPPS technology only detects changes in light and shadow generated by the movement of objects. It can be installed in the bedroom or bathroom without concern for invasion of privacy." } }
-    ],
-    "event": [
-      { "timeList": [{ "start": "2023-12-03 11:00+08:00", "end": "2023-12-03 12:00+08:00" }], "title": { "tc": "關於睡眠呼吸中止症，您知道多少??", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 11:00+08:00", "end": "2023-12-02 12:00+08:00" }], "title": { "tc": "攝護腺癌無所遁形-更精準的新世代PSMA正子影像及Lu177 PSMA標靶治療", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-11-30 11:00+08:00", "end": "2023-11-30 12:00+08:00" }], "title": { "tc": "Ezcaring B1 AI 智能嬰兒照護系統，每分每秒守護您的寶貝", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-11-30 13:30+08:00", "end": "2023-11-30 14:00+08:00" }], "title": { "tc": "智慧醫療：醫療機構的新數位信任", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-01 10:30+08:00", "end": "2023-12-01 11:00+08:00" }], "title": { "tc": "遊戲化的急救教學：一童動手指，玩家變專家", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-01 10:30+08:00", "end": "2023-12-01 11:00+08:00" }], "title": { "tc": "淨零排放、ESG與醫療機構的未來策略", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } }
-    ]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
     "w": 3000,
     "h": 600,
     "x": 15330,
@@ -8579,39 +8707,6 @@
       { "org": { "tc": "閎康科技股份有限公司", "en": "MA-tek" }, "info": { "tc": "今年閎康科技展出的主要項目為”生物樣品電子顯微鏡分析”與”原位液態電子顯微鏡分析”等分析服務。\n在生物樣品舉凡組織、細胞、病毒、微脂體與囊泡等等各種樣品都有分析經驗，可以觀察到奈米尺度的微結構或顆粒。電子顯微鏡在生物方面可以觀察細胞中胞器的變化，也有使用在病毒的檢驗與辨認，或是脂質奈米微粒的粒徑分析，用途十分廣泛。\n液態電顯的部分，使用閎康獨有的K-kit液態樣品槽，讓樣品在液態環境中的觀察化為可能。可以觀察到更接近樣品原本的狀態，尤其是生物樣品脫水之後結構會塌陷，造成樣貌大幅改變。也可以看到一些只有在液體中才能進行的形貌變化，粒如微脂體的融合、分裂現象，或是菌體被分解的過程。", "en": "This year, Ma-tek provide “Biological sample TEM analysis” and “In-situ liquid TEM analysis” in Expo. Taiwan-Healthcare.\n\nMa-tek can observe all kinds of biological sample in nanoscale structure with TEM. We can recognize virus, observe variety of organelles or particles size distribution for lipid nanoparticles.\n\nIn situ TEM analysis is very popular these years. Because most biological sample collapse while dehydration. With K-kit, a liquid TEM cell we can observe sample with TEM in liquid phase to keep its structure. " } }
     ],
     "event": []
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 1800,
-    "h": 1500,
-    "x": 12920,
-    "y": 6210,
-    "p": [
-      { "node": "L", "x": 1800, "y": 0 },
-      { "node": "L", "x": 1800, "y": 1500 },
-      { "node": "L", "x": 0, "y": 1500 }
-    ],
-    "id": "N601a",
-    "size": { "tc": 1.0, "en": 0.7 },
-    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["臺大醫院", "臺灣大學"], "en": ["National Taiwan ", "University Hospital"] },
-    "corps": [
-      { "org": { "tc": "國立臺灣⼤學醫學院附設醫院", "en": "National Taiwan University Hospital" }, "info": { "tc": "臺大醫院成果展示", "en": "  " } },
-      { "org": { "tc": "國立臺灣大學", "en": "National Taiwan University" }, "info": { "tc": "國立臺灣大學與國立臺灣大學醫學院附設醫院將於此展現學校及醫院之技術研究、亮點成果。", "en": "National Taiwan University and National Taiwan University Hospital will exhibit the advanced technique and solutions." } }
-    ],
-    "event": [
-      {
-        "timeList": [
-          { "start": "2023-11-30 10:00+08:00", "end": "2023-12-02 18:00+08:00" },
-          { "start": "2023-12-03 10:00+08:00", "end": "2023-12-03 16:00+08:00" }
-        ],
-        "title": { "tc": "三高慢病總評估！\n風險檢測早發現！", "en": "" },
-        "topic": { "tc": "健康大檢測", "en": "健康大檢測" }
-      }
-    ]
   },
   {
     "type": "booth",
@@ -8687,80 +8782,6 @@
       { "org": { "tc": "財團法人國家實驗研究院臺灣儀器科技研究中心", "en": "Taiwan Instrument Research Institute, National Applied Research Laboratories" }, "info": { "tc": "台灣儀器科技研究中心是國內唯一可協助學術界理工醫農各領域，開發前瞻研究所需客製化特殊儀器設備的單位，秉持創新精進技術、技術精進服務之動力，提供產學界儀器技術支援與創新應用服務，亦為台灣首創提供一站式醫材開發驗證輔導的單位，為學界研發創意商品化的夢工廠，本次呈現生醫量能與協助新創公司技術升級之成果展示。", "en": "TIRI is the only organization that can provide advanced　instrumentation research and related instrument system innovations for the fields, including science, engineering, biomedical and agricultural science, etc. By holding the belief of“Drive Technology Innovation to Promote Academic Research,” TIRI assists the industry, academia and research organizations with instrument technology solutions and innovative application services. It is also the first organization to offer one-stop services for medical devices development, consultation, test and verification. Serving as a national dream team, TIRI is dedicated to assisting the academia in commercializing their creative ideas. Introductions of accelerators and start-up teams, with their products and achievements." } }
     ],
     "event": []
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 1800,
-    "h": 1500,
-    "x": 12920,
-    "y": 4100,
-    "p": [
-      { "node": "L", "x": 1800, "y": 0 },
-      { "node": "L", "x": 1800, "y": 1500 },
-      { "node": "L", "x": 0, "y": 1500 }
-    ],
-    "id": "N802",
-    "size": { "tc": 1.0, "en": 0.8 },
-    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["慈濟醫院"], "en": ["Hualien Tzu Chi", " Medical Center"] },
-    "corps": [
-      { "org": { "tc": "花蓮慈濟醫學中心", "en": "Hualien Tzu Chi Medical Center" }, "info": { "tc": "慈濟慈善足跡遍布全球122個國家地區，花蓮慈濟醫院已為國際化醫學中心，37年來在醫療領域中累積的豐碩成果，受到醫界、產官學界以及眾多媒體關注，多年來結合慈善、教育、人文志業，持續為台灣醫療體系帶來創新與希望。\n2023年本院攜手各合作機構共同參展主題包含遠距醫療、智慧醫療、細胞治療、特色醫療、創新研發、國際醫療等主題，現場亦提供名醫講座、體驗活動等，敬邀醫療及生技醫藥產業之專業人士、創業投資者、病友及家屬、媒體先進蒞臨。\n", "en": "Tzu Chi Charity Foundation had set foot around the world in over 122 countries. Therefore, Hualien Tzu Chi Hospital already became an internationalized medical center, which has accumulated many fruitful accomplishments over 37 years in medical aspects. For many years, it collaborated with charity, education, culture main missions and continued to provide innovation and hope within the Taiwan medical systems. Hence, our hospital participates in this exhibition with co-development firms. Our central theme this year is ”Stem cell innovative therapy” followed with other hot issues, including cell therapy, cancer immune treatment, development of new drugs and innovative medical appliances, smart healthcare, preventive medicine, international healthcare, and New Southbound Projects. We hope to share our accomplishments with society. Through this exhibition, our hospital wishes to enhance international links and achieve the initial intention of innovative development with people-oriented thoughts in the end." } },
-      { "org": { "tc": "國璽幹細胞應用技術股份有限公司", "en": "Gwo Xi Stem Cell Applied Technology Co., Ltd." }, "info": { "tc": "國璽幹細胞應用技術股份有限公司於2011年進駐新竹生醫園區，投入幹細胞應用技術開發及幹細胞製劑，克服目前尚未獲得滿足的醫療需求。透過整合醫藥級幹細胞製劑生產技術平台與諸多核心技術，我們已開發多項專有製程技術，並且已將四支幹細胞新藥推動進入臨床試驗。為擴大幹細胞製劑量產規模及提升品質穩定度，國璽除了從製造開始就採用模組製程的思維外，於園區內打造【PIC/S GMP幹細胞製劑藥廠】，穩健地走向規模化量產，同時持續拓展細胞治療領域的開發，與強化細胞治療產業鏈上、中、下游的佈局。", "en": "Gwo Xi Stem Cell Company has established the R&D center for cell therapy development since 2011. We are committed to developing stem cell medicines that have the potential to help patients with unmet medical needs. Our production platform fully comply with medical regulations (Good Tissue Practice, GTP) in Taiwan. We have three clinical trials are ongoing in Taiwan, and one clinical trial is ongoing in Vietnam by now. In the future, we will have established the PIC/S GMP grade stem cell preparation factory (15,225 m2 built-out space) in Hsinchu Biomedical Science Park in Taiwan to put stem cell-based medicinal products into practice." } },
-      { "org": { "tc": "茂士榮生醫", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "遠傳電信", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "宏潤", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "通用幹細胞", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "遠東醫電", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "尖端醫", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "商之器", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "臺灣粒線體", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "雅培", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "宏騏", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "長弘", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "裕隆", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "鈦隼", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "慈濟大學", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "慈濟科技大學", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "大林慈濟醫院", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "靜思書軒", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "衛生福利部", "en": "" }, "info": { "tc": "", "en": "" } }
-    ],
-    "event": [
-      {
-        "timeList": [
-          { "start": "2023-11-30 10:00+08:00", "end": "2023-11-30 12:00+08:00" },
-          { "start": "2023-11-30 14:00+08:00", "end": "2023-11-30 16:00+08:00" },
-          { "start": "2023-12-01 10:00+08:00", "end": "2023-12-01 12:00+08:00" },
-          { "start": "2023-12-01 14:00+08:00", "end": "2023-12-01 16:00+08:00" },
-          { "start": "2023-12-02 10:00+08:00", "end": "2023-12-02 12:00+08:00" },
-          { "start": "2023-12-02 14:00+08:00", "end": "2023-12-02 16:00+08:00" },
-          { "start": "2023-12-03 10:00+08:00", "end": "2023-12-03 12:00+08:00" },
-          { "start": "2023-12-03 14:00+08:00", "end": "2023-12-03 16:00+08:00" }
-        ],
-        "title": { "tc": "中醫耳穴看健康！\n氣場能量檢測", "en": "" },
-        "topic": { "tc": "健康大檢測", "en": "健康大檢測" }
-      },
-      { "timeList": [{ "start": "2023-11-30 10:00+08:00", "end": "2023-11-30 11:30+08:00" }], "title": { "tc": "重回尊嚴-脊髓損傷細胞治療", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-11-30 13:00+08:00", "end": "2023-11-30 13:30+08:00" }], "title": { "tc": "間質幹細胞暨外泌體對治療退化性關節炎的效果", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 10:30+08:00", "end": "2023-12-02 11:10+08:00" }], "title": { "tc": "促「膝」淺談膝關節治療", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 11:20+08:00", "end": "2023-12-02 11:50+08:00" }], "title": { "tc": "晶脊奇蹟-神經幹細胞再生與BurstDR晶片刺激治療", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 16:00+08:00", "end": "2023-12-02 16:30+08:00" }], "title": { "tc": "應用人工智慧輔助胃食道逆流症之精準診斷及個人化治療", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-11-30 12:00+08:00", "end": "2023-11-30 12:30+08:00" }], "title": { "tc": "淨斯本草系列：活芯智濃縮液穩醣活血護腦", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 14:00+08:00", "end": "2023-12-02 14:40+08:00" }], "title": { "tc": "脂肪幹細胞應用於疾病治療-以慢性腦中風幹細胞新藥思益優® (GXNPC1) 為例", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-11-30 14:00+08:00", "end": "2023-11-30 14:40+08:00" }], "title": { "tc": "細胞製造智能時代", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-11-30 17:00+08:00", "end": "2023-11-30 17:30+08:00" }], "title": { "tc": "台灣首創：以脂肪幹細胞重塑臉部輪廓/鄧守成主任", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-01 11:00+08:00", "end": "2023-12-01 11:30+08:00" }], "title": { "tc": "智慧下鄉 藥您健康合作記者會", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-01 13:00+08:00", "end": "2023-12-01 13:30+08:00" }], "title": { "tc": "AI醫療雲世代：智能透析微服務", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-01 14:00+08:00", "end": "2023-12-01 14:40+08:00" }], "title": { "tc": "優化幹細胞研究與技轉成果發表", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-01 15:00+08:00", "end": "2023-12-01 15:40+08:00" }], "title": { "tc": "以網路取代馬路，實現醫療零偏鄉", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 13:00+08:00", "end": "2023-12-02 13:40+08:00" }], "title": { "tc": "Cerebraca ®  wafer邁向國際之路", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-02 14:50+08:00", "end": "2023-12-02 15:20+08:00" }], "title": { "tc": "疫後解封-國際醫療重新出發", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-03 11:00+08:00", "end": "2023-12-03 11:30+08:00" }], "title": { "tc": "「非一槍斃命、需聯合作戰：CAR-T新挑戰」", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } },
-      { "timeList": [{ "start": "2023-12-03 13:30+08:00", "end": "2023-12-03 14:00+08:00" }], "title": { "tc": "抗鎖鏈蛇蛇毒(RVV-X)單株抗體藥物對血栓形成之預防應用", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "醫師聊健康" } }
-    ]
   },
   {
     "type": "booth",
@@ -8988,27 +9009,6 @@
     "tag": { "tc": ["臺北市生物技術服務商業同業公會"], "en": ["Taipei Biotechnology Service and Business Trade Association"] },
     "text": { "tc": ["純真"], "en": ["純真"] },
     "corps": [{ "org": { "tc": "純真山苦瓜生技商行", "en": "純真山苦瓜生技商行" }, "info": { "tc": "", "en": "" } }],
-    "event": []
-  },
-  {
-    "type": "booth",
-    "floor": 1,
-    "w": 600,
-    "h": 600,
-    "x": 6110,
-    "y": 4510,
-    "p": [
-      { "node": "L", "x": 600, "y": 0 },
-      { "node": "L", "x": 600, "y": 600 },
-      { "node": "L", "x": 0, "y": 600 }
-    ],
-    "id": "I628",
-    "size": { "tc": 0.7, "en": 0.7 },
-    "cat": { "tc": "醫療機構展區", "en": "Medical Institutes" },
-    "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["4"], "en": [""] },
-    "corps": [{ "org": { "tc": "", "en": "" }, "info": { "tc": "", "en": "" } }],
     "event": []
   },
   {
