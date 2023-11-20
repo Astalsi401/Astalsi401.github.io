@@ -503,6 +503,7 @@ p {
 .fp-input .fp-input-tag {
   max-width: 100%;
   white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
   position: relative;
   --x-bg: var(--fp-unactive);
