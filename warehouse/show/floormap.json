@@ -1001,7 +1001,7 @@
     "cat": { "tc": "醫療機構展區", "en": "Medical Institutes & Hospitals" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["4"], "en": [] },
+    "text": { "tc": [], "en": [] },
     "corps": [{ "org": { "tc": "", "en": "" }, "info": { "tc": "", "en": "" } }]
   },
   {
