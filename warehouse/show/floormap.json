@@ -934,24 +934,24 @@
     "corps": [
       { "org": { "tc": "花蓮慈濟醫學中心", "en": "Hualien Tzu Chi Medical Center" }, "info": { "tc": "慈濟慈善足跡遍布全球122個國家地區，花蓮慈濟醫院已為國際化醫學中心，37年來在醫療領域中累積的豐碩成果，受到醫界、產官學界以及眾多媒體關注，多年來結合慈善、教育、人文志業，持續為台灣醫療體系帶來創新與希望。\n2023年本院攜手各合作機構共同參展主題包含遠距醫療、智慧醫療、細胞治療、特色醫療、創新研發、國際醫療等主題，現場亦提供名醫講座、體驗活動等，敬邀醫療及生技醫藥產業之專業人士、創業投資者、病友及家屬、媒體先進蒞臨。\n", "en": "Tzu Chi Charity Foundation had set foot around the world in over 122 countries. Therefore, Hualien Tzu Chi Hospital already became an internationalized medical center, which has accumulated many fruitful accomplishments over 37 years in medical aspects. For many years, it collaborated with charity, education, culture main missions and continued to provide innovation and hope within the Taiwan medical systems. Hence, our hospital participates in this exhibition with co-development firms. Our central theme this year is ”Stem cell innovative therapy” followed with other hot issues, including cell therapy, cancer immune treatment, development of new drugs and innovative medical appliances, smart healthcare, preventive medicine, international healthcare, and New Southbound Projects. We hope to share our accomplishments with society. Through this exhibition, our hospital wishes to enhance international links and achieve the initial intention of innovative development with people-oriented thoughts in the end." } },
       { "org": { "tc": "國璽幹細胞應用技術股份有限公司", "en": "Gwo Xi Stem Cell Applied Technology Co., Ltd." }, "info": { "tc": "國璽幹細胞應用技術股份有限公司於2011年進駐新竹生醫園區，投入幹細胞應用技術開發及幹細胞製劑，克服目前尚未獲得滿足的醫療需求。透過整合醫藥級幹細胞製劑生產技術平台與諸多核心技術，我們已開發多項專有製程技術，並且已將四支幹細胞新藥推動進入臨床試驗。為擴大幹細胞製劑量產規模及提升品質穩定度，國璽除了從製造開始就採用模組製程的思維外，於園區內打造【PIC/S GMP幹細胞製劑藥廠】，穩健地走向規模化量產，同時持續拓展細胞治療領域的開發，與強化細胞治療產業鏈上、中、下游的佈局。", "en": "Gwo Xi Stem Cell Company has established the R&D center for cell therapy development since 2011. We are committed to developing stem cell medicines that have the potential to help patients with unmet medical needs. Our production platform fully comply with medical regulations (Good Tissue Practice, GTP) in Taiwan. We have three clinical trials are ongoing in Taiwan, and one clinical trial is ongoing in Vietnam by now. In the future, we will have established the PIC/S GMP grade stem cell preparation factory (15,225 m2 built-out space) in Hsinchu Biomedical Science Park in Taiwan to put stem cell-based medicinal products into practice." } },
-      { "org": { "tc": "茂士榮生醫", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "遠傳電信", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "宏潤", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "通用幹細胞", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "遠東醫電", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "尖端醫", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "商之器", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "臺灣粒線體", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "雅培", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "宏騏", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "長弘", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "裕隆", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "鈦隼", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "慈濟大學", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "慈濟科技大學", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "大林慈濟醫院", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "靜思書軒", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "衛生福利部", "en": "" }, "info": { "tc": "", "en": "" } }
+      { "org": { "tc": "茂士榮生醫", "en": "茂士榮生醫" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "遠傳電信", "en": "遠傳電信" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "宏潤", "en": "宏潤" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "通用幹細胞", "en": "通用幹細胞" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "遠東醫電", "en": "遠東醫電" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "尖端醫", "en": "尖端醫" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "商之器", "en": "商之器" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "臺灣粒線體", "en": "臺灣粒線體" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "雅培", "en": "雅培" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "宏騏", "en": "宏騏" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "長弘", "en": "長弘" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "裕隆", "en": "裕隆" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "鈦隼", "en": "鈦隼" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "慈濟大學", "en": "慈濟大學" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "慈濟科技大學", "en": "慈濟科技大學" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "大林慈濟醫院", "en": "大林慈濟醫院" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "靜思書軒", "en": "靜思書軒" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "衛生福利部", "en": "衛生福利部" }, "info": { "tc": "", "en": "" } }
     ],
     "event": [
       {
@@ -5634,8 +5634,8 @@
           "en": "Thermo Fisher Scientific is the world leader in serving science. Our Mission is to enable our customers to make the world healthier, cleaner, and safer. Whether our customers are accelerating life sciences research, solving complex analytical challenges, improving patient diagnostics and therapies, or increasing productivity in their laboratories, we are here to support them. Our global team of more than 100,000 colleagues delivers an unrivaled combination of innovative technologies, purchasing convenience, and pharmaceutical services through our industry-leading brands, including Thermo Scientific, Applied Biosystems, Invitrogen, Fisher Scientific, Unity Lab Services, Patheon, and PPD. In this event, we will show you our latest digital PCR system and end-to-end NGS workflow for liquid biopsy in cancer research, together with our SeqStudio 8 Flex Genetic Analyzer. The Specialty Diagnostics Group uses high-quality diagnostic reagents, instruments, and consumables for research, development, and production to illustrate the identification of disease markers or the analysis of diagnostic hotspots. Provide high-quality solutions to help clinical laboratory workers improve efficiency and safety. The products exhibited in the event include immunodiagnosis-related products and microbial diagnosis-related products."
         }
       },
-      { "org": { "tc": "萊富生命科技股份有限公司", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "臺灣法迪亞股份有限公司", "en": "" }, "info": { "tc": "", "en": "" } }
+      { "org": { "tc": "萊富生命科技股份有限公司", "en": "萊富生命科技股份有限公司" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "臺灣法迪亞股份有限公司", "en": "臺灣法迪亞股份有限公司" }, "info": { "tc": "", "en": "" } }
     ]
   },
   {
@@ -5904,10 +5904,10 @@
       { "org": { "tc": "臺灣人體生物資料庫", "en": "Taiwan Biobank" }, "info": { "tc": "Taiwan Biobank－全球唯一華人世代追蹤、垂直整合檢體與資料釋出的人體生物資料庫。目前已超過20萬例新收及5萬例以上追蹤個案，皆可與衛福資料檔串連，例如健保資料庫、癌登檔、死因檔等，是全國性長期追蹤臺灣人的健康資料庫，並有完整的參與者事前告知及事後退出機制，此外，更是全臺唯一符合國際 ISO個資及資安標準的生物資料庫。釋出的血液和尿液檢驗數值皆經由ISO15189認證與 CAP認證實驗室產出。\n\n我們擁有完整時序性資料\n及精確可靠的健康大數據\n可以增強學研能量之產值\n減少研究人力與時間成本\n讓你研究極具國際影響力", "en": "Join Taiwan biobank research community\nAccelerate scientific discovery\nTransform lives" } },
       { "org": { "tc": "艾沛生醫股份有限公司", "en": "Apexcella Biomedical Inc." }, "info": { "tc": "艾沛生醫擁有獨特的 apexNK® 細胞培養技術平台，公司將以apexNK® 細胞為基礎，發展次世代、創新及低副作用的異體免疫細胞標靶治療，如合併或連結抗體治療、CAR-NK等，期能改善未滿足之癌症醫療需求，並應用於多種癌症。\n艾沛生醫apexNK®培養技術優勢為不須細胞分選、也不須與滋養癌細胞共培養，只需以少量周邊血液，即可產出大量高純度、高存活率及高細胞毒殺能力的 apexNK®細胞。亦即500 ml的周邊血即可生產超過5000劑的細胞 (每劑5x109 cells/bag)。由於純度平均> 90%且幾乎無T細胞干擾，因此於臨床異體使用時，不會造成移植物抗宿主疾病(GVHD)及细胞因子釋放综合症(CRS)等嚴重副作用。 \n艾沛生醫將以符合GMP精神的標準大量生產apexNK® 細胞，並輔以特有細胞冷凍技術，除發展異體免疫細胞標靶治療外，亦可有效降低生產成本與製備時程，提供民眾可負擔的異體apexNK®細胞治療方案。", "en": "Apexcella Biomedical Inc. has developed unique apexNK® cell expansion technologies, which can produce mass apexNK® cells with high purity and high cytotoxicity. Based on the technologies, the company is committed to develop innovative allogeneic apexNK® cell therapies, such as combination therapies with antibodies,  and CAR-NK etc. Apxcella hopes to resolve the unmet needs and provide cancer patients the next-generation allogeneic curative cell therapies. " } },
       { "org": { "tc": "磐石醫藥生技股份有限公司", "en": "Rock BioMedical, Inc." }, "info": { "tc": "磐石醫藥生技的低醣廣效 mRNA 流感疫苗計劃，在今年九月舉辦的首屆莫德納台灣 mRNA前瞻新創獎當中脫穎而出， 是五個獲選團隊當中， 唯一獲此殊榮的私人企業團隊。這個計劃是磐石團隊延續先前開發的次世代廣效新冠疫苗，運用相同的醣化工程技術平台，在流感病毒的血凝素 HA蛋白序列上， 做選擇性醣位點修飾， 並結合公司在脂質奈米粒包裹技術上的最新突破，針對高度變異的流感病毒，期望在群體誘發廣泛的免疫保護力，針對季節性，甚至大流行性流感，開發出更為安全有效的疫苗，以降低重症死亡機率，並減低每年重複施打的需要。同樣的技術將來可望廣泛應用在各種流行性病毒感染疾病。", "en": "Rock BioMedical’s Low-sugar universal mRNA vaccine program against influenza was chosen as a winner of the first annual Moderna Taiwan mRNA Innovation Award in September 2023. Rock BioMedical was the only private company among the five recipients to win this award. This program is an extension of our recent development of a low-sugar universal COVID vaccine. It combined our latest insight in the glycoengineering of mRNA vaccines through selective glycosite mutations of the vaccine coding sequences to expose conserved epitopes while preserving overall antigen protein structures. It also incorporates our latest breakthrough in the novel dendritic cell targeting LNP (lipid nanoparticle) technology. We believe it has a strong potential to dramatically improve the safety and efficacy profiles over the current mRNA vaccines and offers broad immune protection against seasonal and potential pandemic flu. It may also reduce the need in the future for the annual administration of seasonal flu vaccines." } },
-      { "org": { "tc": "科進製藥", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "諾倫科技", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "藥華醫藥股份有限公司", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "研生生醫", "en": "" }, "info": { "tc": "", "en": "" } }
+      { "org": { "tc": "科進製藥", "en": "科進製藥" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "諾倫科技", "en": "諾倫科技" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "藥華醫藥股份有限公司", "en": "藥華醫藥股份有限公司" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "研生生醫", "en": "研生生醫" }, "info": { "tc": "", "en": "" } }
     ]
   },
   {
@@ -6903,14 +6903,14 @@
     "cat": { "tc": "精準醫療展區", "en": "Diagnostics, Laboratory Equipment & Services" },
     "topic": { "tc": "精準檢測", "en": "Diagnostics, laboratory equipment & services" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["創新醫療", "科技聯盟"], "en": ["Molsentech"] },
+    "text": { "tc": ["創新醫療", "科技聯盟"], "en": ["創新醫療", "科技聯盟"] },
     "corps": [
       { "org": { "tc": "矽基分子電測科技股份有限公司", "en": "Molsentech" }, "info": { "tc": "矽基半導體生醫晶片及微量生醫分子檢測儀，是一套以生物矽場效應電晶體（Bio-FET）為基礎，結合分子檢測技術的新型檢測產品。晶片上有上萬個檢測點，檢測儀讀取其訊號分析後可得到高準確率的結果。\n本產品的檢測時間依據實驗需求僅3-30分鐘。檢測標的含核酸、抗體、抗原、微生物或環境中化學物質等，應用性廣。晶片具極高靈敏度，因此檢測過程不需擴增、染色或添加螢光，操作容易，不會因人為操作造成誤差，更能解決臨床上測不到、測不準的問題。本產品擁有高準確率及高再現性，是適合用於精準檢測的POCT產品。\n本技術的首例應用為新冠病毒核酸檢測，已於110年12月27日獲得衛福部緊急使用授權。公司目前正著手開發癌症檢測產品，以及建立Bio-Fab廠進行試量產。", "en": "Our Biosensor Platform composed of a biomolecular analyzer, SENEDIA, and semiconductor-based biosensors is developed on SiNW-FET core technology. Results come out real-time upon changes in electrical signals caused by the interaction between bio-probes modified on biosensors and targets in samples.\nOur detection limit is 10-15M that’s a lot more sensitive than Q-PCR’s 10-5 M, thus breaking the limit of this technology commonly used to detect residual pathogens for Acute Myeloid Leukemia.\nBesides disease detection, our ultrahigh sensitive, high accuracy, fast, and easy-to-use biosensor platform is expandable to food safety, environmental monitoring, animal tests, and etc. We received an EUA for COVID-19 RNA rapid testing and are leveraging our establishment for the evaluation of treatment on AML.\nOur platform is built on Taiwan’s semiconductor infrastructure to facilitate a local medical device manufacturing chain, leading Taiwan to be the medical detection hub of next generation." } },
       { "org": { "tc": "醫全實業股份有限公司", "en": "Medicare Products INC." }, "info": { "tc": "醫全實業股份有限公司以真誠的熱忱促進台灣衛生保健的現代化為目標。我們以”誠意、積極與遠見”為我們的精神。提供訓練有素的工作人員來滿足廣大客戶的需求始終是我們的首要任務，也因此我們贏得了全世界優秀的醫療產品廠家的支持與合作。", "en": "MEDICARE PRODUCTS INC. aims to promote the modernization of Taiwan\\\\\\'s health care with sincere enthusiasm. We take \\\\" } },
       { "org": { "tc": "莉蒔科技有限公司", "en": "LIS TECH CO., LTD" }, "info": { "tc": "3D生物列印機(3D Bioprinter) Dr. INVIVO 4D2\n3D生物列印機透過逐層堆疊活體細胞和生物材料，可精確地模擬人體組織和生物系統的三維結構，即微環境的創建，並在堆疊過程中確保細胞存活，已達精確的疾病模型，或仿生器官目的。目前，它廣泛應用於生物工程和醫學等領域，這種創新技術為生物研究和醫療應用開闢了新的可能性。\nDr. INVIVO 4D2是第一台具有潔淨室的生物列印機，也是在韓國最具實力的3D生物列印機，它能夠打印自由形態的細胞懸浮液、水凝膠、熱塑性長絲、糊劑和其他復合材料，從而實現軟硬皆可的組織工程，並開啟了人體組織模型和植入物的道路。\n設計優化應用於各研究領域：\n1. 軟、硬組織工程皆可\n2. 癌症研究\n3. 生物材料及生物墨水開發\n4. 藥物研究\n5. 跨領域工程研究\n6. 4D Z軸曲面加工", "en": "ROKIT Healthcare is dedicated to a convergence of key factors for regeneration of functional bioprinted human tissues and organs:\n· Autologous cells\n· Extracellular matrix\n· Tissue-specific biomaterials\n· 3D environment\n· 4D curved printing\nDr. INVIVO, a clean-chamber custom bio-fabrication series, allows researchers to achieve combination of all factors above to pattern human tissues using all ranges of materials. From cells and hydrogels to filaments and pellets, Dr. INVIVO helps researchers study both soft and hard biological systems." } },
       { "org": { "tc": "浩翰有限公司", "en": "Labchina(Taiwan)Co.,Ltd." }, "info": { "tc": "分光光度計、細胞計數器、純水機、液態氮桶", "en": "Spectrophotometer, cell counter, pure water machine, liquid nitrogen barrel" } },
       { "org": { "tc": "芯元生意股份有限公司", "en": "Genicore biotech inc." }, "info": { "tc": "產學合作：\n芯元生醫股份有限公司進駐於長庚創新育成中心，與長庚大學健康老化中心的代謝體學核心實驗室以及矽基分子電測科技股份有限公司跨領域合作。芯元生醫擁有獨家開發的核酸篩選修飾技術，整合長庚大學代謝體學核心實驗室的臨床研究經驗以及代謝體學的資源，根據質譜儀分析所獲得的數據，找出疾病相關的小分子標記。搭配矽基分子電測的半導體生醫晶片檢測平台，開發具高靈敏度和即時有效率的疾病代謝物小分子檢測產品。\n\n核心技術：\n透過核酸序列設計、特殊結構篩選、電腦模擬預測與優化成熟技術，開發具有特殊功能的二級或三級結構，\n擁有高度專一性、親和力以及穩定性，可精準辨識離子、小分子、蛋白、細胞、組織、微生物等目標物。", "en": "Industry-Academia Collaboration:\nCore Biomedical Inc. has stationed at Chang Gung Innovation Incubation Center, collaborating interdisciplinary with Chang Gung University\\\\\\'s Health Aging Center Metabolomics Core Laboratory and Silicon Molecular Electronic Technology Inc. Core Biomedical, with its exclusive nucleic acid screening modification technology, integrates clinical research experience and metabolomics resources from Chang Gung University. Utilizing data from mass spectrometry analysis, they identify disease-related small molecule markers. Coupled with semiconductor biomedical chip detection platform from Silicon Molecular Electronic Technology, they develop highly sensitive and real-time efficient disease metabolite small molecule detection products.\n\nCore Technology:\nThrough nucleic acid sequence design, special structure screening, computer simulation prediction, and mature optimization techniques, they develop secondary or tertiary structures with special functions. These structures possess high specificity, affinity, and stability, accurately identifying targets like ions, small molecules, proteins, cells, tissues, and microorganisms." } },
-      { "org": { "tc": "創新醫療科技聯盟", "en": "" }, "info": { "tc": "", "en": "" } }
+      { "org": { "tc": "創新醫療科技聯盟", "en": "創新醫療科技聯盟" }, "info": { "tc": "", "en": "" } }
     ]
   },
   {
@@ -8509,15 +8509,15 @@
       { "org": { "tc": "德膚有限公司", "en": "DERFU Co., LTD." }, "info": { "tc": "德膚有限公司起源於對紫草(根)原料於皮膚照護多元應用開發的構想，故而從個體照護型保養品產品，繼而醫材規格產品發展。2021年7月創立以來，於2022年第二季已初步完成兩款產品：德膚保潤型紫舒霜及德膚清爽型紫凝露等上市。", "en": "DERFU Co., Ltd. was born with the idea of developing \\\\" } },
       { "org": { "tc": "醫百科技股份有限公司", "en": "EPED Inc." }, "info": { "tc": "RETINA 整合重覆跨顱磁刺激(rTMS)精準定位\n重覆跨顱磁刺激是種針對憂鬱症的非侵入性腦部儀器治療，利用電流經由刺激線圈產生磁場在由磁場來提升或抑制大腦神經元的活動性，例如刺激重度憂鬱症患者的大腦左側前額葉，來增進額葉調控情緒的功能。  其測量該運動神經元動作電位閥值，若是刺激位置偏差1mm，則可能會損失多達30%之能量輸出，利用RETINA導航系統結合重覆跨顱磁刺激(rTMS)預期將可精準定位達到協助醫師即時檢視磁場作治療頭部的所在位置，保持最佳治療成效。", "en": "RETINA Integration for Precise Positioning of Repetitive Transcranial Magnetic Stimulation (rTMS)\n\nRepetitive Transcranial Magnetic Stimulation (rTMS) is a non-invasive brain instrument therapy used to treat depression. It involves the use of electrical currents to generate a magnetic field through a stimulation coil, which either enhances or inhibits the activity of brain neurons by using the magnetic field. For example, it stimulates the left frontal lobe of the brain in patients with severe depression to enhance the regulation of emotions.\n\nIt measures the threshold of action potentials in motor neurons, and a deviation of 1mm in the stimulation location can result in a loss of up to 30% of energy output. By combining the RETINA navigation system with repetitive transcranial magnetic stimulation (rTMS), it is expected to achieve precise positioning, allowing doctors to instantly view the location of the magnetic field for treating the head, thus maintaining optimal treatment effectiveness. " } },
       { "org": { "tc": "儕陞生化技術股份有限公司", "en": "Charsire Biotechnology Corp." }, "info": { "tc": "「儕陞生化技術股份有限公司」自創立以來即致力於植物性外用製劑的研究與開發。將近20年的外用製劑開發經驗同時納入了美國FDA植物藥品管精神，並整體規劃將製程從原料、半成品到成品做最適化的安排及規劃。同時，仕都莎善尼仕創傷敷料主要成分來源為日常食用之大宗作物「大豆」，大豆此一原料不僅來源穩定、取得容易且價格合理，使得仕都莎善尼仕創傷敷料之生產成本極具競爭力。", "en": "Since establishment, Charsire Biotech. has been committed to the research and development of topically applied botanical preparation. With 20 years of experience in development of topical preparations and the US FDA quality guideline for botanical drugs , Charsire optimally arranges and manages the production process from raw materials, semi-finished products to finished products. Also, the main ingrediants sources of Sanovazo comes from soybean. Soybean is not only a stable source, but also easy to obtain and have a reasonable price, which makes the cost of Sanovazo quite competitive.\n\nSanovazo trauma dressing is one of the few products for caring for the side effects of radiotherapy. In terms of clinical efficacy, it can effectively minimize the side effects of radiation therapy on the skin. The safety of Sanovazo trauma dressing has completed the pre-clinical toxicology study for topical new drugs. Sanovazo has highly completed its functionality and safety." } },
-      { "org": { "tc": "亞果", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "柏瑞醫", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "泉沂", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "泰陞", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "創甡生技", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "惠合再生", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "霖揚", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "聯華生技", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "瀧儀", "en": "" }, "info": { "tc": "", "en": "" } }
+      { "org": { "tc": "亞果", "en": "亞果" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "柏瑞醫", "en": "柏瑞醫" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "泉沂", "en": "泉沂" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "泰陞", "en": "泰陞" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "創甡生技", "en": "創甡生技" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "惠合再生", "en": "惠合再生" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "霖揚", "en": "霖揚" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "聯華生技", "en": "聯華生技" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "瀧儀", "en": "瀧儀" }, "info": { "tc": "", "en": "" } }
     ]
   },
   {
@@ -8608,17 +8608,17 @@
     "corps": [
       { "org": { "tc": "國家科學及技術委員會新竹科學園區管理局", "en": "Hsinchu Science Park Bureau National Science Technology Council" }, "info": { "tc": "參展的竹科宜蘭園區新創公司包含有針對需要農村場域試驗及地方轉型工作之農民，提供農村場域及客戶媒合及銀柳提煉醫材的蘭陽美人智農生技有限公司、針對有簡化採購流程及高度耐用性聲學產品之客戶提供高階耳機、耳麥等音頻產品/醫療服務的亞立田股份有限公司、提供感測、雲端AI智能控制系統的一站式空氣治理服務的翔聿安科技股份有限公司等九家新創廠家，各家公司均於展會中竹科宜蘭園區專區展出其特色產品與服務。", "en": "The exhibiting startups at the Zhubei-Yilan Park in the Hsinchu Science Park include nine companies that cater to the needs of farmers requiring rural field testing and local transformation initiatives. These companies showcase their distinctive products and services at the exhibition. The featured startups are:\n\nLanyang Beauty Intelligent Agriculture Biotechnology Co., Ltd.:\nLanyang Beauty focuses on providing rural field resources and customer matchmaking for farmers, as well as extracting medical materials from silver willow.\n\nArlatian Co., Ltd.:\nArlatian specializes in delivering high-end audio products/medical services such as advanced headphones and earphones with simplified procurement processes and high durability for customers.\n\nXiangyu An Technology Co., Ltd.:\nXiangyu An offers a comprehensive air treatment service, integrating sensors, cloud-based AI intelligent control systems, and delivering solutions for air quality management.\n\nThese companies, along with six others, showcase their distinctive products and services within the dedicated Zhubei-Yilan Park section of the exhibition." } },
       { "org": { "tc": "亞立田股份有限公司", "en": "Aliteam Inc. " }, "info": { "tc": "輔助聽力器AL-531\n左右耳機底部麥克風增強了收音方向性\n內建抑音控制，如環境中突然出現巨大聲響，能抑制音量，保護耳朵\n三種頻率模式選擇 (N/M/W)，可依據不同環境選擇不同的模式\n特殊側邊傾斜入耳式設計，給您輕鬆舒適的聆聽體驗\n小巧便攜,操作簡單\n15 小時的長效電池續航力\n", "en": "Assistive Listening AL-531\nDual L/R microphones enhance natural sound directionality.\nAutomatic sound adjustment function which control the sudden loud sound \nThree sound levels modes to help you in getting the best hearing experience. (N/M/W)\nNew angle ear bud give you an easy and comfortable listening \nSmall And portable,  Easy to operate\nUp to 15 hours of battery life\n" } },
-      { "org": { "tc": "宏森生醫", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "德膚", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "美落佳", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "翔聿安", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "元健大和", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "和曜生技", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "臺灣基康", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "瀚源生醫", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "瀚生醫電", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "捷絡", "en": "" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "群曜醫電", "en": "" }, "info": { "tc": "", "en": "" } }
+      { "org": { "tc": "宏森生醫", "en": "宏森生醫" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "德膚", "en": "德膚" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "美落佳", "en": "美落佳" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "翔聿安", "en": "翔聿安" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "元健大和", "en": "元健大和" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "和曜生技", "en": "和曜生技" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "臺灣基康", "en": "臺灣基康" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "瀚源生醫", "en": "瀚源生醫" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "瀚生醫電", "en": "瀚生醫電" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "捷絡", "en": "捷絡" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "群曜醫電", "en": "群曜醫電" }, "info": { "tc": "", "en": "" } }
     ]
   },
   {

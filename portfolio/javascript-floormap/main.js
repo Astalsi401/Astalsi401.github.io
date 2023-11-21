@@ -384,6 +384,7 @@ const BoothInfoDetail = ({ data, setSearchCondition, elementStatus, setElementSt
   const tags = Object.keys(elementStatus.boothInfoData).length === 0 ? [] : [...loc, ...tag].filter((d) => d !== "");
   const booth = data.find((d) => d.id == id);
   const corps = booth && booth.corps ? booth.corps : [];
+  const events = event.filter((d) => d.title !== "");
   const handleTagClick = (value) => {
     setSearchCondition((prev) => ({ ...prev, tag: value, string: "" }));
     setElementStatus((prev) => ({ ...prev, boothInfo: false }));
@@ -424,15 +425,13 @@ const BoothInfoDetail = ({ data, setSearchCondition, elementStatus, setElementSt
           ))}
         </div>
       )}
-      {event.length > 0 && (
+      {events.length > 0 && (
         <div className="p-2">
           <div className="my-1 text-large">相關活動</div>
           <div className="my-1">
-            {event
-              .filter((d) => d.title !== "")
-              .map((d) => (
-                <Event {...d} />
-              ))}
+            {events.map((d) => (
+              <Event {...d} />
+            ))}
           </div>
         </div>
       )}
@@ -464,7 +463,7 @@ const Sidebar = ({ data, elementStatus, setElementStatus, searchCondition, setSe
       {elementStatus.sidebar || elementStatus.smallScreen ? (
         <>
           <Advanced data={data} searchCondition={searchCondition} setSearchCondition={setSearchCondition} elementStatus={elementStatus} setElementStatus={setElementStatus} defaultViewbox={defaultViewbox} />
-          <ResultList data={data.filter((d) => d.sidebar)} elementStatus={elementStatus} handleBoothInfo={handleBoothInfo} svgRef={svgRef} graphRef={graphRef} zoomCalculator={zoomCalculator} dragCalculator={dragCalculator} animation={animation} defaultViewbox={defaultViewbox} />
+          <ResultList data={data.filter((d) => d.sidebar && d.text.length > 1)} elementStatus={elementStatus} handleBoothInfo={handleBoothInfo} svgRef={svgRef} graphRef={graphRef} zoomCalculator={zoomCalculator} dragCalculator={dragCalculator} animation={animation} defaultViewbox={defaultViewbox} />
           <BoothInfo data={data} setSearchCondition={setSearchCondition} elementStatus={elementStatus} setElementStatus={setElementStatus} />
         </>
       ) : (
