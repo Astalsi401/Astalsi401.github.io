@@ -269,43 +269,12 @@
 }
 
 .fp-event {
-  --event: var(--fp-sidebar-bg);
-  --bg: var(--fp-unactive);
-  &:hover {
-    --bg: var(--fp-black);
-  }
-  &.active {
-    --event: var(--fp-active);
-  }
-  background-color: var(--event);
+  background-color: var(--fp-sidebar-bg);
   position: relative;
   cursor: pointer;
   .time-list {
-    max-height: 20px;
     overflow: hidden;
     transition: max-height var(--fp-time);
     --deg: 0deg;
-    &.active {
-      max-height: 300px;
-      --deg: 45deg;
-    }
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      width: 15px;
-      height: 2px;
-      border-radius: 1px;
-      background-color: var(--bg);
-      right: 5px;
-      top: 20px;
-      transition: rotate var(--fp-time);
-    }
-    &::before {
-      rotate: var(--deg);
-    }
-    &::after {
-      rotate: calc(90deg + var(--deg));
-    }
   }
 }

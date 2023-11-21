@@ -742,44 +742,14 @@ p {
 }
 
 .fp-event {
-  --event: var(--fp-sidebar-bg);
-  --bg: var(--fp-unactive);
-  background-color: var(--event);
+  background-color: var(--fp-sidebar-bg);
   position: relative;
   cursor: pointer;
 }
-.fp-event:hover {
-  --bg: var(--fp-black);
-}
-.fp-event.active {
-  --event: var(--fp-active);
-}
 .fp-event .time-list {
-  max-height: 20px;
   overflow: hidden;
   transition: max-height var(--fp-time);
   --deg: 0deg;
-}
-.fp-event .time-list.active {
-  max-height: 300px;
-  --deg: 45deg;
-}
-.fp-event .time-list::before, .fp-event .time-list::after {
-  content: "";
-  position: absolute;
-  width: 15px;
-  height: 2px;
-  border-radius: 1px;
-  background-color: var(--bg);
-  right: 5px;
-  top: 20px;
-  transition: rotate var(--fp-time);
-}
-.fp-event .time-list::before {
-  rotate: var(--deg);
-}
-.fp-event .time-list::after {
-  rotate: calc(90deg + var(--deg));
 }
 
 .fp-graph {
