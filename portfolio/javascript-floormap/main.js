@@ -121,7 +121,7 @@ const Elements = ({ type, data, size, elementStatus, handleBoothClick }) => {
   };
   return <g className={`${type}-g`}>{data.filter((d) => d.type == type).map((d, i) => elementActions[type](d, i))}</g>;
 };
-const Floormap = ({ data, elementStatus, setElementStatus, handleBoothInfo, searchCondition, setSearchCondition, handleSearchChange, graphRef, svgRef, zoomCalculator, dragCalculator, defaultViewbox, animation, mapText }) => {
+const Floormap = ({ data, elementStatus, setElementStatus, handleBoothInfo, searchCondition, setSearchCondition, handleSearchChange, graphRef, svgRef, zoomCalculator, dragCalculator, defaultViewbox, animation }) => {
   const [containerSize, setContainerSize] = useState({ width: elementStatus.realSize.w / 100, height: elementStatus.realSize.h / 100, pageHeight: elementStatus.realSize.h / 100 });
   const [viewBox, setViewBox] = useState({ x1: 0, y1: 0, x2: 0, y2: 0 });
   const handleStart = () => {
@@ -173,7 +173,7 @@ const Floormap = ({ data, elementStatus, setElementStatus, handleBoothInfo, sear
   }, [elementStatus.realSize]);
   return (
     <div className="fp-floormap d-flex align-items-center" style={{ minHeight: elementStatus.minHeight }}>
-      <Selector searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} graphRef={graphRef} zoomCalculator={zoomCalculator} defaultViewbox={defaultViewbox} animation={animation} mapText={mapText} />
+      <Selector searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} graphRef={graphRef} zoomCalculator={zoomCalculator} defaultViewbox={defaultViewbox} animation={animation} />
       <div className={`fp-viewBox ${elementStatus.dragStatus.moving ? "moving" : ""}`} ref={graphRef} onWheel={handleWheelZoom} onMouseDown={handleStart} onMouseUp={handleEnd} onMouseLeave={handleEnd} onMouseMove={handleMouseDrag} onTouchStart={handleStart} onTouchEnd={handleEnd} onTouchMove={handleTouchDragZoom}>
         <svg id="floormap" className={elementStatus.boothInfo ? "active" : ""} ref={svgRef} style={{ translate: `${elementStatus.zoom.x + elementStatus.dragStatus.x}px ${elementStatus.zoom.y + elementStatus.dragStatus.y}px`, scale: `${elementStatus.zoom.scale}`, backgroundColor: "#f1f1f1" }} width={containerSize.width} height={containerSize.height} viewBox={`${viewBox.x1} ${viewBox.y1} ${viewBox.x2} ${viewBox.y2}`}>
           <Elements type="wall" data={data} />
@@ -210,7 +210,7 @@ const FilterIcon = () => {
   );
 };
 
-const Search = ({ searchCondition, setSearchCondition, elementStatus, setElementStatus, handleSearchChange, mapText }) => {
+const Search = ({ searchCondition, setSearchCondition, elementStatus, setElementStatus, handleSearchChange }) => {
   const searched = searchCondition.string.length === 0 && searchCondition.tag === "";
   return (
     <div className="fp-search d-flex align-items-center justify-content-center">
@@ -219,7 +219,7 @@ const Search = ({ searchCondition, setSearchCondition, elementStatus, setElement
       </div>
       <div className="fp-input d-flex flex-wrap align-items-center px-1">
         {searchCondition.tag !== "" && (
-          <div className="fp-input-tag shadow text-small" title={mapText.remove[searchCondition.lang]} onClick={() => setSearchCondition((prev) => ({ ...prev, tag: "" }))} style={{ "--cat": elementStatus.colors(searchCondition.tag) }}>
+          <div className="fp-input-tag shadow text-small" title={elementStatus.mapText.remove} onClick={() => setSearchCondition((prev) => ({ ...prev, tag: "" }))} style={{ "--cat": elementStatus.colors(searchCondition.tag) }}>
             {searchCondition.tag}
           </div>
         )}
@@ -227,7 +227,7 @@ const Search = ({ searchCondition, setSearchCondition, elementStatus, setElement
       </div>
       <div
         className={`fp-toggle d-flex align-items-center justify-content-center ${searched ? "" : "active"}`}
-        title={searched ? "" : mapText.clear[searchCondition.lang]}
+        title={searched ? "" : elementStatus.mapText.clear}
         onClick={() => {
           if (elementStatus.sidebar) setSearchCondition((prev) => ({ ...prev, string: "", tag: "" }));
         }}
@@ -408,7 +408,7 @@ const BoothInfoDetail = ({ data, setSearchCondition, elementStatus, setElementSt
       </div>
       {corps.length > 1 && (
         <div className="p-2">
-          <div className="my-1 text-large">聯展單位</div>
+          <div className="my-1 text-large">{elementStatus.mapText.exhibitor}</div>
           <div className="my-1 fp-booth-tags d-flex flex-wrap">
             {corps.map((d) => (
               <div className="fp-input-tag shadow text-small" style={{ "--cat": d.corpId == corpId ? "rgb(0, 0, 128, 0.3)" : elementStatus.colors("") }} onClick={() => handleCorpClick(d.corpId)}>
@@ -427,7 +427,7 @@ const BoothInfoDetail = ({ data, setSearchCondition, elementStatus, setElementSt
       )}
       {events.length > 0 && (
         <div className="p-2">
-          <div className="my-1 text-large">相關活動</div>
+          <div className="my-1 text-large">{elementStatus.mapText.activity}</div>
           <div className="my-1">
             {events.map((d) => (
               <Event {...d} />
@@ -452,14 +452,14 @@ const BoothInfo = ({ data, setSearchCondition, elementStatus, setElementStatus }
   );
 };
 
-const Sidebar = ({ data, elementStatus, setElementStatus, searchCondition, setSearchCondition, handleSearchChange, handleBoothInfo, svgRef, graphRef, zoomCalculator, dragCalculator, defaultViewbox, animation, mapText }) => {
+const Sidebar = ({ data, elementStatus, setElementStatus, searchCondition, setSearchCondition, handleSearchChange, handleBoothInfo, svgRef, graphRef, zoomCalculator, dragCalculator, defaultViewbox, animation }) => {
   const handleSidear = () => {
     if (elementStatus.sidebar) return;
     setElementStatus((prev) => ({ ...prev, sidebar: !prev.sidebar }));
   };
   return (
     <div className={`fp-sidebar shadow ${elementStatus.sidebar ? "active" : ""}`} onClick={handleSidear}>
-      <Search searchCondition={searchCondition} setSearchCondition={setSearchCondition} elementStatus={elementStatus} setElementStatus={setElementStatus} handleSearchChange={handleSearchChange} mapText={mapText} />
+      <Search searchCondition={searchCondition} setSearchCondition={setSearchCondition} elementStatus={elementStatus} setElementStatus={setElementStatus} handleSearchChange={handleSearchChange} />
       {elementStatus.sidebar || elementStatus.smallScreen ? (
         <>
           <Advanced data={data} searchCondition={searchCondition} setSearchCondition={setSearchCondition} elementStatus={elementStatus} setElementStatus={setElementStatus} defaultViewbox={defaultViewbox} />
@@ -544,8 +544,10 @@ const MainArea = () => {
     title: { tc: "展場平面圖", en: "Floor Plan" },
     event: { tc: "活動進行中", en: "Activity in progress" },
     header: { tc: "年度重點必看", en: "Annual Highlights" },
-    remove: { tc: "清除標籤", en: "Remove tag" },
+    remove: { tc: "清除標籤", en: "Remove" },
     clear: { tc: "清除搜索條件", en: "Clear search conditions" },
+    exhibitor: { tc: "聯展單位", en: "Co-Exhibitor" },
+    activity: { tc: "相關活動", en: "Activities" },
   };
   const types = ["booth", "room"];
   const graphRef = useRef(null);
@@ -581,6 +583,10 @@ const MainArea = () => {
         title: mapText.title[searchCondition.lang],
         event: mapText.event[searchCondition.lang],
         header: mapText.header[searchCondition.lang],
+        remove: mapText.remove[searchCondition.lang],
+        clear: mapText.clear[searchCondition.lang],
+        exhibitor: mapText.exhibitor[searchCondition.lang],
+        activity: mapText.activity[searchCondition.lang],
       },
     };
   });
@@ -701,6 +707,10 @@ const MainArea = () => {
         title: mapText.title[searchCondition.lang],
         event: mapText.event[searchCondition.lang],
         header: mapText.header[searchCondition.lang],
+        remove: mapText.remove[searchCondition.lang],
+        clear: mapText.clear[searchCondition.lang],
+        exhibitor: mapText.exhibitor[searchCondition.lang],
+        activity: mapText.activity[searchCondition.lang],
       },
     }));
     document.title = mapText.title[searchCondition.lang];
@@ -722,10 +732,10 @@ const MainArea = () => {
   return (
     <StrictMode>
       <div className="fp-main" style={{ "--sidebar-width": `${elementStatus.sidebarWidth}px`, "--tags-height": `${elementStatus.tagsHeight}px` }}>
-        <Sidebar data={filterFloorData.filter((d) => types.includes(d.type))} elementStatus={elementStatus} setElementStatus={setElementStatus} searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} handleBoothInfo={handleBoothInfo} svgRef={svgRef} graphRef={graphRef} zoomCalculator={zoomCalculator} dragCalculator={dragCalculator} defaultViewbox={defaultViewbox} animation={animation} mapText={mapText} />
+        <Sidebar data={filterFloorData.filter((d) => types.includes(d.type))} elementStatus={elementStatus} setElementStatus={setElementStatus} searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} handleBoothInfo={handleBoothInfo} svgRef={svgRef} graphRef={graphRef} zoomCalculator={zoomCalculator} dragCalculator={dragCalculator} defaultViewbox={defaultViewbox} animation={animation} />
         <div className="fp-graph d-flex align-items-center">
           <Header elementStatus={elementStatus} setSearchCondition={setSearchCondition} />
-          <Floormap data={filterFloorData.filter((d) => d.floor == searchCondition.floor && d.draw)} elementStatus={elementStatus} setElementStatus={setElementStatus} handleBoothInfo={handleBoothInfo} searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} graphRef={graphRef} svgRef={svgRef} zoomCalculator={zoomCalculator} dragCalculator={dragCalculator} defaultViewbox={defaultViewbox} animation={animation} mapText={mapText} />
+          <Floormap data={filterFloorData.filter((d) => d.floor == searchCondition.floor && d.draw)} elementStatus={elementStatus} setElementStatus={setElementStatus} handleBoothInfo={handleBoothInfo} searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} graphRef={graphRef} svgRef={svgRef} zoomCalculator={zoomCalculator} dragCalculator={dragCalculator} defaultViewbox={defaultViewbox} animation={animation} />
         </div>
       </div>
     </StrictMode>
