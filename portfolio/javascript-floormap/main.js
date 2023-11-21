@@ -24,7 +24,7 @@ const Header = ({ elementStatus, setSearchCondition }) => {
     <div className="fp-tags px-2 py-1 gap-1 d-flex flex-wrap align-items-center shadow">
       <div>{elementStatus.mapText.header}：</div>
       {tags.map((d) => (
-        <div className="fp-input-tag shadow text-small" onClick={() => setSearchCondition((prev) => ({ ...prev, tag: d }))}>
+        <div className="fp-input-tag shadow text-small" style={{ "--cat": elementStatus.colors(d) }} onClick={() => setSearchCondition((prev) => ({ ...prev, tag: d }))}>
           {d}
         </div>
       ))}
