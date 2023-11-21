@@ -7775,7 +7775,7 @@
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
     "text": { "tc": ["全球醫療採購網-", "經銷代理與企業媒合會"], "en": ["Healthcare+ B2B - ", "Global distributors Partnering", " and Matchmaking event"] },
-    "corps": [{ "org": { "tc": "全球醫療採購網-經銷代理與企業媒合會", "en": "Healthcare+ B2B - Global distributors Partnering and Matchmaking event." }, "info": { "tc": "", "en": "" } }]
+    "corps": [{ "org": { "tc": "全球醫療採購網-經銷代理與企業媒合會", "en": "Healthcare+ B2B - Global distributors Partnering and Matchmaking event" }, "info": { "tc": "", "en": "" } }]
   },
   {
     "type": "booth",
@@ -9004,12 +9004,12 @@
       { "node": "L", "x": 0, "y": 300 }
     ],
     "id": "N1219",
-    "size": { "tc": 0.35, "en": 0.35 },
-    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
+    "size": { "tc": 0.35, "en": 0.3 },
+    "cat": { "tc": "年度主題館", "en": "Featured Pavilions" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [""], "en": [""] },
-    "text": { "tc": ["全球醫療採購網-", "經銷代理與企業媒合會"], "en": [""] },
-    "corps": [{ "org": { "tc": "", "en": "" }, "info": { "tc": "", "en": "" } }]
+    "text": { "tc": ["全球醫療採購網-", "經銷代理與企業媒合會"], "en": ["Healthcare+ B2B - ", "Global distributors Partnering and Matchmaking event"] },
+    "corps": [{ "org": { "tc": "全球醫療採購網-經銷代理與企業媒合會", "en": "Healthcare+ B2B - Global distributors Partnering and Matchmaking event" }, "info": { "tc": "", "en": "" } }]
   },
   {
     "type": "booth",
