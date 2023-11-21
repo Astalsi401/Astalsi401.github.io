@@ -104,6 +104,7 @@ body {
   padding: 0;
   font-size: $font-size-base;
   position: relative;
+  touch-action: none;
 }
 
 p {
