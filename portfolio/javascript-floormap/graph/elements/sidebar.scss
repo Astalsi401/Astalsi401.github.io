@@ -220,6 +220,7 @@
   margin-top: var(--fp-sidebar-px);
   height: calc(100dvh - var(--fp-sidebar-px) - var(--fp-search-box-height));
   overflow-y: auto;
+  overflow-x: hidden;
   position: relative;
 }
 
@@ -271,7 +272,6 @@
 .fp-event {
   background-color: var(--fp-sidebar-bg);
   position: relative;
-  cursor: pointer;
   .time-list {
     overflow: hidden;
     transition: max-height var(--fp-time);

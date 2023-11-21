@@ -689,6 +689,7 @@ p {
   margin-top: var(--fp-sidebar-px);
   height: calc(100dvh - var(--fp-sidebar-px) - var(--fp-search-box-height));
   overflow-y: auto;
+  overflow-x: hidden;
   position: relative;
 }
 
@@ -744,7 +745,6 @@ p {
 .fp-event {
   background-color: var(--fp-sidebar-bg);
   position: relative;
-  cursor: pointer;
 }
 .fp-event .time-list {
   overflow: hidden;
