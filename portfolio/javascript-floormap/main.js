@@ -19,12 +19,12 @@ meta.setAttribute("content", "width=device-width, initial-scale=1.0, maximum-sca
 document.head.appendChild(meta);
 
 const Header = ({ elementStatus, setSearchCondition }) => {
-  const tags = [elementStatus.mapText.event];
+  const tags = [elementStatus.mapText.event, ...elementStatus.mapText.headerTags];
   return (
-    <div className="fp-tags p-2 d-flex flex-wrap align-items-center shadow">
+    <div className="fp-tags px-2 py-1 gap-1 d-flex flex-wrap align-items-center shadow">
       <div>{elementStatus.mapText.header}：</div>
       {tags.map((d) => (
-        <div className="fp-input-tag shadow" onClick={() => setSearchCondition((prev) => ({ ...prev, tag: d }))}>
+        <div className="fp-input-tag shadow text-small" onClick={() => setSearchCondition((prev) => ({ ...prev, tag: d }))}>
           {d}
         </div>
       ))}
@@ -366,9 +366,11 @@ const Event = ({ timeList, title, active }) => {
       <div className={`${timeList.length > 1 ? "time-list" : ""} ${showEventInfo ? "active" : ""}`}>
         {timeList.map((time) => {
           const startDate = `${format(time.start.getMonth() + 1)}/${format(time.start.getDate())}`;
+          const startTime = `${format(time.start.getHours())}:${format(time.start.getMinutes())}`;
           const endDate = `${format(time.end.getMonth() + 1)}/${format(time.end.getDate())}`;
-          const endTime = `${startDate == endDate ? "" : `${endDate} `}${format(time.end.getHours())}:${format(time.end.getMinutes())}`;
-          return <div className="text-small">{`${startDate} ${format(time.start.getHours())}:${format(time.start.getMinutes())}-${endTime}`}</div>;
+          const endTime = `${format(time.end.getHours())}:${format(time.end.getMinutes())}`;
+          const timeString = startDate == endDate ? `${startDate} ${startTime}-${endTime}` : `${startDate}-${endDate} ${startTime}-${endTime}`;
+          return <div className="text-small">{timeString}</div>;
         })}
       </div>
     </div>
@@ -463,7 +465,7 @@ const Sidebar = ({ data, elementStatus, setElementStatus, searchCondition, setSe
       {elementStatus.sidebar || elementStatus.smallScreen ? (
         <>
           <Advanced data={data} searchCondition={searchCondition} setSearchCondition={setSearchCondition} elementStatus={elementStatus} setElementStatus={setElementStatus} defaultViewbox={defaultViewbox} />
-          <ResultList data={data.filter((d) => d.sidebar && d.text.length > 1)} elementStatus={elementStatus} handleBoothInfo={handleBoothInfo} svgRef={svgRef} graphRef={graphRef} zoomCalculator={zoomCalculator} dragCalculator={dragCalculator} animation={animation} defaultViewbox={defaultViewbox} />
+          <ResultList data={data.filter((d) => d.sidebar && d.text.length > 0)} elementStatus={elementStatus} handleBoothInfo={handleBoothInfo} svgRef={svgRef} graphRef={graphRef} zoomCalculator={zoomCalculator} dragCalculator={dragCalculator} animation={animation} defaultViewbox={defaultViewbox} />
           <BoothInfo data={data} setSearchCondition={setSearchCondition} elementStatus={elementStatus} setElementStatus={setElementStatus} />
         </>
       ) : (
@@ -543,7 +545,8 @@ const MainArea = () => {
     },
     title: { tc: "展場平面圖", en: "Floor Plan" },
     event: { tc: "活動進行中", en: "Activity in progress" },
-    header: { tc: "年度重點必看", en: "Annual Highlights" },
+    header: { tc: "重點必看", en: "Highlights" },
+    headerTags: { tc: ["健康大檢測", "醫師力大挑戰"], en: [] },
     remove: { tc: "清除標籤", en: "Remove" },
     clear: { tc: "清除搜索條件", en: "Clear search conditions" },
     exhibitor: { tc: "聯展單位", en: "Co-Exhibitor" },
@@ -583,6 +586,7 @@ const MainArea = () => {
         title: mapText.title[searchCondition.lang],
         event: mapText.event[searchCondition.lang],
         header: mapText.header[searchCondition.lang],
+        headerTags: mapText.headerTags[searchCondition.lang],
         remove: mapText.remove[searchCondition.lang],
         clear: mapText.clear[searchCondition.lang],
         exhibitor: mapText.exhibitor[searchCondition.lang],
@@ -707,6 +711,7 @@ const MainArea = () => {
         title: mapText.title[searchCondition.lang],
         event: mapText.event[searchCondition.lang],
         header: mapText.header[searchCondition.lang],
+        headerTags: mapText.headerTags[searchCondition.lang],
         remove: mapText.remove[searchCondition.lang],
         clear: mapText.clear[searchCondition.lang],
         exhibitor: mapText.exhibitor[searchCondition.lang],

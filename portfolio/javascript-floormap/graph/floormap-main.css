@@ -536,6 +536,8 @@ p {
   border-radius: 5px;
   transition: filter var(--fp-time);
   float: left;
+  min-width: -moz-max-content;
+  min-width: max-content;
   filter: opacity(0.8);
 }
 .fp-input-tag:hover {
@@ -668,6 +670,8 @@ p {
 .fp-tags {
   position: absolute;
   z-index: 2;
+  overflow-x: auto;
+  gap: 5px;
   top: 0;
   right: 0;
   width: calc(100% - var(--sidebar-width));
