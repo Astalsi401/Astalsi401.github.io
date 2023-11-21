@@ -720,6 +720,7 @@ p {
 .fp-result-item-loc {
   text-align: right;
   flex-basis: var(--loc-width);
+  flex-shrink: 0;
 }
 
 .fp-download {
