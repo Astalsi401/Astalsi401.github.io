@@ -63,7 +63,7 @@
   border-radius: 5px;
   transition: filter var(--fp-time);
   float: left;
-  min-width: max-content;
+  max-width: 100%;
   filter: opacity(0.8);
   &:hover {
     filter: opacity(1);
@@ -84,6 +84,7 @@
 @media (max-width: 768px) {
   .fp-sidebar {
     width: 100%;
+    height: calc(100% - var(--sidebar-width));
     transform: translate(0, 0);
     top: var(--sidebar-width);
     transition: top var(--fp-time);
@@ -218,7 +219,7 @@
 
 .fp-result {
   margin-top: var(--fp-sidebar-px);
-  height: calc(100dvh - var(--fp-sidebar-px) - var(--fp-search-box-height));
+  height: calc(100% - var(--fp-sidebar-px) - var(--fp-search-box-height));
   overflow-y: auto;
   overflow-x: hidden;
   position: relative;

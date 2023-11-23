@@ -196,15 +196,9 @@ const FilterIcon = () => {
         <defs>
           <path id="filter-bar" d="M0 0H350A20 20 90 1 1 350 40H0A20 20 90 1 1 0 0" />
         </defs>
-        <defs>
-          <circle id="filter-dot" cx="0" cy="0" r="40" />
-        </defs>
         <use xlinkHref="#filter-bar" x={75} y={100} />
         <use xlinkHref="#filter-bar" x={75} y={230} />
         <use xlinkHref="#filter-bar" x={75} y={360} />
-        <use xlinkHref="#filter-dot" x={325} y={120} />
-        <use xlinkHref="#filter-dot" x={165} y={250} />
-        <use xlinkHref="#filter-dot" x={325} y={380} />
       </svg>
     </>
   );
@@ -347,7 +341,7 @@ const Result = ({ d, elementStatus, handleBoothInfo, svgRef, graphRef, zoomCalcu
 
 const ResultList = ({ data, elementStatus, handleBoothInfo, svgRef, graphRef, zoomCalculator, animation, defaultViewbox, dragCalculator }) => {
   return (
-    <div className="fp-result">
+    <div className="fp-result pb-5">
       {data
         .filter((d) => d.opacity > 0.1 && d.text.length !== 0)
         .map((d) => (
@@ -391,11 +385,9 @@ const BoothInfoDetail = ({ data, setSearchCondition, elementStatus, setElementSt
     setSearchCondition((prev) => ({ ...prev, tag: value, string: "" }));
     setElementStatus((prev) => ({ ...prev, boothInfo: false }));
   };
-  const handleCorpClick = (corpId) => {
-    setElementStatus((prev) => ({ ...prev, boothInfoData: data.find((d) => d.corpId == corpId) }));
-  };
+  const handleCorpClick = (corpId) => setElementStatus((prev) => ({ ...prev, boothInfoData: data.find((d) => d.corpId == corpId) }));
   return (
-    <div className="fp-info">
+    <div className="fp-info pb-5">
       <div className="fp-info-item d-flex align-items-center px-2 py-1">
         <div className="fp-result-item-name text-x-large text-bold">{text.join("")}</div>
         <div className="fp-result-item-loc text-small">{isBooth ? `${id} / ${floor}F` : `${floor}F`}</div>
