@@ -747,12 +747,33 @@ p {
   background-color: var(--fp-sidebar-bg);
   position: relative;
 }
-.fp-event .time-list {
+.fp-event.active {
+  --bg: rgb(128, 0, 75, 0.6);
+  position: relative;
   overflow: hidden;
-  transition: max-height var(--fp-time);
-  --deg: 0deg;
+}
+.fp-event.active span {
+  position: absolute;
+  inset: 0;
+  rotate: calc(var(--i) * 90deg);
+  -o-border-image: linear-gradient(90deg, transparent, var(--bg)) 1;
+     border-image: linear-gradient(90deg, transparent, var(--bg)) 1;
+  border-top: 4px solid var(--bg);
+  transform: translateX(-100%);
+  animation-name: event-active;
+  animation-duration: calc(var(--fp-time) * 10);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
+@keyframes event-active {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
 .fp-graph {
   flex-grow: 1;
   overflow: hidden;

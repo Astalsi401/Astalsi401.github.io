@@ -122,17 +122,9 @@ const Elements = ({ type, data, size, elementStatus, handleBoothClick }) => {
   return <g className={`${type}-g`}>{data.filter((d) => d.type == type).map((d, i) => elementActions[type](d, i))}</g>;
 };
 const Floormap = ({ data, elementStatus, setElementStatus, handleBoothInfo, searchCondition, setSearchCondition, handleSearchChange, graphRef, svgRef, zoomCalculator, dragCalculator, defaultViewbox, animation }) => {
-  const [containerSize, setContainerSize] = useState({ width: elementStatus.realSize.w / 100, height: elementStatus.realSize.h / 100, pageHeight: elementStatus.realSize.h / 100 });
   const [viewBox, setViewBox] = useState({ x1: 0, y1: 0, x2: 0, y2: 0 });
-  const handleStart = () => {
-    if (elementStatus.smallScreen) setElementStatus((prev) => ({ ...prev, sidebar: false }));
-    setElementStatus((prev) => ({ ...prev, dragStatus: { ...prev.dragStatus, moving: true } }));
-  };
+  const handleStart = () => setElementStatus((prev) => ({ ...prev, dragStatus: { ...prev.dragStatus, moving: true } }));
   const handleEnd = () => setElementStatus((prev) => ({ ...prev, dragStatus: { ...prev.dragStatus, moving: false, previousTouch: null, previousTouchLength: null } }));
-  const handleResize = () => {
-    const { clientWidth, clientHeight } = graphRef.current;
-    setContainerSize({ width: clientWidth, height: clientHeight });
-  };
   const handleTouchDragZoom = (e) => {
     e.preventDefault();
     if (e.touches.length === 1) {
@@ -165,19 +157,13 @@ const Floormap = ({ data, elementStatus, setElementStatus, handleBoothInfo, sear
       handleBoothInfo(d);
     }
   };
-  useEffect(() => {
-    setViewBox({ x1: 0, y1: 0, x2: elementStatus.realSize.w, y2: elementStatus.realSize.h });
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [elementStatus.realSize]);
+  useEffect(() => setViewBox({ x1: 0, y1: 0, x2: elementStatus.realSize.w, y2: elementStatus.realSize.h }), [elementStatus.realSize]);
   return (
     <div className="fp-floormap d-flex align-items-center" style={{ minHeight: elementStatus.minHeight }}>
       <Selector searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} graphRef={graphRef} zoomCalculator={zoomCalculator} defaultViewbox={defaultViewbox} animation={animation} />
       <div className={`fp-viewBox ${elementStatus.dragStatus.moving ? "moving" : ""}`} ref={graphRef} onWheel={handleWheelZoom} onMouseDown={handleStart} onMouseUp={handleEnd} onMouseLeave={handleEnd} onMouseMove={handleMouseDrag} onTouchStart={handleStart} onTouchEnd={handleEnd} onTouchMove={handleTouchDragZoom}>
         <svg id="floormap" className={elementStatus.boothInfo ? "active" : ""} ref={svgRef} style={{ translate: `${elementStatus.zoom.x + elementStatus.dragStatus.x}px ${elementStatus.zoom.y + elementStatus.dragStatus.y}px`, scale: `${elementStatus.zoom.scale}`, backgroundColor: "#f1f1f1" }} width="100%" height="100%" viewBox={`${viewBox.x1} ${viewBox.y1} ${viewBox.x2} ${viewBox.y2}`}>
           <Elements type="wall" data={data} />
-          {/* <Elements type="pillar" data={data} /> */}
           <Elements type="text" data={data} />
           <Elements type="room" data={data} size={200} elementStatus={elementStatus} handleBoothClick={handleBoothClick} />
           <Elements type="icon" data={data} size={200} />
@@ -356,6 +342,8 @@ const Event = ({ timeList, title, active }) => {
   const format = (datetime) => (Array(2).join("0") + datetime).slice(-2);
   return (
     <div className={`fp-event my-1 p-1 ${active ? "active" : ""}`} onClick={() => setShowEventInfo(!showEventInfo)}>
+      <span style={{ "--i": 0 }}></span>
+      <span style={{ "--i": 2 }}></span>
       <div className="me-4">{title}</div>
       <div className={`${timeList.length > 1 ? "time-list" : ""} ${showEventInfo ? "active" : ""}`}>
         {timeList.map((time) => {
@@ -547,6 +535,7 @@ const MainArea = () => {
   const types = ["booth", "room"];
   const graphRef = useRef(null);
   const svgRef = useRef(null);
+  const sidebarRef = useRef(null);
   const [floorData, setFloorData] = useState({ loaded: false, data: [] });
   const [searchCondition, setSearchCondition] = useState(() => {
     const params = new URLSearchParams(window.location.search);
@@ -561,6 +550,7 @@ const MainArea = () => {
   const [elementStatus, setElementStatus] = useState(() => {
     const isMobile = /windows phone|android|iPad|iPhone|iPod/i.test(navigator.userAgent || window.opera);
     return {
+      load: false,
       isMobile: isMobile,
       minHeight: isMobile ? window.innerHeight : 0,
       colors: d3.scaleOrdinal().domain(mapText.categories[searchCondition.lang]).range(["rgba(237,125,49,0.6)", "rgba(153,204,255,1)", "rgba(255,255,0,0.6)", "rgba(0,112,192,0.6)", "rgba(112,48,160,0.6)", "rgb(128, 0, 75, 0.2)"]).unknown("rgba(255,255,255)"),
@@ -593,7 +583,20 @@ const MainArea = () => {
           eventTime = [];
         if (d.event) {
           const now = new Date();
-          eventTime = d.event.map((e) => ({ timeList: e.timeList.map((time) => ({ start: new Date(time.start), end: new Date(time.end) })), title: e.title[searchCondition.lang], active: e.timeList.some((time) => new Date(time.start) < now && new Date(time.end) > now) }));
+          eventTime = d.event.map((e) => ({
+            timeList: e.timeList.map((time) => ({ start: new Date(time.start), end: new Date(time.end) })),
+            title: e.title[searchCondition.lang],
+            active: e.timeList.some((time) => {
+              const start = new Date(time.start);
+              const end = new Date(time.end);
+              const nowDate = `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}`;
+              const startDate = new Date(`${start.getFullYear()}-${start.getMonth() + 1}-${start.getDate()}`);
+              const endDate = new Date(`${end.getFullYear()}-${end.getMonth() + 1}-${end.getDate()}`);
+              const startTime = new Date(`${nowDate} ${start.getHours()}:${start.getMinutes()}:${start.getSeconds()}`);
+              const endTime = new Date(`${nowDate} ${end.getHours()}:${end.getMinutes()}:${end.getSeconds()}`);
+              return startDate < now && now < endDate && startTime < now && now < endTime;
+            }),
+          }));
           tags = eventTime.some((e) => e.active) ? tags.concat([mapText.event[searchCondition.lang]]) : tags;
         }
         return { ...d, id: d.id ? d.id : `${d.type}-${d.floor}-${i}`, cat: d.cat ? d.cat[searchCondition.lang] : false, topic: d.topic ? d.topic[searchCondition.lang] : false, tag: tags, mapText: d.mapText ? d.mapText[searchCondition.lang] : false, text: d.text ? d.text[searchCondition.lang] : [], size: d.size ? d.size[searchCondition.lang] : 1, note: d.note ? d.note[searchCondition.lang] : false, event: eventTime, corps: d.corps ? d.corps.map((corp, i) => ({ corpId: `${d.id}-${i}`, org: corp.org[searchCondition.lang], info: corp.info[searchCondition.lang] })) : false, draw: true };
@@ -639,9 +642,9 @@ const MainArea = () => {
   const handleResize = () =>
     setElementStatus((prev) => {
       const smallScreen = window.innerWidth < 768;
-      const sidebar = smallScreen ? prev.sidebar : !smallScreen;
+      const sidebar = prev.load ? (smallScreen ? prev.sidebar : !smallScreen) : smallScreen ? false : true;
       const height = prev.isMobile ? prev.minHeight : window.innerHeight;
-      return { ...prev, smallScreen: smallScreen, sidebar: sidebar, sidebarWidth: smallScreen ? (sidebar ? height * 0.3 : height - 117) : sidebar ? 300 : 30 };
+      return { ...prev, load: true, smallScreen: smallScreen, sidebar: sidebar, sidebarWidth: smallScreen ? (sidebar ? height * 0.3 : height - 117) : sidebar ? 300 : 30 };
     });
   const handleBoothInfo = (d) => {
     setElementStatus((prev) => ({ ...prev, boothInfo: true, boothInfoData: d }));
@@ -730,7 +733,12 @@ const MainArea = () => {
     <StrictMode>
       <div className="fp-main" style={{ "--sidebar-width": `${elementStatus.sidebarWidth}px`, "--tags-height": `${elementStatus.tagsHeight}px` }}>
         <Sidebar data={filterFloorData.filter((d) => types.includes(d.type))} elementStatus={elementStatus} setElementStatus={setElementStatus} searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} handleBoothInfo={handleBoothInfo} svgRef={svgRef} graphRef={graphRef} zoomCalculator={zoomCalculator} dragCalculator={dragCalculator} defaultViewbox={defaultViewbox} animation={animation} />
-        <div className="fp-graph d-flex align-items-center">
+        <div
+          className="fp-graph d-flex align-items-center"
+          onClick={() => {
+            if (elementStatus.smallScreen) setElementStatus((prev) => ({ ...prev, sidebar: false }));
+          }}
+        >
           <Header elementStatus={elementStatus} setSearchCondition={setSearchCondition} />
           <Floormap data={filterFloorData.filter((d) => d.floor == searchCondition.floor && d.draw)} elementStatus={elementStatus} setElementStatus={setElementStatus} handleBoothInfo={handleBoothInfo} searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} graphRef={graphRef} svgRef={svgRef} zoomCalculator={zoomCalculator} dragCalculator={dragCalculator} defaultViewbox={defaultViewbox} animation={animation} />
         </div>
