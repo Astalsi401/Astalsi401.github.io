@@ -8717,12 +8717,12 @@
       { "node": "L", "x": 0, "y": 300 }
     ],
     "id": "M201a",
-    "size": { "tc": 0.35, "en": 0.4 },
+    "size": { "tc": 0.35, "en": 0.25 },
     "cat": { "tc": "精準醫療展區", "en": "Diagnostics, Laboratory Equipment & Services" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": [], "en": [] },
-    "corps": [{ "org": { "tc": "", "en": "" }, "info": { "tc": "", "en": "" } }]
+    "text": { "tc": ["微生物學會"], "en": ["Taiwan Society of", " Microbial Ecology"] },
+    "corps": [{ "org": { "tc": "臺灣微生物學會", "en": "Taiwan Society of Microbial Ecology" }, "info": { "tc": "", "en": "" } }]
   },
   {
     "type": "booth",
