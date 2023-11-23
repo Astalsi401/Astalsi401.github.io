@@ -337,14 +337,15 @@ const ResultList = ({ data, elementStatus, handleBoothInfo, svgRef, graphRef, zo
   );
 };
 
-const Event = ({ timeList, title, active }) => {
+const Event = ({ timeList, title, topic, active }) => {
   const [showEventInfo, setShowEventInfo] = useState(false);
   const format = (datetime) => (Array(2).join("0") + datetime).slice(-2);
   return (
     <div className={`fp-event my-1 p-1 ${active ? "active" : ""}`} onClick={() => setShowEventInfo(!showEventInfo)}>
       <span style={{ "--i": 0 }}></span>
       <span style={{ "--i": 2 }}></span>
-      <div className="me-4">{title}</div>
+      <div className="text-small">{topic}</div>
+      <div>{title}</div>
       <div className={`${timeList.length > 1 ? "time-list" : ""} ${showEventInfo ? "active" : ""}`}>
         {timeList.map((time) => {
           const startDate = `${format(time.start.getMonth() + 1)}/${format(time.start.getDate())}`;
@@ -586,6 +587,7 @@ const MainArea = () => {
           eventTime = d.event.map((e) => ({
             timeList: e.timeList.map((time) => ({ start: new Date(time.start), end: new Date(time.end) })),
             title: e.title[searchCondition.lang],
+            topic: e.topic[searchCondition.lang],
             active: e.timeList.some((time) => {
               const start = new Date(time.start);
               const end = new Date(time.end);
