@@ -930,7 +930,28 @@
     "text": { "tc": ["慈濟醫院"], "en": ["Hualien Tzu Chi", " Medical Center"] },
     "corps": [
       { "org": { "tc": "花蓮慈濟醫學中心", "en": "Hualien Tzu Chi Medical Center" }, "info": { "tc": "慈濟慈善足跡遍布全球122個國家地區，花蓮慈濟醫院已為國際化醫學中心，37年來在醫療領域中累積的豐碩成果，受到醫界、產官學界以及眾多媒體關注，多年來結合慈善、教育、人文志業，持續為台灣醫療體系帶來創新與希望。\n2023年本院攜手各合作機構共同參展主題包含遠距醫療、智慧醫療、細胞治療、特色醫療、創新研發、國際醫療等主題，現場亦提供名醫講座、體驗活動等，敬邀醫療及生技醫藥產業之專業人士、創業投資者、病友及家屬、媒體先進蒞臨。\n", "en": "Tzu Chi Charity Foundation had set foot around the world in over 122 countries. Therefore, Hualien Tzu Chi Hospital already became an internationalized medical center, which has accumulated many fruitful accomplishments over 37 years in medical aspects. For many years, it collaborated with charity, education, culture main missions and continued to provide innovation and hope within the Taiwan medical systems. Hence, our hospital participates in this exhibition with co-development firms. Our central theme this year is ”Stem cell innovative therapy” followed with other hot issues, including cell therapy, cancer immune treatment, development of new drugs and innovative medical appliances, smart healthcare, preventive medicine, international healthcare, and New Southbound Projects. We hope to share our accomplishments with society. Through this exhibition, our hospital wishes to enhance international links and achieve the initial intention of innovative development with people-oriented thoughts in the end." } },
-      { "org": { "tc": "國璽幹細胞應用技術股份有限公司", "en": "Gwo Xi Stem Cell Applied Technology Co., Ltd." }, "info": { "tc": "國璽幹細胞應用技術股份有限公司於2011年進駐新竹生醫園區，投入幹細胞應用技術開發及幹細胞製劑，克服目前尚未獲得滿足的醫療需求。透過整合醫藥級幹細胞製劑生產技術平台與諸多核心技術，我們已開發多項專有製程技術，並且已將四支幹細胞新藥推動進入臨床試驗。為擴大幹細胞製劑量產規模及提升品質穩定度，國璽除了從製造開始就採用模組製程的思維外，於園區內打造【PIC/S GMP幹細胞製劑藥廠】，穩健地走向規模化量產，同時持續拓展細胞治療領域的開發，與強化細胞治療產業鏈上、中、下游的佈局。", "en": "Gwo Xi Stem Cell Company has established the R&D center for cell therapy development since 2011. We are committed to developing stem cell medicines that have the potential to help patients with unmet medical needs. Our production platform fully comply with medical regulations (Good Tissue Practice, GTP) in Taiwan. We have three clinical trials are ongoing in Taiwan, and one clinical trial is ongoing in Vietnam by now. In the future, we will have established the PIC/S GMP grade stem cell preparation factory (15,225 m2 built-out space) in Hsinchu Biomedical Science Park in Taiwan to put stem cell-based medicinal products into practice." } }
+      { "org": { "tc": "國璽幹細胞應用技術股份有限公司", "en": "Gwo Xi Stem Cell Applied Technology Co., Ltd." }, "info": { "tc": "國璽幹細胞應用技術股份有限公司於2011年進駐新竹生醫園區，投入幹細胞應用技術開發及幹細胞製劑，克服目前尚未獲得滿足的醫療需求。透過整合醫藥級幹細胞製劑生產技術平台與諸多核心技術，我們已開發多項專有製程技術，並且已將四支幹細胞新藥推動進入臨床試驗。為擴大幹細胞製劑量產規模及提升品質穩定度，國璽除了從製造開始就採用模組製程的思維外，於園區內打造【PIC/S GMP幹細胞製劑藥廠】，穩健地走向規模化量產，同時持續拓展細胞治療領域的開發，與強化細胞治療產業鏈上、中、下游的佈局。", "en": "Gwo Xi Stem Cell Company has established the R&D center for cell therapy development since 2011. We are committed to developing stem cell medicines that have the potential to help patients with unmet medical needs. Our production platform fully comply with medical regulations (Good Tissue Practice, GTP) in Taiwan. We have three clinical trials are ongoing in Taiwan, and one clinical trial is ongoing in Vietnam by now. In the future, we will have established the PIC/S GMP grade stem cell preparation factory (15,225 m2 built-out space) in Hsinchu Biomedical Science Park in Taiwan to put stem cell-based medicinal products into practice." } },
+      { "org": { "tc": "茂士榮生醫", "en": "茂士榮生醫" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "遠傳電信", "en": "遠傳電信" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "宏潤", "en": "宏潤" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "遠東醫電", "en": "遠東醫電" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "尖端醫", "en": "尖端醫" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "商之器", "en": "商之器" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "資拓宏宇", "en": "資拓宏宇" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "臺灣粒線體", "en": "臺灣粒線體" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "雅培", "en": "雅培" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "宏騏", "en": "宏騏" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "雄鷹", "en": "雄鷹" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "長弘", "en": "長弘" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "裕隆", "en": "裕隆" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "通用幹細胞", "en": "通用幹細胞" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "鈦隼", "en": "鈦隼" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "NVIDIA", "en": "NVIDIA" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "慈濟大學", "en": "慈濟大學" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "慈濟科技大學", "en": "慈濟科技大學" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "大林慈濟醫院", "en": "大林慈濟醫院" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "靜思書軒", "en": "靜思書軒" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "衛生福利部", "en": "衛生福利部" }, "info": { "tc": "", "en": "" } }
     ],
     "event": [
       {
@@ -1899,7 +1920,12 @@
     "topic": { "tc": "智慧健康", "en": "Consumer health" },
     "tag": { "tc": [], "en": [] },
     "text": { "tc": ["美容醫學", "產業全聯會"], "en": ["Taiwan Aesthetic", "Medicine Industry", "Association"] },
-    "corps": [{ "org": { "tc": "臺灣美容醫學產業全國聯合會", "en": "Taiwan Aesthetic Medicine Industry Association" }, "info": { "tc": "結合醫美全聯會各會員廠商之醫材、產品與服務，打造台灣智慧醫療之完整產業鏈。", "en": "The medical device, product, and service of members of TAMIO will show the comprehensive field of smart medicine in Taiwan." } }]
+    "corps": [
+      { "org": { "tc": "臺灣美容醫學產業全國聯合會", "en": "Taiwan Aesthetic Medicine Industry Association" }, "info": { "tc": "結合醫美全聯會各會員廠商之醫材、產品與服務，打造台灣智慧醫療之完整產業鏈。", "en": "The medical device, product, and service of members of TAMIO will show the comprehensive field of smart medicine in Taiwan." } },
+      { "org": { "tc": "星醫美學集團", "en": "星醫美學集團" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "臺灣美容外科醫學會", "en": "臺灣美容外科醫學會" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "煜健生醫", "en": "煜健生醫" }, "info": { "tc": "", "en": "" } }
+    ]
   },
   {
     "type": "booth",
@@ -4155,7 +4181,10 @@
     "topic": { "tc": "無齡長照", "en": "Long-term care & assistive technology" },
     "tag": { "tc": [], "en": [] },
     "text": { "tc": ["慢病", "好日子"], "en": ["GOOD", " DAY"] },
-    "corps": [{ "org": { "tc": "慢病好日子", "en": "GOOD DAY" }, "info": { "tc": "「慢病好日子」從治療、照護、用藥、運動和營養等生活五大面向，關心慢性病友，提供共病資訊、病友互動、以及專家撇步等內容， 與慢粉一起好好過日子。\n\n慢病好日子邀請醫師、營養師、物理治療師、護理師等專家，透過慢病影音、慢病愛你慣講座、慢病沙龍等方式與慢粉互動，亦透過慢病電子報傳遞慢性病資訊，藉由專欄文章、影音和互動課程，提供並回覆慢粉需要的內容，慢粉們不再孤軍奮戰。\n\n根據健保署統計，2022年台灣因慢性病就醫人數達到1,286萬人，其中718萬人罹患兩項以上慢性病。所以，慢病好日子不只討論單一疾病，更融入共病問題，帶給慢粉們多元的疾病資訊，廣邀慢性病友及家屬一起加入慢病好日子！", "en": "“Good Day” cares about chronic patients from the five aspects of life, including treatment, care, medication, exercise and nutrition, and provides content such as comorbidity information, patient interaction, and expert advice.\n\n“Good Day” invites experts such as doctors, nutritionists, physical therapists, and nurses to interact with patients through videos, lectures, and activities, and also through e-newsletters providing information and column articles. \n\n“Good Day” not only discusses a single disease, but also integrates the problem of comorbidity. We invite the patients and family members to join us!" } }]
+    "corps": [
+      { "org": { "tc": "慢病好日子", "en": "GOOD DAY" }, "info": { "tc": "「慢病好日子」從治療、照護、用藥、運動和營養等生活五大面向，關心慢性病友，提供共病資訊、病友互動、以及專家撇步等內容， 與慢粉一起好好過日子。\n\n慢病好日子邀請醫師、營養師、物理治療師、護理師等專家，透過慢病影音、慢病愛你慣講座、慢病沙龍等方式與慢粉互動，亦透過慢病電子報傳遞慢性病資訊，藉由專欄文章、影音和互動課程，提供並回覆慢粉需要的內容，慢粉們不再孤軍奮戰。\n\n根據健保署統計，2022年台灣因慢性病就醫人數達到1,286萬人，其中718萬人罹患兩項以上慢性病。所以，慢病好日子不只討論單一疾病，更融入共病問題，帶給慢粉們多元的疾病資訊，廣邀慢性病友及家屬一起加入慢病好日子！", "en": "“Good Day” cares about chronic patients from the five aspects of life, including treatment, care, medication, exercise and nutrition, and provides content such as comorbidity information, patient interaction, and expert advice.\n\n“Good Day” invites experts such as doctors, nutritionists, physical therapists, and nurses to interact with patients through videos, lectures, and activities, and also through e-newsletters providing information and column articles. \n\n“Good Day” not only discusses a single disease, but also integrates the problem of comorbidity. We invite the patients and family members to join us!" } },
+      { "org": { "tc": "聯合報健康事業部", "en": "聯合報健康事業部" }, "info": { "tc": "", "en": "" } }
+    ]
   },
   {
     "type": "booth",
@@ -5744,7 +5773,11 @@
       { "org": { "tc": "磐石醫藥生技股份有限公司", "en": "Rock BioMedical, Inc." }, "info": { "tc": "磐石醫藥生技的低醣廣效 mRNA 流感疫苗計劃，在今年九月舉辦的首屆莫德納台灣 mRNA前瞻新創獎當中脫穎而出， 是五個獲選團隊當中， 唯一獲此殊榮的私人企業團隊。這個計劃是磐石團隊延續先前開發的次世代廣效新冠疫苗，運用相同的醣化工程技術平台，在流感病毒的血凝素 HA蛋白序列上， 做選擇性醣位點修飾， 並結合公司在脂質奈米粒包裹技術上的最新突破，針對高度變異的流感病毒，期望在群體誘發廣泛的免疫保護力，針對季節性，甚至大流行性流感，開發出更為安全有效的疫苗，以降低重症死亡機率，並減低每年重複施打的需要。同樣的技術將來可望廣泛應用在各種流行性病毒感染疾病。", "en": "Rock BioMedical’s Low-sugar universal mRNA vaccine program against influenza was chosen as a winner of the first annual Moderna Taiwan mRNA Innovation Award in September 2023. Rock BioMedical was the only private company among the five recipients to win this award. This program is an extension of our recent development of a low-sugar universal COVID vaccine. It combined our latest insight in the glycoengineering of mRNA vaccines through selective glycosite mutations of the vaccine coding sequences to expose conserved epitopes while preserving overall antigen protein structures. It also incorporates our latest breakthrough in the novel dendritic cell targeting LNP (lipid nanoparticle) technology. We believe it has a strong potential to dramatically improve the safety and efficacy profiles over the current mRNA vaccines and offers broad immune protection against seasonal and potential pandemic flu. It may also reduce the need in the future for the annual administration of seasonal flu vaccines." } },
       { "org": { "tc": "感染性核心設施/新興傳染症專題研究中心", "en": "Emerging Infectious Disease Division / ID Core" }, "info": { "tc": "", "en": "" } },
       { "org": { "tc": "核酸先導設施", "en": "BioTReC Nucleic Acid pilot facility" }, "info": { "tc": "", "en": "" } },
-      { "org": { "tc": "國家生技研究園區學苑", "en": "NBRP Academy" }, "info": { "tc": "", "en": "" } }
+      { "org": { "tc": "國家生技研究園區學苑", "en": "NBRP Academy" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "科進製藥", "en": "科進製藥" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "諾倫科技", "en": "諾倫科技" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "藥華醫藥股份有限公司", "en": "藥華醫藥股份有限公司" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "研生生醫", "en": "研生生醫" }, "info": { "tc": "", "en": "" } }
     ]
   },
   {
@@ -8329,7 +8362,16 @@
       { "org": { "tc": "鐳鼎科技股份有限公司", "en": "LIGHTMED DENTAL TECHNOLOGY CORPORATION" }, "info": { "tc": "鐳鼎科技為台灣第一家，也是唯一自製 Er:YAG 牙科水雷射系統的公司【自有品牌: LIGHTMED】。【LIGHTMED】Er:YAG 牙科水雷射共有10+10種軟、硬組織治療模式可供醫師使用。【LIGHTMED】Er:YAG 牙科水雷射採內建空壓設計，不須外接空壓機的優異性，讓機台可靈活運用於不同診間。\n\n【LIGHTMED】Er:YAG 牙科水雷射其他優點：\n微創精準\n殺菌凝血\n低度熱傷害\n無高頻噪音\n刺激組織再生\n減少麻醉使用\n\n相對於牙科傳統治療刀具與高速鑽牙機的治療模式，適時的加入【LIGHTMED】Er:YAG 牙科水雷射的使用，將提供病患更舒適便利的治療感受。\n\n製造原廠: 鐳鼎科技股份有限公司 \n總經銷: 普一股份有限公司\n", "en": "LightMed Dental is a leading company who designs and produces 2940nm Er:YAG dental laser device with our brand,【LIGHTMED】. 【LIGHTMED】Er:YAG dental laser has 20 preset parameters, 10 for soft tissue and 10 for hard tissue. With built-in air compressor,【LIGHTMED】Er:YAG dental laser can provide stable laser performance and also the flexibility for doctors to move the device between different clinic rooms.\n\nWhat are more advantages of【LIGHTMED】Er:YAG dental laser:\n1.\tMinimally invasive / Accurate\n2.\tBactericidal / Coagulation \n3.\tLow-degree heat damage.\n4.\tNo high-pitched sound and vibrations.\n5.\tTissue regeneration led from biostimulation.\n6.\tLess anesthesia uses.\n\nComparing with traditional dental scalpels and handpieces, using【LIGHTMED】Er:YAG dental laser will provide patients with more comfortable and easy treatment experiences. \n\nManufacture By：LIGHTMED DENTAL TECHNOLOGY CORPORATION\nDistribute By (Exclusive in Taiwan)：POYE X-RAY MANUFACTURING CORPORATION " } },
       { "org": { "tc": "德膚有限公司", "en": "DERFU Co., LTD." }, "info": { "tc": "德膚有限公司起源於對紫草(根)原料於皮膚照護多元應用開發的構想，故而從個體照護型保養品產品，繼而醫材規格產品發展。2021年7月創立以來，於2022年第二季已初步完成兩款產品：德膚保潤型紫舒霜及德膚清爽型紫凝露等上市。", "en": "DERFU Co., Ltd. was born with the idea of developing " } },
       { "org": { "tc": "醫百科技股份有限公司", "en": "EPED Inc." }, "info": { "tc": "RETINA 整合重覆跨顱磁刺激(rTMS)精準定位\n重覆跨顱磁刺激是種針對憂鬱症的非侵入性腦部儀器治療，利用電流經由刺激線圈產生磁場在由磁場來提升或抑制大腦神經元的活動性，例如刺激重度憂鬱症患者的大腦左側前額葉，來增進額葉調控情緒的功能。  其測量該運動神經元動作電位閥值，若是刺激位置偏差1mm，則可能會損失多達30%之能量輸出，利用RETINA導航系統結合重覆跨顱磁刺激(rTMS)預期將可精準定位達到協助醫師即時檢視磁場作治療頭部的所在位置，保持最佳治療成效。", "en": "RETINA Integration for Precise Positioning of Repetitive Transcranial Magnetic Stimulation (rTMS)\n\nRepetitive Transcranial Magnetic Stimulation (rTMS) is a non-invasive brain instrument therapy used to treat depression. It involves the use of electrical currents to generate a magnetic field through a stimulation coil, which either enhances or inhibits the activity of brain neurons by using the magnetic field. For example, it stimulates the left frontal lobe of the brain in patients with severe depression to enhance the regulation of emotions.\n\nIt measures the threshold of action potentials in motor neurons, and a deviation of 1mm in the stimulation location can result in a loss of up to 30% of energy output. By combining the RETINA navigation system with repetitive transcranial magnetic stimulation (rTMS), it is expected to achieve precise positioning, allowing doctors to instantly view the location of the magnetic field for treating the head, thus maintaining optimal treatment effectiveness. " } },
-      { "org": { "tc": "儕陞生化技術股份有限公司", "en": "Charsire Biotechnology Corp." }, "info": { "tc": "「儕陞生化技術股份有限公司」自創立以來即致力於植物性外用製劑的研究與開發。將近20年的外用製劑開發經驗同時納入了美國FDA植物藥品管精神，並整體規劃將製程從原料、半成品到成品做最適化的安排及規劃。同時，仕都莎善尼仕創傷敷料主要成分來源為日常食用之大宗作物「大豆」，大豆此一原料不僅來源穩定、取得容易且價格合理，使得仕都莎善尼仕創傷敷料之生產成本極具競爭力。", "en": "Since establishment, Charsire Biotech. has been committed to the research and development of topically applied botanical preparation. With 20 years of experience in development of topical preparations and the US FDA quality guideline for botanical drugs , Charsire optimally arranges and manages the production process from raw materials, semi-finished products to finished products. Also, the main ingrediants sources of Sanovazo comes from soybean. Soybean is not only a stable source, but also easy to obtain and have a reasonable price, which makes the cost of Sanovazo quite competitive.\n\nSanovazo trauma dressing is one of the few products for caring for the side effects of radiotherapy. In terms of clinical efficacy, it can effectively minimize the side effects of radiation therapy on the skin. The safety of Sanovazo trauma dressing has completed the pre-clinical toxicology study for topical new drugs. Sanovazo has highly completed its functionality and safety." } }
+      { "org": { "tc": "儕陞生化技術股份有限公司", "en": "Charsire Biotechnology Corp." }, "info": { "tc": "「儕陞生化技術股份有限公司」自創立以來即致力於植物性外用製劑的研究與開發。將近20年的外用製劑開發經驗同時納入了美國FDA植物藥品管精神，並整體規劃將製程從原料、半成品到成品做最適化的安排及規劃。同時，仕都莎善尼仕創傷敷料主要成分來源為日常食用之大宗作物「大豆」，大豆此一原料不僅來源穩定、取得容易且價格合理，使得仕都莎善尼仕創傷敷料之生產成本極具競爭力。", "en": "Since establishment, Charsire Biotech. has been committed to the research and development of topically applied botanical preparation. With 20 years of experience in development of topical preparations and the US FDA quality guideline for botanical drugs , Charsire optimally arranges and manages the production process from raw materials, semi-finished products to finished products. Also, the main ingrediants sources of Sanovazo comes from soybean. Soybean is not only a stable source, but also easy to obtain and have a reasonable price, which makes the cost of Sanovazo quite competitive.\n\nSanovazo trauma dressing is one of the few products for caring for the side effects of radiotherapy. In terms of clinical efficacy, it can effectively minimize the side effects of radiation therapy on the skin. The safety of Sanovazo trauma dressing has completed the pre-clinical toxicology study for topical new drugs. Sanovazo has highly completed its functionality and safety." } },
+      { "org": { "tc": "柏瑞醫", "en": "柏瑞醫" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "泉沂", "en": "泉沂" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "泰陞", "en": "泰陞" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "創甡生技", "en": "創甡生技" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "惠合再生", "en": "惠合再生" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "霖揚", "en": "霖揚" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "聯華生技", "en": "聯華生技" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "皇亮", "en": "皇亮" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "亞果", "en": "亞果" }, "info": { "tc": "", "en": "" } }
     ]
   },
   {
@@ -8419,7 +8461,18 @@
     "text": { "tc": ["竹科"], "en": ["Hsinchu ", "Science Park"] },
     "corps": [
       { "org": { "tc": "國家科學及技術委員會新竹科學園區管理局", "en": "Hsinchu Science Park Bureau National Science Technology Council" }, "info": { "tc": "參展的竹科宜蘭園區新創公司包含有針對需要農村場域試驗及地方轉型工作之農民，提供農村場域及客戶媒合及銀柳提煉醫材的蘭陽美人智農生技有限公司、針對有簡化採購流程及高度耐用性聲學產品之客戶提供高階耳機、耳麥等音頻產品/醫療服務的亞立田股份有限公司、提供感測、雲端AI智能控制系統的一站式空氣治理服務的翔聿安科技股份有限公司等九家新創廠家，各家公司均於展會中竹科宜蘭園區專區展出其特色產品與服務。", "en": "The exhibiting startups at the Zhubei-Yilan Park in the Hsinchu Science Park include nine companies that cater to the needs of farmers requiring rural field testing and local transformation initiatives. These companies showcase their distinctive products and services at the exhibition. The featured startups are:\n\nLanyang Beauty Intelligent Agriculture Biotechnology Co., Ltd.:\nLanyang Beauty focuses on providing rural field resources and customer matchmaking for farmers, as well as extracting medical materials from silver willow.\n\nArlatian Co., Ltd.:\nArlatian specializes in delivering high-end audio products/medical services such as advanced headphones and earphones with simplified procurement processes and high durability for customers.\n\nXiangyu An Technology Co., Ltd.:\nXiangyu An offers a comprehensive air treatment service, integrating sensors, cloud-based AI intelligent control systems, and delivering solutions for air quality management.\n\nThese companies, along with six others, showcase their distinctive products and services within the dedicated Zhubei-Yilan Park section of the exhibition." } },
-      { "org": { "tc": "亞立田股份有限公司", "en": "Aliteam Inc. " }, "info": { "tc": "輔助聽力器AL-531\n左右耳機底部麥克風增強了收音方向性\n內建抑音控制，如環境中突然出現巨大聲響，能抑制音量，保護耳朵\n三種頻率模式選擇 (N/M/W)，可依據不同環境選擇不同的模式\n特殊側邊傾斜入耳式設計，給您輕鬆舒適的聆聽體驗\n小巧便攜,操作簡單\n15 小時的長效電池續航力\n", "en": "Assistive Listening AL-531\nDual L/R microphones enhance natural sound directionality.\nAutomatic sound adjustment function which control the sudden loud sound \nThree sound levels modes to help you in getting the best hearing experience. (N/M/W)\nNew angle ear bud give you an easy and comfortable listening \nSmall And portable,  Easy to operate\nUp to 15 hours of battery life\n" } }
+      { "org": { "tc": "亞立田股份有限公司", "en": "Aliteam Inc. " }, "info": { "tc": "輔助聽力器AL-531\n左右耳機底部麥克風增強了收音方向性\n內建抑音控制，如環境中突然出現巨大聲響，能抑制音量，保護耳朵\n三種頻率模式選擇 (N/M/W)，可依據不同環境選擇不同的模式\n特殊側邊傾斜入耳式設計，給您輕鬆舒適的聆聽體驗\n小巧便攜,操作簡單\n15 小時的長效電池續航力\n", "en": "Assistive Listening AL-531\nDual L/R microphones enhance natural sound directionality.\nAutomatic sound adjustment function which control the sudden loud sound \nThree sound levels modes to help you in getting the best hearing experience. (N/M/W)\nNew angle ear bud give you an easy and comfortable listening \nSmall And portable,  Easy to operate\nUp to 15 hours of battery life\n" } },
+      { "org": { "tc": "宏森生醫", "en": "宏森生醫" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "德膚", "en": "德膚" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "美落佳", "en": "美落佳" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "翔聿安", "en": "翔聿安" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "元健大和", "en": "元健大和" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "和曜生技", "en": "和曜生技" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "臺灣基康", "en": "臺灣基康" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "瀚源生醫", "en": "瀚源生醫" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "瀚生醫電", "en": "瀚生醫電" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "捷絡", "en": "捷絡" }, "info": { "tc": "", "en": "" } },
+      { "org": { "tc": "群曜醫電", "en": "群曜醫電" }, "info": { "tc": "", "en": "" } }
     ]
   },
   {
