@@ -1919,7 +1919,7 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer Health Products" },
     "topic": { "tc": "智慧健康", "en": "Consumer health" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["美容醫學", "產業全聯會"], "en": ["Taiwan Aesthetic", "Medicine Industry", "Association"] },
+    "text": { "tc": ["美容醫學", "產業全聯會"], "en": ["Taiwan Aesthetic ", "Medicine Industry", " Association"] },
     "corps": [
       { "org": { "tc": "台灣美容醫學產業全國聯合會", "en": "Taiwan Aesthetic Medicine Industry Association" }, "info": { "tc": "結合醫美全聯會各會員廠商之醫材、產品與服務，打造台灣智慧醫療之完整產業鏈。", "en": "The medical device, product, and service of members of TAMIO will show the comprehensive field of smart medicine in Taiwan." } },
       { "org": { "tc": "星醫美學集團", "en": "星醫美學集團" }, "info": { "tc": "", "en": "" } },
@@ -3280,7 +3280,7 @@
     "topic": { "tc": "預防醫學", "en": "Preventive medicine" },
     "tag": { "tc": ["健康大檢測"], "en": [] },
     "text": { "tc": ["英華達"], "en": ["Inventec Appliances"] },
-    "corps": [{ "org": { "tc": "英華達股份有限公司", "en": "Inventec Appliances Corp." }, "info": { "tc": "\"Chiline 全家寶全方位生理量測系統，醫療院所、家庭及個人健康管理的雲端生理量測系統。Chiline 循體欣循環腫瘤細胞全自動檢測系統，早期、快速、簡單、準確且全自動化的循環腫瘤細胞檢測，用以篩檢及追蹤癌症。Chiline 思邁思邁輸液系統，整合了精準輸液幫浦、輸液套及連線系統，可提升輸液安全及提升護理工作效率。\n\"\n", "en": "\"“ Chiline” Multifunction Physiological Measurement System contains medical devices which meet individual, family, and professional telecare needs.\n\n“Chiline” CATCH System is a fully  automated CTC(Circulating Tumor Cell) processor which provides a fast and simple way for CTC detection. \n\n\n“Chiline” SmartMed infusion system is a combination of infusion pump,infusion set, and SmartNet software which can increase safety of infusion therapy and efficiency of nursing staffs.\n\"\n" } }],
+    "corps": [{ "org": { "tc": "英華達股份有限公司", "en": "Inventec Appliances Corp." }, "info": { "tc": "Chiline 全家寶全方位生理量測系統，醫療院所、家庭及個人健康管理的雲端生理量測系統。Chiline 循體欣循環腫瘤細胞全自動檢測系統，早期、快速、簡單、準確且全自動化的循環腫瘤細胞檢測，用以篩檢及追蹤癌症。Chiline 思邁思邁輸液系統，整合了精準輸液幫浦、輸液套及連線系統，可提升輸液安全及提升護理工作效率。", "en": "“Chiline” Multifunction Physiological Measurement System contains medical devices which meet individual, family, and professional telecare needs.\n\n“Chiline” CATCH System is a fully  automated CTC(Circulating Tumor Cell) processor which provides a fast and simple way for CTC detection. \n\n\n“Chiline” SmartMed infusion system is a combination of infusion pump,infusion set, and SmartNet software which can increase safety of infusion therapy and efficiency of nursing staffs." } }],
     "event": [
       {
         "timeList": [
@@ -5620,10 +5620,10 @@
     "id": "L501",
     "size": { "tc": 0.35, "en": 0.25 },
     "cat": { "tc": "精準醫療展區", "en": "Diagnostics, Laboratory Equipment & Services" },
-    "topic": { "tc": "精準檢測", "en": "Diagnostics, laboratory equipment & services" },
+    "topic": { "tc": "", "en": "" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["旺北", "科技"], "en": ["North-", "vision"] },
-    "corps": [{ "org": { "tc": "旺北科技", "en": "North-vision Tech. Inc." }, "info": { "tc": "1.多參數生理訊號監視器：ECG心電圖可經由AI智慧演算獲得進一步的HRV交感與副交\n感神經拮抗資訊。\n2.穿戴式脈搏血氧濃度計：這項產品具備AI智慧分析軟體，可獲得受測者ODI資訊，可數位化評估睡眠時睡眠呼吸中止症嚴重程度。\n3.每一款產品，都具備無線傳輸功能：可因應客戶需求以有線（RS-232、USB、Ethernet）或無線方式進行資料傳輸，無論藍芽、Wifi或是3G/4G皆已是成熟的技術，且已模組化。\n4.超純水電解氫氧機: 氫氣對健康有益，尤其是對於年長者, 可預防疾病並促進健康。", "en": "1. Multi-parameter Patient Monitor: with HRV Function\n(1) Patient Monitor to show all of valuable HRV parameters. \n(2) To prevent Cardiovascular diseases like MI (Myocardial Infarction).  \n2. Wearable Pulse Oximeter : Apnea/Hypopnea Evaluation Tool \n(1) To measure SpO2 and Pulse Rate while all night sleep.\n(2) To calculate AHI/ODI to check how serious of Apnea syndrome. \n3. All products have wire/wireless transmission capabilities: \nIt can transmit data by cable (RS-232, USB, Ethernet) or wireless (Bluetooth, Wifi or 3G/4G) according to customer's requirements. \n4. Hydrogen &amp; Oxygen Generator\n(1) To get health and prevent disease in advance.\n(2) Hydrogen is good to Health especially in the age generation." } }]
+    "text": { "tc": [], "en": [] },
+    "corps": []
   },
   {
     "type": "booth",
