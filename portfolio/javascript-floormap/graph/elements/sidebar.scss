@@ -1,14 +1,14 @@
 .fp-sidebar {
-  height: 100dvh;
+  height: 100%;
   width: 300px;
-  top: 0;
   left: 0;
+  top: 0;
   background-color: var(--fp-sidebar-bg);
   position: fixed;
   z-index: index($list: $index, $value: sidebar);
   overflow: hidden;
   transform: translateX(calc(-100% + var(--sidebar-width)));
-  transition: transform var(--fp-time);
+  transition: transform var(--fp-time), height var(--fp-time);
 }
 .fp-search {
   flex-wrap: nowrap;
@@ -85,9 +85,7 @@
   .fp-sidebar {
     width: 100%;
     height: calc(100% - var(--sidebar-width));
-    transform: translate(0, 0);
-    top: var(--sidebar-width);
-    transition: top var(--fp-time);
+    transform: translate(0, calc(var(--sidebar-width)));
   }
 }
 .fp-advanced {

@@ -159,7 +159,7 @@ const Floormap = ({ data, elementStatus, setElementStatus, handleBoothInfo, sear
   };
   useEffect(() => setViewBox({ x1: 0, y1: 0, x2: elementStatus.realSize.w, y2: elementStatus.realSize.h }), [elementStatus.realSize]);
   return (
-    <div className="fp-floormap d-flex align-items-center" style={{ height: elementStatus.finalHeight }}>
+    <div className="fp-floormap d-flex align-items-center" style={{ height: elementStatus.height }}>
       <Selector searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} graphRef={graphRef} zoomCalculator={zoomCalculator} defaultViewbox={defaultViewbox} animation={animation} />
       <div className={`fp-viewBox ${elementStatus.dragStatus.moving ? "moving" : ""}`} ref={graphRef} onWheel={handleWheelZoom} onMouseDown={handleStart} onMouseUp={handleEnd} onMouseLeave={handleEnd} onMouseMove={handleMouseDrag} onTouchStart={handleStart} onTouchEnd={handleEnd} onTouchMove={handleTouchDragZoom}>
         <svg id="floormap" className={elementStatus.boothInfo ? "active" : ""} ref={svgRef} style={{ translate: `${elementStatus.zoom.x + elementStatus.dragStatus.x}px ${elementStatus.zoom.y + elementStatus.dragStatus.y}px`, scale: `${elementStatus.zoom.scale}`, backgroundColor: "#f1f1f1" }} width="100%" height="100%" viewBox={`${viewBox.x1} ${viewBox.y1} ${viewBox.x2} ${viewBox.y2}`}>
@@ -304,7 +304,6 @@ const Result = ({ d, elementStatus, handleBoothInfo, svgRef, graphRef, zoomCalcu
   const handleResultClick = () => {
     if (!elementStatus.sidebar) return;
     handleBoothInfo(d);
-    return;
     animation();
     // 定位選取攤位中心點至地圖中心點
     const svgPoint = svgRef.current.createSVGPoint();
@@ -425,8 +424,8 @@ const BoothInfoDetail = ({ data, setSearchCondition, elementStatus, setElementSt
 const BoothInfo = ({ data, setSearchCondition, elementStatus, setElementStatus }) => {
   return (
     <div className={`fp-booth-info ${elementStatus.boothInfo ? "active" : ""}`}>
-      <div>
-        <div className="fp-toggle d-flex align-items-center justify-content-center active" onClick={() => setElementStatus((prev) => ({ ...prev, boothInfo: false }))}>
+      <div onClick={() => setElementStatus((prev) => ({ ...prev, boothInfo: false }))}>
+        <div className="fp-toggle d-flex align-items-center justify-content-center active">
           <span />
         </div>
       </div>
@@ -488,8 +487,13 @@ const Selector = ({ searchCondition, setSearchCondition, handleSearchChange, gra
           </svg>
         </span>
         <span className="d-flex justify-content-center align-items-center text-xx-large shadow" onClick={defaultViewbox}>
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
-            <path d="M4 9V5.6C4 5.03995 4 4.75992 4.10899 4.54601C4.20487 4.35785 4.35785 4.20487 4.54601 4.109C4.75992 4 5.03995 4 5.6 4L9 4M4 15V18.4C4 18.9601 4 19.2401 4.10899 19.454C4.20487 19.6422 4.35785 19.7951 4.54601 19.891C4.75992 20 5.03995 20 5.6 20L9 20M15 4H18.4C18.9601 4 19.2401 4 19.454 4.10899C19.6422 4.20487 19.7951 4.35785 19.891 4.54601C20 4.75992 20 5.03995 20 5.6V9M20 15V18.4C20 18.9601 20 19.2401 19.891 19.454C19.7951 19.6422 19.6422 19.7951 19.454 19.891C19.2401 20 18.9601 20 18.4 20H15" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          <svg width="26" height="26" viewBox="0 0 512 512">
+            <g transform="translate(0,512) scale(0.1,-0.1)" fill="#000000" stroke="none">
+              <path d="M555 4673 c-44 -23 -84 -63 -106 -105 -18 -35 -19 -64 -19 -513 0 -407 2 -481 15 -513 64 -152 273 -172 370 -34 l30 44 3 206 3 206 577 -576 c317 -317 591 -583 608 -592 87 -43 175 -28 245 43 71 70 86 158 43 245 -9 17 -275 291 -592 608 l-576 577 206 3 206 3 44 30 c138 97 118 306 -34 370 -56 23 -978 22 -1023 -2z" />
+              <path d="M3540 4674 c-167 -72 -165 -318 2 -389 29 -12 79 -15 230 -15 l193 0 -577 -577 c-317 -318 -583 -592 -592 -609 -43 -87 -28 -175 43 -245 70 -71 158 -86 245 -43 17 9 291 275 609 592 l577 577 0 -193 c0 -151 3 -201 15 -230 64 -152 273 -172 370 -34 l30 44 3 489 c2 437 1 492 -14 521 -23 46 -63 87 -106 109 -35 18 -64 19 -515 19 -404 -1 -483 -3 -513 -16z" />
+              <path d="M2065 2335 c-22 -8 -42 -15 -45 -15 -2 0 -267 -262 -587 -582 l-583 -583 0 193 c0 151 -3 201 -15 230 -71 169 -319 169 -390 0 -13 -32 -15 -106 -15 -513 0 -418 2 -480 16 -508 23 -45 63 -86 107 -108 36 -19 59 -19 526 -17 l489 3 44 30 c138 97 118 306 -34 370 -29 12 -79 15 -230 15 l-193 0 577 578 c317 317 583 591 591 607 42 84 25 184 -40 246 -21 20 -47 41 -59 47 -38 20 -117 23 -159 7z" />
+              <path d="M2915 2336 c-54 -20 -121 -92 -135 -147 -13 -48 -7 -106 16 -153 9 -17 275 -291 592 -608 l577 -578 -193 0 c-151 0 -201 -3 -230 -15 -169 -71 -169 -319 0 -390 32 -13 106 -15 513 -15 449 0 478 1 513 19 43 22 83 63 106 108 14 28 16 90 16 508 0 407 -2 481 -15 513 -71 169 -319 169 -390 0 -12 -29 -15 -79 -15 -230 l0 -193 -577 577 c-318 317 -593 584 -611 593 -47 23 -120 28 -167 11z" />
+            </g>
           </svg>
         </span>
         <span className="d-flex justify-content-center align-items-center text-xx-large shadow" onClick={() => handleClickZoom(0.7)}>
@@ -555,7 +559,6 @@ const MainArea = () => {
       isMobile: isMobile,
       width: isMobile ? window.innerHeight : "100%",
       height: isMobile ? window.innerHeight : "100vh",
-      finalHeight: isMobile ? window.innerHeight : "100vh",
       colors: d3.scaleOrdinal().domain(mapText.categories[searchCondition.lang]).range(["rgba(237,125,49,0.6)", "rgba(153,204,255,1)", "rgba(255,255,0,0.6)", "rgba(0,112,192,0.6)", "rgba(112,48,160,0.6)", "rgb(128, 0, 75, 0.2)"]).unknown("rgba(255,255,255)"),
       boothInfoData: {},
       smallScreen: false,
@@ -566,7 +569,7 @@ const MainArea = () => {
       tagsHeight: 80,
       sidebarWidth: 40,
       dragStatus: { moving: false, previousTouch: null, previousTouchLength: null, x: 0, y: 0 },
-      zoom: { scale: 1, x: 0, y: 0 },
+      zoom: { scale: 0.8, x: 0, y: 0 },
       mapText: {
         title: mapText.title[searchCondition.lang],
         event: mapText.event[searchCondition.lang],
@@ -643,15 +646,17 @@ const MainArea = () => {
   };
   const regexEscape = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const handleSearchChange = ({ target: { name, value } }) => searchActions(name, value);
-  const handleResize = () =>
-    setElementStatus((prev) => {
-      const smallScreen = window.innerWidth < 768;
-      const sidebar = prev.load ? (smallScreen ? prev.sidebar : !smallScreen) : smallScreen ? false : true;
-      const { innerWidth: width, innerHeight: height } = window;
-      const isKeyboard = prev.isMobile && prev.width === width && prev.height !== height;
-      const finalHeight = prev.isMobile && isKeyboard ? prev.finalHeight : height;
-      return { ...prev, test: isKeyboard, width: width, height: height, finalHeight: finalHeight, load: true, smallScreen: smallScreen, sidebar: sidebar, sidebarWidth: smallScreen ? (sidebar ? height * 0.3 : height - 117) : sidebar ? 300 : 30 };
-    });
+  const handleResize = () => {
+    setTimeout(() => {
+      setElementStatus((prev) => {
+        const smallScreen = window.innerWidth < 768;
+        const sidebar = prev.load ? (smallScreen ? prev.sidebar : !smallScreen) : smallScreen ? false : true;
+        const { innerWidth: width, innerHeight: height } = window;
+        return { ...prev, width: width, height: height, load: true, smallScreen: smallScreen, sidebar: sidebar, sidebarWidth: smallScreen ? (sidebar ? height * 0.6 : height - 117) : sidebar ? 300 : 30 };
+      });
+    }, 50);
+  };
+
   const handleBoothInfo = (d) => {
     setElementStatus((prev) => ({ ...prev, boothInfo: true, boothInfoData: d }));
     setSearchCondition((prev) => ({ ...prev, floor: d.floor }));
@@ -664,7 +669,7 @@ const MainArea = () => {
     const box = graphRef.current.getBoundingClientRect();
     setElementStatus((prev) => {
       let scale = prev.zoom.scale * r;
-      scale = scale < 1 ? 1 : scale > rMax ? rMax : scale;
+      scale = scale < 0.8 ? 0.8 : scale > rMax ? rMax : scale;
       let w = svgRef.current.clientWidth * prev.zoom.scale;
       let h = svgRef.current.clientHeight * prev.zoom.scale;
       let x = (graphRef.current.clientWidth - w) / 2 + prev.zoom.x + prev.dragStatus.x;
