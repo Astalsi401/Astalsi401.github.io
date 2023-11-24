@@ -159,7 +159,7 @@ const Floormap = ({ data, elementStatus, setElementStatus, handleBoothInfo, sear
   };
   useEffect(() => setViewBox({ x1: 0, y1: 0, x2: elementStatus.realSize.w, y2: elementStatus.realSize.h }), [elementStatus.realSize]);
   return (
-    <div className="fp-floormap d-flex align-items-center" style={{ height: elementStatus.minHeight }}>
+    <div className="fp-floormap d-flex align-items-center" style={{ height: elementStatus.finalHeight }}>
       <Selector searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} graphRef={graphRef} zoomCalculator={zoomCalculator} defaultViewbox={defaultViewbox} animation={animation} />
       <div className={`fp-viewBox ${elementStatus.dragStatus.moving ? "moving" : ""}`} ref={graphRef} onWheel={handleWheelZoom} onMouseDown={handleStart} onMouseUp={handleEnd} onMouseLeave={handleEnd} onMouseMove={handleMouseDrag} onTouchStart={handleStart} onTouchEnd={handleEnd} onTouchMove={handleTouchDragZoom}>
         <svg id="floormap" className={elementStatus.boothInfo ? "active" : ""} ref={svgRef} style={{ translate: `${elementStatus.zoom.x + elementStatus.dragStatus.x}px ${elementStatus.zoom.y + elementStatus.dragStatus.y}px`, scale: `${elementStatus.zoom.scale}`, backgroundColor: "#f1f1f1" }} width="100%" height="100%" viewBox={`${viewBox.x1} ${viewBox.y1} ${viewBox.x2} ${viewBox.y2}`}>
@@ -536,7 +536,6 @@ const MainArea = () => {
   const types = ["booth", "room"];
   const graphRef = useRef(null);
   const svgRef = useRef(null);
-  const sidebarRef = useRef(null);
   const [floorData, setFloorData] = useState({ loaded: false, data: [] });
   const [searchCondition, setSearchCondition] = useState(() => {
     const params = new URLSearchParams(window.location.search);
@@ -551,9 +550,12 @@ const MainArea = () => {
   const [elementStatus, setElementStatus] = useState(() => {
     const isMobile = /windows phone|android|iPad|iPhone|iPod/i.test(navigator.userAgent || window.opera);
     return {
+      test: null,
       load: false,
       isMobile: isMobile,
-      minHeight: isMobile ? window.innerHeight : "100vh",
+      width: isMobile ? window.innerHeight : "100%",
+      height: isMobile ? window.innerHeight : "100vh",
+      finalHeight: isMobile ? window.innerHeight : "100vh",
       colors: d3.scaleOrdinal().domain(mapText.categories[searchCondition.lang]).range(["rgba(237,125,49,0.6)", "rgba(153,204,255,1)", "rgba(255,255,0,0.6)", "rgba(0,112,192,0.6)", "rgba(112,48,160,0.6)", "rgb(128, 0, 75, 0.2)"]).unknown("rgba(255,255,255)"),
       boothInfoData: {},
       smallScreen: false,
@@ -645,8 +647,10 @@ const MainArea = () => {
     setElementStatus((prev) => {
       const smallScreen = window.innerWidth < 768;
       const sidebar = prev.load ? (smallScreen ? prev.sidebar : !smallScreen) : smallScreen ? false : true;
-      const height = prev.isMobile ? prev.minHeight : window.innerHeight;
-      return { ...prev, load: true, smallScreen: smallScreen, sidebar: sidebar, sidebarWidth: smallScreen ? (sidebar ? height * 0.3 : height - 117) : sidebar ? 300 : 30 };
+      const { innerWidth: width, innerHeight: height } = window;
+      const isKeyboard = prev.isMobile && prev.width === width && prev.height !== height;
+      const finalHeight = prev.isMobile && isKeyboard ? prev.finalHeight : height;
+      return { ...prev, test: isKeyboard, width: width, height: height, finalHeight: finalHeight, load: true, smallScreen: smallScreen, sidebar: sidebar, sidebarWidth: smallScreen ? (sidebar ? height * 0.3 : height - 117) : sidebar ? 300 : 30 };
     });
   const handleBoothInfo = (d) => {
     setElementStatus((prev) => ({ ...prev, boothInfo: true, boothInfoData: d }));
