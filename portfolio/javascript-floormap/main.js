@@ -730,7 +730,7 @@ const MainArea = () => {
     setSearchCondition((prev) => ({
       ...prev,
       regex: new RegExp(
-        regexEscape(prev.string.replace("台", "臺"))
+        regexEscape(prev.string.replace("臺", "台"))
           .split(" ")
           .filter((s) => s !== "")
           .map((s) => `(?=.*${s})`)
