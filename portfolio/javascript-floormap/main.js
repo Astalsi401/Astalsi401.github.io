@@ -526,16 +526,16 @@ const MainArea = () => {
   const mapText = {
     categories: {
       tc: ["全齡健康展區", "年度主題館", "醫療機構展區", "智慧醫療展區", "精準醫療展區", "活動進行中"],
-      en: ["Consumer Health Products", "Featured Pavilions", "Medical Institutes & Hospitals", "Medical Devices & Equipment", "Diagnostics, Laboratory Equipment & Services", "Activity in progress"],
+      en: ["Consumer Health Products", "Featured Pavilions", "Medical Institutes & Hospitals", "Medical Devices & Equipment", "Diagnostics, Laboratory Equipment & Services", "Event in progress"],
     },
     title: { tc: "展場平面圖", en: "Floor Plan" },
-    event: { tc: "活動進行中", en: "Activity in progress" },
+    event: { tc: "活動進行中", en: "Event in progress" },
     header: { tc: "重點必看", en: "Highlights" },
     headerTags: { tc: ["健康大檢測", "醫師力大挑戰"], en: [] },
-    remove: { tc: "清除標籤", en: "Remove" },
-    clear: { tc: "清除搜索條件", en: "Clear search conditions" },
-    exhibitor: { tc: "聯展單位", en: "Co-Exhibitor" },
-    activity: { tc: "相關活動", en: "Activities" },
+    remove: { tc: "清除標籤", en: "Clear all" },
+    clear: { tc: "清除搜索條件", en: "Clear search" },
+    exhibitor: { tc: "聯展單位", en: "Co-exhibitors" },
+    activity: { tc: "相關活動", en: "Events" },
   };
   const types = ["booth", "room"];
   const graphRef = useRef(null);
@@ -569,7 +569,7 @@ const MainArea = () => {
       tagsHeight: 80,
       sidebarWidth: 40,
       dragStatus: { moving: false, previousTouch: null, previousTouchLength: null, x: 0, y: 0 },
-      zoom: { scale: 0.8, x: 0, y: 0 },
+      zoom: { scale: 0.9, x: 0, y: 0 },
       mapText: {
         title: mapText.title[searchCondition.lang],
         event: mapText.event[searchCondition.lang],
@@ -669,7 +669,7 @@ const MainArea = () => {
     const box = graphRef.current.getBoundingClientRect();
     setElementStatus((prev) => {
       let scale = prev.zoom.scale * r;
-      scale = scale < 0.8 ? 0.8 : scale > rMax ? rMax : scale;
+      scale = scale < 0.9 ? 0.9 : scale > rMax ? rMax : scale;
       let w = svgRef.current.clientWidth * prev.zoom.scale;
       let h = svgRef.current.clientHeight * prev.zoom.scale;
       let x = (graphRef.current.clientWidth - w) / 2 + prev.zoom.x + prev.dragStatus.x;
