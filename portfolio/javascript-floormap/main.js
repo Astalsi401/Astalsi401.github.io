@@ -537,7 +537,7 @@ const MainArea = () => {
     title: { tc: "展場平面圖", en: "Floor Plan" },
     event: { tc: "活動進行中", en: "Event in progress" },
     header: { tc: "重點必看", en: "Highlights" },
-    headerTags: { tc: ["健康大檢測", "醫師力大挑戰"], en: [] },
+    headerTags: { tc: ["重要活動", "健康大檢測", "醫師力大挑戰"], en: ["Key Events"] },
     searchPlaceholder: { tc: "關鍵字搜索", en: "Search" },
     remove: { tc: "清除標籤", en: "Clear all" },
     clear: { tc: "清除搜索條件", en: "Clear search" },
@@ -611,7 +611,7 @@ const MainArea = () => {
               const endDate = new Date(`${end.getFullYear()}-${end.getMonth() + 1}-${end.getDate()}`);
               const startTime = new Date(`${nowDate} ${start.getHours()}:${start.getMinutes()}:${start.getSeconds()}`);
               const endTime = new Date(`${nowDate} ${end.getHours()}:${end.getMinutes()}:${end.getSeconds()}`);
-              return startDate < now && now < endDate && startTime < now && now < endTime;
+              return startDate < now && now < endDate && startTime < now && now < endTime && e.title[searchCondition.lang].length > 0;
             }),
           }));
           tags = eventTime.some((e) => e.active) ? tags.concat([mapText.event[searchCondition.lang]]) : tags;

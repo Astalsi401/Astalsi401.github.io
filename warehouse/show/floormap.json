@@ -6658,12 +6658,13 @@
     "size": { "tc": 1.0, "en": 1.0 },
     "cat": { "tc": "年度主題館", "en": "Featured Pavilions" },
     "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [], "en": [] },
+    "tag": { "tc": ["重要活動"], "en": [] },
     "text": { "tc": ["新創幫", "INNOZONE", "創新技術特展"], "en": ["InnoZone"] },
     "corps": [
       { "org": { "tc": "新創幫INNOZONE創新技術特展", "en": "InnoZone" }, "info": { "tc": "", "en": "" } },
       { "org": { "tc": "秀傳醫療財團法人彰濱秀傳紀念醫院", "en": "Changbin Show Chwan Memorial Hospital" }, "info": { "tc": "為活絡醫療創新創業能量，MedTech StartHub打造出專屬醫療科技新創的平台，以Connecting People, Working Together為平台宗旨，透過媒合新創公司及醫療創新領域專家，讓創業團隊有機會接洽所需資源，也讓海內外投資者有機會洽談台灣精選團隊，提高投資效益。", "en": "Connecting People, Working Together" } }
-    ]
+    ],
+    "event": [{ "timeList": [{ "start": "2023-11-30 14:00+08:00", "end": "2023-12-01 16:30+08:00" }], "title": { "tc": "InnoZone新創技術特展-新創RoadShow發布會", "en": "" }, "topic": { "tc": "重要活動", "en": "" } }]
   },
   {
     "type": "booth",
@@ -6681,10 +6682,13 @@
     "size": { "tc": 1.0, "en": 1.0 },
     "cat": { "tc": "年度主題館", "en": "Featured Pavilions" },
     "topic": { "tc": "", "en": "" },
-    "tag": { "tc": ["健康大檢測", "醫師聊健康"], "en": [] },
+    "tag": { "tc": ["重要活動", "健康大檢測", "醫師聊健康"], "en": ["Key Events"] },
     "text": { "tc": ["SNQ頂尖醫療主題館"], "en": ["SNQ Pavilion of ", "Medical Care", " Excellence"] },
     "corps": [{ "org": { "tc": "SNQ頂尖醫療主題館", "en": "SNQ Pavilion of Medical Care Excellence" }, "info": { "tc": "", "en": "" } }],
     "event": [
+      { "timeList": [{ "start": "2023-11-30 14:00+08:00", "end": "2023-11-30 16:00+08:00" }], "title": { "tc": "海外醫療市場商機說明暨交流會 -亞太醫療市場新商機-", "en": "Healthcare Market & Business Opportunity Conference -Asia Pacific Session-" }, "topic": { "tc": "重要活動", "en": "Key Events" } },
+      { "timeList": [{ "start": "2023-12-02 09:30+08:00", "end": "2023-12-02 12:00+08:00" }], "title": { "tc": "2023台灣醫療科技展第一屆超音波主題日-緊急救護工作坊", "en": "" }, "topic": { "tc": "重要活動", "en": "" } },
+      { "timeList": [{ "start": "2023-12-02 13:00+08:00", "end": "2023-12-02 17:00+08:00" }], "title": { "tc": "台灣醫療器材創新論壇", "en": "" }, "topic": { "tc": "重要活動", "en": "" } },
       {
         "timeList": [
           { "start": "2023-12-02 10:00+08:00", "end": "2023-12-02 18:00+08:00" },
@@ -7621,9 +7625,14 @@
     "size": { "tc": 0.7, "en": 0.8 },
     "cat": { "tc": "年度主題館", "en": "Featured Pavilions" },
     "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [], "en": [] },
+    "tag": { "tc": ["重要活動"], "en": ["Key Events"] },
     "text": { "tc": ["全球醫療採購網-", "經銷代理與企業媒合會"], "en": ["Healthcare+ B2B Zone"] },
-    "corps": [{ "org": { "tc": "全球醫療採購網-經銷代理與企業媒合會", "en": "Healthcare+ B2B Zone" }, "info": { "tc": "", "en": "" } }]
+    "corps": [{ "org": { "tc": "全球醫療採購網-經銷代理與企業媒合會", "en": "Healthcare+ B2B Zone" }, "info": { "tc": "", "en": "" } }],
+    "event": [
+      { "timeList": [{ "start": "2023-11-30 14:00+08:00", "end": "2023-11-30 17:00+08:00" }], "title": { "tc": "全球醫療採購網-經銷代理與企業媒合會 -馬來西亞專場 / 亞太醫藥品採購與授權專場-", "en": "Healthcare+ B2B Matchmaking Meeting-Industry -Malaysia / APAC- Pharmaceuticals and licensing-" }, "topic": { "tc": "重要活動", "en": "Key Events" } },
+      { "timeList": [{ "start": "2023-12-01 10:00+08:00", "end": "2023-12-01 12:00+08:00" }], "title": { "tc": "全球醫療採購網-經銷代理與企業媒合會 -亞太醫療器材專場-", "en": "Healthcare+ B2B Matchmaking Meeting-Industry -APAC- Medical devices-" }, "topic": { "tc": "重要活動", "en": "Key Events" } },
+      { "timeList": [{ "start": "2023-12-01 14:00+08:00", "end": "2023-12-01 17:00+08:00" }], "title": { "tc": "全球醫療採購網-經銷代理與企業媒合會 -中東/ 東歐 / 亞太醫療器材專場-", "en": "Healthcare+ B2B Matchmaking Meeting-Industry -Middle East/ Europe/ APAC- Medical devices-" }, "topic": { "tc": "重要活動", "en": "Key Events" } }
+    ]
   },
   {
     "type": "booth",
@@ -8880,9 +8889,14 @@
     "size": { "tc": 0.35, "en": 0.6 },
     "cat": { "tc": "年度主題館", "en": "Featured Pavilions" },
     "topic": { "tc": "", "en": "" },
-    "tag": { "tc": [], "en": [] },
+    "tag": { "tc": ["重要活動"], "en": ["Key Events"] },
     "text": { "tc": ["全球醫療採購網-", "經銷代理與企業媒合會"], "en": ["Healthcare+ B2B Zone"] },
-    "corps": [{ "org": { "tc": "全球醫療採購網-經銷代理與企業媒合會", "en": "Healthcare+ B2B Zone" }, "info": { "tc": "", "en": "" } }]
+    "corps": [{ "org": { "tc": "全球醫療採購網-經銷代理與企業媒合會", "en": "Healthcare+ B2B Zone" }, "info": { "tc": "", "en": "" } }],
+    "event": [
+      { "timeList": [{ "start": "2023-11-30 14:00+08:00", "end": "2023-11-30 17:00+08:00" }], "title": { "tc": "全球醫療採購網-經銷代理與企業媒合會 -馬來西亞專場 / 亞太醫藥品採購與授權專場-", "en": "Healthcare+ B2B Matchmaking Meeting-Industry -Malaysia / APAC- Pharmaceuticals and licensing-" }, "topic": { "tc": "重要活動", "en": "Key Events" } },
+      { "timeList": [{ "start": "2023-12-01 10:00+08:00", "end": "2023-12-01 12:00+08:00" }], "title": { "tc": "全球醫療採購網-經銷代理與企業媒合會 -亞太醫療器材專場-", "en": "Healthcare+ B2B Matchmaking Meeting-Industry -APAC- Medical devices-" }, "topic": { "tc": "重要活動", "en": "Key Events" } },
+      { "timeList": [{ "start": "2023-12-01 14:00+08:00", "end": "2023-12-01 17:00+08:00" }], "title": { "tc": "全球醫療採購網-經銷代理與企業媒合會 -中東/ 東歐 / 亞太醫療器材專場-", "en": "Healthcare+ B2B Matchmaking Meeting-Industry -Middle East/ Europe/ APAC- Medical devices-" }, "topic": { "tc": "重要活動", "en": "Key Events" } }
+    ]
   },
   {
     "type": "booth",
@@ -9166,9 +9180,9 @@
   { "type": "room", "floor": 4, "w": 500, "h": 1900, "x": 8600, "y": 14330, "text": { "tc": ["專業", "人士", "換證", "區"], "en": ["Entry ", "badge", " pick-up", " for ", "pro."] }, "size": { "tc": 1, "en": 0.7 }, "note": { "tc": "專業人士換證區", "en": "Entry badge pick-up for professionals" }, "bd": true, "icon": false },
   { "type": "room", "floor": 4, "w": 500, "h": 1900, "x": 10800, "y": 14330, "text": { "tc": ["專業", "人士", "換證", "區"], "en": ["Entry ", "badge", " pick-up", " for ", "pro."] }, "size": { "tc": 1, "en": 0.7 }, "note": { "tc": "專業人士換證區", "en": "Entry badge pick-up for professionals" }, "bd": true, "icon": false },
   { "type": "room", "floor": 4, "w": 2230, "h": 1900, "x": 11300, "y": 14330, "tag": { "tc": ["會議室"], "en": ["Meeting Room"] }, "text": { "tc": ["401 Room"], "en": ["401 Room"] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "401 Room", "en": "401 Room" }, "bd": true, "icon": false },
-  { "type": "room", "floor": 4, "w": 900, "h": 1400, "x": 13530, "y": 14830, "tag": { "tc": ["會議室"], "en": ["Meeting Room"] }, "text": { "tc": ["402a", "Room"], "en": ["402a", "Room"] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "402a Room", "en": "402a Room" }, "bd": true, "icon": false },
-  { "type": "room", "floor": 4, "w": 900, "h": 1400, "x": 14430, "y": 14830, "tag": { "tc": ["會議室"], "en": ["Meeting Room"] }, "text": { "tc": ["402b", "Room"], "en": ["402b", "Room"] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "402b Room", "en": "402b Room" }, "bd": true, "icon": false },
-  { "type": "room", "floor": 4, "w": 900, "h": 1400, "x": 15330, "y": 14830, "tag": { "tc": ["會議室"], "en": ["Meeting Room"] }, "text": { "tc": ["402c", "Room"], "en": ["402c", "Room"] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "402c Room", "en": "402c Room" }, "bd": true, "icon": false },
+  { "type": "room", "floor": 4, "w": 900, "h": 1400, "x": 13530, "y": 14830, "tag": { "tc": ["會議室", "重要活動"], "en": ["Meeting Room", "Key Events"] }, "text": { "tc": ["402a", "Room"], "en": ["402a", "Room"] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "402a Room", "en": "402a Room" }, "bd": true, "icon": false, "event": [{ "timeList": [{ "start": "2023-12-02 14:00+08:00", "end": "2023-12-02 16:30+08:00" }], "title": { "tc": "高齡科技創新高峰論壇", "en": "Geroscience Technology Innovation Summit" }, "topic": { "tc": "重要活動", "en": "Key Events" } }] },
+  { "type": "room", "floor": 4, "w": 900, "h": 1400, "x": 14430, "y": 14830, "tag": { "tc": ["會議室", "重要活動"], "en": ["Meeting Room", "Key Events"] }, "text": { "tc": ["402b", "Room"], "en": ["402b", "Room"] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "402b Room", "en": "402b Room" }, "bd": true, "icon": false, "event": [{ "timeList": [{ "start": "2023-12-02 14:00+08:00", "end": "2023-12-02 16:30+08:00" }], "title": { "tc": "高齡科技創新高峰論壇", "en": "Geroscience Technology Innovation Summit" }, "topic": { "tc": "重要活動", "en": "Key Events" } }] },
+  { "type": "room", "floor": 4, "w": 900, "h": 1400, "x": 15330, "y": 14830, "tag": { "tc": ["會議室", "重要活動"], "en": ["Meeting Room", "Key Events"] }, "text": { "tc": ["402c", "Room"], "en": ["402c", "Room"] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "402c Room", "en": "402c Room" }, "bd": true, "icon": false, "event": [{ "timeList": [{ "start": "2023-12-02 14:00+08:00", "end": "2023-12-02 16:30+08:00" }], "title": { "tc": "高齡科技創新高峰論壇", "en": "Geroscience Technology Innovation Summit" }, "topic": { "tc": "重要活動", "en": "Key Events" } }] },
   { "type": "room", "floor": 4, "w": 900, "h": 1770, "x": 16230, "y": 14830, "tag": { "tc": ["會議室"], "en": ["Meeting Room"] }, "text": { "tc": ["403 ", "Room"], "en": ["403 ", "Room"] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "403 Room", "en": "403 Room" }, "bd": true, "icon": false },
-  { "type": "room", "floor": 4, "w": 900, "h": 1770, "x": 17130, "y": 14830, "tag": { "tc": ["會議室"], "en": ["Meeting Room"] }, "text": { "tc": ["404 ", "Room"], "en": ["404 ", "Room"] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "404 Room", "en": "404 Room" }, "bd": true, "icon": false }
+  { "type": "room", "floor": 4, "w": 900, "h": 1770, "x": 17130, "y": 14830, "tag": { "tc": ["會議室", "重要活動"], "en": ["Meeting Room", "Key Events"] }, "text": { "tc": ["404 ", "Room"], "en": ["404 ", "Room"] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "404 Room", "en": "404 Room" }, "bd": true, "icon": false, "event": [{ "timeList": [{ "start": "2023-12-01 13:00+08:00", "end": "2023-12-01 17:00+08:00" }], "title": { "tc": "產業 Roadshow 發布會", "en": "Roadshow" }, "topic": { "tc": "重要活動", "en": "Key Events" } }] }
 ]
