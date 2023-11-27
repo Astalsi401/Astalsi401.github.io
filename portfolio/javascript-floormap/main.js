@@ -191,7 +191,7 @@ const FilterIcon = () => {
 };
 
 const Search = ({ searchCondition, setSearchCondition, elementStatus, setElementStatus, handleSearchChange }) => {
-  const searched = searchCondition.string.length === 0 && searchCondition.tag === "";
+  const searched = searchCondition.string.length === 0 && searchCondition.tag.length === 0;
   return (
     <div className="fp-search d-flex align-items-center justify-content-center">
       <div className={`fp-filter px-1 ${elementStatus.advanced ? "active" : ""}`} onClick={() => setElementStatus((prev) => ({ ...prev, advanced: !prev.advanced }))}>
