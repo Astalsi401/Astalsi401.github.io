@@ -622,12 +622,10 @@ const MainArea = () => {
       const isType = types.includes(d.type);
       const hasTag = isType && searchCondition.tag === "" ? true : [d.id, d.cat, d.topic, d.note, ...d.tag].includes(searchCondition.tag);
       let hasText = isType && searchCondition.regex.test([...targets, ...infos, ...corps].join(" ").replace(/\r|\n/g, ""));
-      //   let hasText = isType && searchCondition.regex.test([...targets, ...corps].join(" ").replace(/\r|\n/g, ""));
       const opacity = (hasText && hasTag) || d.type === "icon" ? 0.8 : 0.1;
       if (d.corps) {
         d.corps.forEach((corp, i) => {
           hasText = searchCondition.regex.test([...targets, corp.info, corp.org].join(" ").replace(/\r|\n/g, ""));
-          //   hasText = searchCondition.regex.test([...targets, corp.org].join(" ").replace(/\r|\n/g, ""));
           res.push({ ...d, ...corp, opacity: opacity, draw: i === 0, sidebar: hasText && hasTag });
         });
       } else {
