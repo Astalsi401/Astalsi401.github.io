@@ -1032,507 +1032,6 @@
   },
   {
     "type": "booth",
-    "floor": 4,
-    "w": 300,
-    "h": 300,
-    "x": 900,
-    "y": 4610,
-    "p": [
-      { "node": "L", "x": 300, "y": 0 },
-      { "node": "L", "x": 300, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "L017",
-    "size": { "tc": 0.4, "en": 0.25 },
-    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
-    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
-    "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["五鈴"], "en": ["ISUZU ", "OPTICS"] },
-    "corps": [{ "org": { "tc": "五鈴光學股份有限公司", "en": "ISUZU OPTICS CORP." }, "info": { "tc": "★內置推掃螢光高光譜\n★IOC-ONE 二合一顯微高光譜\n★小動物螢光\n★藥品分類", "en": "★Built-in push-broom fluorescent hyperspectral\n★IOC-ONE 2-in-1 Microscopic Hyperspectral\n★Small animal fluorescent\n★Bionic Membrane Dissolution Apparatus\n★Drug Classification" } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 300,
-    "h": 300,
-    "x": 900,
-    "y": 4310,
-    "p": [
-      { "node": "L", "x": 300, "y": 0 },
-      { "node": "L", "x": 300, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "L018",
-    "size": { "tc": 0.4, "en": 0.25 },
-    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
-    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
-    "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["億宣"], "en": ["Vertex", " System"] },
-    "corps": [{ "org": { "tc": "億宣應用科技股份有限公司", "en": "Vertex System Corporation" }, "info": { "tc": "億宣應用科技股份有限公司成立於2020年，擁有堅強的5G行動通訊網路技術團隊、其團隊透過5G專網的佈建，以無線行動通訊技術訊號涵蓋 know-how 結合物聯網、5G 垂直整合應用、雲端管理平台及大數據資料採集，建立各項應用，例如物件跟蹤、視頻監控和分析、生產線維護檢查、無人運車、室內導航、工業機器人等，達到企業智慧聯網、資訊安全共享、藉以推動工廠數位化轉型。5G網路雖然具備高等級的安全防護，針對企業自建5G專網，我們提供一套完整的企業專網資安解決方案，以提供至少多層防護：網路防護、終端裝置防護、多點監控、事先預防。", "en": "Through the deployment of 5G private networks, Vertex can establish various applications, such as object tracking, video surveillance and analysis, production line inspection, AMR, positon, robots, to promote the digital transformation of factories. Assist factories or enterprises to conduct demand assessment, responsible for planning and deploying the required 5G private network, and utilize 5G terminals to integrate vertical applications in factories, such as AGV cars, imaging equipment, etc." } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 1500,
-    "h": 600,
-    "x": 2400,
-    "y": 3200,
-    "p": [
-      { "node": "L", "x": 1500, "y": 0 },
-      { "node": "L", "x": 1500, "y": 600 },
-      { "node": "L", "x": 0, "y": 600 }
-    ],
-    "id": "L1008",
-    "size": { "tc": 0.8, "en": 0.5 },
-    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
-    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
-    "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["陽明交通大學"], "en": ["National Yang Ming", " Chiao Tung University"] },
-    "corps": [{ "org": { "tc": "國立陽明交通大學", "en": "National Yang Ming Chiao Tung University" }, "info": { "tc": "國立陽明交通大學於合校後將於十年內成為亞洲「數位生醫」先驅，培育全球頂尖大學師資及數家獨角獸級電子生醫新創，本年於展中將呈現年度前瞻數位生醫技術與新創產品共十組。", "en": "National Yang Ming Chiao Tung University(NYCU) will become a pioneer in digital biomedicine of Asia in 2032, cultivating the world's top university faculty and many startup unicorns.\nThis year we will presente many digital biomedical technologies and innovative products at the exhibition." } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 1800,
-    "h": 1200,
-    "x": 2100,
-    "y": 10710,
-    "p": [
-      { "node": "L", "x": 1800, "y": 0 },
-      { "node": "L", "x": 1800, "y": 1200 },
-      { "node": "L", "x": 0, "y": 1200 },
-      { "node": "L", "x": 0, "y": 600 },
-      { "node": "L", "x": -300, "y": 600 },
-      { "node": "L", "x": -300, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "L106",
-    "size": { "tc": 1.0, "en": 1.0 },
-    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
-    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
-    "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["Intel"], "en": ["Intel"] },
-    "corps": [{ "org": { "tc": "美商英特爾亞太科技有限公司台灣分公司", "en": "Intel" }, "info": { "tc": "-Demonstrate top Value:  4th Gen Xeon, AMX, OpenVino, 13th Gen Core, OpenFL, Intel GPU, Altera, Gaudi/Habana\n-Enable T1 Partners and use cases on Intel’s latest product lines \n-Implementation of Use cases both on Premise and to the Cloud – Edge ", "en": "-Demonstrate top Value:  4th Gen Xeon, AMX, OpenVino, 13th Gen Core, OpenFL, Intel GPU, Altera, Gaudi/Habana\n-Enable T1 Partners and use cases on Intel’s latest product lines \n-Implementation of Use cases both on Premise and to the Cloud – Edge " } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 900,
-    "h": 600,
-    "x": 3000,
-    "y": 2300,
-    "p": [
-      { "node": "L", "x": 900, "y": 0 },
-      { "node": "L", "x": 900, "y": 600 },
-      { "node": "L", "x": 0, "y": 600 }
-    ],
-    "id": "L1112",
-    "size": { "tc": 0.8, "en": 0.5 },
-    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
-    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
-    "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["博鈞科技"], "en": ["MOBISNET ", "TECHNOLOGY"] },
-    "corps": [{ "org": { "tc": "博鈞科技股份有限公司", "en": "MOBISNET TECHNOLOGY CO.,  LTD." }, "info": { "tc": "博鈞MIT機器人平台\n1、AMR無人自走車\n2、智慧工廠運輸機器人\n3、送物機器人\n4、送餐機器人\n5、服務型機器人\n6、噴霧消毒機器人", "en": "Mobisnet MIT robot platform\n1. Autonomous Mobile Robot \n2. Smart Factory Delivery Robot\n3. Cross Floor Delivery Robot\n4. Meal Delivery Robot\n5. Service Robot\n6. Disinfection Robot" } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 900,
-    "h": 600,
-    "x": 4510,
-    "y": 2300,
-    "p": [
-      { "node": "L", "x": 900, "y": 0 },
-      { "node": "L", "x": 900, "y": 600 },
-      { "node": "L", "x": 0, "y": 600 }
-    ],
-    "id": "L1118",
-    "size": { "tc": 0.4, "en": 0.3 },
-    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
-    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
-    "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["新竹生醫育成 ", "(青輔、朗齊", "、威強電)"], "en": ["Hsinchu Biomedical", " Science Park", " Incubation Center", " MOEASMEA"] },
-    "corps": [
-      { "org": { "tc": "新竹生醫產業及育成中心", "en": "Hsinchu Biomedical Science Park Incubation Center, MOEASMEA" }, "info": { "tc": "智慧醫院用設備及AI晶片等", "en": "智慧醫院用設備及AI晶片等" } },
-      { "org": { "tc": "青輔實業股份有限公司", "en": "Modernsolid Industrial Co., Ltd." }, "info": { "tc": "醫療台車、醫療支架 系列以人體工學為產品設計主要出發點。提供智慧病房、遠距醫療、長照及移動式護理服務等解決方案。", "en": "Modernsolid founded in 1988, as one of the world-leading supplier in mounting solutions, provides, a wide range of high quality products that meet the vast majority of customers' needs in the Healthcare market. We aim at integrating the hospital displays, mobile computing workstation cart, and track system info the appropriate place for the effective use to achieve teh optimal health outcome. \nOur high-performance mounting solutions for use with LCD displays and other electric devices could be applied in not only examination and treatment rooms, but also the connection between the health care providers and patient and even teh entertainment use. Modernsolid always insists on innovative and ergonomic products that improve clinical practice. " } },
-      { "org": { "tc": "威強電工業電腦股份有限公司", "en": "IEI Integration Corp." }, "info": { "tc": "威強電深耕醫療產業多年，透過整合最新技術，開發出優質可靠的護理推車電腦、AIO觸控平板電腦、AI Box PC等創新產品，提供優質的醫療解決方案，為醫護人員創造良好的工作環境， 並確保為患者提供更好的醫療服務。", "en": "IEI is deeply involved in the medical industry. We continuously integrate the latest technologies to develop high quality and reliable nursing cart computers, all-in-one medical panel PCs, AI box PC and other innovative products to provide high-quality medical solutions, create a good working environment for medical personnel, and ensure better medical services for patients." } },
-      { "org": { "tc": "朗齊生物醫學股份有限公司", "en": "LAUNXP Biomedical Co., Ltd." }, "info": { "tc": "朗齊著重於癌症新藥及新劑型開發，除開發新成分新藥外，也進行藥物重定位研究找出其抗癌作用機轉，不僅有首創新藥模式市場優勢，也縮短開發時程和節省費用。使產品更具價值及市場競爭力，同步啟動載藥傳輸平台開發。", "en": "LAUNXP focus on developing new chemical entities for cancer and researching a new or better way to benefit patients. Now we obtain several patents for 505(b)(1) and 505(b)(2). Meanwhile, our team is researching the mechanism of anti-proliferation in tumors by repositioning the new indications of FDA-approved drugs which we obtained 505(b)(2) patents already. The results provide advantages of those 505(b)(2) drugs as First-in-class medication in cancer therapy, shortening the development process and saving significant investment. To increase the value and competitiveness of our products, our team is simultaneously developing new antiproliferative drug delivery, such as virus-like nanoparticles and nanoparticles." } }
-    ]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 1500,
-    "h": 900,
-    "x": 4510,
-    "y": 11010,
-    "p": [
-      { "node": "L", "x": 1500, "y": 0 },
-      { "node": "L", "x": 1500, "y": 900 },
-      { "node": "L", "x": 0, "y": 900 }
-    ],
-    "id": "L118",
-    "size": { "tc": 0.6, "en": 0.6 },
-    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
-    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
-    "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["達擎、友達頤康、", "友達耘康、明達醫學"], "en": ["AUO Display Plus", " Corporation"] },
-    "corps": [
-      { "org": { "tc": "達擎股份有限公司", "en": "AUO Display Plus Corporation" }, "info": { "tc": "達擎股份有限公司 (AUO Display Plus) 為友達光電子公司，專注於通用及公共顯示器之銷售、研發及客戶服務。達擎為工業及商業應用面板領導廠商，擁有超過 20 年的專業經驗，提供全球的客戶完整產品線與服務。總部位於台灣新竹科學園區，營運據點遍佈中國大陸、日本、美國及歐洲等全球各地。", "en": "AUO Display Plus is the industrial and commercial display subsidiary of AUO Corporation. We offer a complete end-to-end display service, from R&D, through to sales and customer service. AUO Display Plus picks up the baton from AUO, leveraging 20 years of experience to provide a comprehensive range of products to customers worldwide. Headquartered in the Hsinchu Science Park, Taiwan, the company operates global offices in Mainland China, Japan, the United States, and Europe." } },
-      { "org": { "tc": "友達頤康科技股份有限公司", "en": "AUO Care Inc." }, "info": { "tc": "1. 養老雲平台\n2.安全守護方案\n3.運動健康管理方案", "en": "1. AI care as a service\n2.Safety monitoring solution\n3.Function training solution " } },
-      { "org": { "tc": "友達耘康股份有限公司", "en": "AUO Health Inc." }, "info": { "tc": "【中醫數位化檢測方案】奠基於高精密度多點陣列型壓力感測技術，透過電腦精準控制升降行程，真實模擬手指把脈過程中的\"舉、按、尋\"，還原中醫師把脈手法。 並以顯示器專業出發，以色彩還原演算法將舌色還原，並準確顯示。\n本公司提供以上兩者標準化、數位化且具信校度的設備供脈象與舌象檢測所用，再搭配資料分析平台將多變數且複雜的資料進行快速地羅列整理、趨勢分析與樣態對比，可協助中醫從業人員於臨床研究、教學傳承與輔助診斷上有可信賴的數位工具，並可期於未來的大數據分析與AI應用。", "en": "【Traditional Chinese Medicine Digital Detection Solution】Built upon high-precision multi-point array pressure sensing technology, this solution utilizes computer-controlled vertical movement with utmost precision to faithfully replicate the \"lifting, pressing, and searching\"actions of finger pulse diagnosis, thus restoring the palpation techniques of traditional Chinese medicine practitioners. Additionally, employing a specialized display, a color restoration algorithm accurately reproduces tongue colors for precise display.\n\nAUO Health provides both standardized and digitized equipment for pulse and tongue diagnosis, ensuring calibration and reliability. When paired with a data analysis platform, this system rapidly organizes complex, multivariate data, conducts trend analysis, and performs pattern comparisons. This assists professionals in the field of traditional Chinese medicine by providing them with a dependable digital tool for clinical research, educational inheritance, and diagnostic support. Furthermore, it holds the potential for future applications in big data analysis and AI." } },
-      { "org": { "tc": "明達醫學科技股份有限公司", "en": "Crystalvue Medical Corporation" }, "info": { "tc": "明達醫學 Crystalvue 致力於高品質全自動眼科醫療與視光產品，包括眼底(視網膜)照相機、可量測角膜厚度之眼壓計、3D掃框機、磨片機、視網膜光學斷層掃描儀、生物量測儀…等。Crystalvue專注提供優異的眼球影像擷取與視網膜斷層掃描、穩定可靠的量測、以及全自動、單擊即可操作之直覺式介面。Crystalvue是您經營眼科醫療與視光服務場域的高品質夥伴。", "en": "Crystalvue Medical Corporation devotes to supply high quality, fully automatic ophthalmic and optometry products, including Fundus Camera, Tonometer with Pachymetry, Lens Edger, 3D Tracer, OCT (Optical Coherence Tomography), Biometer, etc. Every Crystalvue product comes with superior image capturing and processing, reliable measuring, intuitive 1-tap operation interface, and fully automatic. Crystalvue is your most trusted quality partner for medical, eye care and ophthalmic services with no compromise." } }
-    ]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 900,
-    "h": 300,
-    "x": 4510,
-    "y": 10710,
-    "p": [
-      { "node": "L", "x": 900, "y": 0 },
-      { "node": "L", "x": 900, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "L218",
-    "size": { "tc": 0.6, "en": 0.35 },
-    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
-    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
-    "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["西柏科技"], "en": ["Cypress ", "Technology"] },
-    "corps": [{ "org": { "tc": "西柏科技股份有限公司", "en": "Cypress Technology Co., Ltd." }, "info": { "tc": "CYP的醫療影像解決方案遵循PACS (醫療影像儲存系統)架構，並能夠同時處理多個影像/影片/數據紀錄來源。CYP醫療影解決方案可整合超音波、內視鏡、生命徵象監測儀等。此外並提供影像與資料的儲存、擷取等功能並可以切換不同影像，放大與多視窗顯示於單一畫面包含PiP、PoP等格式。\n現今傳統手術的內視鏡部分也進步成3D內視鏡與達文西手臂等，因此研發出即時3D影像平台可協助術前模擬、手術中協助與手術後之教育訓練。\n此次展出的解決方案如下:\n醫療戰情室、複合式手術室與3D醫療影像。\n", "en": "CYP Medical imaging solutions comply with standard PACS implementations and is able to process multiple images, videos and data. To integrate with various medical images devices includes ultrasound endoscope, vital sign and so on. Beyond the capture of images, video and data, our software provides for advanced operations such as I/O switching, zoom in and out, PiP, PoP etc. \nNowadays, the visualization of medical surgery images are even more important than medical digital data in clinical practice. With the transition of traditional endoscopic to minimally invasive surgical robotic, 3D endoscopic lens is devoted to advance the medical imaging of minimally invasive surgery. With no doubt, effective 3D visualization can more intuitively assist the surgeon with the Pre-operative Simulation, Intraoperative Assistance and Post-operative Training. \nFollowing solutions will be displayed on the show. \nMedical Situation Room\nHybrid Operation Room\n3D Medical Images " } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 600,
-    "h": 300,
-    "x": 5410,
-    "y": 10710,
-    "p": [
-      { "node": "L", "x": 600, "y": 0 },
-      { "node": "L", "x": 600, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "L224",
-    "size": { "tc": 0.5, "en": 0.4 },
-    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
-    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
-    "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["慧誠智醫"], "en": ["imedtac"] },
-    "corps": [{ "org": { "tc": "慧誠智醫股份有限公司", "en": "imedtac Co., Ltd." }, "info": { "tc": "慧誠智醫透過開發全方位智慧醫療解決方案，提高運營效率和減少人為錯誤，並且幫助醫院實現數位轉型。 作為AIoT醫療專家，慧誠智醫提供廣泛的智慧醫療解決方案，包括門診和住院醫療、健康促進、臨床服務和智慧動物醫院解決方案。 服務包括智慧手術室、遠距醫療、用藥和病人安全、AIoT手部消毒解決方案和臨床服務，以及智慧動物保健等。\n", "en": "imedtac enables intelligent healthcare transformation by creating comprehensive solutions that improve operational efficiency and reduce human errors. As an AIoT healthcare expert, imedtac provides a wide range of services, including outpatient and inpatient healthcare, health promotion, clinical services, and smart animal hospital solutions. These services encompass smart operating rooms, telehealth, medication and patient safety, AIoT disinfection solutions, and clinical services, as well as smart animal healthcare." } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 300,
-    "h": 300,
-    "x": 5410,
-    "y": 2300,
-    "p": [
-      { "node": "L", "x": 300, "y": 0 },
-      { "node": "L", "x": 300, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "L1223",
-    "size": { "tc": 0.4, "en": 0.2 },
-    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
-    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
-    "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["屏基"], "en": ["Pingtung ", "Christian", " Hospital"] },
-    "corps": [{ "org": { "tc": "屏基醫療財團法人屏東基督教醫院", "en": "Pingtung Christian Hospital" }, "info": { "tc": "以數位公益為出發點，透過科技改善並提升人的生活品質與醫療數位落差，特別針對偏鄉、弱勢族群與開發中國家，透過開放計畫，提供合作夥伴醫療資訊應用的基礎建設，培力推動確保健康的生活方式與永續經營。", "en": "From the view of digital public welfare, we improve and enhance life quality and the digital health gap through technology, especially for rural, disadvantaged groups and developing countries.\nWe provide the healthcare IT Infrastructure to develop a sustainable healthy lifestyle for our partners through programs.\n" } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 600,
-    "h": 300,
-    "x": 5710,
-    "y": 10110,
-    "p": [
-      { "node": "L", "x": 600, "y": 0 },
-      { "node": "L", "x": 600, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "L325a",
-    "size": { "tc": 0.5, "en": 0.5 },
-    "cat": { "tc": "精準醫療展區", "en": "Diagnostics, Laboratory Equipment & Services" },
-    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
-    "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["優菩"], "en": ["UPro"] },
-    "corps": [{ "org": { "tc": "優菩醫療儀器股份有限公司", "en": "UPro Medical Inc." }, "info": { "tc": "優菩為專業的醫療手術用精細儀器製造商，如硬管&軟管內視鏡。\n自有的優秀研發團隊，不對朝著最新技術前進。\n在研發，創新，突破的精神下，打造精準符合人性化的穩定手術儀器。\n在滿足客戶以及醫療團隊人員客製化需求的同時，\n提供及時技術支援。\n打造出能夠提升手術準確率，並且降低風險及時間成本的精密儀器。", "en": "UPro Medical specialize in manufacturing fine medical instruments for surgery, such as endoscopes and light sources.\n\nOur own excellent R&D team is constantly forward to the latest technology. In the spirit of research and development, innovation, and breakthrough, to create accurate and humanized stable surgical instruments.\n\nAlso, provide customized needs for customers and healthcare team members, and timely technical support. To create precision instruments that can improve surgical accuracy and reduce risk and time costs." } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 300,
-    "h": 300,
-    "x": 12020,
-    "y": 3500,
-    "p": [
-      { "node": "L", "x": 300, "y": 0 },
-      { "node": "L", "x": 300, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "M1032",
-    "size": { "tc": 0.4, "en": 0.2 },
-    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
-    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
-    "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["叡揚"], "en": ["Galaxy ", "Software ", "Services"] },
-    "corps": [{ "org": { "tc": "叡揚資訊股份有限公司", "en": "Galaxy Software Services Corporation" }, "info": { "tc": "Vitals KPIM 指標管理系統\n完善的指標監測平台，包含指標生成、依指標公式及條件建立資料拋轉機制、年度指標計畫、依監控週期提報指標數據、異常管控與預警，讓指標管理落實在日常作業，提升指標自動化建置時效，完整指標生命週期管理。\n\nVitals HAS 醫療數據分析系統\n包含業務量、健保申報、人事、品質、醫事、財務、效益分析、滿意度分析、跨模組分析等九大模組，以及權限、參數、警示、指標設定的管理平台，可提供醫院提升全員服務績效與品質、高效掌握資源與成本管控。\n\niotaC.ai對話服務平台\n藉由API快速串接異質資訊系統,並利用自然語言理解技術建立智能客服，以「對話式」服務協助客戶建立各式產銷人發財蔗務流程及客服機器人。", "en": "GSS has been deeply involved in the medical industry for many years and continues to provide e-solutions for the medical industry, from medical evaluation management to data warehousing, medical data analysis, and KPI management. In recent years, GSS has also launched a dialogue service platform, hoping to assist the digital optimization of the medical industry." } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 600,
-    "h": 600,
-    "x": 12320,
-    "y": 3200,
-    "p": [
-      { "node": "L", "x": 600, "y": 0 },
-      { "node": "L", "x": 600, "y": 600 },
-      { "node": "L", "x": 0, "y": 600 }
-    ],
-    "id": "M1034",
-    "size": { "tc": 0.8, "en": 0.7 },
-    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
-    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
-    "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["益張"], "en": ["I JANG"] },
-    "corps": [{ "org": { "tc": "益張實業股份有限公司", "en": "I JANG INDUSTRIAL CO., LTD." }, "info": { "tc": "移動式倉儲可在有限的空間將空間利用率做到最大化，\n並且可搭配ESL方便庫房撿貨備料。", "en": "Turn aisles into usable space and increase storage up to 43%.\nChrome-plated steel units glide effortlessly on snap-together tracks.\nEasy assembly – No tools needed. Works on any smooth floor." } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 600,
-    "h": 600,
-    "x": 9010,
-    "y": 1400,
-    "p": [
-      { "node": "L", "x": 600, "y": 0 },
-      { "node": "L", "x": 600, "y": 600 },
-      { "node": "L", "x": 0, "y": 600 }
-    ],
-    "id": "M1216",
-    "size": { "tc": 0.8, "en": 0.6 },
-    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
-    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
-    "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["包爾"], "en": ["Bauer"] },
-    "corps": [{ "org": { "tc": "包爾科技股份有限公司", "en": "Bauer Group Company" }, "info": { "tc": "智慧型管理櫃/智慧型醫療櫃/智慧型醫療工具櫃", "en": "Smart Locker / Smart Cabinet /Smart Drawer " } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 300,
-    "h": 300,
-    "x": 18630,
-    "y": 4610,
-    "p": [
-      { "node": "L", "x": 300, "y": 0 },
-      { "node": "L", "x": 300, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "N017",
-    "size": { "tc": 0.35, "en": 0.1 },
-    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
-    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
-    "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["台中", "醫院"], "en": ["Taichung Hospital", " Ministry of ", "Health and Welfare"] },
-    "corps": [
-      {
-        "org": { "tc": "衛⽣福利部台中醫院", "en": "Taichung Hospital, Ministry of Health and Welfare" },
-        "info": { "tc": "【長照新境界-科技與研究】\n本展位以長照新境界-科技與研究為展出主題，展示衛生福利部附屬醫療及社會福利機構管理會主辦之「建構衛政社政整合計畫、預防與延緩衰弱與失能、雲端智慧長者長照服務計畫」以及未來即將執行之「後疫時代醫療照護數位領航再造計畫-建構長照世代研究平台，提供長者全人整合照護」，展示既往成果與應用和即將展開的數位科技領航時代性照護計畫。\n展示成果包括提供營養、保養、修養及安養之全責式日照中心、分析台灣中老年世代長期研究計畫之成果與應用，以及導入數位科技之長照服務，象徵著我國長照2.0不但在照護對象和服務內容之擴大，也展示我國著意之資訊科技和創新研發相結合之優良典範。", "en": "This booth presents the theme of New Horizons in Long-term Care - Information Technology and Research, showcasing initiatives organized by the Hospital and Social Welfare Organizations Administration Commission of the Ministry of Health and Welfare. These initiatives include the \"Constructing Integrated Health and Social Policy Plan, Prevention and Delay of Frailty and Disability, Cloud-based Smart Elderly Long-term Care Services Plan, as well as the upcoming Post-pandemic Era Digital Healthcare  Remodeling Medical Care Project - Establishing a Long-term Care Cohort Research Platform to Provide Comprehensive Integrated Care for the Elderly.\"The booth displays past achievements and applications as well as forthcoming digital technology-led era care projects.\nThe showcased achievements encompass an all-inclusive day care center providing nutrition, maintenance, self-cultivation, and living care responsibilities, analysis of the data and applications of Taiwan's longitudinal research project for the middle-aged and elderly generations, and the integration of digital technology into long-term care services. These symbolize that Taiwan's Long-term Care 2.0 not only expands in terms of care recipients and service offerings but also demonstrates the exemplary fusion of information technology and innovative research and development emphasized in Taiwan." }
-      }
-    ]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 2100,
-    "h": 600,
-    "x": 15330,
-    "y": 3200,
-    "p": [
-      { "node": "L", "x": 2100, "y": 0 },
-      { "node": "L", "x": 2100, "y": 600 },
-      { "node": "L", "x": 0, "y": 600 }
-    ],
-    "id": "N1014",
-    "size": { "tc": 0.7, "en": 1 },
-    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
-    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
-    "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["台灣數位健康大聯盟", "(HiMEDt)"], "en": ["HiMEDt"] },
-    "corps": [{ "org": { "tc": "HiMEDt台灣數位健康大聯盟", "en": "Harmony in Medical Technology" }, "info": { "tc": "2022年12月，鴻海與工研院攜手成立「台灣數位健康大聯盟（HiMEDt）」，藉由新模式、新生態、新數據、新場域等四大創新服務，融合台灣兩大優勢領域-科技與醫療，匯集產、官、學、研、醫、法人、慈善、宗教民俗等各方策略合作夥伴打造開放式的數位健康新生態系統，促進不同產業的跨域合作與共創。\nHiMEDt 從醫療環境實際需求出發，融合先進資通訊等各個產業關鍵技術，提供完整解決方案，藉助工研院跨域場域驗證輔導協助，縮短開發週期，加速創新落地，推進台灣數位健康產業成長，打造台灣成為全球智慧醫療之標竿國家。\n\n生態合作產品演示：\n- 智合醫專業版多功能檢測儀 CoDoctor Pro Multifunctional Parameter Detector\n- 智合醫家用版多功能檢測儀 CoDoctor Home Multifunctional Parameter Detector\n- 智合醫輕巧版多功能檢測儀 CoDoctor Lite Multifunctional Parameter Detector\n- 智合醫手持式智慧眼底影像擷取儀 CoDoctor Eye\n- Alpha Digi-Optical 3D Printer", "en": "“HIMEDt” with four innovative services include new Model, new Ecosystem, new Data, and new Territory, which integrate Taiwan’s two major advantages—Technology and Medical Care. \nThis ultimately brings together various strategic partners across all communities, which creates a new open digital health ecosystem, in order to promote cross-domain cooperation and co-creation among different industries.\n\nDigital Health Ecosystem Product Demonstration：\n-  CoDoctor Pro Multifunctional Parameter Detector\n-  CoDoctor Home Multifunctional Parameter Detector\n-  CoDoctor Lite Multifunctional Parameter Detector\n-  CoDoctor Eye\n- Alpha Digi-Optical 3D Printer" } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 300,
-    "h": 300,
-    "x": 17430,
-    "y": 3500,
-    "p": [
-      { "node": "L", "x": 300, "y": 0 },
-      { "node": "L", "x": 300, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "N1028",
-    "size": { "tc": 0.4, "en": 0.2 },
-    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
-    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
-    "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["南瓜"], "en": ["Pumpkin", " VR"] },
-    "corps": [{ "org": { "tc": "南瓜虛擬科技", "en": "Pumpkin VR" }, "info": { "tc": "妙手VR 為應用虛擬實境技術的醫療培訓平台，藉由 VR 擬真技術模擬臨床環境、處置流程，可作為訓練及考試用途，可安排多種培訓主題以及客製化教案情境，妙手 VR 產品特色為:\n\n 1.遠端多人連線 VR 程式\n         - 多人 / 多角色同時上線進行培訓\n         - 學員 和 指導員 互動偵測\n         - 數位化模擬病人：數位安妮\n         - 虛擬實境還原訓練場景\n\n 2. 客製化教案情境\n           - 醫療模擬訓練更貼近真實醫療情況\n           - 充分課前準備提高教學品質\n           - 醫療訓練模組化\n\n  3. 多樣性訓練課程\n           - 主題課程無限次的擬真練習\n           - 增加臨床醫療流程的熟悉程度\n           - 大幅降低學員培訓成本\n\n  4. 一站式教案編輯平台\n          - 學習、評分記錄數位化\n          - 訓練評測提升指導員效率\n          - 課程資料雲端管理系統\n", "en": "Goodhand VR  is an application of virtual reality technology for medical training. It utilizes VR simulation technology to replicate clinical environments and procedural processes, serving as a training and assessment platform. It can accommodate various training topics and customize instructional scenarios.\n\n1. Remote  Multi-user VR Program\n    - Multi-user simultaneous training\n    - Interaction detection between learners and instructors\n    - Digital simulation patient: Digital Annie\n    - Virtual reality recreates training scenarios\n2. Customizable Training Scenarios\n    - Medical simulation training closely mirrors real medical situations\n    - Well-prepared pre-class work improves teaching quality\n    - Medical training modularization\n3. Diverse Training Courses\n    - Theme courses with unlimited realistic practice\n    - Increase familiarity with clinical medical procedures\n    - Substantially reduce learner training costs\n 4. One-stop Lesson Design Platform\n    - Digitize learning and grading records\n    - Training assessment enhances instructor efficiency\n    - Cloud-based management system for course data" } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 300,
-    "h": 300,
-    "x": 12920,
-    "y": 2600,
-    "p": [
-      { "node": "L", "x": 300, "y": 0 },
-      { "node": "L", "x": 300, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "N1102",
-    "size": { "tc": 0.35, "en": 0.35 },
-    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
-    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
-    "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["犀動", "智能"], "en": ["Aiello"] },
-    "corps": [
-      {
-        "org": { "tc": "犀動智能科技股份有限公司", "en": "Aiello Inc." },
-        "info": {
-          "tc": "Vocol AI 語音協作平台組合了 Voice 和 Collaboration，結合多種大型語言模型 (LLMs)，透過自然語言處理 (NLP) 技術，提供個人與企業用戶更為精準的語音轉文字內容，並以 AI 生成對話逐字稿、摘要與主題，進而提高團隊協作效率，並為每一場對話創造更有價值的洞察分析。\nVocol 提供中、英、日三種語言辨識，自動偵測不同的講者，並支援超過25種其他語系的逐字稿轉譯，以AI自動生成對話重點摘要、主題分析與代辦事項。整合第三方線上會議工具，如：Microsoft Teams & Google Meet，解決跨工具整合需求。\n此外，透過分享、評論、標註成員等團隊協作功能，讓團隊間溝通、交流與討論更便捷，提升整體的工作效率，成為各個產業數位轉型的理想解決方案。\n針對醫療體系需求，如：行政會議、心理諮商、巡房問診與遠端看診等情境，Vocol 迅速產出對話逐字稿與重點摘要，除了讓醫事人員省下大量作業、彙整資訊的時間外，也提供留存記錄，供醫療院所未來分析、索引用。",
-          "en": "The Vocol AI Voice Collaboration Platform combines Voice and Collaboration, incorporating various large language models (LLMs) and utilizing Natural Language Processing (NLP) technology to provide more accurate speech-to-text content for both individual and enterprise users. It generates AI-generated transcripts, summaries, and topic analysis, ultimately enhancing team collaboration efficiency and creating actionable insights for each conversation.\nVocol offers speech recognition in three languages: Chinese, English, and Japanese, automatically detects different speakers, and supports transcription in over 25 other languages seamlessly. It integrates with third-party online meeting tools such as Microsoft Teams and Google Meet, addressing cross-tool integration needs.\nAdditionally, it facilitates team communication through features like sharing, commenting, and member annotations, thus improving overall work efficiency and serving as an ideal solution for digital transformation across various industries.\nFor healthcare needs, such as administrative meetings, psychological counseling, rounds, and remote consultations, Vocol rapidly produces conversation transcripts and AI summaries. This not only saves healthcare professionals a significant amount of time in information gathering and consolidation but also provides record-keeping for future analysis and reference in medical facilities."
-        }
-      }
-    ]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 900,
-    "h": 600,
-    "x": 15330,
-    "y": 2300,
-    "p": [
-      { "node": "L", "x": 900, "y": 0 },
-      { "node": "L", "x": 900, "y": 600 },
-      { "node": "L", "x": 0, "y": 600 }
-    ],
-    "id": "N1114",
-    "size": { "tc": 0.6, "en": 0.4 },
-    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
-    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
-    "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["智慧醫養", "協會"], "en": ["Taiwan Intelligent", " Health Care ", "Association"] },
-    "corps": [
-      { "org": { "tc": "台灣智慧醫養產業發展協會", "en": "Taiwan Intelligent Health Care Association" }, "info": { "tc": "台灣智慧醫養產業發展協會會員包含產官學界、醫療、照護 體系各領域專家以及業界領袖，結合台灣資通訊及醫療養護產業，跨機構間的合作與交流，打造智慧健康環境，積極佈局全球醫養商機引領產業掌握最新智慧科技應用服務，為社會大眾帶來更安全、精準、且完善的醫養服務。歡迎有相同理念的各界優秀人才加入本協會，攜手應用智慧醫養在國際舞台發光。 ", "en": "Taiwan Intelligent Health Care Association gathered with the leaders and experts of industry, official, professionals, university, medical and health care. We encourage the integration between ICT and health care industry in Taiwan , to build up an intelligent health care environment, bring out a safer and complete intelligent health care system to people. You’re welcome to join us. Let us light up the application of the intelligent health care international." } },
-      { "org": { "tc": "捷格科技股份有限公司", "en": "JAG Technology Ltd." }, "info": { "tc": "捷格科技精通醫療、照護、健康管理、健康促進的實務需求，研發電子病歷、醫學影像傳管系統...等產品，降低醫院成本並提高作業效率，同時以智慧病房、智慧手術室管理、智慧護理站，提升品質與顧客體驗 ，而透過捷格虛擬病房與虛擬醫院方案，也可帶動遠距醫療照護模式提高營收。數位化、自動化、智慧化是醫院現代化的新里程碑，不僅顯著提高服務量能並降低成本。這也是我們未來醫療照護在有限資源與激烈競爭的環境的唯一選項。作為醫療健康領域創新資訊技術和應用方案的領導者，JAG 在超過 25 年的歷程中，不僅創造了許多業界領先的產品，而且在服務台灣 80% 的大型醫院方面積累了寶貴的經驗。", "en": "JAG Technology brings refined medical and healthcare application solutions into the 21st century. With a global vision for industry development, JAG has led and co-ordinated a range of joint venture initiatives across greater China, Japan, and the United States by combining cloud-based internet technology with modern medical and health care systems.Headquartered in Taiwan, JAG Technology focuses on total solution integration planning, supplemented by individual customized services to create added value. JAG leads the industry by applying AI (Artificial Intelligence) for deep learning as a key development tool; similarly, JAG builds on the evolution of the IoT (Internet of Things) to connect various data collection points and devices for advancing real-time healthcare analyses." } },
-      {
-        "org": { "tc": "遠成醫保科技股份有限公司", "en": "YUANCHENG HEALTH TECHNOLOGY CO., LTD." },
-        "info": {
-          "tc": "MedLing，以NLP (Natural Language Processing)語意分析引擎為技術核心。旨在針對醫療系統中所出現的文字內容，包含：病摘、病理報告、檢驗報告等龐大的資料，以 SNOMED CT 為基礎，定義出資料中的重要術語，提供醫療專業人員作為精確一致的快速判斷依據。\n我們提供的解決方案包含醫療院所病摘的轉譯，將海量的資料解析成知識圖譜。藉由機器學習的判斷，提供專業醫療或相關人員無痛的使用環境。無須語言程式背景，也不必曠日廢時的與工程師來回溝通，即可自行設定簡單的條件，產生CDS (臨床決策支持)，達到更有效率的醫療診斷程序。\nMedLing的服務應用範圍多元，可提供：醫師診斷，疾病分類師快速查核健保項目等。其商業價值在於多元的應用及跨領域的串接，如保險業的健康評估、亞健康保戶的照護平台、與合作夥伴建構健康照護平台。我們可用SNOMED CT與醫療決策系統的整合結果，跨域應用到大健康照護領域及保險、教育的相關服務，在應用上是非常關鍵和廣泛的。使用者更可以用自然互動的方式，取得相關醫療訊息。",
-          "en": "MedLing, a Natural Language Processing (NLP) semantic analysis engine as the core technology. The aim is to define important terms in the text content that appears in medical systems, including medical notes, pathology reports, laboratory reports, and other massive data based on SNOMED CT. This will provide medical professionals with precise and consistent rapid judgment criteria.\nOur solution includes the translation of medical notes and parsing of massive data into knowledge graphs. Through machine learning, we offer medical professionals or related personnel a painless environment to use. Without the need for computer  programming background or time-consuming communication with engineers, users can set simple conditions and generate Clinical Decision Support (CDS) for more efficient medical diagnostic procedures.\nThe application range of MedLing's services is diverse, including physician diagnosis and disease classification for quick checking of NHI items. Its commercial value lies in its diverse applications and cross-disciplinary integration, such as health assessments in the insurance industry, care platforms for sub-healthy policyholders, and the construction of health care platforms with partners. We can integrate the results of SNOMED CT and medical decision-making systems to apply them to the broader field of health care and related services in insurance and education, which is critical and extensive in its application. Users can also obtain relevant medical information through natural interaction."
-        }
-      },
-      { "org": { "tc": "博鑫醫電股份有限公司", "en": "BROADSIMS Inc." }, "info": { "tc": "博鑫醫電是全球第一家提供行動5G生理參數供外部App存取之開放式平台 (5G-Vital-Sign Platform) 領導廠商。5G-VSP平台符合醫規性能之心電、血氧、血壓等生理參數，分別提供PDK和MDK兩條產品線，並開放原始波形數據資料供醫護人員或研發團隊從雲端及其它設備做數據分析或開發軟硬體，目前已獲得台灣多間模擬病房和大專院校所採用，不僅節省人力成本，減少誤判性，更提高研究效率，使遠距醫療、居家照護等行動應用帶動AI先進醫學技術的發展。", "en": "BROADSIMS is the first providing an APP-Installable 5G vital-sign solution as an open-innovation platform (5G-VSP), including ECG, SpO2, and NIBP functions for clinical research and care providers, provided with 2 product series (PDK & MDK). Vital-sign signals in 5G-VSP are medical-grade compliant and allowed opening raw-data to 3rd-parties installing their own APP. All measurement history is available any time, creating a smart medical ecosystem." } }
-    ]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 600,
-    "h": 300,
-    "x": 16830,
-    "y": 2600,
-    "p": [
-      { "node": "L", "x": 600, "y": 0 },
-      { "node": "L", "x": 600, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "N1124",
-    "size": { "tc": 0.4, "en": 0.4 },
-    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
-    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
-    "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["ASSA ", "ABLOY"], "en": ["ASSA ", "ABLOY"] },
-    "corps": [{ "org": { "tc": "香港商亞薩合萊有限公司台灣分公司", "en": "ASSA ABLOY HONG KONG LTD. TAIWAN BRANCH" }, "info": { "tc": "", "en": "" } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 600,
-    "h": 300,
-    "x": 17430,
-    "y": 3200,
-    "p": [
-      { "node": "L", "x": 600, "y": 0 },
-      { "node": "L", "x": 600, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "N1127",
-    "size": { "tc": 0.5, "en": 0.35 },
-    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
-    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
-    "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["海科生技"], "en": ["HyGene", " Biotech"] },
-    "corps": [
-      { "org": { "tc": "海科生技股份有限公司", "en": "HyGene Biotech Company Ltd." }, "info": { "tc": "海科生技股份有限公司成立於2007年，已有15年在軟體系統專業級客製化的熟悉程度，並且秉持積極熱誠的服務態度， 提供企業符合ISO與FDA規範的整合式電子化管理系統，促使產業能加速符合PIC/S GMP，以ISO及FDA的規範精神作為服務的依歸 ，為客戶打造全方位及多元化的卓越高品質服務。", "en": "Founded in 1997, Hygene Biotechnology Co., Ltd. is a Taiwan-based international biotech company provides an integrated electronic management system that complies with ISO and FDA specifications, promotes the industry to accelerate compliance with PIC/S GMP, and takes the spirit of ISO and FDA specifications as the basis for services, and creates all-round and diversified excellent and high-quality services for customers." } },
-      { "org": { "tc": "旭威認證股份有限公司", "en": "Foxwell Certification Co., Ltd." }, "info": { "tc": "旭威認證股份有限公司隸屬正崴集團旗下的森崴能源（6806），森崴能源以保護地球、永續發展、綠能減碳、潔淨能源為核心價值與願景，擬定【光、風、水、氣、大平台】發展戰略，致力於再生能源與潔淨能源服務與技術發展。\n\n並由旭威認證為企業盤點節能及碳排放狀況，找出浪費能源及減碳潛能，以 ESG 的生態池發展解決方案，提供包括溫室氣體盤查ISO 14064-1、溫室氣體第三方查驗、產品碳足跡ISO 14067、能源管理ISO 50001、減碳專案ISO 14064-2、科學基礎減量目標倡議SBTi、氣候相關財務揭露TCFD及低碳設備等硬體產品及軟體服務，有助提升客戶節能減碳、社會責任與公司治理等能力，多元化解決地球環境的問題。", "en": "Foxwell Certification Int. is a third-party certificate company in Taiwan, located in the north of Taipei city. Our business field includes ISO 14064-1, ISO14064-2, ISO 14067, ISO50001, environmental social corporate governance (ESG) reports, task force on climate-related financial disclosures (TCFD), and science-based targets initiative (SBTi). We aim to build a systematic and documentary management methodology. We are not only to reduce small-middle enterprises' costs and operating processes but also to create a decarbonization structure. \nFoxwell Certification Int. is a subsidiary of the Foxlink group. The core value and mission present \"One Better the Earth\", \"SDGs in Action\", \"Professional Green Energy Solution\", and \"Leading LNG supplier\". We own abundant expertise in engineering fields and innovative technology to service customers. We focus on an ESG industrial ecosystem such as forest carbon credits, set energy storage technology, and operate a green energy trading platform." } }
-    ]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 600,
-    "h": 300,
-    "x": 12920,
-    "y": 1700,
-    "p": [
-      { "node": "L", "x": 600, "y": 0 },
-      { "node": "L", "x": 600, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "N1202",
-    "size": { "tc": 0.6, "en": 0.6 },
-    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
-    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
-    "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["艾希優"], "en": ["ICU"] },
-    "corps": [{ "org": { "tc": "荷蘭商艾希優醫療產品股份有限公司台灣分公司", "en": "ICU Medical B.V., Taiwan Branch" }, "info": { "tc": "後補", "en": "Be supplemented later" } }]
-  },
-  {
-    "type": "booth",
-    "floor": 4,
-    "w": 600,
-    "h": 300,
-    "x": 16530,
-    "y": 10110,
-    "p": [
-      { "node": "L", "x": 600, "y": 0 },
-      { "node": "L", "x": 600, "y": 300 },
-      { "node": "L", "x": 0, "y": 300 }
-    ],
-    "id": "N321a",
-    "size": { "tc": 0.6, "en": 0.4 },
-    "cat": { "tc": "精準醫療展區", "en": "Diagnostics, Laboratory Equipment & Services" },
-    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
-    "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["永磐"], "en": ["MIKOTEK"] },
-    "corps": [{ "org": { "tc": "永磐科技股份有限公司", "en": "MIKOTEK INFORMATION INC." }, "info": { "tc": "Miko IoT醫護管理平台係利用安全及有效的資通訊機制，結合院內HIS、NIS等醫療資訊系統所提供之資料，並整合通訊系統、定位系統及IoT醫療物聯裝置之資訊，統一建構而成的私有雲端智慧醫療核心數據中心。\n\nMiko IoT醫護管理平台採用模組化架構，分別可與MikoDrip點滴監測系統、MikoNIS護理站電子白板、MikoRTLS定位系統、及MikoCALL緊急呼叫系統協作，作為不同系統間資料統合與資訊分享的媒介。Miko IoT透過跨系統的整合與智能運算提供資訊加值服務，例如發生緊急事件時，Miko IoT可將緊急呼叫通話、呼救位置、病患基本資料與醫療註記等訊息，自動傳遞到專責護理師的手機上。透過智慧化流程縮短緊急事件的反應時間，協助醫院提升緊急應變能力與醫療服務品質。\n", "en": "The Miko Drip System intelligently monitors the real-time status of the IV drip speed and supports a \"plug and play\"mode. Miko Drip can change detailed information such as drip settings through the buttons of the device or mobile APP and also accurately monitors the remaining time of the infusion. When the drip is about to end or the infusion process is abnormal, Miko Drip alert by LED lights and sound, and send out information to the mobile APP at the same time. The Miko Drip System combined with the Miko IoT medical care management platform can provide notifications to a specific caregiver according to related schedule, and integrate the drip information and display on Miko NIS at nursing station." } }]
-  },
-  {
-    "type": "booth",
     "floor": 1,
     "w": 300,
     "h": 300,
@@ -4708,6 +4207,46 @@
     "w": 300,
     "h": 300,
     "x": 900,
+    "y": 4610,
+    "p": [
+      { "node": "L", "x": 300, "y": 0 },
+      { "node": "L", "x": 300, "y": 300 },
+      { "node": "L", "x": 0, "y": 300 }
+    ],
+    "id": "L017",
+    "size": { "tc": 0.4, "en": 0.25 },
+    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
+    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
+    "tag": { "tc": [], "en": [] },
+    "text": { "tc": ["五鈴"], "en": ["ISUZU ", "OPTICS"] },
+    "corps": [{ "org": { "tc": "五鈴光學股份有限公司", "en": "ISUZU OPTICS CORP." }, "info": { "tc": "★內置推掃螢光高光譜\n★IOC-ONE 二合一顯微高光譜\n★小動物螢光\n★藥品分類", "en": "★Built-in push-broom fluorescent hyperspectral\n★IOC-ONE 2-in-1 Microscopic Hyperspectral\n★Small animal fluorescent\n★Bionic Membrane Dissolution Apparatus\n★Drug Classification" } }]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 300,
+    "h": 300,
+    "x": 900,
+    "y": 4310,
+    "p": [
+      { "node": "L", "x": 300, "y": 0 },
+      { "node": "L", "x": 300, "y": 300 },
+      { "node": "L", "x": 0, "y": 300 }
+    ],
+    "id": "L018",
+    "size": { "tc": 0.4, "en": 0.25 },
+    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
+    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
+    "tag": { "tc": [], "en": [] },
+    "text": { "tc": ["億宣"], "en": ["Vertex", " System"] },
+    "corps": [{ "org": { "tc": "億宣應用科技股份有限公司", "en": "Vertex System Corporation" }, "info": { "tc": "億宣應用科技股份有限公司成立於2020年，擁有堅強的5G行動通訊網路技術團隊、其團隊透過5G專網的佈建，以無線行動通訊技術訊號涵蓋 know-how 結合物聯網、5G 垂直整合應用、雲端管理平台及大數據資料採集，建立各項應用，例如物件跟蹤、視頻監控和分析、生產線維護檢查、無人運車、室內導航、工業機器人等，達到企業智慧聯網、資訊安全共享、藉以推動工廠數位化轉型。5G網路雖然具備高等級的安全防護，針對企業自建5G專網，我們提供一套完整的企業專網資安解決方案，以提供至少多層防護：網路防護、終端裝置防護、多點監控、事先預防。", "en": "Through the deployment of 5G private networks, Vertex can establish various applications, such as object tracking, video surveillance and analysis, production line inspection, AMR, positon, robots, to promote the digital transformation of factories. Assist factories or enterprises to conduct demand assessment, responsible for planning and deploying the required 5G private network, and utilize 5G terminals to integrate vertical applications in factories, such as AGV cars, imaging equipment, etc." } }]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 300,
+    "h": 300,
+    "x": 900,
     "y": 3710,
     "p": [
       { "node": "L", "x": 300, "y": 0 },
@@ -4761,6 +4300,26 @@
     "tag": { "tc": [], "en": [] },
     "text": { "tc": ["高值生醫"], "en": ["High-value ", "Biomaterials"] },
     "corps": [{ "org": { "tc": "高值生醫材料研究與商品化中心", "en": "High-value Biomaterials Research and Commercialization Center" }, "info": { "tc": "「高值生醫材料研究與商品化中心 (MT3+)」集結跨領域學者專家，期望利用團隊生醫材料物化性質檢測、臨床前試驗及商品化流程規劃之核心能力，針對高值生醫植入物開發之需求，藉由加強培育跨域人才理論與實務經驗、提昇核心技術設備、與串聯跨域合作補足商品化流程缺口，創造生技醫材產業市場價值經濟效益，進一步提升台灣生醫產業的國際競爭力。", "en": "High-value Biomaterials Research and Commercialization Center (MT3+) will continue to facilitate the alliance and promote the development of biomaterials industries by being dedicated to research and development, consulting with follow-up plans, expanding the promotion activities, and strengthening capabilities in the field of biomaterials engineering and therefore improve competitiveness of Taiwanese biomedical industries. " } }]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 1500,
+    "h": 600,
+    "x": 2400,
+    "y": 3200,
+    "p": [
+      { "node": "L", "x": 1500, "y": 0 },
+      { "node": "L", "x": 1500, "y": 600 },
+      { "node": "L", "x": 0, "y": 600 }
+    ],
+    "id": "L1008",
+    "size": { "tc": 0.8, "en": 0.5 },
+    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
+    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
+    "tag": { "tc": [], "en": [] },
+    "text": { "tc": ["陽明交通大學"], "en": ["National Yang Ming", " Chiao Tung University"] },
+    "corps": [{ "org": { "tc": "國立陽明交通大學", "en": "National Yang Ming Chiao Tung University" }, "info": { "tc": "國立陽明交通大學於合校後將於十年內成為亞洲「數位生醫」先驅，培育全球頂尖大學師資及數家獨角獸級電子生醫新創，本年於展中將呈現年度前瞻數位生醫技術與新創產品共十組。", "en": "National Yang Ming Chiao Tung University(NYCU) will become a pioneer in digital biomedicine of Asia in 2032, cultivating the world's top university faculty and many startup unicorns.\nThis year we will presente many digital biomedical technologies and innovative products at the exhibition." } }]
   },
   {
     "type": "booth",
@@ -4829,6 +4388,30 @@
         }
       }
     ]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 1800,
+    "h": 1200,
+    "x": 2100,
+    "y": 10710,
+    "p": [
+      { "node": "L", "x": 1800, "y": 0 },
+      { "node": "L", "x": 1800, "y": 1200 },
+      { "node": "L", "x": 0, "y": 1200 },
+      { "node": "L", "x": 0, "y": 600 },
+      { "node": "L", "x": -300, "y": 600 },
+      { "node": "L", "x": -300, "y": 300 },
+      { "node": "L", "x": 0, "y": 300 }
+    ],
+    "id": "L106",
+    "size": { "tc": 1.0, "en": 1.0 },
+    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
+    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
+    "tag": { "tc": [], "en": [] },
+    "text": { "tc": ["Intel"], "en": ["Intel"] },
+    "corps": [{ "org": { "tc": "美商英特爾亞太科技有限公司台灣分公司", "en": "Intel" }, "info": { "tc": "-Demonstrate top Value:  4th Gen Xeon, AMX, OpenVino, 13th Gen Core, OpenFL, Intel GPU, Altera, Gaudi/Habana\n-Enable T1 Partners and use cases on Intel’s latest product lines \n-Implementation of Use cases both on Premise and to the Cloud – Edge ", "en": "-Demonstrate top Value:  4th Gen Xeon, AMX, OpenVino, 13th Gen Core, OpenFL, Intel GPU, Altera, Gaudi/Habana\n-Enable T1 Partners and use cases on Intel’s latest product lines \n-Implementation of Use cases both on Premise and to the Cloud – Edge " } }]
   },
   {
     "type": "booth",
@@ -4922,6 +4505,51 @@
     "type": "booth",
     "floor": 4,
     "w": 900,
+    "h": 600,
+    "x": 3000,
+    "y": 2300,
+    "p": [
+      { "node": "L", "x": 900, "y": 0 },
+      { "node": "L", "x": 900, "y": 600 },
+      { "node": "L", "x": 0, "y": 600 }
+    ],
+    "id": "L1112",
+    "size": { "tc": 0.8, "en": 0.5 },
+    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
+    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
+    "tag": { "tc": [], "en": [] },
+    "text": { "tc": ["博鈞科技"], "en": ["MOBISNET ", "TECHNOLOGY"] },
+    "corps": [{ "org": { "tc": "博鈞科技股份有限公司", "en": "MOBISNET TECHNOLOGY CO.,  LTD." }, "info": { "tc": "博鈞MIT機器人平台\n1、AMR無人自走車\n2、智慧工廠運輸機器人\n3、送物機器人\n4、送餐機器人\n5、服務型機器人\n6、噴霧消毒機器人", "en": "Mobisnet MIT robot platform\n1. Autonomous Mobile Robot \n2. Smart Factory Delivery Robot\n3. Cross Floor Delivery Robot\n4. Meal Delivery Robot\n5. Service Robot\n6. Disinfection Robot" } }]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 900,
+    "h": 600,
+    "x": 4510,
+    "y": 2300,
+    "p": [
+      { "node": "L", "x": 900, "y": 0 },
+      { "node": "L", "x": 900, "y": 600 },
+      { "node": "L", "x": 0, "y": 600 }
+    ],
+    "id": "L1118",
+    "size": { "tc": 0.4, "en": 0.3 },
+    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
+    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
+    "tag": { "tc": [], "en": [] },
+    "text": { "tc": ["新竹生醫育成 ", "(青輔、朗齊", "、威強電)"], "en": ["Hsinchu Biomedical", " Science Park", " Incubation Center", " MOEASMEA"] },
+    "corps": [
+      { "org": { "tc": "新竹生醫產業及育成中心", "en": "Hsinchu Biomedical Science Park Incubation Center, MOEASMEA" }, "info": { "tc": "智慧醫院用設備及AI晶片等", "en": "智慧醫院用設備及AI晶片等" } },
+      { "org": { "tc": "青輔實業股份有限公司", "en": "Modernsolid Industrial Co., Ltd." }, "info": { "tc": "醫療台車、醫療支架 系列以人體工學為產品設計主要出發點。提供智慧病房、遠距醫療、長照及移動式護理服務等解決方案。", "en": "Modernsolid founded in 1988, as one of the world-leading supplier in mounting solutions, provides, a wide range of high quality products that meet the vast majority of customers' needs in the Healthcare market. We aim at integrating the hospital displays, mobile computing workstation cart, and track system info the appropriate place for the effective use to achieve teh optimal health outcome. \nOur high-performance mounting solutions for use with LCD displays and other electric devices could be applied in not only examination and treatment rooms, but also the connection between the health care providers and patient and even teh entertainment use. Modernsolid always insists on innovative and ergonomic products that improve clinical practice. " } },
+      { "org": { "tc": "威強電工業電腦股份有限公司", "en": "IEI Integration Corp." }, "info": { "tc": "威強電深耕醫療產業多年，透過整合最新技術，開發出優質可靠的護理推車電腦、AIO觸控平板電腦、AI Box PC等創新產品，提供優質的醫療解決方案，為醫護人員創造良好的工作環境， 並確保為患者提供更好的醫療服務。", "en": "IEI is deeply involved in the medical industry. We continuously integrate the latest technologies to develop high quality and reliable nursing cart computers, all-in-one medical panel PCs, AI box PC and other innovative products to provide high-quality medical solutions, create a good working environment for medical personnel, and ensure better medical services for patients." } },
+      { "org": { "tc": "朗齊生物醫學股份有限公司", "en": "LAUNXP Biomedical Co., Ltd." }, "info": { "tc": "朗齊著重於癌症新藥及新劑型開發，除開發新成分新藥外，也進行藥物重定位研究找出其抗癌作用機轉，不僅有首創新藥模式市場優勢，也縮短開發時程和節省費用。使產品更具價值及市場競爭力，同步啟動載藥傳輸平台開發。", "en": "LAUNXP focus on developing new chemical entities for cancer and researching a new or better way to benefit patients. Now we obtain several patents for 505(b)(1) and 505(b)(2). Meanwhile, our team is researching the mechanism of anti-proliferation in tumors by repositioning the new indications of FDA-approved drugs which we obtained 505(b)(2) patents already. The results provide advantages of those 505(b)(2) drugs as First-in-class medication in cancer therapy, shortening the development process and saving significant investment. To increase the value and competitiveness of our products, our team is simultaneously developing new antiproliferative drug delivery, such as virus-like nanoparticles and nanoparticles." } }
+    ]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 900,
     "h": 300,
     "x": 5410,
     "y": 2600,
@@ -4957,6 +4585,31 @@
     "tag": { "tc": [], "en": [] },
     "text": { "tc": ["美商", "宇心醫"], "en": ["QT ", "Medical"] },
     "corps": [{ "org": { "tc": "美商宇心生醫股份有限公司台灣分公司", "en": "QT Medical, Inc., Taiwan Branch" }, "info": { "tc": "”宇心” 12導心電圖系統為醫療級，用於心臟疾病的篩檢儀器。獨特的產品設計可彈性應用在不同醫療場域，延伸至遠距會診、急診、緊急救護、偏鄉醫療，CRO、長照中心與居家照護等。\n不同於傳統機型，僅67g的重量輕巧可攜，搭配的專利電極貼片省去複雜導線，讓檢查可在1分鐘完成操作，更簡單、更衛生。透過臨床試驗證明與醫院用高階機種達相同水準，並取得FDA,TFDA與CE。搭配APP與符合HIPAA雲端管理系統，克服過去院內心電圖無法普及的困難，為心臟照護帶來新的可能。\n", "en": "The world’s most user-friendly 12-lead ECG system !\n\nThe PCA 500 is an entire ECG solution that simplifies and streamlines the 12-lead ECG testing.  It is hospital grade, yet easy to use. \nWith seamless integration of state-of-the-art technologies: a super-compact recorder weights only 67g, patented prepositioned electrode strips, user-friendly apps for mobile devices, and HIPAA-compliant cloud, a hospital-quality 12-lead ECG can be completed by anyone, anytime, anywhere. PCA500 provides efficiency, accuracy, consistency, sanitation and better workflow, and makes 12-lead resting ECG testing accessible. It is cleared by the FDA, TFDA, and CE mark , perfect for telemedicine, ER, EMS , CRO, nursing home and remote patient monitoring. \n" } }]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 1500,
+    "h": 900,
+    "x": 4510,
+    "y": 11010,
+    "p": [
+      { "node": "L", "x": 1500, "y": 0 },
+      { "node": "L", "x": 1500, "y": 900 },
+      { "node": "L", "x": 0, "y": 900 }
+    ],
+    "id": "L118",
+    "size": { "tc": 0.6, "en": 0.6 },
+    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
+    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
+    "tag": { "tc": [], "en": [] },
+    "text": { "tc": ["達擎、友達頤康、", "友達耘康、明達醫學"], "en": ["AUO Display Plus", " Corporation"] },
+    "corps": [
+      { "org": { "tc": "達擎股份有限公司", "en": "AUO Display Plus Corporation" }, "info": { "tc": "達擎股份有限公司 (AUO Display Plus) 為友達光電子公司，專注於通用及公共顯示器之銷售、研發及客戶服務。達擎為工業及商業應用面板領導廠商，擁有超過 20 年的專業經驗，提供全球的客戶完整產品線與服務。總部位於台灣新竹科學園區，營運據點遍佈中國大陸、日本、美國及歐洲等全球各地。", "en": "AUO Display Plus is the industrial and commercial display subsidiary of AUO Corporation. We offer a complete end-to-end display service, from R&D, through to sales and customer service. AUO Display Plus picks up the baton from AUO, leveraging 20 years of experience to provide a comprehensive range of products to customers worldwide. Headquartered in the Hsinchu Science Park, Taiwan, the company operates global offices in Mainland China, Japan, the United States, and Europe." } },
+      { "org": { "tc": "友達頤康科技股份有限公司", "en": "AUO Care Inc." }, "info": { "tc": "1. 養老雲平台\n2.安全守護方案\n3.運動健康管理方案", "en": "1. AI care as a service\n2.Safety monitoring solution\n3.Function training solution " } },
+      { "org": { "tc": "友達耘康股份有限公司", "en": "AUO Health Inc." }, "info": { "tc": "【中醫數位化檢測方案】奠基於高精密度多點陣列型壓力感測技術，透過電腦精準控制升降行程，真實模擬手指把脈過程中的\"舉、按、尋\"，還原中醫師把脈手法。 並以顯示器專業出發，以色彩還原演算法將舌色還原，並準確顯示。\n本公司提供以上兩者標準化、數位化且具信校度的設備供脈象與舌象檢測所用，再搭配資料分析平台將多變數且複雜的資料進行快速地羅列整理、趨勢分析與樣態對比，可協助中醫從業人員於臨床研究、教學傳承與輔助診斷上有可信賴的數位工具，並可期於未來的大數據分析與AI應用。", "en": "【Traditional Chinese Medicine Digital Detection Solution】Built upon high-precision multi-point array pressure sensing technology, this solution utilizes computer-controlled vertical movement with utmost precision to faithfully replicate the \"lifting, pressing, and searching\"actions of finger pulse diagnosis, thus restoring the palpation techniques of traditional Chinese medicine practitioners. Additionally, employing a specialized display, a color restoration algorithm accurately reproduces tongue colors for precise display.\n\nAUO Health provides both standardized and digitized equipment for pulse and tongue diagnosis, ensuring calibration and reliability. When paired with a data analysis platform, this system rapidly organizes complex, multivariate data, conducts trend analysis, and performs pattern comparisons. This assists professionals in the field of traditional Chinese medicine by providing them with a dependable digital tool for clinical research, educational inheritance, and diagnostic support. Furthermore, it holds the potential for future applications in big data analysis and AI." } },
+      { "org": { "tc": "明達醫學科技股份有限公司", "en": "Crystalvue Medical Corporation" }, "info": { "tc": "明達醫學 Crystalvue 致力於高品質全自動眼科醫療與視光產品，包括眼底(視網膜)照相機、可量測角膜厚度之眼壓計、3D掃框機、磨片機、視網膜光學斷層掃描儀、生物量測儀…等。Crystalvue專注提供優異的眼球影像擷取與視網膜斷層掃描、穩定可靠的量測、以及全自動、單擊即可操作之直覺式介面。Crystalvue是您經營眼科醫療與視光服務場域的高品質夥伴。", "en": "Crystalvue Medical Corporation devotes to supply high quality, fully automatic ophthalmic and optometry products, including Fundus Camera, Tonometer with Pachymetry, Lens Edger, 3D Tracer, OCT (Optical Coherence Tomography), Biometer, etc. Every Crystalvue product comes with superior image capturing and processing, reliable measuring, intuitive 1-tap operation interface, and fully automatic. Crystalvue is your most trusted quality partner for medical, eye care and ophthalmic services with no compromise." } }
+    ]
   },
   {
     "type": "booth",
@@ -5065,6 +4718,26 @@
     "tag": { "tc": [], "en": [] },
     "text": { "tc": ["和鑫"], "en": ["Nanoray"] },
     "corps": [{ "org": { "tc": "和鑫生技開發股份有限公司", "en": "Nanoray Biotech Co., Ltd." }, "info": { "tc": "和鑫生技一直以來致力於單能光研發、生產及製造，運用Nanoray單能光技術優勢，有效降低醫學成像的輻射劑量，透過更小的功率需求及更大的拍攝角度，提供人們尤其是兒童更安全、快速及經濟的成像選擇。Revolux是Nanoray以其獨特的穿透式X光射源， 成功的整合了台灣的數位影像偵測板、成像軟體及機構，完成了國內自製全球唯一的低輻射手部X光機。外觀設計輕巧，擁有安全防護設計，讓使用者在更安全、友好的情境下進行手部影像拍攝。Revolux已正式通過美國及台灣FDA認証，除了針對兒童骨齡成長曲線的診斷外，亦可針對老人、婦女的骨質密度檢測、類風濕性關節疾病早期診斷及手部矯正重建手術之應用。", "en": "NanoRay Biotech Co. has been devoted to researches and developments of patented transmission X-ray technology. By generating a monochromatic spectrum with a specific niche of beam energy contributing to higher image contract, lower energy consumption and decreased absorbing dosage for patients, the transmission X-ray tube is able to provide a much safer, faster and more affordable choice in medical imaging, especially in pediatric field. As the world’s first “Made- in- Taiwan” low energy hand X-ray device, Revolux is comprised of the unique transmission X-Ray tube, digital image sensor, imaging software system and a radiation contained housing. Furthermore, Revolux revels not only an elegant appearance but also a high-level safety and protective design which is intended to provide a high-quality environment for patients taking the image. Revolux has been officially approved by USFDA and TFDA. For future application, NanoRay Biotech Co. aims to provide a better healthcare service in the medical needs of children’s bone age diagnosis, bone density detection for both the elderly men and women, early diagnosis for rheumatoid arthritis, as well as hand bone reconstructive surgery." } }]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 300,
+    "h": 300,
+    "x": 5410,
+    "y": 2300,
+    "p": [
+      { "node": "L", "x": 300, "y": 0 },
+      { "node": "L", "x": 300, "y": 300 },
+      { "node": "L", "x": 0, "y": 300 }
+    ],
+    "id": "L1223",
+    "size": { "tc": 0.4, "en": 0.2 },
+    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
+    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
+    "tag": { "tc": [], "en": [] },
+    "text": { "tc": ["屏基"], "en": ["Pingtung ", "Christian", " Hospital"] },
+    "corps": [{ "org": { "tc": "屏基醫療財團法人屏東基督教醫院", "en": "Pingtung Christian Hospital" }, "info": { "tc": "以數位公益為出發點，透過科技改善並提升人的生活品質與醫療數位落差，特別針對偏鄉、弱勢族群與開發中國家，透過開放計畫，提供合作夥伴醫療資訊應用的基礎建設，培力推動確保健康的生活方式與永續經營。", "en": "From the view of digital public welfare, we improve and enhance life quality and the digital health gap through technology, especially for rural, disadvantaged groups and developing countries.\nWe provide the healthcare IT Infrastructure to develop a sustainable healthy lifestyle for our partners through programs.\n" } }]
   },
   {
     "type": "booth",
@@ -5273,6 +4946,46 @@
   {
     "type": "booth",
     "floor": 4,
+    "w": 900,
+    "h": 300,
+    "x": 4510,
+    "y": 10710,
+    "p": [
+      { "node": "L", "x": 900, "y": 0 },
+      { "node": "L", "x": 900, "y": 300 },
+      { "node": "L", "x": 0, "y": 300 }
+    ],
+    "id": "L218",
+    "size": { "tc": 0.6, "en": 0.35 },
+    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
+    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
+    "tag": { "tc": [], "en": [] },
+    "text": { "tc": ["西柏科技"], "en": ["Cypress ", "Technology"] },
+    "corps": [{ "org": { "tc": "西柏科技股份有限公司", "en": "Cypress Technology Co., Ltd." }, "info": { "tc": "CYP的醫療影像解決方案遵循PACS (醫療影像儲存系統)架構，並能夠同時處理多個影像/影片/數據紀錄來源。CYP醫療影解決方案可整合超音波、內視鏡、生命徵象監測儀等。此外並提供影像與資料的儲存、擷取等功能並可以切換不同影像，放大與多視窗顯示於單一畫面包含PiP、PoP等格式。\n現今傳統手術的內視鏡部分也進步成3D內視鏡與達文西手臂等，因此研發出即時3D影像平台可協助術前模擬、手術中協助與手術後之教育訓練。\n此次展出的解決方案如下:\n醫療戰情室、複合式手術室與3D醫療影像。\n", "en": "CYP Medical imaging solutions comply with standard PACS implementations and is able to process multiple images, videos and data. To integrate with various medical images devices includes ultrasound endoscope, vital sign and so on. Beyond the capture of images, video and data, our software provides for advanced operations such as I/O switching, zoom in and out, PiP, PoP etc. \nNowadays, the visualization of medical surgery images are even more important than medical digital data in clinical practice. With the transition of traditional endoscopic to minimally invasive surgical robotic, 3D endoscopic lens is devoted to advance the medical imaging of minimally invasive surgery. With no doubt, effective 3D visualization can more intuitively assist the surgeon with the Pre-operative Simulation, Intraoperative Assistance and Post-operative Training. \nFollowing solutions will be displayed on the show. \nMedical Situation Room\nHybrid Operation Room\n3D Medical Images " } }]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 600,
+    "h": 300,
+    "x": 5410,
+    "y": 10710,
+    "p": [
+      { "node": "L", "x": 600, "y": 0 },
+      { "node": "L", "x": 600, "y": 300 },
+      { "node": "L", "x": 0, "y": 300 }
+    ],
+    "id": "L224",
+    "size": { "tc": 0.5, "en": 0.4 },
+    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
+    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
+    "tag": { "tc": [], "en": [] },
+    "text": { "tc": ["慧誠智醫"], "en": ["imedtac"] },
+    "corps": [{ "org": { "tc": "慧誠智醫股份有限公司", "en": "imedtac Co., Ltd." }, "info": { "tc": "慧誠智醫透過開發全方位智慧醫療解決方案，提高運營效率和減少人為錯誤，並且幫助醫院實現數位轉型。 作為AIoT醫療專家，慧誠智醫提供廣泛的智慧醫療解決方案，包括門診和住院醫療、健康促進、臨床服務和智慧動物醫院解決方案。 服務包括智慧手術室、遠距醫療、用藥和病人安全、AIoT手部消毒解決方案和臨床服務，以及智慧動物保健等。\n", "en": "imedtac enables intelligent healthcare transformation by creating comprehensive solutions that improve operational efficiency and reduce human errors. As an AIoT healthcare expert, imedtac provides a wide range of services, including outpatient and inpatient healthcare, health promotion, clinical services, and smart animal hospital solutions. These services encompass smart operating rooms, telehealth, medication and patient safety, AIoT disinfection solutions, and clinical services, as well as smart animal healthcare." } }]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
     "w": 600,
     "h": 600,
     "x": 1500,
@@ -5369,6 +5082,26 @@
     "tag": { "tc": [], "en": [] },
     "text": { "tc": ["台灣", "希森美康"], "en": ["Sysmex", " Taiwan"] },
     "corps": [{ "org": { "tc": "台灣希森美康股份有限公司", "en": "Sysmex Taiwan Co., Ltd." }, "info": { "tc": "Sysmex Corporation（希森美康集團），創立於1968年，是一家總部設在日本神戶的大型跨國企業。集團主要致力於體外診斷及生命科學檢測等相關領域，包含開發、製造、銷售、進出口用於體外診斷的儀器、試劑和軟體，是全球知名的臨床檢驗解決方案供應商。目前，Sysmex的產品與服務遍佈全球190多個國家。在血液學核心領域，是全球市場領導品牌，市佔全球第一。", "en": "Sysmex Corporation, founded in 1968, is a large multinational enterprise headquartered in Kobe, Japan. The group is mainly committed to in vitro diagnostics and life science testing and other related fields, including the development, manufacturing, sales, import and export of instruments, reagents and software for in vitro diagnostics. It is a world-renowned provider of clinical testing solutions. Currently, Sysmex's products and services are available in more than 190 countries around the world. In the core field of hematology, it is a leading brand in the global market, ranking first in the world." } }]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 600,
+    "h": 300,
+    "x": 5710,
+    "y": 10110,
+    "p": [
+      { "node": "L", "x": 600, "y": 0 },
+      { "node": "L", "x": 600, "y": 300 },
+      { "node": "L", "x": 0, "y": 300 }
+    ],
+    "id": "L325a",
+    "size": { "tc": 0.5, "en": 0.5 },
+    "cat": { "tc": "精準醫療展區", "en": "Diagnostics, Laboratory Equipment & Services" },
+    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
+    "tag": { "tc": [], "en": [] },
+    "text": { "tc": ["優菩"], "en": ["UPro"] },
+    "corps": [{ "org": { "tc": "優菩醫療儀器股份有限公司", "en": "UPro Medical Inc." }, "info": { "tc": "優菩為專業的醫療手術用精細儀器製造商，如硬管&軟管內視鏡。\n自有的優秀研發團隊，不對朝著最新技術前進。\n在研發，創新，突破的精神下，打造精準符合人性化的穩定手術儀器。\n在滿足客戶以及醫療團隊人員客製化需求的同時，\n提供及時技術支援。\n打造出能夠提升手術準確率，並且降低風險及時間成本的精密儀器。", "en": "UPro Medical specialize in manufacturing fine medical instruments for surgery, such as endoscopes and light sources.\n\nOur own excellent R&D team is constantly forward to the latest technology. In the spirit of research and development, innovation, and breakthrough, to create accurate and humanized stable surgical instruments.\n\nAlso, provide customized needs for customers and healthcare team members, and timely technical support. To create precision instruments that can improve surgical accuracy and reduce risk and time costs." } }]
   },
   {
     "type": "booth",
@@ -5985,6 +5718,46 @@
   {
     "type": "booth",
     "floor": 4,
+    "w": 300,
+    "h": 300,
+    "x": 12020,
+    "y": 3500,
+    "p": [
+      { "node": "L", "x": 300, "y": 0 },
+      { "node": "L", "x": 300, "y": 300 },
+      { "node": "L", "x": 0, "y": 300 }
+    ],
+    "id": "M1032",
+    "size": { "tc": 0.4, "en": 0.2 },
+    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
+    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
+    "tag": { "tc": [], "en": [] },
+    "text": { "tc": ["叡揚"], "en": ["Galaxy ", "Software ", "Services"] },
+    "corps": [{ "org": { "tc": "叡揚資訊股份有限公司", "en": "Galaxy Software Services Corporation" }, "info": { "tc": "Vitals KPIM 指標管理系統\n完善的指標監測平台，包含指標生成、依指標公式及條件建立資料拋轉機制、年度指標計畫、依監控週期提報指標數據、異常管控與預警，讓指標管理落實在日常作業，提升指標自動化建置時效，完整指標生命週期管理。\n\nVitals HAS 醫療數據分析系統\n包含業務量、健保申報、人事、品質、醫事、財務、效益分析、滿意度分析、跨模組分析等九大模組，以及權限、參數、警示、指標設定的管理平台，可提供醫院提升全員服務績效與品質、高效掌握資源與成本管控。\n\niotaC.ai對話服務平台\n藉由API快速串接異質資訊系統,並利用自然語言理解技術建立智能客服，以「對話式」服務協助客戶建立各式產銷人發財蔗務流程及客服機器人。", "en": "GSS has been deeply involved in the medical industry for many years and continues to provide e-solutions for the medical industry, from medical evaluation management to data warehousing, medical data analysis, and KPI management. In recent years, GSS has also launched a dialogue service platform, hoping to assist the digital optimization of the medical industry." } }]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 600,
+    "h": 600,
+    "x": 12320,
+    "y": 3200,
+    "p": [
+      { "node": "L", "x": 600, "y": 0 },
+      { "node": "L", "x": 600, "y": 600 },
+      { "node": "L", "x": 0, "y": 600 }
+    ],
+    "id": "M1034",
+    "size": { "tc": 0.8, "en": 0.7 },
+    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
+    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
+    "tag": { "tc": [], "en": [] },
+    "text": { "tc": ["益張"], "en": ["I JANG"] },
+    "corps": [{ "org": { "tc": "益張實業股份有限公司", "en": "I JANG INDUSTRIAL CO., LTD." }, "info": { "tc": "移動式倉儲可在有限的空間將空間利用率做到最大化，\n並且可搭配ESL方便庫房撿貨備料。", "en": "Turn aisles into usable space and increase storage up to 43%.\nChrome-plated steel units glide effortlessly on snap-together tracks.\nEasy assembly – No tools needed. Works on any smooth floor." } }]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
     "w": 900,
     "h": 600,
     "x": 7510,
@@ -6222,6 +5995,26 @@
     "tag": { "tc": [], "en": [] },
     "text": { "tc": ["BSI"], "en": ["BSI"] },
     "corps": [{ "org": { "tc": "英國標準協會台灣分公司", "en": "BSI" }, "info": { "tc": "BSI 是英國國家標準機構、歐盟 CE 驗證公告機構（Notified Body, NB）、英國 UKCA 認可機構（Approved Body, AB）、MDSAP 稽核組織（Auditing Organization, AO）、國際教育訓練機構，及 ISO 13485、ISO 9001、ISO 14001、ISO 45001、ISO 27001 等的驗證機構。\n我們了解醫療器材製造商面對的具體挑戰，以及將創新而安全的產品帶進全球市場的重要性。確保產品進入市場時能符合監管要求是醫療器材廠商維持競爭優勢的關鍵。96% 全球前 25 大醫療器材製造商選擇 BSI，源自於我們多元的專業知識，並與客戶培養長期的合作關係。", "en": "BSI provides a world-class global service for medical device manufacturers – with a range of regulatory services from Product Certification and ISO 13485 Medical Device Quality Management – to product conformity assessment and design review, certification, training and standardization. We are an approved Notified Body that has been leading the way in assisting manufacturers to navigate through the maze of regulatory requirements." } }]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 600,
+    "h": 600,
+    "x": 9010,
+    "y": 1400,
+    "p": [
+      { "node": "L", "x": 600, "y": 0 },
+      { "node": "L", "x": 600, "y": 600 },
+      { "node": "L", "x": 0, "y": 600 }
+    ],
+    "id": "M1216",
+    "size": { "tc": 0.8, "en": 0.6 },
+    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
+    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
+    "tag": { "tc": [], "en": [] },
+    "text": { "tc": ["包爾"], "en": ["Bauer"] },
+    "corps": [{ "org": { "tc": "包爾科技股份有限公司", "en": "Bauer Group Company" }, "info": { "tc": "智慧型管理櫃/智慧型醫療櫃/智慧型醫療工具櫃", "en": "Smart Locker / Smart Cabinet /Smart Drawer " } }]
   },
   {
     "type": "booth",
@@ -7196,6 +6989,31 @@
     "w": 300,
     "h": 300,
     "x": 18630,
+    "y": 4610,
+    "p": [
+      { "node": "L", "x": 300, "y": 0 },
+      { "node": "L", "x": 300, "y": 300 },
+      { "node": "L", "x": 0, "y": 300 }
+    ],
+    "id": "N017",
+    "size": { "tc": 0.35, "en": 0.1 },
+    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
+    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
+    "tag": { "tc": [], "en": [] },
+    "text": { "tc": ["台中", "醫院"], "en": ["Taichung Hospital", " Ministry of ", "Health and Welfare"] },
+    "corps": [
+      {
+        "org": { "tc": "衛⽣福利部台中醫院", "en": "Taichung Hospital, Ministry of Health and Welfare" },
+        "info": { "tc": "【長照新境界-科技與研究】\n本展位以長照新境界-科技與研究為展出主題，展示衛生福利部附屬醫療及社會福利機構管理會主辦之「建構衛政社政整合計畫、預防與延緩衰弱與失能、雲端智慧長者長照服務計畫」以及未來即將執行之「後疫時代醫療照護數位領航再造計畫-建構長照世代研究平台，提供長者全人整合照護」，展示既往成果與應用和即將展開的數位科技領航時代性照護計畫。\n展示成果包括提供營養、保養、修養及安養之全責式日照中心、分析台灣中老年世代長期研究計畫之成果與應用，以及導入數位科技之長照服務，象徵著我國長照2.0不但在照護對象和服務內容之擴大，也展示我國著意之資訊科技和創新研發相結合之優良典範。", "en": "This booth presents the theme of New Horizons in Long-term Care - Information Technology and Research, showcasing initiatives organized by the Hospital and Social Welfare Organizations Administration Commission of the Ministry of Health and Welfare. These initiatives include the \"Constructing Integrated Health and Social Policy Plan, Prevention and Delay of Frailty and Disability, Cloud-based Smart Elderly Long-term Care Services Plan, as well as the upcoming Post-pandemic Era Digital Healthcare  Remodeling Medical Care Project - Establishing a Long-term Care Cohort Research Platform to Provide Comprehensive Integrated Care for the Elderly.\"The booth displays past achievements and applications as well as forthcoming digital technology-led era care projects.\nThe showcased achievements encompass an all-inclusive day care center providing nutrition, maintenance, self-cultivation, and living care responsibilities, analysis of the data and applications of Taiwan's longitudinal research project for the middle-aged and elderly generations, and the integration of digital technology into long-term care services. These symbolize that Taiwan's Long-term Care 2.0 not only expands in terms of care recipients and service offerings but also demonstrates the exemplary fusion of information technology and innovative research and development emphasized in Taiwan." }
+      }
+    ]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 300,
+    "h": 300,
+    "x": 18630,
     "y": 4310,
     "p": [
       { "node": "L", "x": 300, "y": 0 },
@@ -7281,6 +7099,26 @@
   {
     "type": "booth",
     "floor": 4,
+    "w": 2100,
+    "h": 600,
+    "x": 15330,
+    "y": 3200,
+    "p": [
+      { "node": "L", "x": 2100, "y": 0 },
+      { "node": "L", "x": 2100, "y": 600 },
+      { "node": "L", "x": 0, "y": 600 }
+    ],
+    "id": "N1014",
+    "size": { "tc": 0.7, "en": 1 },
+    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
+    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
+    "tag": { "tc": [], "en": [] },
+    "text": { "tc": ["台灣數位健康大聯盟", "(HiMEDt)"], "en": ["HiMEDt"] },
+    "corps": [{ "org": { "tc": "HiMEDt台灣數位健康大聯盟", "en": "Harmony in Medical Technology" }, "info": { "tc": "2022年12月，鴻海與工研院攜手成立「台灣數位健康大聯盟（HiMEDt）」，藉由新模式、新生態、新數據、新場域等四大創新服務，融合台灣兩大優勢領域-科技與醫療，匯集產、官、學、研、醫、法人、慈善、宗教民俗等各方策略合作夥伴打造開放式的數位健康新生態系統，促進不同產業的跨域合作與共創。\nHiMEDt 從醫療環境實際需求出發，融合先進資通訊等各個產業關鍵技術，提供完整解決方案，藉助工研院跨域場域驗證輔導協助，縮短開發週期，加速創新落地，推進台灣數位健康產業成長，打造台灣成為全球智慧醫療之標竿國家。\n\n生態合作產品演示：\n- 智合醫專業版多功能檢測儀 CoDoctor Pro Multifunctional Parameter Detector\n- 智合醫家用版多功能檢測儀 CoDoctor Home Multifunctional Parameter Detector\n- 智合醫輕巧版多功能檢測儀 CoDoctor Lite Multifunctional Parameter Detector\n- 智合醫手持式智慧眼底影像擷取儀 CoDoctor Eye\n- Alpha Digi-Optical 3D Printer", "en": "“HIMEDt” with four innovative services include new Model, new Ecosystem, new Data, and new Territory, which integrate Taiwan’s two major advantages—Technology and Medical Care. \nThis ultimately brings together various strategic partners across all communities, which creates a new open digital health ecosystem, in order to promote cross-domain cooperation and co-creation among different industries.\n\nDigital Health Ecosystem Product Demonstration：\n-  CoDoctor Pro Multifunctional Parameter Detector\n-  CoDoctor Home Multifunctional Parameter Detector\n-  CoDoctor Lite Multifunctional Parameter Detector\n-  CoDoctor Eye\n- Alpha Digi-Optical 3D Printer" } }]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
     "w": 1800,
     "h": 1200,
     "x": 12920,
@@ -7304,6 +7142,26 @@
       { "org": { "tc": "緯謙科技股份有限公司", "en": "WiAdvance Technology Corporation" }, "info": { "tc": "FHIR Portal、AI應用、智慧醫療解決方案", "en": "Smart Healthcare Solution/ FHIR Portal / Medical image recognition / AI Solution" } },
       { "org": { "tc": "遠東醫電科技股份有限公司", "en": "Far East Medical Electronics Technology Co., Ltd." }, "info": { "tc": "資料候補", "en": "資料候補" } }
     ]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 300,
+    "h": 300,
+    "x": 17430,
+    "y": 3500,
+    "p": [
+      { "node": "L", "x": 300, "y": 0 },
+      { "node": "L", "x": 300, "y": 300 },
+      { "node": "L", "x": 0, "y": 300 }
+    ],
+    "id": "N1028",
+    "size": { "tc": 0.4, "en": 0.2 },
+    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
+    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
+    "tag": { "tc": [], "en": [] },
+    "text": { "tc": ["南瓜"], "en": ["Pumpkin", " VR"] },
+    "corps": [{ "org": { "tc": "南瓜虛擬科技", "en": "Pumpkin VR" }, "info": { "tc": "妙手VR 為應用虛擬實境技術的醫療培訓平台，藉由 VR 擬真技術模擬臨床環境、處置流程，可作為訓練及考試用途，可安排多種培訓主題以及客製化教案情境，妙手 VR 產品特色為:\n\n 1.遠端多人連線 VR 程式\n         - 多人 / 多角色同時上線進行培訓\n         - 學員 和 指導員 互動偵測\n         - 數位化模擬病人：數位安妮\n         - 虛擬實境還原訓練場景\n\n 2. 客製化教案情境\n           - 醫療模擬訓練更貼近真實醫療情況\n           - 充分課前準備提高教學品質\n           - 醫療訓練模組化\n\n  3. 多樣性訓練課程\n           - 主題課程無限次的擬真練習\n           - 增加臨床醫療流程的熟悉程度\n           - 大幅降低學員培訓成本\n\n  4. 一站式教案編輯平台\n          - 學習、評分記錄數位化\n          - 訓練評測提升指導員效率\n          - 課程資料雲端管理系統\n", "en": "Goodhand VR  is an application of virtual reality technology for medical training. It utilizes VR simulation technology to replicate clinical environments and procedural processes, serving as a training and assessment platform. It can accommodate various training topics and customize instructional scenarios.\n\n1. Remote  Multi-user VR Program\n    - Multi-user simultaneous training\n    - Interaction detection between learners and instructors\n    - Digital simulation patient: Digital Annie\n    - Virtual reality recreates training scenarios\n2. Customizable Training Scenarios\n    - Medical simulation training closely mirrors real medical situations\n    - Well-prepared pre-class work improves teaching quality\n    - Medical training modularization\n3. Diverse Training Courses\n    - Theme courses with unlimited realistic practice\n    - Increase familiarity with clinical medical procedures\n    - Substantially reduce learner training costs\n 4. One-stop Lesson Design Platform\n    - Digitize learning and grading records\n    - Training assessment enhances instructor efficiency\n    - Cloud-based management system for course data" } }]
   },
   {
     "type": "booth",
@@ -7344,6 +7202,34 @@
     "tag": { "tc": [], "en": [] },
     "text": { "tc": ["愛因期坦", "人工智慧"], "en": ["Deep01"] },
     "corps": [{ "org": { "tc": "愛因斯坦人工智慧股份有限公司", "en": "Deep01 Limited" }, "info": { "tc": "DeepCT: 腦部CT影像AI異常偵測軟體\n\nAnimage: 雲端PACS", "en": "DeepCT: AI detection and analytics software for brain CT images\n\nAnimage: Cloud based PACS " } }]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 300,
+    "h": 300,
+    "x": 12920,
+    "y": 2600,
+    "p": [
+      { "node": "L", "x": 300, "y": 0 },
+      { "node": "L", "x": 300, "y": 300 },
+      { "node": "L", "x": 0, "y": 300 }
+    ],
+    "id": "N1102",
+    "size": { "tc": 0.35, "en": 0.35 },
+    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
+    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
+    "tag": { "tc": [], "en": [] },
+    "text": { "tc": ["犀動", "智能"], "en": ["Aiello"] },
+    "corps": [
+      {
+        "org": { "tc": "犀動智能科技股份有限公司", "en": "Aiello Inc." },
+        "info": {
+          "tc": "Vocol AI 語音協作平台組合了 Voice 和 Collaboration，結合多種大型語言模型 (LLMs)，透過自然語言處理 (NLP) 技術，提供個人與企業用戶更為精準的語音轉文字內容，並以 AI 生成對話逐字稿、摘要與主題，進而提高團隊協作效率，並為每一場對話創造更有價值的洞察分析。\nVocol 提供中、英、日三種語言辨識，自動偵測不同的講者，並支援超過25種其他語系的逐字稿轉譯，以AI自動生成對話重點摘要、主題分析與代辦事項。整合第三方線上會議工具，如：Microsoft Teams & Google Meet，解決跨工具整合需求。\n此外，透過分享、評論、標註成員等團隊協作功能，讓團隊間溝通、交流與討論更便捷，提升整體的工作效率，成為各個產業數位轉型的理想解決方案。\n針對醫療體系需求，如：行政會議、心理諮商、巡房問診與遠端看診等情境，Vocol 迅速產出對話逐字稿與重點摘要，除了讓醫事人員省下大量作業、彙整資訊的時間外，也提供留存記錄，供醫療院所未來分析、索引用。",
+          "en": "The Vocol AI Voice Collaboration Platform combines Voice and Collaboration, incorporating various large language models (LLMs) and utilizing Natural Language Processing (NLP) technology to provide more accurate speech-to-text content for both individual and enterprise users. It generates AI-generated transcripts, summaries, and topic analysis, ultimately enhancing team collaboration efficiency and creating actionable insights for each conversation.\nVocol offers speech recognition in three languages: Chinese, English, and Japanese, automatically detects different speakers, and supports transcription in over 25 other languages seamlessly. It integrates with third-party online meeting tools such as Microsoft Teams and Google Meet, addressing cross-tool integration needs.\nAdditionally, it facilitates team communication through features like sharing, commenting, and member annotations, thus improving overall work efficiency and serving as an ideal solution for digital transformation across various industries.\nFor healthcare needs, such as administrative meetings, psychological counseling, rounds, and remote consultations, Vocol rapidly produces conversation transcripts and AI summaries. This not only saves healthcare professionals a significant amount of time in information gathering and consolidation but also provides record-keeping for future analysis and reference in medical facilities."
+        }
+      }
+    ]
   },
   {
     "type": "booth",
@@ -7408,6 +7294,37 @@
   {
     "type": "booth",
     "floor": 4,
+    "w": 900,
+    "h": 600,
+    "x": 15330,
+    "y": 2300,
+    "p": [
+      { "node": "L", "x": 900, "y": 0 },
+      { "node": "L", "x": 900, "y": 600 },
+      { "node": "L", "x": 0, "y": 600 }
+    ],
+    "id": "N1114",
+    "size": { "tc": 0.6, "en": 0.4 },
+    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
+    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
+    "tag": { "tc": [], "en": [] },
+    "text": { "tc": ["智慧醫養", "協會"], "en": ["Taiwan Intelligent", " Health Care ", "Association"] },
+    "corps": [
+      { "org": { "tc": "台灣智慧醫養產業發展協會", "en": "Taiwan Intelligent Health Care Association" }, "info": { "tc": "台灣智慧醫養產業發展協會會員包含產官學界、醫療、照護 體系各領域專家以及業界領袖，結合台灣資通訊及醫療養護產業，跨機構間的合作與交流，打造智慧健康環境，積極佈局全球醫養商機引領產業掌握最新智慧科技應用服務，為社會大眾帶來更安全、精準、且完善的醫養服務。歡迎有相同理念的各界優秀人才加入本協會，攜手應用智慧醫養在國際舞台發光。 ", "en": "Taiwan Intelligent Health Care Association gathered with the leaders and experts of industry, official, professionals, university, medical and health care. We encourage the integration between ICT and health care industry in Taiwan , to build up an intelligent health care environment, bring out a safer and complete intelligent health care system to people. You’re welcome to join us. Let us light up the application of the intelligent health care international." } },
+      { "org": { "tc": "捷格科技股份有限公司", "en": "JAG Technology Ltd." }, "info": { "tc": "捷格科技精通醫療、照護、健康管理、健康促進的實務需求，研發電子病歷、醫學影像傳管系統...等產品，降低醫院成本並提高作業效率，同時以智慧病房、智慧手術室管理、智慧護理站，提升品質與顧客體驗 ，而透過捷格虛擬病房與虛擬醫院方案，也可帶動遠距醫療照護模式提高營收。數位化、自動化、智慧化是醫院現代化的新里程碑，不僅顯著提高服務量能並降低成本。這也是我們未來醫療照護在有限資源與激烈競爭的環境的唯一選項。作為醫療健康領域創新資訊技術和應用方案的領導者，JAG 在超過 25 年的歷程中，不僅創造了許多業界領先的產品，而且在服務台灣 80% 的大型醫院方面積累了寶貴的經驗。", "en": "JAG Technology brings refined medical and healthcare application solutions into the 21st century. With a global vision for industry development, JAG has led and co-ordinated a range of joint venture initiatives across greater China, Japan, and the United States by combining cloud-based internet technology with modern medical and health care systems.Headquartered in Taiwan, JAG Technology focuses on total solution integration planning, supplemented by individual customized services to create added value. JAG leads the industry by applying AI (Artificial Intelligence) for deep learning as a key development tool; similarly, JAG builds on the evolution of the IoT (Internet of Things) to connect various data collection points and devices for advancing real-time healthcare analyses." } },
+      {
+        "org": { "tc": "遠成醫保科技股份有限公司", "en": "YUANCHENG HEALTH TECHNOLOGY CO., LTD." },
+        "info": {
+          "tc": "MedLing，以NLP (Natural Language Processing)語意分析引擎為技術核心。旨在針對醫療系統中所出現的文字內容，包含：病摘、病理報告、檢驗報告等龐大的資料，以 SNOMED CT 為基礎，定義出資料中的重要術語，提供醫療專業人員作為精確一致的快速判斷依據。\n我們提供的解決方案包含醫療院所病摘的轉譯，將海量的資料解析成知識圖譜。藉由機器學習的判斷，提供專業醫療或相關人員無痛的使用環境。無須語言程式背景，也不必曠日廢時的與工程師來回溝通，即可自行設定簡單的條件，產生CDS (臨床決策支持)，達到更有效率的醫療診斷程序。\nMedLing的服務應用範圍多元，可提供：醫師診斷，疾病分類師快速查核健保項目等。其商業價值在於多元的應用及跨領域的串接，如保險業的健康評估、亞健康保戶的照護平台、與合作夥伴建構健康照護平台。我們可用SNOMED CT與醫療決策系統的整合結果，跨域應用到大健康照護領域及保險、教育的相關服務，在應用上是非常關鍵和廣泛的。使用者更可以用自然互動的方式，取得相關醫療訊息。",
+          "en": "MedLing, a Natural Language Processing (NLP) semantic analysis engine as the core technology. The aim is to define important terms in the text content that appears in medical systems, including medical notes, pathology reports, laboratory reports, and other massive data based on SNOMED CT. This will provide medical professionals with precise and consistent rapid judgment criteria.\nOur solution includes the translation of medical notes and parsing of massive data into knowledge graphs. Through machine learning, we offer medical professionals or related personnel a painless environment to use. Without the need for computer  programming background or time-consuming communication with engineers, users can set simple conditions and generate Clinical Decision Support (CDS) for more efficient medical diagnostic procedures.\nThe application range of MedLing's services is diverse, including physician diagnosis and disease classification for quick checking of NHI items. Its commercial value lies in its diverse applications and cross-disciplinary integration, such as health assessments in the insurance industry, care platforms for sub-healthy policyholders, and the construction of health care platforms with partners. We can integrate the results of SNOMED CT and medical decision-making systems to apply them to the broader field of health care and related services in insurance and education, which is critical and extensive in its application. Users can also obtain relevant medical information through natural interaction."
+        }
+      },
+      { "org": { "tc": "博鑫醫電股份有限公司", "en": "BROADSIMS Inc." }, "info": { "tc": "博鑫醫電是全球第一家提供行動5G生理參數供外部App存取之開放式平台 (5G-Vital-Sign Platform) 領導廠商。5G-VSP平台符合醫規性能之心電、血氧、血壓等生理參數，分別提供PDK和MDK兩條產品線，並開放原始波形數據資料供醫護人員或研發團隊從雲端及其它設備做數據分析或開發軟硬體，目前已獲得台灣多間模擬病房和大專院校所採用，不僅節省人力成本，減少誤判性，更提高研究效率，使遠距醫療、居家照護等行動應用帶動AI先進醫學技術的發展。", "en": "BROADSIMS is the first providing an APP-Installable 5G vital-sign solution as an open-innovation platform (5G-VSP), including ECG, SpO2, and NIBP functions for clinical research and care providers, provided with 2 product series (PDK & MDK). Vital-sign signals in 5G-VSP are medical-grade compliant and allowed opening raw-data to 3rd-parties installing their own APP. All measurement history is available any time, creating a smart medical ecosystem." } }
+    ]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
     "w": 300,
     "h": 300,
     "x": 16230,
@@ -7444,6 +7361,49 @@
     "tag": { "tc": [], "en": [] },
     "text": { "tc": ["醫凡"], "en": ["EAFAN"] },
     "corps": [{ "org": { "tc": "醫凡企業有限公司", "en": "EAFAN ENTERPRISE CO., LTD." }, "info": { "tc": "真空採血管、各式針具、電解質機、靜脈定位儀、Hanil離心機、離心機、拔蓋離心機、旋蓋機", "en": "Evacuated Blood Collection Tube, A variety of needles, Electrolyte analyzer, Vein locator, Hanil Centrifuges, Centrifuges, Decapping centrifuge, NTM/VTM capping machine" } }]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 600,
+    "h": 300,
+    "x": 16830,
+    "y": 2600,
+    "p": [
+      { "node": "L", "x": 600, "y": 0 },
+      { "node": "L", "x": 600, "y": 300 },
+      { "node": "L", "x": 0, "y": 300 }
+    ],
+    "id": "N1124",
+    "size": { "tc": 0.4, "en": 0.4 },
+    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
+    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
+    "tag": { "tc": [], "en": [] },
+    "text": { "tc": ["ASSA ", "ABLOY"], "en": ["ASSA ", "ABLOY"] },
+    "corps": [{ "org": { "tc": "香港商亞薩合萊有限公司台灣分公司", "en": "ASSA ABLOY HONG KONG LTD. TAIWAN BRANCH" }, "info": { "tc": "", "en": "" } }]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 600,
+    "h": 300,
+    "x": 17430,
+    "y": 3200,
+    "p": [
+      { "node": "L", "x": 600, "y": 0 },
+      { "node": "L", "x": 600, "y": 300 },
+      { "node": "L", "x": 0, "y": 300 }
+    ],
+    "id": "N1127",
+    "size": { "tc": 0.5, "en": 0.35 },
+    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
+    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
+    "tag": { "tc": [], "en": [] },
+    "text": { "tc": ["海科生技"], "en": ["HyGene", " Biotech"] },
+    "corps": [
+      { "org": { "tc": "海科生技股份有限公司", "en": "HyGene Biotech Company Ltd." }, "info": { "tc": "海科生技股份有限公司成立於2007年，已有15年在軟體系統專業級客製化的熟悉程度，並且秉持積極熱誠的服務態度， 提供企業符合ISO與FDA規範的整合式電子化管理系統，促使產業能加速符合PIC/S GMP，以ISO及FDA的規範精神作為服務的依歸 ，為客戶打造全方位及多元化的卓越高品質服務。", "en": "Founded in 1997, Hygene Biotechnology Co., Ltd. is a Taiwan-based international biotech company provides an integrated electronic management system that complies with ISO and FDA specifications, promotes the industry to accelerate compliance with PIC/S GMP, and takes the spirit of ISO and FDA specifications as the basis for services, and creates all-round and diversified excellent and high-quality services for customers." } },
+      { "org": { "tc": "旭威認證股份有限公司", "en": "Foxwell Certification Co., Ltd." }, "info": { "tc": "旭威認證股份有限公司隸屬正崴集團旗下的森崴能源（6806），森崴能源以保護地球、永續發展、綠能減碳、潔淨能源為核心價值與願景，擬定【光、風、水、氣、大平台】發展戰略，致力於再生能源與潔淨能源服務與技術發展。\n\n並由旭威認證為企業盤點節能及碳排放狀況，找出浪費能源及減碳潛能，以 ESG 的生態池發展解決方案，提供包括溫室氣體盤查ISO 14064-1、溫室氣體第三方查驗、產品碳足跡ISO 14067、能源管理ISO 50001、減碳專案ISO 14064-2、科學基礎減量目標倡議SBTi、氣候相關財務揭露TCFD及低碳設備等硬體產品及軟體服務，有助提升客戶節能減碳、社會責任與公司治理等能力，多元化解決地球環境的問題。", "en": "Foxwell Certification Int. is a third-party certificate company in Taiwan, located in the north of Taipei city. Our business field includes ISO 14064-1, ISO14064-2, ISO 14067, ISO50001, environmental social corporate governance (ESG) reports, task force on climate-related financial disclosures (TCFD), and science-based targets initiative (SBTi). We aim to build a systematic and documentary management methodology. We are not only to reduce small-middle enterprises' costs and operating processes but also to create a decarbonization structure. \nFoxwell Certification Int. is a subsidiary of the Foxlink group. The core value and mission present \"One Better the Earth\", \"SDGs in Action\", \"Professional Green Energy Solution\", and \"Leading LNG supplier\". We own abundant expertise in engineering fields and innovative technology to service customers. We focus on an ESG industrial ecosystem such as forest carbon credits, set energy storage technology, and operate a green energy trading platform." } }
+    ]
   },
   {
     "type": "booth",
@@ -7584,6 +7544,26 @@
     "tag": { "tc": [], "en": [] },
     "text": { "tc": ["天明", "製藥"], "en": ["Timing ", "Pharmaceutical"] },
     "corps": [{ "org": { "tc": "天明製藥股份有限公司", "en": "Timing Pharmaceutical Co. Ltd." }, "info": { "tc": "「天明製藥集團」為國內唯一同時擁有GMP製藥、TAF檢驗、通路銷售、ISO醫療軟體、再生醫療GTP、觀光工廠，臨床醫療等一貫化的醫藥集團。\n經過多年努力，秉持著「傳統中藥良方、結合現代科學、發揮治病養生療效」之誠信製藥理念，發展再生醫療第二曲線，使得中醫藥、再生醫療及醫療軟體，成為天明製藥產業核心服務發展目標，現已服務超過1962家基層中醫診所和702家合作藥局，合約院級機構有全台13家；再生醫療合作醫學中心醫療機構全台10家，市場覆蓋率近60%，形成一個整合型服務鏈。\n集團共取得70餘張專利，藥證逾2,000張，通過藥品GMP、HACCP、ISO9001、ISO22000 品質認證、GTP細胞製備、TAF/ISO/IEC 17025實驗室認證、回教清真品保協會 HALAL 認證以及日本厚生勞働省-醫藥品外國製造業者認定證。\n■產品類型\n科學中藥、OTC產品、草本保健食品、外用品、OEM/ ODM服務\n■醫療軟體 \n中醫診所資訊軟體開發維護與管理\n■再生醫療\n＃GTP細胞製備：免疫細胞、幹細胞、特管辦法、恩慈療法、委託製造\n＃TAF細胞檢驗：細胞產品安全性、功能性委託檢驗\n＃中山天明細胞：特管辦法細胞諮詢、精準檢測、預防醫學與癌症第二意見諮詢\n■天明製藥農科觀光工廠\n全國最大的科學中藥博覽館及牛樟芝博覽館免費參觀", "en": "Timing Pharmaceutical Co., Ltd began manufacturing Traditional Chinese Medicines in 1968 to develop different biotechnological products with strictly professional experience. Timing group has a complete production line system of customized products with k-cups, powder, capsules, tablets, chopped herbs, syrups, plasters, and ointments. Timing groups offer the completed and precise consultation for the customizing service to connect ideas, development, package design, production quality and finished product inspection, etc.\n\n“Timing Herbs” COVI Defense (NRICM101), Traditional Chinese Medicine, OTC drug, herbal supplement, Plasters, or ointments for external use. \nCell Therapy CDMO services, TAF testing services." } }]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 600,
+    "h": 300,
+    "x": 12920,
+    "y": 1700,
+    "p": [
+      { "node": "L", "x": 600, "y": 0 },
+      { "node": "L", "x": 600, "y": 300 },
+      { "node": "L", "x": 0, "y": 300 }
+    ],
+    "id": "N1202",
+    "size": { "tc": 0.6, "en": 0.6 },
+    "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
+    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
+    "tag": { "tc": [], "en": [] },
+    "text": { "tc": ["艾希優"], "en": ["ICU"] },
+    "corps": [{ "org": { "tc": "荷蘭商艾希優醫療產品股份有限公司台灣分公司", "en": "ICU Medical B.V., Taiwan Branch" }, "info": { "tc": "後補", "en": "Be supplemented later" } }]
   },
   {
     "type": "booth",
@@ -7966,6 +7946,26 @@
         "info": { "tc": "威健股份有限公司是一家專注於生命科學領域的儀器試劑及服務供應商。公司推出了多項創新的臨床產品，包括\n全方位染色體基因晶片（cytoscan）是一種利用染色體基因晶片技術來分析染色體異常的技術。該技術可以檢測出傳統染色體檢測無法發現的微小染色體異常，包括染色體數目異常、染色體結構異常等。\n全外顯子組分析（ACMG-59）是一種利用高通量測序技術來分析人類全外顯子組的技術。全外顯子組包含了人類所有編碼基因的編碼區域，為遺傳性疾病、生育健康的臨床醫師提供準確的參考依據。\n非侵入性染色體檢測（Welbaby）是一種利用母體血液中胎兒游離DNA來進行染色體異常篩檢的技術。與傳統的羊水穿刺或絨毛膜採樣相比，NIPT具有無創、準確、安全等優點。\n威健的產品及服務均符合標準，並獲得了多項認證，包括TAF TFDA/LDTS等。公司致力於為客戶提供高品質的臨床產品服務。", "en": "Welgene Biotech Co., Ltd. is a leading provider of instruments, reagents, and services in the life sciences field. The company has launched a number of innovative clinical products, including:\nArray comparative genomic hybridization(Cytoscan) is a more sensitive and specific way to detect chromosomal abnormalities than traditional chromosome analysis. It can detect microdeletions and microduplications that are not visible under a microscope. \nExome sequencing(ACMG-59) is a high-throughput sequencing technique that can identify genetic variants in all protein-coding regions of the genome. Exome sequencing is used to diagnose a variety of genetic conditions, including rare diseases, inherited cancers, and developmental disorders.\nNon-invasive prenatal testing(Welbaby) is a noninvasive way to screen for chromosomal abnormalities such as Down syndrome, Edwards syndrome, and Patau syndrome. It is performed by analyzing free fetal DNA in maternal blood.\nWelgene's products and services are in line with standards and have obtained a number of certifications, including TAF, TFDA/LDTS etc.. The company is committed to providing customers with high-quality clinical product services." }
       }
     ]
+  },
+  {
+    "type": "booth",
+    "floor": 4,
+    "w": 600,
+    "h": 300,
+    "x": 16530,
+    "y": 10110,
+    "p": [
+      { "node": "L", "x": 600, "y": 0 },
+      { "node": "L", "x": 600, "y": 300 },
+      { "node": "L", "x": 0, "y": 300 }
+    ],
+    "id": "N321a",
+    "size": { "tc": 0.6, "en": 0.4 },
+    "cat": { "tc": "精準醫療展區", "en": "Diagnostics, Laboratory Equipment & Services" },
+    "topic": { "tc": "智慧醫院", "en": "Smart hospital solutions" },
+    "tag": { "tc": [], "en": [] },
+    "text": { "tc": ["永磐"], "en": ["MIKOTEK"] },
+    "corps": [{ "org": { "tc": "永磐科技股份有限公司", "en": "MIKOTEK INFORMATION INC." }, "info": { "tc": "Miko IoT醫護管理平台係利用安全及有效的資通訊機制，結合院內HIS、NIS等醫療資訊系統所提供之資料，並整合通訊系統、定位系統及IoT醫療物聯裝置之資訊，統一建構而成的私有雲端智慧醫療核心數據中心。\n\nMiko IoT醫護管理平台採用模組化架構，分別可與MikoDrip點滴監測系統、MikoNIS護理站電子白板、MikoRTLS定位系統、及MikoCALL緊急呼叫系統協作，作為不同系統間資料統合與資訊分享的媒介。Miko IoT透過跨系統的整合與智能運算提供資訊加值服務，例如發生緊急事件時，Miko IoT可將緊急呼叫通話、呼救位置、病患基本資料與醫療註記等訊息，自動傳遞到專責護理師的手機上。透過智慧化流程縮短緊急事件的反應時間，協助醫院提升緊急應變能力與醫療服務品質。\n", "en": "The Miko Drip System intelligently monitors the real-time status of the IV drip speed and supports a \"plug and play\"mode. Miko Drip can change detailed information such as drip settings through the buttons of the device or mobile APP and also accurately monitors the remaining time of the infusion. When the drip is about to end or the infusion process is abnormal, Miko Drip alert by LED lights and sound, and send out information to the mobile APP at the same time. The Miko Drip System combined with the Miko IoT medical care management platform can provide notifications to a specific caregiver according to related schedule, and integrate the drip information and display on Miko NIS at nursing station." } }]
   },
   {
     "type": "booth",
