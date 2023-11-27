@@ -85,6 +85,10 @@ $index: (tools, tags, sidebar);
   }
 }
 
+.gap-1 {
+  gap: 5px;
+}
+
 .shadow {
   box-shadow: 0 0 var(--fp-sidebar-px) var(--fp-unactive);
 }

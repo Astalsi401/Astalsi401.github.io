@@ -366,6 +366,10 @@
   margin-right: calc(5 * var(--fp-sidebar-px));
 }
 
+.gap-1 {
+  gap: 5px;
+}
+
 .shadow {
   box-shadow: 0 0 var(--fp-sidebar-px) var(--fp-unactive);
 }
@@ -670,7 +674,6 @@ p {
   position: absolute;
   z-index: 2;
   overflow-x: auto;
-  gap: 5px;
   top: 0;
   right: 0;
   width: calc(100% - var(--sidebar-width));
@@ -684,6 +687,16 @@ p {
     width: 100%;
   }
 }
+.logo {
+  display: block;
+}
+.logo img {
+  height: var(--fp-icon-size);
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .fp-result {
   margin-top: var(--fp-sidebar-px);
   height: calc(100% - var(--fp-sidebar-px) - var(--fp-search-box-height));

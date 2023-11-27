@@ -21,13 +21,18 @@ document.head.appendChild(meta);
 const Header = ({ elementStatus, setSearchCondition }) => {
   const tags = [elementStatus.mapText.event, ...elementStatus.mapText.headerTags];
   return (
-    <div className="fp-tags px-2 py-1 gap-1 d-flex flex-wrap align-items-center shadow">
-      <div>{elementStatus.mapText.header}：</div>
-      {tags.map((d) => (
-        <div className="fp-input-tag shadow text-small" style={{ "--cat": elementStatus.colors(d) }} onClick={() => setSearchCondition((prev) => ({ ...prev, tag: d }))}>
-          {d}
-        </div>
-      ))}
+    <div className="fp-tags px-2 py-1 shadow">
+      <a href={`https://expo.taiwan-healthcare.org/${elementStatus.mapText.link}/`} className="logo">
+        <img src="https://expo.taiwan-healthcare.org//data/tmp/20231127/20231127ata8n2.png" alt="Healthcare Expo Taiwan Logo" />
+      </a>
+      <div className="gap-1 d-flex flex-wrap align-items-center">
+        <div>{elementStatus.mapText.header}：</div>
+        {tags.map((d) => (
+          <div className="fp-input-tag shadow text-small" style={{ "--cat": elementStatus.colors(d) }} onClick={() => setSearchCondition((prev) => ({ ...prev, tag: d }))}>
+            {d}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
@@ -528,6 +533,7 @@ const MainArea = () => {
       tc: ["全齡健康展區", "年度主題館", "醫療機構展區", "智慧醫療展區", "精準醫療展區", "活動進行中"],
       en: ["Consumer Health Products", "Featured Pavilions", "Medical Institutes & Hospitals", "Medical Devices & Equipment", "Diagnostics, Laboratory Equipment & Services", "Event in progress"],
     },
+    link: { tc: "zh", en: "en" },
     title: { tc: "展場平面圖", en: "Floor Plan" },
     event: { tc: "活動進行中", en: "Event in progress" },
     header: { tc: "重點必看", en: "Highlights" },
@@ -573,6 +579,7 @@ const MainArea = () => {
       dragStatus: { moving: false, previousTouch: null, previousTouchLength: null, x: 0, y: 0 },
       zoom: { scale: 0.9, x: 0, y: 0 },
       mapText: {
+        link: mapText.link[searchCondition.lang],
         title: mapText.title[searchCondition.lang],
         event: mapText.event[searchCondition.lang],
         header: mapText.header[searchCondition.lang],
@@ -717,6 +724,7 @@ const MainArea = () => {
       boothInfoData: Object.keys(prev.boothInfoData).length === 0 ? {} : filterFloorData.find((d) => d.id == prev.boothInfoData.id && d.corpId == prev.boothInfoData.corpId),
       colors: prev.colors.domain(mapText.categories[searchCondition.lang]),
       mapText: {
+        link: mapText.link[searchCondition.lang],
         title: mapText.title[searchCondition.lang],
         event: mapText.event[searchCondition.lang],
         header: mapText.header[searchCondition.lang],
