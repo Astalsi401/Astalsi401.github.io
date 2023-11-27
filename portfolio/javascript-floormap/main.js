@@ -203,7 +203,7 @@ const Search = ({ searchCondition, setSearchCondition, elementStatus, setElement
             {searchCondition.tag}
           </div>
         )}
-        <input className="fp-input-text d-block text-large" name="search" type="text" value={searchCondition.string} onChange={handleSearchChange} placeholder={{ tc: "搜索攤位名稱、攤位編號", en: "Search" }[searchCondition.lang]} />
+        <input className="fp-input-text d-block text-large" name="search" type="text" value={searchCondition.string} onChange={handleSearchChange} placeholder={elementStatus.mapText.searchPlaceholder} />
       </div>
       <div
         className={`fp-toggle d-flex align-items-center justify-content-center ${searched ? "" : "active"}`}
@@ -532,6 +532,7 @@ const MainArea = () => {
     event: { tc: "活動進行中", en: "Event in progress" },
     header: { tc: "重點必看", en: "Highlights" },
     headerTags: { tc: ["健康大檢測", "醫師力大挑戰"], en: [] },
+    searchPlaceholder: { tc: "關鍵字搜索", en: "Search" },
     remove: { tc: "清除標籤", en: "Clear all" },
     clear: { tc: "清除搜索條件", en: "Clear search" },
     exhibitor: { tc: "聯展單位", en: "Co-exhibitors" },
@@ -555,6 +556,7 @@ const MainArea = () => {
     const isMobile = /windows phone|android|iPad|iPhone|iPod/i.test(navigator.userAgent || window.opera);
     return {
       test: null,
+      inputTimer: null,
       load: false,
       isMobile: isMobile,
       width: isMobile ? window.innerHeight : "100%",
@@ -575,6 +577,7 @@ const MainArea = () => {
         event: mapText.event[searchCondition.lang],
         header: mapText.header[searchCondition.lang],
         headerTags: mapText.headerTags[searchCondition.lang],
+        searchPlaceholder: mapText.searchPlaceholder[searchCondition.lang],
         remove: mapText.remove[searchCondition.lang],
         clear: mapText.clear[searchCondition.lang],
         exhibitor: mapText.exhibitor[searchCondition.lang],
@@ -614,17 +617,17 @@ const MainArea = () => {
     const res = [];
     memoFloorData.forEach((d) => {
       const corps = d.corps ? d.corps.map((corp) => corp.org) : [];
-      //   const infos = d.corps ? d.corps.map((corp) => corp.info) : [];
+      const infos = d.corps ? d.corps.map((corp) => corp.info) : [];
       const targets = [d.id, d.text.join(""), d.note, d.cat, d.topic, d.tag];
       const isType = types.includes(d.type);
       const hasTag = isType && searchCondition.tag === "" ? true : [d.id, d.cat, d.topic, d.note, ...d.tag].includes(searchCondition.tag);
-      //   let hasText = isType && searchCondition.regex.test([...targets, ...infos, ...corps].join(" ").replace(/\r|\n/g, ""));
-      let hasText = isType && searchCondition.regex.test([...targets, ...corps].join(" ").replace(/\r|\n/g, ""));
+      let hasText = isType && searchCondition.regex.test([...targets, ...infos, ...corps].join(" ").replace(/\r|\n/g, ""));
+      //   let hasText = isType && searchCondition.regex.test([...targets, ...corps].join(" ").replace(/\r|\n/g, ""));
       const opacity = (hasText && hasTag) || d.type === "icon" ? 0.8 : 0.1;
       if (d.corps) {
         d.corps.forEach((corp, i) => {
-          //   hasText = searchCondition.regex.test([...targets, corp.info, corp.org].join(" ").replace(/\r|\n/g, ""));
-          hasText = searchCondition.regex.test([...targets, corp.org].join(" ").replace(/\r|\n/g, ""));
+          hasText = searchCondition.regex.test([...targets, corp.info, corp.org].join(" ").replace(/\r|\n/g, ""));
+          //   hasText = searchCondition.regex.test([...targets, corp.org].join(" ").replace(/\r|\n/g, ""));
           res.push({ ...d, ...corp, opacity: opacity, draw: i === 0, sidebar: hasText && hasTag });
         });
       } else {
@@ -632,13 +635,15 @@ const MainArea = () => {
       }
     });
     return res;
-  }, [searchCondition, memoFloorData]);
+  }, [searchCondition.regex, searchCondition.tag, searchCondition.floor, searchCondition.lang, memoFloorData]);
 
   const searchActions = (name, value) => {
     switch (name) {
       case "search":
+        clearTimeout(elementStatus.inputTimer);
+        const inputTimer = setTimeout(() => setElementStatus((prev) => ({ ...prev, inputTimer: null })), 500);
         setSearchCondition((prev) => ({ ...prev, string: value }));
-        setElementStatus((prev) => ({ ...prev, advanced: false }));
+        setElementStatus((prev) => ({ ...prev, advanced: false, inputTimer: inputTimer }));
         break;
       default:
         setSearchCondition((prev) => ({ ...prev, [name]: value }));
@@ -718,6 +723,7 @@ const MainArea = () => {
         event: mapText.event[searchCondition.lang],
         header: mapText.header[searchCondition.lang],
         headerTags: mapText.headerTags[searchCondition.lang],
+        searchPlaceholder: mapText.searchPlaceholder[searchCondition.lang],
         remove: mapText.remove[searchCondition.lang],
         clear: mapText.clear[searchCondition.lang],
         exhibitor: mapText.exhibitor[searchCondition.lang],
@@ -727,6 +733,7 @@ const MainArea = () => {
     document.title = mapText.title[searchCondition.lang];
   }, [searchCondition.lang]);
   useEffect(() => {
+    if (elementStatus.inputTimer) return;
     setSearchCondition((prev) => ({
       ...prev,
       regex: new RegExp(
@@ -738,7 +745,7 @@ const MainArea = () => {
         "i"
       ),
     }));
-  }, [searchCondition.string]);
+  }, [searchCondition.string, elementStatus.inputTimer]);
   if (!floorData.loaded) return <Loading />;
   return (
     <StrictMode>
