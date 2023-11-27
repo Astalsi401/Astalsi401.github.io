@@ -412,11 +412,11 @@
       { "node": "L", "x": 0, "y": 1200 }
     ],
     "id": "J604",
-    "size": { "tc": 1.0, "en": 0.5 },
+    "size": { "tc": 1.0, "en": 0.7 },
     "cat": { "tc": "醫療機構展區", "en": "Medical Institutes & Hospitals" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["高醫醫療體系"], "en": ["Kaohsiung Medical University", " Chung-Ho Memorial Hospital"] },
+    "text": { "tc": ["高醫醫療體系"], "en": ["Kaohsiung Medical", " University", " Chung-Ho ", "Memorial Hospital"] },
     "corps": [
       { "org": { "tc": "高雄醫學大學附設中和紀念醫院", "en": "Kaohsiung Medical University Chung-Ho Memorial Hospital" }, "info": { "tc": "本年度高醫體系以打造南台灣最重要健康照護生態系為主題，以AI+IoT、急性醫療、無齡照護及新南向醫衛合作及產業發展專區為主，全展區以雙語化進行展出，以期將高醫體系健康照護生態系分享給參展的所有單位及人員。\n", "en": "With the theme of building the KMU is the Healthcare Ecosystem in Southern Taiwan , this year's KMU Healthcare Ecosystem features AI+IoT, Acute Care, Ageless Care, and New Southward Health Care Cooperation and Industry Development zones, and the entire exhibition area is bilingual in order to share the KMU Healthcare Ecosystem  with all exhibitors." } },
       { "org": { "tc": "英屬維京群島商禾寶醫療器材股份有限公司", "en": "PRECIOUS MOUNTAIN ENTERPRISE CORPORATION TAIWAN BRANCH (BVI)" }, "info": { "tc": "高醫聯合展覽", "en": "高醫聯合展覽" } }
