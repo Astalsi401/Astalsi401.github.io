@@ -18,17 +18,70 @@ meta.setAttribute("name", "viewport");
 meta.setAttribute("content", "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no");
 document.head.appendChild(meta);
 
-const Header = ({ elementStatus, setSearchCondition }) => {
+const Header = ({ elementStatus, setElementStatus, searchCondition, setSearchCondition, defaultViewbox }) => {
   const tags = [elementStatus.mapText.event, ...elementStatus.mapText.headerTags];
+  const download = async () => {
+    defaultViewbox(false);
+    const svgElement = document.querySelector("#floormap");
+    const svgString = new XMLSerializer().serializeToString(svgElement);
+    let blob;
+    const canvas = document.createElement("canvas");
+    document.body.appendChild(canvas);
+    const resolution = 3840;
+    const scale = resolution / svgElement.clientWidth;
+    canvas.width = resolution;
+    canvas.height = scale * svgElement.clientHeight;
+    const ctx = canvas.getContext("2d");
+    const image = new Image();
+    blob = await new Promise((resolve) => {
+      image.onload = () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+        canvas.toBlob(resolve, "image/png");
+        document.body.removeChild(canvas);
+      };
+      image.src = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svgString);
+    });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `Floor ${searchCondition.floor}.png`;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+  };
   return (
     <div className="fp-tags px-2 py-1 shadow">
-      <a href={`https://expo.taiwan-healthcare.org/${elementStatus.mapText.link}/`} className="logo">
-        <img src="https://expo.taiwan-healthcare.org//data/tmp/20231127/20231127ata8n2.png" alt="Healthcare Expo Taiwan Logo" />
-      </a>
+      <div className="d-flex">
+        <div className="flex-grow-1">
+          <a href={`https://expo.taiwan-healthcare.org/${elementStatus.mapText.link}/`} className="logo d-block">
+            <img className="d-block mx-auto" src="https://expo.taiwan-healthcare.org//data/tmp/20231127/20231127ata8n2.png" alt="Healthcare Expo Taiwan Logo" />
+          </a>
+        </div>
+        <div
+          className="fp-download flex-shrink-0"
+          onClick={() => {
+            defaultViewbox(false);
+            setTimeout(download, 50);
+          }}
+        >
+          <svg width={30} height={30} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.625 15C5.625 14.5858 5.28921 14.25 4.875 14.25C4.46079 14.25 4.125 14.5858 4.125 15H5.625ZM4.875 16H4.125H4.875ZM19.275 15C19.275 14.5858 18.9392 14.25 18.525 14.25C18.1108 14.25 17.775 14.5858 17.775 15H19.275ZM11.1086 15.5387C10.8539 15.8653 10.9121 16.3366 11.2387 16.5914C11.5653 16.8461 12.0366 16.7879 12.2914 16.4613L11.1086 15.5387ZM16.1914 11.4613C16.4461 11.1347 16.3879 10.6634 16.0613 10.4086C15.7347 10.1539 15.2634 10.2121 15.0086 10.5387L16.1914 11.4613ZM11.1086 16.4613C11.3634 16.7879 11.8347 16.8461 12.1613 16.5914C12.4879 16.3366 12.5461 15.8653 12.2914 15.5387L11.1086 16.4613ZM8.39138 10.5387C8.13662 10.2121 7.66533 10.1539 7.33873 10.4086C7.01212 10.6634 6.95387 11.1347 7.20862 11.4613L8.39138 10.5387ZM10.95 16C10.95 16.4142 11.2858 16.75 11.7 16.75C12.1142 16.75 12.45 16.4142 12.45 16H10.95ZM12.45 5C12.45 4.58579 12.1142 4.25 11.7 4.25C11.2858 4.25 10.95 4.58579 10.95 5H12.45ZM4.125 15V16H5.625V15H4.125ZM4.125 16C4.125 18.0531 5.75257 19.75 7.8 19.75V18.25C6.61657 18.25 5.625 17.2607 5.625 16H4.125ZM7.8 19.75H15.6V18.25H7.8V19.75ZM15.6 19.75C17.6474 19.75 19.275 18.0531 19.275 16H17.775C17.775 17.2607 16.7834 18.25 15.6 18.25V19.75ZM19.275 16V15H17.775V16H19.275ZM12.2914 16.4613L16.1914 11.4613L15.0086 10.5387L11.1086 15.5387L12.2914 16.4613ZM12.2914 15.5387L8.39138 10.5387L7.20862 11.4613L11.1086 16.4613L12.2914 15.5387ZM12.45 16V5H10.95V16H12.45Z" fill="#000000" />
+          </svg>
+        </div>
+      </div>
       <div className="gap-1 d-flex flex-wrap align-items-center">
         <div>{elementStatus.mapText.header}：</div>
         {tags.map((d) => (
-          <div className="fp-input-tag shadow text-small" style={{ "--cat": elementStatus.colors(d) }} onClick={() => setSearchCondition((prev) => ({ ...prev, tag: d }))}>
+          <div
+            className="fp-input-tag shadow text-small"
+            style={{ "--cat": elementStatus.colors(d) }}
+            onClick={() => {
+              setSearchCondition((prev) => ({ ...prev, tag: d }));
+              setElementStatus((prev) => ({ ...prev, boothInfo: false }));
+            }}
+          >
             {d}
           </div>
         ))}
@@ -164,10 +217,10 @@ const Floormap = ({ data, elementStatus, setElementStatus, handleBoothInfo, sear
   };
   useEffect(() => setViewBox({ x1: 0, y1: 0, x2: elementStatus.realSize.w, y2: elementStatus.realSize.h }), [elementStatus.realSize]);
   return (
-    <div className="fp-floormap d-flex align-items-center" style={{ height: elementStatus.height }}>
+    <div className="fp-floormap d-flex align-items-center" style={{ height: elementStatus.height + elementStatus.tagsHeight }}>
       <Selector searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} graphRef={graphRef} zoomCalculator={zoomCalculator} defaultViewbox={defaultViewbox} animation={animation} />
       <div className={`fp-viewBox ${elementStatus.dragStatus.moving ? "moving" : ""}`} ref={graphRef} onWheel={handleWheelZoom} onMouseDown={handleStart} onMouseUp={handleEnd} onMouseLeave={handleEnd} onMouseMove={handleMouseDrag} onTouchStart={handleStart} onTouchEnd={handleEnd} onTouchMove={handleTouchDragZoom}>
-        <svg id="floormap" className={elementStatus.boothInfo ? "active" : ""} ref={svgRef} style={{ translate: `${elementStatus.zoom.x + elementStatus.dragStatus.x}px ${elementStatus.zoom.y + elementStatus.dragStatus.y}px`, scale: `${elementStatus.zoom.scale}`, backgroundColor: "#f1f1f1" }} width={elementStatus.width} height={elementStatus.height} viewBox={`${viewBox.x1} ${viewBox.y1} ${viewBox.x2} ${viewBox.y2}`}>
+        <svg id="floormap" className={elementStatus.boothInfo ? "active" : ""} ref={svgRef} style={{ translate: `${elementStatus.zoom.x + elementStatus.dragStatus.x}px ${elementStatus.zoom.y + elementStatus.dragStatus.y}px`, scale: `${elementStatus.zoom.scale}`, backgroundColor: "#f1f1f1" }} width={elementStatus.width} height={elementStatus.height} viewBox={`${viewBox.x1} ${viewBox.y1} ${viewBox.x2} ${viewBox.y2}`} xmlns="http://www.w3.org/2000/svg">
           <Elements type="wall" data={data} />
           <Elements type="text" data={data} />
           <Elements type="room" data={data} size={200} elementStatus={elementStatus} handleBoothClick={handleBoothClick} />
@@ -203,7 +256,7 @@ const Search = ({ searchCondition, setSearchCondition, elementStatus, setElement
         <FilterIcon />
       </div>
       <div className="fp-input d-flex flex-wrap align-items-center px-1">
-        {searchCondition.tag !== "" && (
+        {searchCondition.tag.length !== 0 && (
           <div className="fp-input-tag shadow text-small" title={elementStatus.mapText.remove} onClick={() => setSearchCondition((prev) => ({ ...prev, tag: "" }))} style={{ "--cat": elementStatus.colors(searchCondition.tag) }}>
             {searchCondition.tag}
           </div>
@@ -229,17 +282,20 @@ const Category = ({ title, data, col, setSearchCondition, setElementStatus }) =>
     acc[key] ? acc[key]++ : (acc[key] = 1);
     return acc;
   }, {});
-  const handleClick = (d) => {
-    setSearchCondition((prev) => ({ ...prev, tag: d }));
-    setElementStatus((prev) => ({ ...prev, advanced: false }));
-  };
   return (
     <div className="py-3 my-3">
       <div className="text-x-large text-bold px-2">{title}</div>
       {Object.keys(sum)
         .filter((d) => !["false", ""].includes(d))
         .map((d) => (
-          <div key={`${title}-${d}`} className="fp-category px-4 py-1" onClick={() => handleClick(d)}>
+          <div
+            key={`${title}-${d}`}
+            className="fp-category px-4 py-1"
+            onClick={() => {
+              setSearchCondition((prev) => ({ ...prev, tag: d }));
+              setElementStatus((prev) => ({ ...prev, advanced: false }));
+            }}
+          >
             {d} ({sum[d]})
           </div>
         ))}
@@ -247,49 +303,9 @@ const Category = ({ title, data, col, setSearchCondition, setElementStatus }) =>
   );
 };
 
-const Advanced = ({ data, elementStatus, setElementStatus, searchCondition, setSearchCondition, defaultViewbox }) => {
-  const download = async () => {
-    defaultViewbox(false);
-    const svgElement = document.querySelector("#floormap");
-    const svgString = new XMLSerializer().serializeToString(svgElement);
-    let blob;
-    const canvas = document.createElement("canvas");
-    document.body.appendChild(canvas);
-    const resolution = 3840;
-    const scale = resolution / svgElement.clientWidth;
-    canvas.width = resolution;
-    canvas.height = scale * svgElement.clientHeight;
-    const ctx = canvas.getContext("2d");
-    const image = new Image();
-    blob = await new Promise((resolve) => {
-      image.onload = () => {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
-        canvas.toBlob(resolve, "image/png");
-        document.body.removeChild(canvas);
-      };
-      image.src = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svgString);
-    });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = `Floor ${searchCondition.floor}.png`;
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-    URL.revokeObjectURL(url);
-  };
+const Advanced = ({ data, setElementStatus, setSearchCondition, elementStatus }) => {
   return (
     <div className={`fp-advanced py-5 ${elementStatus.advanced ? "active" : ""}`}>
-      <div
-        className="fp-download py-3 px-2 mx-auto text-center text-bold shadow"
-        onClick={() => {
-          defaultViewbox(false);
-          setTimeout(download, 50);
-        }}
-      >
-        Download PNG
-      </div>
       {[
         { title: "展區", col: "cat" },
         { title: "主題", col: "topic" },
@@ -449,7 +465,7 @@ const Sidebar = ({ data, elementStatus, setElementStatus, searchCondition, setSe
       <Search searchCondition={searchCondition} setSearchCondition={setSearchCondition} elementStatus={elementStatus} setElementStatus={setElementStatus} handleSearchChange={handleSearchChange} />
       {elementStatus.sidebar || elementStatus.smallScreen ? (
         <>
-          <Advanced data={data} searchCondition={searchCondition} setSearchCondition={setSearchCondition} elementStatus={elementStatus} setElementStatus={setElementStatus} defaultViewbox={defaultViewbox} />
+          <Advanced data={data} setSearchCondition={setSearchCondition} elementStatus={elementStatus} setElementStatus={setElementStatus} />
           <ResultList data={data.filter((d) => d.sidebar && d.text.length > 0)} elementStatus={elementStatus} handleBoothInfo={handleBoothInfo} svgRef={svgRef} graphRef={graphRef} zoomCalculator={zoomCalculator} dragCalculator={dragCalculator} animation={animation} defaultViewbox={defaultViewbox} />
           <BoothInfo data={data} setSearchCondition={setSearchCondition} elementStatus={elementStatus} setElementStatus={setElementStatus} />
         </>
@@ -487,12 +503,12 @@ const Selector = ({ searchCondition, setSearchCondition, handleSearchChange, gra
       </div>
       <div className="fp-zoom">
         <span className="d-flex justify-content-center align-items-center text-xx-large shadow" onClick={() => handleClickZoom(1.3)}>
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 6V18M6 12H18" stroke="black" strokeWidth="2" />
           </svg>
         </span>
         <span className="d-flex justify-content-center align-items-center text-xx-large shadow" onClick={defaultViewbox}>
-          <svg width="26" height="26" viewBox="0 0 512 512">
+          <svg width="26" height="26" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
             <g transform="translate(0,512) scale(0.1,-0.1)" fill="#000000" stroke="none">
               <path d="M555 4673 c-44 -23 -84 -63 -106 -105 -18 -35 -19 -64 -19 -513 0 -407 2 -481 15 -513 64 -152 273 -172 370 -34 l30 44 3 206 3 206 577 -576 c317 -317 591 -583 608 -592 87 -43 175 -28 245 43 71 70 86 158 43 245 -9 17 -275 291 -592 608 l-576 577 206 3 206 3 44 30 c138 97 118 306 -34 370 -56 23 -978 22 -1023 -2z" />
               <path d="M3540 4674 c-167 -72 -165 -318 2 -389 29 -12 79 -15 230 -15 l193 0 -577 -577 c-317 -318 -583 -592 -592 -609 -43 -87 -28 -175 43 -245 70 -71 158 -86 245 -43 17 9 291 275 609 592 l577 577 0 -193 c0 -151 3 -201 15 -230 64 -152 273 -172 370 -34 l30 44 3 489 c2 437 1 492 -14 521 -23 46 -63 87 -106 109 -35 18 -64 19 -515 19 -404 -1 -483 -3 -513 -16z" />
@@ -502,7 +518,7 @@ const Selector = ({ searchCondition, setSearchCondition, handleSearchChange, gra
           </svg>
         </span>
         <span className="d-flex justify-content-center align-items-center text-xx-large shadow" onClick={() => handleClickZoom(0.7)}>
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M6 12H18" stroke="black" strokeWidth="2" />
           </svg>
         </span>
@@ -560,13 +576,15 @@ const MainArea = () => {
   });
   const [elementStatus, setElementStatus] = useState(() => {
     const isMobile = /windows phone|android|iPad|iPhone|iPod/i.test(navigator.userAgent || window.opera);
+    const tagsHeight = 80;
+    const sidebarWidth = 40;
     return {
       test: null,
       inputTimer: null,
       load: false,
       isMobile: isMobile,
-      width: isMobile ? window.innerHeight : "100%",
-      height: isMobile ? window.innerHeight : "100%",
+      width: window.innerHeight - sidebarWidth,
+      height: window.innerHeight - tagsHeight,
       colors: d3.scaleOrdinal().domain(mapText.categories[searchCondition.lang]).range(["rgba(237,125,49,0.6)", "rgba(153,204,255,1)", "rgba(255,255,0,0.6)", "rgba(0,112,192,0.6)", "rgba(112,48,160,0.6)", "rgb(128, 0, 75, 0.2)"]).unknown("rgba(255,255,255)"),
       boothInfoData: {},
       smallScreen: false,
@@ -574,8 +592,8 @@ const MainArea = () => {
       advanced: false,
       boothInfo: false,
       realSize: { w: 19830, h: 16950 },
-      tagsHeight: 80,
-      sidebarWidth: 40,
+      tagsHeight: tagsHeight,
+      sidebarWidth: sidebarWidth,
       dragStatus: { moving: false, previousTouch: null, previousTouchLength: null, x: 0, y: 0 },
       zoom: { scale: 0.9, x: 0, y: 0 },
       mapText: {
@@ -662,7 +680,9 @@ const MainArea = () => {
         const smallScreen = window.innerWidth < 768;
         const sidebar = prev.load ? (smallScreen ? prev.sidebar : !smallScreen) : smallScreen ? false : true;
         const { innerWidth: width, innerHeight: height } = window;
-        return { ...prev, width: width, height: height, load: true, smallScreen: smallScreen, sidebar: sidebar, sidebarWidth: smallScreen ? (sidebar ? height * 0.6 : height - 117) : sidebar ? 300 : 30 };
+        const sidebarWidth = smallScreen ? (sidebar ? height * 0.6 : height - 117) : sidebar ? 300 : 30;
+        const tagsHeight = smallScreen ? 100 : 80;
+        return { ...prev, width: smallScreen ? width : width - sidebarWidth, height: height - prev.tagsHeight, load: true, smallScreen: smallScreen, sidebar: sidebar, sidebarWidth: sidebarWidth, tagsHeight: tagsHeight };
       });
     }, 50);
   };
@@ -763,7 +783,7 @@ const MainArea = () => {
             if (elementStatus.smallScreen) setElementStatus((prev) => ({ ...prev, sidebar: false }));
           }}
         >
-          <Header elementStatus={elementStatus} setSearchCondition={setSearchCondition} />
+          <Header elementStatus={elementStatus} setElementStatus={setElementStatus} searchCondition={searchCondition} setSearchCondition={setSearchCondition} defaultViewbox={defaultViewbox} />
           <Floormap data={filterFloorData.filter((d) => d.floor == searchCondition.floor && d.draw)} elementStatus={elementStatus} setElementStatus={setElementStatus} handleBoothInfo={handleBoothInfo} searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} graphRef={graphRef} svgRef={svgRef} zoomCalculator={zoomCalculator} dragCalculator={dragCalculator} defaultViewbox={defaultViewbox} animation={animation} />
         </div>
       </div>

@@ -53,6 +53,22 @@
   flex-wrap: wrap;
 }
 
+.flex-grow-0 {
+  flex-grow: 0;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.flex-shrink-1 {
+  flex-shrink: 1;
+}
+
 .align-items-center {
   align-items: center;
 }
@@ -692,7 +708,6 @@ p {
 }
 .logo img {
   height: var(--fp-icon-size);
-  width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -742,9 +757,8 @@ p {
 
 .fp-download {
   cursor: pointer;
-  border-radius: 5px;
-  background-color: var(--fp-sidebar-bg);
-  width: 90%;
+  width: var(--fp-icon-size);
+  height: var(--fp-icon-size);
 }
 
 .fp-category {

@@ -47,6 +47,14 @@ $index: (tools, tags, sidebar);
   flex-wrap: wrap;
 }
 
+@each $value in (grow, shrink) {
+  @for $i from 0 through 1 {
+    .flex-#{$value}-#{$i} {
+      flex-#{$value}: $i;
+    }
+  }
+}
+
 @each $key, $value in (align-items: center, justify-content: center) {
   .#{$key}-#{$value} {
     #{$key}: #{$value};

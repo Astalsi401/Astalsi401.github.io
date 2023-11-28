@@ -218,7 +218,6 @@
   display: block;
   img {
     height: var(--fp-icon-size);
-    width: 100%;
     object-fit: contain;
   }
 }
@@ -265,9 +264,8 @@
 
 .fp-download {
   cursor: pointer;
-  border-radius: 5px;
-  background-color: var(--fp-sidebar-bg);
-  width: 90%;
+  width: var(--fp-icon-size);
+  height: var(--fp-icon-size);
 }
 .fp-category {
   cursor: pointer;
