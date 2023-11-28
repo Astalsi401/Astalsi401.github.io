@@ -182,17 +182,25 @@ const Elements = ({ type, data, size, elementStatus, handleBoothClick }) => {
 };
 const Floormap = ({ data, elementStatus, setElementStatus, handleBoothInfo, searchCondition, setSearchCondition, handleSearchChange, graphRef, svgRef, zoomCalculator, dragCalculator, defaultViewbox, animation }) => {
   const [viewBox, setViewBox] = useState({ x1: 0, y1: 0, x2: 0, y2: 0 });
-  const handleStart = () => setElementStatus((prev) => ({ ...prev, dragStatus: { ...prev.dragStatus, moving: true } }));
-  const handleEnd = () => setElementStatus((prev) => ({ ...prev, dragStatus: { ...prev.dragStatus, moving: false, previousTouch: null, previousTouchLength: null } }));
+  const handleStart = (e) => {
+    let distance = (distance = e.touches ? e.touches[0].clientX + e.touches[0].clientY : e.clientX + e.clientY);
+    setElementStatus((prev) => ({ ...prev, test: true, dragStatus: { ...prev.dragStatus, moving: true }, distance: distance }));
+  };
+  const handleEnd = (e) => {
+    let distance = (distance = e.changedTouches ? e.changedTouches[0].clientX + e.changedTouches[0].clientY : e.clientX + e.clientY);
+    return setElementStatus((prev) => ({ ...prev, test: false, dragStatus: { ...prev.dragStatus, moving: false, previousTouch: null, previousTouchLength: null }, distance: distance - prev.distance }));
+  };
   const handleTouchDragZoom = (e) => {
     e.preventDefault();
     if (e.touches.length === 1) {
       const touch = e.touches[0];
-      setElementStatus((prev) => ({ ...prev, dragStatus: { ...prev.dragStatus, previousTouch: touch, previousTouchLength: e.touches.length } }));
-      if (elementStatus.dragStatus.previousTouch) dragCalculator(touch.clientX - elementStatus.dragStatus.previousTouch.clientX, touch.clientY - elementStatus.dragStatus.previousTouch.clientY);
+      setElementStatus((prev) => {
+        if (prev.dragStatus.previousTouch) dragCalculator(touch.clientX - prev.dragStatus.previousTouch.clientX, touch.clientY - prev.dragStatus.previousTouch.clientY);
+        return { ...prev, dragStatus: { ...prev.dragStatus, previousTouch: touch, previousTouchLength: e.touches.length } };
+      });
     } else {
-      if (elementStatus.dragStatus.previousTouchLength && elementStatus.dragStatus.previousTouchLength != length) {
-        handleEnd();
+      if (elementStatus.dragStatus.previousTouchLength && elementStatus.dragStatus.previousTouchLength !== e.touches.length) {
+        handleEnd(e);
         return;
       }
       const touch1 = e.touches[0];
@@ -210,6 +218,7 @@ const Floormap = ({ data, elementStatus, setElementStatus, handleBoothInfo, sear
     zoomCalculator(clientX, clientY, r);
   };
   const handleBoothClick = (d) => {
+    if (elementStatus.distance !== 0) return;
     if (elementStatus.boothInfo && elementStatus.boothInfoData.id == d.id) {
       setElementStatus((prev) => ({ ...prev, boothInfo: false }));
     } else {
@@ -220,7 +229,7 @@ const Floormap = ({ data, elementStatus, setElementStatus, handleBoothInfo, sear
   return (
     <div className="fp-floormap d-flex align-items-center" style={{ height: elementStatus.height + elementStatus.tagsHeight }}>
       <Selector searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} graphRef={graphRef} zoomCalculator={zoomCalculator} defaultViewbox={defaultViewbox} animation={animation} />
-      <div className={`fp-viewBox ${elementStatus.dragStatus.moving ? "moving" : ""}`} ref={graphRef} onWheel={handleWheelZoom} onMouseDown={handleStart} onMouseUp={handleEnd} onMouseLeave={handleEnd} onMouseMove={handleMouseDrag} onTouchStart={handleStart} onTouchEnd={handleEnd} onTouchMove={handleTouchDragZoom}>
+      <div className={`fp-viewBox ${elementStatus.dragStatus.moving ? "moving" : ""}`} ref={graphRef} onWheel={handleWheelZoom} onMouseDown={handleStart} onMouseUp={handleEnd} onMouseLeave={handleEnd} onMouseMove={handleMouseDrag} onTouchStart={handleStart} onTouchEnd={handleEnd} onTouchCancel={handleEnd} onTouchMove={handleTouchDragZoom}>
         <svg id="floormap" className={elementStatus.boothInfo ? "active" : ""} ref={svgRef} style={{ translate: `${elementStatus.zoom.x + elementStatus.dragStatus.x}px ${elementStatus.zoom.y + elementStatus.dragStatus.y}px`, scale: `${elementStatus.zoom.scale}`, backgroundColor: "#f1f1f1" }} width={elementStatus.width} height={elementStatus.height} viewBox={`${viewBox.x1} ${viewBox.y1} ${viewBox.x2} ${viewBox.y2}`} xmlns="http://www.w3.org/2000/svg">
           <Elements type="wall" data={data} />
           <Elements type="text" data={data} />
@@ -446,8 +455,8 @@ const BoothInfoDetail = ({ data, setSearchCondition, elementStatus, setElementSt
 const BoothInfo = ({ data, setSearchCondition, elementStatus, setElementStatus }) => {
   return (
     <div className={`fp-booth-info ${elementStatus.boothInfo ? "active" : ""}`}>
-      <div onClick={() => setElementStatus((prev) => ({ ...prev, boothInfo: false }))}>
-        <div className="fp-toggle d-flex align-items-center justify-content-center active">
+      <div className="fp-back-btn" onClick={() => setElementStatus((prev) => ({ ...prev, boothInfo: false }))}>
+        <div className="fp-back d-flex align-items-center justify-content-center mx-auto active">
           <span />
         </div>
       </div>
@@ -597,6 +606,7 @@ const MainArea = () => {
       tagsHeight: tagsHeight,
       sidebarWidth: sidebarWidth,
       dragStatus: { moving: false, previousTouch: null, previousTouchLength: null, x: 0, y: 0 },
+      distance: 0,
       zoom: { scale: 0.9, x: 0, y: 0 },
       mapText: {
         link: mapText.link[searchCondition.lang],
@@ -649,11 +659,11 @@ const MainArea = () => {
       const targets = [d.id, d.text.join(""), d.note, d.cat, d.topic, d.tag];
       const isType = types.includes(d.type);
       const hasTag = isType && searchCondition.tag === "" ? true : [d.id, d.cat, d.topic, d.note, ...d.tag].includes(searchCondition.tag);
-      let hasText = isType && searchCondition.regex.test([...targets, ...infos, ...corps].join(" ").replace(/\r|\n/g, ""));
+      let hasText = isType && searchCondition.regex.test([...targets, ...infos, ...corps].join(" ").replace(/\r|\n/g, "").replace("臺", "台"));
       const opacity = (hasText && hasTag) || d.type === "icon" ? 0.8 : 0.1;
       if (d.corps) {
         d.corps.forEach((corp, i) => {
-          hasText = searchCondition.regex.test([...targets, corp.info, corp.org].join(" ").replace(/\r|\n/g, ""));
+          hasText = searchCondition.regex.test([...targets, corp.info, corp.org].join(" ").replace(/\r|\n/g, "").replace("臺", "台"));
           res.push({ ...d, ...corp, opacity: opacity, draw: i === 0, sidebar: hasText && hasTag });
         });
       } else {

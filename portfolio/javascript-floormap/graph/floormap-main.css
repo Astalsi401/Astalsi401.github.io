@@ -645,38 +645,72 @@ p {
   fill: var(--color);
 }
 
+.fp-back,
 .fp-toggle {
   cursor: pointer;
   width: var(--fp-icon-size);
-  height: var(--fp-search-box-height);
+  height: var(--fp-icon-size);
   padding: 5px;
   --color: var(--fp-unactive);
 }
+.fp-back:hover,
 .fp-toggle:hover {
   --color: var(--fp-black);
 }
+.fp-back span,
 .fp-toggle span {
   position: relative;
-  width: 80%;
 }
+.fp-back span::before,
 .fp-toggle span::before {
   --i: -1;
 }
+.fp-back span::after,
 .fp-toggle span::after {
   --i: 1;
 }
-.fp-toggle span::before, .fp-toggle span::after {
+.fp-back span::before, .fp-back span::after,
+.fp-toggle span::before,
+.fp-toggle span::after {
   content: "";
   position: absolute;
   width: 100%;
-  top: calc(var(--i) * 5px);
   transition: background-color var(--fp-time);
 }
-.fp-toggle span, .fp-toggle span::before, .fp-toggle span::after {
+.fp-back span, .fp-back span::before, .fp-back span::after,
+.fp-toggle span,
+.fp-toggle span::before,
+.fp-toggle span::after {
   display: block;
   height: 2px;
   border-radius: 2px;
   background-color: var(--color);
+}
+
+.fp-back span {
+  width: 60%;
+  transform-origin: left;
+  background-color: transparent;
+}
+.fp-back span::before, .fp-back span::after {
+  top: calc(var(--i) * 4px);
+  transform: rotate(calc(var(--i) * 45deg));
+  box-shadow: 5px calc(var(--i) * -5px) var(--color);
+}
+
+.fp-back-btn {
+  cursor: pointer;
+  background-color: var(--fp-sidebar-bg);
+}
+.fp-back-btn:hover .fp-back {
+  --color: var(--fp-black);
+}
+
+.fp-toggle span {
+  width: 80%;
+}
+.fp-toggle span::before, .fp-toggle span::after {
+  top: calc(var(--i) * 5px);
 }
 .fp-toggle.active span {
   background-color: var(--fp-search-bg);

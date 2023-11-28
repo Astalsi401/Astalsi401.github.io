@@ -149,10 +149,11 @@
   }
 }
 
+.fp-back,
 .fp-toggle {
   cursor: pointer;
   width: var(--fp-icon-size);
-  height: var(--fp-search-box-height);
+  height: var(--fp-icon-size);
   padding: 5px;
   --color: var(--fp-unactive);
   &:hover {
@@ -160,7 +161,6 @@
   }
   span {
     position: relative;
-    width: 80%;
     &::before {
       --i: -1;
     }
@@ -172,7 +172,6 @@
       content: "";
       position: absolute;
       width: 100%;
-      top: calc(var(--i) * 5px);
       transition: background-color var(--fp-time);
     }
     &,
@@ -182,6 +181,40 @@
       height: 2px;
       border-radius: 2px;
       background-color: var(--color);
+    }
+  }
+}
+
+.fp-back {
+  span {
+    width: 60%;
+    transform-origin: left;
+    background-color: transparent;
+    &::before,
+    &::after {
+      top: calc(var(--i) * 4px);
+      transform: rotate(calc(var(--i) * 45deg));
+      box-shadow: 5px calc(var(--i) * -5px) var(--color);
+    }
+  }
+}
+
+.fp-back-btn {
+  cursor: pointer;
+  background-color: var(--fp-sidebar-bg);
+  &:hover {
+    .fp-back {
+      --color: var(--fp-black);
+    }
+  }
+}
+
+.fp-toggle {
+  span {
+    width: 80%;
+    &::before,
+    &::after {
+      top: calc(var(--i) * 5px);
     }
   }
   &.active {
