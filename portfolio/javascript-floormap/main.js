@@ -61,6 +61,7 @@ const Header = ({ elementStatus, setElementStatus, searchCondition, setSearchCon
         </div>
         <div
           className="fp-download flex-shrink-0"
+          title={elementStatus.mapText.download}
           onClick={() => {
             defaultViewbox(false);
             setTimeout(download, 50);
@@ -554,6 +555,7 @@ const MainArea = () => {
     event: { tc: "活動進行中", en: "Event in progress" },
     header: { tc: "重點必看", en: "Highlights" },
     headerTags: { tc: ["重要活動", "健康大檢測", "醫師力大挑戰"], en: ["Key Events"] },
+    download: { tc: "下載", en: "Download" },
     searchPlaceholder: { tc: "關鍵字搜索", en: "Search" },
     remove: { tc: "清除標籤", en: "Clear all" },
     clear: { tc: "清除搜索條件", en: "Clear search" },
@@ -602,6 +604,7 @@ const MainArea = () => {
         event: mapText.event[searchCondition.lang],
         header: mapText.header[searchCondition.lang],
         headerTags: mapText.headerTags[searchCondition.lang],
+        download: mapText.download[searchCondition.lang],
         searchPlaceholder: mapText.searchPlaceholder[searchCondition.lang],
         remove: mapText.remove[searchCondition.lang],
         clear: mapText.clear[searchCondition.lang],
@@ -749,6 +752,7 @@ const MainArea = () => {
         event: mapText.event[searchCondition.lang],
         header: mapText.header[searchCondition.lang],
         headerTags: mapText.headerTags[searchCondition.lang],
+        download: mapText.download[searchCondition.lang],
         searchPlaceholder: mapText.searchPlaceholder[searchCondition.lang],
         remove: mapText.remove[searchCondition.lang],
         clear: mapText.clear[searchCondition.lang],
