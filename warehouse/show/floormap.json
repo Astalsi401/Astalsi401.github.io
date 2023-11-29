@@ -7909,7 +7909,7 @@
     "topic": { "tc": "精準檢測", "en": "Diagnostics, laboratory equipment & services" },
     "tag": { "tc": [], "en": [] },
     "text": { "tc": ["台灣", "牙易通"], "en": ["dentall"] },
-    "corps": [{ "org": { "tc": "台灣牙易通股份有限公司", "en": "dentall Co., Ltd." }, "info": { "tc": "(後續補上)", "en": "(後續補上)" } }]
+    "corps": [{ "org": { "tc": "台灣牙易通股份有限公司", "en": "dentall Co., Ltd." }, "info": { "tc": "　　dentall 台灣牙e通，為台灣規模最大牙科資訊平台，此次以提供醫療科技解決方案專家 \" MedTech\"之姿參展，期望能結合軟體研發及醫療專業經驗，尋求全球合作夥伴，共創智慧醫療生態系。團隊致力將前端科技導入牙科領域，打造出全台第一套雲端診所管理系統及牙醫師協作軟體，也與臺北醫學大學合作，成功開發出牙周病 AI 輔助診斷系統。為提供更多元便利的數位解決方案，成立牙材採購平台，牙科繼續教育平台以及數位牙技所，跨界整合牙科領域產業鏈及供應商，奠定牙科產業卓越領導地位。", "en": "dentall.Co.,Ltd , the largest dental information platform in Taiwan, showcases expertise in MedTech solutions. With a focus on integrating advanced technology into dentistry, dentall offers a cloud-based clinic management system, collaborative software, and an AI-assisted diagnosis system, striving to revolutionize dental care by utilizing technology, expertise, and strategic partnerships to improve the overall oral healthcare landscape." } }]
   },
   {
     "type": "booth",
