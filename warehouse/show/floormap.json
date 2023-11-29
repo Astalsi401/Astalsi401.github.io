@@ -558,13 +558,13 @@
         "title": { "tc": "睡醒還是累？\n打呼聲檢測睡眠呼吸中止！", "en": "" },
         "topic": { "tc": "健康大檢測", "en": "" }
       },
-      { "timeList": [{ "start": "2023-11-30 14:00+08:00", "end": "2023-11-30 15:00+08:00" }], "title": { "tc": "三週有感，改善慢性疼痛", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "" } },
-      { "timeList": [{ "start": "2023-12-03 11:00+08:00", "end": "2023-12-03 12:00+08:00" }], "title": { "tc": "以管窺豹，方寸之間別有洞天", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "" } },
-      { "timeList": [{ "start": "2023-12-01 11:00+08:00", "end": "2023-12-01 12:00+08:00" }], "title": { "tc": "無接觸AI分析檢測與睡眠追蹤照護應用", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "" } },
-      { "timeList": [{ "start": "2023-12-02 14:00+08:00", "end": "2023-12-02 15:00+08:00" }], "title": { "tc": "大腸癌檢測推播與AI大腸鏡檢查輔助", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "" } },
       { "timeList": [{ "start": "2023-11-30 11:00+08:00", "end": "2023-11-30 12:00+08:00" }], "title": { "tc": "神經科醫師的類神經網路", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "" } },
-      { "timeList": [{ "start": "2023-12-01 14:30+08:00", "end": "2023-12-01 15:30+08:00" }], "title": { "tc": "進入AI時代，臨床警示系統的智慧升級", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "" } },
-      { "timeList": [{ "start": "2023-12-02 13:30+08:00", "end": "2023-12-02 14:00+08:00" }], "title": { "tc": "無圍牆醫院新時代，改變未來醫療模式", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "" } }
+      { "timeList": [{ "start": "2023-11-30 14:00+08:00", "end": "2023-11-30 15:00+08:00" }], "title": { "tc": "三週有感，改善慢性疼痛", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "" } },
+      { "timeList": [{ "start": "2023-12-01 11:00+08:00", "end": "2023-12-01 12:00+08:00" }], "title": { "tc": "無圍牆醫院新時代，改變未來醫療模式", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "" } },
+      { "timeList": [{ "start": "2023-12-01 14:00+08:00", "end": "2023-12-01 15:00+08:00" }], "title": { "tc": "進入AI時代，臨床警示系統的智慧升級", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "" } },
+      { "timeList": [{ "start": "2023-12-02 11:00+08:00", "end": "2023-12-02 12:00+08:00" }], "title": { "tc": "無接觸AI分析檢測與睡眠追蹤照護應用", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "" } },
+      { "timeList": [{ "start": "2023-12-02 14:00+08:00", "end": "2023-12-02 15:00+08:00" }], "title": { "tc": "大腸癌檢測推播與AI大腸鏡檢查輔助", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "" } },
+      { "timeList": [{ "start": "2023-12-03 11:00+08:00", "end": "2023-12-03 12:00+08:00" }], "title": { "tc": "以管窺豹，方寸之間別有洞天", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "" } }
     ]
   },
   {
@@ -5370,7 +5370,7 @@
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [], "en": [] },
     "text": { "tc": [], "en": [] },
-    "corps": []
+    "corps": [{ "org": { "tc": "", "en": "" }, "info": { "tc": "", "en": "" } }]
   },
   {
     "type": "booth",
@@ -8954,7 +8954,6 @@
       { "node": "L", "x": 5800, "y": 13400 },
       { "node": "L", "x": 5800, "y": 14520 },
       { "node": "L", "x": 19730, "y": 14520 },
-      { "node": "L", "x": 19730, "y": 14520 },
       { "node": "L", "x": 19730, "y": 12250 },
       { "node": "L", "x": 19450, "y": 12250 },
       { "node": "L", "x": 19450, "y": 11160 },
@@ -9041,7 +9040,9 @@
       { "node": "L", "x": 18030, "y": 15320 },
       { "node": "L", "x": 19430, "y": 15450 },
       { "node": "L", "x": 19430, "y": 13550 },
-      { "node": "L", "x": 18930, "y": 13550 },
+      { "node": "L", "x": 19210, "y": 13550 },
+      { "node": "L", "x": 19210, "y": 12500 },
+      { "node": "L", "x": 18930, "y": 12500 },
       { "node": "L", "x": 18930, "y": 0 },
       { "node": "L", "x": 900, "y": 0 }
     ]
@@ -9114,75 +9115,1318 @@
   { "type": "pillar", "floor": 1, "w": 215, "h": 235, "x": 17905, "y": 4700 },
   { "type": "pillar", "floor": 1, "w": 215, "h": 235, "x": 17905, "y": 6500 },
   { "type": "pillar", "floor": 1, "w": 215, "h": 235, "x": 17905, "y": 8300 },
-  { "type": "icon", "floor": 1, "w": 500, "h": 500, "x": 3750, "y": 10900, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "入口", "en": "Entrance" }, "bd": false, "icon": "arrow_up" },
-  { "type": "icon", "floor": 1, "w": 500, "h": 500, "x": 9650, "y": 10900, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "入口", "en": "Entrance" }, "bd": false, "icon": "arrow_up" },
-  { "type": "icon", "floor": 1, "w": 500, "h": 500, "x": 14550, "y": 10900, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "入口", "en": "Entrance" }, "bd": false, "icon": "arrow_up" },
-  { "type": "icon", "floor": 1, "w": 710, "h": 1050, "x": 6490, "y": 10110, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "電梯", "en": "Elevator" }, "bd": false, "icon": "elevator" },
-  { "type": "icon", "floor": 1, "w": 700, "h": 1050, "x": 12530, "y": 10110, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "電梯", "en": "Elevator" }, "bd": false, "icon": "elevator" },
-  { "type": "icon", "floor": 4, "w": 800, "h": 1050, "x": 6500, "y": 12500, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "電梯", "en": "Elevator" }, "bd": false, "icon": "elevator" },
-  { "type": "icon", "floor": 4, "w": 700, "h": 1050, "x": 12600, "y": 12500, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "電梯", "en": "Elevator" }, "bd": false, "icon": "elevator" },
-  { "type": "icon", "floor": 1, "w": 500, "h": 500, "x": 900, "y": 400, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "電扶梯", "en": "Escalator" }, "bd": false, "icon": "escalator_up" },
-  { "type": "icon", "floor": 1, "w": 500, "h": 500, "x": 18330, "y": 400, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "電扶梯", "en": "Escalator" }, "bd": false, "icon": "escalator_up" },
-  { "type": "icon", "floor": 1, "w": 500, "h": 500, "x": 900, "y": 7600, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "電扶梯", "en": "Escalator" }, "bd": false, "icon": "escalator_down" },
-  { "type": "icon", "floor": 1, "w": 500, "h": 500, "x": 18330, "y": 7600, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "電扶梯", "en": "Escalator" }, "bd": false, "icon": "escalator_down" },
-  { "type": "icon", "floor": 1, "w": 500, "h": 500, "x": 6100, "y": 11950, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "電扶梯", "en": "Escalator" }, "bd": false, "icon": "escalator_up_down_black" },
-  { "type": "icon", "floor": 1, "w": 500, "h": 500, "x": 14600, "y": 11950, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "電扶梯", "en": "Escalator" }, "bd": false, "icon": "escalator_up_down_black" },
-  { "type": "icon", "floor": 4, "w": 500, "h": 500, "x": 3850, "y": 13400, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "入口", "en": "Entrance" }, "bd": false, "icon": "arrow_up" },
-  { "type": "icon", "floor": 4, "w": 500, "h": 500, "x": 9650, "y": 13400, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "入口", "en": "Entrance" }, "bd": false, "icon": "arrow_up" },
-  { "type": "icon", "floor": 4, "w": 500, "h": 500, "x": 14550, "y": 13400, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "入口", "en": "Entrance" }, "bd": false, "icon": "arrow_up" },
-  { "type": "icon", "floor": 4, "w": 500, "h": 500, "x": 900, "y": 6000, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "電扶梯", "en": "Escalator" }, "bd": false, "icon": "escalator_up_down_red" },
-  { "type": "icon", "floor": 4, "w": 500, "h": 500, "x": 18430, "y": 6000, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "電扶梯", "en": "Escalator" }, "bd": false, "icon": "escalator_up_down_red" },
-  { "type": "icon", "floor": 4, "w": 500, "h": 500, "x": 6100, "y": 14300, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "電扶梯", "en": "Escalator" }, "bd": false, "icon": "escalator_up_down_black" },
-  { "type": "icon", "floor": 4, "w": 500, "h": 500, "x": 14600, "y": 14300, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "電扶梯", "en": "Escalator" }, "bd": false, "icon": "escalator_up_down_black" },
-  { "type": "icon", "floor": 1, "w": 1900, "h": 1450, "x": 6200, "y": 12450, "text": { "tc": ["咖啡簡餐"], "en": ["Cafe"] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "咖啡簡餐", "en": "Cafe" }, "bd": true, "icon": false },
-  { "type": "icon", "floor": 1, "w": 1000, "h": 1450, "x": 11600, "y": 12450, "text": { "tc": ["麵包店"], "en": ["Bakery"] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "麵包店", "en": "Bakery" }, "bd": true, "icon": false },
-  { "type": "icon", "floor": 1, "w": 900, "h": 1450, "x": 12600, "y": 12450, "text": { "tc": ["速食店"], "en": ["Fast", "Food ", "Restaurant"] }, "size": { "tc": 1, "en": 0.8 }, "note": { "tc": "速食店", "en": "Fast Food Restaurant" }, "bd": true, "icon": false },
-  { "type": "icon", "floor": 1, "w": 800, "h": 1450, "x": 13500, "y": 12450, "text": { "tc": ["咖啡", "簡餐"], "en": ["Cafe"] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "咖啡簡餐", "en": "Cafe" }, "bd": true, "icon": false },
-  { "type": "icon", "floor": 1, "w": 1900, "h": 1050, "x": 14300, "y": 12850, "text": { "tc": ["便利商店"], "en": ["Convenience", "Store"] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "便利商店", "en": "Convenience Store" }, "bd": true, "icon": false },
-  { "type": "icon", "floor": 4, "w": 1000, "h": 1050, "x": 2700, "y": 12500, "text": { "tc": ["祈禱室"], "en": ["Prayer", "Room"] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "祈禱室", "en": "Prayer Room" }, "bd": true, "icon": false },
-  { "type": "icon", "floor": 1, "w": 400, "h": 350, "x": 18000, "y": 10810, "text": { "tc": [], "en": [] }, "size": { "tc": 1.5, "en": 1.5 }, "note": { "tc": "醫務室", "en": "First Aid" }, "bd": true, "icon": "first_aid" },
-  { "type": "icon", "floor": 4, "w": 400, "h": 400, "x": 16800, "y": 13550, "text": { "tc": [], "en": [] }, "size": { "tc": 1.5, "en": 1.5 }, "note": { "tc": "醫務室", "en": "First Aid" }, "bd": true, "icon": "first_aid" },
-  { "type": "icon", "floor": 1, "w": 870, "h": 1050, "x": 1800, "y": 10110, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "廁所", "en": "Toilet" }, "bd": true, "icon": "toilet" },
-  { "type": "icon", "floor": 1, "w": 1300, "h": 1050, "x": 17100, "y": 10110, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "廁所", "en": "Toilet" }, "bd": true, "icon": "toilet" },
-  { "type": "icon", "floor": 4, "w": 800, "h": 1050, "x": 1900, "y": 12500, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "廁所", "en": "Toilet" }, "bd": true, "icon": "toilet" },
-  { "type": "icon", "floor": 4, "w": 800, "h": 1450, "x": 17200, "y": 12500, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "廁所", "en": "Toilet" }, "bd": true, "icon": "toilet" },
-  { "type": "room", "floor": 1, "w": 600, "h": 1050, "x": 300, "y": 10110, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": false, "bd": true, "icon": false },
-  { "type": "room", "floor": 1, "w": 900, "h": 1050, "x": 900, "y": 10110, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": false, "bd": true, "icon": false },
-  { "type": "room", "floor": 1, "w": 930, "h": 1050, "x": 2670, "y": 10110, "text": { "tc": ["VIP ", "Room 1"], "en": ["VIP ", "Room 1"] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "VIP Room 1", "en": "VIP Room 1" }, "bd": true, "icon": false },
-  { "type": "room", "floor": 1, "w": 650, "h": 1050, "x": 4390, "y": 10110, "text": { "tc": ["I區", "辦公室"], "en": ["Office", "of ", "Area I"] }, "size": { "tc": 0.8, "en": 0.8 }, "note": { "tc": "I區辦公室", "en": "Office of Area I" }, "bd": true, "icon": false },
-  { "type": "room", "floor": 1, "w": 350, "h": 1050, "x": 5040, "y": 10110, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": false, "bd": true, "icon": false },
-  { "type": "room", "floor": 1, "w": 1100, "h": 1050, "x": 5390, "y": 10110, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": false, "bd": true, "icon": false },
-  { "type": "room", "floor": 1, "w": 1300, "h": 1050, "x": 7200, "y": 10110, "text": { "tc": ["VIP", "Room 5"], "en": ["VIP", "Room 5"] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "VIP Room 5", "en": "VIP Room 5" }, "bd": true, "icon": false },
-  { "type": "room", "floor": 1, "w": 400, "h": 1050, "x": 11230, "y": 10110, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": false, "bd": true, "icon": false },
-  { "type": "room", "floor": 1, "w": 900, "h": 1050, "x": 11630, "y": 10110, "text": { "tc": ["行李", "寄放處"], "en": ["Luggage", "Room"] }, "size": { "tc": 1, "en": 0.8 }, "note": { "tc": "行李寄放處", "en": "Luggage Room" }, "bd": true, "icon": false },
-  { "type": "room", "floor": 1, "w": 1200, "h": 1050, "x": 13230, "y": 10110, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": false, "bd": true, "icon": false },
-  { "type": "room", "floor": 1, "w": 1000, "h": 1050, "x": 15200, "y": 10110, "text": { "tc": ["民眾", "換票區"], "en": ["Entry badge", " pick-up for", " the public"] }, "size": { "tc": 1, "en": 0.8 }, "note": { "tc": "民眾換票區", "en": "Entry badge pick-up for the public" }, "bd": true, "icon": false },
-  { "type": "room", "floor": 1, "w": 900, "h": 1050, "x": 16200, "y": 10110, "text": { "tc": ["VIP", "Room 2"], "en": ["VIP", "Room 2"] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "VIP Room 2", "en": "VIP Room 2" }, "bd": true, "icon": false },
-  { "type": "room", "floor": 1, "w": 730, "h": 1050, "x": 18400, "y": 10110, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": false, "bd": true, "icon": false },
-  { "type": "room", "floor": 1, "w": 630, "h": 1090, "x": 18500, "y": 11160, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": false, "bd": true, "icon": false },
-  { "type": "room", "floor": 1, "w": 900, "h": 1450, "x": 8100, "y": 12450, "text": { "tc": ["專業人", "士換證", "區"], "en": ["Entry", " badge", " pick-up", " for ", "pro."] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "專業人士換證區", "en": "Entry badge pick-up for professionals" }, "bd": true, "icon": false },
-  { "type": "room", "floor": 1, "w": 900, "h": 1450, "x": 10700, "y": 12450, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": false, "bd": true, "icon": false },
-  { "type": "room", "floor": 4, "w": 600, "h": 1050, "x": 300, "y": 12500, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": false, "bd": true, "icon": false },
-  { "type": "room", "floor": 4, "w": 1000, "h": 1050, "x": 900, "y": 12500, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": false, "bd": true, "icon": false },
-  { "type": "room", "floor": 4, "w": 1000, "h": 1050, "x": 4500, "y": 12500, "text": { "tc": ["L區", "辦公室"], "en": ["Office of", "Area L"] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "L區辦公室", "en": "Office of Area L" }, "bd": true, "icon": false },
-  { "type": "room", "floor": 4, "w": 1000, "h": 1050, "x": 5500, "y": 12500, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": false, "bd": true, "icon": false },
-  { "type": "room", "floor": 4, "w": 600, "h": 1050, "x": 7300, "y": 12500, "tag": { "tc": ["會議室"], "en": ["Meeting Room"] }, "text": { "tc": ["434 ", "Room"], "en": ["434 ", "Room"] }, "size": { "tc": 0.8, "en": 0.8 }, "note": { "tc": "434 Room", "en": "434 Room" }, "bd": true, "icon": false },
-  { "type": "room", "floor": 4, "w": 600, "h": 1050, "x": 7900, "y": 12500, "tag": { "tc": ["會議室"], "en": ["Meeting Room"] }, "text": { "tc": ["435 ", "Room"], "en": ["435 ", "Room"] }, "size": { "tc": 0.8, "en": 0.8 }, "note": { "tc": "435 Room", "en": "435 Room" }, "bd": true, "icon": false },
-  { "type": "room", "floor": 4, "w": 600, "h": 1050, "x": 8500, "y": 12500, "text": { "tc": ["VIP", "Room 3"], "en": ["VIP", "Room 3"] }, "size": { "tc": 0.8, "en": 0.8 }, "note": { "tc": "VIP Room 3", "en": "VIP Room 3" }, "bd": true, "icon": false },
-  { "type": "room", "floor": 4, "w": 900, "h": 1050, "x": 10800, "y": 12500, "tag": { "tc": ["會議室"], "en": ["Meeting Room"] }, "text": { "tc": ["439 ", "Room"], "en": ["439 ", "Room"] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "439 Room", "en": "439 Room" }, "bd": true, "icon": false },
-  { "type": "room", "floor": 4, "w": 900, "h": 1050, "x": 11700, "y": 12500, "tag": { "tc": ["會議室"], "en": ["Meeting Room"] }, "text": { "tc": ["441 ", "Room"], "en": ["441 ", "Room"] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "441 Room", "en": "441 Room" }, "bd": true, "icon": false },
-  { "type": "room", "floor": 4, "w": 1000, "h": 1050, "x": 13300, "y": 12500, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": false, "bd": true, "icon": false },
-  { "type": "room", "floor": 4, "w": 1000, "h": 1050, "x": 15300, "y": 12500, "text": { "tc": ["N區", "辦公室"], "en": ["Office of", "Area N"] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "N區辦公室", "en": "Office of Area N" }, "bd": true, "icon": false },
-  { "type": "room", "floor": 4, "w": 900, "h": 1050, "x": 16300, "y": 12500, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": false, "bd": true, "icon": false },
-  { "type": "room", "floor": 4, "w": 930, "h": 1450, "x": 18000, "y": 12500, "text": { "tc": [], "en": [] }, "size": { "tc": 1, "en": 1 }, "note": false, "bd": true, "icon": false },
-  { "type": "room", "floor": 4, "w": 1000, "h": 1770, "x": 6200, "y": 14830, "text": { "tc": ["新聞中心"], "en": ["Press ", "Center"] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "新聞中心", "en": "Press Center" }, "bd": true, "icon": false },
-  { "type": "room", "floor": 4, "w": 1400, "h": 1400, "x": 7200, "y": 14830, "text": { "tc": ["VIP簡報室"], "en": ["VIP", "Briefing", "Room"] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "VIP簡報室", "en": "VIP Briefing Room" }, "bd": true, "icon": false },
-  { "type": "room", "floor": 4, "w": 500, "h": 1900, "x": 8600, "y": 14330, "text": { "tc": ["專業", "人士", "換證", "區"], "en": ["Entry ", "badge", " pick-up", " for ", "pro."] }, "size": { "tc": 1, "en": 0.7 }, "note": { "tc": "專業人士換證區", "en": "Entry badge pick-up for professionals" }, "bd": true, "icon": false },
-  { "type": "room", "floor": 4, "w": 500, "h": 1900, "x": 10800, "y": 14330, "text": { "tc": ["專業", "人士", "換證", "區"], "en": ["Entry ", "badge", " pick-up", " for ", "pro."] }, "size": { "tc": 1, "en": 0.7 }, "note": { "tc": "專業人士換證區", "en": "Entry badge pick-up for professionals" }, "bd": true, "icon": false },
-  { "type": "room", "floor": 4, "w": 2230, "h": 1900, "x": 11300, "y": 14330, "tag": { "tc": ["會議室"], "en": ["Meeting Room"] }, "text": { "tc": ["401 Room"], "en": ["401 Room"] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "401 Room", "en": "401 Room" }, "bd": true, "icon": false },
-  { "type": "room", "floor": 4, "w": 900, "h": 1400, "x": 13530, "y": 14830, "tag": { "tc": ["會議室", "重要活動"], "en": ["Meeting Room", "Key Events"] }, "text": { "tc": ["402a", "Room"], "en": ["402a", "Room"] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "402a Room", "en": "402a Room" }, "bd": true, "icon": false, "event": [{ "timeList": [{ "start": "2023-12-02 14:00+08:00", "end": "2023-12-02 16:30+08:00" }], "title": { "tc": "高齡科技創新高峰論壇", "en": "Geroscience Technology Innovation Summit" }, "topic": { "tc": "重要活動", "en": "Key Events" } }] },
-  { "type": "room", "floor": 4, "w": 900, "h": 1400, "x": 14430, "y": 14830, "tag": { "tc": ["會議室", "重要活動"], "en": ["Meeting Room", "Key Events"] }, "text": { "tc": ["402b", "Room"], "en": ["402b", "Room"] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "402b Room", "en": "402b Room" }, "bd": true, "icon": false, "event": [{ "timeList": [{ "start": "2023-12-02 14:00+08:00", "end": "2023-12-02 16:30+08:00" }], "title": { "tc": "高齡科技創新高峰論壇", "en": "Geroscience Technology Innovation Summit" }, "topic": { "tc": "重要活動", "en": "Key Events" } }] },
-  { "type": "room", "floor": 4, "w": 900, "h": 1400, "x": 15330, "y": 14830, "tag": { "tc": ["會議室", "重要活動"], "en": ["Meeting Room", "Key Events"] }, "text": { "tc": ["402c", "Room"], "en": ["402c", "Room"] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "402c Room", "en": "402c Room" }, "bd": true, "icon": false, "event": [{ "timeList": [{ "start": "2023-12-02 14:00+08:00", "end": "2023-12-02 16:30+08:00" }], "title": { "tc": "高齡科技創新高峰論壇", "en": "Geroscience Technology Innovation Summit" }, "topic": { "tc": "重要活動", "en": "Key Events" } }] },
-  { "type": "room", "floor": 4, "w": 900, "h": 1770, "x": 16230, "y": 14830, "tag": { "tc": ["會議室"], "en": ["Meeting Room"] }, "text": { "tc": ["403 ", "Room"], "en": ["403 ", "Room"] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "403 Room", "en": "403 Room" }, "bd": true, "icon": false },
-  { "type": "room", "floor": 4, "w": 900, "h": 1770, "x": 17130, "y": 14830, "tag": { "tc": ["會議室", "重要活動"], "en": ["Meeting Room", "Key Events"] }, "text": { "tc": ["404 ", "Room"], "en": ["404 ", "Room"] }, "size": { "tc": 1, "en": 1 }, "note": { "tc": "404 Room", "en": "404 Room" }, "bd": true, "icon": false, "event": [{ "timeList": [{ "start": "2023-12-01 13:00+08:00", "end": "2023-12-01 17:00+08:00" }], "title": { "tc": "產業 Roadshow 發布會", "en": "Roadshow" }, "topic": { "tc": "重要活動", "en": "Key Events" } }] }
+  {
+    "type": "icon",
+    "floor": 1,
+    "w": 500,
+    "h": 500,
+    "x": 3750,
+    "y": 10900,
+    "p": [
+      { "node": "L", "x": 500, "y": 0 },
+      { "node": "L", "x": 500, "y": 500 },
+      { "node": "L", "x": 0, "y": 500 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "入口", "en": "Entrance" },
+    "bd": false,
+    "icon": "arrow_up"
+  },
+  {
+    "type": "icon",
+    "floor": 1,
+    "w": 500,
+    "h": 500,
+    "x": 9650,
+    "y": 10900,
+    "p": [
+      { "node": "L", "x": 500, "y": 0 },
+      { "node": "L", "x": 500, "y": 500 },
+      { "node": "L", "x": 0, "y": 500 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "入口", "en": "Entrance" },
+    "bd": false,
+    "icon": "arrow_up"
+  },
+  {
+    "type": "icon",
+    "floor": 1,
+    "w": 500,
+    "h": 500,
+    "x": 14550,
+    "y": 10900,
+    "p": [
+      { "node": "L", "x": 500, "y": 0 },
+      { "node": "L", "x": 500, "y": 500 },
+      { "node": "L", "x": 0, "y": 500 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "入口", "en": "Entrance" },
+    "bd": false,
+    "icon": "arrow_up"
+  },
+  {
+    "type": "icon",
+    "floor": 1,
+    "w": 710,
+    "h": 1050,
+    "x": 6490,
+    "y": 10110,
+    "p": [
+      { "node": "L", "x": 710, "y": 0 },
+      { "node": "L", "x": 710, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "電梯", "en": "Elevator" },
+    "bd": false,
+    "icon": "elevator"
+  },
+  {
+    "type": "icon",
+    "floor": 1,
+    "w": 700,
+    "h": 1050,
+    "x": 12530,
+    "y": 10110,
+    "p": [
+      { "node": "L", "x": 700, "y": 0 },
+      { "node": "L", "x": 700, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "電梯", "en": "Elevator" },
+    "bd": false,
+    "icon": "elevator"
+  },
+  {
+    "type": "icon",
+    "floor": 4,
+    "w": 800,
+    "h": 1050,
+    "x": 6500,
+    "y": 12500,
+    "p": [
+      { "node": "L", "x": 800, "y": 0 },
+      { "node": "L", "x": 800, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "電梯", "en": "Elevator" },
+    "bd": false,
+    "icon": "elevator"
+  },
+  {
+    "type": "icon",
+    "floor": 4,
+    "w": 700,
+    "h": 1050,
+    "x": 12600,
+    "y": 12500,
+    "p": [
+      { "node": "L", "x": 700, "y": 0 },
+      { "node": "L", "x": 700, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "電梯", "en": "Elevator" },
+    "bd": false,
+    "icon": "elevator"
+  },
+  {
+    "type": "icon",
+    "floor": 1,
+    "w": 500,
+    "h": 500,
+    "x": 900,
+    "y": 400,
+    "p": [
+      { "node": "L", "x": 500, "y": 0 },
+      { "node": "L", "x": 500, "y": 500 },
+      { "node": "L", "x": 0, "y": 500 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "電扶梯", "en": "Escalator" },
+    "bd": false,
+    "icon": "escalator_up"
+  },
+  {
+    "type": "icon",
+    "floor": 1,
+    "w": 500,
+    "h": 500,
+    "x": 18330,
+    "y": 400,
+    "p": [
+      { "node": "L", "x": 500, "y": 0 },
+      { "node": "L", "x": 500, "y": 500 },
+      { "node": "L", "x": 0, "y": 500 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "電扶梯", "en": "Escalator" },
+    "bd": false,
+    "icon": "escalator_up"
+  },
+  {
+    "type": "icon",
+    "floor": 1,
+    "w": 500,
+    "h": 500,
+    "x": 900,
+    "y": 7600,
+    "p": [
+      { "node": "L", "x": 500, "y": 0 },
+      { "node": "L", "x": 500, "y": 500 },
+      { "node": "L", "x": 0, "y": 500 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "電扶梯", "en": "Escalator" },
+    "bd": false,
+    "icon": "escalator_down"
+  },
+  {
+    "type": "icon",
+    "floor": 1,
+    "w": 500,
+    "h": 500,
+    "x": 18330,
+    "y": 7600,
+    "p": [
+      { "node": "L", "x": 500, "y": 0 },
+      { "node": "L", "x": 500, "y": 500 },
+      { "node": "L", "x": 0, "y": 500 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "電扶梯", "en": "Escalator" },
+    "bd": false,
+    "icon": "escalator_down"
+  },
+  {
+    "type": "icon",
+    "floor": 1,
+    "w": 500,
+    "h": 500,
+    "x": 6100,
+    "y": 11950,
+    "p": [
+      { "node": "L", "x": 500, "y": 0 },
+      { "node": "L", "x": 500, "y": 500 },
+      { "node": "L", "x": 0, "y": 500 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "電扶梯", "en": "Escalator" },
+    "bd": false,
+    "icon": "escalator_up_down_black"
+  },
+  {
+    "type": "icon",
+    "floor": 1,
+    "w": 500,
+    "h": 500,
+    "x": 14600,
+    "y": 11950,
+    "p": [
+      { "node": "L", "x": 500, "y": 0 },
+      { "node": "L", "x": 500, "y": 500 },
+      { "node": "L", "x": 0, "y": 500 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "電扶梯", "en": "Escalator" },
+    "bd": false,
+    "icon": "escalator_up_down_black"
+  },
+  {
+    "type": "icon",
+    "floor": 4,
+    "w": 500,
+    "h": 500,
+    "x": 3850,
+    "y": 13400,
+    "p": [
+      { "node": "L", "x": 500, "y": 0 },
+      { "node": "L", "x": 500, "y": 500 },
+      { "node": "L", "x": 0, "y": 500 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "入口", "en": "Entrance" },
+    "bd": false,
+    "icon": "arrow_up"
+  },
+  {
+    "type": "icon",
+    "floor": 4,
+    "w": 500,
+    "h": 500,
+    "x": 9650,
+    "y": 13400,
+    "p": [
+      { "node": "L", "x": 500, "y": 0 },
+      { "node": "L", "x": 500, "y": 500 },
+      { "node": "L", "x": 0, "y": 500 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "入口", "en": "Entrance" },
+    "bd": false,
+    "icon": "arrow_up"
+  },
+  {
+    "type": "icon",
+    "floor": 4,
+    "w": 500,
+    "h": 500,
+    "x": 14550,
+    "y": 13400,
+    "p": [
+      { "node": "L", "x": 500, "y": 0 },
+      { "node": "L", "x": 500, "y": 500 },
+      { "node": "L", "x": 0, "y": 500 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "入口", "en": "Entrance" },
+    "bd": false,
+    "icon": "arrow_up"
+  },
+  {
+    "type": "icon",
+    "floor": 4,
+    "w": 500,
+    "h": 500,
+    "x": 900,
+    "y": 6000,
+    "p": [
+      { "node": "L", "x": 500, "y": 0 },
+      { "node": "L", "x": 500, "y": 500 },
+      { "node": "L", "x": 0, "y": 500 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "電扶梯", "en": "Escalator" },
+    "bd": false,
+    "icon": "escalator_up_down_red"
+  },
+  {
+    "type": "icon",
+    "floor": 4,
+    "w": 500,
+    "h": 500,
+    "x": 18430,
+    "y": 6000,
+    "p": [
+      { "node": "L", "x": 500, "y": 0 },
+      { "node": "L", "x": 500, "y": 500 },
+      { "node": "L", "x": 0, "y": 500 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "電扶梯", "en": "Escalator" },
+    "bd": false,
+    "icon": "escalator_up_down_red"
+  },
+  {
+    "type": "icon",
+    "floor": 4,
+    "w": 500,
+    "h": 500,
+    "x": 6100,
+    "y": 14300,
+    "p": [
+      { "node": "L", "x": 500, "y": 0 },
+      { "node": "L", "x": 500, "y": 500 },
+      { "node": "L", "x": 0, "y": 500 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "電扶梯", "en": "Escalator" },
+    "bd": false,
+    "icon": "escalator_up_down_black"
+  },
+  {
+    "type": "icon",
+    "floor": 4,
+    "w": 500,
+    "h": 500,
+    "x": 14600,
+    "y": 14300,
+    "p": [
+      { "node": "L", "x": 500, "y": 0 },
+      { "node": "L", "x": 500, "y": 500 },
+      { "node": "L", "x": 0, "y": 500 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "電扶梯", "en": "Escalator" },
+    "bd": false,
+    "icon": "escalator_up_down_black"
+  },
+  {
+    "type": "icon",
+    "floor": 1,
+    "w": 1900,
+    "h": 1450,
+    "x": 6200,
+    "y": 12450,
+    "p": [
+      { "node": "L", "x": 1900, "y": 0 },
+      { "node": "L", "x": 1900, "y": 1450 },
+      { "node": "L", "x": 0, "y": 1450 }
+    ],
+    "text": { "tc": ["咖啡簡餐"], "en": ["Cafe"] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "咖啡簡餐", "en": "Cafe" },
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "icon",
+    "floor": 1,
+    "w": 1000,
+    "h": 1450,
+    "x": 11600,
+    "y": 12450,
+    "p": [
+      { "node": "L", "x": 1000, "y": 0 },
+      { "node": "L", "x": 1000, "y": 1450 },
+      { "node": "L", "x": 0, "y": 1450 }
+    ],
+    "text": { "tc": ["麵包店"], "en": ["Bakery"] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "麵包店", "en": "Bakery" },
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "icon",
+    "floor": 1,
+    "w": 900,
+    "h": 1450,
+    "x": 12600,
+    "y": 12450,
+    "p": [
+      { "node": "L", "x": 900, "y": 0 },
+      { "node": "L", "x": 900, "y": 1450 },
+      { "node": "L", "x": 0, "y": 1450 }
+    ],
+    "text": { "tc": ["速食店"], "en": ["Fast", "Food ", "Restaurant"] },
+    "size": { "tc": 1, "en": 0.8 },
+    "note": { "tc": "速食店", "en": "Fast Food Restaurant" },
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "icon",
+    "floor": 1,
+    "w": 800,
+    "h": 1450,
+    "x": 13500,
+    "y": 12450,
+    "p": [
+      { "node": "L", "x": 800, "y": 0 },
+      { "node": "L", "x": 800, "y": 1450 },
+      { "node": "L", "x": 0, "y": 1450 }
+    ],
+    "text": { "tc": ["咖啡", "簡餐"], "en": ["Cafe"] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "咖啡簡餐", "en": "Cafe" },
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "icon",
+    "floor": 1,
+    "w": 1900,
+    "h": 1050,
+    "x": 14300,
+    "y": 12850,
+    "p": [
+      { "node": "L", "x": 1900, "y": 0 },
+      { "node": "L", "x": 1900, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "text": { "tc": ["便利商店"], "en": ["Convenience", "Store"] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "便利商店", "en": "Convenience Store" },
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "icon",
+    "floor": 4,
+    "w": 1000,
+    "h": 1050,
+    "x": 2700,
+    "y": 12500,
+    "p": [
+      { "node": "L", "x": 1000, "y": 0 },
+      { "node": "L", "x": 1000, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "text": { "tc": ["祈禱室"], "en": ["Prayer", "Room"] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "祈禱室", "en": "Prayer Room" },
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "icon",
+    "floor": 1,
+    "w": 400,
+    "h": 350,
+    "x": 18000,
+    "y": 10810,
+    "p": [
+      { "node": "L", "x": 400, "y": 0 },
+      { "node": "L", "x": 400, "y": 350 },
+      { "node": "L", "x": 0, "y": 350 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1.5, "en": 1.5 },
+    "note": { "tc": "醫務室", "en": "First Aid" },
+    "bd": true,
+    "icon": "first_aid"
+  },
+  {
+    "type": "icon",
+    "floor": 4,
+    "w": 400,
+    "h": 400,
+    "x": 16800,
+    "y": 13550,
+    "p": [
+      { "node": "L", "x": 400, "y": 0 },
+      { "node": "L", "x": 400, "y": 400 },
+      { "node": "L", "x": 0, "y": 400 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1.5, "en": 1.5 },
+    "note": { "tc": "醫務室", "en": "First Aid" },
+    "bd": true,
+    "icon": "first_aid"
+  },
+  {
+    "type": "icon",
+    "floor": 1,
+    "w": 870,
+    "h": 1050,
+    "x": 1800,
+    "y": 10110,
+    "p": [
+      { "node": "L", "x": 870, "y": 0 },
+      { "node": "L", "x": 870, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "廁所", "en": "Toilet" },
+    "bd": true,
+    "icon": "toilet"
+  },
+  {
+    "type": "icon",
+    "floor": 1,
+    "w": 1300,
+    "h": 1050,
+    "x": 17100,
+    "p": [
+      { "node": "L", "x": 1300, "y": 0 },
+      { "node": "L", "x": 1300, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "y": 10110,
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "廁所", "en": "Toilet" },
+    "bd": true,
+    "icon": "toilet"
+  },
+  {
+    "type": "icon",
+    "floor": 4,
+    "w": 800,
+    "h": 1050,
+    "x": 1900,
+    "y": 12500,
+    "p": [
+      { "node": "L", "x": 800, "y": 0 },
+      { "node": "L", "x": 800, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "廁所", "en": "Toilet" },
+    "bd": true,
+    "icon": "toilet"
+  },
+  {
+    "type": "icon",
+    "floor": 4,
+    "w": 800,
+    "h": 1450,
+    "x": 17200,
+    "y": 12500,
+    "p": [
+      { "node": "L", "x": 800, "y": 0 },
+      { "node": "L", "x": 800, "y": 1450 },
+      { "node": "L", "x": 0, "y": 1450 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "廁所", "en": "Toilet" },
+    "bd": true,
+    "icon": "toilet"
+  },
+  {
+    "type": "room",
+    "floor": 1,
+    "w": 600,
+    "h": 1050,
+    "x": 300,
+    "y": 10110,
+    "p": [
+      { "node": "L", "x": 600, "y": 0 },
+      { "node": "L", "x": 600, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": false,
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 1,
+    "w": 900,
+    "h": 1050,
+    "x": 900,
+    "y": 10110,
+    "p": [
+      { "node": "L", "x": 900, "y": 0 },
+      { "node": "L", "x": 900, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": false,
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 1,
+    "w": 930,
+    "h": 1050,
+    "x": 2670,
+    "y": 10110,
+    "p": [
+      { "node": "L", "x": 930, "y": 0 },
+      { "node": "L", "x": 930, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "text": { "tc": ["VIP ", "Room 1"], "en": ["VIP ", "Room 1"] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "VIP Room 1", "en": "VIP Room 1" },
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 1,
+    "w": 650,
+    "h": 1050,
+    "x": 4390,
+    "y": 10110,
+    "p": [
+      { "node": "L", "x": 650, "y": 0 },
+      { "node": "L", "x": 650, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "text": { "tc": ["I區", "辦公室"], "en": ["Office", "of ", "Area I"] },
+    "size": { "tc": 0.8, "en": 0.8 },
+    "note": { "tc": "I區辦公室", "en": "Office of Area I" },
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 1,
+    "w": 350,
+    "h": 1050,
+    "x": 5040,
+    "y": 10110,
+    "p": [
+      { "node": "L", "x": 350, "y": 0 },
+      { "node": "L", "x": 350, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": false,
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 1,
+    "w": 1100,
+    "h": 1050,
+    "x": 5390,
+    "y": 10110,
+    "p": [
+      { "node": "L", "x": 1100, "y": 0 },
+      { "node": "L", "x": 1100, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": false,
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 1,
+    "w": 1300,
+    "h": 1050,
+    "x": 7200,
+    "y": 10110,
+    "p": [
+      { "node": "L", "x": 1300, "y": 0 },
+      { "node": "L", "x": 1300, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "text": { "tc": ["VIP", "Room 5"], "en": ["VIP", "Room 5"] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "VIP Room 5", "en": "VIP Room 5" },
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 1,
+    "w": 400,
+    "h": 1050,
+    "x": 11230,
+    "y": 10110,
+    "p": [
+      { "node": "L", "x": 400, "y": 0 },
+      { "node": "L", "x": 400, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": false,
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 1,
+    "w": 900,
+    "h": 1050,
+    "x": 11630,
+    "y": 10110,
+    "p": [
+      { "node": "L", "x": 900, "y": 0 },
+      { "node": "L", "x": 900, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "text": { "tc": ["行李", "寄放處"], "en": ["Luggage", "Room"] },
+    "size": { "tc": 1, "en": 0.8 },
+    "note": { "tc": "行李寄放處", "en": "Luggage Room" },
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 1,
+    "w": 1200,
+    "h": 1050,
+    "x": 13230,
+    "y": 10110,
+    "p": [
+      { "node": "L", "x": 1200, "y": 0 },
+      { "node": "L", "x": 1200, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": false,
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 1,
+    "w": 1000,
+    "h": 1050,
+    "x": 15200,
+    "y": 10110,
+    "p": [
+      { "node": "L", "x": 1000, "y": 0 },
+      { "node": "L", "x": 1000, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "text": { "tc": ["民眾", "換票區"], "en": ["Entry badge", " pick-up for", " the public"] },
+    "size": { "tc": 1, "en": 0.8 },
+    "note": { "tc": "民眾換票區", "en": "Entry badge pick-up for the public" },
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 1,
+    "w": 900,
+    "h": 1050,
+    "x": 16200,
+    "y": 10110,
+    "p": [
+      { "node": "L", "x": 900, "y": 0 },
+      { "node": "L", "x": 900, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "text": { "tc": ["VIP", "Room 2"], "en": ["VIP", "Room 2"] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "VIP Room 2", "en": "VIP Room 2" },
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 1,
+    "w": 730,
+    "h": 1050,
+    "x": 18400,
+    "y": 10110,
+    "p": [
+      { "node": "L", "x": 730, "y": 0 },
+      { "node": "L", "x": 730, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": false,
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 1,
+    "w": 630,
+    "h": 1090,
+    "x": 18500,
+    "y": 11160,
+    "p": [
+      { "node": "L", "x": 630, "y": 0 },
+      { "node": "L", "x": 630, "y": 1090 },
+      { "node": "L", "x": 0, "y": 1090 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": false,
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 1,
+    "w": 900,
+    "h": 1450,
+    "x": 8100,
+    "y": 12450,
+    "p": [
+      { "node": "L", "x": 900, "y": 0 },
+      { "node": "L", "x": 900, "y": 1450 },
+      { "node": "L", "x": 0, "y": 1450 }
+    ],
+    "text": { "tc": ["專業人", "士換證", "區"], "en": ["Entry", " badge", " pick-up", " for ", "pro."] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "專業人士換證區", "en": "Entry badge pick-up for professionals" },
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 1,
+    "w": 900,
+    "h": 1450,
+    "x": 10700,
+    "y": 12450,
+    "p": [
+      { "node": "L", "x": 900, "y": 0 },
+      { "node": "L", "x": 900, "y": 1450 },
+      { "node": "L", "x": 0, "y": 1450 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": false,
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 4,
+    "w": 600,
+    "h": 1050,
+    "x": 300,
+    "y": 12500,
+    "p": [
+      { "node": "L", "x": 600, "y": 0 },
+      { "node": "L", "x": 600, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": false,
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 4,
+    "w": 1000,
+    "h": 1050,
+    "x": 900,
+    "y": 12500,
+    "p": [
+      { "node": "L", "x": 1000, "y": 0 },
+      { "node": "L", "x": 1000, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": false,
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 4,
+    "w": 1000,
+    "h": 1050,
+    "x": 4500,
+    "y": 12500,
+    "p": [
+      { "node": "L", "x": 1000, "y": 0 },
+      { "node": "L", "x": 1000, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "text": { "tc": ["L區", "辦公室"], "en": ["Office of", "Area L"] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "L區辦公室", "en": "Office of Area L" },
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 4,
+    "w": 1000,
+    "h": 1050,
+    "x": 5500,
+    "y": 12500,
+    "p": [
+      { "node": "L", "x": 1000, "y": 0 },
+      { "node": "L", "x": 1000, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": false,
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 4,
+    "w": 600,
+    "h": 1050,
+    "x": 7300,
+    "y": 12500,
+    "p": [
+      { "node": "L", "x": 600, "y": 0 },
+      { "node": "L", "x": 600, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "tag": { "tc": ["會議室"], "en": ["Meeting Room"] },
+    "text": { "tc": ["434 ", "Room"], "en": ["434 ", "Room"] },
+    "size": { "tc": 0.8, "en": 0.8 },
+    "note": { "tc": "434 Room", "en": "434 Room" },
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 4,
+    "w": 600,
+    "h": 1050,
+    "x": 7900,
+    "y": 12500,
+    "p": [
+      { "node": "L", "x": 600, "y": 0 },
+      { "node": "L", "x": 600, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "tag": { "tc": ["會議室"], "en": ["Meeting Room"] },
+    "text": { "tc": ["435 ", "Room"], "en": ["435 ", "Room"] },
+    "size": { "tc": 0.8, "en": 0.8 },
+    "note": { "tc": "435 Room", "en": "435 Room" },
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 4,
+    "w": 600,
+    "h": 1050,
+    "x": 8500,
+    "y": 12500,
+    "p": [
+      { "node": "L", "x": 600, "y": 0 },
+      { "node": "L", "x": 600, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "text": { "tc": ["VIP", "Room 3"], "en": ["VIP", "Room 3"] },
+    "size": { "tc": 0.8, "en": 0.8 },
+    "note": { "tc": "VIP Room 3", "en": "VIP Room 3" },
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 4,
+    "w": 900,
+    "h": 1050,
+    "x": 10800,
+    "y": 12500,
+    "p": [
+      { "node": "L", "x": 900, "y": 0 },
+      { "node": "L", "x": 900, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "tag": { "tc": ["會議室"], "en": ["Meeting Room"] },
+    "text": { "tc": ["439 ", "Room"], "en": ["439 ", "Room"] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "439 Room", "en": "439 Room" },
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 4,
+    "w": 900,
+    "h": 1050,
+    "x": 11700,
+    "y": 12500,
+    "p": [
+      { "node": "L", "x": 900, "y": 0 },
+      { "node": "L", "x": 900, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "tag": { "tc": ["會議室"], "en": ["Meeting Room"] },
+    "text": { "tc": ["441 ", "Room"], "en": ["441 ", "Room"] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "441 Room", "en": "441 Room" },
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 4,
+    "w": 1000,
+    "h": 1050,
+    "x": 13300,
+    "y": 12500,
+    "p": [
+      { "node": "L", "x": 1000, "y": 0 },
+      { "node": "L", "x": 1000, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": false,
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 4,
+    "w": 1000,
+    "h": 1050,
+    "x": 15300,
+    "y": 12500,
+    "p": [
+      { "node": "L", "x": 1000, "y": 0 },
+      { "node": "L", "x": 1000, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "text": { "tc": ["N區", "辦公室"], "en": ["Office of", "Area N"] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "N區辦公室", "en": "Office of Area N" },
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 4,
+    "w": 900,
+    "h": 1050,
+    "x": 16300,
+    "y": 12500,
+    "p": [
+      { "node": "L", "x": 900, "y": 0 },
+      { "node": "L", "x": 900, "y": 1050 },
+      { "node": "L", "x": 0, "y": 1050 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": false,
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 4,
+    "w": 1210,
+    "h": 1450,
+    "x": 18000,
+    "y": 12500,
+    "p": [
+      { "node": "L", "x": 1210, "y": 0 },
+      { "node": "L", "x": 1210, "y": 1050 },
+      { "node": "L", "x": 1430, "y": 1050 },
+      { "node": "L", "x": 1430, "y": 1450 },
+      { "node": "L", "x": 0, "y": 1450 }
+    ],
+    "text": { "tc": [], "en": [] },
+    "size": { "tc": 1, "en": 1 },
+    "note": false,
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 4,
+    "w": 1000,
+    "h": 1770,
+    "x": 6200,
+    "y": 14830,
+    "p": [
+      { "node": "L", "x": 1000, "y": 0 },
+      { "node": "L", "x": 1000, "y": 1770 },
+      { "node": "L", "x": 0, "y": 1770 }
+    ],
+    "text": { "tc": ["新聞中心"], "en": ["Press ", "Center"] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "新聞中心", "en": "Press Center" },
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 4,
+    "w": 1400,
+    "h": 1400,
+    "x": 7200,
+    "y": 14830,
+    "p": [
+      { "node": "L", "x": 1400, "y": 0 },
+      { "node": "L", "x": 1400, "y": 1400 },
+      { "node": "L", "x": 0, "y": 1400 }
+    ],
+    "text": { "tc": ["VIP簡報室"], "en": ["VIP", "Briefing", "Room"] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "VIP簡報室", "en": "VIP Briefing Room" },
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 4,
+    "w": 500,
+    "h": 1900,
+    "x": 8600,
+    "y": 14330,
+    "p": [
+      { "node": "L", "x": 500, "y": 0 },
+      { "node": "L", "x": 500, "y": 1900 },
+      { "node": "L", "x": 0, "y": 1900 }
+    ],
+    "text": { "tc": ["專業", "人士", "換證", "區"], "en": ["Entry ", "badge", " pick-up", " for ", "pro."] },
+    "size": { "tc": 1, "en": 0.7 },
+    "note": { "tc": "專業人士換證區", "en": "Entry badge pick-up for professionals" },
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 4,
+    "w": 500,
+    "h": 1900,
+    "x": 10800,
+    "y": 14330,
+    "p": [
+      { "node": "L", "x": 500, "y": 0 },
+      { "node": "L", "x": 500, "y": 1900 },
+      { "node": "L", "x": 0, "y": 1900 }
+    ],
+    "text": { "tc": ["專業", "人士", "換證", "區"], "en": ["Entry ", "badge", " pick-up", " for ", "pro."] },
+    "size": { "tc": 1, "en": 0.7 },
+    "note": { "tc": "專業人士換證區", "en": "Entry badge pick-up for professionals" },
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 4,
+    "w": 2230,
+    "h": 1900,
+    "x": 11300,
+    "y": 14330,
+    "p": [
+      { "node": "L", "x": 2230, "y": 0 },
+      { "node": "L", "x": 2230, "y": 1900 },
+      { "node": "L", "x": 0, "y": 1900 }
+    ],
+    "tag": { "tc": ["會議室"], "en": ["Meeting Room"] },
+    "text": { "tc": ["401 Room"], "en": ["401 Room"] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "401 Room", "en": "401 Room" },
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 4,
+    "w": 900,
+    "h": 1400,
+    "x": 13530,
+    "y": 14830,
+    "p": [
+      { "node": "L", "x": 900, "y": 0 },
+      { "node": "L", "x": 900, "y": 1400 },
+      { "node": "L", "x": 0, "y": 1400 }
+    ],
+    "tag": { "tc": ["會議室", "重要活動"], "en": ["Meeting Room", "Key Events"] },
+    "text": { "tc": ["402a", "Room"], "en": ["402a", "Room"] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "402a Room", "en": "402a Room" },
+    "bd": true,
+    "icon": false,
+    "event": [{ "timeList": [{ "start": "2023-12-02 14:00+08:00", "end": "2023-12-02 16:30+08:00" }], "title": { "tc": "高齡科技創新高峰論壇", "en": "Geroscience Technology Innovation Summit" }, "topic": { "tc": "重要活動", "en": "Key Events" } }]
+  },
+  {
+    "type": "room",
+    "floor": 4,
+    "w": 900,
+    "h": 1400,
+    "x": 14430,
+    "y": 14830,
+    "p": [
+      { "node": "L", "x": 900, "y": 0 },
+      { "node": "L", "x": 900, "y": 1400 },
+      { "node": "L", "x": 0, "y": 1400 }
+    ],
+    "tag": { "tc": ["會議室", "重要活動"], "en": ["Meeting Room", "Key Events"] },
+    "text": { "tc": ["402b", "Room"], "en": ["402b", "Room"] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "402b Room", "en": "402b Room" },
+    "bd": true,
+    "icon": false,
+    "event": [{ "timeList": [{ "start": "2023-12-02 14:00+08:00", "end": "2023-12-02 16:30+08:00" }], "title": { "tc": "高齡科技創新高峰論壇", "en": "Geroscience Technology Innovation Summit" }, "topic": { "tc": "重要活動", "en": "Key Events" } }]
+  },
+  {
+    "type": "room",
+    "floor": 4,
+    "w": 900,
+    "h": 1400,
+    "x": 15330,
+    "y": 14830,
+    "p": [
+      { "node": "L", "x": 900, "y": 0 },
+      { "node": "L", "x": 900, "y": 1400 },
+      { "node": "L", "x": 0, "y": 1400 }
+    ],
+    "tag": { "tc": ["會議室", "重要活動"], "en": ["Meeting Room", "Key Events"] },
+    "text": { "tc": ["402c", "Room"], "en": ["402c", "Room"] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "402c Room", "en": "402c Room" },
+    "bd": true,
+    "icon": false,
+    "event": [{ "timeList": [{ "start": "2023-12-02 14:00+08:00", "end": "2023-12-02 16:30+08:00" }], "title": { "tc": "高齡科技創新高峰論壇", "en": "Geroscience Technology Innovation Summit" }, "topic": { "tc": "重要活動", "en": "Key Events" } }]
+  },
+  {
+    "type": "room",
+    "floor": 4,
+    "w": 900,
+    "h": 1770,
+    "x": 16230,
+    "y": 14830,
+    "p": [
+      { "node": "L", "x": 900, "y": 0 },
+      { "node": "L", "x": 900, "y": 1770 },
+      { "node": "L", "x": 0, "y": 1770 }
+    ],
+    "tag": { "tc": ["會議室"], "en": ["Meeting Room"] },
+    "text": { "tc": ["403 ", "Room"], "en": ["403 ", "Room"] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "403 Room", "en": "403 Room" },
+    "bd": true,
+    "icon": false
+  },
+  {
+    "type": "room",
+    "floor": 4,
+    "w": 900,
+    "h": 1770,
+    "x": 17130,
+    "y": 14830,
+    "p": [
+      { "node": "L", "x": 900, "y": 0 },
+      { "node": "L", "x": 900, "y": 1770 },
+      { "node": "L", "x": 0, "y": 1770 }
+    ],
+    "tag": { "tc": ["會議室", "重要活動"], "en": ["Meeting Room", "Key Events"] },
+    "text": { "tc": ["404 ", "Room"], "en": ["404 ", "Room"] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "404 Room", "en": "404 Room" },
+    "bd": true,
+    "icon": false,
+    "event": [{ "timeList": [{ "start": "2023-12-01 13:00+08:00", "end": "2023-12-01 17:00+08:00" }], "title": { "tc": "產業 Roadshow 發布會", "en": "Roadshow" }, "topic": { "tc": "重要活動", "en": "Key Events" } }]
+  },
+  {
+    "type": "room",
+    "floor": 4,
+    "w": 1400,
+    "h": 1370,
+    "x": 18030,
+    "y": 13950,
+    "p": [
+      { "node": "L", "x": 1400, "y": 0 },
+      { "node": "L", "x": 1400, "y": 1500 },
+      { "node": "L", "x": 0, "y": 1370 }
+    ],
+    "tag": { "tc": ["重要活動"], "en": ["Key Events"] },
+    "text": { "tc": ["TAITRA", " Lounge"], "en": ["TAITRA", " Lounge"] },
+    "size": { "tc": 1, "en": 1 },
+    "note": { "tc": "TAITRA Lounge", "en": "TAITRA Lounge" },
+    "bd": true,
+    "icon": false,
+    "event": [{ "timeList": [{ "start": "2023-12-01 10:00+08:00", "end": "2023-12-01 12:00+08:00" }], "title": { "tc": "海外醫療市場商機說明暨交流會 -中東與東歐市場新商機-", "en": "Healthcare Market & Business Opportunity Conference -Middle East and Eastern Europe Session-" }, "topic": { "tc": "重要活動", "en": "Key Events" } }]
+  }
 ]

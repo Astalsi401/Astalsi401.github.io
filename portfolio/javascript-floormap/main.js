@@ -91,23 +91,21 @@ const Header = ({ elementStatus, setElementStatus, searchCondition, setSearchCon
   );
 };
 
-const Wall = ({ d, drawPath }) => {
-  return <path stroke="black" fill={d.fill} strokeWidth={d.strokeWidth} d={`M${d.x} ${d.y}${drawPath(d.p)}`} />;
-};
+const Wall = ({ d, drawPath }) => <path stroke="black" fill={d.fill} strokeWidth={d.strokeWidth} d={`M${d.x} ${d.y}${drawPath(d.p)}`} />;
 const Pillar = ({ d }) => <rect x={d.x} y={d.y} width={d.w} height={d.h} fill="rgba(0, 0, 0, 0.2)" />;
 const Text = ({ d }) => (
   <text textAnchor="middle" fontWeight="bold" fill={d.color} fontSize={400 * d.size} x={d.x} y={d.y}>
     {d.mapText}
   </text>
 );
-const Room = ({ d, i, size, elementStatus, handleBoothClick }) => {
+const Room = ({ d, i, size, elementStatus, handleBoothClick, drawPath }) => {
   const fontSize = size * d.size;
   const lineHeight = fontSize * 1.2;
   const icon_l = 500;
   const opacity = d.type === "room" && elementStatus.boothInfo && elementStatus.boothInfoData.id == d.id ? 1 : d.opacity;
   return (
     <g className={`${d.type} ${opacity === 1 ? "active" : ""}`} transform={`translate(${d.x},${d.y})`} onClick={d.type === "room" ? () => handleBoothClick(d) : null}>
-      <rect stroke="black" strokeWidth={d.bd ? 10 : 0} fill={d.text.length === 0 || d.type === "icon" ? "none" : "#f1f1f1"} fillOpacity={d.opacity} width={d.w} height={d.h} />
+      <path stroke={"black"} strokeWidth={d.bd ? 10 : 0} fill={d.text.length === 0 || d.type === "icon" ? "none" : "#f1f1f1"} fillOpacity={d.opacity} d={`M0 0${drawPath(d.p)}`} />;
       <g transform={`translate(${d.w / 2},${d.h / 2 - ((d.text.length - 1) * lineHeight) / 2})`} fontSize={fontSize}>
         {d.text.map((t, j) => (
           <text key={`text-${i}-${j}`} textAnchor="middle" fontWeight="bold" fill="black" fillOpacity={d.opacity} y={j * lineHeight}>
@@ -174,8 +172,8 @@ const Elements = ({ type, data, size, elementStatus, handleBoothClick }) => {
     wall: (d, i) => <Wall d={d} drawPath={drawPath} />,
     pillar: (d, i) => <Pillar d={d} />,
     text: (d, i) => <Text d={d} />,
-    room: (d, i) => <Room d={d} i={i} size={size} elementStatus={elementStatus} handleBoothClick={handleBoothClick} />,
-    icon: (d, i) => <Room d={d} i={i} size={size} />,
+    room: (d, i) => <Room d={d} i={i} size={size} elementStatus={elementStatus} handleBoothClick={handleBoothClick} drawPath={drawPath} />,
+    icon: (d, i) => <Room d={d} i={i} size={size} drawPath={drawPath} />,
     booth: (d, i) => <Booth d={d} size={size} elementStatus={elementStatus} handleBoothClick={handleBoothClick} drawPath={drawPath} />,
   };
   return <g className={`${type}-g`}>{data.filter((d) => d.type == type).map((d, i) => elementActions[type](d, i))}</g>;
