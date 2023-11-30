@@ -16,7 +16,7 @@
     "cat": { "tc": "醫療機構展區", "en": "Medical Institutes & Hospitals" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["員榮", "醫院"], "en": ["Yuan Rung", "Hospital"] },
+    "text": { "tc": ["員榮", "醫院"], "en": ["Yuan Rung", " Hospital"] },
     "corps": [{ "org": { "tc": "員榮醫療社團法人員榮醫院", "en": "Yuan Rung Hospital" }, "info": { "tc": "-", "en": "-" } }]
   },
   {
@@ -74,7 +74,7 @@
     "cat": { "tc": "醫療機構展區", "en": "Medical Institutes & Hospitals" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["彰基醫療體系"], "en": ["Changhua Christian", "Hospital"] },
+    "text": { "tc": ["彰基醫療體系"], "en": ["Changhua Christian", " Hospital"] },
     "corps": [
       {
         "org": { "tc": "彰化基督教醫院", "en": "Changhua Christian Hospital" },
@@ -102,7 +102,7 @@
     "cat": { "tc": "醫療機構展區", "en": "Medical Institutes & Hospitals" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["國泰醫院"], "en": ["Cathay General", "Hospital"] },
+    "text": { "tc": ["國泰醫院"], "en": ["Cathay General", " Hospital"] },
     "corps": [{ "org": { "tc": "國泰醫療財團法人國泰綜合醫院", "en": "Cathay General Hospital" }, "info": { "tc": "1.\t全方位新生兒外接轉送E化服務待討論\n2.\t主動脈AI篩檢及通報、肺結節AI偵測系統\n3.\t用構音障礙診斷與矯正之深度學習APP\n4.\t放射檢查智能流程e路通\n5.\t國泰醫學團隊創新研發-精準益生菌\n雲端電子病歷平台「iFHIR Center」骨折Ｘ光影像平台 i禮賀(介入照護)", "en": "Wait" } }]
   },
   {
@@ -122,7 +122,7 @@
     "cat": { "tc": "醫療機構展區", "en": "Medical Institutes & Hospitals" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": ["醫師聊健康"], "en": [] },
-    "text": { "tc": ["臺安", "醫院"], "en": ["Taiwan", "Adeventist", "Hospital"] },
+    "text": { "tc": ["臺安", "醫院"], "en": ["Taiwan ", "Adeventist", " Hospital"] },
     "corps": [{ "org": { "tc": "基督復臨安息日會醫療財團法人臺安醫院", "en": "Taiwan Adeventist Hospital" }, "info": { "tc": "臺安醫院展細胞治療,精準醫療,包含:AI影像細胞辨識及CDC自動循環腫瘤細胞系統，醫療相關,包含:單孔微創3D內視鏡手術,脊椎微創手術,婦科及泌尿海扶刀。", "en": "tah" } }],
     "event": [
       { "timeList": [{ "start": "2023-12-02 10:30+08:00", "end": "2023-12-02 10:50+08:00" }], "title": { "tc": "子宮肌瘤消融利器-海芙刀簡介", "en": "" }, "topic": { "tc": "醫師聊健康", "en": "" } },
@@ -150,7 +150,7 @@
     "cat": { "tc": "醫療機構展區", "en": "Medical Institutes & Hospitals" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": ["健康大檢測", "醫師聊健康"], "en": [] },
-    "text": { "tc": ["長庚醫療體系"], "en": ["Chang Gung", "Medical", "Foundation"] },
+    "text": { "tc": ["長庚醫療體系"], "en": ["Chang Gung", " Medical", " Foundation"] },
     "corps": [
       {
         "org": { "tc": "長庚醫療財團法人", "en": "Chang Gung Medical Foundation" },
@@ -212,7 +212,7 @@
     "cat": { "tc": "醫療機構展區", "en": "Medical Institutes & Hospitals" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["新光醫院"], "en": ["Shin Kong Wu Ho-Su", "Memorial Hospital"] },
+    "text": { "tc": ["新光醫院"], "en": ["Shin Kong Wu Ho-Su", " Memorial Hospital"] },
     "corps": [{ "org": { "tc": "新光醫療財團法人新光吳火獅紀念醫院", "en": "Shin Kong Wu Ho-Su Memorial Hospital" }, "info": { "tc": "智慧醫療、精準醫療等", "en": "health information technology、precision medicine, etc." } }]
   },
   {
@@ -356,7 +356,7 @@
     "cat": { "tc": "醫療機構展區", "en": "Medical Institutes & Hospitals" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": ["健康大檢測"], "en": [] },
-    "text": { "tc": ["中正脊椎骨科醫院"], "en": ["Jhong Jheng Spine &", "Orthopedic Hospital"] },
+    "text": { "tc": ["中正脊椎骨科醫院"], "en": ["Jhong Jheng Spine &", " Orthopedic Hospital"] },
     "corps": [{ "org": { "tc": "中正脊椎骨科醫院", "en": "Jhong Jheng Spine & Orthopedic Hospital" }, "info": { "tc": "．骨科專業醫療：關節微創重建手術、腰椎關節治療及手術、腕隧道症候群、退化性關節炎、關節病變、骨質疏鬆症、人工膝關節置換等\n．脊椎專業醫療：微創脊椎手術、頸神經病變、脫位、畸形、頸椎間盤突出症、慢性頸部疼痛、胸椎病變、腰椎椎間盤突出症等\n．ＡＩ尖端科技：ROSA KNEE機器手臂、MRI、最高級手術室HEPA無塵設施、手術神經安全監測儀等\n．特色再生醫療：PRP、EECP體外反博治療、高壓氧保健等\n", "en": ". Orthopedic professional medical treatment: minimally invasive joint reconstruction surgery, lumbar joint treatment and surgery, carpal tunnel syndrome, degenerative arthritis, joint disease, osteoporosis, total knee replacement, etc.\n. Spine  professional medical treatment: minimally invasive spine surgery, cervical neuropathy, dislocation, deformity, cervical disc herniation, chronic neck pain, thoracic spine disease, herniated Intervertebral Disc, etc.\n. AI technology: ROSA KNEE robotic arm, MRI, HEPA dust-free facilities in the most advanced operating room, surgical nerve safety monitor, etc.\n. Featured regenerative medicine: PRP, Enhanced External CounterPulsation,Hyperbaric oxygen therapy (HBOT) , etc.\n" } }],
     "event": [
       {
@@ -386,7 +386,7 @@
     "cat": { "tc": "醫療機構展區", "en": "Medical Institutes & Hospitals" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": ["健康大檢測"], "en": [] },
-    "text": { "tc": ["生優", "物治", "所", "/", "生動", "理療", "所"], "en": ["Meco", "Technology"] },
+    "text": { "tc": ["生優", "物治", "所", "/", "生動", "理療", "所"], "en": ["Meco ", "Technology"] },
     "corps": [{ "org": { "tc": "梅科科技股份有限公司", "en": "Meco Technology Co., LTD." }, "info": { "tc": "梅科科技成立於2019年，以專業化和個人化的客戶服務體驗為優勢，致力於整合資訊科技和醫療產業，提供優質的醫療資訊服務。專注於經營連鎖智能物理治療所、拓展居家物理治療數位療法及自費醫療服務–生生優動運動物理治療所。自主開發手機應用程式–Youdon 優動-智能物理治療平台，透過AI處方和主動復健運動治療，協助患者快速恢復身體功能。", "en": "MecoTech Technology, established in 2019, is dedicated to integrating information technology and the healthcare industry. We provide high-quality healthcare information services with a focus on professional and personalized customer experience. Our core offerings include managing smart physical therapy centers, expanding digital therapy for home-based treatment, and providing self-paid medical services. We have developed Youdon, an intelligent physical therapy cellphone app, which utilizes AI prescriptions and active rehabilitation exercises to help patients recover their physical functions rapidly." } }],
     "event": [
       {
@@ -439,7 +439,7 @@
     "cat": { "tc": "醫療機構展區", "en": "Medical Institutes & Hospitals" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": ["健康大檢測", "醫師聊健康"], "en": [] },
-    "text": { "tc": ["國軍醫療體系"], "en": ["Tri-Service", "General Hospital"] },
+    "text": { "tc": ["國軍醫療體系"], "en": ["Tri-Service ", "General Hospital"] },
     "corps": [
       { "org": { "tc": "三軍總醫院", "en": "Tri-Service General Hospital" }, "info": { "tc": "本院展出項目如下：\n胃腸科/膽胰疾病的新「視」界與新「鏡」「介」\n放射診斷部/彈無虛發之多發性肺結節術電腦斷層導引同步穿刺定位術\n復健醫學部/肌痙攣的救星- 「針」是神奇量身訂作的肉毒桿菌雙重導引注射治療\n新陳代謝科/數位優化 即時雲端血糖監測\n精神醫學部/閾值下腦刺激：思覺失調的新治療技術\n神經外科部/創新術中神經功能監測之脊椎手術訓練擬真系統\n臨床藥學部/人工智慧辦藥服務系統\n護理部/空氣濾淨嬰兒床罩/口袋式尿袋\n急診醫學部/『智慧急診‧綠能照護』電子紙整合人工智慧再創急診照護巔峰\nAIOT中心/建置AI胸腔X光檢測平台\n3D列印中心/應用3D列印推行戰術戰傷救護技術\n澎湖分院/3D列印輔助複雜性骨科手術落實澎湖地區醫療在地化\n松山分院/耳掛式持續生理健康監測穿戴裝置", "en": "innovative medical technology" } },
       { "org": { "tc": "國防醫學院", "en": "National Defense Medical Center" }, "info": { "tc": "1. 藥物釋放組合物、其製造方法及其用途\n2. 後循環缺血性中風預後系統\n3. 極高靈敏度及價廉之新穎多孔膜類 SERS基質的開發與應用\n4. 鑼蛋白加速新興傳染病藥物篩選技術開發與應用", "en": "1. Drug Delivery Composition, Method Forming The Same And Use Thereof\n2. A Deep Learning Model for assisting Diagnosis of Posterior Circulation Ischemic Stroke\n3. The development and applications of novel ultra-low-priced _x000b_and extremely sensitive porous membrane-based SERS substrate\n4. Application of Rho-protein technology to improve drug screening efficiency of emerging infectious diseases" } },
@@ -500,7 +500,7 @@
     "cat": { "tc": "醫療機構展區", "en": "Medical Institutes & Hospitals" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": ["健康大檢測", "醫師聊健康"], "en": [] },
-    "text": { "tc": ["光田醫院"], "en": ["Kuang Tien", "General Hospital"] },
+    "text": { "tc": ["光田醫院"], "en": ["Kuang Tien ", "General Hospital"] },
     "corps": [{ "org": { "tc": "光田醫療社團法人光田綜合醫院", "en": "Kuang Tien General Hospital" }, "info": { "tc": "1.脊髓損傷幹細胞治療\n2.婦科海扶刀精準醫療\n3.腦中風智慧全人醫療照護\n4.運動醫學\n5.向上院區智慧醫院與服務特色\n", "en": "1. NS spinal \n2. HIFU Noninvasive\n3. Neuro\n4.Sports Medicine" } }],
     "event": [
       {
@@ -1047,7 +1047,7 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer Health Products" },
     "topic": { "tc": "智慧健康", "en": "Consumer health" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["大盈"], "en": ["DA WIN", "FOODS"] },
+    "text": { "tc": ["大盈"], "en": ["DA WIN", " FOODS"] },
     "corps": [{ "org": { "tc": "大盈企業社", "en": "DA WIN FOODS CO." }, "info": { "tc": "諾麗果茶，源自高雄農場自產自銷，經中央畜產會及環虹錕騰科技股份有限公司檢驗無農藥、無重金屬污染，過程日曬.烘培.乾燥去除氣味，製作成茶包，味香甘醇。\n通過HACCP國際標準食品安全管理系統認證\n榮獲消費者金品獎及\n全國優良產品金質獎\n並投保和泰產物保險貳仟萬元。\n獲選110年度台灣百大伴手禮得獎。", "en": "Noni fruit tea, from Kaohsiung farm, is self-produced and sold. It has been inspected by the Central Animal Husbandry Association to be free from pesticides and heavy metal pollution. The process is sun-dried, baked, and dried to remove odor, and then made into tea bags with a sweet and mellow taste.\nPassed HACCP international standard food safety management system certification\nWon the Consumer Gold Award and\nNational Excellent Product Gold Award\nAnd insured Hetai product insurance for 20,000,000 yuan.\nWon the 110th Taiwan Top 100 Souvenir Award." } }]
   },
   {
@@ -1165,7 +1165,7 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer Health Products" },
     "topic": { "tc": "智慧健康", "en": "Consumer health" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["明源"], "en": ["MIN", "YUEN"] },
+    "text": { "tc": ["明源"], "en": ["MIN ", "YUEN"] },
     "corps": [{ "org": { "tc": "明源橡膠工業股份有限公司", "en": "MIN YUEN RUBBER IND. CO., LTD." }, "info": { "tc": "止血帶, 彈性繃帶, 石膏防水罩, 護腰帶, 彈力帶, 彈力圈, 筋膜加壓帶, 肌力球", "en": "Tourniquets, Esmark Bandage, Cast & Bandage Protector, Lumbar Waist Support Band, Exercise Band, Loop Band, Flow Band (Resistance Strap), Handy Ball" } }]
   },
   {
@@ -1245,7 +1245,7 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer Health Products" },
     "topic": { "tc": "預防醫學", "en": "Preventive medicine" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["格", "安", "德"], "en": ["Golden", "Grande"] },
+    "text": { "tc": ["格", "安", "德"], "en": ["Golden", " Grande"] },
     "corps": [{ "org": { "tc": "格安德工業股份有限公司", "en": "Golden Grande Corp." }, "info": { "tc": "成立於2009年9月，專業生產拋棄式口罩，主要產品有活性碳口罩、工業類防塵口罩、醫療口罩\n\n以自有品牌【格安德GRANDE】行銷全世界，並且接受客戶OEM/ODM的生產方式，提供多元化且完整的產品線以滿足不同客戶的需求", "en": "Golden Grand Corp. was established in 2009 and manufacture medical facemask, dust facemask, and PM2.5 facemask.  \n\nWe accept OEM/ODM from customers’ various demands. In addition, we continuously research and develop new products to lead the market. Our commitment is to provide the best service to the customers." } }]
   },
   {
@@ -1297,7 +1297,7 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer Health Products" },
     "topic": { "tc": "智慧健康", "en": "Consumer health" },
     "tag": { "tc": ["健康振興券", "健康大檢測"], "en": [] },
-    "text": { "tc": ["綠壯"], "en": ["Green", "Strong"] },
+    "text": { "tc": ["綠壯"], "en": ["Green ", "Strong"] },
     "corps": [
       { "org": { "tc": "綠壯健業股份有限公司", "en": "Green Strong Healthcare Co., Ltd." }, "info": { "tc": "老年人肌力檢測\n馬拉松撞牆期預測\n運動營養完美解決方案", "en": "Muscle strength test\nMarathon Results Prediction\nThe perfect solution for sports nutrition" } },
       { "org": { "tc": "好習慣健康企業有限公司", "en": "HobbyStudio" }, "info": { "tc": "好習慣運動教室，為健身產業的需求端（學生）與供給端（教練），創造正向的生態系統。\n透過系統串接智能手錶與醫療診所，讓養成健康行為的阻礙降到最低，提供檢測、數據、培訓、派遣、加盟與賣貨的機制，讓大健康產業裡的醫生、護士、健管師、藥局、診所、營養師、物理治療師、健身房、運動空間或健康類網紅，都可以在生態系統當中，讓更多人養成健康行為的好習慣！\n商品：醫療診所顧客轉介、健身教練培訓派遣、健身房品牌加盟、運動媒合系統", "en": "HobbyStudio aims to create a positive ecosystem that caters to both the demand side (students) and the supply side (coaches) of the fitness industry. By integrating smartwatches with medical clinics, we minimize obstacles to adopting healthy behaviors and provide mechanisms for testing, data analysis, training, deployment, franchising, and product sales. This ecosystem allows healthcare professionals such as doctors, nurses, health managers, pharmacies, clinics, nutritionists, physical therapists, gyms, sports venues, and health influencers to contribute to the development of healthy habits among a larger population." } },
@@ -1462,11 +1462,11 @@
       { "node": "L", "x": 0, "y": 300 }
     ],
     "id": "I1115",
-    "size": { "tc": 0.6, "en": 0.6 },
+    "size": { "tc": 0.6, "en": 0.5 },
     "cat": { "tc": "全齡健康展區", "en": "Consumer Health Products" },
     "topic": { "tc": "預防醫學", "en": "Preventive medicine" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["大謙"], "en": ["大謙"] },
+    "text": { "tc": ["大謙"], "en": ["DACIAN"] },
     "corps": [{ "org": { "tc": "大謙科技材料股份有限公司", "en": "DACIAN TECHNOLOGY MATERIAL CO., LTD." }, "info": { "tc": "大謙創立於2016，我們相信美好的健康生活，是來自多一點的防護。不論是日常生活 PM2.5 或是職場工作環境的呼吸安全。我們更深信好的產品必須兼具「利他」與「共好」，不論是對伙伴、對客戶、對環境或是對我們的健康。\n大謙採用頂級專業的過濾材料，以材料本身特性做防護運用，不做額外化學添加。讓一切回歸到最簡單、最安心，是願意放心給自己和家人使用的科技防護產品。我們的團隊由濾材、大氣、材料、醫生、設計各領域專業組成，產品除了高階防護功能外，更在意舒適度與注入了產品美學的概念，大謙的產品同時擁有功能性與時尚性，保護自己的同時，也能一起體驗美感。\n\n:dc 克微粒-防油煙口罩\n:dc 克微粒-職業防護系列口罩\n:dc 克微粒PM2.5 防護口罩", "en": ":dc Microparticle Stopper Mask for Kitchen Smoke protection \n:dc Microparticle Stopper Mask for Industry Protection \n:dc Microparticle Stopper Mask for PM2.5 Protection" } }]
   },
   {
@@ -1667,7 +1667,7 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer Health Products" },
     "topic": { "tc": "預防醫學", "en": "Preventive medicine" },
     "tag": { "tc": ["台北市生物技術服務商業同業公會"], "en": ["Taipei Biotechnology Service and Business Trade Association"] },
-    "text": { "tc": ["生技", "公會"], "en": ["Taipei Biotechnology", "Service and Business", "Trade Association"] },
+    "text": { "tc": ["生技", "公會"], "en": ["Taipei Biotechnology", " Service and Business", " Trade Association"] },
     "corps": [{ "org": { "tc": "台北市生物技術服務商業同業公會", "en": "Taipei Biotechnology Service and Business Trade Association" }, "info": { "tc": "基因工程、生物晶片、生物資訊及生物醫材", "en": "Genetic Engineering, biochip, bioinformatics, biomaterial" } }]
   },
   {
@@ -1687,7 +1687,7 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer Health Products" },
     "topic": { "tc": "智慧健康", "en": "Consumer health" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["詠康"], "en": ["YUNG", "KANG"] },
+    "text": { "tc": ["詠康"], "en": ["YUNG", " KANG"] },
     "corps": [{ "org": { "tc": "詠康企業有限公司", "en": "YUNG KANG ENTERPRISE CO., LTD." }, "info": { "tc": "養生茶飲系列～\n  1、木鱉果養生好茶\n  2、金線蓮養生茶\n  3、何首烏養生茶", "en": "後補" } }]
   },
   {
@@ -1707,7 +1707,7 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer Health Products" },
     "topic": { "tc": "智慧健康", "en": "Consumer health" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["太", "田", "水", "素"], "en": ["OTA", "HYDROGEN", "SOLUTIONS"] },
+    "text": { "tc": ["太", "田", "水", "素"], "en": ["OTA ", "HYDROGEN ", "SOLUTIONS"] },
     "corps": [{ "org": { "tc": "太田水素工坊股份有限公司", "en": "OTA HYDROGEN SOLUTIONS LTD." }, "info": { "tc": "", "en": "" } }]
   },
   {
@@ -1767,7 +1767,7 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer Health Products" },
     "topic": { "tc": "預防醫學", "en": "Preventive medicine" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["萊禮生醫"], "en": ["R&R MEDICAL", "CORPORATION"] },
+    "text": { "tc": ["萊禮生醫"], "en": ["R&R MEDICAL ", "CORPORATION"] },
     "corps": [{ "org": { "tc": "萊禮生醫科技股份有限公司", "en": "R&R MEDICAL CORPORATION LTD." }, "info": { "tc": "萊禮生醫為台灣最具規模的專業消費性醫療用品製造工廠，創立於1979年。主要業務為醫療品牌國際市場銷售與各國醫療品牌的代工製造，利用各國醫療商品生產經驗，擁有垂直整合與開發能力，能不斷開發出適合不同市場的醫療產品。我們擁有ISO 9001/13485、GMP、FDA、CE 及全系列產品各項安全報告，確保產品品質控制，並在國際醫療銷售市場皆得到各國客戶的高度品質肯定。", "en": "R&R Medical established in 1979 as a manufacturer focused on the production of medical related products in Taiwan. We manufacture for global medical brands under OEM and also promote and market our own brands worldwide. Taiwan GMP, US FDA and CE compliant facility assures that the production process is safe and compliant to global standards. Our international OEM and brand sales have been highly recognized by customers for their high quality." } }]
   },
   {
@@ -1787,7 +1787,7 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer Health Products" },
     "topic": { "tc": "預防醫學", "en": "Preventive medicine" },
     "tag": { "tc": ["台北市生物技術服務商業同業公會"], "en": ["Taipei Biotechnology Service and Business Trade Association"] },
-    "text": { "tc": ["艾爾威"], "en": ["Iron", "Will"] },
+    "text": { "tc": ["艾爾威"], "en": ["Iron ", "Will"] },
     "corps": [{ "org": { "tc": "艾爾威生物科技有限公司", "en": "Iron Will Biomedical Technology Inc." }, "info": { "tc": "艾爾威生技為專業的醫療耗材供應商，包含行動溫度計錄器、密閉式福馬林檢體瓶、各式微生物及細胞組織採檢刷、子宮頸及陰道抹片刷、樣本收集及運送器材、各式醫療耗材等多種產品。\n\n1.立寶抹片刷&採檢刷：刷毛彈性柔軟、採樣舒適，不易傷害表面黏膜。材質及尺寸多元，並可依使用者需求客製化。\n2.檢體運送瓶：尿液、糞便採檢瓶及病理科組織運送專用容器等。\n3.唾液採樣刷組：提供更方便舒適的檢體採樣選擇。\n4.行動溫度計錄器：搭配冷藏箱、冰寶，協助專業的生物檢體運送紀錄。\n5.實驗室及快篩耗材：各式實驗耗材及快篩採檢耗材，另可充填封膜等客製化服務，滿足使用者需求。\n", "en": "Iron Will Biomedical Technology Inc. is a professional supplier of medical consumables.  Major products include microbiological and cell sampling applicators, vaginal and cervical brushes, specimen transport containers, saliva sampling brushes, mobile temperature data logger, various medical consumables, and other products." } }]
   },
   {
@@ -1855,7 +1855,7 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer Health Products" },
     "topic": { "tc": "智慧健康", "en": "Consumer health" },
     "tag": { "tc": ["健康振興券"], "en": [] },
-    "text": { "tc": ["中明"], "en": ["CHUNG", "MING"] },
+    "text": { "tc": ["中明"], "en": ["CHUNG", " MING"] },
     "corps": [{ "org": { "tc": "中明美容材料行", "en": "CHUNG MING MAKEUP CO." }, "info": { "tc": "矯正鞋墊、按摩器、健康保健用品、梳子", "en": "corrective insole /massager/health products/comb\n" } }]
   },
   {
@@ -1895,7 +1895,7 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer Health Products" },
     "topic": { "tc": "智慧健康", "en": "Consumer health" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["億萊富國際"], "en": ["e-life", "International"] },
+    "text": { "tc": ["億萊富國際"], "en": ["e-life ", "International"] },
     "corps": [{ "org": { "tc": "億萊富國際股份有限公司", "en": "e-life International Co., Ltd." }, "info": { "tc": "億萊富成立於2001年，總部位於台灣台北，集團員工人數逾400位。\n\n20年來已成功自國際貿易轉型為骨科術後復健醫療器材之研發、製造與銷售的跨國公司。產品涵蓋運動護具、矯形器，2017年投入專業義肢開發。億萊富深耕骨科輔具領域，提供完善的產品線與客製化的解決方案，成為值得客戶信賴的顧問、夥伴。\n\n產品銷售區域以歐美為主，聚焦中國大陸、亞太、中東等高成長地區，並陸續設置區域發貨中心，確保高服務品質。2021年，正式進軍台灣市場。", "en": "E-Life was founded in 2001 and is headquartered in Taipei, Taiwan. We have 3 factories in Taiwan and China, with 400 employees.\n\nAs one of the world's leading providers supported by the world's orthopedics, we are in innovative product solutions, from the procurement of raw materials to research and development, manufacturing and testing strict standards.\n\nE-Life brand products provide functions and comfort, and are committed to improving the quality of life of people around the world." } }]
   },
   {
@@ -1948,7 +1948,7 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer Health Products" },
     "topic": { "tc": "智慧健康", "en": "Consumer health" },
     "tag": { "tc": ["臺灣體育用品工業同業公會"], "en": ["Taiwan Sporting Goods Manufacturers Association"] },
-    "text": { "tc": ["正元"], "en": ["Sunshine", "Plus"] },
+    "text": { "tc": ["正元"], "en": ["Sunshine", " Plus"] },
     "corps": [
       { "org": { "tc": "正元精密科技有限公司", "en": "Sunshine Plus Ltd." }, "info": { "tc": "正元精密科技經營多年，亞太地區最大科技廠商之一，橫跨 運動、戶外與醫療等領域。其中合作多種運動項目 (高爾夫球、棒球、壘球、足球、網球、籃球、田徑等)、與6個亞、奧運國家隊、跨足13個國家、代理超過60樣品牌等。\n近年跨入研發科研商品、整合軟件與大數據，透過數據與學術合作建立更優質的訓練機制與效果。2023年正元精密導入更完整的運動科技，提升動作分析技術，以及運動傷害預防。透過4D感應器、高速攝影以及可攜式壓力板，打造更方便的運動科學實驗室，不再被場地環境限制。", "en": "Sunshine Plus  Ltd.,has been operating for many years and is one of the largest technology manufacturers in the Asia-Pacific region, spanning sports, outdoor and medical fields. Among them, it cooperates with various sports (golf, baseball, softball, football, tennis, basketball, track and field, etc.), cooperates with 6 Asian and Olympic national teams, spans 13 countries, and represents more than 60 brands.\nIn recent years, it has stepped into the research and development of scientific research products, integrated software and big data, and established better training mechanisms and effects through data and academic cooperation. In 2023, Sunshine Plus Ltd., will introduce more complete sports technology, improve motion analysis technology, and prevent sports injuries. Through 4D sensors, high-speed photography and portable pressure plates, a more convenient sports science laboratory is no longer restricted by the venue environment." } },
       { "org": { "tc": "臺灣體育用品工業同業公會", "en": "Taiwan Sporting Goods Manufacturers Association" }, "info": { "tc": "本會將邀請會員廠商有提供智慧健康、健身器材、復健產品、健康促進及護具等產品一起參展。", "en": "TSMA will invite the members who provide smart healthcare products, fitness eqiupment, rehabilitation products, health promotion or protective gears, etc. to take part in this trade show." } }
@@ -2014,7 +2014,7 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer Health Products" },
     "topic": { "tc": "無齡長照", "en": "Long-term care & assistive technology" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["台灣", "邦妮"], "en": ["Taiwan", "Bonnie"] },
+    "text": { "tc": ["台灣", "邦妮"], "en": ["Taiwan", " Bonnie"] },
     "corps": [
       {
         "org": { "tc": "台灣邦妮有限公司", "en": "Taiwan Bonnie Co., Ltd." },
@@ -2085,7 +2085,7 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer Health Products" },
     "topic": { "tc": "智慧健康", "en": "Consumer health" },
     "tag": { "tc": ["臺灣體育用品工業同業公會", "健康振興券"], "en": ["Taiwan Sporting Goods Manufacturers Association"] },
-    "text": { "tc": ["歐立達"], "en": ["GLOBAL", "ACTION"] },
+    "text": { "tc": ["歐立達"], "en": ["GLOBAL", " ACTION"] },
     "corps": [
       { "org": { "tc": "歐立達股份有限公司", "en": "GLOBAL ACTION INC." }, "info": { "tc": "歐立達股份有限公司創立於1997年，自2004年開始，和德國運動科學家共同研發及台灣國立陽明大學醫工所楊世偉師生團隊，經歷 10 年改進臨床驗證成功完成富足康科技足墊，順利轉型為足部生物力學為主的產品。\n富足康科技足墊獲得國內外各類獎項，包括國家發明創作獎、金質獎、連續三年經濟部標檢局市售友善輔具評選四項優勝等，並獲得全球20年發明專利，以及十餘年國內各大院校產學合作驗證與實例，包括：醫護、農業等久站久走族群、從事各類運動人員、銀髮族、退化性關節炎患者、糖尿病患者等，富足康科技足墊對於消費者的足部健康有極大的幫助。\n2022年開始歐立達跨領域研發分散壓力之專業坐墊，與國內知名醫學院合作產學驗證，推出舒壓坐墊頗受消費者好評，持續創新動能。", "en": "Drug free, enhance performance.\nFOOTDISC is fully committed to manufacture and distribute functional insoles with affordable prices to the public as per biomechanical technology. Our insole is the only patented technology in the world which integrated the leg axis and foot-arch type into the design of insole. Core feature is semicustom-made, clinically proven to prevent injuries and provide comfort to the feet." } },
       { "org": { "tc": "臺灣體育用品工業同業公會", "en": "Taiwan Sporting Goods Manufacturers Association" }, "info": { "tc": "本會將邀請會員廠商有提供智慧健康、健身器材、復健產品、健康促進及護具等產品一起參展。", "en": "TSMA will invite the members who provide smart healthcare products, fitness eqiupment, rehabilitation products, health promotion or protective gears, etc. to take part in this trade show." } }
@@ -2472,7 +2472,7 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer Health Products" },
     "topic": { "tc": "智慧健康", "en": "Consumer health" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["新沛"], "en": ["ATTRA", "GIAND"] },
+    "text": { "tc": ["新沛"], "en": ["ATTRA", " GIAND"] },
     "corps": [{ "org": { "tc": "新沛企業股份有限公司", "en": "ATTRA GIAND INDUSTRIAL CO., LTD." }, "info": { "tc": "新沛企業以百貨櫃點「歐法頌」為主，代理德國、瑞士、西班牙、瑞典、法國、捷克等國家的保養品和健康食品，明星商品有來自瑞典的蛋白面膜皂、德國蜂蠟護手霜、世界專利德國製造的Emmi-dent超音波牙刷、瑞士MAVALA保養品牌等。\n持續以創立宗旨「總是給您最好的」為目標經營，2023起開始誠徵經銷商，歡迎蒞臨攤位參觀我們為您精選的好商品，或是進一步洽談經銷合作。", "en": "後補" } }]
   },
   {
@@ -2522,7 +2522,7 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer Health Products" },
     "topic": { "tc": "智慧健康", "en": "Consumer health" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["北護大"], "en": ["National Taipei", " University of", " Nursing and", "Health Sciences"] },
+    "text": { "tc": ["北護大"], "en": ["National Taipei", " University of", " Nursing and ", "Health Sciences"] },
     "corps": [
       {
         "org": { "tc": "國立臺北護理健康大學", "en": "National Taipei University of Nursing and Health Sciences" },
@@ -2550,7 +2550,7 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer Health Products" },
     "topic": { "tc": "預防醫學", "en": "Preventive medicine" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["映海國際"], "en": ["In-High", "International"] },
+    "text": { "tc": ["映海國際"], "en": ["In-High ", "International"] },
     "corps": [{ "org": { "tc": "映海國際科技有限公司", "en": "In-High International Technology Ltd." }, "info": { "tc": "販售漢方保健食品，可大補元氣、調整體質、滋補養生，產品項目有四珍膠(龜鹿二仙膏)、羅漢果茶、田七人參花茶、台灣原生小油菊茶以及各式養生禮盒；另外也有全台獨家代理來自日本的姬松茸寵物用抽出液，可照顧病中及術後的毛孩身體，使其增進食慾、精力旺盛。", "en": "We sell traditional Chinese health supplements that can regulate body functions and health preserving. The products include Four Treasures Glue (combination of turtle shell and deer antler), which is considered one of the best Chinese traditional tonics, valued for its ability to promote bone health and regulate body functions. We also sell Monk fruit tea, Notoginseng Ginseng flower tea, Taiwan native chrysanthemum tea, and various gift sets. In addition, We have exclusive distribution rights for Hime Matsutake extract for pets from Japan, which improve appetite and energy levels for sick pets." } }]
   },
   {
@@ -2590,7 +2590,7 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer Health Products" },
     "topic": { "tc": "智慧健康", "en": "Consumer health" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["協能"], "en": ["TUNING", "ELEMENT"] },
+    "text": { "tc": ["協能"], "en": ["TUNING ", "ELEMENT"] },
     "corps": [{ "org": { "tc": "協能健康科技有限公司", "en": "Tuningelement health technology Ltd." }, "info": { "tc": "健康科技貼片\n健康頻率水瓶\n健康穿戴裝置產品", "en": "Patches\nAqua Tune water bottles\nSmart Jewelry" } }]
   },
   {
@@ -2630,7 +2630,7 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer Health Products" },
     "topic": { "tc": "智慧健康", "en": "Consumer health" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["康璽"], "en": ["Comfy", "Health"] },
+    "text": { "tc": ["康璽"], "en": ["Comfy ", "Health"] },
     "corps": [{ "org": { "tc": "康璽國際有限公司", "en": "Comfy Health Group Co., Ltd." }, "info": { "tc": "BRACOO奔酷主要從事醫療與體育保健護具產品的研發與生產。致力於將創新技術與最優質的商品相結合，以卓越的品質和功能引領行業。開發客戶喜愛使用的產品是我們的使命。通過各項可靠性測試，確保我們設計出功能與舒適兼具的優質護具。", "en": "Founded in 2011 in the United States, BRACOO started its roots in direct-to-consumer online retailing. With the mission of providing high-quality protective gear, BRACOO was awarded Best Seller on Amazon for multiple years and expanded our footprint to Europe and Asia in 2014.\n\nOver the years, we continue to invest heavily in research and development based on direct consumer feedback. With the expansion into channel partnerships, continuous investment is planned to enhance our relationship with all partners. We believe that this strategy would lead to meaningful long-term growth for all parties." } }]
   },
   {
@@ -2690,8 +2690,8 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer Health Products" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["無國界", "醫師"], "en": ["Doctors", "Without", "Borders"] },
-    "corps": [{ "org": { "tc": "無國界醫師", "en": "Doctors Without Borders" }, "info": { "tc": "無國界醫生 / Médecins Sans Frontières (MSF)是一個獨立的國際醫療人道救援組織，致力為受武裝衝突、流行病、傳染病和天災影響，以及遭醫療體系排拒者提供緊急醫療援助，並基於人們的需要提供援助，不受種族、宗教、性別或政治因素左右。\n目前無國界醫生在全球有超過400個醫療專案正在執行中，包含土敘大地震的醫療救護，烏克蘭的醫療列車、地中海難民的搜救船和羅興亞人的醫療及心理照護等。\n期盼大家來攤位，認識世界上正在發生的人道危機，也透過捐款的直接行動，幫助身處困境的脆弱群體，與無國界醫生一同為人道醫療救援努力！", "en": "Doctors Without Borders/Médecins Sans Frontières (MSF) was founded in 1971 in France by a group of doctors and journalists in the wake of war and famine in Biafra, Nigeria. Their aim was to establish an independent organization that focused on delivering emergency medical humanitarian aid quickly, effectively, and impartially.\nThree hundred volunteers made up the organization when it was founded, including doctors, nurses, logistics experts, and other staff, including the 13 founding members. MSF was established on the belief that all people should have access to high quality health care, regardless of gender, race, religion, creed, or political affiliation. From the start, our teams made a commitment not just to care for patients but to bear witness to their experiences and speak out to call attention to the problems driving emergency needs.\nOver the past five decades, MSF has grown from a group of a few hundred volunteers to an international movement of more than 63,000 staff providing over 10 million medical consultations in more than 70 countries every year. But the core values of humanitarianism, independence, neutrality, and impartiality that brought those original members together in 1971 continue to drive our work." } }]
+    "text": { "tc": ["無國界", "醫生"], "en": ["Doctors", " Without", " Borders"] },
+    "corps": [{ "org": { "tc": "無國界醫生", "en": "Doctors Without Borders" }, "info": { "tc": "無國界醫生 / Médecins Sans Frontières (MSF)是一個獨立的國際醫療人道救援組織，致力為受武裝衝突、流行病、傳染病和天災影響，以及遭醫療體系排拒者提供緊急醫療援助，並基於人們的需要提供援助，不受種族、宗教、性別或政治因素左右。\n目前無國界醫生在全球有超過400個醫療專案正在執行中，包含土敘大地震的醫療救護，烏克蘭的醫療列車、地中海難民的搜救船和羅興亞人的醫療及心理照護等。\n期盼大家來攤位，認識世界上正在發生的人道危機，也透過捐款的直接行動，幫助身處困境的脆弱群體，與無國界醫生一同為人道醫療救援努力！", "en": "Doctors Without Borders/Médecins Sans Frontières (MSF) was founded in 1971 in France by a group of doctors and journalists in the wake of war and famine in Biafra, Nigeria. Their aim was to establish an independent organization that focused on delivering emergency medical humanitarian aid quickly, effectively, and impartially.\nThree hundred volunteers made up the organization when it was founded, including doctors, nurses, logistics experts, and other staff, including the 13 founding members. MSF was established on the belief that all people should have access to high quality health care, regardless of gender, race, religion, creed, or political affiliation. From the start, our teams made a commitment not just to care for patients but to bear witness to their experiences and speak out to call attention to the problems driving emergency needs.\nOver the past five decades, MSF has grown from a group of a few hundred volunteers to an international movement of more than 63,000 staff providing over 10 million medical consultations in more than 70 countries every year. But the core values of humanitarianism, independence, neutrality, and impartiality that brought those original members together in 1971 continue to drive our work." } }]
   },
   {
     "type": "booth",
@@ -2761,7 +2761,7 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer Health Products" },
     "topic": { "tc": "智慧健康", "en": "Consumer health" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["標準", "生技醫藥"], "en": ["STANDARD", "Biotechnology", " & Pharmaceutical"] },
+    "text": { "tc": ["標準", "生技醫藥"], "en": ["STANDARD ", "Biotechnology", " & Pharmaceutical"] },
     "corps": [{ "org": { "tc": "標準生技醫藥股份有限公司", "en": "STANDARD Biotechnology & Pharmaceutical Co., Ltd." }, "info": { "tc": "無--不需要全年線上推廣", "en": "Not necessary" } }]
   },
   {
@@ -3343,7 +3343,7 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer Health Products" },
     "topic": { "tc": "無齡長照", "en": "Long-term care & assistive technology" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["華碩", "雲端"], "en": ["ASUS", "Cloud"] },
+    "text": { "tc": ["華碩", "雲端"], "en": ["ASUS ", "Cloud"] },
     "corps": [{ "org": { "tc": "華碩雲端股份有限公司", "en": "ASUS Cloud Corporation" }, "info": { "tc": "後續提供，華碩雲端攤位將合併華碩電腦攤位展出。", "en": "後續提供，華碩雲端攤位將合併華碩電腦攤位展出。" } }]
   },
   {
@@ -3602,7 +3602,7 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer Health Products" },
     "topic": { "tc": "無齡長照", "en": "Long-term care & assistive technology" },
     "tag": { "tc": ["健康振興券"], "en": [] },
-    "text": { "tc": ["友", "華"], "en": ["Orient", "EuroPharma"] },
+    "text": { "tc": ["友", "華"], "en": ["Orient ", "EuroPharma"] },
     "corps": [{ "org": { "tc": "友華生技醫藥股份有限公司", "en": "Orient EuroPharma Co., Ltd." }, "info": { "tc": "友華生技愛斯康基力加、可立清等機能食品，由專業醫療團隊共同開發並投入臨床試驗之產品，胺基酸所組成的複方產品，其中基力加為双胺基酸+維生素D3*所組合而成配方有助維持肌肉正常生理機能，可立清為健康食品，具調解血脂之功效，有效提升高密度脂蛋白膽固醇。", "en": "Nutrifuel's functional foods series, such as Sarcojoint and Carginine, are products jointly developed by a professional medical team and subjected to clinical trials. Sarcojoint is a combination of dual amino acids and vitamin D3 designed to support normal muscle physiological functions. Carginine is a health food with the efficacy of regulating blood lipids, effectively enhancing high-density lipoprotein cholesterol." } }]
   },
   {
@@ -3657,7 +3657,7 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer Health Products" },
     "topic": { "tc": "無齡長照", "en": "Long-term care & assistive technology" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["關渡醫院"], "en": ["Gan-Dau", "Hospital"] },
+    "text": { "tc": ["關渡醫院"], "en": ["Gan-Dau ", "Hospital"] },
     "corps": [
       {
         "org": { "tc": "臺北市立關渡醫院委託臺北榮民總醫院經營", "en": "Taipei Municipal Gan-Dau Hospital (Managed by Taipei Veterans General Hospital)" },
@@ -3682,7 +3682,7 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer Health Products" },
     "topic": { "tc": "無齡長照", "en": "Long-term care & assistive technology" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["宏碁智醫"], "en": ["Acer", "Medical"] },
+    "text": { "tc": ["宏碁智醫"], "en": ["Acer ", "Medical"] },
     "corps": [{ "org": { "tc": "宏碁智醫股份有限公司", "en": "Acer Medical Inc." }, "info": { "tc": "宏碁集團旗下子公司「宏碁智醫」專注人工智慧及大數據分析，聚焦人工智慧在「預防醫學」領域的專業技術，從AI醫學影像判讀技術切入，研發「智慧醫材軟硬體整合解決方案」，協助醫療機構和民眾實現健康照護和疾病預防。\n2023醫科展規劃三大主題展區：【預防醫學：AI篩檢】、【樂齡營養保健品】、【健康管理平台】，歡迎民眾踴躍參觀同樂！\n", "en": "Founded in 2018, Acer Medical is the first subsidiary under the Acer Group to focus on preventive medicine.\nLeveraging our expertise in ICT, we specialize in AI and big data analytics with a focus on Preventive Medicine. Our journey began with diagnostic medical imaging and subsequently expanded to medical device software, hardware integration solutions, and healthcare management innovations.\nThrough interdisciplinary collaborations across medical and healthcare sectors, we seamlessly embed AI in the medical landscape, empowering healthcare providers to enhance and realize the goals of “Health Promotion,\"“Disease Prevention,\"and “Medical Care.\"\nWe welcome everyone to come and visit!" } }]
   },
   {
@@ -3749,7 +3749,7 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer Health Products" },
     "topic": { "tc": "預防醫學", "en": "Preventive medicine" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["安永生技"], "en": ["ANYONG", "FRESHMART"] },
+    "text": { "tc": ["安永生技"], "en": ["ANYONG ", "FRESHMART"] },
     "corps": [{ "org": { "tc": "安永生活事業股份有限公司", "en": "ANYONG FRESHMART, INC." }, "info": { "tc": "鱸魚精、龜鹿鱸魚精、滴雞精等保健營養品與運動補給品", "en": "【Santé Premium Silver Perch Essence】\n1. Scientific golden ratio makes every drop a rare essence.\n1-1. Best source: Only silver perches with traceability are selected to ensure safety. Toxin-free fish with traceability, raised by contracted farmers.\n1-2. Cells Alive System technology: Keeping the fish as fresh as freshly-caught.\n1-3. Cross-disciplinary cooperation of experts in the industry and academia: 36 formula trials to form a golden ratio.\n1-4. Comprehensive nutrients: The essence contains 18 amino acids(including 8 essential amino acids), small molecules can be easily absorbed.\n1-5. Zero burden: No antibiotics/ No animal medication/ No pesticide residues/ No preservative/ No plasticizer/ No artificial flavoring\n1-6. Strict tests: Tests are performed by the 3rd party to ensure nutrition and safety.\n" } }]
   },
   {
@@ -3769,7 +3769,7 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer Health Products" },
     "topic": { "tc": "智慧健康", "en": "Consumer health" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["香港商鈦澤", "-能量毯被"], "en": ["TARGET", "GLOBAL"] },
+    "text": { "tc": ["香港商鈦澤", "-能量毯被"], "en": ["TARGET", " GLOBAL"] },
     "corps": [{ "org": { "tc": "香港商鈦澤集團有限公司台灣分公司", "en": "Hong Kong Target Global Empire Limited Taiwan Branch" }, "info": { "tc": "鈦澤集團透由創新研發及獨家專利製程，提供安全、安心，守護全家健康的產品。\n例如：黃金能量織物系列。係採用德國進口純度99％之貴金屬鍺、鈦和複合式元素π，並超越業界獨創加入奈米黃金；專利技術上，係與台灣工研院和紡織研究所合作，將高分子聚合物包覆奈米化貴金屬，最後紡織成紗，實現真正非放射性，自體同調、共振自癒效果，並榮獲世界三大發明獎及國內外大小殊榮。", "en": "（to be filled in later）" } }]
   },
   {
@@ -3789,7 +3789,7 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer Health Products" },
     "topic": { "tc": "預防醫學", "en": "Preventive medicine" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["喜躍生醫"], "en": ["Xiyue", "Biomedicine"] },
+    "text": { "tc": ["喜躍生醫"], "en": ["Xiyue ", "Biomedicine"] },
     "corps": [{ "org": { "tc": "喜躍生醫股份有限公司", "en": "Xiyue Biomedicine Inc." }, "info": { "tc": "喜躍生醫，本著「專注本業，積極研究，卓越創新」之精神，以細胞核心技術為事業圓心向外，並以再生醫學、預防醫學、組織工程、細胞治療臨床應用為主要發展，提供脂肪間質幹細胞、免疫細胞儲存、臍帶血、臍帶幹細胞儲存服務與應用發展之公司。\n主要產品與服務：\n幹細胞技術研發與應用服務\n免疫細胞技術研發與應用服務\n外泌體技術研發與應用服務\n委託開發暨製造服務", "en": "Xiyue Biomedicine, guided by the spirit of " } }]
   },
   {
@@ -3809,7 +3809,7 @@
     "cat": { "tc": "全齡健康展區", "en": "Consumer Health Products" },
     "topic": { "tc": "智慧健康", "en": "Consumer health" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["Power", "Sleep"], "en": ["Power", "Sleep"] },
+    "text": { "tc": ["Power ", "Sleep"], "en": ["Power ", "Sleep"] },
     "corps": [{ "org": { "tc": "綠樣實業股份有限公司", "en": "Power Sleep" }, "info": { "tc": "睡眠改善方案，利用智慧科技感測睡眠時會遇到的困擾，並給予相對應的解決產品、方案。\n產品改善方向主要為：肩頸緊繃、腰酸背痛、打鼾、胃食道逆流、靜脈曲張、心血管疾病預防等。", "en": "The sleep improvement plan uses smart technology to sense the troubles encountered during sleep, and provides corresponding solutions and solutions.\nProduct improvement directions are mainly: tight shoulders and neck, back pain, snoring, gastroesophageal reflux, varicose veins, cardiovascular disease prevention, etc." } }]
   },
   {
@@ -6073,7 +6073,7 @@
     "cat": { "tc": "智慧醫療展區", "en": "Medical Devices & Equipment" },
     "topic": { "tc": "醫材設備", "en": "Medical devices & equipment" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["員全"], "en": ["Yomura "] },
+    "text": { "tc": ["員全"], "en": ["Yomura"] },
     "corps": [{ "org": { "tc": "員全股份有限公司", "en": "Yomura Technologies Inc." }, "info": { "tc": "1. 印刷薄膜電路 / 模內射出成型:  射出成型的裝置中嵌入電子元件的能力催生了模塑電子 (in-mold electronics；IME) 技術。將印刷電子技術和模內裝飾(IMD)整合，把電路、觸控、IC等集中在一個部件，可3D 造型，節省了裝配時間、成本，使產品更小、更輕薄。實現先進電路設計與架構的新途徑.\n2. 微射出成型是一種非常專業的藝術形式，是一種模具設計，製造具有聚合物基功能器件的小型精密塑料部件，在生命科學、電子、醫療、光子學、汽車和航空航天領域的需求越來越大 . 注塑成型的微型成型形式，需要構建一個空腔以匹配您想要製作的零件的形狀，有點像製作樂高積木的塑料成型。", "en": "1. IME : The ability to embed electronic components in injection molded devices gave birth to in-mold electronics (IME) technology and new ways to implement advanced circuit design and architecture.\n2. Micro molding is a very specialized art form, which is a kind of tooling design , manufactures small and precision plastic components with polymer-based functional devices, by increasingly demanded in the fields of life science, electronics, medical, photonics, automotive, and aerospace. The tiny-scale molding form of injection molding that entails building a cavity to match the shape of the part you want to make, sort of like the plastic molding that makes Lego bricks." } }]
   },
   {
@@ -6718,7 +6718,7 @@
     "cat": { "tc": "精準醫療展區", "en": "Diagnostics, Laboratory Equipment & Services" },
     "topic": { "tc": "精準檢測", "en": "Diagnostics, laboratory equipment & services" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["Lab ", "Ware"], "en": ["Lab", "Ware"] },
+    "text": { "tc": ["Lab", "Ware"], "en": ["Lab", "Ware"] },
     "corps": [{ "org": { "tc": "LabWare Singapore Pte. Ltd", "en": "LabWare Singapore Pte. Ltd" }, "info": { "tc": "LabWare is recognized as the global leader in providing enterprise-scale laboratory automation solutions with over 40 offices across 6 continents.\nLabWare’s Enterprise Laboratory Platform (ELP) is a unique and proven suite of product capabilities that encompass LIMS, ELN, LES and method execution in an integrated and enterprise-ready solution.\nLabWare ELP combines the award-winning LabWare LIMS™ and LabWare ELN™, a comprehensive and fully integrated Electronic Laboratory Notebook application, which enables companies to optimize compliance, improve quality, increase productivity and reduce costs.\nLabWare is a full-service provider offering software, professional implementation services, validation assistance, training, and world-class technical support to ensure our customers get the maximum value from their LabWare products.\nBy paying close attention to customer needs, making effective use of key technologies, and serving as a reliable and trusted partner, LabWare has emerged as the clear industry leader in laboratory automation.\n", "en": "LabWare 是全球公認的企業級實驗室自動化解決方案領導廠商，在全球六大洲擁有超過40 個辦事處。\nLabWare Enterprise Laboratory Platform（ELP）是一套獨特且經過驗證的產品，完全整合了LIMS、ELN、LES 和 Method Execution 等企業級需求。\nLabWare ELP 結合了屢獲殊榮的 LabWare LIMS™ 和 LabWare ELN™ (一個無縫接軌的電子實驗室記事本)，使企業最佳化法規需求、提高品質、增加生產力並降低成本。\nLabWare 是一家全方位的系統服務供應商，提供軟體、專業顧問服務、驗證顧問服務、教育訓練和世界級技術支援，以確保我們的客戶從他們的 LabWare 產品中獲得最大的價值。\n經由高度關注客戶需求，有效利用關鍵技術及可靠和值得信賴的服務，LabWare 已成為實驗室自動化領域的領導者。" } }]
   },
   {
@@ -8838,11 +8838,11 @@
       { "node": "L", "x": 0, "y": 600 }
     ],
     "id": "M419a",
-    "size": { "tc": 0.7, "en": 0.8 },
+    "size": { "tc": 0.7, "en": 0.4 },
     "cat": { "tc": "精準醫療展區", "en": "Diagnostics, Laboratory Equipment & Services" },
     "topic": { "tc": "", "en": "" },
     "tag": { "tc": [], "en": [] },
-    "text": { "tc": ["國際精準檢測", "產業聯盟"], "en": ["International Laboratory Developed Tests and Services Industry Alliance"] },
+    "text": { "tc": ["國際精準檢測", "產業聯盟"], "en": ["International Laboratory ", "Developed Tests and ", "Services Industry Alliance"] },
     "corps": [{ "org": { "tc": "國際精準檢測產業聯盟", "en": "International Laboratory Developed Tests and Services Industry Alliance" }, "info": { "tc": "", "en": "" } }]
   },
   {
@@ -9757,7 +9757,7 @@
       { "node": "L", "x": 650, "y": 1050 },
       { "node": "L", "x": 0, "y": 1050 }
     ],
-    "text": { "tc": ["I區", "辦公室"], "en": ["Office", "of ", "Area I"] },
+    "text": { "tc": ["I區", "辦公室"], "en": ["Office", " of ", "Area I"] },
     "size": { "tc": 0.8, "en": 0.8 },
     "note": { "tc": "I區辦公室", "en": "Office of Area I" },
     "bd": true,
@@ -9811,7 +9811,7 @@
       { "node": "L", "x": 1300, "y": 1050 },
       { "node": "L", "x": 0, "y": 1050 }
     ],
-    "text": { "tc": ["VIP", "Room 5"], "en": ["VIP", "Room 5"] },
+    "text": { "tc": ["VIP ", "Room 5"], "en": ["VIP ", "Room 5"] },
     "size": { "tc": 1, "en": 1 },
     "note": { "tc": "VIP Room 5", "en": "VIP Room 5" },
     "bd": true,
@@ -9847,7 +9847,7 @@
       { "node": "L", "x": 900, "y": 1050 },
       { "node": "L", "x": 0, "y": 1050 }
     ],
-    "text": { "tc": ["行李", "寄放處"], "en": ["Luggage", "Room"] },
+    "text": { "tc": ["行李", "寄放處"], "en": ["Luggage", " Room"] },
     "size": { "tc": 1, "en": 0.8 },
     "note": { "tc": "行李寄放處", "en": "Luggage Room" },
     "bd": true,
@@ -9901,7 +9901,7 @@
       { "node": "L", "x": 900, "y": 1050 },
       { "node": "L", "x": 0, "y": 1050 }
     ],
-    "text": { "tc": ["VIP", "Room 2"], "en": ["VIP", "Room 2"] },
+    "text": { "tc": ["VIP ", "Room 2"], "en": ["VIP ", "Room 2"] },
     "size": { "tc": 1, "en": 1 },
     "note": { "tc": "VIP Room 2", "en": "VIP Room 2" },
     "bd": true,
@@ -10027,7 +10027,7 @@
       { "node": "L", "x": 1000, "y": 1050 },
       { "node": "L", "x": 0, "y": 1050 }
     ],
-    "text": { "tc": ["L區", "辦公室"], "en": ["Office of", "Area L"] },
+    "text": { "tc": ["L區", "辦公室"], "en": ["Office of", " Area L"] },
     "size": { "tc": 1, "en": 1 },
     "note": { "tc": "L區辦公室", "en": "Office of Area L" },
     "bd": true,
@@ -10101,7 +10101,7 @@
       { "node": "L", "x": 600, "y": 1050 },
       { "node": "L", "x": 0, "y": 1050 }
     ],
-    "text": { "tc": ["VIP", "Room 3"], "en": ["VIP", "Room 3"] },
+    "text": { "tc": ["VIP ", "Room 3"], "en": ["VIP ", "Room 3"] },
     "size": { "tc": 0.8, "en": 0.8 },
     "note": { "tc": "VIP Room 3", "en": "VIP Room 3" },
     "bd": true,
@@ -10175,7 +10175,7 @@
       { "node": "L", "x": 1000, "y": 1050 },
       { "node": "L", "x": 0, "y": 1050 }
     ],
-    "text": { "tc": ["N區", "辦公室"], "en": ["Office of", "Area N"] },
+    "text": { "tc": ["N區", "辦公室"], "en": ["Office of", " Area N"] },
     "size": { "tc": 1, "en": 1 },
     "note": { "tc": "N區辦公室", "en": "Office of Area N" },
     "bd": true,
@@ -10249,7 +10249,7 @@
       { "node": "L", "x": 1400, "y": 1400 },
       { "node": "L", "x": 0, "y": 1400 }
     ],
-    "text": { "tc": ["VIP簡報室"], "en": ["VIP", "Briefing", "Room"] },
+    "text": { "tc": ["VIP簡報室"], "en": ["VIP ", "Briefing", " Room"] },
     "size": { "tc": 1, "en": 1 },
     "note": { "tc": "VIP簡報室", "en": "VIP Briefing Room" },
     "bd": true,
@@ -10323,7 +10323,7 @@
       { "node": "L", "x": 0, "y": 1400 }
     ],
     "tag": { "tc": ["會議室", "重要活動"], "en": ["Meeting Room", "Key Events"] },
-    "text": { "tc": ["402a", "Room"], "en": ["402a", "Room"] },
+    "text": { "tc": ["402a ", "Room"], "en": ["402a ", "Room"] },
     "size": { "tc": 1, "en": 1 },
     "note": { "tc": "402a Room", "en": "402a Room" },
     "bd": true,
@@ -10343,7 +10343,7 @@
       { "node": "L", "x": 0, "y": 1400 }
     ],
     "tag": { "tc": ["會議室", "重要活動"], "en": ["Meeting Room", "Key Events"] },
-    "text": { "tc": ["402b", "Room"], "en": ["402b", "Room"] },
+    "text": { "tc": ["402b ", "Room"], "en": ["402b ", "Room"] },
     "size": { "tc": 1, "en": 1 },
     "note": { "tc": "402b Room", "en": "402b Room" },
     "bd": true,
@@ -10363,7 +10363,7 @@
       { "node": "L", "x": 0, "y": 1400 }
     ],
     "tag": { "tc": ["會議室", "重要活動"], "en": ["Meeting Room", "Key Events"] },
-    "text": { "tc": ["402c", "Room"], "en": ["402c", "Room"] },
+    "text": { "tc": ["402c ", "Room"], "en": ["402c ", "Room"] },
     "size": { "tc": 1, "en": 1 },
     "note": { "tc": "402c Room", "en": "402c Room" },
     "bd": true,
