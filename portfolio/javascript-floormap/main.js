@@ -453,7 +453,7 @@ const BoothInfoDetail = ({ data, setSearchCondition, elementStatus, setElementSt
 const BoothInfo = ({ data, setSearchCondition, elementStatus, setElementStatus }) => {
   return (
     <div className={`fp-booth-info ${elementStatus.boothInfo ? "active" : ""}`}>
-      <div className="fp-back-btn" onClick={() => setElementStatus((prev) => ({ ...prev, boothInfo: false }))}>
+      <div className="fp-back-btn shadow" onClick={() => setElementStatus((prev) => ({ ...prev, boothInfo: false }))}>
         <div className="fp-back d-flex align-items-center justify-content-center mx-auto active">
           <span />
         </div>
