@@ -697,6 +697,8 @@ p {
 .fp-back-btn {
   cursor: pointer;
   background-color: var(--fp-sidebar-bg);
+  position: relative;
+  z-index: 2;
 }
 .fp-back-btn:hover .fp-back {
   --color: var(--fp-black);
