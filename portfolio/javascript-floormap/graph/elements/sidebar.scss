@@ -94,15 +94,12 @@
 }
 
 .fp-info {
-  height: 100%;
+  height: calc(100% - var(--fp-icon-size));
   overflow-y: auto;
 }
 
 .fp-booth-info {
   inset: 0;
-}
-.fp-info {
-  height: calc(100% - var(--fp-search-box-height));
 }
 .fp-booth-info-name {
   width: calc(100% - var(--fp-icon-size));
