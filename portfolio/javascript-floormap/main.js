@@ -621,6 +621,7 @@ const MainArea = () => {
       },
     };
   });
+  const checkText = (targetElements) => searchCondition.regex.test(targetElements.join(" ").replace(/\r|\n/g, "").replace("臺", "台"));
   const memoFloorData = useMemo(
     () =>
       floorData.data.map((d, i) => {
@@ -636,8 +637,8 @@ const MainArea = () => {
               const start = new Date(time.start);
               const end = new Date(time.end);
               const nowDate = `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}`;
-              const startDate = new Date(`${start.getFullYear()}-${start.getMonth() + 1}-${start.getDate()}`);
-              const endDate = new Date(`${end.getFullYear()}-${end.getMonth() + 1}-${end.getDate()}`);
+              const startDate = new Date(`${start.getFullYear()}-${start.getMonth() + 1}-${start.getDate()} 00:00:00`);
+              const endDate = new Date(`${end.getFullYear()}-${end.getMonth() + 1}-${end.getDate()} 23:59:59`);
               const startTime = new Date(`${nowDate} ${start.getHours()}:${start.getMinutes()}:${start.getSeconds()}`);
               const endTime = new Date(`${nowDate} ${end.getHours()}:${end.getMinutes()}:${end.getSeconds()}`);
               return startDate < now && now < endDate && startTime < now && now < endTime && e.title[searchCondition.lang].length > 0;
@@ -656,12 +657,12 @@ const MainArea = () => {
       const infos = d.corps ? d.corps.map((corp) => corp.info) : [];
       const targets = [d.id, d.text.join(""), d.note, d.cat, d.topic, d.tag];
       const isType = types.includes(d.type);
-      const hasTag = isType && searchCondition.tag === "" ? true : [d.id, d.cat, d.topic, d.note, ...d.tag].includes(searchCondition.tag);
-      let hasText = isType && searchCondition.regex.test([...targets, ...infos, ...corps].join(" ").replace(/\r|\n/g, "").replace("臺", "台"));
+      const hasTag = isType && searchCondition.tag.length === 0 ? true : [d.id, d.cat, d.topic, d.note, ...d.tag].includes(searchCondition.tag);
+      let hasText = isType && checkText([...targets, ...infos, ...corps]);
       const opacity = (hasText && hasTag) || d.type === "icon" ? 0.8 : 0.1;
       if (d.corps) {
         d.corps.forEach((corp, i) => {
-          hasText = searchCondition.regex.test([...targets, corp.info, corp.org].join(" ").replace(/\r|\n/g, "").replace("臺", "台"));
+          hasText = checkText([...targets, corp.info, corp.org]);
           res.push({ ...d, ...corp, opacity: opacity, draw: i === 0, sidebar: hasText && hasTag });
         });
       } else {
@@ -670,7 +671,6 @@ const MainArea = () => {
     });
     return res;
   }, [searchCondition.regex, searchCondition.tag, searchCondition.floor, searchCondition.lang, memoFloorData]);
-
   const searchActions = (name, value) => {
     switch (name) {
       case "search":
