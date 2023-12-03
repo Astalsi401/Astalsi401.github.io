@@ -18,7 +18,7 @@
 }
 .page-view {
   transition: background-position calc(var(--time) * 15);
-  background-size: 100%;
+  background-size: cover;
   background-position: 50% 0;
 }
 .portfolioThumb {
