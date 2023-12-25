@@ -1,0 +1,50 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fp-back {
+  --fp-icon-size: 150px;
+  --fp-icon-w: calc(var(--fp-icon-size) / 15);
+  --fp-icon-p: calc(var(--fp-icon-size) / 6);
+  --fp-unactive: #acacac;
+  --fp-black: #000;
+  --fp-time: 0.3s;
+  cursor: pointer;
+  width: var(--fp-icon-size);
+  height: var(--fp-icon-size);
+  --color: var(--fp-unactive);
+}
+.fp-back:hover {
+  --color: var(--fp-black);
+}
+.fp-back span {
+  width: 60%;
+  transform-origin: left;
+  position: relative;
+  background-color: transparent !important;
+}
+.fp-back span::before {
+  --i: -1;
+}
+.fp-back span::after {
+  --i: 1;
+}
+.fp-back span::before, .fp-back span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transition: background-color var(--fp-time), box-shadow calc(var(--fp-time) / 3);
+  top: calc(var(--i) * var(--fp-icon-size) / 5);
+  transform: rotate(calc(var(--i) * 45deg));
+  box-shadow: var(--fp-icon-p) calc(var(--i) * var(--fp-icon-p) * -1) var(--color);
+}
+.fp-back span, .fp-back span::before, .fp-back span::after {
+  display: block;
+  height: var(--fp-icon-w);
+  border-radius: var(--fp-icon-w);
+  background-color: var(--color);
+}/*# sourceMappingURL=css-animations-main.css.map */

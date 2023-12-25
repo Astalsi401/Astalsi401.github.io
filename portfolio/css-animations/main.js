@@ -3,12 +3,24 @@ class Content extends React.Component {
     super(props);
     this.section = [
       {
-        title: "",
-        content: <div className="col-12"></div>,
+        title: "Hover arrows",
+        content: (
+          <div className="col-12">
+            <div class="fp-back center">
+              <span></span>
+            </div>
+          </div>
+        ),
       },
       {
-        title: "",
-        content: <></>,
+        content: (
+          <>
+            Html:
+            <CodeChunk code={`<div class="fp-back center">\n  <span></span>\n</div>`} lang="html" />
+            Scss:
+            <CodeChunkFromFile path="./css-animations-1.scss" lang="scss" />
+          </>
+        ),
       },
     ];
   }
