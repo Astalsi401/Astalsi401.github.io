@@ -78,7 +78,7 @@
       "category": "Portfolio",
       "href": "https://astalsi401.github.io/portfolio/portfolio_index.html",
       "pages": [
-        { "page": "2023臺灣醫療科技展電子地圖", "href": "https://astalsi401.github.io/portfolio/javascript-floormap/javascript-floormap.html", "thumbnail": "https://astalsi401.github.io/assets/images/2023floormap.png", "tags": ["html", "css", "javascript", "js", "react"] },
+        { "page": "2023 Healthcare EXPO Taiwan Floor Map", "href": "https://astalsi401.github.io/portfolio/javascript-floormap/javascript-floormap.html", "thumbnail": "https://astalsi401.github.io/assets/images/2023floormap.png", "tags": ["html", "css", "javascript", "js", "react"] },
         { "page": "FreeCodeCamp D3.js Heatmap", "href": "https://astalsi401.github.io/portfolio/javascript-d3js-heatmap/d3js_heatmap.html", "thumbnail": "https://astalsi401.github.io/assets/images/heatmap.png", "tags": ["d3js", "javascript", "js", "svg"] },
         { "page": "FreeCodeCamp D3.js Choropleth Map", "href": "https://astalsi401.github.io/portfolio/javascript-d3js-choropleth-map/d3js_choropleth-map.html", "thumbnail": "https://astalsi401.github.io/assets/images/choropleth-map.png", "tags": ["d3js", "javascript", "js", "svg"] },
         { "page": "FreeCodeCamp D3.js Treemap", "href": "https://astalsi401.github.io/portfolio/javascript-d3js-treemap/d3js-treemap.html", "thumbnail": "https://astalsi401.github.io/assets/images/treemap.png", "tags": ["d3js", "javascript", "js", "svg"] },
@@ -88,7 +88,7 @@
         { "page": "2022臺灣醫療科技展 醫師聊健康活動頁", "href": "https://expo.taiwan-healthcare.org/visit-website/lecture", "thumbnail": "https://astalsi401.github.io/assets/images/visitPage1.png", "tags": ["html", "css", "javascript", "js"] },
         { "page": "Healthcare B2B 申請進駐頁面", "href": "https://www.taiwan-healthcare.org/zh/b2b-intro", "thumbnail": "https://astalsi401.github.io/assets/images/HealthcareB2B-page1.png", "tags": ["html", "css", "javascript", "js"] },
         { "page": "Python GA4 API 串接", "href": "https://astalsi401.github.io/portfolio/python-ga4-api/python-ga4-api.html", "thumbnail": "python", "tags": ["python", "ga4", "google analytics"] },
-        { "page": "Loading Animation", "href": "https://astalsi401.github.io/portfolio/css-loading-animation/css-loading-animation.html", "thumbnail": "css", "tags": ["css", "html"] },
+        { "page": "Loading Animation", "href": "https://astalsi401.github.io/portfolio/css-loading-animation/css-loading-animation.html", "thumbnail": "https://astalsi401.github.io/assets/images/css-loading1.png", "tags": ["css", "html"] },
         { "page": "Fun Js Hover Effect", "href": "https://astalsi401.github.io/portfolio/fun-hover-effect/fun-hover-effect.html", "thumbnail": "js", "tags": ["css", "html", "js", "hover animation"] },
         { "page": "JS圖片輪播", "href": "https://astalsi401.github.io/portfolio/javascript-image-switch/javascript-image-switch.html", "thumbnail": "js", "tags": ["css", "html", "js", "javascript"] },
         { "page": "JS Image Zoom On Click", "href": "https://astalsi401.github.io/portfolio/javascript-image-zoom/image-zoom.html", "thumbnail": "js", "tags": ["css", "html", "js", "javascript"] },
