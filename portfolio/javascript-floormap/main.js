@@ -92,7 +92,10 @@ const Header = ({ elementStatus, setElementStatus, searchCondition, setSearchCon
 };
 
 const Wall = ({ d, drawPath }) => <path stroke="black" fill={d.fill} strokeWidth={d.strokeWidth} d={`M${d.x} ${d.y}${drawPath(d.p)}`} />;
-const Pillar = ({ d }) => <rect x={d.x} y={d.y} width={d.w} height={d.h} fill="rgba(0, 0, 0, 0.2)" />;
+const Pillar = ({ d, drawPath }) => {
+  const path = d.p.map((p) => ({ node: p.node, x: p.x + d.x, y: p.y + d.y }));
+  return <path fill="rgba(0, 0, 0, 0.2)" d={`M${d.x} ${d.y}${drawPath(path)}`} />;
+};
 const Text = ({ d }) => (
   <text textAnchor="middle" fontWeight="bold" fill={d.color} fontSize={400 * d.size} x={d.x} y={d.y}>
     {d.mapText}
@@ -170,7 +173,7 @@ const Elements = ({ type, data, size, elementStatus, handleBoothClick }) => {
   const drawPath = (path) => path.map((p) => (p.node === "L" ? `${p.node}${p.x} ${p.y}` : `${p.node}${p.x1} ${p.y1} ${p.x2} ${p.y2} ${p.x} ${p.y}`)).join("") + "Z";
   const elementActions = {
     wall: (d, i) => <Wall d={d} drawPath={drawPath} />,
-    pillar: (d, i) => <Pillar d={d} />,
+    pillar: (d, i) => <Pillar d={d} drawPath={drawPath} />,
     text: (d, i) => <Text d={d} />,
     room: (d, i) => <Room d={d} i={i} size={size} elementStatus={elementStatus} handleBoothClick={handleBoothClick} drawPath={drawPath} />,
     icon: (d, i) => <Room d={d} i={i} size={size} drawPath={drawPath} />,
@@ -230,6 +233,7 @@ const Floormap = ({ data, elementStatus, setElementStatus, handleBoothInfo, sear
       <div className={`fp-viewBox ${elementStatus.dragStatus.moving ? "moving" : ""}`} ref={graphRef} onWheel={handleWheelZoom} onMouseDown={handleStart} onMouseUp={handleEnd} onMouseLeave={handleEnd} onMouseMove={handleMouseDrag} onTouchStart={handleStart} onTouchEnd={handleEnd} onTouchCancel={handleEnd} onTouchMove={handleTouchDragZoom}>
         <svg id="floormap" className={elementStatus.boothInfo ? "active" : ""} ref={svgRef} style={{ translate: `${elementStatus.zoom.x + elementStatus.dragStatus.x}px ${elementStatus.zoom.y + elementStatus.dragStatus.y}px`, scale: `${elementStatus.zoom.scale}`, backgroundColor: "#f1f1f1" }} width={elementStatus.width} height={elementStatus.height} viewBox={`${viewBox.x1} ${viewBox.y1} ${viewBox.x2} ${viewBox.y2}`} xmlns="http://www.w3.org/2000/svg">
           <Elements type="wall" data={data} />
+          <Elements type="pillar" data={data} />
           <Elements type="text" data={data} />
           <Elements type="room" data={data} size={200} elementStatus={elementStatus} handleBoothClick={handleBoothClick} />
           <Elements type="icon" data={data} size={200} />
