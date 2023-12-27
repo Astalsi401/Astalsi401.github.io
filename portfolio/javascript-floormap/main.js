@@ -98,7 +98,7 @@ const Pillar = ({ d, drawPath }) => {
 };
 const Text = ({ d }) => (
   <text textAnchor="middle" fontWeight="bold" fill={d.color} fontSize={400 * d.size} x={d.x} y={d.y}>
-    {d.mapText}
+    {d.text.join("")}
   </text>
 );
 const Room = ({ d, i, size, elementStatus, handleBoothClick, drawPath }) => {
@@ -107,8 +107,8 @@ const Room = ({ d, i, size, elementStatus, handleBoothClick, drawPath }) => {
   const icon_l = 500;
   const opacity = d.type === "room" && elementStatus.boothInfo && elementStatus.boothInfoData.id == d.id ? 1 : d.opacity;
   return (
-    <g className={`${d.type} ${opacity === 1 ? "active" : ""}`} transform={`translate(${d.x},${d.y})`} onClick={d.type === "room" ? () => handleBoothClick(d) : null}>
-      <path stroke={"black"} strokeWidth={d.bd ? 10 : 0} fill={d.text.length === 0 || d.type === "icon" ? "none" : "#f1f1f1"} fillOpacity={d.opacity} d={`M0 0${drawPath(d.p)}`} />;
+    <g className={`${d.type}${opacity === 1 ? " active" : ""}`} transform={`translate(${d.x},${d.y})`} onClick={d.type === "room" ? () => handleBoothClick(d) : null}>
+      <path stroke={"black"} strokeWidth={d.strokeWidth} fill={d.text.length === 0 || d.type === "icon" ? "none" : "#f1f1f1"} fillOpacity={d.opacity} d={`M0 0${drawPath(d.p)}`} />
       <g transform={`translate(${d.w / 2},${d.h / 2 - ((d.text.length - 1) * lineHeight) / 2})`} fontSize={fontSize}>
         {d.text.map((t, j) => (
           <text key={`text-${i}-${j}`} textAnchor="middle" fontWeight="bold" fill="black" fillOpacity={d.opacity} y={j * lineHeight}>
@@ -116,10 +116,16 @@ const Room = ({ d, i, size, elementStatus, handleBoothClick, drawPath }) => {
           </text>
         ))}
       </g>
-      <clipPath id={`${d.type}-${d.floor}-${i}`}>
-        <rect className="icon" width={icon_l} height={icon_l} x={(d.w - icon_l) / 2} y={(d.h - icon_l) / 2} />
-      </clipPath>
-      <image width={icon_l} height={icon_l} x={(d.w - icon_l) / 2} y={(d.h - icon_l) / 2} visibility={d.icon ? "visible" : "hidden"} clipPath={`url(#icon-${d.floor}-${i})`} xlinkHref={["escalator_up", "escalator_down", "escalator_up_down_black", "escalator_up_down_red", "elevator", "toilet", "arrow_up", "first_aid"].includes(d.icon) ? icon_base64[d.icon] : d.icon ? d.icon : ""} opacity={d.opacity} />
+      {d.icon.length > 0 ? (
+        <>
+          <clipPath id={`${d.type}-${d.floor}-${i}`}>
+            <rect className="icon" width={icon_l} height={icon_l} x={(d.w - icon_l) / 2} y={(d.h - icon_l) / 2} />
+          </clipPath>
+          <image width={icon_l} height={icon_l} x={(d.w - icon_l) / 2} y={(d.h - icon_l) / 2} visibility="visible" clipPath={`url(#icon-${d.floor}-${i})`} xlinkHref={icon_base64[d.icon]} opacity={d.opacity} />
+        </>
+      ) : (
+        <></>
+      )}
     </g>
   );
 };
@@ -332,7 +338,7 @@ const Result = ({ d, elementStatus, handleBoothInfo, svgRef, graphRef, zoomCalcu
   const isBooth = d.type === "booth";
   const id = isBooth ? `${d.id}-${d.org}` : `${d.text.join("")}-${d.floor}`;
   const bg = isBooth ? elementStatus.colors(d.cat) : "#acacac";
-  const name = isBooth ? d.org : d.note;
+  const name = isBooth ? d.org : d.text.join("");
   const loc = isBooth ? `${d.id} / ${d.floor}F` : `${d.floor}F`;
   const handleResultClick = () => {
     if (!elementStatus.sidebar) return;
@@ -650,7 +656,7 @@ const MainArea = () => {
           }));
           tags = eventTime.some((e) => e.active) ? tags.concat([mapText.event[searchCondition.lang]]) : tags;
         }
-        return { ...d, id: d.id ? d.id : `${d.type}-${d.floor}-${i}`, cat: d.cat ? d.cat[searchCondition.lang] : false, topic: d.topic ? d.topic[searchCondition.lang] : false, tag: tags, mapText: d.mapText ? d.mapText[searchCondition.lang] : false, text: d.text ? d.text[searchCondition.lang] : [], size: d.size ? d.size[searchCondition.lang] : 1, note: d.note ? d.note[searchCondition.lang] : false, event: eventTime, corps: d.corps ? d.corps.map((corp, i) => ({ corpId: `${d.id}-${i}`, org: corp.org[searchCondition.lang], info: corp.info[searchCondition.lang] })) : false, draw: true };
+        return { ...d, id: d.id ? d.id : `${d.type}-${d.floor}-${i}`, cat: d.cat ? d.cat[searchCondition.lang] : false, topic: d.topic ? d.topic[searchCondition.lang] : false, tag: tags, text: d.text ? d.text[searchCondition.lang] : [], size: d.size ? d.size[searchCondition.lang] : 1, event: eventTime, corps: d.corps ? d.corps.map((corp, i) => ({ corpId: `${d.id}-${i}`, org: corp.org[searchCondition.lang], info: corp.info[searchCondition.lang] })) : false, draw: true };
       }),
     [searchCondition.lang, floorData.data]
   );
@@ -659,9 +665,9 @@ const MainArea = () => {
     memoFloorData.forEach((d) => {
       const corps = d.corps ? d.corps.map((corp) => corp.org) : [];
       const infos = d.corps ? d.corps.map((corp) => corp.info) : [];
-      const targets = [d.id, d.text.join(""), d.note, d.cat, d.topic, d.tag];
+      const targets = [d.id, d.text.join(""), d.cat, d.topic, ...d.tag];
       const isType = types.includes(d.type);
-      const hasTag = isType && searchCondition.tag.length === 0 ? true : [d.id, d.cat, d.topic, d.note, ...d.tag].includes(searchCondition.tag);
+      const hasTag = isType && searchCondition.tag.length === 0 ? true : [d.id, d.cat, d.topic, ...d.tag].includes(searchCondition.tag);
       let hasText = isType && checkText([...targets, ...infos, ...corps]);
       const opacity = (hasText && hasTag) || d.type === "icon" ? 0.8 : 0.1;
       if (d.corps) {
@@ -789,6 +795,7 @@ const MainArea = () => {
     }));
   }, [searchCondition.string, elementStatus.inputTimer]);
   if (!floorData.loaded) return <Loading />;
+  console.log(filterFloorData);
   return (
     <StrictMode>
       <div className="fp-main" style={{ "--sidebar-width": `${elementStatus.sidebarWidth}px`, "--tags-height": `${elementStatus.tagsHeight}px` }}>

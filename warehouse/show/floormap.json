@@ -9049,22 +9049,22 @@
   },
   { "type": "wall", "floor": 4, "strokeWidth": 10, "fill": "none", "x": 6500, "y": 12500, "p": [{ "node": "L", "x": 7300, "y": 12500 }] },
   { "type": "wall", "floor": 4, "strokeWidth": 10, "fill": "none", "x": 12500, "y": 12500, "p": [{ "node": "L", "x": 13300, "y": 12500 }] },
-  { "type": "text", "floor": 1, "x": 4005, "y": 3650, "mapText": { "tc": "I", "en": "I" }, "size": { "tc": 1, "en": 1 }, "color": "red" },
-  { "type": "text", "floor": 1, "x": 9715, "y": 3650, "mapText": { "tc": "J", "en": "J" }, "size": { "tc": 1, "en": 1 }, "color": "red" },
-  { "type": "text", "floor": 1, "x": 15125, "y": 3650, "mapText": { "tc": "K", "en": "K" }, "size": { "tc": 1, "en": 1 }, "color": "red" },
-  { "type": "text", "floor": 1, "x": 13770, "y": 9780, "mapText": { "tc": "無齡健康生活主題館", "en": "" }, "size": { "tc": 0.4, "en": 0.4 }, "color": "black" },
-  { "type": "text", "floor": 1, "x": 5510, "y": 7080, "mapText": { "tc": "臺灣體育用品工業同業公會", "en": "Taiwan Sporting Goods Manufacturers Association" }, "size": { "tc": 0.4, "en": 0.3 }, "color": "black" },
-  { "type": "text", "floor": 1, "x": 5210, "y": 8830, "mapText": { "tc": "台北市生物技術服務商業同業公會", "en": "Taipei Biotechnology Service and Business Trade Association" }, "size": { "tc": 0.3, "en": 0.2 }, "color": "black" },
-  { "type": "text", "floor": 4, "x": 4205, "y": 5905, "mapText": { "tc": "L", "en": "L" }, "size": { "tc": 1, "en": 1 }, "color": "red" },
-  { "type": "text", "floor": 4, "x": 9915, "y": 5905, "mapText": { "tc": "M", "en": "M" }, "size": { "tc": 1, "en": 1 }, "color": "red" },
-  { "type": "text", "floor": 4, "x": 15025, "y": 5905, "mapText": { "tc": "N", "en": "N" }, "size": { "tc": 1, "en": 1 }, "color": "red" },
-  { "type": "text", "floor": 4, "x": 13670, "y": 10580, "mapText": { "tc": "LDTS產業聯盟", "en": "LDTS Industry Alliance" }, "size": { "tc": 0.4, "en": 0.3 }, "color": "black" },
-  { "type": "text", "floor": 4, "x": 15930, "y": 10580, "mapText": { "tc": "LDTS產業聯盟", "en": "LDTS Industry Alliance" }, "size": { "tc": 0.4, "en": 0.3 }, "color": "black" },
-  { "type": "text", "floor": 4, "x": 12470, "y": 9680, "mapText": { "tc": "LDTS產業聯盟", "en": "LDTS Industry Alliance" }, "size": { "tc": 0.4, "en": 0.3 }, "color": "black" },
-  { "type": "text", "floor": 4, "x": 15780, "y": 9680, "mapText": { "tc": "LDTS產業聯盟", "en": "LDTS Industry Alliance" }, "size": { "tc": 0.4, "en": 0.3 }, "color": "black" },
-  { "type": "text", "floor": 4, "x": 7960, "y": 12070, "mapText": { "tc": "精準檢測大健康主題館", "en": "Diagnostics, laboratory equipment & services" }, "size": { "tc": 0.4, "en": 0.3 }, "color": "black" },
-  { "type": "text", "floor": 4, "x": 7960, "y": 12160, "mapText": { "tc": "(台灣微生物學會、台灣醫事檢驗學會)", "en": "(Taiwan Society of Microbial Ecology, Taiwan Society of Laboratory Medicine)" }, "size": { "tc": 0.2, "en": 0.2 }, "color": "black" },
-  { "type": "text", "floor": 4, "x": 16230, "y": 12070, "mapText": { "tc": "新北市生技產業發展聯盟", "en": "New Taipei City Biotechnology Alliance" }, "size": { "tc": 0.4, "en": 0.3 }, "color": "black" },
+  { "type": "text", "floor": 1, "x": 4005, "y": 3650, "text": { "tc": ["I"], "en": ["I"] }, "size": { "tc": 1, "en": 1 }, "color": "red" },
+  { "type": "text", "floor": 1, "x": 9715, "y": 3650, "text": { "tc": ["J"], "en": ["J"] }, "size": { "tc": 1, "en": 1 }, "color": "red" },
+  { "type": "text", "floor": 1, "x": 15125, "y": 3650, "text": { "tc": ["K"], "en": ["K"] }, "size": { "tc": 1, "en": 1 }, "color": "red" },
+  { "type": "text", "floor": 1, "x": 13770, "y": 9780, "text": { "tc": ["無齡健康生活主題館"], "en": [] }, "size": { "tc": 0.4, "en": 0.4 }, "color": "black" },
+  { "type": "text", "floor": 1, "x": 5510, "y": 7080, "text": { "tc": ["臺灣體育用品工業同業公會"], "en": ["Taiwan Sporting Goods Manufacturers Association"] }, "size": { "tc": 0.4, "en": 0.3 }, "color": "black" },
+  { "type": "text", "floor": 1, "x": 5210, "y": 8830, "text": { "tc": ["台北市生物技術服務商業同業公會"], "en": ["Taipei Biotechnology Service and Business Trade Association"] }, "size": { "tc": 0.3, "en": 0.2 }, "color": "black" },
+  { "type": "text", "floor": 4, "x": 4205, "y": 5905, "text": { "tc": ["L"], "en": ["L"] }, "size": { "tc": 1, "en": 1 }, "color": "red" },
+  { "type": "text", "floor": 4, "x": 9915, "y": 5905, "text": { "tc": ["M"], "en": ["M"] }, "size": { "tc": 1, "en": 1 }, "color": "red" },
+  { "type": "text", "floor": 4, "x": 15025, "y": 5905, "text": { "tc": ["N"], "en": ["N"] }, "size": { "tc": 1, "en": 1 }, "color": "red" },
+  { "type": "text", "floor": 4, "x": 13670, "y": 10580, "text": { "tc": ["LDTS產業聯盟"], "en": ["LDTS Industry Alliance"] }, "size": { "tc": 0.4, "en": 0.3 }, "color": "black" },
+  { "type": "text", "floor": 4, "x": 15930, "y": 10580, "text": { "tc": ["LDTS產業聯盟"], "en": ["LDTS Industry Alliance"] }, "size": { "tc": 0.4, "en": 0.3 }, "color": "black" },
+  { "type": "text", "floor": 4, "x": 12470, "y": 9680, "text": { "tc": ["LDTS產業聯盟"], "en": ["LDTS Industry Alliance"] }, "size": { "tc": 0.4, "en": 0.3 }, "color": "black" },
+  { "type": "text", "floor": 4, "x": 15780, "y": 9680, "text": { "tc": ["LDTS產業聯盟"], "en": ["LDTS Industry Alliance"] }, "size": { "tc": 0.4, "en": 0.3 }, "color": "black" },
+  { "type": "text", "floor": 4, "x": 7960, "y": 12070, "text": { "tc": ["精準檢測大健康主題館"], "en": ["Diagnostics, laboratory equipment & services"] }, "size": { "tc": 0.4, "en": 0.3 }, "color": "black" },
+  { "type": "text", "floor": 4, "x": 7960, "y": 12160, "text": { "tc": ["(台灣微生物學會、台灣醫事檢驗學會)"], "en": ["(Taiwan Society of Microbial Ecology, Taiwan Society of Laboratory Medicine)"] }, "size": { "tc": 0.2, "en": 0.2 }, "color": "black" },
+  { "type": "text", "floor": 4, "x": 16230, "y": 12070, "text": { "tc": ["新北市生技產業發展聯盟"], "en": ["New Taipei City Biotechnology Alliance"] }, "size": { "tc": 0.4, "en": 0.3 }, "color": "black" },
   {
     "type": "pillar",
     "floor": 1,
@@ -9729,8 +9729,7 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "入口", "en": "Entrance" },
-    "bd": false,
+    "strokeWidth": 0,
     "icon": "arrow_up"
   },
   {
@@ -9747,8 +9746,7 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "入口", "en": "Entrance" },
-    "bd": false,
+    "strokeWidth": 0,
     "icon": "arrow_up"
   },
   {
@@ -9765,8 +9763,7 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "入口", "en": "Entrance" },
-    "bd": false,
+    "strokeWidth": 0,
     "icon": "arrow_up"
   },
   {
@@ -9783,8 +9780,7 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "電梯", "en": "Elevator" },
-    "bd": false,
+    "strokeWidth": 0,
     "icon": "elevator"
   },
   {
@@ -9801,8 +9797,7 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "電梯", "en": "Elevator" },
-    "bd": false,
+    "strokeWidth": 0,
     "icon": "elevator"
   },
   {
@@ -9819,8 +9814,7 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "電梯", "en": "Elevator" },
-    "bd": false,
+    "strokeWidth": 0,
     "icon": "elevator"
   },
   {
@@ -9837,8 +9831,7 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "電梯", "en": "Elevator" },
-    "bd": false,
+    "strokeWidth": 0,
     "icon": "elevator"
   },
   {
@@ -9855,8 +9848,7 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "電扶梯", "en": "Escalator" },
-    "bd": false,
+    "strokeWidth": 0,
     "icon": "escalator_up"
   },
   {
@@ -9873,8 +9865,7 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "電扶梯", "en": "Escalator" },
-    "bd": false,
+    "strokeWidth": 0,
     "icon": "escalator_up"
   },
   {
@@ -9891,8 +9882,7 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "電扶梯", "en": "Escalator" },
-    "bd": false,
+    "strokeWidth": 0,
     "icon": "escalator_down"
   },
   {
@@ -9909,8 +9899,7 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "電扶梯", "en": "Escalator" },
-    "bd": false,
+    "strokeWidth": 0,
     "icon": "escalator_down"
   },
   {
@@ -9927,8 +9916,7 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "電扶梯", "en": "Escalator" },
-    "bd": false,
+    "strokeWidth": 0,
     "icon": "escalator_up_down_black"
   },
   {
@@ -9945,8 +9933,7 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "電扶梯", "en": "Escalator" },
-    "bd": false,
+    "strokeWidth": 0,
     "icon": "escalator_up_down_black"
   },
   {
@@ -9963,8 +9950,7 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "入口", "en": "Entrance" },
-    "bd": false,
+    "strokeWidth": 0,
     "icon": "arrow_up"
   },
   {
@@ -9981,8 +9967,7 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "入口", "en": "Entrance" },
-    "bd": false,
+    "strokeWidth": 0,
     "icon": "arrow_up"
   },
   {
@@ -9999,8 +9984,7 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "入口", "en": "Entrance" },
-    "bd": false,
+    "strokeWidth": 0,
     "icon": "arrow_up"
   },
   {
@@ -10017,8 +10001,7 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "電扶梯", "en": "Escalator" },
-    "bd": false,
+    "strokeWidth": 0,
     "icon": "escalator_up_down_red"
   },
   {
@@ -10035,8 +10018,7 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "電扶梯", "en": "Escalator" },
-    "bd": false,
+    "strokeWidth": 0,
     "icon": "escalator_up_down_red"
   },
   {
@@ -10053,8 +10035,7 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "電扶梯", "en": "Escalator" },
-    "bd": false,
+    "strokeWidth": 0,
     "icon": "escalator_up_down_black"
   },
   {
@@ -10071,8 +10052,7 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "電扶梯", "en": "Escalator" },
-    "bd": false,
+    "strokeWidth": 0,
     "icon": "escalator_up_down_black"
   },
   {
@@ -10089,9 +10069,8 @@
     ],
     "text": { "tc": ["咖啡簡餐"], "en": ["Cafe"] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "咖啡簡餐", "en": "Cafe" },
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "icon",
@@ -10107,9 +10086,8 @@
     ],
     "text": { "tc": ["麵包店"], "en": ["Bakery"] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "麵包店", "en": "Bakery" },
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "icon",
@@ -10125,9 +10103,8 @@
     ],
     "text": { "tc": ["速食店"], "en": ["Fast", "Food ", "Restaurant"] },
     "size": { "tc": 1, "en": 0.8 },
-    "note": { "tc": "速食店", "en": "Fast Food Restaurant" },
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "icon",
@@ -10143,9 +10120,8 @@
     ],
     "text": { "tc": ["咖啡", "簡餐"], "en": ["Cafe"] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "咖啡簡餐", "en": "Cafe" },
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "icon",
@@ -10161,9 +10137,8 @@
     ],
     "text": { "tc": ["便利商店"], "en": ["Convenience", "Store"] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "便利商店", "en": "Convenience Store" },
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "icon",
@@ -10179,9 +10154,8 @@
     ],
     "text": { "tc": ["祈禱室"], "en": ["Prayer", "Room"] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "祈禱室", "en": "Prayer Room" },
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "icon",
@@ -10197,8 +10171,7 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1.5, "en": 1.5 },
-    "note": { "tc": "醫務室", "en": "First Aid" },
-    "bd": true,
+    "strokeWidth": 10,
     "icon": "first_aid"
   },
   {
@@ -10215,8 +10188,7 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1.5, "en": 1.5 },
-    "note": { "tc": "醫務室", "en": "First Aid" },
-    "bd": true,
+    "strokeWidth": 10,
     "icon": "first_aid"
   },
   {
@@ -10233,8 +10205,7 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "廁所", "en": "Toilet" },
-    "bd": true,
+    "strokeWidth": 10,
     "icon": "toilet"
   },
   {
@@ -10251,8 +10222,7 @@
     "y": 10110,
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "廁所", "en": "Toilet" },
-    "bd": true,
+    "strokeWidth": 10,
     "icon": "toilet"
   },
   {
@@ -10269,8 +10239,7 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "廁所", "en": "Toilet" },
-    "bd": true,
+    "strokeWidth": 10,
     "icon": "toilet"
   },
   {
@@ -10287,8 +10256,7 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "廁所", "en": "Toilet" },
-    "bd": true,
+    "strokeWidth": 10,
     "icon": "toilet"
   },
   {
@@ -10305,9 +10273,8 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": false,
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10323,9 +10290,8 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": false,
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10341,9 +10307,8 @@
     ],
     "text": { "tc": ["VIP ", "Room 1"], "en": ["VIP ", "Room 1"] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "VIP Room 1", "en": "VIP Room 1" },
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10359,9 +10324,8 @@
     ],
     "text": { "tc": ["I區", "辦公室"], "en": ["Office", " of ", "Area I"] },
     "size": { "tc": 0.8, "en": 0.8 },
-    "note": { "tc": "I區辦公室", "en": "Office of Area I" },
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10377,9 +10341,8 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": false,
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10395,9 +10358,8 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": false,
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10413,9 +10375,8 @@
     ],
     "text": { "tc": ["VIP ", "Room 5"], "en": ["VIP ", "Room 5"] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "VIP Room 5", "en": "VIP Room 5" },
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10431,9 +10392,8 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": false,
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10449,9 +10409,8 @@
     ],
     "text": { "tc": ["行李", "寄放處"], "en": ["Luggage", " Room"] },
     "size": { "tc": 1, "en": 0.8 },
-    "note": { "tc": "行李寄放處", "en": "Luggage Room" },
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10467,9 +10426,8 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": false,
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10485,9 +10443,8 @@
     ],
     "text": { "tc": ["民眾", "換票區"], "en": ["Entry badge", " pick-up for", " the public"] },
     "size": { "tc": 1, "en": 0.8 },
-    "note": { "tc": "民眾換票區", "en": "Entry badge pick-up for the public" },
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10503,9 +10460,8 @@
     ],
     "text": { "tc": ["VIP ", "Room 2"], "en": ["VIP ", "Room 2"] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "VIP Room 2", "en": "VIP Room 2" },
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10521,9 +10477,8 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": false,
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10539,9 +10494,8 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": false,
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10557,9 +10511,8 @@
     ],
     "text": { "tc": ["專業人", "士換證", "區"], "en": ["Entry", " badge", " pick-up", " for ", "pro."] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "專業人士換證區", "en": "Entry badge pick-up for professionals" },
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10575,9 +10528,8 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": false,
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10593,9 +10545,8 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": false,
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10611,9 +10562,8 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": false,
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10629,9 +10579,8 @@
     ],
     "text": { "tc": ["L區", "辦公室"], "en": ["Office of", " Area L"] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "L區辦公室", "en": "Office of Area L" },
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10647,9 +10596,8 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": false,
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10666,9 +10614,8 @@
     "tag": { "tc": ["會議室"], "en": ["Meeting Room"] },
     "text": { "tc": ["434 ", "Room"], "en": ["434 ", "Room"] },
     "size": { "tc": 0.8, "en": 0.8 },
-    "note": { "tc": "434 Room", "en": "434 Room" },
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10685,9 +10632,8 @@
     "tag": { "tc": ["會議室"], "en": ["Meeting Room"] },
     "text": { "tc": ["435 ", "Room"], "en": ["435 ", "Room"] },
     "size": { "tc": 0.8, "en": 0.8 },
-    "note": { "tc": "435 Room", "en": "435 Room" },
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10703,9 +10649,8 @@
     ],
     "text": { "tc": ["VIP ", "Room 3"], "en": ["VIP ", "Room 3"] },
     "size": { "tc": 0.8, "en": 0.8 },
-    "note": { "tc": "VIP Room 3", "en": "VIP Room 3" },
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10722,9 +10667,8 @@
     "tag": { "tc": ["會議室"], "en": ["Meeting Room"] },
     "text": { "tc": ["439 ", "Room"], "en": ["439 ", "Room"] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "439 Room", "en": "439 Room" },
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10741,9 +10685,8 @@
     "tag": { "tc": ["會議室"], "en": ["Meeting Room"] },
     "text": { "tc": ["441 ", "Room"], "en": ["441 ", "Room"] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "441 Room", "en": "441 Room" },
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10759,9 +10702,8 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": false,
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10777,9 +10719,8 @@
     ],
     "text": { "tc": ["N區", "辦公室"], "en": ["Office of", " Area N"] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "N區辦公室", "en": "Office of Area N" },
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10795,9 +10736,8 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": false,
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10815,9 +10755,8 @@
     ],
     "text": { "tc": [], "en": [] },
     "size": { "tc": 1, "en": 1 },
-    "note": false,
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10833,9 +10772,8 @@
     ],
     "text": { "tc": ["新聞中心"], "en": ["Press ", "Center"] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "新聞中心", "en": "Press Center" },
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10851,9 +10789,8 @@
     ],
     "text": { "tc": ["VIP簡報室"], "en": ["VIP ", "Briefing", " Room"] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "VIP簡報室", "en": "VIP Briefing Room" },
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10869,9 +10806,8 @@
     ],
     "text": { "tc": ["專業", "人士", "換證", "區"], "en": ["Entry ", "badge", " pick-up", " for ", "pro."] },
     "size": { "tc": 1, "en": 0.7 },
-    "note": { "tc": "專業人士換證區", "en": "Entry badge pick-up for professionals" },
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10887,9 +10823,8 @@
     ],
     "text": { "tc": ["專業", "人士", "換證", "區"], "en": ["Entry ", "badge", " pick-up", " for ", "pro."] },
     "size": { "tc": 1, "en": 0.7 },
-    "note": { "tc": "專業人士換證區", "en": "Entry badge pick-up for professionals" },
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10906,9 +10841,8 @@
     "tag": { "tc": ["會議室"], "en": ["Meeting Room"] },
     "text": { "tc": ["401 Room"], "en": ["401 Room"] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "401 Room", "en": "401 Room" },
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -10925,9 +10859,8 @@
     "tag": { "tc": ["會議室", "重要活動"], "en": ["Meeting Room", "Key Events"] },
     "text": { "tc": ["402a ", "Room"], "en": ["402a ", "Room"] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "402a Room", "en": "402a Room" },
-    "bd": true,
-    "icon": false,
+    "strokeWidth": 10,
+    "icon": "",
     "event": [{ "timeList": [{ "start": "2023-12-02 14:00+08:00", "end": "2023-12-02 16:30+08:00" }], "title": { "tc": "高齡科技創新高峰論壇", "en": "Geroscience Technology Innovation Summit" }, "topic": { "tc": "重要活動", "en": "Key Events" } }]
   },
   {
@@ -10945,9 +10878,8 @@
     "tag": { "tc": ["會議室", "重要活動"], "en": ["Meeting Room", "Key Events"] },
     "text": { "tc": ["402b ", "Room"], "en": ["402b ", "Room"] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "402b Room", "en": "402b Room" },
-    "bd": true,
-    "icon": false,
+    "strokeWidth": 10,
+    "icon": "",
     "event": [{ "timeList": [{ "start": "2023-12-02 14:00+08:00", "end": "2023-12-02 16:30+08:00" }], "title": { "tc": "高齡科技創新高峰論壇", "en": "Geroscience Technology Innovation Summit" }, "topic": { "tc": "重要活動", "en": "Key Events" } }]
   },
   {
@@ -10965,9 +10897,8 @@
     "tag": { "tc": ["會議室", "重要活動"], "en": ["Meeting Room", "Key Events"] },
     "text": { "tc": ["402c ", "Room"], "en": ["402c ", "Room"] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "402c Room", "en": "402c Room" },
-    "bd": true,
-    "icon": false,
+    "strokeWidth": 10,
+    "icon": "",
     "event": [{ "timeList": [{ "start": "2023-12-02 14:00+08:00", "end": "2023-12-02 16:30+08:00" }], "title": { "tc": "高齡科技創新高峰論壇", "en": "Geroscience Technology Innovation Summit" }, "topic": { "tc": "重要活動", "en": "Key Events" } }]
   },
   {
@@ -10985,9 +10916,8 @@
     "tag": { "tc": ["會議室"], "en": ["Meeting Room"] },
     "text": { "tc": ["403 ", "Room"], "en": ["403 ", "Room"] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "403 Room", "en": "403 Room" },
-    "bd": true,
-    "icon": false
+    "strokeWidth": 10,
+    "icon": ""
   },
   {
     "type": "room",
@@ -11004,9 +10934,8 @@
     "tag": { "tc": ["會議室", "重要活動"], "en": ["Meeting Room", "Key Events"] },
     "text": { "tc": ["404 ", "Room"], "en": ["404 ", "Room"] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "404 Room", "en": "404 Room" },
-    "bd": true,
-    "icon": false,
+    "strokeWidth": 10,
+    "icon": "",
     "event": [{ "timeList": [{ "start": "2023-12-01 13:00+08:00", "end": "2023-12-01 17:00+08:00" }], "title": { "tc": "產業 Roadshow 發布會", "en": "Roadshow" }, "topic": { "tc": "重要活動", "en": "Key Events" } }]
   },
   {
@@ -11024,9 +10953,8 @@
     "tag": { "tc": ["重要活動"], "en": ["Key Events"] },
     "text": { "tc": ["TAITRA", " Lounge"], "en": ["TAITRA", " Lounge"] },
     "size": { "tc": 1, "en": 1 },
-    "note": { "tc": "TAITRA Lounge", "en": "TAITRA Lounge" },
-    "bd": true,
-    "icon": false,
+    "strokeWidth": 10,
+    "icon": "",
     "event": [{ "timeList": [{ "start": "2023-12-01 10:00+08:00", "end": "2023-12-01 12:00+08:00" }], "title": { "tc": "海外醫療市場商機說明暨交流會 -中東與東歐市場新商機-", "en": "Healthcare Market & Business Opportunity Conference -Middle East and Eastern Europe Session-" }, "topic": { "tc": "重要活動", "en": "Key Events" } }]
   }
 ]
