@@ -78,12 +78,12 @@ class Content extends React.Component {
               <b>第一種方法:</b> 將加權變項中的數值視為"個案數"，然後增加"n-1"個案數。以此資料為例，第一列為一個個案，但由於freq＝9，因此當執行完<code>expandfreq</code>後，這資料會增加9-1＝8列的"1 1 9"的個案
             </p>
             <CodeChunk code={`preserve\nexpand freq\ntab response case, freq\nrestore`} lang="stata" />
-            <CodeChunk code={`. preserve\n. expand freq\n(240 observations created)\n. tab response case, freq\n\nAgr of | case\nOnset | f % | Total\n-----------+----------------------+----------\n70-79 | 9 6 | 15 \n60-69 | 18 12 | 30 \n50-59 | 42 28 | 70 \n40-49 | 51 34 | 85 \n30-39 | 30 20 | 50 \n-----------+----------------------+----------\nTotal | 150 100 | 250 \n. restore`} lang="output" />
+            <CodeChunk code={`. preserve\n. expand freq\n(240 observations created)\n. tab response case, freq\n\nAgr of     | case\nOnset      | f  %                 | Total\n-----------+----------------------+----------\n70-79      | 9  6                 | 15 \n60-69      | 18 12                | 30 \n50-59      | 42 28                | 70 \n40-49      | 51 34                | 85 \n30-39      | 30 20                | 50 \n-----------+----------------------+----------\nTotal      | 150 100              | 250 \n. restore`} lang="output" />
             <p>
               <b>第二種方法:</b> 將freq視為加權的變項
             </p>
             <CodeChunk code={`ta response case [fw=freq], freq`} lang="stata" />
-            <CodeChunk code={`. ta response case [fw=freq], freq\n\nAgr of | case\nOnset | f % | Total\n-----------+----------------------+----------\n70-79 | 9 6 | 15 \n60-69 | 18 12 | 30 \n50-59 | 42 28 | 70 \n40-49 | 51 34 | 85 \n30-39 | 30 20 | 50 \n-----------+----------------------+----------\nTotal | 150 100 | 250 `} lang="output" />
+            <CodeChunk code={`. ta response case [fw=freq], freq\n\nAgr of     | case\nOnset      | f  %                 | Total\n-----------+----------------------+----------\n70-79      | 9  6                 | 15 \n60-69      | 18 12                | 30 \n50-59      | 42 28                | 70 \n40-49      | 51 34                | 85 \n30-39      | 30 20                | 50 \n-----------+----------------------+----------\nTotal      | 150 100              | 250 `} lang="output" />
           </>
         ),
       },
@@ -92,7 +92,7 @@ class Content extends React.Component {
         content: (
           <>
             <CodeChunk code={`clear\ninput x y freq\nx y freq\n0 0 15\n1 0 10\n0 1 5\n1 1 10\nend\n\nlab var x "political orientation"\nlab var y "government perference"\nlab def x 0 "liberal" 1 "conservative", modify\nlab def y 0 "large" 1 "small", modify\nlab val x x\nlab val y y\ntab y x [fw=freq], chi`} lang="stata" />
-            <CodeChunk code={`. clear\n. input x y freq\nx y freq\n1. 0 0 15\n2. 1 0 10\n3. 0 1 5\n4. 1 1 10\n5. end\n. \n. lab var x "political orientation"\n. lab var y "government perference"\n. lab def x 0 "liberal" 1 "conservative", modify\n. lab def y 0 "large" 1 "small", modify\n. lab val x x\n. lab val y y\n. tab y x [fw=freq], chi\n\ngovernment | political orientation\nperference | liberal conservat | Total\n-----------+----------------------+----------\nlarge | 15 10 | 25 \nsmall | 5 10 | 15 \n-----------+----------------------+----------\nTotal | 20 20 | 40 \nPearson chi2(1) =  2.6667  Pr = 0.102`} lang="output" />
+            <CodeChunk code={`. clear\n. input x y freq\nx y freq\n1. 0 0 15\n2. 1 0 10\n3. 0 1 5\n4. 1 1 10\n5. end\n. \n. lab var x "political orientation"\n. lab var y "government perference"\n. lab def x 0 "liberal" 1 "conservative", modify\n. lab def y 0 "large" 1 "small", modify\n. lab val x x\n. lab val y y\n. tab y x [fw=freq], chi\n\ngovernment | political orientation\nperference | liberal    conservat | Total\n-----------+----------------------+----------\nlarge      | 15         10        | 25 \nsmall      | 5          10        | 15 \n-----------+----------------------+----------\nTotal      | 20 20                | 40 \nPearson chi2(1) =  2.6667  Pr = 0.102`} lang="output" />
           </>
         ),
       },
@@ -134,7 +134,7 @@ class Content extends React.Component {
               </li>
             </ul>
             <CodeChunk code={`clear\nset obs 100000\nset seed 123456789\ng x = int(floor((101)*runiform()+0))\n* 100-0+1 a\n* b -a a\n* max min\n*int=整數\n*0~100有101個整數\n*runiform=平均分布\n\nsu x, d\nsort x`} lang="stata" />
-            <CodeChunk code={`. clear\n. set obs 100000\nnumber of observations (_N) was 0, now 100,000\n. set seed 123456789 \n. g x = int(floor((101)*runiform()+0))\n. * 100-0+1 a\n. * b -a a\n. * max min \n. *int=整數\n. *0~100有101個整數\n. *runiform=平均分布\n. su x, d\nx\n-------------------------------------------------------------\nPercentiles Smallest\n1%  0 0\n5%  4 0\n10%  10 0 Obs  100,000\n25%  25 0 Sum of Wgt.  100,000\n50%  50 Mean  50.00145\n Largest Std. Dev.  29.18721\n75%  75 100\n90%  90 100 Variance  851.893\n95%  95 100 Skewness -.0033492\n99%  99 100 Kurtosis  1.79898\n. sort x`} lang="output" />
+            <CodeChunk code={`. clear\n. set obs 100000\nnumber of observations (_N) was 0, now 100,000\n. set seed 123456789 \n. g x = int(floor((101)*runiform()+0))\n. * 100-0+1 a\n. * b -a a\n. * max min \n. *int=整數\n. *0~100有101個整數\n. *runiform=平均分布\n. su x, d\n                              x\n-------------------------------------------------------------\n      Percentiles      Smallest\n  1%           0              0\n  5%           4              0\n 10%          10              0      Obs              100,000\n 25%          25              0      Sum of Wgt.      100,000\n 50%          50                     Mean            50.00145\n                        Largest      Std. Dev.       29.18721\n 75%          75            100\n 90%          90            100      Variance         851.893\n 95%          95            100      Skewness       -.0033492\n 99%          99            100      Kurtosis         1.79898\n. sort x`} lang="output" />
           </>
         ),
       },
