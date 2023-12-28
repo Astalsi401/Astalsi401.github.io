@@ -78,15 +78,6 @@ class Content extends React.Component {
           </>
         ),
       },
-      {
-        title: "",
-        content: (
-          <>
-            <CodeChunk code={``} lang="stata" />
-            <CodeChunk code={``} lang="output" />
-          </>
-        ),
-      },
     ];
   }
   render() {
