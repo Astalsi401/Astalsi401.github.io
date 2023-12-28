@@ -3988,6 +3988,14 @@ table td {
   color: var(--main-bg);
 }
 
+.social-link {
+  --w: 30px;
+}
+.social-link img {
+  width: var(--w);
+  height: var(--w);
+}
+
 .homePageIcon {
   display: block;
   width: min(80px, 100%);

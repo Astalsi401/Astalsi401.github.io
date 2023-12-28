@@ -42,3 +42,10 @@
     }
   }
 }
+.social-link {
+  --w: 30px;
+  img {
+    width: var(--w);
+    height: var(--w);
+  }
+}

@@ -37,12 +37,12 @@ function Sidebar({ category, sidebarActive, wrapperRef }) {
   if (indexLoaded) {
     return (
       <aside id="sidebar" className={sidebarActive ? "active" : undefined} ref={wrapperRef}>
-        <h1 className="my-5 text-center">
+        <h1 className="pt-5 pb-3 text-center">
           <a id="sidebarAnchor" className="text-decoration-none" href={`${domain}${index.href}`}>
             {index.category}
           </a>
         </h1>
-        <ul className="menu">
+        <ul className="py-3 menu">
           {index.pages.map((p, i) => (
             <li key={i} className={p.section ? "has-children" : ""} onClick={click}>
               <a className="px-3 text-decoration-none text-large text-bold" href={`${domain}${p.href}`}>
@@ -52,7 +52,11 @@ function Sidebar({ category, sidebarActive, wrapperRef }) {
             </li>
           ))}
         </ul>
-        <div className="d-flex"></div>
+        <div className="pt-3 pb-5 d-flex justify-content-center align-items-center">
+          <a className="social-link d-block" href="https://github.com/Astalsi401" target="_blank" title="My GitHub">
+            <img src={`${domain}/assets/images/github-mark.svg`} alt="github-mark" />
+          </a>
+        </div>
       </aside>
     );
   }
