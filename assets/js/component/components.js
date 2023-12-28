@@ -1,12 +1,26 @@
 const { useState, useEffect, useRef, useMemo } = React;
 const active = "active";
+const doamin = location.origin;
 const toggleActive = (stateActive) => (stateActive ? active : "");
+const useIndexData = (category) => {
+  const [index, setIndex] = useState({});
+  const [indexLoaded, setIndexLoaded] = useState(false);
+  useEffect(() => {
+    fetch(`${doamin}/assets/js/json/index.json`)
+      .then((res) => res.json())
+      .then((data) => {
+        setIndex(data.index.find((d) => d.category === category));
+        setIndexLoaded(true);
+      });
+  }, [category]);
+  return { index, indexLoaded };
+};
 
 function SidebarChild({ sections, childrenActive }) {
   return (
     <ul className={`children ${toggleActive(childrenActive)}`}>
-      {sections.map((s, i) => (
-        <li key={i}>
+      {sections.map((s) => (
+        <li key={s.title}>
           <a className="ps-4 text-decoration-none" href={s.href}>
             {s.title}
           </a>
@@ -17,30 +31,21 @@ function SidebarChild({ sections, childrenActive }) {
 }
 
 function Sidebar({ category, sidebarActive }) {
-  const [index, setIndex] = useState({});
-  const [indexLoaded, setIndexLoaded] = useState(false);
+  const { index, indexLoaded } = useIndexData(category);
   const [childrenActive, setChildrenActive] = useState(false);
   const click = () => setChildrenActive((prev) => !prev);
-  useEffect(() => {
-    fetch("https://astalsi401.github.io/assets/js/json/index.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setIndex(data.index.find((d) => d.category === category));
-        setIndexLoaded(true);
-      });
-  }, [category]);
   if (indexLoaded) {
     return (
       <aside id="sidebar" className={sidebarActive ? "active" : undefined}>
         <h1 className="my-5 text-center">
-          <a id="sidebarAnchor" className="text-decoration-none" href={index.href}>
+          <a id="sidebarAnchor" className="text-decoration-none" href={`${doamin}${index.href}`}>
             {index.category}
           </a>
         </h1>
         <ul className="menu">
           {index.pages.map((p, i) => (
             <li key={i} className={p.section ? "has-children" : ""} onClick={click}>
-              <a className="px-3 text-decoration-none text-large text-bold" href={p.href}>
+              <a className="px-3 text-decoration-none text-large text-bold" href={`${doamin}${p.href}`}>
                 {p.page}
               </a>
               {p.section && <SidebarChild sections={p.section} childrenActive={childrenActive} />}
@@ -90,7 +95,7 @@ function Header({ category }) {
           <div className={`hamberger ${toggleActive(sidebarActive)}`} onClick={handleClick}>
             <span></span>
           </div>
-          <a href="https://astalsi401.github.io/" className="home">
+          <a href={doamin} className="home">
             <svg viewBox="0 0 500 500">
               <path d="M250 100 L450 230,350 230,350 400,150 400,150 230,50 230,250 100"></path>
             </svg>
@@ -194,16 +199,7 @@ function ZoomImage({ id, className, src, alt }) {
 }
 
 function IndexPage({ subtitle, category }) {
-  const [index, setIndex] = useState({});
-  const [indexLoaded, setIndexLoaded] = useState(false);
-  useEffect(() => {
-    fetch("https://astalsi401.github.io/assets/js/json/index.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setIndex(data.index.find((d) => d.category === category));
-        setIndexLoaded(true);
-      });
-  }, [category]);
+  const { index, indexLoaded } = useIndexData(category);
   if (indexLoaded) {
     return (
       <div className="index my-5">
@@ -211,7 +207,7 @@ function IndexPage({ subtitle, category }) {
         <ul className="mx-auto my-3 text-center w-lg-50 w-100">
           {index.pages.map((page) => (
             <li key={page.page} className="my-2">
-              <a className="p-2" href={page.href}>
+              <a className="p-2" href={`${doamin}${page.href}`}>
                 {page.page}
               </a>
             </li>

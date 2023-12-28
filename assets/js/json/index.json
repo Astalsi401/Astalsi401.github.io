@@ -1,99 +1,99 @@
 {
   "index": [
     {
-      "category": "HOME",
-      "href": "https://astalsi401.github.io/",
+      "category": "Home",
+      "href": "",
       "pages": [
-        { "page": "Stata", "href": "https://astalsi401.github.io/stata/index.html", "icon": "https://astalsi401.github.io/assets/images/stata.png" },
-        { "page": "R", "href": "https://astalsi401.github.io/R/r_index.html", "icon": "https://astalsi401.github.io/assets/images/R.png" },
-        { "page": "Notes", "href": "https://astalsi401.github.io/notes/notes_index.html", "icon": "https://astalsi401.github.io/assets/images/notes.png" },
-        { "page": "Portfolio", "href": "https://astalsi401.github.io/portfolio/portfolio_index.html", "icon": "https://astalsi401.github.io/assets/images/portfolio.svg" }
+        { "page": "Stata", "href": "/stata/index.html", "icon": "/assets/images/stata.png" },
+        { "page": "R", "href": "/R/r_index.html", "icon": "/assets/images/R.png" },
+        { "page": "Notes", "href": "/notes/notes_index.html", "icon": "/assets/images/notes.png" },
+        { "page": "Portfolio", "href": "/portfolio/portfolio_index.html", "icon": "/assets/images/portfolio.svg" }
       ]
     },
     {
       "category": "Notes",
-      "href": "https://astalsi401.github.io/notes/notes_index.html",
+      "href": "/notes/notes_index.html",
       "pages": [
         {
           "page": "cmder筆記",
-          "href": "https://astalsi401.github.io/notes/cmder/setting.html",
+          "href": "/notes/cmder/setting.html",
           "section": [
-            { "title": "安裝", "href": "https://astalsi401.github.io/notes/cmder/setting.html#install" },
-            { "title": "基礎設定", "href": "https://astalsi401.github.io/notes/cmder/setting.html#settings" },
-            { "title": "Cmder & Git", "href": "https://astalsi401.github.io/notes/cmder/setting.html#cmder_git" },
-            { "title": "Cmder & Sublime Text 3", "href": "https://astalsi401.github.io/notes/cmder/setting.html#cmder_sublime" },
-            { "title": "Cmder快捷鍵", "href": "https://astalsi401.github.io/notes/cmder/setting.html#cmder_hotkey" }
+            { "title": "安裝", "href": "/notes/cmder/setting.html#install" },
+            { "title": "基礎設定", "href": "/notes/cmder/setting.html#settings" },
+            { "title": "Cmder & Git", "href": "/notes/cmder/setting.html#cmder_git" },
+            { "title": "Cmder & Sublime Text 3", "href": "/notes/cmder/setting.html#cmder_sublime" },
+            { "title": "Cmder快捷鍵", "href": "/notes/cmder/setting.html#cmder_hotkey" }
           ]
         },
-        { "page": "mysql筆記", "href": "https://astalsi401.github.io/notes/mysql/mysql.html" },
-        { "page": "php筆記", "href": "https://astalsi401.github.io/notes/php/php.html" },
-        { "page": "Python筆記", "href": "https://astalsi401.github.io/notes/python/python.html" },
-        { "page": "JavaScript筆記", "href": "https://astalsi401.github.io/notes/JavaScript/JavaScript.html" },
-        { "page": "Html & Css", "href": "https://astalsi401.github.io/notes/html-css/html&css.html" }
+        { "page": "mysql筆記", "href": "/notes/mysql/mysql.html" },
+        { "page": "php筆記", "href": "/notes/php/php.html" },
+        { "page": "Python筆記", "href": "/notes/python/python.html" },
+        { "page": "JavaScript筆記", "href": "/notes/JavaScript/JavaScript.html" },
+        { "page": "Html & Css", "href": "/notes/html-css/html&css.html" }
       ]
     },
     {
       "category": "Forza Horizon 4",
-      "href": "https://astalsi401.github.io/notes/notes_index.html",
+      "href": "/notes/notes_index.html",
       "pages": [
-        { "page": "車輛升級", "href": "https://astalsi401.github.io/notes/fh4/upgrade.html" },
-        { "page": "基礎調教", "href": "https://astalsi401.github.io/notes/fh4/basic_tune.html" },
-        { "page": "調教分享", "href": "https://astalsi401.github.io/notes/fh4/tune_list.html" }
+        { "page": "車輛升級", "href": "/notes/fh4/upgrade.html" },
+        { "page": "基礎調教", "href": "/notes/fh4/basic_tune.html" },
+        { "page": "調教分享", "href": "/notes/fh4/tune_list.html" }
       ]
     },
     {
       "category": "Stata",
-      "href": "https://astalsi401.github.io/stata/index.html",
+      "href": "/stata/index.html",
       "pages": [
-        { "page": "資料輸入與表格呈現", "href": "https://astalsi401.github.io/stata/001-input_tab.html" },
-        { "page": "匯入與匯出", "href": "https://astalsi401.github.io/stata/002-import_export.html" },
-        { "page": "檢視資料", "href": "https://astalsi401.github.io/stata/003-data_des.html" },
-        { "page": "整理資料檔", "href": "https://astalsi401.github.io/stata/004-data_sort.html" },
-        { "page": "迴圈", "href": "https://astalsi401.github.io/stata/005-stata_loop.html" },
-        { "page": "繪圖", "href": "https://astalsi401.github.io/stata/006-graph.html" },
-        { "page": "z-score", "href": "https://astalsi401.github.io/stata/007-zscore.html" },
-        { "page": "t test", "href": "https://astalsi401.github.io/stata/008-ttest.html" },
-        { "page": "Anova Test", "href": "https://astalsi401.github.io/stata/009-Anova_Test.html" },
-        { "page": "非參數顯著性檢定", "href": "https://astalsi401.github.io/stata/010-nonparametric_statistics.html" },
-        { "page": "中位數檢驗（Median Test）", "href": "https://astalsi401.github.io/stata/011-median_test.html" },
-        { "page": "相關係數", "href": "https://astalsi401.github.io/stata/012-correlation.html" },
-        { "page": "迴歸分析", "href": "https://astalsi401.github.io/stata/013-regression.html" },
-        { "page": "因素分析", "href": "https://astalsi401.github.io/stata/014-factor_analysis.html" },
-        { "page": "邏輯分析（Logistic Analysis）", "href": "https://astalsi401.github.io/stata/015-logisitic_analysis.html" },
-        { "page": "Sublime Text 3 & Stata", "href": "https://astalsi401.github.io/stata/other_01-st3.html" },
-        { "page": "Html & Stata", "href": "https://astalsi401.github.io/stata/other_02-html.html" }
+        { "page": "資料輸入與表格呈現", "href": "/stata/001-input_tab.html" },
+        { "page": "匯入與匯出", "href": "/stata/002-import_export.html" },
+        { "page": "檢視資料", "href": "/stata/003-data_des.html" },
+        { "page": "整理資料檔", "href": "/stata/004-data_sort.html" },
+        { "page": "迴圈", "href": "/stata/005-stata_loop.html" },
+        { "page": "繪圖", "href": "/stata/006-graph.html" },
+        { "page": "z-score", "href": "/stata/007-zscore.html" },
+        { "page": "t test", "href": "/stata/008-ttest.html" },
+        { "page": "Anova Test", "href": "/stata/009-Anova_Test.html" },
+        { "page": "非參數顯著性檢定", "href": "/stata/010-nonparametric_statistics.html" },
+        { "page": "中位數檢驗（Median Test）", "href": "/stata/011-median_test.html" },
+        { "page": "相關係數", "href": "/stata/012-correlation.html" },
+        { "page": "迴歸分析", "href": "/stata/013-regression.html" },
+        { "page": "因素分析", "href": "/stata/014-factor_analysis.html" },
+        { "page": "邏輯分析（Logistic Analysis）", "href": "/stata/015-logisitic_analysis.html" },
+        { "page": "Sublime Text 3 & Stata", "href": "/stata/other_01-st3.html" },
+        { "page": "Html & Stata", "href": "/stata/other_02-html.html" }
       ]
     },
     {
       "category": "R",
-      "href": "https://astalsi401.github.io/R/r_index.html",
+      "href": "/R/r_index.html",
       "pages": [
-        { "page": "基礎操作與資料輸入", "href": "https://astalsi401.github.io/R/001-data_input.html" },
-        { "page": "資料匯入與匯出", "href": "https://astalsi401.github.io/R/002-import_export.html" },
-        { "page": "網絡分析（一）", "href": "https://astalsi401.github.io/R/003-social_network_1.html" },
-        { "page": "網絡分析（二）", "href": "https://astalsi401.github.io/R/004-social_network_2.html" }
+        { "page": "基礎操作與資料輸入", "href": "/R/001-data_input.html" },
+        { "page": "資料匯入與匯出", "href": "/R/002-import_export.html" },
+        { "page": "網絡分析（一）", "href": "/R/003-social_network_1.html" },
+        { "page": "網絡分析（二）", "href": "/R/004-social_network_2.html" }
       ]
     },
     {
       "category": "Portfolio",
-      "href": "https://astalsi401.github.io/portfolio/portfolio_index.html",
+      "href": "/portfolio/portfolio_index.html",
       "pages": [
-        { "page": "2023 Healthcare EXPO Taiwan Floor Map", "href": "https://astalsi401.github.io/portfolio/javascript-floormap/javascript-floormap.html", "thumbnail": "https://astalsi401.github.io/assets/images/2023floormap.png", "tags": ["html", "css", "javascript", "js", "react"] },
-        { "page": "FreeCodeCamp D3.js Heatmap", "href": "https://astalsi401.github.io/portfolio/javascript-d3js-heatmap/d3js_heatmap.html", "thumbnail": "https://astalsi401.github.io/assets/images/heatmap.png", "tags": ["d3js", "javascript", "js", "svg"] },
-        { "page": "FreeCodeCamp D3.js Choropleth Map", "href": "https://astalsi401.github.io/portfolio/javascript-d3js-choropleth-map/d3js_choropleth-map.html", "thumbnail": "https://astalsi401.github.io/assets/images/choropleth-map.png", "tags": ["d3js", "javascript", "js", "svg"] },
-        { "page": "FreeCodeCamp D3.js Treemap", "href": "https://astalsi401.github.io/portfolio/javascript-d3js-treemap/d3js-treemap.html", "thumbnail": "https://astalsi401.github.io/assets/images/treemap.png", "tags": ["d3js", "javascript", "js", "svg"] },
-        { "page": "D3.js Basic Chart", "href": "https://astalsi401.github.io/portfolio/javascript-d3js-basic-chart/d3js-basic-chart.html", "thumbnail": "https://astalsi401.github.io/assets/images/d3js-basic-chart.png", "tags": ["d3js", "javascript", "js", "svg"] },
-        { "page": "Leaflet SNQ Map", "href": "https://astalsi401.github.io/portfolio/javascript-leaflet-snq-map/leaflet-snq.map.html", "thumbnail": "https://astalsi401.github.io/assets/images/snqMap.png", "tags": ["leaflet", "javascript", "js"] },
-        { "page": "2023臺灣醫療科技展參展辦法頁", "href": "https://expo.taiwan-healthcare.org/zh/exhibit.php", "thumbnail": "https://astalsi401.github.io/assets/images/expoPage1.png", "tags": ["html", "css", "javascript", "js"] },
-        { "page": "2022臺灣醫療科技展 醫師聊健康活動頁", "href": "https://expo.taiwan-healthcare.org/visit-website/lecture", "thumbnail": "https://astalsi401.github.io/assets/images/visitPage1.png", "tags": ["html", "css", "javascript", "js"] },
-        { "page": "Healthcare B2B 申請進駐頁面", "href": "https://www.taiwan-healthcare.org/zh/b2b-intro", "thumbnail": "https://astalsi401.github.io/assets/images/HealthcareB2B-page1.png", "tags": ["html", "css", "javascript", "js"] },
-        { "page": "Python GA4 API 串接", "href": "https://astalsi401.github.io/portfolio/python-ga4-api/python-ga4-api.html", "thumbnail": "python", "tags": ["python", "ga4", "google analytics"] },
-        { "page": "Loading Animation", "href": "https://astalsi401.github.io/portfolio/css-loading-animation/css-loading-animation.html", "thumbnail": "https://astalsi401.github.io/assets/images/css-loading1.png", "tags": ["css", "html"] },
-        { "page": "Fun Js Hover Effect", "href": "https://astalsi401.github.io/portfolio/fun-hover-effect/fun-hover-effect.html", "thumbnail": "https://astalsi401.github.io/assets/images/js-hover-effect1.png", "tags": ["css", "html", "js", "hover animation"] },
-        { "page": "JS圖片輪播", "href": "https://astalsi401.github.io/portfolio/javascript-image-switch/javascript-image-switch.html", "thumbnail": "https://astalsi401.github.io/assets/images/js-image-switch2.png", "tags": ["css", "html", "js", "javascript"] },
-        { "page": "JS Image Zoom On Click", "href": "https://astalsi401.github.io/portfolio/javascript-image-zoom/image-zoom.html", "thumbnail": "js", "tags": ["css", "html", "js", "javascript"] },
-        { "page": "JS Image Zoom On Hover", "href": "https://astalsi401.github.io/portfolio/javascript-image-zoom-onhover/image-zoom-onhover.html", "thumbnail": "js", "tags": ["css", "html", "js", "javascript"] },
-        { "page": "Image Scroll On Hover", "href": "https://astalsi401.github.io/portfolio/css-image-scroll-onhover/image-scroll-onhover.html", "thumbnail": "css", "tags": ["css", "html"] }
+        { "page": "2023 Healthcare EXPO Taiwan Floor Map", "href": "/portfolio/javascript-floormap/javascript-floormap.html", "thumbnail": "/assets/images/2023floormap.png", "tags": ["html", "css", "javascript", "js", "react"] },
+        { "page": "FreeCodeCamp D3.js Heatmap", "href": "/portfolio/javascript-d3js-heatmap/d3js_heatmap.html", "thumbnail": "/assets/images/heatmap.png", "tags": ["d3js", "javascript", "js", "svg"] },
+        { "page": "FreeCodeCamp D3.js Choropleth Map", "href": "/portfolio/javascript-d3js-choropleth-map/d3js_choropleth-map.html", "thumbnail": "/assets/images/choropleth-map.png", "tags": ["d3js", "javascript", "js", "svg"] },
+        { "page": "FreeCodeCamp D3.js Treemap", "href": "/portfolio/javascript-d3js-treemap/d3js-treemap.html", "thumbnail": "/assets/images/treemap.png", "tags": ["d3js", "javascript", "js", "svg"] },
+        { "page": "D3.js Basic Chart", "href": "/portfolio/javascript-d3js-basic-chart/d3js-basic-chart.html", "thumbnail": "/assets/images/d3js-basic-chart.png", "tags": ["d3js", "javascript", "js", "svg"] },
+        { "page": "Leaflet SNQ Map", "href": "/portfolio/javascript-leaflet-snq-map/leaflet-snq.map.html", "thumbnail": "/assets/images/snqMap.png", "tags": ["leaflet", "javascript", "js"] },
+        { "page": "2023臺灣醫療科技展參展辦法頁", "href": "https://expo.taiwan-healthcare.org/zh/exhibit.php", "thumbnail": "/assets/images/expoPage1.png", "tags": ["html", "css", "javascript", "js"] },
+        { "page": "2022臺灣醫療科技展 醫師聊健康活動頁", "href": "https://expo.taiwan-healthcare.org/visit-website/lecture", "thumbnail": "/assets/images/visitPage1.png", "tags": ["html", "css", "javascript", "js"] },
+        { "page": "Healthcare B2B 申請進駐頁面", "href": "https://www.taiwan-healthcare.org/zh/b2b-intro", "thumbnail": "/assets/images/HealthcareB2B-page1.png", "tags": ["html", "css", "javascript", "js"] },
+        { "page": "Python GA4 API 串接", "href": "/portfolio/python-ga4-api/python-ga4-api.html", "thumbnail": "python", "tags": ["python", "ga4", "google analytics"] },
+        { "page": "Loading Animation", "href": "/portfolio/css-loading-animation/css-loading-animation.html", "thumbnail": "/assets/images/css-loading1.png", "tags": ["css", "html"] },
+        { "page": "Fun Js Hover Effect", "href": "/portfolio/fun-hover-effect/fun-hover-effect.html", "thumbnail": "/assets/images/js-hover-effect1.png", "tags": ["css", "html", "js", "hover animation"] },
+        { "page": "JS圖片輪播", "href": "/portfolio/javascript-image-switch/javascript-image-switch.html", "thumbnail": "/assets/images/js-image-switch2.png", "tags": ["css", "html", "js", "javascript"] },
+        { "page": "JS Image Zoom On Click", "href": "/portfolio/javascript-image-zoom/image-zoom.html", "thumbnail": "js", "tags": ["css", "html", "js", "javascript"] },
+        { "page": "JS Image Zoom On Hover", "href": "/portfolio/javascript-image-zoom-onhover/image-zoom-onhover.html", "thumbnail": "js", "tags": ["css", "html", "js", "javascript"] },
+        { "page": "Image Scroll On Hover", "href": "/portfolio/css-image-scroll-onhover/image-scroll-onhover.html", "thumbnail": "css", "tags": ["css", "html"] }
       ]
     }
   ]
