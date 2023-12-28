@@ -30,13 +30,13 @@ function SidebarChild({ sections, childrenActive }) {
   );
 }
 
-function Sidebar({ category, sidebarActive }) {
+function Sidebar({ category, sidebarActive, wrapperRef }) {
   const { index, indexLoaded } = useIndexData(category);
   const [childrenActive, setChildrenActive] = useState(false);
   const click = () => setChildrenActive((prev) => !prev);
   if (indexLoaded) {
     return (
-      <aside id="sidebar" className={sidebarActive ? "active" : undefined}>
+      <aside id="sidebar" className={sidebarActive ? "active" : undefined} ref={wrapperRef}>
         <h1 className="my-5 text-center">
           <a id="sidebarAnchor" className="text-decoration-none" href={`${domain}${index.href}`}>
             {index.category}
@@ -91,7 +91,7 @@ function Header({ category }) {
   return (
     <>
       <Accessibility />
-      <header id="header" ref={wrapperRef}>
+      <header id="header">
         <nav id="navbar">
           <div className={`hamberger ${toggleActive(sidebarActive)}`} onClick={handleClick}>
             <span></span>
@@ -102,7 +102,7 @@ function Header({ category }) {
             </svg>
           </a>
         </nav>
-        <Sidebar sidebarActive={sidebarActive} category={category} />
+        <Sidebar sidebarActive={sidebarActive} category={category} wrapperRef={wrapperRef} />
       </header>
     </>
   );
