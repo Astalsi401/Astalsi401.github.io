@@ -3844,7 +3844,7 @@ table td {
 
 #navbar {
   --bg: var(--main-bg);
-  --bg-active: var(--secondary);
+  --elem-active: var(--secondary);
   --elem: var(--primary);
   position: relative;
   z-index: 3;
@@ -3861,7 +3861,7 @@ table td {
   cursor: pointer;
   width: var(--nav-h);
   height: var(--nav-h);
-  background: var(--elem);
+  background: var(--bg);
   top: 0;
 }
 
@@ -3875,7 +3875,7 @@ table td {
   content: "";
   position: absolute;
   display: block;
-  background: var(--bg);
+  background: var(--elem);
   width: calc(var(--nav-h) * 0.8);
   height: 4px;
   border-radius: 2px;
@@ -3888,20 +3888,20 @@ table td {
   top: 10px;
 }
 .hamberger:hover, .hamberger:focus {
-  background: var(--bg);
-}
-.hamberger:hover span, .hamberger:hover span::before, .hamberger:hover span::after, .hamberger:focus span, .hamberger:focus span::before, .hamberger:focus span::after {
   background: var(--elem);
 }
+.hamberger:hover span, .hamberger:hover span::before, .hamberger:hover span::after, .hamberger:focus span, .hamberger:focus span::before, .hamberger:focus span::after {
+  background: var(--bg);
+}
 .hamberger.active {
-  background: var(--bg-active);
+  background: var(--bg);
 }
 .hamberger.active span {
   background: var(--primary-0);
 }
 .hamberger.active span::before, .hamberger.active span::after {
   top: 0;
-  background: var(--bg);
+  background: var(--elem-active);
 }
 .hamberger.active span::before {
   transform: rotate(45deg);
@@ -3910,22 +3910,22 @@ table td {
   transform: rotate(-45deg);
 }
 .hamberger.active:hover, .hamberger.active:focus {
-  background: var(--primary-0);
+  background: var(--elem-active);
 }
 .hamberger.active:hover span::before, .hamberger.active:hover span::after, .hamberger.active:focus span::before, .hamberger.active:focus span::after {
-  background: var(--bg-active);
+  background: var(--bg);
 }
 
 .home {
   right: 0;
 }
 .home svg {
-  background-color: var(--elem);
-  fill: var(--main-bg);
-}
-.home:hover svg, .home:focus svg {
   background-color: var(--main-bg);
   fill: var(--elem);
+}
+.home:hover svg, .home:focus svg {
+  background-color: var(--elem);
+  fill: var(--main-bg);
 }
 
 .accessibility {

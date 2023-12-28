@@ -1,12 +1,12 @@
 const { useState, useEffect, useRef, useMemo } = React;
 const active = "active";
-const doamin = location.origin;
+const domain = location.origin;
 const toggleActive = (stateActive) => (stateActive ? active : "");
 const useIndexData = (category) => {
   const [index, setIndex] = useState({});
   const [indexLoaded, setIndexLoaded] = useState(false);
   useEffect(() => {
-    fetch(`${doamin}/assets/js/json/index.json`)
+    fetch(`${domain}/assets/js/json/index.json`)
       .then((res) => res.json())
       .then((data) => {
         setIndex(data.index.find((d) => d.category === category));
@@ -38,20 +38,21 @@ function Sidebar({ category, sidebarActive }) {
     return (
       <aside id="sidebar" className={sidebarActive ? "active" : undefined}>
         <h1 className="my-5 text-center">
-          <a id="sidebarAnchor" className="text-decoration-none" href={`${doamin}${index.href}`}>
+          <a id="sidebarAnchor" className="text-decoration-none" href={`${domain}${index.href}`}>
             {index.category}
           </a>
         </h1>
         <ul className="menu">
           {index.pages.map((p, i) => (
             <li key={i} className={p.section ? "has-children" : ""} onClick={click}>
-              <a className="px-3 text-decoration-none text-large text-bold" href={`${doamin}${p.href}`}>
+              <a className="px-3 text-decoration-none text-large text-bold" href={`${domain}${p.href}`}>
                 {p.page}
               </a>
               {p.section && <SidebarChild sections={p.section} childrenActive={childrenActive} />}
             </li>
           ))}
         </ul>
+        <div className="d-flex"></div>
       </aside>
     );
   }
@@ -95,7 +96,7 @@ function Header({ category }) {
           <div className={`hamberger ${toggleActive(sidebarActive)}`} onClick={handleClick}>
             <span></span>
           </div>
-          <a href={doamin} className="home">
+          <a href={domain} className="home">
             <svg viewBox="0 0 500 500">
               <path d="M250 100 L450 230,350 230,350 400,150 400,150 230,50 230,250 100"></path>
             </svg>
@@ -207,7 +208,7 @@ function IndexPage({ subtitle, category }) {
         <ul className="mx-auto my-3 text-center w-lg-50 w-100">
           {index.pages.map((page) => (
             <li key={page.page} className="my-2">
-              <a className="p-2" href={`${doamin}${page.href}`}>
+              <a className="p-2" href={`${domain}${page.href}`}>
                 {page.page}
               </a>
             </li>
