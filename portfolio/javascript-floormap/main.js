@@ -195,7 +195,7 @@ const Floormap = ({ data, elementStatus, setElementStatus, handleBoothInfo, sear
   };
   const handleEnd = (e) => {
     let distance = (distance = e.changedTouches ? e.changedTouches[0].clientX + e.changedTouches[0].clientY : e.clientX + e.clientY);
-    return setElementStatus((prev) => ({ ...prev, test: false, dragStatus: { ...prev.dragStatus, moving: false, previousTouch: null, previousTouchLength: null }, distance: distance - prev.distance }));
+    setElementStatus((prev) => ({ ...prev, test: false, dragStatus: { ...prev.dragStatus, moving: false, previousTouch: null, previousTouchLength: null }, distance: distance - prev.distance }));
   };
   const handleTouchDragZoom = (e) => {
     e.preventDefault();
@@ -795,7 +795,6 @@ const MainArea = () => {
     }));
   }, [searchCondition.string, elementStatus.inputTimer]);
   if (!floorData.loaded) return <Loading />;
-  console.log(filterFloorData);
   return (
     <StrictMode>
       <div className="fp-main" style={{ "--sidebar-width": `${elementStatus.sidebarWidth}px`, "--tags-height": `${elementStatus.tagsHeight}px` }}>

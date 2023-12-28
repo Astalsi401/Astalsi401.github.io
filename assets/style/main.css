@@ -4105,6 +4105,9 @@ pre.language-output {
 .copyBtn:hover, .copyBtn:focus {
   opacity: 1;
 }
+.copyBtn:active {
+  opacity: 0.3;
+}
 .copyBtn::before {
   transition: inherit;
   content: "copied!";
