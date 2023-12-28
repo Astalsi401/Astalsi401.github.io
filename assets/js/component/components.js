@@ -77,9 +77,10 @@ function Accessibility() {
 function Header({ category }) {
   const [sidebarActive, setSidebarActive] = useState(false);
   const wrapperRef = useRef(null);
+  const btnRef = useRef(null);
   const handleFocusIn = ({ target }) => setSidebarActive(wrapperRef.current.contains(target) ? true : false);
   const handleClick = () => setSidebarActive((prev) => !prev);
-  const handleClickOut = ({ target }) => setSidebarActive((prev) => (wrapperRef.current && !wrapperRef.current.contains(target) ? false : prev));
+  const handleClickOut = ({ target }) => setSidebarActive((prev) => (wrapperRef.current && !wrapperRef.current.contains(target) && !btnRef.current.contains(target) ? false : prev));
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOut);
     document.addEventListener("focusin", handleFocusIn);
@@ -93,7 +94,7 @@ function Header({ category }) {
       <Accessibility />
       <header id="header">
         <nav id="navbar">
-          <div className={`hamberger ${toggleActive(sidebarActive)}`} onClick={handleClick}>
+          <div className={`hamberger ${toggleActive(sidebarActive)}`} onClick={handleClick} ref={btnRef}>
             <span></span>
           </div>
           <a href={domain} className="home">
