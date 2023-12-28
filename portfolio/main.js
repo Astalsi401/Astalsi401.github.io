@@ -1,8 +1,8 @@
 const Content = () => {
   const logo = {
-    python: "https://astalsi401.github.io/assets/images/python-logo.svg",
-    css: "https://astalsi401.github.io/assets/images/CSS3-logo.svg",
-    js: "https://astalsi401.github.io/assets/images/js-logo.svg",
+    python: `${domain}/assets/images/python-logo.svg`,
+    css: `${domain}/assets/images/CSS3-logo.svg`,
+    js: `${domain}/assets/images/js-logo.svg`,
   };
   const { index, indexLoaded } = useIndexData("Portfolio");
   if (indexLoaded) {

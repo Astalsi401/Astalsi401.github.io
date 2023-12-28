@@ -314,17 +314,17 @@ class Content extends React.Component {
               </h4>
               <p>決定過彎抓地力，調整至踩著油門過彎時外側車輪時接近0°。</p>
               <p>也可以從車輪溫度調整，內側過高，增加外傾角；外側過高，減少外傾角。調整至車輪溫度內側&gt;中間&gt;外側，但差異不要太大（個位數，最好5°C內）</p>
-              <ZoomImage className="my-2 mx-auto image-normal" src="https://astalsi401.github.io/assets/images/camber.png" />
+              <ZoomImage className="my-2 mx-auto image-normal" src={`${domain}/assets/images/camber.png`} />
               <h4>
                 <li>束角：</li>
               </h4>
               <p>影響轉向能力，束角越大，轉向角度越大，直線時越不穩定。下圖為前+後-。拉力賽容許更大的前束角。調整束角時建議以0.1為單位慢慢調整。</p>
-              <ZoomImage className="my-2 mx-auto image-normal" src="https://astalsi401.github.io/assets/images/toe.png" />
+              <ZoomImage className="my-2 mx-auto image-normal" src={`${domain}/assets/images/toe.png`} />
               <h4>
                 <li>前後傾角（4°~6°）：</li>
               </h4>
               <p>越高，直線時外傾角越穩定，但過彎時將增加負外傾角。在某些情況下，調到太高有可能使車輛重心過度自行回正，導致難以預測的移動。</p>
-              <ZoomImage className="my-2 mx-auto image-normal" src="https://astalsi401.github.io/assets/images/caster.png" />
+              <ZoomImage className="my-2 mx-auto image-normal" src={`${domain}/assets/images/caster.png`} />
             </ol>
           </>
         ),
@@ -353,7 +353,7 @@ class Content extends React.Component {
               </li>
               <p>調整尺比時需要先理解Power Band（功率帶）的觀念，即車輛產生最大動力的區間。如果在遊戲內使用英制單位，進入引擎升級，從性能圖表中可發現馬力與扭力約在5200轉時交叉，這個點即是功率帶。不過在競速中，維持高轉速非常重要，因此功率帶還要再往上升一些，大至落在6500轉左右，會隨不同車輛與改裝而有所不同。只能實際駕駛後依手感確認。</p>
               <p>調整至1檔起跑只會碰到紅區1~2次，第3次時就應該上2檔，2檔轉速與功率帶銜接。影片中正是在約6500轉時上2檔，之後每次升檔轉速都比前一檔稍微高2~300轉。</p>
-              <ZoomImage className="my-2 mx-auto image-normal" src="https://astalsi401.github.io/assets/images/powerBand.png" />
+              <ZoomImage className="my-2 mx-auto image-normal" src={`${domain}/assets/images/powerBand.png`} />
               <li>
                 <a href="https://forum.gamer.com.tw/Co.php?bsn=7697&sn=18681&subbsn=7&bPage=0">halcyon1211</a>的調法：
               </li>
@@ -379,7 +379,7 @@ class Content extends React.Component {
                   <b>方法1：</b>首先找到適合甩尾的動力區間，然後把3檔及之後的檔位都調整至接近這個區間。最後齒比看起來會類似下圖：
                 </p>
               </li>
-              <ZoomImage className="my-2 mx-auto image-normal" scr="https://astalsi401.github.io/assets/images/driftGear.png" />
+              <ZoomImage className="my-2 mx-auto image-normal" scr={`${domain}/assets/images/driftGear.png`} />
               <li>
                 <p>
                   <b>方法2：</b>將前四檔調整為Formula Drift系列的齒比，其餘檔位隨意，最後再視駕駛手感調整最終傳動比。

@@ -8,7 +8,7 @@ class Content extends React.Component {
           <>
             <CodeChunk code={`twoway (function y=normalden(x) , range(-4 4)        ///\n        droplines(-2 -1 0 1 2)),                       ///\n        title("常態分配曲線")                         ///\n        plotregion(margin(zero))                       ///\n        yscale(off) ylabel(, nogrid)                   ///\n        xlabel(-4 -3 -2 -1 0 1 2 3 4, format(%4.2f))       ///\n        xtitle("Standard deviations") \ngraph export "normal curve.png", replace`} lang="stata" />
             <CodeChunk code={`. twoway (function y=normalden(x) , range(-4 4)        ///\n>         droplines(-2 -1 0 1 2)),                       ///\n>         title("常態分配曲線")                         ///\n>         plotregion(margin(zero))                       ///\n>         yscale(off) ylabel(, nogrid)                   ///\n>         xlabel(-4 -3 -2 -1 0 1 2 3 4, format(%4.2f))       ///\n>         xtitle("Standard deviations") \n\n. graph export "normal curve.png", replace\n(file normal curve.png written in PNG format)`} lang="output" />
-            <ZoomImage className="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/normal-curve.png" />
+            <ZoomImage className="w-lg-50 w-sm-75 mx-auto" src={`${domain}/assets/images/normal-curve.png`} />
             <div className="c-my-2">
               <p>
                 <b>Kernel density estimation</b>
@@ -20,8 +20,8 @@ class Content extends React.Component {
                 lang="output"
               />
               <div className="row">
-                <ZoomImage className="col-md-6 px-md-1" src="https://astalsi401.github.io/assets/images/tabplot01.png" />
-                <ZoomImage className="col-md-6 px-md-1" src="https://astalsi401.github.io/assets/images/kdnesity01.png" />
+                <ZoomImage className="col-md-6 px-md-1" src={`${domain}/assets/images/tabplot01.png`} />
+                <ZoomImage className="col-md-6 px-md-1" src={`${domain}/assets/images/kdnesity01.png`} />
               </div>
             </div>
           </>

@@ -36,7 +36,7 @@ class Content extends React.Component {
               <CodeChunk code={`fauxhs.net <- graph_from_adjacency_matrix(fauxhs.mat, mode = "direct", weighted = NULL)\nfauxhs.net`} lang="r" />
               <CodeChunk code={`## IGRAPH fa10430 DN-- 120 370 -- \n## + attr: name (v/c)\n## + edges from fa10430 (vertex names):\n##  [1] 1 ->14  1 ->26  1 ->31  1 ->39  1 ->50  1 ->53  1 ->54  1 ->56  1 ->63 \n## [10] 1 ->71  1 ->86  1 ->92  1 ->98  2 ->26  2 ->56  2 ->74  2 ->108 3 ->119\n## [19] 4 ->16  4 ->59  4 ->91  5 ->11  5 ->28  5 ->66  5 ->120 6 ->23  6 ->41 \n## [28] 7 ->34  7 ->87  8 ->13  8 ->29  8 ->43  8 ->107 9 ->21  9 ->79  10->35 \n## [37] 10->72  10->90  10->112 11->5   12->32  12->58  12->79  13->8   13->29 \n## [46] 13->36  13->43  13->68  13->107 14->1   14->22  14->33  14->44  14->50 \n## [55] 14->53  14->82  15->25  15->29  16->4   16->28  16->59  16->91  17->65 \n## [64] 17->104 18->100 19->79  20->106 20->116 21->9   22->14  22->33  22->44 \n## + ... omitted several edges`} lang="output" />
               <CodeChunk code={`plot(fauxhs.net, vertex.size = 5, vertex.label = "", vertex.color = "red", edge.arrow.size = 0.5, layout = fauxhs.layout)`} lang="r" />
-              <ZoomImage className="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/r004_1.png" />
+              <ZoomImage className="w-lg-50 w-sm-75 mx-auto" src={`${domain}/assets/images/r004_1.png`} />
               <CodeChunk code={`#儲存本次fauxhs.net繪製的圖形中，nodes的位置，命名為fauxhs.layout\n#以便下次使用\nfauxhs.layout <- layout.fruchterman.reingold(fauxhs.net)`} lang="r" />
             </div>
             <div className="my-2">
@@ -51,7 +51,7 @@ class Content extends React.Component {
               <CodeChunk code={`fauxhs.eg <- graph_from_data_frame(fauxhs.edges, directed = T)\nfauxhs.eg`} lang="r" />
               <CodeChunk code={`## IGRAPH a76b4d0 DN-- 120 185 -- \n## + attr: name (v/c)\n## + edges from a76b4d0 (vertex names):\n##  [1] 14 ->1  26 ->1  31 ->1  39 ->1  50 ->1  53 ->1  54 ->1  56 ->1  63 ->1 \n## [10] 71 ->1  86 ->1  92 ->1  98 ->1  26 ->2  56 ->2  74 ->2  108->2  119->3 \n## [19] 16 ->4  59 ->4  91 ->4  11 ->5  28 ->5  66 ->5  120->5  23 ->6  41 ->6 \n## [28] 34 ->7  87 ->7  13 ->8  29 ->8  43 ->8  107->8  21 ->9  79 ->9  35 ->10\n## [37] 72 ->10 90 ->10 112->10 32 ->12 58 ->12 79 ->12 29 ->13 36 ->13 43 ->13\n## [46] 68 ->13 107->13 22 ->14 33 ->14 44 ->14 50 ->14 53 ->14 82 ->14 25 ->15\n## [55] 29 ->15 28 ->16 59 ->16 91 ->16 65 ->17 104->17 100->18 79 ->19 106->20\n## [64] 116->20 33 ->22 44 ->22 41 ->23 75 ->23 41 ->24 46 ->24 58 ->24 60 ->24\n## + ... omitted several edges`} lang="output" />
               <CodeChunk code={`set.seed(2); plot(fauxhs.eg, vertex.size = 5, vertex.label = "", vertex.color = "red", edge.arrow.size = 0.5)`} lang="r" />
-              <ZoomImage className="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/r004_2.png" />
+              <ZoomImage className="w-lg-50 w-sm-75 mx-auto" src={`${domain}/assets/images/r004_2.png`} />
               <p>
                 兩種方式的結果是完全相同的，電腦在計算後會隨機繪製出網絡圖形。
                 <br />
@@ -83,7 +83,7 @@ class Content extends React.Component {
               <CodeChunk code={`##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n##   7.000   7.000   8.000   8.708  10.000  12.000`} lang="output" />
               <p>賦予7~12不同的顏色（淺紅~深紅）</p>
               <CodeChunk code={`V(fauxhs.net)$color <- c("#FFF2F2", "#FFA1A1", "#FF5F5F", "#FF5F5F", "#CC0000", "#A30000")[as.numeric(V(fauxhs.net)$grade)]\nplot(fauxhs.net, vertex.size=5, vertex.label="", edge.arrow.size=0.5, layout = fauxhs.layout)`} lang="r" />
-              <ZoomImage className="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/r004_3.png" />
+              <ZoomImage className="w-lg-50 w-sm-75 mx-auto" src={`${domain}/assets/images/r004_3.png`} />
             </div>
             <div className="my-2">
               <p>
@@ -91,7 +91,7 @@ class Content extends React.Component {
               </p>
               <p>R的排列方式為由小到大，由A~Z，因此若變項為文字，例如gender的F、M，則F會在前，因此下圖red=female，blue=man</p>
               <CodeChunk code={`V(fauxhs.net)$color=c("red", "blue")[as.numeric(V(fauxhs.net)$gender)]\nplot(fauxhs.net, vertex.size=5, vertex.label="", edge.arrow.size=0.5, layout = fauxhs.layout)`} lang="r" />
-              <ZoomImage className="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/r004_4.png" />
+              <ZoomImage className="w-lg-50 w-sm-75 mx-auto" src={`${domain}/assets/images/r004_4.png`} />
             </div>
           </>
         ),
@@ -168,7 +168,7 @@ class Content extends React.Component {
               <li>
                 計算Degree的分配
                 <CodeChunk code={`hist(degree(fauxhs.net), breaks=10, col="gray")`} lang="r" />
-                <ZoomImage className="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/r004_5.png" />
+                <ZoomImage className="w-lg-50 w-sm-75 mx-auto" src={`${domain}/assets/images/r004_5.png`} />
                 <CodeChunk code={`dyad_census(fauxhs.net)`} lang="r" />
                 <CodeChunk code={`## $mut\n## [1] 185\n## \n## $asym\n## [1] 0\n## \n## $null\n## [1] 6955`} lang="output" />
                 <CodeChunk code={`triad_census(fauxhs.net)`} lang="r" />
@@ -192,7 +192,7 @@ class Content extends React.Component {
             <CodeChunk code={`com <- cluster_louvain(fauxhs.net1)\ncom`} lang="r" />
             <CodeChunk code={`## IGRAPH clustering multi level, groups: 10, mod: 0.77\n## + groups:\n##   $\`1\`\n##    [1] "4"   "9"   "12"  "16"  "19"  "21"  "32"  "37"  "59"  "62"  "67"  "69" \n##   [13] "79"  "80"  "83"  "91"  "92"  "95"  "111"\n##   \n##   $\`2\`\n##   [1] "6"   "23"  "27"  "41"  "48"  "75"  "99"  "118"\n##   \n##   $\`3\`\n##   [1] "5"   "11"  "28"  "66"  "81"  "120"\n##   \n##   + ... omitted several groups/vertices`} lang="output" />
             <CodeChunk code={`plot(com, fauxhs.net1, vertex.label="", vertex.size=5, edge.width=E(fauxhs.net1)$weight, layout = fauxhs.layout)`} lang="r" />
-            <ZoomImage className="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/r004_6.png" />
+            <ZoomImage className="w-lg-50 w-sm-75 mx-auto" src={`${domain}/assets/images/r004_6.png`} />
           </>
         ),
       },

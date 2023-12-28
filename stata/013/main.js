@@ -69,7 +69,7 @@ class Content extends React.Component {
                     </li>
                     <li>
                       下圖顯示的就是兩變量之間的統計關係，雖然Y的變化隨著X的改變而增長，但不是所有的Y都在那條直線上，而是散佈在其周圍。
-                      <ZoomImage className="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/reg01.png" />
+                      <ZoomImage className="w-lg-50 w-sm-75 mx-auto" src={`${domain}/assets/images/reg01.png`} />
                     </li>
                   </ul>
                   <li>
@@ -90,7 +90,7 @@ class Content extends React.Component {
                             code={`. clear\n\n. set obs 50\nnumber of observations (_N) was 0, now 50\n\n. set seed 1245\n\n. gen x= int((100-1)*runiform() +1)\n\n. \n. gen y= 11.5+2.3*x\n\n. *sc= scatter\n. twoway sc y x || lfit y x, ///\n>        legend(off) ///\n>            text(250 24 "y= 11.5+2.3*x") ///\n>            text(215 24 "when the rangr of {&epsilon} is 0") ///\n>            legend(off) ytitle("y")\n\n. graph save reg2-1.gph, replace\n(file reg2-1.gph saved)\n\n. \n. gen e1= (20-1)*runiform() +1\n\n. cap drop y\n\n. gen y= 11.5+2.3*x+e1\n\n. twoway sc y x || lfit y x, ///\n>        legend(off) ///\n>            text(285 24 "y= 11.5+2.3*x + {&epsilon}{sub:1}") ///\n>            text(250 24 "when the rangr of {&epsilon} is") ///\n>            text(215 24 "between 0-20") ///\n>            legend(off) ytitle("y")\n\n. *{&epsilon}{sub:1} 希臘字母 下標1\n. graph save reg2-2.gph, replace\n(file reg2-2.gph saved)\n\n. \n. gen e2= (100-1)*runiform() +1\n\n. cap drop y\n\n. gen y= 11.5+2.3*x+e2\n\n. twoway sc y x || lfit y x, ///\n>        legend(off) ///\n>            text(295 24 "y= 11.5+2.3*x + {&epsilon}{sub:1}") ///\n>            text(260 24 "when the rangr of {&epsilon} is") ///\n>            text(225 24 "between 0-100") ///\n>            legend(off) ytitle("y")\n\n. graph save reg2-3.gph, replace\n(file reg2-3.gph saved)\n\n. \n. gen e3= (200-1)*runiform() +1\n\n. cap drop y\n\n. gen y= 11.5+2.3*x+e3\n\n. twoway sc y x || lfit y x, ///\n>        legend(off) ///\n>            text(100 70 "y= 11.5+2.3*x + {&epsilon}{sub:1}") ///\n>            text(65  70 "when the rangr of {&epsilon} is") ///\n>            text(30  70 "between 0-200") ///\n>            legend(off) ytitle("y")\n\n. graph save reg2-4.gph, replace\n(file reg2-4.gph saved)\n\n. graph export reg01.png, replace\n(file reg01.png written in PNG format)\n\n. \n. graph combine reg2-1.gph reg2-2.gph reg2-3.gph reg2-4.gph, ycommon\n\n. graph export "reg02.png", replace\n(file reg02.png written in PNG format)`}
                             lang="output"
                           />
-                          <ZoomImage className="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/reg02.png" />
+                          <ZoomImage className="w-lg-50 w-sm-75 mx-auto" src={`${domain}/assets/images/reg02.png`} />
                         </ul>
                       </li>
                     </ol>
@@ -156,7 +156,7 @@ class Content extends React.Component {
                   可用來推算出迴歸線的各個點（即，迴歸預測值，用<i>Y&#770;</i>表示），從而畫出迴歸線。
                   <CodeChunk code={`cap drop yhat\npredict yhat, xb\nlist x y yhat, nolab clean noobs\ntwoway (sca y x, mc(black)) ///\n       (sca yhat x, c(l) mc(red)), ///\n       ylab(0(5)50, angle(0)) ///\n       ytitle("刑期（月）") ///\n       legend(label(1 "x的原始觀察點") label(2 "y的預測點"))\ngraph export reg03.png, replace`} lang="stata" />
                   <CodeChunk code={`. cap drop yhat\n\n. predict yhat, xb\n\n. list x y yhat, nolab clean noobs\n\n     x    y   yhat  \n     0   12     14  \n     3   13     23  \n     1   15     17  \n     0   19     14  \n     6   26     32  \n     5   27     29  \n     3   29     23  \n     4   31     26  \n    10   40     44  \n     8   48     38  \n\n. twoway (sca y x, mc(black)) ///\n>            (sca yhat x, c(l) mc(red)), ///\n>        ylab(0(5)50, angle(0)) ///\n>        ytitle("刑期（月）") ///\n>        legend(label(1 "x的原始觀察點") label(2 "y的預測點"))\n\n. graph export reg03.png, replace\n(file reg03.png written in PNG format)`} lang="output" />
-                  <ZoomImage className="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/reg03.png" />
+                  <ZoomImage className="w-lg-50 w-sm-75 mx-auto" src={`${domain}/assets/images/reg03.png`} />
                 </li>
                 <li>得到的迴歸係數可用來估算當x在某一狀況時，Y可能有的結果。</li>
                 <li>

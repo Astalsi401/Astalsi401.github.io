@@ -116,7 +116,7 @@ class Content extends React.Component {
           <>
             <p>在STATA中開啟圖表</p>
             <CodeChunk code={`graph use "1978auto.gph`} lang="stata" />
-            <ZoomImage className="w-lg-50 w-sm-75 mx-auto" src="https://astalsi401.github.io/assets/images/1978auto_1.png" alt="1978auto_1.png" />
+            <ZoomImage className="w-lg-50 w-sm-75 mx-auto" src={`${domain}/assets/images/1978auto_1.png`} alt="1978auto_1.png" />
           </>
         ),
       },
