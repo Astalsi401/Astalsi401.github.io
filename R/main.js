@@ -1,8 +1,1 @@
-class Content extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    return <IndexPage category="R" />;
-  }
-}
+const Content = () => <IndexPage category="R" />;
