@@ -3959,7 +3959,7 @@ table td {
   top: 0;
   margin-top: var(--nav-h);
   width: min(400px, 100%);
-  height: 100dvh;
+  height: calc(100dvh - var(--nav-h));
   background: var(--main-bg);
   transform: translateX(-100%);
   transition: transform var(--time), box-shadow calc(var(--time) * 2);
