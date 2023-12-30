@@ -15,9 +15,9 @@ const Calculator = () => {
       ))}
       {["bw", "aw", "bh", "ah"].map((name) => (
         <>
-          {["bw", "bh"].includes(name) ? <div className="col-2 p-1 d-flex align-items-center text-bold">{name === "bw" ? "重量" : "馬力"}</div> : null}
+          {/b\w$/.test(name) ? <div className="col-2 p-1 d-flex align-items-center text-bold">{/\ww$/.test(name) ? "重量" : "馬力"}</div> : null}
           <div key={name} className="col-5 p-1 d-flex align-items-center">
-            <Label name={name} type="number" placeholder="kg" value={status[name]} />
+            <Label name={name} type="number" placeholder={/\ww$/.test(name) ? "kg" : "hp"} value={status[name]} />
           </div>
         </>
       ))}
