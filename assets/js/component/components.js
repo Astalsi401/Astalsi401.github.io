@@ -118,13 +118,9 @@ function CodeChunk({ code, lang }) {
   const copy = () => {
     navigator.clipboard.writeText(code);
     setActive(true);
-    setTimeout(() => {
-      setActive(false);
-    }, 2000);
+    setTimeout(() => setActive(false), 2000);
   };
-  useEffect(() => {
-    Prism.highlightAll();
-  }, []);
+  useEffect(() => Prism.highlightAll(), []);
   return (
     <pre>
       <a className={`copyBtn ${toggleActive(active)}`} onClick={copy}>
