@@ -169,11 +169,11 @@ function Block({ className, title, titleClass, id, content }) {
   );
 }
 
-function Label({ label, name, step, placeholder, value }) {
+function Label({ label, name, type, step, min, max, placeholder, value }) {
   return (
     <label className="my-2 w-100">
       {label && <div>{label}：</div>}
-      <input className="p-1" name={name} step={step} placeholder={placeholder} value={value} />
+      <input className="p-1" name={name} type={type} step={step} min={min} max={max} placeholder={placeholder} value={value} />
     </label>
   );
 }
