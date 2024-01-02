@@ -185,9 +185,7 @@ function ZoomImage({ id, className, src, alt }) {
   useEffect(() => {
     const handleResize = setActive(false);
     window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
   let elem = ref.current && ref.current.getBoundingClientRect();
   let scale = elem ? Math.min(window.innerWidth / elem.width, window.innerHeight / elem.height) : 1;
