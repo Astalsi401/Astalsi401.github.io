@@ -29,14 +29,19 @@
 }
 .menu {
   li {
+    --bg: transparent;
     list-style-type: none;
     margin-left: var(--unit-0);
+    &.current {
+      --bg: var(--primary-300);
+    }
     a {
       display: block;
       padding: var(--unit-2) var(--unit-1);
+      background: var(--bg);
       &:hover,
       &:focus {
-        background: var(--primary);
+        --bg: var(--primary);
         color: var(--main-bg);
       }
     }

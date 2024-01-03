@@ -3,11 +3,16 @@ const Content = () => {
     {
       title: "Hover arrows",
       content: (
-        <div className="col-12">
-          <div class="fp-back center">
-            <span></span>
+        <>
+          <p>
+            有趣的<code>box-shadoe</code>用法
+          </p>
+          <div className="col-12">
+            <div class="fp-back center">
+              <span></span>
+            </div>
           </div>
-        </div>
+        </>
       ),
     },
     {

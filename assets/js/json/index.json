@@ -79,6 +79,7 @@
       "href": "/portfolio/portfolio_index.html",
       "pages": [
         { "page": "2023 Healthcare EXPO Taiwan Floor Map", "href": "/portfolio/javascript-floormap/javascript-floormap.html", "thumbnail": "/assets/images/2023floormap.png", "tags": ["html", "css", "javascript", "js", "react"] },
+        { "page": "Css Animations", "href": "/portfolio/css-animations/css-animations.html", "thumbnail": "/assets/images/css-animation1.png", "tags": ["css", "html"] },
         { "page": "FreeCodeCamp D3.js Heatmap", "href": "/portfolio/javascript-d3js-heatmap/d3js_heatmap.html", "thumbnail": "/assets/images/heatmap.png", "tags": ["d3js", "javascript", "js", "svg"] },
         { "page": "FreeCodeCamp D3.js Choropleth Map", "href": "/portfolio/javascript-d3js-choropleth-map/d3js_choropleth-map.html", "thumbnail": "/assets/images/choropleth-map.png", "tags": ["d3js", "javascript", "js", "svg"] },
         { "page": "FreeCodeCamp D3.js Treemap", "href": "/portfolio/javascript-d3js-treemap/d3js-treemap.html", "thumbnail": "/assets/images/treemap.png", "tags": ["d3js", "javascript", "js", "svg"] },

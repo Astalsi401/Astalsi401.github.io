@@ -3976,15 +3976,20 @@ table td {
 }
 
 .menu li {
+  --bg: transparent;
   list-style-type: none;
   margin-left: var(--unit-0);
+}
+.menu li.current {
+  --bg: var(--primary-300);
 }
 .menu li a {
   display: block;
   padding: var(--unit-2) var(--unit-1);
+  background: var(--bg);
 }
 .menu li a:hover, .menu li a:focus {
-  background: var(--primary);
+  --bg: var(--primary);
   color: var(--main-bg);
 }
 
