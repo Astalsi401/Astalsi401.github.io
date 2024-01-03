@@ -1,7 +1,7 @@
 const { useState } = React;
 
 const Counter = () => {
-  const [count, setCount] = React.useState(0);
+  const [count, setCount] = useState(0);
   const counterStyle = {
     display: "flex",
     flexDirection: "column",
