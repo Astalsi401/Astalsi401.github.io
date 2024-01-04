@@ -37,11 +37,12 @@ const Content = () => {
     setStatus((prev) => ({ ...prev, search: e.target.value, res: status.tuneList.filter((d) => [d.tunner, d.tuneName, d.score, d.carType, d.preferance, d.shareCode.replace(/\s/g, "")].join("|").match(new RegExp(re, "gi"))) }));
   };
   const sort = (type) => setStatus((prev) => ({ ...prev, res: prev.res.sort((a, b) => (a[type] < b[type] ? (prev.asc ? 1 : -1) : a[type] > b[type] ? (prev.asc ? -1 : 1) : 0)), asc: !prev.asc, ascCol: type }));
-  useEffect(() => {
-    fetch(`${domain}/assets/js/json/tuneList.json`)
-      .then((res) => res.json())
-      .then((data) => setStatus((prev) => ({ ...prev, tuneList: data, res: data })));
-  }, []);
+  const fetchTable = async () => {
+    const res = await fetch(`${domain}/assets/js/json/tuneList.json`);
+    const data = await res.json();
+    setStatus((prev) => ({ ...prev, tuneList: data, res: data }));
+  };
+  useEffect(() => fetchTable(), []);
   return (
     <>
       <Block

@@ -32,8 +32,18 @@
     --bg: transparent;
     list-style-type: none;
     margin-left: var(--unit-0);
+    position: relative;
     &.current {
-      --bg: var(--primary-300);
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 4px;
+        width: 6px;
+        height: 100%;
+        background-color: var(--primary);
+      }
     }
     a {
       display: block;

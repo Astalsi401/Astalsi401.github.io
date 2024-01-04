@@ -1,18 +1,18 @@
 const { useState, useEffect, useRef, useMemo } = React;
 const active = "active";
 const domain = location.origin;
+const sidebarAnchor = "sidebarAnchor";
 const toggleActive = (stateActive) => (stateActive ? active : "");
 const useIndexData = (category) => {
   const [index, setIndex] = useState({});
   const [indexLoaded, setIndexLoaded] = useState(false);
-  useEffect(() => {
-    fetch(`${domain}/assets/js/json/index.json`)
-      .then((res) => res.json())
-      .then((data) => {
-        setIndex(data.index.find((d) => d.category === category));
-        setIndexLoaded(true);
-      });
-  }, [category]);
+  const fetchIndex = async (category) => {
+    const res = await fetch(`${domain}/assets/js/json/index.json`);
+    const data = await res.json();
+    setIndex(data.index.find((d) => d.category === category));
+    setIndexLoaded(true);
+  };
+  useEffect(() => fetchIndex(category), [category]);
   return { index, indexLoaded };
 };
 
@@ -38,7 +38,7 @@ function Sidebar({ category, sidebarActive, wrapperRef }) {
     return (
       <aside id="sidebar" className={sidebarActive ? "active" : undefined} ref={wrapperRef}>
         <h1 className="pt-5 pb-3 text-center">
-          <a id="sidebarAnchor" className="text-decoration-none" href={`${domain}${index.href}`}>
+          <a id={sidebarAnchor} className="text-decoration-none" href={`${domain}${index.href}`}>
             {index.category}
           </a>
         </h1>
@@ -65,7 +65,7 @@ function Sidebar({ category, sidebarActive, wrapperRef }) {
 function Accessibility() {
   const access = [
     { href: "#main-content", text: "Skip to main content" },
-    { href: "#sidebarAnchor", text: "Skip to sidebar" },
+    { href: `#${sidebarAnchor}`, text: "Skip to sidebar" },
   ];
   return (
     <div className="accessibility">
@@ -137,14 +137,13 @@ function CodeChunk({ code, lang }) {
 function CodeChunkFromFile({ path, lang }) {
   const [code, setCode] = useState("");
   const [loaded, setLoaded] = useState(false);
-  useEffect(() => {
-    fetch(path)
-      .then((res) => res.text())
-      .then((data) => {
-        setCode(data);
-        setLoaded(true);
-      });
-  }, [path]);
+  const fetchCode = async () => {
+    const res = await fetch(path);
+    const data = await res.text();
+    setCode(data);
+    setLoaded(true);
+  };
+  useEffect(() => fetchCode(), [path]);
   if (loaded) {
     return <CodeChunk code={code} lang={lang} />;
   }

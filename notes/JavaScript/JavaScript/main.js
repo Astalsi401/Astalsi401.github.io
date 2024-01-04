@@ -5,7 +5,10 @@ const Content = () => {
       content: (
         <>
           <CodeChunkFromFile path={"./JavaScript/fetchFromGithub.js"} lang="js" />
-          <a href="https://betterprogramming.pub/how-to-fetch-files-from-github-in-javascript-e0ed2c72aeb4">原文</a>
+          原文：
+          <a href="https://betterprogramming.pub/how-to-fetch-files-from-github-in-javascript-e0ed2c72aeb4" target="_blank">
+            How to Fetch Files From GitHub in JavaScript
+          </a>
         </>
       ),
     },

@@ -739,12 +739,13 @@ const MainArea = () => {
     svgRef.current.style.transition = "0.4s";
     setTimeout(() => (svgRef.current.style.transition = null), 400);
   };
+  const fetchData = async () => {
+    const res = await fetch("https://astalsi401.github.io/warehouse/show/floormap.json");
+    const data = await res.json();
+    setFloorData({ data: data, loaded: true });
+  };
   useEffect(() => {
-    fetch("https://astalsi401.github.io/warehouse/show/floormap.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setFloorData((prev) => ({ data: data, loaded: !prev.loaded }));
-      });
+    fetchData();
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
