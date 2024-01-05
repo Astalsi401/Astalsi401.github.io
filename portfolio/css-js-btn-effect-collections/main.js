@@ -9,7 +9,7 @@ const Content = () => {
           </p>
           <div className="col-12">
             <div className="fp-back center">
-              <span></span>
+              <span />
             </div>
           </div>
           <div className="my-2">
@@ -31,10 +31,10 @@ const Content = () => {
           <div className="my-2 mx-auto col-sm-3 p-3">
             <a className="btn1">
               btn1
-              <span style={{ "--i": 0 }}></span>
-              <span style={{ "--i": 0 }}></span>
-              <span style={{ "--i": 1 }}></span>
-              <span style={{ "--i": 2 }}></span>
+              <span style={{ "--i": 0 }} />
+              <span style={{ "--i": 0 }} />
+              <span style={{ "--i": 1 }} />
+              <span style={{ "--i": 2 }} />
             </a>
           </div>
           <div className="my-2">
@@ -59,7 +59,7 @@ const Content = () => {
             <div className="col-sm-3 mx-auto">
               <a className="btn2">
                 <span className="text">btn2</span>
-                <span className="blur"></span>
+                <span className="blur" />
               </a>
             </div>
           </div>
