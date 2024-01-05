@@ -18,6 +18,30 @@ meta.setAttribute("name", "viewport");
 meta.setAttribute("content", "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no");
 document.head.appendChild(meta);
 
+class ColorPicker {
+  constructor(colors_, categories_, unknow_) {
+    this.colors_ = colors_;
+    this.categories_ = categories_;
+    this.unknow_ = unknow_;
+  }
+  colors = (colors_) => {
+    this.colors_ = colors_;
+    return this;
+  };
+  categories = (categories_) => {
+    this.categories_ = categories_;
+    return this;
+  };
+  unknow = (unknow_) => {
+    this.unknow_ = unknow_;
+    return this;
+  };
+  scale = (category) => {
+    const i = this.categories_.indexOf(category);
+    return this.colors_[i] || this.unknow_;
+  };
+}
+
 const Header = ({ elementStatus, setElementStatus, searchCondition, setSearchCondition, defaultViewbox }) => {
   const tags = [elementStatus.mapText.event, ...elementStatus.mapText.headerTags];
   const download = async () => {
@@ -77,7 +101,7 @@ const Header = ({ elementStatus, setElementStatus, searchCondition, setSearchCon
         {tags.map((d) => (
           <div
             className="fp-input-tag shadow text-small"
-            style={{ "--cat": elementStatus.colors(d) }}
+            style={{ "--cat": elementStatus.colors.scale(d) }}
             onClick={() => {
               setSearchCondition((prev) => ({ ...prev, tag: d }));
               setElementStatus((prev) => ({ ...prev, boothInfo: false }));
@@ -162,7 +186,7 @@ const Booth = ({ d, size, elementStatus, handleBoothClick, drawPath }) => {
   const opacity = elementStatus.boothInfo && elementStatus.boothInfoData.id == d.id ? 1 : d.opacity;
   return (
     <g key={d.id} id={d.id} className={`booth ${opacity === 1 ? "active" : ""}`} transform={`translate(${d.x},${d.y})`} onClick={() => handleBoothClick(d)}>
-      <path stroke={"black"} fill={elementStatus.colors(d.cat)} strokeWidth={1} fillOpacity={opacity} d={`M0 0${drawPath(d.p)}`} />;
+      <path stroke={"black"} fill={elementStatus.colors.scale(d.cat)} strokeWidth={1} fillOpacity={opacity} d={`M0 0${drawPath(d.p)}`} />;
       <g transform={`translate(${d.w / 2},${d.h / 2 - ((d.text.length - 1) * lineHeight) / 2})`} fontSize={fontSize}>
         {d.text.map((t, j) => (
           <BoothText t={t} j={j} lineHeight={lineHeight} opacity={opacity} boothWidth={d.w} />
@@ -190,11 +214,11 @@ const Elements = ({ type, data, size, elementStatus, handleBoothClick }) => {
 const Floormap = ({ data, elementStatus, setElementStatus, handleBoothInfo, searchCondition, setSearchCondition, handleSearchChange, graphRef, svgRef, zoomCalculator, dragCalculator, defaultViewbox, animation }) => {
   const [viewBox, setViewBox] = useState({ x1: 0, y1: 0, x2: 0, y2: 0 });
   const handleStart = (e) => {
-    let distance = (distance = e.touches ? e.touches[0].clientX + e.touches[0].clientY : e.clientX + e.clientY);
+    let distance = e.touches ? e.touches[0].clientX + e.touches[0].clientY : e.clientX + e.clientY;
     setElementStatus((prev) => ({ ...prev, test: true, dragStatus: { ...prev.dragStatus, moving: true }, distance: distance }));
   };
   const handleEnd = (e) => {
-    let distance = (distance = e.changedTouches ? e.changedTouches[0].clientX + e.changedTouches[0].clientY : e.clientX + e.clientY);
+    let distance = e.changedTouches ? e.changedTouches[0].clientX + e.changedTouches[0].clientY : e.clientX + e.clientY;
     setElementStatus((prev) => ({ ...prev, test: false, dragStatus: { ...prev.dragStatus, moving: false, previousTouch: null, previousTouchLength: null }, distance: distance - prev.distance }));
   };
   const handleTouchDragZoom = (e) => {
@@ -275,7 +299,7 @@ const Search = ({ searchCondition, setSearchCondition, elementStatus, setElement
       </div>
       <div className="fp-input d-flex flex-wrap align-items-center px-1">
         {searchCondition.tag.length !== 0 && (
-          <div className="fp-input-tag shadow text-small" title={elementStatus.mapText.remove} onClick={() => setSearchCondition((prev) => ({ ...prev, tag: "" }))} style={{ "--cat": elementStatus.colors(searchCondition.tag) }}>
+          <div className="fp-input-tag shadow text-small" title={elementStatus.mapText.remove} onClick={() => setSearchCondition((prev) => ({ ...prev, tag: "" }))} style={{ "--cat": elementStatus.colors.scale(searchCondition.tag) }}>
             {searchCondition.tag}
           </div>
         )}
@@ -337,7 +361,7 @@ const Advanced = ({ data, setElementStatus, setSearchCondition, elementStatus })
 const Result = ({ d, elementStatus, handleBoothInfo, svgRef, graphRef, zoomCalculator, animation, dragCalculator }) => {
   const isBooth = d.type === "booth";
   const id = isBooth ? `${d.id}-${d.org}` : `${d.text.join("")}-${d.floor}`;
-  const bg = isBooth ? elementStatus.colors(d.cat) : "#acacac";
+  const bg = isBooth ? elementStatus.colors.scale(d.cat) : "#acacac";
   const name = isBooth ? d.org : d.text.join("");
   const loc = isBooth ? `${d.id} / ${d.floor}F` : `${d.floor}F`;
   const handleResultClick = () => {
@@ -422,7 +446,7 @@ const BoothInfoDetail = ({ data, setSearchCondition, elementStatus, setElementSt
       <div className="p-2 text-large">{org}</div>
       <div className="fp-booth-tags d-flex flex-wrap p-2">
         {tags.map((tag) => (
-          <div className="fp-input-tag shadow text-small" style={{ "--cat": elementStatus.colors(tag) }} onClick={() => handleTagClick(tag)}>
+          <div className="fp-input-tag shadow text-small" style={{ "--cat": elementStatus.colors.scale(tag) }} onClick={() => handleTagClick(tag)}>
             {tag}
           </div>
         ))}
@@ -432,7 +456,7 @@ const BoothInfoDetail = ({ data, setSearchCondition, elementStatus, setElementSt
           <div className="my-1 text-large">{elementStatus.mapText.exhibitor}</div>
           <div className="my-1 fp-booth-tags d-flex flex-wrap">
             {corps.map((d) => (
-              <div className="fp-input-tag shadow text-small" style={{ "--cat": d.corpId == corpId ? "rgb(0, 0, 128, 0.3)" : elementStatus.colors("") }} onClick={() => handleCorpClick(d.corpId)}>
+              <div className="fp-input-tag shadow text-small" style={{ "--cat": d.corpId == corpId ? "rgb(0, 0, 128, 0.3)" : elementStatus.colors.scale("") }} onClick={() => handleCorpClick(d.corpId)}>
                 {d.org}
               </div>
             ))}
@@ -604,7 +628,7 @@ const MainArea = () => {
       isMobile: isMobile,
       width: window.innerHeight - sidebarWidth,
       height: window.innerHeight - tagsHeight,
-      colors: d3.scaleOrdinal().domain(mapText.categories[searchCondition.lang]).range(["rgba(237,125,49,0.6)", "rgba(153,204,255,1)", "rgba(255,255,0,0.6)", "rgba(0,112,192,0.6)", "rgba(112,48,160,0.6)", "rgb(128, 0, 75, 0.2)"]).unknown("rgba(255,255,255)"),
+      colors: new ColorPicker(["rgba(237,125,49,0.6)", "rgba(153,204,255,1)", "rgba(255,255,0,0.6)", "rgba(0,112,192,0.6)", "rgba(112,48,160,0.6)", "rgb(128, 0, 75, 0.2)"], mapText.categories[searchCondition.lang], "rgba(255,255,255)"),
       boothInfoData: {},
       smallScreen: false,
       sidebar: true,
@@ -764,7 +788,7 @@ const MainArea = () => {
     setElementStatus((prev) => ({
       ...prev,
       boothInfoData: Object.keys(prev.boothInfoData).length === 0 ? {} : filterFloorData.find((d) => d.id == prev.boothInfoData.id && d.corpId == prev.boothInfoData.corpId),
-      colors: prev.colors.domain(mapText.categories[searchCondition.lang]),
+      colors: prev.colors.categories(mapText.categories[searchCondition.lang]),
       mapText: {
         link: mapText.link[searchCondition.lang],
         title: mapText.title[searchCondition.lang],
