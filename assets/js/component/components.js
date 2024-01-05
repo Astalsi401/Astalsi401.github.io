@@ -22,7 +22,7 @@ function SidebarChild({ sections, childrenActive }) {
       {sections.map((s) => (
         <li key={s.title}>
           <a className="ps-4 text-decoration-none" href={s.href}>
-            {s.title}
+            <span>{s.title}</span>
           </a>
         </li>
       ))}
