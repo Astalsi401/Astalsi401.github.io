@@ -29,38 +29,51 @@
 }
 .menu {
   li {
-    --bg: transparent;
+    --current-w: 0;
+    --current-px: 4px;
     list-style-type: none;
     margin-left: var(--unit-0);
     position: relative;
-    &.current {
+    a {
+      position: relative;
+      display: block;
+      padding: var(--unit-2) var(--unit-1);
+      transition: color var(--time);
       &::before {
         content: "";
         position: absolute;
         display: block;
         top: 0;
-        left: 4px;
-        width: 6px;
+        left: var(--current-px);
+        width: var(--current-w);
         height: 100%;
         background-color: var(--primary);
+        transition: left var(--time), width var(--time);
       }
-    }
-    a {
-      display: block;
-      padding: var(--unit-2) var(--unit-1);
-      background: var(--bg);
+      &.current {
+        --current-w: 6px;
+      }
       &:hover,
       &:focus {
-        --bg: var(--primary);
+        --current-w: 100%;
+        --current-px: 0;
         color: var(--main-bg);
+      }
+      span {
+        position: relative;
+        z-index: 1;
       }
     }
   }
 }
 .social-link {
   --w: 30px;
+  transition: scale var(--time);
   img {
     width: var(--w);
     height: var(--w);
+  }
+  &:hover {
+    scale: 1.1;
   }
 }

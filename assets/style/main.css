@@ -3976,37 +3976,52 @@ table td {
 }
 
 .menu li {
-  --bg: transparent;
+  --current-w: 0;
+  --current-px: 4px;
   list-style-type: none;
   margin-left: var(--unit-0);
   position: relative;
 }
-.menu li.current::before {
+.menu li a {
+  position: relative;
+  display: block;
+  padding: var(--unit-2) var(--unit-1);
+  transition: color var(--time);
+}
+.menu li a::before {
   content: "";
   position: absolute;
   display: block;
   top: 0;
-  left: 4px;
-  width: 6px;
+  left: var(--current-px);
+  width: var(--current-w);
   height: 100%;
   background-color: var(--primary);
+  transition: left var(--time), width var(--time);
 }
-.menu li a {
-  display: block;
-  padding: var(--unit-2) var(--unit-1);
-  background: var(--bg);
+.menu li a.current {
+  --current-w: 6px;
 }
 .menu li a:hover, .menu li a:focus {
-  --bg: var(--primary);
+  --current-w: 100%;
+  --current-px: 0;
   color: var(--main-bg);
+}
+.menu li a span {
+  position: relative;
+  z-index: 1;
 }
 
 .social-link {
   --w: 30px;
+  transition: scale var(--time);
 }
 .social-link img {
   width: var(--w);
   height: var(--w);
+}
+.social-link:hover {
+  scale: 1.1;
 }
 
 .homePageIcon {
