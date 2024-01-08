@@ -129,7 +129,7 @@ const Room = ({ d, i, size, elementStatus, handleBoothClick, drawPath }) => {
   const fontSize = size * d.size;
   const lineHeight = fontSize * 1.2;
   const icon_l = 500;
-  const opacity = d.type === "room" && elementStatus.boothInfo && elementStatus.boothInfoData.id == d.id ? 1 : d.opacity;
+  const opacity = d.type === "room" && elementStatus.boothInfo && elementStatus.boothInfoData.id === d.id ? 1 : d.opacity;
   return (
     <g className={`${d.type}${opacity === 1 ? " active" : ""}`} transform={`translate(${d.x},${d.y})`} onClick={d.type === "room" ? () => handleBoothClick(d) : null}>
       <path stroke={"black"} strokeWidth={d.strokeWidth} fill={d.text.length === 0 || d.type === "icon" ? "none" : "#f1f1f1"} fillOpacity={d.opacity} d={`M0 0${drawPath(d.p)}`} />
@@ -183,7 +183,7 @@ const BoothText = ({ t, j, lineHeight, opacity, boothWidth }) => {
 const Booth = ({ d, size, elementStatus, handleBoothClick, drawPath }) => {
   const fontSize = size * d.size;
   const lineHeight = fontSize * 1.2;
-  const opacity = elementStatus.boothInfo && elementStatus.boothInfoData.id == d.id ? 1 : d.opacity;
+  const opacity = elementStatus.boothInfo && elementStatus.boothInfoData.id === d.id ? 1 : d.opacity;
   return (
     <g key={d.id} id={d.id} className={`booth ${opacity === 1 ? "active" : ""}`} transform={`translate(${d.x},${d.y})`} onClick={() => handleBoothClick(d)}>
       <path stroke={"black"} fill={elementStatus.colors.scale(d.cat)} strokeWidth={1} fillOpacity={opacity} d={`M0 0${drawPath(d.p)}`} />;
@@ -209,7 +209,7 @@ const Elements = ({ type, data, size, elementStatus, handleBoothClick }) => {
     icon: (d, i) => <Room d={d} i={i} size={size} drawPath={drawPath} />,
     booth: (d, i) => <Booth d={d} size={size} elementStatus={elementStatus} handleBoothClick={handleBoothClick} drawPath={drawPath} />,
   };
-  return <g className={`${type}-g`}>{data.filter((d) => d.type == type).map((d, i) => elementActions[type](d, i))}</g>;
+  return <g className={`${type}-g`}>{data.filter((d) => d.type === type).map((d, i) => elementActions[type](d, i))}</g>;
 };
 const Floormap = ({ data, elementStatus, setElementStatus, handleBoothInfo, searchCondition, setSearchCondition, handleSearchChange, graphRef, svgRef, zoomCalculator, dragCalculator, defaultViewbox, animation }) => {
   const [viewBox, setViewBox] = useState({ x1: 0, y1: 0, x2: 0, y2: 0 });
@@ -250,7 +250,7 @@ const Floormap = ({ data, elementStatus, setElementStatus, handleBoothInfo, sear
   };
   const handleBoothClick = (d) => {
     if (elementStatus.distance !== 0) return;
-    if (elementStatus.boothInfo && elementStatus.boothInfoData.id == d.id) {
+    if (elementStatus.boothInfo && elementStatus.boothInfoData.id === d.id) {
       setElementStatus((prev) => ({ ...prev, boothInfo: false }));
     } else {
       handleBoothInfo(d);
@@ -414,7 +414,7 @@ const Event = ({ timeList, title, topic, active }) => {
           const startTime = `${format(time.start.getHours())}:${format(time.start.getMinutes())}`;
           const endDate = `${format(time.end.getMonth() + 1)}/${format(time.end.getDate())}`;
           const endTime = `${format(time.end.getHours())}:${format(time.end.getMinutes())}`;
-          const timeString = startDate == endDate ? `${startDate} ${startTime}-${endTime}` : `${startDate}-${endDate} ${startTime}-${endTime}`;
+          const timeString = startDate === endDate ? `${startDate} ${startTime}-${endTime}` : `${startDate}-${endDate} ${startTime}-${endTime}`;
           return <div className="text-small">{timeString}</div>;
         })}
       </div>
@@ -429,14 +429,14 @@ const BoothInfoDetail = ({ data, setSearchCondition, elementStatus, setElementSt
   const isBooth = type === "booth";
   const loc = isBooth ? [cat, topic] : [note];
   const tags = Object.keys(elementStatus.boothInfoData).length === 0 ? [] : [...loc, ...tag].filter((d) => d !== "");
-  const booth = data.find((d) => d.id == id);
+  const booth = data.find((d) => d.id === id);
   const corps = booth && booth.corps ? booth.corps : [];
   const events = event.filter((d) => d.title !== "");
   const handleTagClick = (value) => {
     setSearchCondition((prev) => ({ ...prev, tag: value, string: "" }));
     setElementStatus((prev) => ({ ...prev, boothInfo: false }));
   };
-  const handleCorpClick = (corpId) => setElementStatus((prev) => ({ ...prev, boothInfoData: data.find((d) => d.corpId == corpId) }));
+  const handleCorpClick = (corpId) => setElementStatus((prev) => ({ ...prev, boothInfoData: data.find((d) => d.corpId === corpId) }));
   return (
     <div className="fp-info pb-5">
       <div className="fp-info-item d-flex align-items-center px-2 py-1">
@@ -456,7 +456,7 @@ const BoothInfoDetail = ({ data, setSearchCondition, elementStatus, setElementSt
           <div className="my-1 text-large">{elementStatus.mapText.exhibitor}</div>
           <div className="my-1 fp-booth-tags d-flex flex-wrap">
             {corps.map((d) => (
-              <div className="fp-input-tag shadow text-small" style={{ "--cat": d.corpId == corpId ? "rgb(0, 0, 128, 0.3)" : elementStatus.colors.scale("") }} onClick={() => handleCorpClick(d.corpId)}>
+              <div className="fp-input-tag shadow text-small" style={{ "--cat": d.corpId === corpId ? "rgb(0, 0, 128, 0.3)" : elementStatus.colors.scale("") }} onClick={() => handleCorpClick(d.corpId)}>
                 {d.org}
               </div>
             ))}
@@ -530,9 +530,9 @@ const Selector = ({ searchCondition, setSearchCondition, handleSearchChange, gra
   return (
     <>
       <div className="fp-select-floor shadow" onChange={handleSearchChange}>
-        {[4, 1].map((d) => (
+        {["4", "1"].map((d) => (
           <label key={`floor-${d}`}>
-            <input type="radio" name="floor" value={d} checked={searchCondition.floor == d} onChange={handleSearchChange} />
+            <input type="radio" name="floor" value={d} checked={searchCondition.floor === d} onChange={handleSearchChange} />
             <span className="d-flex justify-content-center align-items-center text-small">{d}F</span>
           </label>
         ))}
@@ -613,7 +613,7 @@ const MainArea = () => {
       string: params.get("string") || "",
       regex: params.get("regex") || new RegExp("", "i"),
       tag: params.get("tag") || "",
-      floor: parseInt(params.get("floor")) || 1,
+      floor: params.get("floor") || "1",
       lang: params.get("lang") || (/^zh/i.test(navigator.language) ? "tc" : "en"),
     };
   });
@@ -680,7 +680,7 @@ const MainArea = () => {
           }));
           tags = eventTime.some((e) => e.active) ? tags.concat([mapText.event[searchCondition.lang]]) : tags;
         }
-        return { ...d, id: d.id ? d.id : `${d.type}-${d.floor}-${i}`, cat: d.cat ? d.cat[searchCondition.lang] : false, topic: d.topic ? d.topic[searchCondition.lang] : false, tag: tags, text: d.text ? d.text[searchCondition.lang] : [], size: d.size ? d.size[searchCondition.lang] : 1, event: eventTime, corps: d.corps ? d.corps.map((corp, i) => ({ corpId: `${d.id}-${i}`, org: corp.org[searchCondition.lang], info: corp.info[searchCondition.lang] })) : false, draw: true };
+        return { ...d, id: d.id ? d.id : `${d.type}-${d.floor}-${i}`, floor: d.floor.toString(), cat: d.cat ? d.cat[searchCondition.lang] : false, topic: d.topic ? d.topic[searchCondition.lang] : false, tag: tags, text: d.text ? d.text[searchCondition.lang] : [], size: d.size ? d.size[searchCondition.lang] : 1, event: eventTime, corps: d.corps ? d.corps.map((corp, i) => ({ corpId: `${d.id}-${i}`, org: corp.org[searchCondition.lang], info: corp.info[searchCondition.lang] })) : false, draw: true };
       }),
     [searchCondition.lang, floorData.data]
   );
@@ -787,7 +787,7 @@ const MainArea = () => {
   useEffect(() => {
     setElementStatus((prev) => ({
       ...prev,
-      boothInfoData: Object.keys(prev.boothInfoData).length === 0 ? {} : filterFloorData.find((d) => d.id == prev.boothInfoData.id && d.corpId == prev.boothInfoData.corpId),
+      boothInfoData: Object.keys(prev.boothInfoData).length === 0 ? {} : filterFloorData.find((d) => d.id === prev.boothInfoData.id && d.corpId === prev.boothInfoData.corpId),
       colors: prev.colors.categories(mapText.categories[searchCondition.lang]),
       mapText: {
         link: mapText.link[searchCondition.lang],
@@ -831,7 +831,7 @@ const MainArea = () => {
           }}
         >
           <Header elementStatus={elementStatus} setElementStatus={setElementStatus} searchCondition={searchCondition} setSearchCondition={setSearchCondition} defaultViewbox={defaultViewbox} />
-          <Floormap data={filterFloorData.filter((d) => d.floor == searchCondition.floor && d.draw)} elementStatus={elementStatus} setElementStatus={setElementStatus} handleBoothInfo={handleBoothInfo} searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} graphRef={graphRef} svgRef={svgRef} zoomCalculator={zoomCalculator} dragCalculator={dragCalculator} defaultViewbox={defaultViewbox} animation={animation} />
+          <Floormap data={filterFloorData.filter((d) => d.floor === searchCondition.floor && d.draw)} elementStatus={elementStatus} setElementStatus={setElementStatus} handleBoothInfo={handleBoothInfo} searchCondition={searchCondition} setSearchCondition={setSearchCondition} handleSearchChange={handleSearchChange} graphRef={graphRef} svgRef={svgRef} zoomCalculator={zoomCalculator} dragCalculator={dragCalculator} defaultViewbox={defaultViewbox} animation={animation} />
         </div>
       </div>
     </StrictMode>
