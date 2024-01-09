@@ -4160,6 +4160,10 @@ pre.language-output {
   transform: scale(1) translateX(-110%);
 }
 
+.demo-frame {
+  border: none;
+}
+
 .image-normal {
   width: min(100%, 600px);
 }
