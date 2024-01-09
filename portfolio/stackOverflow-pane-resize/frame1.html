@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="./pane-resize.css">
+</head>
+<body></body>
+<script>
+    (async () => {
+        const code = await fetch('./pane-resize.html').then(res => res.text())
+        document.querySelector("body").innerHTML = code
+        await import('./pane-resize.js')
+    })()
+</script>
+</html>

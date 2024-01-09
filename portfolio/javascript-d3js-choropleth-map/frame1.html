@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- topojson -->
+    <script src="https://unpkg.com/topojson@3"></script>
+    <!-- d3.js graph -->
+    <script src="https://cdn.jsdelivr.net/npm/d3-array@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-geo@3"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="./graph/css/choropleth-map.min.css">
+</head>
+<body></body>
+<script>
+    (async () => {
+        const code = await fetch('./graph/html/choropleth-map.html').then((res) => res.text());
+        document.querySelector("body").innerHTML = code;
+        Promise.all([import('./graph/js/choropleth-map.js')]);
+    })();
+</script>
+</html>

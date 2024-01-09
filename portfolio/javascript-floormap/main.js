@@ -764,8 +764,7 @@ const MainArea = () => {
     setTimeout(() => (svgRef.current.style.transition = null), 400);
   };
   const fetchData = async () => {
-    const res = await fetch("https://astalsi401.github.io/warehouse/show/floormap.json");
-    const data = await res.json();
+    const data = await fetch("https://astalsi401.github.io/warehouse/show/floormap.json").then((res) => res.json());
     setFloorData({ data: data, loaded: true });
   };
   useEffect(() => {

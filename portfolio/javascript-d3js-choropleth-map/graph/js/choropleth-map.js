@@ -76,8 +76,9 @@ class D3Map {
       .remove();
   };
 }
+
 const counties = "https://cdn.freecodecamp.org/testable-projects-fcc/data/choropleth_map/counties.json";
 const education = "https://cdn.freecodecamp.org/testable-projects-fcc/data/choropleth_map/for_user_education.json";
-eduMap = new D3Map(d3.select("#graph"));
+const eduMap = new D3Map(d3.select("#graph"));
 Promise.all([fetch(counties).then((res) => res.json()), fetch(education).then((res) => res.json())]).then((data) => eduMap.chart(data[0], data[1]));
 window.addEventListener("resize", eduMap.draw);

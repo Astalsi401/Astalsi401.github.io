@@ -116,3 +116,9 @@ class PlotGraph {
     this.yTitle.attr("transform", `translate(${0}, ${this.padding.s + 10})`);
   };
 }
+
+const fetchData = async () => {
+  const data = await fetch("https://astalsi401.github.io/warehouse/ibmi/2022非主管員工薪資.json").then((res) => res.json());
+  new PlotGraph("#graph-plot1", data.plot, "en");
+};
+fetchData();
