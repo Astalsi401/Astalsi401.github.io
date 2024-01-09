@@ -149,7 +149,11 @@ function CodeChunkFromFile({ path, lang }) {
   }
 }
 
-const DemoFrame = ({ src, aspectRatio }) => <iframe className="w-100 demo-frame" style={{ "aspect-ratio": aspectRatio }} src={src}></iframe>;
+const DemoFrame = ({ src, aspectRatio }) => (
+  <div className="my-2 p-2 demo-frame">
+    <iframe className="w-100" style={{ "aspect-ratio": aspectRatio }} src={src}></iframe>
+  </div>
+);
 
 function Block({ className, title, titleClass, id, content }) {
   return (

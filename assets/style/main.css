@@ -4161,6 +4161,10 @@ pre.language-output {
 }
 
 .demo-frame {
+  border-radius: 5px;
+  border: 1px solid var(--primary-300);
+}
+.demo-frame iframe {
   border: none;
 }
 
