@@ -33,7 +33,13 @@
         <loc>https://astalsi401.github.io/notes/python/python.html</loc>
     </url>    
     <url>
+        <loc>https://astalsi401.github.io/notes/vite/vite-basic.html</loc>
+    </url>    
+    <url>
         <loc>https://astalsi401.github.io/notes/vscode/vscode.html</loc>
+    </url>    
+    <url>
+        <loc>https://astalsi401.github.io/notes/work/welly/welly.html</loc>
     </url>    
     <url>
         <loc>https://astalsi401.github.io/R/001-data_input.html</loc>
@@ -52,9 +58,6 @@
     </url>    
     <url>
         <loc>https://astalsi401.github.io/R/r_index.html</loc>
-    </url>    
-    <url>
-        <loc>https://astalsi401.github.io/R/oth/r_basic.html</loc>
     </url>    
     <url>
         <loc>https://astalsi401.github.io/stata/001-input_tab.html</loc>
@@ -120,6 +123,9 @@
         <loc>https://astalsi401.github.io/portfolio/portfolio_index.html</loc>
     </url>    
     <url>
+        <loc>https://astalsi401.github.io/portfolio/css-animations/css-animations.html</loc>
+    </url>    
+    <url>
         <loc>https://astalsi401.github.io/portfolio/css-image-scroll-onhover/image-scroll-onhover.html</loc>
     </url>    
     <url>
@@ -132,19 +138,34 @@
         <loc>https://astalsi401.github.io/portfolio/fun-hover-effect/fun-hover-effect.html</loc>
     </url>    
     <url>
+        <loc>https://astalsi401.github.io/portfolio/fun-hover-effect/hover-effect.html</loc>
+    </url>    
+    <url>
+        <loc>https://astalsi401.github.io/portfolio/javascript-d3js-basic-chart/d3js-basic-chart.html</loc>
+    </url>    
+    <url>
+        <loc>https://astalsi401.github.io/portfolio/javascript-d3js-basic-chart/graph/html/graph-bar1.html</loc>
+    </url>    
+    <url>
+        <loc>https://astalsi401.github.io/portfolio/javascript-d3js-basic-chart/graph/html/graph-plot1.html</loc>
+    </url>    
+    <url>
         <loc>https://astalsi401.github.io/portfolio/javascript-d3js-choropleth-map/d3js_choropleth-map.html</loc>
     </url>    
     <url>
-        <loc>https://astalsi401.github.io/portfolio/javascript-d3js-heatmap/d3js_heatmap.html</loc>
+        <loc>https://astalsi401.github.io/portfolio/javascript-d3js-choropleth-map/graph/html/choropleth-map.html</loc>
     </url>    
     <url>
-        <loc>https://astalsi401.github.io/portfolio/javascript-d3js-nex-floormap/d3js_nex-floormap.html</loc>
+        <loc>https://astalsi401.github.io/portfolio/javascript-d3js-heatmap/d3js_heatmap.html</loc>
     </url>    
     <url>
         <loc>https://astalsi401.github.io/portfolio/javascript-d3js-treemap/d3js-treemap.html</loc>
     </url>    
     <url>
         <loc>https://astalsi401.github.io/portfolio/javascript-d3js-tw-temp/tw-temp.html</loc>
+    </url>    
+    <url>
+        <loc>https://astalsi401.github.io/portfolio/javascript-floormap/javascript-floormap.html</loc>
     </url>    
     <url>
         <loc>https://astalsi401.github.io/portfolio/javascript-image-switch/javascript-image-switch.html</loc>
@@ -160,5 +181,14 @@
     </url>    
     <url>
         <loc>https://astalsi401.github.io/portfolio/python-ga4-api/python-ga4-api.html</loc>
+    </url>    
+    <url>
+        <loc>https://astalsi401.github.io/portfolio/stackOverflow-pane-resize/pane-resize.html</loc>
+    </url>    
+    <url>
+        <loc>https://astalsi401.github.io/portfolio/stackOverflow-pane-resize/stackOverflow-pane-resize.html</loc>
+    </url>    
+    <url>
+        <loc>https://astalsi401.github.io/portfolio/weather/weather.html</loc>
     </url>
 </urlset>

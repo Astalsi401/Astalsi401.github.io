@@ -3,9 +3,10 @@ import re
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 folders = ['notes', 'R', 'stata', 'portfolio']
+exclude = ['']
 
 
-def getFiles(path):
+def getFiles(path: str) -> list:
     '''
     Given a path, returns a list of URLs of all the HTML files found in the directory 
     and its subdirectories.
@@ -16,10 +17,10 @@ def getFiles(path):
     Returns:
         list: A list of URLs of all HTML files found in the given directory and its subdirectories.
     '''
-    return ['https://astalsi401.github.io/' + re.sub(r'&', '&amp;', re.sub(r'\\', '/', os.path.join(root, f))) for root, dirs, files in os.walk(path) for f in files if re.findall(r'\.html$', f)]
+    return ['https://astalsi401.github.io/' + re.sub(r'&', '&amp;', re.sub(r'\\', '/', os.path.join(root, f))) for root, dirs, files in os.walk(path) for f in files if re.findall(r'^(?!.*frame\d).*\.html$', f)]
 
 
-def url(file):
+def url(file: str) -> str:
     """
     Returns an XML url tag with the given file path as the loc element.
 
@@ -35,7 +36,7 @@ def url(file):
     </url>'''
 
 
-def sitemap():
+def sitemap() -> None:
     """
     Generate a sitemap.xml file for a website with the given list of folders and their files.
     """
