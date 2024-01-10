@@ -9,12 +9,14 @@ pre {
     max-height: min(60dvh, 400px);
     &::-webkit-scrollbar {
       width: var(--scrollBar-w);
+      height: var(--scrollBar-w);
     }
     &::-webkit-scrollbar-track {
       background: var(--white);
     }
     &::-webkit-scrollbar-thumb {
       width: var(--scrollBar-w);
+      height: var(--scrollBar-w);
       border-radius: calc(var(--scrollBar-w) / 2);
       background: var(--scrollBar-bg);
     }

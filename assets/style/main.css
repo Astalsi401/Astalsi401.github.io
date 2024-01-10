@@ -4085,12 +4085,14 @@ pre code {
 }
 pre code::-webkit-scrollbar {
   width: var(--scrollBar-w);
+  height: var(--scrollBar-w);
 }
 pre code::-webkit-scrollbar-track {
   background: var(--white);
 }
 pre code::-webkit-scrollbar-thumb {
   width: var(--scrollBar-w);
+  height: var(--scrollBar-w);
   border-radius: calc(var(--scrollBar-w) / 2);
   background: var(--scrollBar-bg);
 }
