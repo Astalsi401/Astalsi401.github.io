@@ -1,0 +1,41 @@
+.round {
+  --start: -90deg;
+  --m: 3deg;
+  --bw: 6px;
+  position: relative;
+  width: 200px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transform: rotate(var(--start));
+  background-image: conic-gradient(transparent var(--m), #ff8b8b var(--m), #ff8b8b calc(36deg - var(--m)), transparent calc(36deg - var(--m)), transparent calc(36deg + var(--m)), #ffd68b calc(36deg + var(--m)), #ffd68b calc(72deg - var(--m)), transparent calc(72deg - var(--m)), transparent calc(72deg + var(--m)), #f7ff8b calc(72deg + var(--m)), #f7ff8b calc(108deg - var(--m)), transparent calc(108deg - var(--m)), transparent calc(108deg + var(--m)), #bfff8b calc(108deg + var(--m)), #bfff8b calc(144deg - var(--m)), transparent calc(144deg - var(--m)), transparent calc(144deg + var(--m)), #68ff68 calc(144deg + var(--m)), #68ff68 calc(180deg - var(--m)), transparent calc(180deg - var(--m)), transparent 360deg);
+}
+
+.round::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  inset: var(--bw);
+  background-color: white;
+}
+
+.round span {
+  position: absolute;
+  left: 50%;
+  transform-origin: 50% 100%;
+  transform: rotate(var(--d));
+  display: block;
+  width: 0.1px;
+  height: 50%;
+}
+
+.round span::before {
+  content: "";
+  display: block;
+  width: var(--bw);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--clr);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}

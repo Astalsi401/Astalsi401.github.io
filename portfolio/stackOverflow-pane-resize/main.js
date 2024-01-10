@@ -5,8 +5,8 @@ const Content = () => {
       content: (
         <>
           OP link:{" "}
-          <a href="https://stackoverflow.com/q/77776758/18229259" target="_blank">
-            https://stackoverflow.com/q/77776758/18229259
+          <a href="https://stackoverflow.com/q/77776758" target="_blank">
+            https://stackoverflow.com/q/77776758
           </a>
         </>
       ),
