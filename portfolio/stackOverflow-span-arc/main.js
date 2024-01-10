@@ -4,7 +4,8 @@ const Content = () => {
       title: "how to make an arc in span in css?",
       content: (
         <>
-          OP link:{" "}
+          OP link:
+          <br />
           <a href="https://stackoverflow.com/q/77212899" target="_blank">
             https://stackoverflow.com/q/77212899
           </a>

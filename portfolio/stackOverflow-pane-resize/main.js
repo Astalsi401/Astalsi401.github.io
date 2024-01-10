@@ -4,7 +4,12 @@ const Content = () => {
       title: "How to add a panel, in Javascript, that resize vertically inside another panel?",
       content: (
         <>
-          OP link:{" "}
+          OP link:
+          <br />
+          <a href="https://stackoverflow.com/q/77730121" target="_blank">
+            https://stackoverflow.com/q/77730121
+          </a>
+          <br />
           <a href="https://stackoverflow.com/q/77776758" target="_blank">
             https://stackoverflow.com/q/77776758
           </a>
