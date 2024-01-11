@@ -2,10 +2,12 @@ const gutters = document.querySelectorAll(".gutter");
 const panes = document.querySelectorAll(".pane");
 const minWidth = document.querySelector(".wrapper").style.getPropertyValue("--min-width");
 const minHeight = document.querySelector(".wrapper").style.getPropertyValue("--min-height");
+const iframes = document.querySelectorAll("iframe");
 
 function resizer(e) {
   window.addEventListener("mousemove", mousemove);
   window.addEventListener("mouseup", mouseup);
+  iframes.forEach((iframe) => iframe.classList.add("resizing"));
 
   //   check gutter is vertical or horizontal
   const is_vertical = e.currentTarget.classList.contains("gutter-v");
@@ -42,8 +44,11 @@ function resizer(e) {
   }
 
   function mouseup() {
+    iframes.forEach((iframe) => iframe.classList.remove("resizing"));
     window.removeEventListener("mousemove", mousemove);
     window.removeEventListener("mouseup", mouseup);
   }
 }
 gutters.forEach((gutter) => gutter.addEventListener("mousedown", resizer));
+
+document.querySelector(".dragElem").addEventListener("drag", (e) => console.log(e));

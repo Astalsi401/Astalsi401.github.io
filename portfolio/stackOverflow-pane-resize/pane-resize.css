@@ -28,7 +28,7 @@ body {
   flex-grow: 1;
 }
 
-.pane:has(.pane) {
+.pane:has(.pane, #preview) {
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -58,4 +58,16 @@ body {
   height: var(--s);
   width: var(--l);
   cursor: row-resize;
+}
+
+#preview {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #991717;
+  border: 0;
+}
+
+#preview.resizing {
+  pointer-events: none;
 }
