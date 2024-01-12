@@ -85,12 +85,15 @@ function Header({ category }) {
   const handleFocusIn = ({ target }) => setSidebarActive(wrapperRef.current.contains(target) ? true : false);
   const handleClick = () => setSidebarActive((prev) => !prev);
   const handleClickOut = ({ target }) => setSidebarActive((prev) => (wrapperRef.current && !wrapperRef.current.contains(target) && !btnRef.current.contains(target) ? false : prev));
+  const handleClickFrame = () => setSidebarActive(false);
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOut);
     document.addEventListener("focusin", handleFocusIn);
+    window.addEventListener("message", handleClickFrame);
     return () => {
       document.removeEventListener("mousedown", handleClickOut);
       document.removeEventListener("focusin", handleFocusIn);
+      window.removeEventListener("message", handleClickFrame);
     };
   }, []);
   return (
