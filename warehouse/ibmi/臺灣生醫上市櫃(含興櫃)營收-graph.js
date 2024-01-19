@@ -159,3 +159,88 @@ class BarChart {
     });
   };
 }
+
+class PieChart {
+  constructor(id_, data) {
+    this.id_ = id_;
+    this.container = d3.select(this.id_);
+    this.height = 400;
+    this.padding = {
+      x: 20,
+      y: 20,
+    };
+    this.svg = this.container.append("svg").attr("height", this.height);
+    this.data = data;
+    this.totalCompany = data.reduce((acc, d) => (acc += d.value), 0);
+    this.pie = d3
+      .pie()
+      .sort(null)
+      .value((d) => d.value);
+    this.data_ready = this.pie(this.data);
+    this.arc = d3.arc();
+    this.labelArc = d3.arc();
+    this.slices = this.svg.append("g").attr("class", "slices");
+    this.color = d3
+      .scaleOrdinal()
+      .domain(this.data.map((d) => d.label))
+      .range(["#4e79a7", "#f28e2c", "#e15759", "#76b7b2", "#59a14f", "#edc949", "#af7aa1", "#ff9da7", "#9c755f", "#bab0ab"]);
+    this.allSlices = this.slices
+      .selectAll("allSlices")
+      .data(this.data_ready)
+      .join("path")
+      .attr("fill", (d) => this.color(d.data.label))
+      .attr("stroke", "white")
+      .style("stroke-width", "2px")
+      .style("opacity", 0.7)
+      .style("transition", "all 0.4s");
+    this.allLabels = this.slices
+      .selectAll("allLabels")
+      .data(this.data_ready)
+      .join("text")
+      .text((d) => `${d.data.label}, ${d.data.value}(${((d.value / this.totalCompany) * 100).toFixed(1)}%)`)
+      .style("font-weight", "bold")
+      .style("font-size", "15px")
+      .style("opacity", 0)
+      .style("text-anchor", "middle");
+    this.legend = this.svg
+      .append("g")
+      .attr("id", "legend")
+      .selectAll("g")
+      .data(this.data.map((d) => d.label))
+      .enter()
+      .append("g");
+    this.legend
+      .append("text")
+      .attr("font-size", 12)
+      .attr("y", (d, i) => i * 15)
+      .text((d) => d);
+    this.legend
+      .append("rect")
+      .attr("width", 12)
+      .attr("height", 12)
+      .attr("y", (d, i) => i * 15 - 12)
+      .attr("x", -15)
+      .attr("fill", (d) => this.color(d));
+  }
+
+  draw = () => {
+    this.width = parseInt(d3.select(this.id_).style("width"), 10);
+    this.legend.attr("transform", `translate(${this.padding.x}, ${this.height - this.padding.y - 50})`);
+    this.radius = Math.min(this.width / 2 - this.padding.x, this.height / 2 - this.padding.y) * 0.9;
+    this.svg.attr("width", this.width);
+    this.arc.innerRadius(0).outerRadius(this.radius);
+    this.labelArc.innerRadius(0).outerRadius(this.radius * 2 + 30);
+    this.slices.attr("transform", `translate(${this.width / 2},${this.height / 2})`);
+    this.allSlices.attr("d", this.arc);
+    this.allSlices
+      .on("mouseover", (e, d) => {
+        d3.select(this.allLabels.nodes()[d.index]).style("opacity", 1);
+        d3.select(e.target).attr("d", this.arc.outerRadius(this.radius * 1.05));
+      })
+      .on("mouseout", (e, d) => {
+        d3.select(this.allLabels.nodes()[d.index]).style("opacity", 0);
+        d3.select(e.target).attr("d", this.arc.outerRadius(this.radius));
+      });
+    this.allLabels.attr("transform", (d) => `translate(${this.labelArc.centroid(d)})`);
+  };
+}
