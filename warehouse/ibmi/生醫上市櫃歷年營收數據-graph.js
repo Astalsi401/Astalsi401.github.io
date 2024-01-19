@@ -7,7 +7,8 @@ class Revenue {
       s: 45,
       e: 20,
     };
-    this.graph = d3.select(lineChart);
+    this.lineChart = lineChart;
+    this.graph = d3.select(this.lineChart);
     this.svg = this.graph.append("svg").attr("height", this.h);
     this.ylabel = [0, 1000, 2000, 3000, 4000];
     this.graphOpt = {
@@ -59,7 +60,7 @@ class Revenue {
     this.dots.append("circle").attr("r", 3).attr("fill", "brown").attr("cy", 0).attr("cx", 0);
   };
   draw = () => {
-    const w = parseInt(d3.select("#graph").style("width"), 10);
+    const w = parseInt(d3.select(this.lineChart).style("width"), 10);
     this.svg.attr("width", w);
     this.xScale.range([0, w - this.padding.s - this.padding.e]);
     this.xAxis
