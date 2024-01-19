@@ -1,7 +1,8 @@
 class BarChart {
   constructor(container, data, tc, xlabel = [0, 50, 100, 150, 200, 250]) {
     this.tc = tc;
-    this.container = d3.select(container);
+    this.container_ = container;
+    this.container = d3.select(this.container_);
     this.data = this.tc ? data.sort((a, b) => b.thisYear - a.thisYear) : data.sort((a, b) => b.thisYear - a.thisYear).map((d) => ({ ...d, category: d.category_en }));
     this.unit = this.tc ? "營收(億台幣)" : "Revenue(TWD, 100M)";
     this.height = 400;
@@ -111,7 +112,7 @@ class BarChart {
     window.addEventListener("resize", this.draw);
   }
   draw = () => {
-    this.width = parseInt(d3.select("#graph").style("width"), 10);
+    this.width = parseInt(d3.select(this.container_).style("width"), 10);
     this.legend.attr("transform", `translate(${this.width - this.padding.e - 50}, ${this.height - this.padding.b - 30})`);
     this.xtitle.attr("transform", `translate(${this.width / 2},${this.height - this.padding.b + 30})`);
     this.svg.attr("width", this.width);
