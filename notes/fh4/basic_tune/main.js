@@ -364,7 +364,7 @@ const Content = () => {
                 <b>方法1：</b>首先找到適合甩尾的動力區間，然後把3檔及之後的檔位都調整至接近這個區間。最後齒比看起來會類似下圖：
               </p>
             </li>
-            <ZoomImage className="my-2 mx-auto image-normal" scr={`${domain}/assets/images/driftGear.png`} />
+            <ZoomImage className="my-2 mx-auto image-normal" src={`${domain}/assets/images/driftGear.png`} />
             <li>
               <p>
                 <b>方法2：</b>將前四檔調整為Formula Drift系列的齒比，其餘檔位隨意，最後再視駕駛手感調整最終傳動比。
