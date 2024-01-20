@@ -185,13 +185,16 @@ function Label({ label, name, type, step, min, max, placeholder, value }) {
 function ZoomImage({ id, className, src, alt }) {
   const [active, setActive] = useState(false);
   const ref = useRef(null);
-  const zoom = ({ target }) => {
-    let overflow = document.querySelector(".overflow-auto");
-    if (overflow && overflow.contains(target)) target.style.position = active ? "relative" : "absolute";
-    setActive(!active);
-  };
+  const zoom = ({ target }) =>
+    setActive((prev) => {
+      let newState = !prev;
+      let overflow = document.querySelector(".overflow-auto");
+      if (overflow && overflow.contains(target)) target.style.position = newState ? "absolute" : "relative";
+      document.body.style.overflowY = newState ? "hidden" : "auto";
+      return newState;
+    });
+  const handleResize = () => setActive(false);
   useEffect(() => {
-    const handleResize = setActive(false);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
