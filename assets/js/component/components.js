@@ -78,6 +78,21 @@ function Accessibility() {
   );
 }
 
+const ProgressBar = () => {
+  const [percent, setPercent] = useState(0);
+  const handleScroll = () => {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    setPercent(((winScroll / height) * 100).toFixed(2));
+  };
+  useEffect(() => {
+    document.addEventListener("load", handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  return <div className="progress" style={{ "--percent": percent }} />;
+};
+
 function Header({ category }) {
   const [sidebarActive, setSidebarActive] = useState(false);
   const wrapperRef = useRef(null);
@@ -110,6 +125,7 @@ function Header({ category }) {
             </svg>
           </a>
         </nav>
+        <ProgressBar />
         <Sidebar sidebarActive={sidebarActive} category={category} wrapperRef={wrapperRef} />
       </header>
     </>
