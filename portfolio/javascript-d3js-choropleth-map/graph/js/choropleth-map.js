@@ -53,7 +53,6 @@ class D3Map {
       .attr("height", 6)
       .attr("fill", (d) => this.colors(d[0]));
     this.legen_axis = this.legend.append("g");
-    this.draw();
   };
   match = (id) => this.edu.filter((e) => e.fips == id)[0];
   draw = () => {
@@ -79,6 +78,9 @@ class D3Map {
 
 const counties = "https://cdn.freecodecamp.org/testable-projects-fcc/data/choropleth_map/counties.json";
 const education = "https://cdn.freecodecamp.org/testable-projects-fcc/data/choropleth_map/for_user_education.json";
-const eduMap = new D3Map(d3.select("#graph"));
-Promise.all([fetch(counties).then((res) => res.json()), fetch(education).then((res) => res.json())]).then((data) => eduMap.chart(data[0], data[1]));
-window.addEventListener("resize", eduMap.draw);
+Promise.all([fetch(counties).then((res) => res.json()), fetch(education).then((res) => res.json())]).then((data) => {
+  const eduMap = new D3Map(d3.select("#graph"));
+  eduMap.chart(data[0], data[1]);
+  eduMap.draw();
+  window.addEventListener("resize", eduMap.draw);
+});

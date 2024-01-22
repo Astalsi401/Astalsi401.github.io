@@ -2,14 +2,14 @@
 <html>
 <head>
     <link rel="stylesheet" href="./pane-resize.css">
-    <script defer src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <script defer src="https://astalsi401.github.io/assets/js/frame.js"></script>
 </head>
 <body></body>
 <script>
     (async () => {
         const code = await fetch('./pane-resize.html').then(res => res.text())
-        document.querySelector("body").innerHTML = code
+        document.body.innerHTML = code
         await import('./pane-resize.js')
     })()
 </script>

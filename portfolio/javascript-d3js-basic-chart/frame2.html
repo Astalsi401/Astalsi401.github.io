@@ -10,7 +10,7 @@
 <script>
     (async () => {
         const code = await fetch('./graph/html/graph-bar1.html').then(res => res.text())
-        document.querySelector("body").innerHTML = code
+        document.body.innerHTML = code
         await import('./graph/js/非主管員工薪資-bar.js')
     })()
 </script>

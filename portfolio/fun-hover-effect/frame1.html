@@ -3,14 +3,14 @@
 <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="./hover-effect.min.css">
-    <script defer src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <script defer src="https://astalsi401.github.io/assets/js/frame.js"></script>
 </head>
 <body></body>
 <script>
     (async () => {
         const code = await fetch('./hover-effect.html').then(res => res.text())
-        document.querySelector("body").innerHTML = code
+        document.body.innerHTML = code
         await import('./hover-effect.js')
     })()
 </script>

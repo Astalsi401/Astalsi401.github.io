@@ -14,7 +14,7 @@
 <script>
     (async () => {
         const code = await fetch('./graph/html/choropleth-map.html').then((res) => res.text());
-        document.querySelector("body").innerHTML = code;
+        document.body.innerHTML = code;
         Promise.all([import('./graph/js/choropleth-map.js')]);
     })();
 </script>
