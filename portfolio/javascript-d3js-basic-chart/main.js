@@ -4,7 +4,7 @@ const Content = () => {
       title: "生醫非主管員工薪資",
       content: (
         <>
-          <DemoFrame src="./frame1.html" aspectRatio="4 / 2" />
+          <DemoFrame src="./frame1.html" />
           <CodeChunkFromFile path="./graph/js/非主管員工薪資-plot.js" lang="js" />
         </>
       ),
@@ -13,7 +13,7 @@ const Content = () => {
       title: "上市各類股非主管員工平均薪資",
       content: (
         <>
-          <DemoFrame src="./frame2.html" aspectRatio="8 / 7" />
+          <DemoFrame src="./frame2.html" />
           <CodeChunkFromFile path="./graph/js/非主管員工薪資-bar.js" lang="js" />
         </>
       ),

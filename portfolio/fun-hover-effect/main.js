@@ -4,7 +4,7 @@ const Content = () => {
       title: "",
       content: (
         <>
-          <DemoFrame src="./frame1.html" aspectRatio="8 / 5" />
+          <DemoFrame src="./frame1.html" />
           html:
           <CodeChunkFromFile path="./hover-effect.html" lang="html" />
           css:

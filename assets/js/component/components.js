@@ -86,7 +86,7 @@ const ProgressBar = () => {
     setPercent(((winScroll / height) * 100).toFixed(2));
   };
   useEffect(() => {
-    document.addEventListener("load", handleScroll);
+    window.addEventListener("load", handleScroll);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -100,7 +100,9 @@ function Header({ category }) {
   const handleFocusIn = ({ target }) => setSidebarActive(wrapperRef.current.contains(target) ? true : false);
   const handleClick = () => setSidebarActive((prev) => !prev);
   const handleClickOut = ({ target }) => setSidebarActive((prev) => (wrapperRef.current && !wrapperRef.current.contains(target) && !btnRef.current.contains(target) ? false : prev));
-  const handleClickFrame = () => setSidebarActive(false);
+  const handleClickFrame = ({ data }) => {
+    if (data.window && data.window === "iframe") setSidebarActive(false);
+  };
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOut);
     document.addEventListener("focusin", handleFocusIn);
@@ -168,11 +170,22 @@ function CodeChunkFromFile({ path, lang }) {
   }
 }
 
-const DemoFrame = ({ src, aspectRatio }) => (
-  <div className="my-2 p-2 demo-frame">
-    <iframe className="w-100" style={{ "aspect-ratio": aspectRatio }} src={src}></iframe>
-  </div>
-);
+const DemoFrame = ({ src }) => {
+  const iframeRef = useRef(null);
+  const [height, setHeight] = useState(0);
+  const handleMessage = ({ data, source }) => {
+    if (data.height && source === iframeRef.current.contentWindow) setHeight(data.height);
+  };
+  useEffect(() => {
+    window.addEventListener("message", handleMessage);
+    return () => window.removeEventListener("message", handleMessage);
+  }, []);
+  return (
+    <div className="my-2 p-2 demo-frame">
+      <iframe className="w-100" style={{ height: height }} src={src} ref={iframeRef}></iframe>
+    </div>
+  );
+};
 
 function Block({ className, title, titleClass, id, content }) {
   return (

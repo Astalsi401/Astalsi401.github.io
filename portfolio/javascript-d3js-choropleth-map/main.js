@@ -4,7 +4,7 @@ const Content = () => {
       title: "",
       content: (
         <>
-          <DemoFrame src="./frame1.html" aspectRatio="8 / 7" />
+          <DemoFrame src="./frame1.html" />
           <CodeChunkFromFile path="./graph/js/choropleth-map.js" lang="js" />
         </>
       ),

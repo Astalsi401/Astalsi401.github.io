@@ -16,7 +16,7 @@ const Content = () => {
       title: "My solution",
       content: (
         <>
-          <DemoFrame src="./frame/frame1.html" aspectRatio="8 / 3" />
+          <DemoFrame src="./frame/frame1.html" />
           html:
           <CodeChunkFromFile path="./frame/arc.html" lang="html" />
           css:

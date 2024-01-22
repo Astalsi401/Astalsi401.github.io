@@ -24,7 +24,7 @@ const Content = () => {
       title: "My solution",
       content: (
         <>
-          <DemoFrame src="./frame1.html" aspectRatio="16 / 9" />
+          <DemoFrame src="./frame1.html" />
           html:
           <CodeChunkFromFile path="pane-resize.html" lang="html" />
           css:

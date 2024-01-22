@@ -15,7 +15,7 @@ const Content = () => {
           <p>
             以<code>dyndoc 檔名.do, replace</code>將檔案與執行結果輸出為html，輸出檔案如下：
           </p>
-          <DemoFrame src={`${domain}/stata/other/example.html`} aspectRatio="16 / 9" />
+          <DemoFrame src={`${domain}/stata/other/example.html`} />
         </>
       ),
     },
@@ -44,7 +44,7 @@ const Content = () => {
           <p>
             以<code>webdoc do 檔名.do, replace</code>將檔案輸出為html，結果如下：
           </p>
-          <DemoFrame src={`${domain}/stata/other/example2.html`} aspectRatio="16 / 9" />
+          <DemoFrame src={`${domain}/stata/other/example2.html`} />
           <p>
             本網站也是使用<code>webdoc</code>製作，不過在輸出後又手動對html檔進行編輯，本站中所有頁面的html檔，以及style設定檔都能在<a href="https://github.com/Astalsi401/Astalsi401.github.io">我的github</a>找到。
           </p>
