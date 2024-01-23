@@ -1,8 +1,9 @@
-- header 添加 progress bar
+- DemoFrame 全螢幕
 - 縮減 container width，右側新增本頁段落，~~hl 當前段落~~
 - portfolio search and filter
 - tunelist copy code
 - new project: todolist
+- ~~header 添加 progress bar~~
 - ~~圖片點擊放大後禁止頁面滾動(dialog)~~
 - ~~Sidebar 中 hl 當前頁面所在目錄~~
 - ~~避免點擊 iframe 時無法關閉 parent 的 side menu~~

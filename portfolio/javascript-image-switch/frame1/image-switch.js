@@ -9,7 +9,7 @@ const gallary = (next = true) => {
 };
 let gallaryTimer = setInterval(gallary, 5000);
 gallaries.forEach((element) => {
-  element.addEventListener("click", (e) => gallary(e.layerX > element.getBoundingClientRect().width / 2 ? true : false));
+  element.addEventListener("click", (e) => gallary(e.target.classList.contains("next")));
   element.addEventListener("mouseenter", () => clearInterval(gallaryTimer));
   element.addEventListener("mouseleave", () => (gallaryTimer = setInterval(gallary, 5000)));
 });

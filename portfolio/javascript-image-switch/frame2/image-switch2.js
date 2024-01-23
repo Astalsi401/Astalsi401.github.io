@@ -1,5 +1,5 @@
 class ImageSwitch {
-  constructor(box, images, cols = 10, rows = 8) {
+  constructor(box, images, cols = 8, rows = 6) {
     this.transitionSec = 5;
     this.box = box;
     this.container = this.box.querySelector(".images-container");

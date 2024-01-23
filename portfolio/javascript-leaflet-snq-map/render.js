@@ -1,2 +1,1 @@
-ReactDOM.createRoot(document.getElementById("App-header")).render(<Header category="Portfolio" />);
-ReactDOM.createRoot(document.getElementById("code-1")).render(<CodeChunkFromFile path="./snqMap.js" lang="js" />);
+ReactDOM.createRoot(document.getElementById("App")).render(<App category="Portfolio" title="Leaflet SNQ Map" className="container shadow-lg p-3" />);

@@ -45,7 +45,7 @@ function Sidebar({ category, sidebarActive, wrapperRef }) {
         <ul className="py-3 menu">
           {index.pages.map((p, i) => (
             <li key={i} className={`${p.section ? "has-children" : ""}`} onClick={click}>
-              <a className={`px-3 text-decoration-none text-large text-bold ${p.href == location.pathname ? "current" : ""}`} href={`${domain}${p.href}`}>
+              <a className={`px-3 text-decoration-none text-large text-bold ${p.href == location.pathname ? "current" : ""}`} href={/^http?:/.test(p.href) ? p.href : `${domain}${p.href}`}>
                 <span>{p.page}</span>
               </a>
               {p.section && <SidebarChild sections={p.section} childrenActive={childrenActive} />}

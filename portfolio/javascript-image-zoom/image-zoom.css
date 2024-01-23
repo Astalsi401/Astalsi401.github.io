@@ -46,4 +46,13 @@
      object-fit: contain;
   height: auto;
   box-shadow: 0 0 10px var(--shadow);
+}
+
+body {
+  min-height: 500px;
+}
+
+.container {
+  width: 75%;
+  margin-inline: auto;
 }/*# sourceMappingURL=image-zoom.css.map */

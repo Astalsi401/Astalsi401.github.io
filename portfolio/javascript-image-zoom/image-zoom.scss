@@ -1,2 +1,9 @@
-@import "./image-zoom-normal.scss";
-@import "./image-zoom-grid.scss";
+@import "./frame1/image-zoom-normal.scss";
+@import "./frame2/image-zoom-grid.scss";
+body {
+  min-height: 500px;
+}
+.container {
+  width: 75%;
+  margin-inline: auto;
+}

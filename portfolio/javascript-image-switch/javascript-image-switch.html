@@ -25,76 +25,14 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <!-- component -->
     <script defer type="text/jsx" src="https://astalsi401.github.io/assets/js/component/components.js"></script>
+    <script defer type="text/jsx" src="./main.js"></script>
     <script defer type="text/jsx" src="https://astalsi401.github.io/assets/js/component/app.js"></script>
     <script defer type="text/jsx" src="./render.js"></script>
     <link rel="stylesheet" href="https://astalsi401.github.io/assets/style/main.min.css">
 </head>
 
 <body>
-    <div id="App-header"></div>
-    <div id="App">
-        <main id="main-content" class="container-xl shadow-lg p-3">
-            <h1 class="my-5 text-center">JS圖片輪播</h1>
-            <section class="my-4">
-                <h3>1.</h3>
-                <div class="row my-2">
-                    <div class="col-sm-8 mx-auto">
-                        <div class="switch shadow-1">
-                            <div class="switch-children">
-                                <div class="switch-child active">
-                                    <div class="switch-img"><img class="w-100" src="https://picsum.photos/id/123/1920/1080" /></div>
-                                    <div class="text-center"></div>
-                                </div>
-                                <div class="switch-child">
-                                    <div class="switch-img"><img class="w-100" src="https://picsum.photos/id/456/1920/1080" /></div>
-                                    <div class=" text-center"></div>
-                                </div>
-                                <div class="switch-child">
-                                    <div class="switch-img"><img class="w-100" src="https://picsum.photos/id/789/1920/1080" /></div>
-                                    <div class="text-center"></div>
-                                </div>
-                            </div>
-                            <div class="prev"></div>
-                            <div class="next"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row my-2">
-                    JS:
-                    <div class="my-1" id="js"></div>
-                    SCSS:
-                    <div class="my-1" id="scss"></div>
-                    HTML:
-                    <div class="my-1" id="html"></div>
-                </div>
-            </section>
-            <section class="my-4">
-                <h3>2.</h3>
-                <div class="row my-2">
-                    <div class="col-sm-8 mx-auto">
-                        <div class="switch2">
-                            <div class="images-container"></div>
-                            <div class="prev"></div>
-                            <div class="next"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row my-2">
-                    JS:
-                    <div class="my-1" id="js2"></div>
-                    SCSS:
-                    <div class="my-1" id="scss2"></div>
-                    HTML:
-                    <div class="my-1" id="html2"></div>
-                </div>
-            </section>
-        </main>
-    </div>
-    <footer>
-        <link rel="stylesheet" href="./image-switch-main.min.css">
-        <script src="./image-switch.js"></script>
-        <script src="./image-switch2.js"></script>
-    </footer>
+    <div id="App"></div>
 </body>
 
 </html>

@@ -4,7 +4,7 @@ let area = {
   south: [],
   east: [],
 };
-fetch("./snqMap.json")
+fetch("./snq-map.json")
   .then((res) => res.json())
   .then((data) => {
     data.forEach((a) => {
