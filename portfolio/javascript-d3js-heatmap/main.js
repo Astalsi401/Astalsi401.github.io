@@ -1,7 +1,7 @@
 const Content = () => {
   const sections = [
     {
-      title: "Monthly Global Land-Surface Temperature",
+      title: "",
       content: (
         <>
           <DemoFrame src="./frame1.html" />
