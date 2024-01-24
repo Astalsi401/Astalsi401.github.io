@@ -4165,6 +4165,14 @@ pre.language-output {
   max-height: 100dvh;
   border: none;
 }
+.demo-frame iframe.active {
+  position: fixed !important;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
 
 .full-page {
   --pe: 10px;
@@ -4174,6 +4182,12 @@ pre.language-output {
   width: max-content;
   transition: opacity var(--time);
   opacity: 0.6;
+}
+.full-page.active {
+  position: fixed !important;
+  z-index: 5;
+  right: 0.5rem;
+  top: 0;
 }
 .full-page::before, .full-page::after {
   content: "";
@@ -4194,14 +4208,14 @@ pre.language-output {
   transform: rotate(45deg);
   transition-delay: 0s;
 }
-.full-page:hover, .full-page:focus {
+.full-page:focus, .full-page:hover {
   opacity: 1;
 }
-.full-page:hover::before, .full-page:focus::before {
+.full-page:hover::before {
   width: 100%;
   transition-delay: 0s;
 }
-.full-page:hover::after, .full-page:focus::after {
+.full-page:hover::after {
   width: 10px;
   transition-delay: calc(var(--time) / 2);
 }

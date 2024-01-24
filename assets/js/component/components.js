@@ -170,19 +170,26 @@ function CodeChunkFromFile({ path, lang }) {
 const DemoFrame = ({ src }) => {
   const iframeRef = useRef(null);
   const [height, setHeight] = useState(0);
+  const [fullPage, setFullPage] = useState(false);
   const handleMessage = ({ data, source }) => {
     if (data.height && source === iframeRef.current.contentWindow) setHeight(data.height);
   };
+  const handleClick = () =>
+    setFullPage((prev) => {
+      let newState = !prev;
+      document.body.style.overflowY = newState ? "hidden" : "auto";
+      return newState;
+    });
   useEffect(() => {
     window.addEventListener("message", handleMessage);
     return () => window.removeEventListener("message", handleMessage);
   }, []);
   return (
     <div className="demo-frame my-2 p-2 pt-0">
-      <a href="javascript:void(0)" className="full-page d-block position-relative float-end text-small text-primary">
-        Full Page
+      <a href="javascript:void(0)" className={`full-page d-block position-relative float-end text-small text-primary ${toggleActive(fullPage)}`} onClick={handleClick}>
+        {fullPage ? "Close" : "Full Page"}
       </a>
-      <iframe className="w-100" style={{ height: height }} src={src} ref={iframeRef} />
+      <iframe className={`w-100 bg-main-bg ${toggleActive(fullPage)}`} style={{ height: height }} src={src} ref={iframeRef} />
     </div>
   );
 };

@@ -82,6 +82,14 @@ pre.language-output {
   iframe {
     max-height: 100dvh;
     border: none;
+    &.active {
+      position: fixed !important;
+      z-index: index($z-index, model);
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100% !important;
+    }
   }
 }
 .full-page {
@@ -91,6 +99,12 @@ pre.language-output {
   width: max-content;
   transition: opacity var(--time);
   opacity: 0.6;
+  &.active {
+    position: fixed !important;
+    z-index: calc(index($z-index, model) + 1);
+    right: 0.5rem;
+    top: 0;
+  }
   &::before,
   &::after {
     content: "";
@@ -111,9 +125,11 @@ pre.language-output {
     transform: rotate(45deg);
     transition-delay: 0s;
   }
-  &:hover,
-  &:focus {
+  &:focus,
+  &:hover {
     opacity: 1;
+  }
+  &:hover {
     &::before {
       width: 100%;
       transition-delay: 0s;
