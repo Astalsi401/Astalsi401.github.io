@@ -31,6 +31,11 @@
   @include builder(font-size, $size-value, text, $class-e: -$size);
 }
 /* end of text size */
+/* float */
+@each $float, $float-value in $float {
+  @include builder(float, $float-value, float, $class-e: -$float);
+}
+/* end of float */
 /* round */
 @each $round, $round-values in $rounded-edge {
   @each $u, $u-value in $units {

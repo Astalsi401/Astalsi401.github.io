@@ -21,13 +21,9 @@
   background-size: cover;
   background-position: 50% 0;
 }
-.portfolioThumb {
+.portfolio-thumb {
   background-repeat: no-repeat;
-  position: relative;
   .tags {
-    position: absolute;
-    display: flex;
-    align-items: end;
     padding: var(--unit-1);
     inset: 0;
   }

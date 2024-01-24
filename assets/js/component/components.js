@@ -36,13 +36,13 @@ function Sidebar({ category, sidebarActive, wrapperRef }) {
   const click = () => setChildrenActive((prev) => !prev);
   if (indexLoaded) {
     return (
-      <aside id="sidebar" className={sidebarActive ? "active" : undefined} ref={wrapperRef}>
+      <aside id="sidebar" className={`position-absolute ${toggleActive(sidebarActive)}`} ref={wrapperRef}>
         <h1 className="pt-5 pb-3 text-center">
           <a id={sidebarAnchor} className="text-decoration-none" href={`${domain}${index.href}`}>
             {index.category}
           </a>
         </h1>
-        <ul className="py-3 menu">
+        <ul className="menu py-3">
           {index.pages.map((p, i) => (
             <li key={i} className={`${p.section ? "has-children" : ""}`} onClick={click}>
               <a className={`px-3 text-decoration-none text-large text-bold ${p.href == location.pathname ? "current" : ""}`} href={/^http?:/.test(p.href) ? p.href : `${domain}${p.href}`}>
@@ -68,7 +68,7 @@ function Accessibility() {
     { href: `#${sidebarAnchor}`, text: "Skip to sidebar" },
   ];
   return (
-    <div className="accessibility">
+    <div className="accessibility position-fixed">
       {access.map((a) => (
         <a key={a.text} href={a.href}>
           {a.text}
@@ -90,7 +90,7 @@ const ProgressBar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  return <div className="progress" style={{ "--percent": percent }} />;
+  return <div className="progress w-100 position-relative" style={{ "--percent": percent }} />;
 };
 
 function Header({ category }) {
@@ -116,12 +116,12 @@ function Header({ category }) {
   return (
     <>
       <Accessibility />
-      <header id="header">
-        <nav id="navbar">
-          <div className={`hamberger ${toggleActive(sidebarActive)}`} onClick={handleClick} ref={btnRef}>
+      <header id="header" className="position-fixed w-100">
+        <nav id="navbar" className="position-relative">
+          <a href="javascript:void(0)" className={`hamberger d-flex justify-content-center align-items-center position-absolute ${toggleActive(sidebarActive)}`} onClick={handleClick} ref={btnRef}>
             <span />
-          </div>
-          <a href={domain} className="home">
+          </a>
+          <a href={domain} className="home d-block position-absolute">
             <svg viewBox="0 0 500 500">
               <path d="M250 100 L450 230,350 230,350 400,150 400,150 230,50 230,250 100" />
             </svg>
@@ -143,30 +143,27 @@ function CodeChunk({ code, lang }) {
   };
   useEffect(() => Prism.highlightAll(), []);
   return (
-    <pre>
-      <a className={`copyBtn ${toggleActive(active)}`} onClick={copy}>
+    <pre className="position-relative">
+      <a href="javascript:void(0)" className={`copy-btn d-block position-absolute text-black ${toggleActive(active)}`} onClick={copy}>
         <svg viewBox="0 0 10 10">
           <path fill="none" d="M4.5 1 L7.5 1 Q8.5 1,8.5 2 L8.5 6 Q8.5 7,7.5 7 L4.5 7 Q3.5 7,3.5 6 L3.5 2 Q3.5 1,4.5 1" />
           <path fill="none" d="M2.5 3 L5.5 3 Q6.5 3,6.5 4 L6.5 8 Q6.5 9,5.5 9 L2.5 9 Q1.5 9,1.5 8 L1.5 4 Q1.5 3,2.5 3" />
         </svg>
       </a>
-      <code children={code} className={`lang-${lang}`} />
+      <code children={code} className={`lang-${lang} d-block overflow-auto`} />
     </pre>
   );
 }
 
 function CodeChunkFromFile({ path, lang }) {
-  const [code, setCode] = useState("");
-  const [loaded, setLoaded] = useState(false);
+  const [code, setCode] = useState({ loaded: false, code: "" });
   const fetchCode = async () => {
-    const res = await fetch(path);
-    const data = await res.text();
-    setCode(data);
-    setLoaded(true);
+    const data = await fetch(path).then((res) => res.text());
+    setCode({ loaded: true, code: data });
   };
   useEffect(() => fetchCode(), [path]);
-  if (loaded) {
-    return <CodeChunk code={code} lang={lang} />;
+  if (code.loaded) {
+    return <CodeChunk code={code.code} lang={lang} />;
   }
 }
 
@@ -181,7 +178,10 @@ const DemoFrame = ({ src }) => {
     return () => window.removeEventListener("message", handleMessage);
   }, []);
   return (
-    <div className="my-2 p-2 demo-frame">
+    <div className="demo-frame my-2 p-2 pt-0">
+      <a href="javascript:void(0)" className="full-page d-block position-relative float-end text-small text-primary">
+        Full Page
+      </a>
       <iframe className="w-100" style={{ height: height }} src={src} ref={iframeRef} />
     </div>
   );
@@ -232,8 +232,8 @@ function ZoomImage({ id, className, src, alt }) {
   let translate = elem ? `${(window.innerWidth / 2 - elem.x) / scale - elem.width / 2}px, ${(window.innerHeight / 2 - elem.y) / scale - elem.height / 2}px` : "0,0";
   let imgSty = { transform: active ? `scale(${scale}) translate(${translate})` : "scale(1) translate(0)" };
   return (
-    <div id={id && id} className={`${className ? className : ""} imgBlock ${toggleActive(active)}`}>
-      <img ref={ref} className="w-100" loading="lazy" src={src} alt={alt && alt} style={imgSty} onClick={zoom} />
+    <div id={id && id} className={`${className ? className : ""} img-block ${toggleActive(active)}`}>
+      <img ref={ref} className="w-100 position-relative" loading="lazy" src={src} alt={alt && alt} style={imgSty} onClick={zoom} />
     </div>
   );
 }
@@ -247,7 +247,7 @@ function IndexPage({ subtitle, category }) {
         <ul className="mx-auto my-3 text-center w-lg-50 w-100">
           {index.pages.map((page) => (
             <li key={page.page} className="my-2">
-              <a className="p-2" href={`${domain}${page.href}`}>
+              <a className="p-2 position-relative text-decoration-none" href={`${domain}${page.href}`}>
                 {page.page}
               </a>
             </li>

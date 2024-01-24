@@ -2,7 +2,6 @@
   --bg: var(--main-bg);
   --elem-active: var(--secondary);
   --elem: var(--primary);
-  position: relative;
   z-index: index($z-index, navbar);
   top: 0;
   background: var(--bg);
@@ -11,8 +10,6 @@
 }
 .hamberger,
 .home {
-  position: absolute;
-  display: block;
   cursor: pointer;
   width: var(--nav-h);
   height: var(--nav-h);
@@ -21,9 +18,6 @@
 }
 .hamberger {
   left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   span {
     &,
     &::before,
@@ -98,7 +92,6 @@
   }
 }
 .accessibility {
-  position: fixed;
   top: calc(var(--nav-h) + var(--unit-2));
   left: 50%;
   transform: translateX(-50%);

@@ -106,6 +106,10 @@ $flex-position: (
   ),
 );
 $position: (absolute, fixed, static, sticky, relative);
+$float: (
+  start: left,
+  end: right,
+);
 $text-decoration: (line-through, underline, none);
 $text-align: (center, left, right);
 $text-weight: (thin, normal, bold, bolder);

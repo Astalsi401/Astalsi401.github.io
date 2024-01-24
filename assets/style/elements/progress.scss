@@ -1,7 +1,5 @@
 .progress {
-  position: relative;
   z-index: index($z-index, navbar);
-  width: 100%;
   height: 2px;
   background: linear-gradient(90deg, var(--primary) 0%, var(--primary) calc(var(--percent) * 1%), transparent calc(var(--percent) * 1%), transparent 100%);
 }
