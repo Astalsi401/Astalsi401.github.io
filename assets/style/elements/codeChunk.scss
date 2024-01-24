@@ -93,8 +93,6 @@ pre.language-output {
   }
 }
 .full-page {
-  --pe: 10px;
-  padding-right: var(--pe);
   text-decoration: none;
   width: max-content;
   transition: opacity var(--time);
@@ -104,6 +102,7 @@ pre.language-output {
     z-index: calc(index($z-index, model) + 1);
     right: 0.5rem;
     top: 0;
+    text-shadow: 0 0 5px var(--main-bg);
   }
   &::before,
   &::after {

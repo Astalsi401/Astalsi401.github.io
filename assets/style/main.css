@@ -4175,8 +4175,6 @@ pre.language-output {
 }
 
 .full-page {
-  --pe: 10px;
-  padding-right: var(--pe);
   text-decoration: none;
   width: -moz-max-content;
   width: max-content;
@@ -4188,6 +4186,7 @@ pre.language-output {
   z-index: 5;
   right: 0.5rem;
   top: 0;
+  text-shadow: 0 0 5px var(--main-bg);
 }
 .full-page::before, .full-page::after {
   content: "";
