@@ -5,8 +5,8 @@ const minHeight = document.querySelector(".wrapper").style.getPropertyValue("--m
 const iframes = document.querySelectorAll("iframe");
 
 function resizer(e) {
-  window.addEventListener("mousemove", mousemove);
-  window.addEventListener("mouseup", mouseup);
+  window.addEventListener("pointermove", mousemove);
+  window.addEventListener("pointerup", mouseup);
   iframes.forEach((iframe) => iframe.classList.add("resizing"));
 
   //   check gutter is vertical or horizontal
@@ -45,10 +45,10 @@ function resizer(e) {
 
   function mouseup() {
     iframes.forEach((iframe) => iframe.classList.remove("resizing"));
-    window.removeEventListener("mousemove", mousemove);
-    window.removeEventListener("mouseup", mouseup);
+    window.removeEventListener("pointermove", mousemove);
+    window.removeEventListener("pointerup", mouseup);
   }
 }
-gutters.forEach((gutter) => gutter.addEventListener("mousedown", resizer));
+gutters.forEach((gutter) => gutter.addEventListener("pointerdown", resizer));
 
 document.querySelector(".dragElem").addEventListener("drag", (e) => console.log(e));

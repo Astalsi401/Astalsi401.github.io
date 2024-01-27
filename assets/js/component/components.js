@@ -48,7 +48,7 @@ function Sidebar({ category, sidebarActive, wrapperRef }) {
               <a className={`px-3 text-decoration-none text-large text-bold ${p.href == location.pathname ? "current" : ""}`} href={/^http?:/.test(p.href) ? p.href : `${domain}${p.href}`}>
                 <span>{p.page}</span>
               </a>
-              {p.section && <SidebarChild sections={p.section} childrenActive={childrenActive} />}
+              {p.href == location.pathname && p.section && <SidebarChild sections={p.section} childrenActive={childrenActive} />}
             </li>
           ))}
         </ul>
