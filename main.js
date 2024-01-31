@@ -1,5 +1,8 @@
 const Content = ({ category }) => {
   const { index, indexLoaded } = useIndexData(category);
+  useEffect(() => {
+    window.location.href = "https://astalsi401.github.io/personal-website";
+  }, []);
   if (indexLoaded) {
     return (
       <div className="container-sm py-5">

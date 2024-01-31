@@ -34,6 +34,11 @@ function Sidebar({ category, sidebarActive, wrapperRef }) {
   const { index, indexLoaded } = useIndexData(category);
   const [childrenActive, setChildrenActive] = useState(false);
   const click = () => setChildrenActive((prev) => !prev);
+  useEffect(() => {
+    if (!indexLoaded) return;
+    const { newHref } = index.pages.find((p) => p.href == location.pathname);
+    window.location.href = newHref;
+  }, [indexLoaded]);
   if (indexLoaded) {
     return (
       <aside id="sidebar" className={`position-absolute ${toggleActive(sidebarActive)}`} ref={wrapperRef}>

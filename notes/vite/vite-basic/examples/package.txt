@@ -1,0 +1,4 @@
+{
+  "homepage": "https://<username>.github.io/<project-name>",
+  ...
+}
