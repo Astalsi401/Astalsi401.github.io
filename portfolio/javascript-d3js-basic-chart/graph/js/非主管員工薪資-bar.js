@@ -102,13 +102,4 @@ class BarGraph {
     });
   };
 }
-
-const fetchData = async () => {
-  const data = await fetch("https://astalsi401.github.io/warehouse/ibmi/2022非主管員工薪資.json").then((res) => res.json());
-  new BarGraph(
-    "#graph-bar1",
-    data.bar.filter((d) => d.market === "上市"),
-    "en"
-  );
-};
-fetchData();
+export default BarGraph;

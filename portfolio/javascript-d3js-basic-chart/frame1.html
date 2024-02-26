@@ -14,4 +14,12 @@
         await import('./graph/js/非主管員工薪資-plot.js')
     })()
 </script>
+<script type="module">
+    import PlotGraph from './graph/js/非主管員工薪資-plot.js'
+    const fetchData = async () => {
+        const data = await fetch("https://astalsi401.github.io/warehouse/ibmi/2022非主管員工薪資.json").then((res) => res.json());
+        new PlotGraph("#graph-plot1", data.plot, "en");
+    };
+    fetchData();
+</script>
 </html>
