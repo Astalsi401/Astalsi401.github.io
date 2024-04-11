@@ -15,7 +15,7 @@ class BarChart {
       e: 25,
     };
     this.xlabel = xlabel;
-    this.year = 2023;
+    this.year = data.year;
 
     this.area = (this.height - this.padding.t - this.padding.b) / this.data.length;
     this.margin = 3;
