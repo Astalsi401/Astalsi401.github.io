@@ -3,7 +3,7 @@ class BarChart {
     this.tc = tc;
     this.container_ = container;
     this.container = d3.select(this.container_);
-    this.data = this.tc ? data.data.sort((a, b) => b.thisYear - a.thisYear) : data.sort((a, b) => b.thisYear - a.thisYear).map((d) => ({ ...d, category: d.category_en }));
+    this.data = this.tc ? data.data.sort((a, b) => b.thisYear - a.thisYear) : data.data.sort((a, b) => b.thisYear - a.thisYear).map((d) => ({ ...d, category: d.category_en }));
     this.unit = this.tc ? "營收(億台幣)" : "Revenue(TWD, 100M)";
     this.height = 400;
     this.svg = this.container.append("svg").attr("height", this.height);
