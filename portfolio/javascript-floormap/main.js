@@ -727,6 +727,7 @@ const MainArea = () => {
         const { innerWidth: width, innerHeight: height } = window;
         const sidebarWidth = smallScreen ? (sidebar ? height * 0.6 : height - 117) : sidebar ? 300 : 30;
         const tagsHeight = smallScreen ? 100 : 80;
+        console.log(sidebarWidth);
         return { ...prev, width: smallScreen ? width : width - sidebarWidth, height: height - prev.tagsHeight, load: true, smallScreen: smallScreen, sidebar: sidebar, sidebarWidth: sidebarWidth, tagsHeight: tagsHeight };
       });
     }, 50);
