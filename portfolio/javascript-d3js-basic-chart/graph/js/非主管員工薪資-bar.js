@@ -20,7 +20,7 @@ class BarGraph {
       .rangeRound([this.padding.t, this.height - this.padding.b]);
     const max = d3.max(this.data, (d) => d.thisYear);
     this.xScale = d3.scaleLinear().domain([0, max < 1800 ? 1800 : max]);
-    this.xAxis = d3.axisBottom(this.xScale);
+    this.xAxis = d3.axisBottom(this.xScale).tickFormat((d) => d / 10);
     this.xAxis_g = this.svg
       .append("g")
       .attr("id", "x-axis")
