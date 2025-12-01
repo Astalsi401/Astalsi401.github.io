@@ -1,1 +1,8 @@
-[]
+[
+  { "id": "TEXTM001", "type": "text", "floor": 1, "x": 5920, "y": 9800, "text": { "tc": "體育用品公會", "en": "" }, "size": { "tc": 0.3, "en": 0.3 }, "color": "black" },
+  { "id": "TEXTM002", "type": "text", "floor": 1, "x": 12830, "y": 4900, "text": { "tc": "中華亞健康協會 全人健康展區", "en": "" }, "size": { "tc": 0.3, "en": 0.3 }, "color": "black" },
+  { "id": "TEXTM003", "type": "text", "floor": 1, "x": 12530, "y": 10700, "text": { "tc": "台北.新北生技公會", "en": "" }, "size": { "tc": 0.3, "en": 0.3 }, "color": "black" },
+  { "id": "TEXTM004", "type": "text", "floor": 4, "x": 17650, "y": 7000, "text": { "tc": "新北產業聯盟", "en": "" }, "size": { "tc": 0.3, "en": 0.3 }, "color": "black" },
+  { "id": "TEXTM005", "type": "text", "floor": 4, "x": 7130, "y": 11700, "text": { "tc": "台灣微生物學會\n台灣人工智慧檢驗醫學學會", "en": "" }, "size": { "tc": 0.3, "en": 0.3 }, "color": "black" },
+  { "id": "TEXTM006", "type": "text", "floor": 4, "x": 2870, "y": 11700, "text": { "tc": "International Pavilion", "en": "International Pavilion" }, "size": { "tc": 0.3, "en": 0.3 }, "color": "black" }
+]
